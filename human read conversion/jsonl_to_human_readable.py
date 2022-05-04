@@ -2,6 +2,17 @@
 #Links: https://jsonlines.readthedocs.io/en/latest/
 import jsonlines
 
+## Codereview - Seb - 220504
+# - Use argparse instead of input
+# - Remove whitespaces in the directorie/paths
+# - refactor/reorganize with functions:
+#   - main function that 
+#       1/ call the argument parser (aregparse)
+#       2/ organize the business logic
+# - Differentiate main entities/secondary ones, and same for actions.
+
+
+
 #Ask user what file in folder
 userInput = input("Enter the name of the json1 file:")
 print("\n")
