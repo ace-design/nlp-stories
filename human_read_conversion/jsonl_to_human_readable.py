@@ -24,9 +24,17 @@ def main():
     
         for i in range(len(text)):
             labelList, labelIdList, elementList = identifyLabels(text[i], entities[i])
-            relationList = identifyRelations(relations[i], labelIdList, elementList)
+            relationList, primaryString, primaryList = identifyRelations(relations[i], labelIdList, elementList)
 
-            output(text[i], labelList, relationList)
+            primaryAction, primaryEntity = primaryString
+            primaryActionList, primaryEntityList = primaryList
+            persona , entityList, actionList, benefit, pID = labelList
+
+            secondaryEntity = secondary(entityList, primaryEntityList)
+            secondaryAction = secondary(actionList, primaryActionList)
+
+            labels = [persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pID]
+            output(text[i], labels, relationList)
         
     elif state == 2:
         print("Saving")
@@ -69,13 +77,11 @@ def extract(path):
 
 def identifyLabels(text, entities):
     persona = ""
-    entity = ""
-    action = ""
-    benefit =""
+    entity = []
+    action = []
+    benefit = ""
     pID = ""
 
-    labelName = ["Persona", "Entity", "Action", "Benefit", "PID"]
-    labelList = [persona, entity, action, benefit, pID]
     labelIdList = []
     elementList = []
 
@@ -89,18 +95,32 @@ def identifyLabels(text, entities):
         labelIdList.append(labelID)
         elementList.append(element)
 
-        for i in range(5):
-            if labelType == labelName[i]:
-                labelList[i] += element + ", "
-                break
+        if labelType == "Persona":
+            persona += element + ", "
+        elif labelType == "Entity":
+            entity.append(element)
+        elif labelType == "Action":
+            action.append(element)
+        elif labelType == "Benefit":
+            benefit+= element + ", "
+        else:
+            pID = element
+
+    labelList = [persona, entity, action, benefit, pID]
+
     return labelList, labelIdList, elementList
 
 def identifyRelations(relations,labelIdList,elementList):
     triggers = ""
     targets = ""
     contains = ""
-    relationName = ["triggers", "targets", "contains"]
-    relationList = [triggers, targets, contains]
+    primaryActions = ""
+    primaryEntities = ""
+    primaryActionList = []
+    primaryEntityList = []
+    targetAction = []
+    targetEntity = []
+ 
     
     for relation in relations:
         relationType = relation["type"]
@@ -110,34 +130,63 @@ def identifyRelations(relations,labelIdList,elementList):
         startElement = findElement(labelIdList, elementList, startId)
         endElement = findElement(labelIdList, elementList, endId)
         
-        for i in range(3):
-            if relationType == relationName[i]:
-                relationList[i] += startElement + " --> " + endElement + ", "
-                break
+        if relationType == "triggers":
+            triggers += startElement + " --> " + endElement + ",  "
+            primaryActions += endElement + ", "
+            primaryActionList.append(endElement)
+            
+        elif relationType == "targets":
+            targets += startElement + " --> " + endElement + ",  "
+            targetAction.append(startElement)
+            targetEntity.append(endElement)
+            
+        else:
+            contains += startElement + " --> " + endElement + ",  "
 
-    return relationList
+    for primaryAction in primaryActionList:
+        for i in range(len(targetAction)):
+            if primaryAction == targetAction[i]:
+                primaryEntities += targetEntity[i] + ", "
+                primaryEntityList.append(targetEntity[i])
+    
+    relationList = [triggers, targets, contains]
+    primaryString = primaryActions, primaryEntities
+    primaryList = primaryActionList, primaryEntityList
+
+    return relationList, primaryString, primaryList
 
 def findElement(labelId, element, findId):
     for i in range(len(labelId)):
         if labelId[i] == findId:
             return element[i]
+    
+
+def secondary (wholeList, primaryItem):
+    secondaryItem = ""
+    for item in wholeList:
+        if not(item in primaryItem):
+            secondaryItem += item + ", "
+
+    return secondaryItem
 
 def output(text,labelList, relationList):
-    persona, entity, action, benefit, pId = labelList
+    persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pId = labelList
     triggers, targets, contains = relationList
 
     print("--------------------STORY START--------------------")
-    print("PID:", pId.strip(","))
+    print("PID:", pId.strip(", "))
     print("Story text:", text)
     print("\n")
-    print("Persona:", persona.strip(","))
-    print("Action:", action.strip(","))
-    print("Entity:", entity.strip(","))
-    print("Benefit:", benefit.strip(","))
+    print("Persona:", persona.strip(", "))
+    print("Primary Action:", primaryAction.strip(", "))
+    print("Secondary Action:", secondaryAction.strip(", "))
+    print("Primary Entity:", primaryEntity.strip(", "))
+    print("Secondary Entity:", secondaryEntity.strip(", "))
+    print("Benefit:", benefit.strip(", "))
     print("\n")
     print("Triggers:", triggers.strip(", "))
     print("Targets:", targets.strip(", "))
     print("Contains:", contains.strip(", "))
-    print("---------------------STORY END---------------------\n\n")
+    print("---------------------STORY END---------------------\n")
 
 main()
