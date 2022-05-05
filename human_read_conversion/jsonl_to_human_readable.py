@@ -2,6 +2,7 @@
 #Links: https://jsonlines.readthedocs.io/en/latest/
 #https://docs.python.org/3/howto/argparse.html#id1
 import jsonlines
+import json
 import argparse
 import os
 
@@ -12,15 +13,19 @@ import os
 #   - main function that 
 #       1/ call the argument parser (aregparse)
 #       2/ organize the business logic
-# - Differentiate main entities/secondary ones, and same for actions.   
+# - Differentiate main entities/secondary ones, and same for actions.   -Completed Sath
 
 
 def main():
-    path, state = command()
+    loadPath, savePath, state = command()
 
     if state == 1:
+        dictionaryList = []
+        
         print("Receiving results")
-        text, entities, relations = extract(path)
+        print(loadPath)
+        print(savePath)
+        text, entities, relations = extract(loadPath)
     
         for i in range(len(text)):
             labelList, labelIdList, elementList = identifyLabels(text[i], entities[i])
@@ -35,34 +40,32 @@ def main():
 
             labels = [persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pID]
             output(text[i], labels, relationList)
-        
-    elif state == 2:
+
+            
+            dictionary = convertJsonFormat(text[i], labels, relationList)
+            dictionaryList.append(dictionary)
         print("Saving")
-        
+        saveFile(savePath, dictionaryList)
     else:
         print("Please try again")
 
 def command():
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
-    parser.add_argument("path", type = str, help = "path of file")
-    parser.add_argument("-f", "--file", help = "input file directory path", action = "store_true")
-    parser.add_argument("-s", "--save", help = "save results to file", action = "store_true")
+    parser.add_argument("loadPath", type = str, help = "path of file")
+    parser.add_argument("savePath", type = str, help = "path of file to save")
+    parser.add_argument("-c", "--convert", help = "convert load file to human readiable and save as json file", action = "store_true")
     args = parser.parse_args()
 
-    if args.file:
-        if os.path.exists(args.path):
+    if args.convert:
+        if os.path.exists(args.loadPath):
             print("File Found")
-            return args.path, 1
+            return args.loadPath, args.savePath, True
         else:
             print("File not found")
-            return None, 3
-    elif args.save:
-        #SAVE JSON FILE HERE
-        name = ""
-        return name, 2
+            return None, None, False
     else:
         print("Please enter the appropriate argument. type -h for help")
-        return None, 3
+        return None, None, False
 
 def extract(path):
     text = []
@@ -188,5 +191,15 @@ def output(text,labelList, relationList):
     print("Targets:", targets.strip(", "))
     print("Contains:", contains.strip(", "))
     print("---------------------STORY END---------------------\n")
+
+def convertJsonFormat(text, labels, relationList):
+    obj = {"test 1": 2, "test 2": 4}
+    
+    return obj 
+
+def saveFile(path, dictionaryList):
+    json.dumps(dictionaryList)
+    with open(path,"w") as file:
+        json.dump(dictionaryList, file, ensure_ascii=False, indent = 4)
 
 main()
