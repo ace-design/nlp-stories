@@ -5,69 +5,84 @@ import jsonlines
 import json
 import argparse
 import os
-
-## Codereview - Seb - 220504
-# - Use argparse instead of input                                      -Completed Sath
-# - Remove whitespaces in the directorie/paths                         -Completed Sath
-# - refactor/reorganize with functions:                                -Completed Sath
-#   - main function that 
-#       1/ call the argument parser (aregparse)
-#       2/ organize the business logic
-# - Differentiate main entities/secondary ones, and same for actions.   -Completed Sath
-
+import sys
 
 def main():
-    loadPath, savePath, state = command()
+    loadPath, savePath = command()
 
-    if state == 1:
-        dictionaryList = []
+    dictionaryList = []
         
-        print("Receiving results")
-        print(loadPath)
-        print(savePath)
-        text, entities, relations = extract(loadPath)
-    
-        for i in range(len(text)):
-            labelList, labelIdList, elementList = identifyLabels(text[i], entities[i])
-            relationList, primaryString, primaryList = identifyRelations(relations[i], labelIdList, elementList)
+    print("Receiving results")
+   
+    text, entities, relations = extract(loadPath)
 
-            primaryAction, primaryEntity = primaryString
-            primaryActionList, primaryEntityList = primaryList
-            persona , entityList, actionList, benefit, pID = labelList
+    for i in range(len(text)):
+        labelList, labelIdList, elementList = identifyLabels(text[i], entities[i])
+        relationList, primaryString, primaryList = identifyRelations(relations[i], labelIdList, elementList)
 
-            secondaryEntity = secondary(entityList, primaryEntityList)
-            secondaryAction = secondary(actionList, primaryActionList)
+        primaryAction, primaryEntity = primaryString
+        primaryActionList, primaryEntityList = primaryList
+        persona , entityList, actionList, benefit, pID = labelList
 
-            labels = [persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pID]
-            output(text[i], labels, relationList)
+        secondaryEntity = secondary(entityList, primaryEntityList)
+        secondaryAction = secondary(actionList, primaryActionList)
 
-            
-            dictionary = convertJsonFormat(text[i], labels, relationList)
-            dictionaryList.append(dictionary)
-        print("Saving")
-        saveFile(savePath, dictionaryList)
-    else:
-        print("Please try again")
+        labels = [persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pID]
+        output(text[i], labels, relationList)
+
+        
+        dictionary = convertJsonFormat(text[i], labels, relationList)
+        dictionaryList.append(dictionary)
+    print("Saving\n")
+    saveFile(savePath, dictionaryList)
 
 def command():
+    '''
+    Runs the command line inputs
+
+    Returns:
+        loadPath (str): Path to the file to be loaded
+        savePath (str): Path to the file to be saved
+
+    Raises:
+        FileNotFoundError: raises excpetion
+        wrong file type: raises exception
+    '''
+
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
     parser.add_argument("loadPath", type = str, help = "path of file")
     parser.add_argument("savePath", type = str, help = "path of file to save")
-    parser.add_argument("-c", "--convert", help = "convert load file to human readiable and save as json file", action = "store_true")
+    
     args = parser.parse_args()
 
-    if args.convert:
-        if os.path.exists(args.loadPath):
-            print("File Found")
-            return args.loadPath, args.savePath, True
-        else:
-            print("File not found")
-            return None, None, False
+    if not(args.savePath.endswith(".json")):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect saving file type. Save file type is .json")
+    try:
+        loadFile = open(args.loadPath)
+        loadFile.close()
+        saveFile = open(args.savePath)
+        saveFile.close()
+    except FileNotFoundError:
+        sys.tracebacklimit = 0
+        print("File or directory does not exist")
+        raise
     else:
-        print("Please enter the appropriate argument. type -h for help")
-        return None, None, False
-
+        return args.loadPath, args.savePath
+    
 def extract(path):
+    '''
+    Extracts the information of given file
+
+    Parameters:
+        path (str): Path of the file to extract info
+
+    Returns:
+        text (list): story text
+        entities (list): entities and their location within the story
+        relations (list): relations and their location within the story
+    '''
+    
     text = []
     entities = []
     relations = [] 
@@ -76,9 +91,23 @@ def extract(path):
             text.append(story["text"])
             entities.append(story["entities"])
             relations.append(story["relations"])
+
     return text, entities, relations
 
 def identifyLabels(text, entities):
+    '''
+    Identify and sort labels within story
+
+    Paramaters:
+        text (str): story text
+        entities (list): entities and their locations within the story
+
+    Returns:
+        labelList (list): sorted str labels
+        labelIDList (list): element Id
+        elementList (list): element corresponding in order to labelIdlist
+    '''
+    
     persona = ""
     entity = []
     action = []
@@ -114,6 +143,20 @@ def identifyLabels(text, entities):
     return labelList, labelIdList, elementList
 
 def identifyRelations(relations,labelIdList,elementList):
+    '''
+    Identify and sort relations within story
+
+    Parameters:
+        relations (list): relations and their locations within story
+        labelIDList (list): element Id
+        elementList (list): element corresponding in order to labelIdlist
+
+    Returns:
+        relationList (list): sorted str relations
+        primaryString (list): primary str elements
+        primaryList (list): primary elements
+    '''
+    
     triggers = ""
     targets = ""
     contains = ""
@@ -134,17 +177,17 @@ def identifyRelations(relations,labelIdList,elementList):
         endElement = findElement(labelIdList, elementList, endId)
         
         if relationType == "triggers":
-            triggers += startElement + " --> " + endElement + ",  "
+            triggers += startElement + " --> " + endElement + ", "
             primaryActions += endElement + ", "
             primaryActionList.append(endElement)
             
         elif relationType == "targets":
-            targets += startElement + " --> " + endElement + ",  "
+            targets += startElement + " --> " + endElement + ", "
             targetAction.append(startElement)
             targetEntity.append(endElement)
             
         else:
-            contains += startElement + " --> " + endElement + ",  "
+            contains += startElement + " --> " + endElement + ", "
 
     for primaryAction in primaryActionList:
         for i in range(len(targetAction)):
@@ -159,12 +202,35 @@ def identifyRelations(relations,labelIdList,elementList):
     return relationList, primaryString, primaryList
 
 def findElement(labelId, element, findId):
+    '''
+    find specific element within story
+
+    Parameters:
+        labelId (list): all element Id within story
+        element (list): all element within story
+        findId (int): Id to search for
+
+    Returns:
+        element (string): element that is found
+    '''
+    
     for i in range(len(labelId)):
         if labelId[i] == findId:
             return element[i]
     
 
 def secondary (wholeList, primaryItem):
+    '''
+    identify the secondary elements within story
+
+    Parameters:
+        wholeList (list) : all elements in story
+        primaryItem (list): all primary elements in story
+
+    Returns:
+        secondaryItem (str): secondary elements in story
+    '''
+    
     secondaryItem = ""
     for item in wholeList:
         if not(item in primaryItem):
@@ -173,6 +239,15 @@ def secondary (wholeList, primaryItem):
     return secondaryItem
 
 def output(text,labelList, relationList):
+    '''
+    outputs results to terminal
+
+    Parameters:
+        text (str): story text
+        labelList (list): str of all sorted labels in story
+        relationList (list): str of all sorted relations in story
+    '''
+    
     persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pId = labelList
     triggers, targets, contains = relationList
 
@@ -192,14 +267,47 @@ def output(text,labelList, relationList):
     print("Contains:", contains.strip(", "))
     print("---------------------STORY END---------------------\n")
 
-def convertJsonFormat(text, labels, relationList):
-    obj = {"test 1": 2, "test 2": 4}
-    
-    return obj 
+def convertJsonFormat(text, labelList, relationList):
+    '''
+    converts results to json file format
+
+    Parameters:
+        text (str): story text
+        labelList (list): str of all sorted labels in story
+        relationList (list): str of all sorted relations in story
+
+    Returns:
+        data (dictionary): includes all sorted information about the story      
+    '''
+    persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pId = labelList
+    triggers, targets, contains = relationList
+
+    data = {
+            "PID": pId.strip(", "),
+            "Text": text,
+            "Persona": persona.strip(", "),
+            "Action":[{"Primary Action": primaryAction.strip(", ").split(", ")},
+                      {"Secondary Action": secondaryAction.strip(", ").split(", ")}],
+            "Entity":[{"Primary Entity": primaryEntity.strip(", ").split(", ")},
+                      {"Secondary Entity": secondaryEntity.strip(", ").split(", ")}],
+            "Benefit": benefit.strip(", "),
+            "Triggers": triggers.strip(", ").split(", "),
+            "Targets": targets.strip(", ").split(", "),
+            "Contains": contains.strip(", ").split(", ")}
+
+    return data 
 
 def saveFile(path, dictionaryList):
+    '''
+    save the results into json file
+
+    Parameters:
+        path (str): path of file to be saved
+        dictionaryList (list): info to be saved onto file
+    '''
     json.dumps(dictionaryList)
     with open(path,"w") as file:
         json.dump(dictionaryList, file, ensure_ascii=False, indent = 4)
+    print("File is saved")
 
 main()
