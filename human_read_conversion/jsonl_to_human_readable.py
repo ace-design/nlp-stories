@@ -8,41 +8,42 @@ import os
 import sys
 
 def main():
-    loadPath, savePath = command()
+    load_path, save_path = command()
 
-    dictionaryList = []
+    dictionary_list = []
         
     print("Receiving results")
    
-    text, entities, relations = extract(loadPath)
+    text, entities, relations = extract(load_path)
 
     for i in range(len(text)):
-        labelList, labelIdList, elementList = identifyLabels(text[i], entities[i])
-        relationList, primaryString, primaryList = identifyRelations(relations[i], labelIdList, elementList)
+        label_list, label_id_list, element_list = identify_labels(text[i], entities[i])
+        relation_string_list, relation_list, primary_string, primary_list = identify_relations(relations[i], label_id_list, element_list)
 
-        primaryAction, primaryEntity = primaryString
-        primaryActionList, primaryEntityList = primaryList
-        persona , entityList, actionList, benefit, pID = labelList
+        primary_action, primary_entity = primary_string
+        primary_action_list, primary_entity_list = primary_list
+        persona , entity_list, action_list, benefit, pid = label_list
 
-        secondaryEntity = secondary(entityList, primaryEntityList)
-        secondaryAction = secondary(actionList, primaryActionList)
+        secondary_entity = secondary(entity_list, primary_entity_list)
+        secondary_action = secondary(action_list, primary_action_list)
 
-        labels = [persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pID]
-        output(text[i], labels, relationList)
+        labels = [persona, primary_entity, secondary_entity, primary_action, secondary_action, benefit, pid]
+        output(text[i], labels, relation_string_list)
 
         
-        dictionary = convertJsonFormat(text[i], labels, relationList)
-        dictionaryList.append(dictionary)
+        dictionary = convert_json_format(text[i], labels, relation_list)
+        dictionary_list.append(dictionary)
+        
     print("Saving\n")
-    saveFile(savePath, dictionaryList)
+    saveFile(save_path, dictionary_list)
 
 def command():
     '''
     Runs the command line inputs
 
     Returns:
-        loadPath (str): Path to the file to be loaded
-        savePath (str): Path to the file to be saved
+        load_path (str): Path to the file to be loaded
+        save_path (str): Path to the file to be saved
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -50,25 +51,25 @@ def command():
     '''
 
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
-    parser.add_argument("loadPath", type = str, help = "path of file")
-    parser.add_argument("savePath", type = str, help = "path of file to save")
+    parser.add_argument("load_path", type = str, help = "path of file")
+    parser.add_argument("save_path", type = str, help = "path of file to save")
     
     args = parser.parse_args()
 
-    if not(args.savePath.endswith(".json")):
+    if not(args.save_path.endswith(".json")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect saving file type. Save file type is .json")
     try:
-        loadFile = open(args.loadPath)
-        loadFile.close()
-        saveFile = open(args.savePath)
-        saveFile.close()
+        load_file = open(args.load_path)
+        load_file.close()
+        save_file = open(args.save_path)
+        save_file.close()
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
     else:
-        return args.loadPath, args.savePath
+        return args.load_path, args.save_path
     
 def extract(path):
     '''
@@ -94,7 +95,7 @@ def extract(path):
 
     return text, entities, relations
 
-def identifyLabels(text, entities):
+def identify_labels(text, entities):
     '''
     Identify and sort labels within story
 
@@ -103,163 +104,171 @@ def identifyLabels(text, entities):
         entities (list): entities and their locations within the story
 
     Returns:
-        labelList (list): sorted str labels
-        labelIDList (list): element Id
-        elementList (list): element corresponding in order to labelIdlist
+        label_list (list): sorted str labels
+        label_id_list (list): element Id
+        element_list (list): element corresponding in order to label_id_list
     '''
     
     persona = ""
     entity = []
     action = []
     benefit = ""
-    pID = ""
+    pid = ""
 
-    labelIdList = []
-    elementList = []
+    label_id_list = []
+    element_list = []
 
     for label in entities:
-        labelID = label["id"]
-        labelType = label["label"]
-        startOffset = label["start_offset"]
-        endOffset = label["end_offset"]
-        element = text[startOffset : endOffset]
+        label_id = label["id"]
+        label_type = label["label"]
+        start_offset = label["start_offset"]
+        end_offset = label["end_offset"]
+        element = text[start_offset : end_offset]
 
-        labelIdList.append(labelID)
-        elementList.append(element)
+        label_id_list.append(label_id)
+        element_list.append(element)
 
-        if labelType == "Persona":
+        if label_type == "Persona":
             persona += element + ", "
-        elif labelType == "Entity":
+        elif label_type == "Entity":
             entity.append(element)
-        elif labelType == "Action":
+        elif label_type == "Action":
             action.append(element)
-        elif labelType == "Benefit":
+        elif label_type == "Benefit":
             benefit+= element + ", "
         else:
-            pID = element
+            pid = element
 
-    labelList = [persona, entity, action, benefit, pID]
+    label_list = [persona, entity, action, benefit, pid]
 
-    return labelList, labelIdList, elementList
+    return label_list, label_id_list, element_list
 
-def identifyRelations(relations,labelIdList,elementList):
+def identify_relations(relations,label_id_list,element_list):
     '''
     Identify and sort relations within story
 
     Parameters:
         relations (list): relations and their locations within story
-        labelIDList (list): element Id
-        elementList (list): element corresponding in order to labelIdlist
+        label_id_list (list): element Id
+        element_list (list): element corresponding in order to label_id_list
 
     Returns:
-        relationList (list): sorted str relations
-        primaryString (list): primary str elements
-        primaryList (list): primary elements
+        relation_string_list (list): sorted str relations
+        relation_list (list): list of sorted pairs relations
+        primary_string (list): primary str elements
+        primary_list (list): primary elements
     '''
     
     triggers = ""
     targets = ""
     contains = ""
-    primaryActions = ""
-    primaryEntities = ""
-    primaryActionList = []
-    primaryEntityList = []
-    targetAction = []
-    targetEntity = []
+    primary_actions = ""
+    primary_entities = ""
+    primary_action_list = []
+    primary_entity_list = []
+    target_action = []
+    target_entity = []
+    triggers_list = []
+    targets_list = []
+    contains_list = []
  
     
     for relation in relations:
-        relationType = relation["type"]
-        startId = relation["from_id"]
-        endId = relation["to_id"]
+        relation_type = relation["type"]
+        start_id = relation["from_id"]
+        end_id = relation["to_id"]
 
-        startElement = findElement(labelIdList, elementList, startId)
-        endElement = findElement(labelIdList, elementList, endId)
+        start_element = find_element(label_id_list, element_list, start_id)
+        end_element = find_element(label_id_list, element_list, end_id)
         
-        if relationType == "triggers":
-            triggers += startElement + " --> " + endElement + ", "
-            primaryActions += endElement + ", "
-            primaryActionList.append(endElement)
+        if relation_type == "triggers":
+            triggers += start_element + " --> " + end_element + ", "
+            primary_actions += end_element + ", "
+            primary_action_list.append(end_element)
+            triggers_list.append([start_element, end_element])
             
-        elif relationType == "targets":
-            targets += startElement + " --> " + endElement + ", "
-            targetAction.append(startElement)
-            targetEntity.append(endElement)
+        elif relation_type == "targets":
+            targets += start_element + " --> " + end_element + ", "
+            target_action.append(start_element)
+            target_entity.append(end_element)
+            targets_list.append([start_element, end_element])
             
         else:
-            contains += startElement + " --> " + endElement + ", "
+            contains += start_element + " --> " + end_element + ", "
+            contains_list.append([start_element, end_element])
 
-    for primaryAction in primaryActionList:
-        for i in range(len(targetAction)):
-            if primaryAction == targetAction[i]:
-                primaryEntities += targetEntity[i] + ", "
-                primaryEntityList.append(targetEntity[i])
+    for primary_action in primary_action_list:
+        for i in range(len(target_action)):
+            if primary_action == target_action[i]:
+                primary_entities += target_entity[i] + ", "
+                primary_entity_list.append(target_entity[i])
     
-    relationList = [triggers, targets, contains]
-    primaryString = primaryActions, primaryEntities
-    primaryList = primaryActionList, primaryEntityList
+    relation_string_list = [triggers, targets, contains]
+    relation_list = [triggers_list, targets_list, contains_list]
+    primary_string = primary_actions, primary_entities
+    primary_list = primary_action_list, primary_entity_list
 
-    return relationList, primaryString, primaryList
+    return relation_string_list, relation_list, primary_string, primary_list
 
-def findElement(labelId, element, findId):
+def find_element(label_id, element, find_id):
     '''
     find specific element within story
 
     Parameters:
-        labelId (list): all element Id within story
+        label_id (list): all element Id within story
         element (list): all element within story
-        findId (int): Id to search for
+        find_id (int): Id to search for
 
     Returns:
         element (string): element that is found
     '''
     
-    for i in range(len(labelId)):
-        if labelId[i] == findId:
+    for i in range(len(label_id)):
+        if label_id[i] == find_id:
             return element[i]
     
 
-def secondary (wholeList, primaryItem):
+def secondary (whole_list, primary_item):
     '''
     identify the secondary elements within story
 
     Parameters:
-        wholeList (list) : all elements in story
-        primaryItem (list): all primary elements in story
+        whole_list (list) : all elements in story
+        primary_item (list): all primary elements in story
 
     Returns:
-        secondaryItem (str): secondary elements in story
+        secondary_item (str): secondary elements in story
     '''
     
-    secondaryItem = ""
-    for item in wholeList:
-        if not(item in primaryItem):
-            secondaryItem += item + ", "
+    secondary_item = ""
+    for item in whole_list:
+        if not(item in primary_item):
+            secondary_item += item + ", "
 
-    return secondaryItem
+    return secondary_item
 
-def output(text,labelList, relationList):
+def output(text,label_list, relation_string_list):
     '''
     outputs results to terminal
 
     Parameters:
         text (str): story text
-        labelList (list): str of all sorted labels in story
-        relationList (list): str of all sorted relations in story
+        label_list (list): str of all sorted labels in story
+        relation_string_list (list): str of all sorted relations in story
     '''
     
-    persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pId = labelList
-    triggers, targets, contains = relationList
+    persona, primary_entity, secondary_entity, primary_action, secondary_action, benefit, pid = label_list
+    triggers, targets, contains = relation_string_list
 
     print("--------------------STORY START--------------------")
-    print("PID:", pId.strip(", "))
+    print("PID:", pid.strip(", "))
     print("Story text:", text)
     print("\n")
     print("Persona:", persona.strip(", "))
-    print("Primary Action:", primaryAction.strip(", "))
-    print("Secondary Action:", secondaryAction.strip(", "))
-    print("Primary Entity:", primaryEntity.strip(", "))
-    print("Secondary Entity:", secondaryEntity.strip(", "))
+    print("Primary Action:", primary_action.strip(", "))
+    print("Secondary Action:", secondary_action.strip(", "))
+    print("Primary Entity:", primary_entity.strip(", "))
+    print("Secondary Entity:", secondary_entity.strip(", "))
     print("Benefit:", benefit.strip(", "))
     print("\n")
     print("Triggers:", triggers.strip(", "))
@@ -267,47 +276,47 @@ def output(text,labelList, relationList):
     print("Contains:", contains.strip(", "))
     print("---------------------STORY END---------------------\n")
 
-def convertJsonFormat(text, labelList, relationList):
+def convert_json_format(text, label_list, relation_list):
     '''
     converts results to json file format
 
     Parameters:
         text (str): story text
-        labelList (list): str of all sorted labels in story
-        relationList (list): str of all sorted relations in story
+        label_list (list): str of all sorted labels in story
+        relation_list (list): str of all sorted relations in story
 
     Returns:
         data (dictionary): includes all sorted information about the story      
     '''
-    persona, primaryEntity, secondaryEntity, primaryAction, secondaryAction, benefit, pId = labelList
-    triggers, targets, contains = relationList
+    persona, primary_entity, secondary_entity, primary_action, secondary_action, benefit, pid = label_list
+    triggers, targets, contains = relation_list
 
     data = {
-            "PID": pId.strip(", "),
+            "PID": pid.strip(", "),
             "Text": text,
             "Persona": persona.strip(", "),
-            "Action":[{"Primary Action": primaryAction.strip(", ").split(", ")},
-                      {"Secondary Action": secondaryAction.strip(", ").split(", ")}],
-            "Entity":[{"Primary Entity": primaryEntity.strip(", ").split(", ")},
-                      {"Secondary Entity": secondaryEntity.strip(", ").split(", ")}],
+            "Action":[{"Primary Action": primary_action.strip(", ").split(", ")},
+                      {"Secondary Action": secondary_action.strip(", ").split(", ")}],
+            "Entity":[{"Primary Entity": primary_entity.strip(", ").split(", ")},
+                      {"Secondary Entity": secondary_entity.strip(", ").split(", ")}],
             "Benefit": benefit.strip(", "),
-            "Triggers": triggers.strip(", ").split(", "),
-            "Targets": targets.strip(", ").split(", "),
-            "Contains": contains.strip(", ").split(", ")}
+            "Triggers": triggers,
+            "Targets": targets,
+            "Contains": contains}
 
     return data 
 
-def saveFile(path, dictionaryList):
+def saveFile(path, dictionary_list):
     '''
     save the results into json file
 
     Parameters:
         path (str): path of file to be saved
-        dictionaryList (list): info to be saved onto file
+        dictionary_list (list): info to be saved onto file
     '''
-    json.dumps(dictionaryList)
+    json.dumps(dictionary_list)
     with open(path,"w") as file:
-        json.dump(dictionaryList, file, ensure_ascii=False, indent = 4)
+        json.dump(dictionary_list, file, ensure_ascii=False, indent = 4)
     print("File is saved")
 
 main()
