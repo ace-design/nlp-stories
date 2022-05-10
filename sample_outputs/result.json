@@ -33,22 +33,58 @@
         ],
         "Benefit": "I can obtain publicly available information concerning properties, County services, processes and other general information",
         "Triggers": [
-            "Public User --> Search"
+            [
+                "Public User",
+                "Search"
+            ]
         ],
         "Targets": [
-            "Search --> Information",
-            "obtain --> properties",
-            "obtain --> County services",
-            "obtain --> processes",
-            "obtain --> publicly available information",
-            "obtain --> general information"
+            [
+                "Search",
+                "Information"
+            ],
+            [
+                "obtain",
+                "properties"
+            ],
+            [
+                "obtain",
+                "County services"
+            ],
+            [
+                "obtain",
+                "processes"
+            ],
+            [
+                "obtain",
+                "publicly available information"
+            ],
+            [
+                "obtain",
+                "general information"
+            ]
         ],
         "Contains": [
-            "publicly available information --> properties",
-            "publicly available information --> general information",
-            "publicly available information --> processes",
-            "Information --> publicly available information",
-            "publicly available information --> County services"
+            [
+                "publicly available information",
+                "properties"
+            ],
+            [
+                "publicly available information",
+                "general information"
+            ],
+            [
+                "publicly available information",
+                "processes"
+            ],
+            [
+                "Information",
+                "publicly available information"
+            ],
+            [
+                "publicly available information",
+                "County services"
+            ]
         ]
     },
     {
@@ -86,19 +122,46 @@
         ],
         "Benefit": "I can find the relevant service and/or application type to initiate via the online portal",
         "Triggers": [
-            "ProspectiveApplicant --> select",
-            "ProspectiveApplicant --> research"
+            [
+                "ProspectiveApplicant",
+                "select"
+            ],
+            [
+                "ProspectiveApplicant",
+                "research"
+            ]
         ],
         "Targets": [
-            "select --> service",
-            "research --> requirements",
-            "initiate --> relevant service",
-            "find --> relevant service",
-            "find --> application",
-            "initiate --> application"
+            [
+                "select",
+                "service"
+            ],
+            [
+                "research",
+                "requirements"
+            ],
+            [
+                "initiate",
+                "relevant service"
+            ],
+            [
+                "find",
+                "relevant service"
+            ],
+            [
+                "find",
+                "application"
+            ],
+            [
+                "initiate",
+                "application"
+            ]
         ],
         "Contains": [
-            "requirements --> application"
+            [
+                "requirements",
+                "application"
+            ]
         ]
     },
     {
@@ -134,16 +197,26 @@
         ],
         "Benefit": "I can receive a response to a request for a meeting or information that is a result of the preapplication assistance",
         "Triggers": [
-            "Applicant --> Request"
+            [
+                "Applicant",
+                "Request"
+            ]
         ],
         "Targets": [
-            "Request --> PreApplication Assistance",
-            "receive --> response",
-            "receive --> information"
+            [
+                "Request",
+                "PreApplication Assistance"
+            ],
+            [
+                "receive",
+                "response"
+            ],
+            [
+                "receive",
+                "information"
+            ]
         ],
-        "Contains": [
-            ""
-        ]
+        "Contains": []
     },
     {
         "PID": "#GXX#",
@@ -178,15 +251,30 @@
         ],
         "Benefit": "I can log on to the Customer Portal and perform transactions that first require user authentication",
         "Triggers": [
-            "Customer --> Create"
+            [
+                "Customer",
+                "Create"
+            ]
         ],
         "Targets": [
-            "perform --> transactions",
-            "Create --> Customer Portal User Account",
-            "log --> Customer Portal"
+            [
+                "perform",
+                "transactions"
+            ],
+            [
+                "Create",
+                "Customer Portal User Account"
+            ],
+            [
+                "log",
+                "Customer Portal"
+            ]
         ],
         "Contains": [
-            "transactions --> user authentication"
+            [
+                "transactions",
+                "user authentication"
+            ]
         ]
     },
     {
@@ -223,19 +311,46 @@
         ],
         "Benefit": "I can provide my information, plans and/or documents to initiate a transaction with the County.",
         "Triggers": [
-            "Applicant --> Submit"
+            [
+                "Applicant",
+                "Submit"
+            ]
         ],
         "Targets": [
-            "provide --> documents",
-            "provide --> information",
-            "provide --> plans",
-            "Submit --> Application",
-            "initiate --> transaction"
+            [
+                "provide",
+                "documents"
+            ],
+            [
+                "provide",
+                "information"
+            ],
+            [
+                "provide",
+                "plans"
+            ],
+            [
+                "Submit",
+                "Application"
+            ],
+            [
+                "initiate",
+                "transaction"
+            ]
         ],
         "Contains": [
-            "Application --> documents",
-            "Application --> plans",
-            "Application --> information"
+            [
+                "Application",
+                "documents"
+            ],
+            [
+                "Application",
+                "plans"
+            ],
+            [
+                "Application",
+                "information"
+            ]
         ]
     },
     {
@@ -268,14 +383,26 @@
         ],
         "Benefit": "I can satisfy documentation requirements for my application",
         "Triggers": [
-            "Applicant --> Submit"
+            [
+                "Applicant",
+                "Submit"
+            ]
         ],
         "Targets": [
-            "Submit --> Supporting Documentation",
-            "satisfy --> documentation requirements"
+            [
+                "Submit",
+                "Supporting Documentation"
+            ],
+            [
+                "satisfy",
+                "documentation requirements"
+            ]
         ],
         "Contains": [
-            "documentation requirements --> Supporting Documentation"
+            [
+                "documentation requirements",
+                "Supporting Documentation"
+            ]
         ]
     }
 ]

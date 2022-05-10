@@ -6,6 +6,7 @@ import json
 import argparse
 import os
 import sys
+import pytest
 
 def main():
     load_path, save_path = command()
@@ -70,7 +71,7 @@ def command():
         raise
     else:
         return args.load_path, args.save_path
-    
+
 def extract(path):
     '''
     Extracts the information of given file
@@ -83,7 +84,7 @@ def extract(path):
         entities (list): entities and their location within the story
         relations (list): relations and their location within the story
     '''
-    
+    print(path)
     text = []
     entities = []
     relations = [] 
@@ -319,4 +320,5 @@ def saveFile(path, dictionary_list):
         json.dump(dictionary_list, file, ensure_ascii=False, indent = 4)
     print("File is saved")
 
-main()
+if __name__ == "__main__":
+    main()
