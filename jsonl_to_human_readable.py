@@ -4,7 +4,6 @@
 import jsonlines
 import json
 import argparse
-import os
 import sys
 import pytest
 
