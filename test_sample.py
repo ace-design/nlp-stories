@@ -1,5 +1,4 @@
 import pytest
-import jsonl_to_human_readable
 from jsonl_to_human_readable import *
 
 lst = [[["a","b","c"],["c"],"a, b, "], [["a","b","c"],["c","a"],"b, "], [["d","e","f"],["e"],"d, f, "]]

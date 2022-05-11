@@ -19,10 +19,11 @@ def main():
 
     for i in range(len(text)):
         label_list, label_id_list, element_list = identify_labels(text[i], entities[i])
-        relation_string_list, relation_list, primary_string, primary_list = identify_relations(relations[i], label_id_list, element_list)
+        relation_string_list, relation_list, primary_element_data = identify_relations(relations[i], label_id_list, element_list)
+        
+        primary_action, primary_action_list, target_action, target_entity = primary_element_data
+        primary_entity, primary_entity_list = identify_primary_entity(primary_action_list, target_action, target_entity)
 
-        primary_action, primary_entity = primary_string
-        primary_action_list, primary_entity_list = primary_list
         persona , entity_list, action_list, benefit, pid = label_list
 
         secondary_entity = secondary(entity_list, primary_entity_list)
@@ -156,17 +157,14 @@ def identify_relations(relations,label_id_list,element_list):
     Returns:
         relation_string_list (list): sorted str relations
         relation_list (list): list of sorted pairs relations
-        primary_string (list): primary str elements
-        primary_list (list): primary elements
+        primary_element_data (list): data of primary elements
     '''
     
     triggers = ""
     targets = ""
     contains = ""
     primary_actions = ""
-    primary_entities = ""
     primary_action_list = []
-    primary_entity_list = []
     target_action = []
     target_entity = []
     triggers_list = []
@@ -197,19 +195,38 @@ def identify_relations(relations,label_id_list,element_list):
         else:
             contains += start_element + " --> " + end_element + ", "
             contains_list.append([start_element, end_element])
+    
+    relation_string_list = [triggers, targets, contains]
+    relation_list = [triggers_list, targets_list, contains_list]
+    primary_element_data = [primary_actions, primary_action_list, target_action, target_entity]
 
+    return relation_string_list, relation_list, primary_element_data
+
+def identify_primary_entity(primary_action_list, target_action, target_entity):
+    '''
+     identify primary entities
+
+    Parameters:
+        primary_action_list (list): contains all the primary actions in the story
+        target_action (list): contains all actions in the target relations
+        target_entity (list): contains all entities in the target relations
+
+    Returns:
+        primary_entities (str): indentified primary entities
+        primary_entity_list (list): indentified primary entities
+    '''
+    
+    primary_entities = ""
+    primary_entity_list = []
+    
+    
     for primary_action in primary_action_list:
         for i in range(len(target_action)):
             if primary_action == target_action[i]:
                 primary_entities += target_entity[i] + ", "
                 primary_entity_list.append(target_entity[i])
-    
-    relation_string_list = [triggers, targets, contains]
-    relation_list = [triggers_list, targets_list, contains_list]
-    primary_string = primary_actions, primary_entities
-    primary_list = primary_action_list, primary_entity_list
-
-    return relation_string_list, relation_list, primary_string, primary_list
+                
+    return primary_entities, primary_entity_list
 
 def find_element(label_id, element, find_id):
     '''
