@@ -19,8 +19,8 @@ def main():
         label_list, label_id_list, element_list = identify_labels(text[i], entities[i])
         relation_string_list, relation_list, primary_element_data = identify_relations(relations[i], label_id_list, element_list)
         
-        primary_action, primary_action_list, target_action, target_entity = primary_element_data
-        primary_entity, primary_entity_list = identify_primary_entity(primary_action_list, target_action, target_entity)
+        primary_action, primary_action_list, primary_action_id_list, target_action, target_entity = primary_element_data
+        primary_entity, primary_entity_list = identify_primary_entity(primary_action_id_list, target_action, target_entity)
 
         persona , entity_list, action_list, benefit, pid = label_list
 
@@ -163,6 +163,7 @@ def identify_relations(relations,label_id_list,element_list):
     contains = ""
     primary_actions = ""
     primary_action_list = []
+    primary_action_id_list = []
     target_action = []
     target_entity = []
     triggers_list = []
@@ -180,15 +181,16 @@ def identify_relations(relations,label_id_list,element_list):
         
         if relation_type == "triggers":
             triggers += start_element + " --> " + end_element + ", "
-            primary_actions += end_element + ", "
-            primary_action_list.append(end_element)
             triggers_list.append([start_element, end_element])
+            primary_actions += end_element + ", "
+            primary_action_id_list.append(end_id)
+            primary_action_list.append(end_element)
             
         elif relation_type == "targets":
             targets += start_element + " --> " + end_element + ", "
-            target_action.append(start_element)
-            target_entity.append(end_element)
             targets_list.append([start_element, end_element])
+            target_action.append([start_id, start_element])
+            target_entity.append([end_id, end_element])
             
         else:
             contains += start_element + " --> " + end_element + ", "
@@ -196,18 +198,18 @@ def identify_relations(relations,label_id_list,element_list):
     
     relation_string_list = [triggers, targets, contains]
     relation_list = [triggers_list, targets_list, contains_list]
-    primary_element_data = [primary_actions, primary_action_list, target_action, target_entity]
+    primary_element_data = [primary_actions, primary_action_list, primary_action_id_list, target_action, target_entity]
 
     return relation_string_list, relation_list, primary_element_data
 
-def identify_primary_entity(primary_action_list, target_action, target_entity):
+def identify_primary_entity(primary_action_id_list, target_action, target_entity):
     '''
      identify primary entities
 
     Parameters:
-        primary_action_list (list): contains all the primary actions in the story
-        target_action (list): contains all actions in the target relations
-        target_entity (list): contains all entities in the target relations
+        primary_action_id_list (list): contains all the primary actions in the story
+        target_action (2D list): contains all ids and corresponding actions in the target relations
+        target_entity (2D list): contains all ids and corresponding entities in the target relations
 
     Returns:
         primary_entities (str): indentified primary entities
@@ -218,11 +220,11 @@ def identify_primary_entity(primary_action_list, target_action, target_entity):
     primary_entity_list = []
     
     
-    for primary_action in primary_action_list:
+    for primary_action_id in primary_action_id_list:
         for i in range(len(target_action)):
-            if primary_action == target_action[i]:
-                primary_entities += target_entity[i] + ", "
-                primary_entity_list.append(target_entity[i])
+            if primary_action_id == target_action[i][0]:
+                primary_entities += target_entity[i][1] + ", "
+                primary_entity_list.append(target_entity[i][1])
                 
     return primary_entities, primary_entity_list
 
@@ -257,9 +259,12 @@ def secondary (whole_list, primary_item):
     '''
     
     secondary_item = ""
+    
+    for item in primary_item:
+        whole_list.remove(item)
+
     for item in whole_list:
-        if not(item in primary_item):
-            secondary_item += item + ", "
+        secondary_item += item + ", "
 
     return secondary_item
 
