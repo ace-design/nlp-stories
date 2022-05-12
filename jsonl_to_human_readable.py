@@ -5,7 +5,6 @@ import jsonlines
 import json
 import argparse
 import sys
-import pytest
 
 def main():
     load_path, save_path = command()
@@ -80,9 +79,9 @@ def extract(path):
         path (str): Path of the file to extract info
 
     Returns:
-        text (list): story text
-        entities (list): entities and their location within the story
-        relations (list): relations and their location within the story
+        text (2D list): story text
+        entities (2D list): entities and their location within the story
+        relations (2D list): relations and their location within the story
     '''
     print(path)
     text = []
@@ -105,7 +104,7 @@ def identify_labels(text, entities):
         entities (list): entities and their locations within the story
 
     Returns:
-        label_list (list): sorted str labels
+        label_list (2D list): sorted str labels
         label_id_list (list): element Id
         element_list (list): element corresponding in order to label_id_list
     '''
@@ -154,9 +153,9 @@ def identify_relations(relations,label_id_list,element_list):
         element_list (list): element corresponding in order to label_id_list
 
     Returns:
-        relation_string_list (list): sorted str relations
-        relation_list (list): list of sorted pairs relations
-        primary_element_data (list): data of primary elements
+        relation_string_list (2D list): sorted str relations
+        relation_list (2D list): list of sorted pairs relations
+        primary_element_data (2D list): data of primary elements
     '''
     
     triggers = ""
@@ -270,8 +269,8 @@ def output(text,label_list, relation_string_list):
 
     Parameters:
         text (str): story text
-        label_list (list): str of all sorted labels in story
-        relation_string_list (list): str of all sorted relations in story
+        label_list (2D list): str of all sorted labels in story
+        relation_string_list (2D list): str of all sorted relations in story
     '''
     
     persona, primary_entity, secondary_entity, primary_action, secondary_action, benefit, pid = label_list
@@ -299,8 +298,8 @@ def convert_json_format(text, label_list, relation_list):
 
     Parameters:
         text (str): story text
-        label_list (list): str of all sorted labels in story
-        relation_list (list): str of all sorted relations in story
+        label_list (2D list): str of all sorted labels in story
+        relation_list (2D list): str of all sorted relations in story
 
     Returns:
         data (dictionary): includes all sorted information about the story      
