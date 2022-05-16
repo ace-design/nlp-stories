@@ -1,5 +1,5 @@
 import pytest
-from jsonl_to_human_readable import *
+from jsonl_to_human_readable import identify_labels
 
 @pytest.fixture
 def text():
@@ -20,7 +20,7 @@ def entities():
 
 
 @pytest.mark.identify_labels
-def test_normal_case(text, entities):
+def test_normal_case_identify_labels(text, entities):
     label_list_expected = ["applicant, ", ["button", "page"], ["create", "move"], "I can move to the next page, ", "11:"]
     label_id_list_expected = [1,2,3,4,5,6,7]
     entity_expected = ["11:", "applicant", "create", "button", "I can move to the next page", "move", "page"]

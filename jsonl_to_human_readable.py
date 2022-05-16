@@ -136,7 +136,7 @@ def identify_labels(text, entities):
             action.append(element)
         elif label_type == "Benefit":
             benefit+= element + ", "
-        else:
+        elif label_type == "PID":
             pid = element
 
     label_list = [persona, entity, action, benefit, pid]
@@ -192,7 +192,7 @@ def identify_relations(relations,label_id_list,element_list):
             target_action.append([start_id, start_element])
             target_entity.append([end_id, end_element])
             
-        else:
+        elif relation_type == "contains":
             contains += start_element + " --> " + end_element + ", "
             contains_list.append([start_element, end_element])
     
