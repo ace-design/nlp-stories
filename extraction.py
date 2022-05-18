@@ -30,6 +30,9 @@ def extract_visual_Narrator():
     args.save_path (str) : path of file to save restults
     stories (list) : story text
 
+    Raises:
+        FileNotFoundError: raises excpetion
+
     '''
     
     parser = argparse.ArgumentParser()
