@@ -4,17 +4,18 @@ import sys
 import json
 
 def main():
-    data, save_path = extract_visual_Narrator()
+    data, save_path, stories = extract_visual_Narrator()
     line_story_data = split_data(data)
     dictionary_list =[]
     
-    for story in line_story_data:
-        functional_role = extract_label_info(story, 7)
-        main_verb = extract_label_info(story, 9)
-        main_object = extract_label_info(story, 10)
+    for i in range(len(line_story_data)):
+        functional_role = extract_label_info(line_story_data[i], 7)
+        main_verb = extract_label_info(line_story_data[i], 9)
+        main_object = extract_label_info(line_story_data[i], 10)
+        
         identified_labels = [functional_role, main_verb, main_object]
-        output(identified_labels)
-        dictionary = json_format(identified_labels)
+        output(identified_labels, stories[i])
+        dictionary = json_format(identified_labels, stories[i])
         dictionary_list.append(dictionary)
 
     save_json(save_path, dictionary_list)
@@ -25,7 +26,9 @@ def extract_visual_Narrator():
     Run the visual narrator with given input file
 
     Returns:
-    data (str): output from the command window
+    data (str) : output from the command window
+    args.save_path (str) : path of file to save restults
+    stories (list) : story text
 
     '''
     
@@ -43,10 +46,23 @@ def extract_visual_Narrator():
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
-    else: 
-        command = subprocess.run("python visual_narrator_extraction\\run.py " + args.load_path + " -u", capture_output = True)
+    else:
+        read_file = open(args.load_path)
+        stories = read_file.readlines()
+        text = []
+        for story in stories:
+            story = story[6:-1].strip("\n")
+            text.append(story)
+        read_file.close()
+        
+        write_file = open("visual_narrator_extraction\stip_text_visual_narrator.txt", "w")
+        for story in text:
+            write_file.write(story + "\n")
+        write_file.close()
+        
+        command = subprocess.run("python visual_narrator\\run.py visual_narrator_extraction\\stip_text_visual_narrator.txt -u", capture_output = True)
         data = command.stdout.decode()
-        return data, args.save_path
+        return data, args.save_path, stories
 
 def split_data(data):
     '''
@@ -90,15 +106,17 @@ def extract_label_info(story, index):
 
     return label
 
-def output (identified_labels):
+def output (identified_labels, story):
     '''
     ouputs the results to command window
 
     Parameters:
     identified_labels (list): persona, action, entity of each story
+    story (str) : the story of current evaluation
     '''
 
     persona, action, entity = identified_labels
+    print("Story:", story.strip("\n"))
     print("Persona:", persona)
     print("Action:", action)
     print("Entity:", entity)
@@ -106,17 +124,19 @@ def output (identified_labels):
     print("Targets:", action, "-->", entity)
     print("\n\n")
         
-def json_format(identified_labels):
+def json_format(identified_labels, story):
     '''
     format the results for a json file
 
     Parameters:
     identified_labels (list): persona, action, entity of each story
+    story (str) : the story of current evaluation
     '''
 
     persona, action, entity = identified_labels
     
     data = {
+            "Text": story.strip("\n"),
             "Persona": persona,
             "Action": action,
             "Entity": entity,
@@ -142,11 +162,4 @@ def save_json(save_path, dictionary_list):
     
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
     
