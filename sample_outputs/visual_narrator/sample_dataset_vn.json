@@ -1,0 +1,86 @@
+[
+    {
+        "Text": "#GXX# As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.",
+        "Persona": "User",
+        "Action": "Search",
+        "Entity": "Information",
+        "Triggers": [
+            "User",
+            "Search"
+        ],
+        "Targets": [
+            "Search",
+            "Information"
+        ]
+    },
+    {
+        "Text": "#GXX# As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.",
+        "Persona": "ProspectiveApplicant",
+        "Action": "research",
+        "Entity": "requirements",
+        "Triggers": [
+            "ProspectiveApplicant",
+            "research"
+        ],
+        "Targets": [
+            "research",
+            "requirements"
+        ]
+    },
+    {
+        "Text": "#GXX# As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.",
+        "Persona": "Applicant",
+        "Action": "Request",
+        "Entity": "Assistance",
+        "Triggers": [
+            "Applicant",
+            "Request"
+        ],
+        "Targets": [
+            "Request",
+            "Assistance"
+        ]
+    },
+    {
+        "Text": "#GXX# As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
+        "Persona": "Customer",
+        "Action": "Create",
+        "Entity": "Account",
+        "Triggers": [
+            "Customer",
+            "Create"
+        ],
+        "Targets": [
+            "Create",
+            "Account"
+        ]
+    },
+    {
+        "Text": "#GXX# As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.",
+        "Persona": "Applicant",
+        "Action": "Submit",
+        "Entity": "Application",
+        "Triggers": [
+            "Applicant",
+            "Submit"
+        ],
+        "Targets": [
+            "Submit",
+            "Application"
+        ]
+    },
+    {
+        "Text": "#GXX# As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.",
+        "Persona": "Applicant",
+        "Action": "Submit",
+        "Entity": "Documentation",
+        "Triggers": [
+            "Applicant",
+            "Submit"
+        ],
+        "Targets": [
+            "Submit",
+            "Documentation"
+        ]
+    }
+]

@@ -42,8 +42,8 @@ def command():
     Runs the command line inputs
 
     Returns:
-        load_path (str): Path to the file to be loaded
-        save_path (str): Path to the file to be saved
+        args.load_path (str): Path to the file to be loaded
+        args.save_path (str): Path to the file to be saved
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -290,7 +290,7 @@ def output(text,label_list, relation_string_list):
     print("Secondary Action:", secondary_action.strip(", "))
     print("Primary Entity:", primary_entity.strip(", "))
     print("Secondary Entity:", secondary_entity.strip(", "))
-    print("Benefit:", benefit.strip(", "))
+    print("Benefit:", benefit.strip("., "))
     print("\n")
     print("Triggers:", triggers.strip(", "))
     print("Targets:", targets.strip(", "))
@@ -316,11 +316,11 @@ def convert_json_format(text, label_list, relation_list):
             "PID": pid.strip(", "),
             "Text": text,
             "Persona": persona.strip(", "),
-            "Action":[{"Primary Action": primary_action.strip(", ").split(", ")},
-                      {"Secondary Action": secondary_action.strip(", ").split(", ")}],
-            "Entity":[{"Primary Entity": primary_entity.strip(", ").split(", ")},
-                      {"Secondary Entity": secondary_entity.strip(", ").split(", ")}],
-            "Benefit": benefit.strip(", "),
+            "Action":{"Primary Action": primary_action.strip(", ").split(", "),\
+                        "Secondary Action": secondary_action.strip(", ").split(", ")},
+            "Entity":{"Primary Entity": primary_entity.strip(", ").split(", "),\
+                      "Secondary Entity": secondary_entity.strip(", ").split(", ")},
+            "Benefit": benefit.strip("., "),
             "Triggers": triggers,
             "Targets": targets,
             "Contains": contains}
