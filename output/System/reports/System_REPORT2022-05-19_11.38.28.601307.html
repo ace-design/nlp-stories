@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The report style uses Bootstrap (http://getbootstrap.com) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<title>Report</title>
+</head>
+<body>
+	<div class="container" style="visibility: hidden">
+		<ul class="nav navbar-nav">
+			<li><a href="#general">General</a></li>
+			<li><a href="#user-stories">User Stories</a></li>
+			<li><a href="#ontology">Ontology</a></li>
+		</ul>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#general">General</a></li>
+				<li><a href="#user-stories">User Stories</a></li>
+				<li><a href="#ontology">Ontology</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">	
+	<h1 class="page-header">Report: System</h1>
+	<h2 id="general">General</h2>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Input file</h3>
+		</div>
+		<div class="panel-body">
+			<dl class="dl-horizontal">
+				<dt>Name</dt><dd>visual_narrator_extraction\stip_text_visual_narrator.txt</dd>
+				<dt>Non-empty lines</dt><dd>6</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Run details</h3>
+			</div>
+			<div class="panel-body">
+			<h4>Parsed User Stories</h4>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success" style="width: 100.0%">
+					Success: 6 User Stories (100.0%)
+				</div>
+			</div>	
+			<h4>Time elapsed</h4>
+		</div>
+		<table class="table">
+			<thead>
+
+				<tr><th>Part</th><th>Time (s)</th></tr>
+			</thead>
+			<tbody>
+					<tr><td>Initializing Natural Language Processor (<em>spaCy</em> v3.3.0)</td><td>1.36923</td></tr>
+					<tr><td>Mining User Stories</td><td>0.23053</td></tr>
+					<tr><td>Creating Factor Matrix</td><td>0.16972</td></tr>
+					<tr><td>Generating Manchester Ontology / Prolog</td><td>0.00775</td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Output files</h3>
+		</div>
+		<table class="table">
+			<thead>
+				<tr><th>File</th><th>Location</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>Manchester Ontology</td><td><a href="C:\Users\sathu\nlp-stories\visual_narrator/output/System/ontology/System2022-05-19_11.38.28.538027.omn">/output/System/ontology/System2022-05-19_11.38.28.538027.omn</a></td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2 id="user-stories">User Stories</h2>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 1</span>
+					<div style="display: inline-block; margin: 0 1em">As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>a</td>
+						<td>Public</td>
+						<td>User</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>Search</td>
+						<td>for</td>
+						<td>Information</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>obtain</td>
+						<td>publicly</td>
+						<td>available</td>
+						<td>information</td>
+						<td>concerning</td>
+						<td>properties</td>
+						<td>County</td>
+						<td>services</td>
+						<td>processes</td>
+						<td>and</td>
+						<td>other</td>
+						<td>general</td>
+						<td>information</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>ADP</td>
+						<td>NOUN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>ADV</td>
+						<td>ADJ</td>
+						<td>NOUN</td>
+						<td>VERB</td>
+						<td>NOUN</td>
+						<td>PROPN</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+						<td>CCONJ</td>
+						<td>ADJ</td>
+						<td>ADJ</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>IN</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>RB</td>
+						<td>JJ</td>
+						<td>NN</td>
+						<td>VBG</td>
+						<td>NNS</td>
+						<td>NNP</td>
+						<td>NNS</td>
+						<td>NNS</td>
+						<td>CC</td>
+						<td>JJ</td>
+						<td>JJ</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As a</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>Public User</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can Search for Information</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can obtain publicly available information concerning properties County services processes and other general information</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>Public User</kbd> (compound)
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>Search for</kbd> (type III phrasal verb)
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+						<kbd>Information</kbd>
+					with phrase <kbd>Information</kbd>
+					</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can obtain publicly available information concerning properties County services processes and other general information</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>obtain</kbd>
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+						<kbd>information</kbd>
+					with phrase <kbd>publicly available information</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>want</kbd><kbd>Search</kbd><kbd>for</kbd><kbd>Information</kbd><kbd>so</kbd><kbd>obtain</kbd></dd>
+					<dd>of which compounds 
+</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 2</span>
+					<div style="display: inline-block; margin: 0 1em">As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>a</td>
+						<td>ProspectiveApplicant</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>research</td>
+						<td>requirements</td>
+						<td>and</td>
+						<td>to</td>
+						<td>select</td>
+						<td>a</td>
+						<td>service</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>find</td>
+						<td>the</td>
+						<td>relevant</td>
+						<td>service</td>
+						<td>and/or</td>
+						<td>application</td>
+						<td>type</td>
+						<td>to</td>
+						<td>initiate</td>
+						<td>via</td>
+						<td>the</td>
+						<td>online</td>
+						<td>portal</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>PROPN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>NOUN</td>
+						<td>CCONJ</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>DET</td>
+						<td>ADJ</td>
+						<td>NOUN</td>
+						<td>CCONJ</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>ADJ</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NNP</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>NNS</td>
+						<td>CC</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>DT</td>
+						<td>JJ</td>
+						<td>NN</td>
+						<td>CC</td>
+						<td>NN</td>
+						<td>NN</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>JJ</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As a</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>ProspectiveApplicant</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can research requirements and to select a service</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can find the relevant service and/or application type to initiate via the online portal</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>ProspectiveApplicant</kbd>
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>research</kbd>
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+						<kbd>requirements</kbd>
+					with phrase <kbd>requirements</kbd>
+					</dd>
+					<dt>Free form</dt>
+					<dd><kbd>and to select a service</kbd></dd>
+						<dd>with nouns 
+<kbd>and</kbd></dd>
+						<dd>of which compounds 
+</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can find the relevant service and/or application type to initiate via the online portal</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>find</kbd>
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+						<kbd>portal</kbd>
+					with phrase <kbd>the online portal</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>to</kbd><kbd>requirements</kbd><kbd>and</kbd><kbd>that</kbd></dd>
+					<dd>of which compounds 
+</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 3</span>
+					<div style="display: inline-block; margin: 0 1em">As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>an</td>
+						<td>Applicant</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>Request</td>
+						<td>PreApplication</td>
+						<td>Assistance</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>receive</td>
+						<td>a</td>
+						<td>response</td>
+						<td>to</td>
+						<td>a</td>
+						<td>request</td>
+						<td>for</td>
+						<td>a</td>
+						<td>meeting</td>
+						<td>or</td>
+						<td>information</td>
+						<td>that</td>
+						<td>is</td>
+						<td>a</td>
+						<td>result</td>
+						<td>of</td>
+						<td>the</td>
+						<td>preapplication</td>
+						<td>assistance</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>CCONJ</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>CC</td>
+						<td>NN</td>
+						<td>WDT</td>
+						<td>VBZ</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As an</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>Applicant</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can Request PreApplication Assistance</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can receive a response to a request for a meeting or information that is a result of the preapplication assistance</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>Applicant</kbd>
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>Request</kbd>
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+					<kbd>PreApplication Assistance</kbd> (compound)
+					with phrase <kbd>PreApplication Assistance</kbd>
+					</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can receive a response to a request for a meeting or information that is a result of the preapplication assistance</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>receive</kbd>
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+						<kbd>response</kbd>
+					with phrase <kbd>a response</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>want</kbd><kbd>PreApplication</kbd><kbd>that</kbd><kbd>can</kbd><kbd>to</kbd><kbd>for</kbd><kbd>a</kbd></dd>
+					<dd>of which compounds 
+</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 4</span>
+					<div style="display: inline-block; margin: 0 1em">As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>a</td>
+						<td>Customer</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>Create</td>
+						<td>a</td>
+						<td>Customer</td>
+						<td>Portal</td>
+						<td>User</td>
+						<td>Account</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>log</td>
+						<td>on</td>
+						<td>to</td>
+						<td>the</td>
+						<td>Customer</td>
+						<td>Portal</td>
+						<td>and</td>
+						<td>perform</td>
+						<td>transactions</td>
+						<td>that</td>
+						<td>first</td>
+						<td>require</td>
+						<td>user</td>
+						<td>authentication</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>DET</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>ADP</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>CCONJ</td>
+						<td>VERB</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>ADV</td>
+						<td>VERB</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>DT</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>RP</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>CC</td>
+						<td>VB</td>
+						<td>NNS</td>
+						<td>WDT</td>
+						<td>RB</td>
+						<td>VBP</td>
+						<td>NN</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As a</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>Customer</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can Create a Customer Portal User Account</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can log on to the Customer Portal and perform transactions that first require user authentication</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>Customer</kbd>
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>Create</kbd>
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+					<kbd>User Account</kbd> (compound)
+					with phrase <kbd>a Customer Portal User Account</kbd>
+					</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can log on to the Customer Portal and perform transactions that first require user authentication</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>log to</kbd> (type III phrasal verb)
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+						<kbd>transactions</kbd>
+					with phrase <kbd>transactions</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>Create</kbd><kbd>a</kbd><kbd>User</kbd><kbd>I</kbd><kbd>can</kbd></dd>
+					<dd>of which compounds 
+<kbd>Portal User</kbd></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 5</span>
+					<div style="display: inline-block; margin: 0 1em">As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>an</td>
+						<td>Applicant</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>Submit</td>
+						<td>Application</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>provide</td>
+						<td>my</td>
+						<td>information</td>
+						<td>plans</td>
+						<td>and/or</td>
+						<td>documents</td>
+						<td>to</td>
+						<td>initiate</td>
+						<td>a</td>
+						<td>transaction</td>
+						<td>with</td>
+						<td>the</td>
+						<td>County</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>PROPN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>PRON</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+						<td>CCONJ</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>NNP</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>PRP$</td>
+						<td>NN</td>
+						<td>NNS</td>
+						<td>CC</td>
+						<td>VBZ</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As an</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>Applicant</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can Submit Application</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can provide my information plans and/or documents to initiate a transaction with the County</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>Applicant</kbd>
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>Submit</kbd>
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+						<kbd>Application</kbd>
+					with phrase <kbd>Application</kbd>
+					</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can provide my information plans and/or documents to initiate a transaction with the County</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>provide</kbd>
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+					<kbd>information plans</kbd> (compound)
+					with phrase <kbd>my information plans</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>want</kbd><kbd>to</kbd><kbd>can</kbd><kbd>information</kbd></dd>
+					<dd>of which compounds 
+</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<div class="row">
+					<span class="label label-success" style="display: inline-block; margin-left: 1em">User Story 6</span>
+					<div style="display: inline-block; margin: 0 1em">As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application</div>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h4>Part-of-speech tags</h4>
+				<table class="table">
+					<tr><td></td>
+						<td>As</td>
+						<td>an</td>
+						<td>Applicant</td>
+						<td>I</td>
+						<td>want</td>
+						<td>to</td>
+						<td>Submit</td>
+						<td>Supporting</td>
+						<td>Documentation</td>
+						<td>so</td>
+						<td>that</td>
+						<td>I</td>
+						<td>can</td>
+						<td>satisfy</td>
+						<td>documentation</td>
+						<td>requirements</td>
+						<td>for</td>
+						<td>my</td>
+						<td>application</td>
+					</tr>
+					<tr><td><strong>Universal</strong></td>
+						<td>ADP</td>
+						<td>DET</td>
+						<td>NOUN</td>
+						<td>PRON</td>
+						<td>VERB</td>
+						<td>PART</td>
+						<td>VERB</td>
+						<td>PROPN</td>
+						<td>PROPN</td>
+						<td>SCONJ</td>
+						<td>SCONJ</td>
+						<td>PRON</td>
+						<td>AUX</td>
+						<td>VERB</td>
+						<td>NOUN</td>
+						<td>NOUN</td>
+						<td>ADP</td>
+						<td>PRON</td>
+						<td>NOUN</td>
+					</tr>
+					<tr><td><strong>Penn Treebank</strong></td>
+						<td>IN</td>
+						<td>DT</td>
+						<td>NN</td>
+						<td>PRP</td>
+						<td>VBP</td>
+						<td>TO</td>
+						<td>VB</td>
+						<td>NNP</td>
+						<td>NNP</td>
+						<td>IN</td>
+						<td>IN</td>
+						<td>PRP</td>
+						<td>MD</td>
+						<td>VB</td>
+						<td>NN</td>
+						<td>NNS</td>
+						<td>IN</td>
+						<td>PRP$</td>
+						<td>NN</td>
+					</tr>
+				</table>
+				<h4>Format</h4>
+				<dl>
+					<dt>Role indicator</dt>
+					<dd><kbd>As an</kbd></dd>
+					<dt>Means indicator</dt> 
+					<dd><kbd>I want to</kbd></dd>
+					<dt>Ends indicator</dt>
+					<dd><kbd>So that</kbd></dd>
+				</dl>
+				<h4>Simplified</h4>
+				<dl>
+					<dt>Role</dt>
+					<dd><kbd>Applicant</kbd></dd>
+					<dt>Means</dt> 
+					<dd><kbd>I can Submit Supporting Documentation</kbd></dd>
+					<dt>Ends</dt>
+					<dd><kbd>I can satisfy documentation requirements for my application</kbd></dd>
+				<h4>Role</h4>
+				<dl>				
+					<dt>Functional role<dt>
+					<dd>
+					<kbd>Applicant</kbd>
+					</dd>
+				</dl>
+				<h4>Means</h4>
+				<dl>
+					<dt>Main verb</dt>
+					<dd>
+					<kbd>Submit</kbd>
+					</dd>
+					<dt>Main object</dt> 
+					<dd>
+					<kbd>Supporting Documentation</kbd> (compound)
+					with phrase <kbd>Supporting Documentation</kbd>
+					</dd>
+				</dl>
+				<h4>Ends</h4>
+				<dl>
+					<dt>Free form</dt>
+					<dd><kbd>I can satisfy documentation requirements for my application</kbd></dd>
+					<dt>Subject</dt>
+					<dd>
+						Found <kbd>I</kbd>, so it was replaced with the functional role
+					</dd>
+					<dt>Verb</dt>
+					<dd>
+					<kbd>satisfy</kbd>
+					</dd>
+					<dt>Object</dt> 
+					<dd>
+					<kbd>documentation requirements</kbd> (compound)
+					with phrase <kbd>documentation requirements</kbd>
+					</dd>
+					
+					<dt>Nouns</dt>
+					<dd><kbd>I</kbd><kbd>want</kbd><kbd>Supporting</kbd></dd>
+					<dd>of which compounds 
+</dd>
+				</dl>
+			</div>
+		</div>
+
+	<h2 id="ontology">Manchester Ontology</h2>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Generation settings</h3>
+		</div>
+		<div class="panel-body">
+			<h4>Threshold</h4>
+			1.0
+			<div class="alert alert-warning">Every word below the threshold will not be used to make any ontology classes or relationships</div>
+			<h4>Absolute weights (base = 1)</h4>	
+			<dl class="dl-horizontal">
+				<dt>Functional role</dt><dd>1.0</dd>
+				<dt>Direct objects</dt><dd></dd>
+				<dt>Noun in free form means</dt><dd>0.7</dd>
+				<dt>Noun in free form ends</dt><dd>0.5</dd>
+			</dl>
+			<h4>Relative weights</h4>	
+			<dl class="dl-horizontal">
+				<dt>Compound (compared to parent)</dt><dd>0.66</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Obtained weights</h3>
+		</div>
+		<div class="panel-body">
+			<p>Stop words with a weight of 0 and punctuation marks were removed from the list below.</p>
+			<p>Classes above the threshold (1.0) are highlighted in <span class="bg-success">green</span>.</p>
+		</div>
+			<table class="table">
+				<thead>
+					<tr><th>Case</th><th>Weight</th></tr>
+				</thead>
+				<tbody>
+				<tr class="success">
+				<td>Applicant</td><td>3.0</td>
+				</tr>
+				<tr class="success">
+				<td>Information</td><td>2.0</td>
+				</tr>
+				<tr class="success">
+				<td>User</td><td>1.66</td>
+				</tr>
+				<tr class="success">
+				<td>Requirement</td><td>1.5</td>
+				</tr>
+				<tr class="success">
+				<td>Documentation</td><td>1.5</td>
+				</tr>
+				<tr class="success">
+				<td>Account</td><td>1.0</td>
+				</tr>
+				<tr class="success">
+				<td>Customer</td><td>1.0</td>
+				</tr>
+				<tr class="success">
+				<td>Prospectiveapplicant</td><td>1.0</td>
+				</tr>
+				<tr class="success">
+				<td>Application</td><td>1.0</td>
+				</tr>
+				<tr class="success">
+				<td>Assistance</td><td>1.0</td>
+				</tr>
+				<tr>
+				<td>Public</td><td>0.66</td>
+				</tr>
+				<tr>
+				<td>Preapplication</td><td>0.66</td>
+				</tr>
+				<tr>
+				<td>Supporting</td><td>0.66</td>
+				</tr>
+				<tr>
+				<td>Response</td><td>0.5</td>
+				</tr>
+				<tr>
+				<td>Transaction</td><td>0.5</td>
+				</tr>
+				<tr>
+				<td>Plan</td><td>0.5</td>
+				</tr>
+				<tr>
+				<td>Portal</td><td>0.5</td>
+				</tr>
+				<tr>
+				<td>Submit</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Process</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Result</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>The</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Request</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Relevant</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Publicly</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Type</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Via</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Property</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Service</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Or</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Other</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>And</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>And/or</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Authentication</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Available</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Be</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Can</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>County</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>First</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>For</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>General</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Initiate</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Meeting</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>My</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Of</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>On</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>Online</td><td>0.0</td>
+				</tr>
+				<tr>
+				<td>With</td><td>0.0</td>
+				</tr>
+				</tbody>
+			</table>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Generated classes</h3>
+		</div>
+			<table class="table">
+				<thead>
+					<tr><th>Type</th><th>Class</th><th>Parent</th><th>Occurs in</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td>FunctionalRole</td><td>Prospectiveapplicant</td><td></td><td>2</td>
+					</tr>
+					<tr>
+					<td></td><td>Requirement</td><td></td><td>2, 6</td>
+					</tr>
+					<tr>
+					<td></td><td>User Account</td><td>Account</td><td>4</td>
+					</tr>
+					<tr>
+					<td></td><td>Account</td><td></td><td>4</td>
+					</tr>
+					<tr>
+					<td></td><td>User</td><td></td><td>1, 4</td>
+					</tr>
+					<tr>
+					<td>FunctionalRole</td><td>Customer</td><td></td><td>4</td>
+					</tr>
+					<tr>
+					<td>FunctionalRole</td><td>Applicant</td><td></td><td>3, 5, 6</td>
+					</tr>
+					<tr>
+					<td></td><td>Application</td><td></td><td>2, 5, 6</td>
+					</tr>
+					<tr>
+					<td></td><td>Documentation Requirement</td><td></td><td>6</td>
+					</tr>
+					<tr>
+					<td></td><td>Information</td><td></td><td>1, 3, 5</td>
+					</tr>
+					<tr>
+					<td></td><td>Assistance</td><td></td><td>3</td>
+					</tr>
+					<tr>
+					<td></td><td>Documentation</td><td></td><td>6</td>
+					</tr>
+					<tr>
+					<td>FunctionalRole</td><td>Public User</td><td></td><td>1</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Generated relationships</h3>
+		</div>
+			<table class="table">
+				<thead>
+					<tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Occurs in</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Prospectiveapplicant</td><td>canResearch</td><td>Requirement</td><td>2</td>
+					</tr>
+					<tr>
+					<td>User</td><td>hasAccount</td><td>User Account</td><td>4</td>
+					</tr>
+					<tr>
+					<td>Customer</td><td>canCreate</td><td>User Account</td><td>4</td>
+					</tr>
+					<tr>
+					<td>Applicant</td><td>canSubmit</td><td>Application</td><td>5</td>
+					</tr>
+					<tr>
+					<td>Applicant</td><td>canSatisfy</td><td>Documentation Requirement</td><td>6</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-body">
+			The output can be found at <a href="C:\Users\sathu\nlp-stories\visual_narrator/output/System/ontology/System2022-05-19_11.38.28.538027.omn">/output/System/ontology/System2022-05-19_11.38.28.538027.omn</a>, which can be used to analyze and visualize the ontology.
+		</div>
+		<div class="panel-footer">
+				<span class="text-muted">
+					# 
+					Generated 
+					with 
+					Visual 
+					Narrator 
+				</span>
+				<br>
+					Prefix: 
+					: 
+					<http://fakesite.org/system.owl#> 
+				<br>
+					Prefix: 
+					owl: 
+					<http://www.w3.org/2002/07/owl#> 
+				<br>
+					Prefix: 
+					rdf: 
+					<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+				<br>
+					Prefix: 
+					rdfs: 
+					<http://www.w3.org/2000/01/rdf-schema#> 
+				<br>
+					Prefix: 
+					xsd: 
+					<http://www.w3.org/2001/XMLSchema#> 
+				<br>
+					Prefix: 
+					dc: 
+					<http://purl.org/dc/elements/1.1/> 
+				<br>
+					Prefix: 
+					onto: 
+					<http://fakesite.org/system.owl#> 
+				<br>
+					 
+				<br>
+					Ontology: 
+					<:> 
+				<br>
+					 
+				<br>
+					Annotations: 
+				<br>
+					&nbsp;
+						dc:title 
+					"System", 
+				<br>
+					&nbsp;
+						dc:creator 
+					"Visual 
+					Narrator", 
+				<br>
+					&nbsp;
+						rdfs:comment 
+					"Generated 
+					with 
+					Visual 
+					Narrator" 
+				<br>
+					 
+				<br>
+					AnnotationProperty: 
+					dc:creator 
+				<br>
+					 
+				<br>
+					AnnotationProperty: 
+					dc:title 
+				<br>
+					 
+				<br>
+					 
+				<br>
+				<span class="text-muted">
+					# 
+					Relationships 
+				</span>
+				<br>
+					<span class="text-primary">ObjectProperty: </span>
+					:hasAccount 
+				<br>
+					&nbsp;
+						Domain: 
+					:User 
+				<br>
+					&nbsp;
+						Range: 
+					:UserAccount 
+				<br>
+					 
+				<br>
+					<span class="text-primary">ObjectProperty: </span>
+					:canCreate 
+				<br>
+					&nbsp;
+						Domain: 
+					:Customer 
+				<br>
+					&nbsp;
+						Range: 
+					:UserAccount 
+				<br>
+					 
+				<br>
+					<span class="text-primary">ObjectProperty: </span>
+					:canSubmit 
+				<br>
+					&nbsp;
+						Domain: 
+					:Applicant 
+				<br>
+					&nbsp;
+						Range: 
+					:Application 
+				<br>
+					 
+				<br>
+					<span class="text-primary">ObjectProperty: </span>
+					:canResearch 
+				<br>
+					&nbsp;
+						Domain: 
+					:Prospectiveapplicant 
+				<br>
+					&nbsp;
+						Range: 
+					:Requirement 
+				<br>
+					 
+				<br>
+					<span class="text-primary">ObjectProperty: </span>
+					:canSatisfy 
+				<br>
+					&nbsp;
+						Domain: 
+					:Applicant 
+				<br>
+					&nbsp;
+						Range: 
+					:DocumentationRequirement 
+				<br>
+					 
+				<br>
+				<span class="text-muted">
+					# 
+					Classes 
+				</span>
+				<br>
+					<span class="text-success">Class: </span>
+					:Prospectiveapplicant 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:comment 
+					"Functional 
+					Role" 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Requirement 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:UserAccount 
+				<br>
+					&nbsp;
+						SubClassOf: 
+					:Account 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:label 
+					"User 
+					Account" 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Account 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:User 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Customer 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:comment 
+					"Functional 
+					Role" 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Applicant 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:comment 
+					"Functional 
+					Role" 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Application 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:DocumentationRequirement 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:label 
+					"Documentation 
+					Requirement" 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Information 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Assistance 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:Documentation 
+				<br>
+					 
+				<br>
+					 
+				<br>
+					<span class="text-success">Class: </span>
+					:PublicUser 
+				<br>
+					&nbsp;
+						Annotations: 
+				<br>
+					&nbsp;
+							rdfs:label 
+					"Public 
+					User", 
+				<br>
+					&nbsp;
+							rdfs:comment 
+					"Functional 
+					Role" 
+				<br>
+					 
+				<br>
+		</div>
+	</div>	
+
+</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">Generated with Visual Narrator</p>
+		</div>
+	</footer>
+</body>
+</html>

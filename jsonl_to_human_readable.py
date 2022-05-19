@@ -315,7 +315,7 @@ def convert_json_format(text, label_list, relation_list):
     data = {
             "PID": pid.strip(", "),
             "Text": text,
-            "Persona": persona.strip(", "),
+            "Persona": [persona.strip(", ")],
             "Action":{"Primary Action": primary_action.strip(", ").split(", "),\
                         "Secondary Action": secondary_action.strip(", ").split(", ")},
             "Entity":{"Primary Entity": primary_entity.strip(", ").split(", "),\
