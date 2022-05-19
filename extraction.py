@@ -1,3 +1,4 @@
+#This file will extract the info from the visual narrator nlp tool 
 import argparse
 import subprocess
 import sys
@@ -140,9 +141,9 @@ def json_format(identified_labels, story):
     
     data = {
             "Text": story.strip("\n"),
-            "Persona": persona,
-            "Action": action,
-            "Entity": entity,
+            "Persona": [persona],
+            "Action": [action],
+            "Entity": [entity],
             "Triggers": [persona, action],
             "Targets": [action, entity]
             }

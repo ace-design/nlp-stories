@@ -1,16 +1,57 @@
+#This file will compare the results of the baseline and the nlp tools annotations for accuracy
 import argparse
-from email.mime import base
 import json
 import sys
-
 
 def main():
     base_path, nlp_tool_path, save_path = command()
     baseline_data = extract_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
-    
+
     sorted_nlp_tool_data = sort(baseline_data, nlp_tool_data)
 
+    baseline_text, baseline_persona, baseline_entity, baseline_action = baseline_data
+    nlp_text, nlp_persona, nlp_entity, nlp_action = sorted_nlp_tool_data
+
+
+    persona_comparison_collection = []
+    entity_comparison_collection = []
+    action_comparison_collection = []
+    count_persona_comparison_list = []
+    count_entity_comparison_list = []
+    count_action_comparison_list = []
+
+
+    for i in range(len(baseline_text)):
+        persona_comparison = compare(baseline_persona[i], nlp_persona[i])
+        entity_comparison = compare(baseline_entity[i], nlp_entity[i])
+        action_comparison = compare(baseline_action[i], nlp_action[i])
+
+        persona_comparison_collection.append(persona_comparison)
+        entity_comparison_collection.append(entity_comparison)
+        action_comparison_collection.append(action_comparison)
+
+        count_persona_comparison = count_true_false_positives_negatives(persona_comparison)
+        count_entity_comparison = count_true_false_positives_negatives(entity_comparison)
+        count_action_comparison = count_true_false_positives_negatives(action_comparison)
+
+        count_persona_comparison_list.append(count_persona_comparison)
+        count_entity_comparison_list.append(count_entity_comparison)
+        count_action_comparison_list.append(count_action_comparison)
+
+    count_list = [count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list]
+    comparison_collection = [persona_comparison_collection, entity_comparison_collection, action_comparison_collection]
+    
+    story_results = individual_story(count_list)
+    story_precision_results, story_recall_results, story_f_measure_results = story_results
+
+    scatterplot_data = [story_precision_results, story_recall_results]
+    scatterplot(scatterplot_data)
+    bargraph(story_results)
+
+    dataset_results = total_dataset(count_list)
+
+    output(baseline_text, comparison_collection, dataset_results, story_results)
 
 def command():
     '''
@@ -118,7 +159,7 @@ def sort(baseline_data, nlp_tool_data):
     sorted_nlp_tool_data (2D list): sorted text, persona, entity, and action identified coresponding to baseline_data
     '''
     baseline_text,_, _, _ = baseline_data
-    nlp_text, nlp_persona, nlp_action, nlp_entity = nlp_tool_data
+    nlp_text, nlp_persona, nlp_entity, nlp_action  = nlp_tool_data
 
     sorted_text = []
     sorted_persona = []
@@ -141,6 +182,319 @@ def sort(baseline_data, nlp_tool_data):
     sorted_nlp_tool_data = [sorted_text, sorted_persona, sorted_entity, sorted_action]
 
     return sorted_nlp_tool_data
+
+def compare (baseline, nlp):
+    '''
+    calculate the number of true/false positives and false negatives 
+
+    Parameters:
+    baseline (list): the elements being compared to 
+    nlp (list): the elements comparing for accuracy 
+
+    Returns:
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives 
+    '''
+
+    true_positive = []
+    false_positive = []
+
+    for element in nlp:
+        if element in baseline:
+            true_positive.append(element)
+            baseline.remove(element)
+        else:
+            false_positive.append(element)
+    
+    false_nagative = baseline
+
+    comparison_results = [true_positive, false_positive, false_nagative]
+
+    return comparison_results
+
+def count_true_false_positives_negatives(comparison_results):
+    '''
+    count the number of true/false positives and false negatives 
+
+    Parameters:
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives
+
+    Returns:
+    number_comparison (2D list): the number of elements identified as true/false positives and false negatives
+    '''
+    true_positive, false_positive, false_negative = comparison_results
+    number_true_positive = len(true_positive)
+    number_false_positive = len(false_positive)
+    number_false_negative = len(false_negative)
+
+    number_comparison = [number_true_positive, number_false_positive, number_false_negative]
+
+    return number_comparison
+
+def count_total_result_dataset (total_comparison_results):
+    '''
+    counts the total number of true/false positives and false negatives 
+
+    Parameters:
+    number_comparison (2D list): the number of elements identified as true/false positives and false negatives
+
+    Returns:
+    total_count (list): total number of true/false positives and false negatives in dataset
+    '''
+
+    total_true_positive = 0
+    total_false_positive = 0
+    total_false_negative = 0
+
+    for count in total_comparison_results:
+        total_true_positive += count[0]
+        total_false_positive += count[1]
+        total_false_negative += count[2]
+
+    total_count = [total_true_positive, total_false_positive, total_false_negative]
+
+    return total_count
+
+def calculate_precision(number_compared_results):
+    '''
+    calculate the precision
+
+    Parameters:
+    number_compared_results (list): total number of true/false positives and false negatives in dataset
+
+    Returns:
+    precision (float): the precision of the data
+    '''
+
+    number_true_positive, number_false_positive, _ = number_compared_results
+
+    precision = number_true_positive / (number_true_positive + number_false_positive)
+
+    return precision
+def calculate_recall(number_compared_results):
+    '''
+    calculate the recall 
+
+    Parameters:
+    number_compared_results (list): total number of true/false positives and false negatives in dataset
+
+    Returns:
+    recall (float): the recall of the data
+    '''
+
+    number_true_positive, _ , number_false_negative = number_compared_results
+
+    recall = number_true_positive / (number_true_positive + number_false_negative)
+
+    return recall 
+
+def calculate_f_measure (precision, recall):
+    '''
+    calculate the f measure 
+
+    Parameters: 
+    precision (float): the precision of the data
+    recall (float): the recall of the data
+
+    Returns:
+    f_measure (float): the F-measure of the data
+    '''
+
+    if (precision + recall) == 0:
+        f_measure = 0
+    else:
+        f_measure = 2 * (precision * recall)/ (precision + recall)
+
+    return f_measure
+
+def individual_story(count_list):
+    '''
+    get all the info for plotting for each individual story
+
+    Parameters:
+    count_list (2D list): for each story, has the total count for true/false positives and false negative
+
+    Returns:
+    story_results (3D list): for each story, has the precision, recall and f-measure of the persona, action, entity    
+    '''
+    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list
+
+    story_persona_precision = []
+    story_entity_precision = []
+    story_action_precision = []
+    
+    story_persona_recall = []
+    story_entity_recall = []
+    story_action_recall = []
+
+    story_persona_f_measure = []
+    story_entity_f_measure = []
+    story_action_f_measure = []
+
+    for i in range(len(count_persona_comparison_list)):
+        persona_precision = calculate_precision(count_persona_comparison_list[i])
+        entity_precision = calculate_precision(count_entity_comparison_list[i])
+        action_precision = calculate_precision(count_action_comparison_list[i])
+
+        story_persona_precision.append(persona_precision)
+        story_entity_precision.append(entity_precision)
+        story_action_precision.append(action_precision)
+
+        persona_recall = calculate_recall(count_persona_comparison_list[i])
+        entity_recall = calculate_recall(count_entity_comparison_list[i])
+        action_recall = calculate_recall(count_action_comparison_list[i])
+
+        story_persona_recall.append(persona_recall)
+        story_entity_recall.append(entity_recall)
+        story_action_recall.append(action_recall)
+
+        persona_f_measure = calculate_f_measure(persona_precision, persona_recall)
+        entity_f_measure = calculate_f_measure(entity_precision, entity_recall)
+        action_f_measure = calculate_f_measure(action_precision, action_recall)
+
+        story_persona_f_measure.append(persona_f_measure)
+        story_entity_f_measure.append(entity_f_measure)
+        story_action_f_measure.append(action_f_measure)
+
+    precision_results = [story_persona_precision, story_entity_precision, story_action_precision]
+    recall_results = [story_persona_recall, story_entity_recall, story_action_recall]
+    f_measure_results = [story_persona_f_measure, story_entity_f_measure, story_action_f_measure]
+
+    story_results = [precision_results, recall_results, f_measure_results]
+
+    return story_results
+
+def total_dataset(count_list):
+    '''
+    Gets all the required info for the entire dataset
+
+    Parameters:
+    count_list (2D list): for each story, has the total count for true/false positives and false negative
+    
+    Returns:
+    dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
+    '''
+
+    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list 
+
+    total_persona_comparison = count_total_result_dataset(count_persona_comparison_list)
+    total_entity_comparison = count_total_result_dataset(count_entity_comparison_list)
+    total_action_comparison = count_total_result_dataset(count_action_comparison_list)
+
+    dataset_persona_precision = calculate_precision(total_persona_comparison)
+    dataset_entity_precision = calculate_precision(total_entity_comparison)
+    dataset_action_precision = calculate_precision(total_action_comparison)
+
+    dataset_persona_recall = calculate_recall(total_persona_comparison)
+    dataset_entity_recall = calculate_recall(total_entity_comparison)
+    dataset_action_recall = calculate_recall(total_action_comparison)
+
+    total_persona_f_measure = calculate_f_measure(dataset_persona_precision, dataset_persona_recall)
+    total_entity_f_measure = calculate_f_measure(dataset_entity_precision, dataset_entity_recall)
+    total_action_f_measure = calculate_f_measure(dataset_action_precision, dataset_action_recall)
+
+    
+    dataset_precision = [dataset_persona_precision, dataset_entity_precision, dataset_action_precision]
+    dataset_recall = [dataset_persona_recall, dataset_entity_recall, dataset_action_recall]
+    dataset_f_measure = [total_persona_f_measure, total_entity_f_measure, total_action_f_measure]
+    
+    dataset_results = [dataset_precision, dataset_recall, dataset_f_measure]
+
+    return dataset_results
+
+def scatterplot(data):
+    '''
+    plot the precision and recall of each story as a scatterplot
+
+    Parameters:
+    data (2D list): contains the data of precision and corresponding recall for each story
+
+    '''
+
+
+
+
+
+
+def bargraph(story_results):
+    '''
+    graph the precision, recall and f-measure of each story as a bargraph
+
+    Parameters:
+    story_results (3D list): contains the data of precision, recall and f-measure of each story
+
+    '''
+
+
+    story_precision_results, story_recall_results, story_f_measure_results = story_results
+
+
+
+
+
+
+def output(baseline_text, comparison_collection, dataset_results, story_results):
+    '''
+    output the results so that it is easy to read the results 
+
+    Parameters:
+    baseline_text (list): story text 
+    comparison_collection (3D list): true/false positive and false negative of each story 
+    precision (list): precision of persona, entity, action 
+    recall (list): recall of persona, entity, action 
+    f_measure (list): f_measure of persona, entity, action 
+    '''
+
+    persona_comparison_collection, entity_comparison_collection, action_comparison_collection = comparison_collection
+    dataset_precision, dataset_recall, dataset_f_measure = dataset_results
+    story_precision_results, story_recall_results, story_f_measure_results = story_results
+    
+    persona_precision, entity_precision, action_precision = dataset_precision 
+    persona_recall, entity_recall, action_recall = dataset_recall
+    persona_f_measure, entity_f_measure, action_f_measure = dataset_f_measure
+
+    story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
+    story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
+    story_persona_f_measure, story_entity_f_measure, story_action_f_measure = story_f_measure_results
+
+    for i in range(len(baseline_text)):
+        print("Text:", baseline_text[i])
+        print("__PERSONA__")
+        print("True Positive:", ", ".join(persona_comparison_collection[i][0]))
+        print("False Postive:", ", ".join(persona_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(persona_comparison_collection[i][2]))
+        print("\nPrecision:", story_persona_precision [i])
+        print("Recall:", story_persona_recall[i])
+        print("F-Measure:", story_persona_f_measure[i])
+        print("\n__ENTITY__")
+        print("True Positive:", ", ".join(entity_comparison_collection[i][0]))
+        print("False Postive:", ", ".join(entity_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(entity_comparison_collection[i][2]))
+        print("\nPrecision:", story_entity_precision [i])
+        print("Recall:", story_entity_recall[i])
+        print("F-Measure:", story_entity_f_measure[i])
+        print("\n__ACTION__")
+        print("True Positive:", ", ".join(action_comparison_collection[i][0]))
+        print("False Postive:", ", ".join(action_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(action_comparison_collection[i][2]))
+        print("\nPrecision:", story_action_precision [i])
+        print("Recall:", story_action_recall[i])
+        print("F-Measure:", story_action_f_measure[i])
+        print("\n________________________________________________________")
+
+    print("DATASET RESULTS")
+    print("__PERSONA__")
+    print("Precision:", persona_precision)
+    print("Recall:", persona_recall)
+    print("F-Measure:", persona_f_measure)
+    print("\n__ENTITY__")
+    print("Precision:", entity_precision)
+    print("Recall:", entity_recall)
+    print("F-Measure:", entity_f_measure)
+    print("\n__ACTION__")
+    print("Precision:", action_precision)
+    print("Recall:", action_recall)
+    print("F-Measure:", action_f_measure)
+
 
 if __name__ == "__main__":
     main()
