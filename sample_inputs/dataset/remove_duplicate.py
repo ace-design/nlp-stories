@@ -1,4 +1,4 @@
-file = open("C:\\Users\\sathu\\nlp-stories\\sample_inputs\\dataset\\g02-federalspending.txt")
+file = open("C:\\Users\\sathu\\nlp-stories\\sample_inputs\\dataset\\g03-loudoun.txt")
 lines = file.readlines()
 for i in range(len(lines)):
     check = lines[0]

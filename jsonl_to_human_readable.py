@@ -223,8 +223,9 @@ def identify_primary_entity(primary_action_id_list, target_action, target_entity
     for primary_action_id in primary_action_id_list:
         for i in range(len(target_action)):
             if primary_action_id == target_action[i][0]:
-                primary_entities += target_entity[i][1] + ", "
-                primary_entity_list.append(target_entity[i][1])
+                if not(target_entity[i][1] in primary_entity_list):
+                    primary_entities += target_entity[i][1] + ", "
+                    primary_entity_list.append(target_entity[i][1])
                 
     return primary_entities, primary_entity_list
 
