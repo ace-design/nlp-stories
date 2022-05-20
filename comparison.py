@@ -1,6 +1,9 @@
 #This file will compare the results of the baseline and the nlp tools annotations for accuracy
 import argparse
 import json
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
 import sys
 
 def main():
@@ -45,9 +48,14 @@ def main():
     story_results = individual_story(count_list)
     story_precision_results, story_recall_results, story_f_measure_results = story_results
 
+
     scatterplot_data = [story_precision_results, story_recall_results]
     scatterplot(scatterplot_data)
-    bargraph(story_results)
+
+    x_axis_data = np.linspace(10,100,10)
+    bargraph(story_results, x_axis_data)
+
+
 
     dataset_results = total_dataset(count_list)
 
@@ -401,36 +409,132 @@ def total_dataset(count_list):
 
     return dataset_results
 
-def scatterplot(data):
+def scatterplot(input_data):
     '''
-    plot the precision and recall of each story as a scatterplot
+    runs the commands to plot the precision and recall of each story as a scatterplot
 
     Parameters:
-    data (2D list): contains the data of precision and corresponding recall for each story
+    input_data (2D list): contains the data of precision and corresponding recall for each story
 
     '''
 
+    story_precision_results, story_recall_results = input_data
+    story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
+    story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
 
+    create_bar_graph(story_persona_precision, story_persona_recall, "m", "Linear Regression of Recall Vs. Precision for Persona")
+    create_bar_graph(story_entity_precision, story_entity_recall, "r", "Linear Regression of Recall Vs. Precision for Entity")
+    create_bar_graph(story_action_precision, story_action_recall, "b", "Linear Regression of Recall Vs. Precision for Action")
 
-
-
-
-def bargraph(story_results):
+def create_bar_graph(precision_data, recall_data, graph_color, title):
     '''
-    graph the precision, recall and f-measure of each story as a bargraph
+    creates and saves the bargraph
+
+    Parameters:
+    precision_data (list): data of the precision of each story in order 
+    recall_Data (list): data of the recall of each story in order
+    graph_color (str): the color of the plotting data
+    title (str): the title of the graph 
+    '''
+
+    graph = sns.jointplot(x=tuple(precision_data), y=tuple(recall_data), kind="reg", xlim=(0,1), ylim=(0,1), color= graph_color, scatter_kws={"s": 40})
+    graph.set_axis_labels('Precision', 'Recall', fontsize=14)
+    graph.fig.suptitle(title, fontsize = 16)
+    graph.figure.tight_layout() 
+    plt.show()
+
+
+def setup_bargraph_data(story_data, x_axis_data):
+    '''
+    sets up the data for the bar graph
+
+    Parameters:
+    story_data (list): contains the data to be set up 
+    x_axis_data (lsit): the interval for the data to be set up in 
+
+    Returns:
+    bargraph_data (list): the setup up data to be inputed for the bargraph data
+    '''
+    bargraph_data = [0]*len(x_axis_data)
+    for item in story_data:
+        for i in range(len(x_axis_data)):
+            if item*100 <= x_axis_data[i]:
+                bargraph_data[i] += 1
+                break
+
+    return bargraph_data
+
+def bargraph(story_results, x_axis_data):
+    '''
+    runs the commands to graph the precision, recall and f-measure of each story as a bargraph
 
     Parameters:
     story_results (3D list): contains the data of precision, recall and f-measure of each story
+    x_axis_data (list): the interval for the data to be set up in 
 
     '''
-
-
     story_precision_results, story_recall_results, story_f_measure_results = story_results
+    story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
+    story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
+    story_person_f_measure, story_entity_f_measure, story_action_f_measure = story_f_measure_results
+
+    persona_precision_data = setup_bargraph_data(story_persona_precision, x_axis_data)
+    persona_recall_data = setup_bargraph_data(story_persona_recall, x_axis_data)
+    persona_f_measure_data = setup_bargraph_data(story_person_f_measure, x_axis_data)
+    persona_title = "Persona"
+
+    entity_precision_data = setup_bargraph_data(story_entity_precision, x_axis_data)
+    entity_recall_data = setup_bargraph_data(story_entity_recall, x_axis_data)
+    entity_f_measure_data = setup_bargraph_data(story_entity_f_measure, x_axis_data)
+    entity_title = "Entity"
+
+    action_precision_data = setup_bargraph_data(story_action_precision, x_axis_data)
+    action_recall_data = setup_bargraph_data(story_action_recall, x_axis_data)
+    action_f_measure_data = setup_bargraph_data(story_action_f_measure, x_axis_data)
+    action_title = "Action"
+
+    x_label = []
+    for i in range(len(x_axis_data)):
+        if i == 0:
+            x_label.append("0 - " + str(x_axis_data[i]))
+        else:
+            x_interval = str(x_axis_data[i-1] +0.1 )+ " - " + str(x_axis_data[i]) 
+            x_label.append(x_interval)
 
 
+    create_bargraph(persona_precision_data, persona_recall_data, persona_f_measure_data, x_label, persona_title)
+    create_bargraph(entity_precision_data, entity_recall_data, entity_f_measure_data, x_label, entity_title)
+    create_bargraph(action_precision_data, action_recall_data, action_f_measure_data, x_label, action_title)
 
+def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title):
+    '''
+    creates and saves the bargraph
 
+    Parameters
+    precision_data (list): contains number of times the dataset has a certain precision within pre determined intervals
+    recall_data (list): contains number of times the dataset has a certain recall within pre determined intervals
+    f_measure_data (list): contains number of times the dataset has a certain f_measure within pre determined intervals
+    x_label (list): the interval for the data to be set up in 
+    title(str): the title of the graph 
+    '''
+    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
+    sns.barplot(x=x_label, y=precision_data, ax= precision_plot, color= "m")
+    precision_plot.set_ylabel("Precision")
+    precision_plot.bar_label(precision_plot.containers[0])
+
+    sns.barplot(x=x_label, y=recall_data, ax=recall_plot, color= "r")
+    recall_plot.set_ylabel("Recall")
+    recall_plot.bar_label(recall_plot.containers[0])
+
+    sns.barplot(x=x_label, y=f_measure_data, ax=f_measure_plot , color= "b")
+    f_measure_plot.set_ylabel("F-Measure")
+    f_measure_plot.set_xlabel("Number of Occurance")
+    f_measure_plot.bar_label(f_measure_plot.containers[0])
+    graph.suptitle(title, fontsize = 16)
+
+    plt.tight_layout()
+    plt.show()
 
 def output(baseline_text, comparison_collection, dataset_results, story_results):
     '''
