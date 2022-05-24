@@ -3,11 +3,12 @@ import argparse
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 import seaborn as sns
 import sys
 
 def main():
-    base_path, nlp_tool_path, save_path = command()
+    base_path, nlp_tool_path, save_folder_path = command()
     baseline_data = extract_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
@@ -50,10 +51,10 @@ def main():
 
 
     scatterplot_data = [story_precision_results, story_recall_results]
-    scatterplot(scatterplot_data)
+    scatterplot(scatterplot_data, save_folder_path)
 
     x_axis_data = np.linspace(10,100,10)
-    bargraph(story_results, x_axis_data)
+    bargraph(story_results, x_axis_data, save_folder_path)
 
 
 
@@ -77,7 +78,7 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to compare accuracy of NLP")
     parser.add_argument("load_baseline_path", type = str, help = "path of file")
     parser.add_argument("load_nlp_tool_path", type = str, help = "path of file to save")
-    parser.add_argument("save_path")
+    parser.add_argument("save_folder_name", type = str, help = "name of the folder to save the graphs")
     
     args = parser.parse_args()
 
@@ -89,14 +90,18 @@ def command():
         load_baseline_file.close()
         load_nlp_tool_path = open(args.load_nlp_tool_path)
         load_nlp_tool_path.close()
-        save_file = open(args.save_path)
-        save_file.close()
+        save_folder_path = "graphs\\" + args.save_folder_name
+        os.mkdir(save_folder_path)
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
+    except FileExistsError:
+        sys.tracebacklimit = 0
+        print("Saving path already exists")
+        raise
     else:
-        return args.load_baseline_path, args.load_nlp_tool_path, args.save_path    
+        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path  
 
 def extract_baseline_info(path):
     '''
@@ -409,12 +414,13 @@ def total_dataset(count_list):
 
     return dataset_results
 
-def scatterplot(input_data):
+def scatterplot(input_data, save_folder_path):
     '''
     runs the commands to plot the precision and recall of each story as a scatterplot
 
     Parameters:
     input_data (2D list): contains the data of precision and corresponding recall for each story
+    save_folder_path (str): the path for saving the graphs
 
     '''
 
@@ -422,11 +428,11 @@ def scatterplot(input_data):
     story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
     story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
 
-    create_bar_graph(story_persona_precision, story_persona_recall, "m", "Linear Regression of Recall Vs. Precision for Persona")
-    create_bar_graph(story_entity_precision, story_entity_recall, "r", "Linear Regression of Recall Vs. Precision for Entity")
-    create_bar_graph(story_action_precision, story_action_recall, "b", "Linear Regression of Recall Vs. Precision for Action")
+    create_scattergraph(story_persona_precision, story_persona_recall, "m", "Linear Regression of Recall Vs. Precision for Persona", save_folder_path, "\\persona_recall_precision")
+    create_scattergraph(story_entity_precision, story_entity_recall, "r", "Linear Regression of Recall Vs. Precision for Entity", save_folder_path, "\\entity_recall_precision")
+    create_scattergraph(story_action_precision, story_action_recall, "b", "Linear Regression of Recall Vs. Precision for Action", save_folder_path, "\\action_recall_precision")
 
-def create_bar_graph(precision_data, recall_data, graph_color, title):
+def create_scattergraph(precision_data, recall_data, graph_color, title, save_folder_path, save_name):
     '''
     creates and saves the bargraph
 
@@ -435,42 +441,25 @@ def create_bar_graph(precision_data, recall_data, graph_color, title):
     recall_Data (list): data of the recall of each story in order
     graph_color (str): the color of the plotting data
     title (str): the title of the graph 
+    save_folder_path (str): the path to save the graphs
+    save_name (str): name of the file for saving
     '''
 
     graph = sns.jointplot(x=tuple(precision_data), y=tuple(recall_data), kind="reg", xlim=(0,1), ylim=(0,1), color= graph_color, scatter_kws={"s": 40})
     graph.set_axis_labels('Precision', 'Recall', fontsize=14)
     graph.fig.suptitle(title, fontsize = 16)
     graph.figure.tight_layout() 
-    plt.show()
+    
+    graph.savefig(save_folder_path + save_name +".png")
 
-
-def setup_bargraph_data(story_data, x_axis_data):
-    '''
-    sets up the data for the bar graph
-
-    Parameters:
-    story_data (list): contains the data to be set up 
-    x_axis_data (lsit): the interval for the data to be set up in 
-
-    Returns:
-    bargraph_data (list): the setup up data to be inputed for the bargraph data
-    '''
-    bargraph_data = [0]*len(x_axis_data)
-    for item in story_data:
-        for i in range(len(x_axis_data)):
-            if item*100 <= x_axis_data[i]:
-                bargraph_data[i] += 1
-                break
-
-    return bargraph_data
-
-def bargraph(story_results, x_axis_data):
+def bargraph(story_results, x_axis_data, save_folder_path):
     '''
     runs the commands to graph the precision, recall and f-measure of each story as a bargraph
 
     Parameters:
     story_results (3D list): contains the data of precision, recall and f-measure of each story
     x_axis_data (list): the interval for the data to be set up in 
+    save_folder_path (str): path of the folder to save the graphs
 
     '''
     story_precision_results, story_recall_results, story_f_measure_results = story_results
@@ -502,11 +491,31 @@ def bargraph(story_results, x_axis_data):
             x_label.append(x_interval)
 
 
-    create_bargraph(persona_precision_data, persona_recall_data, persona_f_measure_data, x_label, persona_title)
-    create_bargraph(entity_precision_data, entity_recall_data, entity_f_measure_data, x_label, entity_title)
-    create_bargraph(action_precision_data, action_recall_data, action_f_measure_data, x_label, action_title)
+    create_bargraph(persona_precision_data, persona_recall_data, persona_f_measure_data, x_label, persona_title, save_folder_path, "\\persona_bargraph")
+    create_bargraph(entity_precision_data, entity_recall_data, entity_f_measure_data, x_label, entity_title, save_folder_path, "\\entity_bargraph")
+    create_bargraph(action_precision_data, action_recall_data, action_f_measure_data, x_label, action_title, save_folder_path, "\\action_bargraph")
 
-def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title):
+def setup_bargraph_data(story_data, x_axis_data):
+    '''
+    sets up the data for the bar graph
+
+    Parameters:
+    story_data (list): contains the data to be set up 
+    x_axis_data (lsit): the interval for the data to be set up in 
+
+    Returns:
+    bargraph_data (list): the setup up data to be inputed for the bargraph data
+    '''
+    bargraph_data = [0]*len(x_axis_data)
+    for item in story_data:
+        for i in range(len(x_axis_data)):
+            if item*100 <= x_axis_data[i]:
+                bargraph_data[i] += 1
+                break
+
+    return bargraph_data
+
+def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title, save_folder_path, save_name):
     '''
     creates and saves the bargraph
 
@@ -516,6 +525,8 @@ def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title)
     f_measure_data (list): contains number of times the dataset has a certain f_measure within pre determined intervals
     x_label (list): the interval for the data to be set up in 
     title(str): the title of the graph 
+    save_folder_path (str): the path to save the graphs
+    save_name (str): name of the file for saving
     '''
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
@@ -534,7 +545,8 @@ def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title)
     graph.suptitle(title, fontsize = 16)
 
     plt.tight_layout()
-    plt.show()
+
+    graph.savefig(save_folder_path + save_name + ".png")
 
 def output(baseline_text, comparison_collection, dataset_results, story_results):
     '''
@@ -598,7 +610,6 @@ def output(baseline_text, comparison_collection, dataset_results, story_results)
     print("Precision:", action_precision)
     print("Recall:", action_recall)
     print("F-Measure:", action_f_measure)
-
 
 if __name__ == "__main__":
     main()
