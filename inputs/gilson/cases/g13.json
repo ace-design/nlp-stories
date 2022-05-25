@@ -1,0 +1,763 @@
+{
+  "case": "g13",
+  "stories": [
+    {
+      "identifier": "g13_0",
+      "text": "As a moderator, I want to create a new game by entering a name and an optional description, so that I can start inviting estimators.",
+      "entities": [
+        "Optional Description",
+        "New Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Create A New Game Entering An Optional Description",
+        "Create A New Game Entering A Name"
+      ]
+    },
+    {
+      "identifier": "g13_1",
+      "text": "As a moderator, I want to invite estimators by giving them a URL where they can access the game, so that we can start the game.",
+      "entities": [
+        "Game",
+        "Url",
+        "Estimator"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Invite Estimators Giving Them A Url Where Access The Game"
+      ]
+    },
+    {
+      "identifier": "g13_2",
+      "text": "As a moderator, I want to start a round by entering an item in a single multi-line text field, so that we can estimate it.",
+      "entities": [
+        "Item",
+        "Round",
+        "Text Field"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Start A Round Entering An Item In A Line, Single Text Field"
+      ]
+    },
+    {
+      "identifier": "g13_3",
+      "text": "As a moderator, I want to see all items we try to estimate this session, so that I can answer questions about the current story such as \"does this include ___\".",
+      "entities": [
+        "Session",
+        "Item"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Try",
+        "See All Items",
+        "Estimate This Session"
+      ]
+    },
+    {
+      "identifier": "g13_4",
+      "text": "As a moderator, I want to select an item to be estimated or re-estimated, so that the team sees that item and can estimate it.",
+      "entities": [
+        "Item"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Estimate",
+        "Select An Item",
+        "Select An Item To Estimated"
+      ]
+    },
+    {
+      "identifier": "g13_5",
+      "text": "As a moderator, I want to add an item to the list of items to be estimated, so that so that we can be flexible and accommodate situations where we think of a new story while playing.",
+      "entities": [
+        "Item"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Add An Item To The List Of Items To Estimated"
+      ]
+    },
+    {
+      "identifier": "g13_6",
+      "text": "As a moderator, I want to edit an item in the list of items to be estimated, so that I can make it better reflect the team's understanding of the item.",
+      "entities": [
+        "Item"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Edit An Item In The List Of Items To Estimated"
+      ]
+    },
+    {
+      "identifier": "g13_7",
+      "text": "As a moderator, I want to delete an item from the list of items to be estimated, so that we can remove it and not estimate it.",
+      "entities": [
+        "Item"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Delete An Item From The List Of Items To Estimated"
+      ]
+    },
+    {
+      "identifier": "g13_8",
+      "text": "As a moderator, I want to show all estimates immediately, so that I can decide to show the estimates that have been given even though not all estimators have given their estimate.",
+      "entities": [
+        "Estimate"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Show All Estimates"
+      ]
+    },
+    {
+      "identifier": "g13_9",
+      "text": "As a moderator, I want to accept the average of all estimates, so that we can move on to the next item when we agree.",
+      "entities": [
+        "Estimate"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Accept The Average Of All Estimates"
+      ]
+    },
+    {
+      "identifier": "g13_10",
+      "text": "As a moderator, I want to have the \"estimate\" field filled in automatically if all estimators show the same card, so that I can accept it more quickly.",
+      "entities": [
+        "Estimate Field"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Have The Automatically Estimate Field In"
+      ]
+    },
+    {
+      "identifier": "g13_11",
+      "text": "As a moderator, I want to enter the agreed-upon estimate, so that we can move on to the next item when we agree.",
+      "entities": [
+        "Agreed Estimate"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Enter Upon The Agreed Estimate"
+      ]
+    },
+    {
+      "identifier": "g13_12",
+      "text": "As a moderator, I want to estimate a story we estimated earlier in the session again, so that we can give a new estimate if we feel different about the story after estimating other related stories.",
+      "entities": [
+        "Session",
+        "Story"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Estimated In The Session",
+        "Estimate A Story"
+      ]
+    },
+    {
+      "identifier": "g13_13",
+      "text": "As a moderator, I want to import stories from a spreadsheet, so that I don't have to copy and paste each individual story.",
+      "entities": [
+        "Story",
+        "Spreadsheet"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Import Stories From A Spreadsheet"
+      ]
+    },
+    {
+      "identifier": "g13_14",
+      "text": "As a moderator, I want to copy/paste stories from a spreadsheet, so that I can get started more quickly.",
+      "entities": [
+        "Spreadsheet",
+        "Story"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Copy Stories From A Spreadsheet",
+        "Paste Stories From A Spreadsheet"
+      ]
+    },
+    {
+      "identifier": "g13_15",
+      "text": "As a moderator, I want to browse through previous games, so that I can find the previous game I\ufffdm looking for.",
+      "entities": [
+        "Previous Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Browse Through Previous Games"
+      ]
+    },
+    {
+      "identifier": "g13_16",
+      "text": "As a moderator, I want to view a transcript of a game, so that I can see the stories and estimates.",
+      "entities": [
+        "Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "View A Transcript Of A Game"
+      ]
+    },
+    {
+      "identifier": "g13_17",
+      "text": "As a moderator, I want to export a transcript of a game as a HTML file, so that I can save the stories and estimates locally.",
+      "entities": [
+        "Html File",
+        "Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Export A Transcript Of A Game As A Html File"
+      ]
+    },
+    {
+      "identifier": "g13_18",
+      "text": "As a moderator, I want to export a transcript of a game as a CSV file, so that I can further process the stories and estimates.",
+      "entities": [
+        "Csv File",
+        "Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Export A Transcript Of A Game As A Csv File"
+      ]
+    },
+    {
+      "identifier": "g13_19",
+      "text": "As a moderator, I want to delete a game, so that stories and estimates for this game are no longer stored.",
+      "entities": [
+        "Game"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Delete A Game"
+      ]
+    },
+    {
+      "identifier": "g13_20",
+      "text": "As a moderator, I want to create an account for the application by entering my name, email address, a password and a username, so that I can start using the application.",
+      "entities": [
+        "Application",
+        "Account",
+        "Password",
+        "Username",
+        "Email Address"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Create An Account For The Application Entering A Username",
+        "Create An Account For The Application Entering Email Address",
+        "Create An Account For The Application Entering Name",
+        "Create An Account For The Application Entering A Password"
+      ]
+    },
+    {
+      "identifier": "g13_21",
+      "text": "As a moderator, I want to log in using my account name and password, so that I can start using the application.",
+      "entities": [
+        "Password",
+        "Account Name"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Log In Using Password",
+        "Log In Using Account Name"
+      ]
+    },
+    {
+      "identifier": "g13_22",
+      "text": "As a moderator, I want to change my account details, so that I can keep my account details up-to-date.",
+      "entities": [
+        "Account Details"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Change Account Details"
+      ]
+    },
+    {
+      "identifier": "g13_23",
+      "text": "As a moderator, I want to delete my account, so that account information and games are no longer stored.",
+      "entities": [
+        "Account"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Delete Account"
+      ]
+    },
+    {
+      "identifier": "g13_24",
+      "text": "As a moderator, I want to see dates and times in my local timezone, so that I don't have to do timezone conversion myself.",
+      "entities": [
+        "Date",
+        "Time",
+        "Local Timezone"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "See Time",
+        "See Dates In Local Timezone"
+      ]
+    },
+    {
+      "identifier": "g13_25",
+      "text": "As a moderator, I want to get a password reminder by email, so that I can get back to using the application when I've forgotten my password.",
+      "entities": [
+        "Password Reminder",
+        "Email"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Get A Password Reminder By Email"
+      ]
+    },
+    {
+      "identifier": "g13_26",
+      "text": "As a moderator, I want to select whether to have the team estimate with {0, 1/2, 1, 2, 3, 5, 8, etc.} or {0, 1, 2, 4, 8, 16, 32, etc.}, so that the team can use either the modified Fibonacci sequence or powers of 2.",
+      "entities": [
+        "Team",
+        "0",
+        "1 , 4 , 8 , 16 , 32 , Etc 2",
+        "8",
+        "1",
+        "3",
+        "2",
+        "Etc",
+        "5"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Have",
+        "Select The Team Estimate With 0 1",
+        "Select The Team Estimate With 0 8",
+        "Select The Team Estimate With 0 2",
+        "Select The Team Estimate With 0 3",
+        "Select The Team Estimate With 0 Etc",
+        "Select The Team Estimate With 0 5"
+      ]
+    },
+    {
+      "identifier": "g13_27",
+      "text": "As a moderator, I want to invite up to 15 estimators, so that we can play with large but not immense teams.",
+      "entities": [
+        ", Estimator"
+      ],
+      "personas": [
+        "Moderator"
+      ],
+      "actions": [
+        "Invite To, Up Estimators"
+      ]
+    },
+    {
+      "identifier": "g13_28",
+      "text": "As an estimator, I want to join a game by entering my name on the page I received the URL for, so that I can participate.",
+      "entities": [
+        "Url",
+        "Game",
+        "Page"
+      ],
+      "personas": [
+        "Estimator"
+      ],
+      "actions": [
+        "Received The Url",
+        "Join A Game Entering Name On The Page"
+      ]
+    },
+    {
+      "identifier": "g13_29",
+      "text": "As an estimator, I want to see the item we\ufffdre estimating, so that I know what I\ufffdm giving an estimate for.",
+      "entities": [
+        "Estimate",
+        "Item"
+      ],
+      "personas": [
+        "Estimator"
+      ],
+      "actions": [
+        "See The Item Re Estimating"
+      ]
+    },
+    {
+      "identifier": "g13_30",
+      "text": "As an estimator, I want to see all items we will try to estimate this session, so that I have a feel for the sizes of the various items.",
+      "entities": [
+        "Item",
+        "Session"
+      ],
+      "personas": [
+        "Estimator"
+      ],
+      "actions": [
+        "Try",
+        "Estimate This Session",
+        "See All Items"
+      ]
+    },
+    {
+      "identifier": "g13_31",
+      "text": "As a participant, I want to immediately see that an estimate has been given by a specific estimator, so that I know who has already given an estimate and who we\ufffdre still waiting for.",
+      "entities": [
+        "Specific Estimator",
+        "Estimate"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "See"
+      ]
+    },
+    {
+      "identifier": "g13_32",
+      "text": "As a participant, I want to be shown all estimates at the same time after all estimators have given their estimate, so that I can be sure estimates are independent and not influenced by other estimates given in the same draw.",
+      "entities": [
+        "Estimate",
+        "Time"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Shown All Estimates At The Same Time"
+      ]
+    },
+    {
+      "identifier": "g13_33",
+      "text": "As a participant, I want to be able to change my estimate up until the last person selects a card and all are shown, so that I can change my mind based on information I hear.",
+      "entities": [
+        "Estimate"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Change Estimate Up"
+      ]
+    },
+    {
+      "identifier": "g13_34",
+      "text": "As a participant, I want to be able to see each estimator's prior estimates for the story being estimated, so that I can see how his or her opinion has changed so I can ask questions.",
+      "entities": [
+        "Story",
+        "Prior Estimate",
+        "Estimator"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "See Each Estimator's Prior Estimates The Story Estimated"
+      ]
+    },
+    {
+      "identifier": "g13_35",
+      "text": "As a participant, I want to see who gave what estimates during the current round, so that I know this when we\ufffdre discussing the estimates.",
+      "entities": [
+        "Current Round",
+        "Estimate"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "See"
+      ]
+    },
+    {
+      "identifier": "g13_36",
+      "text": "As a participant, I want to be able start a two-minute countdown timer that all participants can see, so that I can limit the time spent discussing the estimates when I think we\ufffdve talked long enough.",
+      "entities": [
+        "Participant",
+        "Minute Countdown Timer"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Start A Minute Countdown Timer That All Participants See"
+      ]
+    },
+    {
+      "identifier": "g13_37",
+      "text": "As a participant, I want to have the two-minute timer reset itself as soon as we all play an estimate, so that it's ready for use on the next round.",
+      "entities": [
+        "Estimate",
+        "-pron-",
+        "Timer",
+        "Minute"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "The Timer Soon As Reset Itself All Play",
+        "Have",
+        "The Minute Timer Soon As Reset Play An Estimate"
+      ]
+    },
+    {
+      "identifier": "g13_38",
+      "text": "As a participant, I want to scroll back through the stories and estimates from prior rounds, so that I can use this information when I estimate the item of the current round.",
+      "entities": [
+        "Story",
+        "Prior Round",
+        "Estimate"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Scroll Through Estimate",
+        "Scroll Through The Stories From Prior Rounds"
+      ]
+    },
+    {
+      "identifier": "g13_39",
+      "text": "As a participant, I want to always have the cards in the same order across multiple draws, so that it's easy to compare estimates.",
+      "entities": [
+        "Card",
+        "Multiple Draw",
+        "Order"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Have The Cards In The Same Order Across Multiple Draws"
+      ]
+    },
+    {
+      "identifier": "g13_40",
+      "text": "As a participant, I want to have a small thumbnail photo displayed near where my cards are played, so that the game is more personal because I see who I'm estimating with.",
+      "entities": [
+        "Card",
+        "Thumbnail Photo"
+      ],
+      "personas": [
+        "Participant"
+      ],
+      "actions": [
+        "Have A Small Thumbnail Photo Cards Where Played"
+      ]
+    },
+    {
+      "identifier": "g13_41",
+      "text": "As a developer, I want to have written a site which is compliant with XHTML and CSS standards, so that as many people as possible can access the site and view it as intended.",
+      "entities": [
+        "Site",
+        "Xhtml",
+        "Css Standard"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Written A Site Is Compliant With Css Standard",
+        "Written A Site Is Compliant With Xhtml"
+      ]
+    },
+    {
+      "identifier": "g13_42",
+      "text": "As a developer, I want to have a list of definitions for commonly used terms, so that everyone working on the project can understand each other more easily.",
+      "entities": [
+        "Term",
+        "Definition"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Have A List Of Definitions For Commonly Used Terms"
+      ]
+    },
+    {
+      "identifier": "g13_43",
+      "text": "As a developer, I want to have created database indexes, so that the queries run as fast as possible.",
+      "entities": [
+        "Database Indexes"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Created Database Indexes"
+      ]
+    },
+    {
+      "identifier": "g13_44",
+      "text": "As a developer, I want to have the application function correctly in Internet Explorer 6 and 7, Firefox 1.5 and 2, and Safari 2, so that as many people as possible can fully use the application.",
+      "entities": [
+        "2 1.5",
+        "Internet Explorer",
+        "7",
+        "Function",
+        "Application"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Have The Function In 7",
+        "Have The Application Function In Internet Explorer 2 1.5"
+      ]
+    },
+    {
+      "identifier": "g13_45",
+      "text": "As a developer, I want to have the site comply with the W3C accessibility guidelines where possible, so that people with accessibility issues can use the application.",
+      "entities": [
+        "Site"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g13_46",
+      "text": "As a user, I want to have the application respond quickly to my actions, so that I don't get bored.",
+      "entities": [
+        "Action"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have",
+        "Respond To Actions"
+      ]
+    },
+    {
+      "identifier": "g13_47",
+      "text": "As a user, I want to be able to use Unicode, so that I can use any language I like.",
+      "entities": [
+        "Unicode"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Use Unicode"
+      ]
+    },
+    {
+      "identifier": "g13_48",
+      "text": "As a user, I want to see sensible and predictable URLs, so that the application feels logical and transparent.",
+      "entities": [
+        "Sensible Url",
+        "Predictable"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "See Sensible Urls",
+        "See Predictable"
+      ]
+    },
+    {
+      "identifier": "g13_49",
+      "text": "As a user, I want to have nice error pages when something goes wrong, so that I can trust the system and its developers.",
+      "entities": [
+        "Error Pages"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have Nice Error Pages"
+      ]
+    },
+    {
+      "identifier": "g13_50",
+      "text": "As a Researcher, I want results to be stored in a non-identifiable way, so that I can study the data to see things like whether estimates converged around the first opinion given by \"estimator A\" for example.",
+      "entities": [
+        "Identifiable Way"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Stored In A Identifiable Way"
+      ]
+    },
+    {
+      "identifier": "g13_51",
+      "text": "As a Mike, I want to be able to see some metrics on use of the game, so that I can see how much it is being used.",
+      "entities": [
+        "Game",
+        "Metric"
+      ],
+      "personas": [
+        "Mike"
+      ],
+      "actions": [
+        "See Some Metrics On Use Of The Game"
+      ]
+    }
+  ]
+}

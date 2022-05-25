@@ -1,0 +1,1622 @@
+{
+  "case": "g25",
+  "stories": [
+    {
+      "identifier": "g25_0",
+      "text": "As a repository manager, I want to know all the collections and objects in the DAMS for which I have custodial responsibility.  ",
+      "entities": [
+        "Collection",
+        "Custodial Responsibility",
+        "Object",
+        "Dam"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "For Which Have Custodial Responsibility",
+        "Know The Collections In The Dams",
+        "Know Object"
+      ]
+    },
+    {
+      "identifier": "g25_1",
+      "text": "As a repository manager, I want to be able to update repository information in one place and be assured updates will be propagated to all relevant places. ",
+      "entities": [
+        "Repository Information",
+        "Place",
+        "Relevant Place"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Update Repository Information In Place",
+        "Propagated To All Relevant Places"
+      ]
+    },
+    {
+      "identifier": "g25_2",
+      "text": "As a repository manager, I want to constrain curatorial access to my units assets to staff members of my unit and to DAMS managers having universal access.    ",
+      "entities": [
+        "Dams Managers",
+        "Universal Access",
+        "Curatorial Access",
+        "Units Assets",
+        "Staff Members",
+        "Unit"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Constrain Curatorial Access To Units Assets To Staff Members Of Unit Dams Managers To Having Universal Access"
+      ]
+    },
+    {
+      "identifier": "g25_3",
+      "text": "As a user, I want to list all the collections and objects in the DAMS that belong to a library unit.  ",
+      "entities": [
+        "Collection",
+        "Object",
+        "Library Unit",
+        "Dam"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "List The Collections In The Dams Belong To A Library Unit",
+        "List Object"
+      ]
+    },
+    {
+      "identifier": "g25_4",
+      "text": "As a user, I want to be able to contact repositories. ",
+      "entities": [
+        "Repository"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Contact Repositories"
+      ]
+    },
+    {
+      "identifier": "g25_5",
+      "text": "As the DAMS manager, I want to be able to list for browsing all formal collections represented in the DAMS and I want to list them with the appropriate relationships ",
+      "entities": [
+        "Dam",
+        "Appropriate Relationship",
+        "Formal Collection"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "List All Formal Collections In The Dams With The Appropriate Relationships"
+      ]
+    },
+    {
+      "identifier": "g25_6",
+      "text": "As a repository manager, I want to know all the collections for which I have curatorial responsibility. ",
+      "entities": [
+        "Curatorial Responsibility",
+        "Collection"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "For Which Have Curatorial Responsibility",
+        "Know The Collections"
+      ]
+    },
+    {
+      "identifier": "g25_7",
+      "text": "As a repository manager, I want to compose collections, limiting the collection to the items sharing the same provenance, limiting the collection to represent a part of a collection have a singular provenance, or assembly a collection from other collections and objects. ",
+      "entities": [
+        "Collection",
+        "Provenance",
+        "Object",
+        "Singular Provenance"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Compose Collections",
+        "Share The Same Provenance",
+        "Compose Collections Limiting The Collection To",
+        "Limit The Collection",
+        "Represent A Part Of A Collection"
+      ]
+    },
+    {
+      "identifier": "g25_8",
+      "text": "As a repository manager, I want to say one collection is related to another collection. (TBD) ",
+      "entities": [
+        "Collection"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Related To Another Collection",
+        "Say"
+      ]
+    },
+    {
+      "identifier": "g25_9",
+      "text": "As a repository manager, I want to describe a collection, including its title, its inclusive / bulk dates, its language(s), and many other aspects.  ",
+      "entities": [
+        ", Aspect",
+        "Inclusive Date",
+        "Collection",
+        "Bulk",
+        "Title"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Describe A Collection Including Inclusive Date",
+        "Describe A Collection Including Title",
+        "Describe Other, Many Aspect",
+        "Describe A Collection Including Bulk"
+      ]
+    },
+    {
+      "identifier": "g25_10",
+      "text": "As a repository manager, I want to indicate names (persons, families, corporate bodies) related to the collection either as creator, source, or subject.  ",
+      "entities": [
+        "Collection",
+        "Creator",
+        "Person",
+        "Subject",
+        "Corporate Body",
+        "Family",
+        "Source"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Names To The Collection As Creator",
+        "Indicate Names To The Collection As Subject",
+        "Indicate Names To The Collection As Source",
+        "Indicate Person",
+        "Indicate Family",
+        "Indicate Corporate Body"
+      ]
+    },
+    {
+      "identifier": "g25_11",
+      "text": "As a repository manager, I want to indicate subjects related to the collection.  ",
+      "entities": [
+        "Subject",
+        "Collection"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Subjects To The Collection"
+      ]
+    },
+    {
+      "identifier": "g25_12",
+      "text": "As a repository manager, I want to indicate other descriptions of the collection that are outside the DAMS and of probable importance to users ",
+      "entities": [
+        "Collection",
+        "Dam",
+        "Probable Importance",
+        "User"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Other Descriptions Of The Collection Are Of Probable Importance To Users",
+        "Indicate Other Descriptions Of The Collection Are Outside The Dams"
+      ]
+    },
+    {
+      "identifier": "g25_13",
+      "text": "As a repository manager, I want to know all events (typically, metadata and either subtraction or addition of collection members) occurring to a collection.  ",
+      "entities": [
+        "Event",
+        "Addition",
+        "Collection",
+        "Metadata"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know All Events Subtraction Of Collection Members Typically Occurring",
+        "Know All Events Metadata Typically Occurring To A Collection",
+        "Know All Events Addition Typically Occurring"
+      ]
+    },
+    {
+      "identifier": "g25_14",
+      "text": "As a user, I want to be able to browse by collections in the DAMS.  ",
+      "entities": [
+        "Dam",
+        "Collection"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Browse By Collections In The Dams"
+      ]
+    },
+    {
+      "identifier": "g25_15",
+      "text": "As a user, I want to be able to limit my search to specified collection(s) ",
+      "entities": [
+        "Search"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Limit Search",
+        "Specified"
+      ]
+    },
+    {
+      "identifier": "g25_17",
+      "text": "As repository manager, I want to know all the files belonging to an object ",
+      "entities": [
+        "Object",
+        "File"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know The Files To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_18",
+      "text": "As a repository manager, I want to describe an object, including its title, date(s), language(s), and other aspects.  ",
+      "entities": [
+        "Object",
+        "Title"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Describe An Object Including Title"
+      ]
+    },
+    {
+      "identifier": "g25_19",
+      "text": "As a repository manager, I want to indicate names (persons, families, corporate bodies) related to an object. ",
+      "entities": [
+        "Corporate Body",
+        "Family",
+        "Person",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Family",
+        "Indicate Corporate Body",
+        "Indicate Person",
+        "Indicate Names To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_20",
+      "text": "As a repository manager, I want to indicate subjects that are related to an object ",
+      "entities": [
+        "Object",
+        "Subject"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Subjects Related To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_21",
+      "text": "As a repository manager, I want to indicate the copyright status of an object. ",
+      "entities": [
+        "Object",
+        "Copyright Status"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate The Copyright Status Of An Object"
+      ]
+    },
+    {
+      "identifier": "g25_22",
+      "text": "As a repository manager, I want to indicate any statutes pertinent to an object.   ",
+      "entities": [
+        "Pertinent Statute",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Any Pertinent Statutes To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_23",
+      "text": "As a repository manager, I want to indicate any license pertinent to an object. ",
+      "entities": [
+        "License Pertinent",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Any License Pertinent To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_24",
+      "text": "As a repository manager, I want to indicate any other rights pertinent to an object. ",
+      "entities": [
+        "Object",
+        "Rights Pertinent"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Any Other Rights Pertinent To An Object"
+      ]
+    },
+    {
+      "identifier": "g25_25",
+      "text": "As a repository manager, I want to indicate any external versions or descriptions of an object that may be of probable importance to an user.  ",
+      "entities": [
+        "Probable Importance",
+        "User",
+        "Object",
+        "Description"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Any External Versions Of An Object Be Of Probable Importance To An User",
+        "Indicate Description"
+      ]
+    },
+    {
+      "identifier": "g25_26",
+      "text": "As a repository manager, I want to know all events done to an object over the object's life cycle. ",
+      "entities": [
+        "Life Cycle",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know",
+        "Done To An Object Over The Object's Life Cycle"
+      ]
+    },
+    {
+      "identifier": "g25_27",
+      "text": "As a DAMS manager, I want to know what repository an object belongs to.",
+      "entities": [
+        "Repository"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "What Repository Belongs To",
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_29",
+      "text": "As a user, I want to know what repository an object belongs to. ",
+      "entities": [
+        "Repository"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know",
+        "What Repository Belongs To"
+      ]
+    },
+    {
+      "identifier": "g25_31",
+      "text": "As a user, I want to see all the component parts of an object. ",
+      "entities": [
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "See The Component Parts Of An Object"
+      ]
+    },
+    {
+      "identifier": "g25_32",
+      "text": "As a user, I want to have access to the content files for an object. ",
+      "entities": [
+        "Access",
+        "Content Files",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have Access To The Content Files For An Object"
+      ]
+    },
+    {
+      "identifier": "g25_33",
+      "text": "As a user, I want to know the rights status of an object (i.e., its copyright status and applicable statutes, licenses, and other rights.  ",
+      "entities": [
+        "Status",
+        "Applicable Statute",
+        "Object",
+        "License",
+        "Right",
+        "Copyright",
+        "Rights"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know The Status Of License",
+        "Know The Status Of I.E. Copyright Status",
+        "Know The Rights Status Of An Object",
+        "Know The Status Of Other Right",
+        "Know The Status Of Applicable Statute"
+      ]
+    },
+    {
+      "identifier": "g25_34",
+      "text": "As a user, I want to know about other versions of the object or its metadata that might be of use to me. ",
+      "entities": [
+        "Use",
+        "Metadata",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know About Other Versions Of The Object Be Of Use To",
+        "Know About Other Versions Of Metadata"
+      ]
+    },
+    {
+      "identifier": "g25_35",
+      "text": "As a repository manager, I want to represent the physical and/or logical structure of an object.  ",
+      "entities": [
+        "Logical",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Represent Or",
+        "Represent The Physical Structure Of An Object",
+        "Represent Logical"
+      ]
+    },
+    {
+      "identifier": "g25_36",
+      "text": "As a repository manager, I want to list all the components, in their appropriate order, for an object ",
+      "entities": [
+        "Appropriate Order",
+        "Object",
+        "Component"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "List The Components In Appropriate Order For An Object"
+      ]
+    },
+    {
+      "identifier": "g25_37",
+      "text": "As a repository manager, I want to link, when appropriate, a component to another component or to a file. ",
+      "entities": [
+        "Component",
+        "File"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Link A Component To A File",
+        "Link A Component To Another Component"
+      ]
+    },
+    {
+      "identifier": "g25_38",
+      "text": "As a repository manager, I want to describe each component as necessary, including title, date(s), language(s), and other facets. ",
+      "entities": [
+        "Title",
+        "Component"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Necessary Describe Each Component Including Title"
+      ]
+    },
+    {
+      "identifier": "g25_39",
+      "text": "As a repository manager, I want to indicate any name (person, family, or corporate body) that is pertinent to the component. ",
+      "entities": [
+        "Family",
+        "Corporate Body",
+        "Component",
+        "Person"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Person",
+        "Indicate Family",
+        "Indicate Corporate Body",
+        "Indicate Any Name Is Pertinent To The Component"
+      ]
+    },
+    {
+      "identifier": "g25_40",
+      "text": "As a repository manager, I want to indicate any subject that is pertinent to the component. ",
+      "entities": [
+        "Component",
+        "Subject"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Any Subject Is Pertinent To The Component"
+      ]
+    },
+    {
+      "identifier": "g25_41",
+      "text": "As a repository manager, I want to indicate if the component has a copyright status different than that of of the object as a whole. ",
+      "entities": [
+        "Object",
+        "Component",
+        "Copyright Status"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g25_42",
+      "text": "As a repository manager, I want to indicate if a statute pertains to the component, apart from the object as a whole. ",
+      "entities": [
+        "Object",
+        "Component"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Pertains To The Component From The Object As A Whole",
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g25_43",
+      "text": "As a repository manager, I want to indicate if a license pertains to the component, apart from the object as a whole. ",
+      "entities": [
+        "Object",
+        "Component"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "License Pertains To The Component From The Object As A Whole",
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g25_44",
+      "text": "As a repository manager, I want to indicate if other rights pertain to the component, apart from the object as a whole. ",
+      "entities": [
+        "Object",
+        "Component",
+        "Rights Pertain"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate Apart Other Rights Pertain To The Component From The Object As A Whole"
+      ]
+    },
+    {
+      "identifier": "g25_45",
+      "text": "As a repository manager, I want to know all events occurring to a component over its life cycle.  ",
+      "entities": [
+        "Life Cycle",
+        "Component",
+        "Event"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know All Events To A Component Over Life Cycle"
+      ]
+    },
+    {
+      "identifier": "g25_46",
+      "text": "As a DAMS manager, I want to present in their assigned order all components comprising an object.  ",
+      "entities": [
+        "Assign Order",
+        "Object"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Present In Assigned Order",
+        "Comprise An Object"
+      ]
+    },
+    {
+      "identifier": "g25_47",
+      "text": "As a user, I want to be able to see and navigate the component hierarchy of an object.  ",
+      "entities": [
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "See The Component Hierarchy Of An Object",
+        "Navigate The Component Hierarchy Of An Object"
+      ]
+    },
+    {
+      "identifier": "g25_48",
+      "text": "As a repository manager, I want to know all the content files in the DAMS for my repository's objects. ",
+      "entities": [
+        "Content Files",
+        "Repository",
+        "Object",
+        "Dam"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know The Content Files In The Dams For Repository's Objects"
+      ]
+    },
+    {
+      "identifier": "g25_49",
+      "text": "As a repository manager, I want to associate a content file with either an object or an object component. ",
+      "entities": [
+        "File",
+        "Object",
+        "Content"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Associate A File With An Object Component",
+        "Associate A Content File With An Object"
+      ]
+    },
+    {
+      "identifier": "g25_50",
+      "text": "As a repository manager, I want to know any event that occurred to a content file for any of my repository's objects.  ",
+      "entities": [
+        "Event",
+        "Repository",
+        "Object",
+        "Content File"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know Any Event Occurred To A Content File For Any Of Repository's Objects"
+      ]
+    },
+    {
+      "identifier": "g25_51",
+      "text": "As a DAMS manager, I want to indicate to preservation managers aspects of a master file useful for monitoring its integrity, and impending obsolescence, including file size, creation date, file format and format version. ",
+      "entities": [
+        "Creation Date",
+        "Aspect",
+        "File Format",
+        "Format Version",
+        "Integrity",
+        "Useful File",
+        "Preservation Managers Aspects",
+        "Impend Obsolescence",
+        "Master File"
+      ],
+      "personas": [
+        "Dams Manager",
+        "-pron-"
+      ],
+      "actions": [
+        "Indicate To Preservation Managers Aspects Of A Useful Master File Monitoring Integrity Including",
+        "Indicate To Aspects Of A Useful File Monitoring Integrity Including Creation Date",
+        "Indicate To Aspects Of A Useful File Monitoring Integrity Including Format Version",
+        "Indicate To Aspects Of A Useful File Monitoring Impending Obsolescence",
+        "Indicate To Aspects Of A Useful File Monitoring Integrity Including File Format"
+      ]
+    },
+    {
+      "identifier": "g25_52",
+      "text": "As a DAMS manager, I want to indicate to preservation managers the checksum and checksum method for each master file for a given object. ",
+      "entities": [
+        "Preservation Managers",
+        "Checksum",
+        "Checksum Method",
+        "Object",
+        "Master File",
+        "Manager"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Indicate To Managers Checksum",
+        "Indicate To Preservation Managers The Checksum Method For Each Master File For A Given Object"
+      ]
+    },
+    {
+      "identifier": "g25_53",
+      "text": "As a DAMS manager, I want to indicate the source-capture information for a file where it is useful to do so. ",
+      "entities": [
+        "File",
+        "Source Capture Information"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Do",
+        "Indicate The Source Capture Information For A File Where Is Useful"
+      ]
+    },
+    {
+      "identifier": "g25_54",
+      "text": "As a DAMS manager, I want to know, via preservation managers, of any object for which integrity or authenticity is in question or that has been updated to a more current file format.  ",
+      "entities": [
+        "Integrity",
+        "Manager",
+        "Question",
+        "Object",
+        "Preservation Managers",
+        "Authenticity",
+        "File Format"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know Via Managers Of Any Object",
+        "Know Via Managers Of Any Object For Which Authenticity Is",
+        "Update To A More Current File Format",
+        "Know Via Preservation Managers Of Any Object For Which Integrity Is In Question"
+      ]
+    },
+    {
+      "identifier": "g25_56",
+      "text": "As a repository manager, I want to provide a title, in all useful forms, for my repository's collections, objects, and object components.  ",
+      "entities": [
+        "Title",
+        "Useful Form",
+        "Object",
+        "Collection",
+        "Repository"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Provide A Title In All Useful Forms For Object",
+        "Provide A Title In All Useful Forms For Repository's Collections",
+        "Provide A Title In All Useful Forms For Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_57",
+      "text": "As a repository manager, I want to know any changes occurring to titles for repository's collections, objects, and object components. ",
+      "entities": [
+        "Title",
+        "Object",
+        "Collection",
+        "Change",
+        "Repository"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know Any Changes To Titles For Repository's Collections",
+        "Know Object",
+        "Know Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_58",
+      "text": "As a DAMS manager, I want to present collections, objects, and object components by title, ",
+      "entities": [
+        "Object",
+        "Title",
+        "Collection"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Present Object Component",
+        "Present Collections By Title",
+        "Present Object"
+      ]
+    },
+    {
+      "identifier": "g25_59",
+      "text": "As a user, I want to search collections, objects, and object components by title.  ",
+      "entities": [
+        "Collection",
+        "Title",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search Collections",
+        "Search Object Component",
+        "Search Object By Title"
+      ]
+    },
+    {
+      "identifier": "g25_60",
+      "text": "As a repository manager, I want to indicate for an object or object component the place of publication, the publisher, edition, etc., when pertinent.  ",
+      "entities": [
+        "Edition",
+        "Publisher",
+        "Place",
+        ".",
+        "Object",
+        "Publication",
+        "Component"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate For The The Edition",
+        "Indicate For An Object The Place Of Publication",
+        "Indicate For Object",
+        "Indicate For The Place",
+        "Indicate For The The Publisher The .",
+        "Indicate For The The Publisher",
+        "Indicate For The The .",
+        "Indicate For Component",
+        "Indicate For The The Publisher The Edition",
+        "Indicate For The Place The The Edition",
+        "Indicate For The The . The Place"
+      ]
+    },
+    {
+      "identifier": "g25_61",
+      "text": "As a repository manager, I want to know of any changes made to the origin Info for an object, including its component parts. ",
+      "entities": [
+        "Origin Info",
+        "Change",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know Of Any Changes To The Origin Info For An Object Including Component Parts"
+      ]
+    },
+    {
+      "identifier": "g25_62",
+      "text": "As a user, I want to know for an object or its component parts the place of publication, the publisher, etc.  ",
+      "entities": [
+        "Publisher",
+        "Publication",
+        "Place",
+        "Etc",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know For The Place Of Publication The Publisher",
+        "Know For An Object The Place Of Publication",
+        "Know For The Place Of The Etc",
+        "Know For The Place Of Publication The Etc",
+        "Know For Component Part"
+      ]
+    },
+    {
+      "identifier": "g25_63",
+      "text": "As a repository manager, I want to describe various facets of a collection, object, or object component that are not addressable via title, date, name, and subject entities.  ",
+      "entities": [
+        "Collection",
+        "Subject Entity",
+        "Object",
+        "Title",
+        "Date"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Describe Various Facets Of Object",
+        "Describe Various Facets Of A Collection Are Not Addressable Via Date",
+        "Describe Various Facets Of Object Component",
+        "Describe Various Facets Of A Collection Are Not Addressable Via Title",
+        "Describe Various Facets Of A Collection Are Not Addressable Via Name",
+        "Describe Various Facets Of A Collection Are Not Addressable Via Subject Entity"
+      ]
+    },
+    {
+      "identifier": "g25_64",
+      "text": "As a repository manager, I want to know of all modifications made to notes for my repository's collections, objects, or object components.  ",
+      "entities": [
+        "Modification"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know Of All Modifications"
+      ]
+    },
+    {
+      "identifier": "g25_65",
+      "text": "As a user, I want to know about various facets of a collection, object, or object component, such as scope and content, various identifiers, conditions governing use/access, etc.  ",
+      "entities": [
+        "Object",
+        "Scope",
+        "Collection",
+        "Identifier",
+        "Content",
+        "Use",
+        "Access"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know About Various Facets Of Object",
+        "Govern Use",
+        "Know About Various Facets Of A Collection Such As Scope",
+        "Know About Various Facets Of Object Component",
+        "Know About Various Facets Of A Collection Such As Various Identifier",
+        "Know About Various Facets Of A Collection Such As Content",
+        "Govern Access"
+      ]
+    },
+    {
+      "identifier": "g25_66",
+      "text": "As a repository manager, I want to indicate the language(s) for present in a collection, object, or object component. ",
+      "entities": [
+        "Present",
+        "Collection",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate The For Present In Object Component",
+        "Indicate The For Present In Object",
+        "Indicate The For Present In A Collection"
+      ]
+    },
+    {
+      "identifier": "g25_67",
+      "text": "As a repository manager, I want to know of any changes made to language(s) indicated for a collection, object, or object component.  ",
+      "entities": [
+        "Change",
+        "Collection",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know Of Any Changes For Object Component",
+        "Know Of Any Changes For A Collection",
+        "Know Of Any Changes For Object"
+      ]
+    },
+    {
+      "identifier": "g25_68",
+      "text": "As a user, I want to scope my searches for collections, objects, or object components to a specific language. ",
+      "entities": [
+        "Component",
+        "Collection",
+        "Specific Language",
+        "Object",
+        "Search"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Scope Searches For Collections",
+        "Scope Object",
+        "Object Components To A Specific Language",
+        "Scope"
+      ]
+    },
+    {
+      "identifier": "g25_69",
+      "text": "As a repository manager, I want to register a name record for each unique identity associated with my repository's collections and objects ",
+      "entities": [
+        "Object",
+        "Unique Identity",
+        "Record",
+        "Collection",
+        "Repository",
+        "Name"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Register A Record For Each Unique Identity With Object",
+        "Register A Name Record For Each Unique Identity With Repository's Collections"
+      ]
+    },
+    {
+      "identifier": "g25_70",
+      "text": "As a user, I want to search by for collections and objects by name (person, family, or corporate body).  ",
+      "entities": [
+        "Person",
+        "Collection",
+        "Corporate Body",
+        "Object",
+        "Family"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search For Object By Person",
+        "Search For Object By Name",
+        "Search For Object By Family",
+        "Search For Object By Corporate Body",
+        "Search For Collections"
+      ]
+    },
+    {
+      "identifier": "g25_71",
+      "text": "As a repository manager, I want to indicate that a name pertinent to a collection, object, or object component has a specific role, such as illustrator, photographer, etc.  ",
+      "entities": [
+        "Collection",
+        "Illustrator",
+        "Specific Role",
+        "Photographer",
+        "Object",
+        "Etc"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g25_72",
+      "text": "As a user, I want to scope by searches by name to a specific role such as illustrator, photographer, etc.",
+      "entities": [
+        "Etc",
+        "Illustrator",
+        "Specific Role",
+        "Search",
+        "Photographer"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Scope By Searches By Name To A Specific Role Such As Etc",
+        "Scope By Searches By Name To A Specific Role Such As Illustrator",
+        "Scope By Searches By Name To A Specific Role Such As Photographer"
+      ]
+    },
+    {
+      "identifier": "g25_73",
+      "text": "As a repository manager, I want to indicate all subjects (title, genre/form, topic, geographical name, function, occupation, name, cartographics, etc.) that are pertinent to a collection, object, or object component. ",
+      "entities": [
+        "Occupation",
+        "Function",
+        "Subject",
+        "Cartographic",
+        "Topic",
+        "Collection",
+        "Etc",
+        "Form",
+        "Title",
+        "Genre",
+        "Object"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate All Subjects Pertinent To Object",
+        "Indicate Function",
+        "Indicate All Subjects Pertinent To Object Component",
+        "Indicate Geographical Name",
+        "Indicate All Subjects Pertinent To A Collection",
+        "Indicate Topic",
+        "Indicate Form",
+        "Indicate Genre",
+        "Indicate Occupation",
+        "Indicate Cartographic",
+        "Indicate Name",
+        "Indicate Etc",
+        "Indicate Title"
+      ]
+    },
+    {
+      "identifier": "g25_74",
+      "text": "As a user, I want search for collections, objects, and object components by pertinent such headings, including title, topic, genre/form, geographical name, function, occupation, name, cartographics, etc. ",
+      "entities": [
+        "Search",
+        "Occupation",
+        "Collection",
+        ", Pertinent Heading",
+        "Title",
+        "Topic",
+        "Etc",
+        "Object",
+        "Genre",
+        "Cartographic",
+        "Function",
+        "Form"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Provided With Search For Object Component",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Occupation",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Title",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Topic",
+        "Provided With Search For Object",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Name",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Form",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Cartographic",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Function",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Geographical Name",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Etc",
+        "Provided With Search For Collections By Such, Pertinent Headings Including Genre"
+      ]
+    },
+    {
+      "identifier": "g25_75",
+      "text": "As a repository manager, I want to indicate the geo-coordinates for any resource (collection, object, object compoent) that believe useful to an end user. ",
+      "entities": [
+        "Coordinate",
+        "Collection",
+        "Geo Coordinates",
+        "End User",
+        "Object",
+        "Resource"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate The Coordinates For Object Compoent",
+        "Indicate The Geo Coordinates For Any Resource Believe Useful To An End User",
+        "Indicate The Coordinates For Collection",
+        "Indicate The Coordinates For Object"
+      ]
+    },
+    {
+      "identifier": "g25_76",
+      "text": "As a user, I want to see the geographical context of a collection, object, or object component, where pertinent.  ",
+      "entities": [
+        "Collection",
+        "Pertinent",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "See The Geographical Context Of Object",
+        "See The Geographical Context Of Object Component",
+        "See The Geographical Context Of A Collection",
+        "See Where Pertinent"
+      ]
+    },
+    {
+      "identifier": "g25_77",
+      "text": "As a repository manager, I want to indicate all other pertinent versions or descriptions of a resource (e.g., collection, object, or object component) that are external to the DAMS.  ",
+      "entities": [
+        "Collection",
+        "Dam",
+        "Description",
+        "Object",
+        "Resource"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Indicate All Pertinent, Other Versions Of A Resource Are External To The Dams",
+        "Indicate All Pertinent, Other Versions Of E.G. Collection",
+        "Indicate All Pertinent, Other Versions Of Object",
+        "Indicate Description",
+        "Indicate All Pertinent, Other Versions Of Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_78",
+      "text": "As a user, I want to know of all other pertinent versions or descriptions of the resource.  ",
+      "entities": [
+        "Description",
+        "Resource"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know Of Description",
+        "Know Of All Pertinent, Other Versions Of The Resource"
+      ]
+    },
+    {
+      "identifier": "g25_79",
+      "text": "As a repository manager, I want to know if the checksum for any of my repository's content files that have changed. ",
+      "entities": [
+        "Repository",
+        "Content Files"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Know For Any Of Repository's Content Files Have Changed"
+      ]
+    },
+    {
+      "identifier": "g25_80",
+      "text": "As a DAMS manager, I want to know, via the preservation manager, of all files for which the checksum has changed since last registered.  ",
+      "entities": [
+        "Preservation Manager",
+        "File",
+        "Checksum",
+        "Register"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know Via The Preservation Manager Of All Files For Which The Checksum Has Changed Since Last Registered"
+      ]
+    },
+    {
+      "identifier": "g25_81",
+      "text": "As a repository manager, I want to know, where pertinent, the hardware and software used to generate a content file.  ",
+      "entities": [
+        "Content File"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Generate A Content File",
+        "Software"
+      ]
+    },
+    {
+      "identifier": "g25_82",
+      "text": "As a DAMS manager, I want to know what objects or object components are still under copyright and cannot be displayed without either a license or incurring risk.  ",
+      "entities": [
+        "Incur Risk",
+        "License",
+        "Copyright"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_83",
+      "text": "As a DAMS manager, I want to know when copyright for an object or object component is likely to expire per jurisdictional copyright statute.  ",
+      "entities": [
+        "Copyright",
+        "Object"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Expire Per Jurisdictional Copyright Statute",
+        "Know Copyright For An Object",
+        "Know Copyright For Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_84",
+      "text": "As a DAMS manager, I want to know when the copyright status for an object or object component is modified, either manually or automatically.  ",
+      "entities": [
+        "Status",
+        "Object",
+        "Copyright"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_85",
+      "text": "As a user, I want to know if an object or object component is under copyright and, where possible, who the rights holder is.  ",
+      "entities": [
+        "Rights Holder",
+        "Copyright",
+        "Object"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Know Who The Rights Holder"
+      ]
+    },
+    {
+      "identifier": "g25_86",
+      "text": "As a DAMS manager, I want to know all the statutes pertinent to an object or object component.  ",
+      "entities": [
+        "Pertinent Statute",
+        "Object"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know The Pertinent Statutes To An Object",
+        "Know The Pertinent Statutes To Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_87",
+      "text": "As a DAMS manager, I want to know when the pertinence of a statute to a object or object component is scheduled to expire. ",
+      "entities": [
+        "Object",
+        "Statute",
+        "Pertinence"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know",
+        "Expire"
+      ]
+    },
+    {
+      "identifier": "g25_88",
+      "text": "As a DAMS manager, I want to know when the application of a statute to an object or object component has been modified, either manually or automatically. ",
+      "entities": [
+        "Application",
+        "Object",
+        "Statute"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_89",
+      "text": "As a DAMS manager, I want to know if copyrighted content has an applicable license.  ",
+      "entities": [
+        "Applicable License",
+        "Copyright Content"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_90",
+      "text": "As a DAMS manager, I want to know if an object or object component is subject to a library policy that restricts access in any way.",
+      "entities": [
+        "Object",
+        "Way",
+        "Access",
+        "Library Policy"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know An Object Subject To A Library Policy Restricts Access In Any Way",
+        "Know Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_91",
+      "text": "As a DAMS manager, I want to know when application of a library policy to an object or object component is scheduled to expire.",
+      "entities": [
+        "Application",
+        "Policy",
+        "Object",
+        "Library"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Expire",
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_92",
+      "text": "As a DAMS manager, I want to know if application of a library policy to an object or object component has been modified, either manually or automatically.  ",
+      "entities": [
+        "Object",
+        "Policy",
+        "Application",
+        "Library"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_93",
+      "text": "As a DAMS manager, I want to know all the uses for an object or object component that are permitted or restricted per the rights status of the object or object component.  ",
+      "entities": [
+        "Use",
+        "Object",
+        "Rights Status",
+        "Component"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know The Uses For An Object Permitted",
+        "Restrict Per The Rights Status Of The Object",
+        "Know The Uses For An Object",
+        "Object Component"
+      ]
+    },
+    {
+      "identifier": "g25_94",
+      "text": "As a DAMS manager, I want know the dates for when a permission or restriction is active.  ",
+      "entities": [
+        "Date",
+        "Permission",
+        "Restriction"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Provided Know The Dates Restriction When Is",
+        "Provided Know The Dates A Permission When Is Active"
+      ]
+    },
+    {
+      "identifier": "g25_96",
+      "text": "As a DAMS manager, I want to track all events scheduled for recording in the DAMS.  ",
+      "entities": [
+        "Dam",
+        "Record",
+        "Event"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Track All Events For Recording In The Dams"
+      ]
+    },
+    {
+      "identifier": "g25_97",
+      "text": "As a DAMS manager, I want to know the agent(s) responsible for carrying out an event.  ",
+      "entities": [
+        "Responsible",
+        "Event"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know The Responsible Carrying Out An Event"
+      ]
+    },
+    {
+      "identifier": "g25_98",
+      "text": "As a DAMS manager, I want to know when the event occurred.  ",
+      "entities": [
+        "Event"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g25_99",
+      "text": "As a DAMS manager, I want to know the outcome of the event, e.g., object NN was deleted. ",
+      "entities": [
+        "Event",
+        "Object Nn"
+      ],
+      "personas": [
+        "Dams Manager"
+      ],
+      "actions": [
+        "Know The Outcome Of The Event"
+      ]
+    }
+  ]
+}

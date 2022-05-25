@@ -1,0 +1,719 @@
+{
+  "case": "g04",
+  "stories": [
+    {
+      "identifier": "g04_0",
+      "text": "As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+      "entities": [
+        "Address"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Click On The Address"
+      ]
+    },
+    {
+      "identifier": "g04_1",
+      "text": "As a user, I want to be able to anonymously view public information, so that I know about recycling centers near me before creating an account.",
+      "entities": [
+        "Public Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View Public Information"
+      ]
+    },
+    {
+      "identifier": "g04_2",
+      "text": "As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider.",
+      "entities": [
+        "Zip Code",
+        "Recycling Facilities"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Enter Zip Code",
+        "Get A List Of Nearby Recycling Facilities"
+      ]
+    },
+    {
+      "identifier": "g04_3",
+      "text": "As a user, I want to be able to get the hours of each recycling facility, so that I can arrange drop-offs on my off days or during after-work hours.",
+      "entities": [
+        "Recycling Facility"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get The Hours Of Each Recycling Facility"
+      ]
+    },
+    {
+      "identifier": "g04_4",
+      "text": "As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
+      "entities": [
+        "Facility",
+        "Recyclable Waste",
+        "Type"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get A List Of Facilities Accept Each Type",
+        "Select Different Types Of Recyclable Waste",
+        "Opening Hours"
+      ]
+    },
+    {
+      "identifier": "g04_5",
+      "text": "As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+      "entities": [
+        "Profile",
+        "Donation Centers",
+        "Favorite"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Add Donation Centers As Favorites On Profile"
+      ]
+    },
+    {
+      "identifier": "g04_6",
+      "text": "As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+      "entities": [
+        "Email Id"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Give Email Id"
+      ]
+    },
+    {
+      "identifier": "g04_7",
+      "text": "As a user, I want to be able to view a map display of the public recycling bins around my area.",
+      "entities": [
+        "Map Display",
+        "Area",
+        "Public Recycling"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Bins Around Area",
+        "View A Map Display Of The Public Recycling"
+      ]
+    },
+    {
+      "identifier": "g04_8",
+      "text": "As a user, I want to be able to view a map display of the special waste drop off sites around my area.",
+      "entities": [
+        "Map Display"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View A Map Display Of Drop The"
+      ]
+    },
+    {
+      "identifier": "g04_9",
+      "text": "As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+      "entities": [
+        "Area",
+        "Disposal Events"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View The Currently Safe Disposal Events Around Area"
+      ]
+    },
+    {
+      "identifier": "g04_10",
+      "text": "As a user, I want to choose a flexible pick up time, so that I can more conveniently use the website.",
+      "entities": [
+        "Flexible Pick"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Time Choose A Flexible Pick Up"
+      ]
+    },
+    {
+      "identifier": "g04_11",
+      "text": "As a user, I want to view user documentation for the website, so that I know how to use the web app.",
+      "entities": [
+        "User Documentation",
+        "Website"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View User Documentation For The Website"
+      ]
+    },
+    {
+      "identifier": "g04_12",
+      "text": "As a user, I want to get feedback when I enter an invalid zip code.",
+      "entities": [
+        "Feedback",
+        "Zip Code"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get Feedback",
+        "Enter An Invalid Zip Code"
+      ]
+    },
+    {
+      "identifier": "g04_13",
+      "text": "As a user, I want to be able to create an account, so that I can create my own profile.",
+      "entities": [
+        "Account"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Create An Account"
+      ]
+    },
+    {
+      "identifier": "g04_14",
+      "text": "As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+      "entities": [
+        "Information",
+        "Recycling Facilities"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Add Recycling Facilities' Information",
+        "Remove Recycling Facilities' Information"
+      ]
+    },
+    {
+      "identifier": "g04_15",
+      "text": "As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
+      "entities": [
+        "Complaint",
+        "User",
+        "Feedback"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Read Complaint",
+        "Read Users' Feedback"
+      ]
+    },
+    {
+      "identifier": "g04_16",
+      "text": "As a user, I want to be able to check transaction history and keep a record of it, so that I can go back when needed.",
+      "entities": [
+        "Transaction History"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Check Transaction History",
+        "Keep A Record Of Transaction History"
+      ]
+    },
+    {
+      "identifier": "g04_17",
+      "text": "As a user, I want to have a great UI and UX from the sites, so that I have a pleasant experience when navigating through them.",
+      "entities": [
+        "Great Ui",
+        "Ux",
+        "Site"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have A Great Ui From The Sites",
+        "Have Ux"
+      ]
+    },
+    {
+      "identifier": "g04_18",
+      "text": "As a user, I want to be able to access the site and do all the other stuffs on all of my electronic devices.",
+      "entities": [
+        "Site",
+        "Stuff",
+        "Electronic Device"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Access The Site",
+        "Do The Other Stuffs On All Of Electronic Devices"
+      ]
+    },
+    {
+      "identifier": "g04_19",
+      "text": "As an admin, I want to be able to block specific users based on IP address, so that I can prevent spamming on the websites.",
+      "entities": [
+        "Ip Address",
+        "Specific User"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Block Specific Users On Ip Address"
+      ]
+    },
+    {
+      "identifier": "g04_20",
+      "text": "As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
+      "entities": [
+        "Status",
+        "Site",
+        "Dashboard"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "View A Dashboard Monitors The Sites' Statuses"
+      ]
+    },
+    {
+      "identifier": "g04_21",
+      "text": "As an admin, I want to have all data encrypted, so that important information will not be stolen during a server breach or an attack.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g04_22",
+      "text": "As an executive, I want to have full access to data related to my company, so that I can have a sense of my company's performance.",
+      "entities": [
+        "Access",
+        "Datum",
+        "Company"
+      ],
+      "personas": [
+        "Executive"
+      ],
+      "actions": [
+        "Have Full Access To Data To Company"
+      ]
+    },
+    {
+      "identifier": "g04_23",
+      "text": "As an employee, I want to access the route planning system during work, so that I can be guided through the neighbourhood.",
+      "entities": [
+        "Route Planning System",
+        "Work"
+      ],
+      "personas": [
+        "Employee"
+      ],
+      "actions": [
+        "Access The Route Planning System During Work"
+      ]
+    },
+    {
+      "identifier": "g04_24",
+      "text": "As an employee from the HR department, I want to have access to the full information of all employees working for this business.",
+      "entities": [
+        "Business",
+        "Access",
+        "Employee"
+      ],
+      "personas": [
+        "Hr Department",
+        "Employee"
+      ],
+      "actions": [
+        "Have Access To The Full Information Of All Employees For This Business"
+      ]
+    },
+    {
+      "identifier": "g04_25",
+      "text": "As a developer, I want to access an API from the website, so that I can integrate it and implement certain features in my own iOS application.",
+      "entities": [
+        "Api",
+        "Website"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Access An Api From The Website"
+      ]
+    },
+    {
+      "identifier": "g04_26",
+      "text": "As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
+      "entities": [
+        "Tempt Reward"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Receive Tempting Rewards"
+      ]
+    },
+    {
+      "identifier": "g04_27",
+      "text": "As a user, I want to have my personal information kept securely in the database of the website, so that I will not suffer from identity theft or telephone harassment.",
+      "entities": [
+        "Website",
+        "Personal Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g04_28",
+      "text": "As an admin, I want to handle all users' activities, so that I can manage more efficiently.",
+      "entities": [
+        "Activity",
+        "User"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Handle All Users' Activities"
+      ]
+    },
+    {
+      "identifier": "g04_29",
+      "text": "As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+      "entities": [
+        "Website"
+      ],
+      "personas": [
+        "Company"
+      ],
+      "actions": [
+        "Have A Website Is",
+        "Use"
+      ]
+    },
+    {
+      "identifier": "g04_30",
+      "text": "As an employee, I want to get quick notifications, so that I can process cases the first time.",
+      "entities": [
+        "Quick Notification"
+      ],
+      "personas": [
+        "Employee"
+      ],
+      "actions": [
+        "Get Quick Notifications"
+      ]
+    },
+    {
+      "identifier": "g04_31",
+      "text": "As a company accountant, I want to view all available activity fees online, so that I can easily create a bill statement.",
+      "entities": [
+        "Activity Fees"
+      ],
+      "personas": [
+        "Company Accountant"
+      ],
+      "actions": [
+        "View All Available Activity Fees"
+      ]
+    },
+    {
+      "identifier": "g04_32",
+      "text": "As a developer, I want to use bootstrap in the process of developing, so that I can easily design my website.",
+      "entities": [
+        "Bootstrap",
+        "Develop"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Use Bootstrap In The Process Of Developing"
+      ]
+    },
+    {
+      "identifier": "g04_33",
+      "text": "As a developer, I want to attend some UI/UX lessons, so that I can develop an awesome and beautiful features website.",
+      "entities": [
+        "Ui Lesson",
+        "Ux"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Attend Some Ui Lessons",
+        "Attend Ux"
+      ]
+    },
+    {
+      "identifier": "g04_34",
+      "text": "As a user, I want to view all locations of recycling centers on a map, so that I can check which routes to take to drop off waste.",
+      "entities": [
+        "Recycling Centers",
+        "Map"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View All Locations Of Recycling Centers On A Map"
+      ]
+    },
+    {
+      "identifier": "g04_35",
+      "text": "As a user, I want to upload my week's schedule, so that I can get recommendations for recycling centers that best fit my availability.",
+      "entities": [
+        "Schedule",
+        "Week"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Upload Week's Schedule"
+      ]
+    },
+    {
+      "identifier": "g04_36",
+      "text": "As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+      "entities": [
+        "Email Account",
+        "Profile"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Link Email Account To Profile"
+      ]
+    },
+    {
+      "identifier": "g04_37",
+      "text": "As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+      "entities": [
+        "Administrator"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Contact The Administrators"
+      ]
+    },
+    {
+      "identifier": "g04_38",
+      "text": "As an admin, I want to add recycling center information, so that I can keep the database up-to-date over time.",
+      "entities": [
+        "Center Information"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Recycling Center Information",
+        "Add"
+      ]
+    },
+    {
+      "identifier": "g04_39",
+      "text": "As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+      "entities": [
+        "User Error Logs"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "View User Error Logs"
+      ]
+    },
+    {
+      "identifier": "g04_40",
+      "text": "As an admin, I want to onboard recycling centers on the platform, so that I can increase information accuracy.",
+      "entities": [
+        "Recycling Centers",
+        "Platform"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Onboard Recycling Centers On The Platform"
+      ]
+    },
+    {
+      "identifier": "g04_41",
+      "text": "As a superuser, I want to update the recycling center information, so that I can provide the latest information about the recycling center.",
+      "entities": [
+        "Recycling Center Information"
+      ],
+      "personas": [
+        "Superuser"
+      ],
+      "actions": [
+        "Update The Recycling Center Information"
+      ]
+    },
+    {
+      "identifier": "g04_42",
+      "text": "As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
+      "entities": [
+        "Stat",
+        "User"
+      ],
+      "personas": [
+        "Superuser"
+      ],
+      "actions": [
+        "View Users' Stats"
+      ]
+    },
+    {
+      "identifier": "g04_43",
+      "text": "As a superuser, I want to reply to user questions, so that I can answer any questions about my recycling center.",
+      "entities": [
+        "User Questions"
+      ],
+      "personas": [
+        "Superuser"
+      ],
+      "actions": [
+        "Reply To User Questions"
+      ]
+    },
+    {
+      "identifier": "g04_44",
+      "text": "As an admin, I want to be able to have a dashboard that shows usage stats and locations, so that I can identify the neighbourhoods with the largest number of drop-offs and to try getting more facilities involved.",
+      "entities": [
+        "Dashboard",
+        "Usage Stats",
+        "Location"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Have A Dashboard Shows Location",
+        "Have A Dashboard Shows Usage Stats"
+      ]
+    },
+    {
+      "identifier": "g04_45",
+      "text": "As an admin, I want to be able to communicate directly with facilities, so that I can keep them updated about features we have on our website.",
+      "entities": [
+        "Facility"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Communicate With Facilities"
+      ]
+    },
+    {
+      "identifier": "g04_46",
+      "text": "As a user, I want to be able to browse through the list of facilities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.",
+      "entities": [
+        "Facility"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Browse Through The List Of Facilities",
+        "Environment See Which Ones"
+      ]
+    },
+    {
+      "identifier": "g04_47",
+      "text": "As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users.",
+      "entities": [
+        "Information",
+        "Material"
+      ],
+      "personas": [
+        "Recyclingfacility Representative"
+      ],
+      "actions": [
+        "Update The Type Of Material",
+        "Accept",
+        "Update Information"
+      ]
+    },
+    {
+      "identifier": "g04_48",
+      "text": "As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials.",
+      "entities": [
+        "Access",
+        "User Stats",
+        "Schedule"
+      ],
+      "personas": [
+        "Recyclingfacility Representative"
+      ],
+      "actions": [
+        "Have Access To User Stats",
+        "Have Access To Schedule"
+      ]
+    },
+    {
+      "identifier": "g04_49",
+      "text": "As a recyclingfacility, I want to be able to communicate directly with the site admin and convey any issues or concerns I have, so that they fix them.",
+      "entities": [
+        "Site Admin",
+        "Issue",
+        "Concern"
+      ],
+      "personas": [
+        "Recyclingfacility"
+      ],
+      "actions": [
+        "Communicate With The Site Admin",
+        "Convey Any Issues",
+        "Have",
+        "Convey Concern"
+      ]
+    }
+  ]
+}
