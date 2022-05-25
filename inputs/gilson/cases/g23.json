@@ -1,0 +1,793 @@
+{
+  "case": "g23",
+  "stories": [
+    {
+      "identifier": "g23_0",
+      "text": "As a researcher, I want to be able to view a finding aid for a particular collection/Resource.",
+      "entities": [
+        "Particular Collection",
+        "Find Aid",
+        "Resource"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "View A Finding Aid For Resource",
+        "View A Finding Aid For A Particular Collection"
+      ]
+    },
+    {
+      "identifier": "g23_1",
+      "text": "As an Application Administrator, I want to be able to reset a User's password for them.",
+      "entities": [
+        "Password",
+        "User"
+      ],
+      "personas": [
+        "Application Administrator"
+      ],
+      "actions": [
+        "Reset A User's Password For A User's Password"
+      ]
+    },
+    {
+      "identifier": "g23_2",
+      "text": "As a user, I want backend changes for managing enum lists.",
+      "entities": [
+        "Backend Changes",
+        "Enum Lists"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Provided With Backend Changes Managing Enum Lists"
+      ]
+    },
+    {
+      "identifier": "g23_3",
+      "text": "As an Archivist, I want to import EAD files that were exported by Archon.",
+      "entities": [
+        "Archon",
+        "Ead Files"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Ead Files Exported Archon"
+      ]
+    },
+    {
+      "identifier": "g23_4",
+      "text": "As an Archivist, I want to assign a component unique identifier to a Resource Component.",
+      "entities": [
+        "Unique , Component Identifier",
+        "Resource Component"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Assign A Unique, Component Identifier To A Resource Component"
+      ]
+    },
+    {
+      "identifier": "g23_5",
+      "text": "As a User , I want to authenticate using LDAP.",
+      "entities": [
+        "Ldap"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Authenticate",
+        "Using Ldap"
+      ]
+    },
+    {
+      "identifier": "g23_6",
+      "text": "As an Archivist, I want to associate a standard identifier string with a Subject heading.",
+      "entities": [
+        "Subject Heading",
+        "Identifier , Standard String"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Associate A Identifier, Standard String With A Subject Heading"
+      ]
+    },
+    {
+      "identifier": "g23_7",
+      "text": "As an Archivist, I want to be able to understand that an error occurred during import and why it might have occurred.",
+      "entities": [
+        "Import",
+        "Error"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Understand"
+      ]
+    },
+    {
+      "identifier": "g23_8",
+      "text": "As an Archivist, I want to import Accessions data in CSV.",
+      "entities": [
+        "Csv",
+        "Accessions Data"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Accessions Data In Csv"
+      ]
+    },
+    {
+      "identifier": "g23_9",
+      "text": "As an Archivist, I want to import Resources from MARCXML records.",
+      "entities": [
+        "Marcxml Records",
+        "Resource"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Resources From Marcxml Records"
+      ]
+    },
+    {
+      "identifier": "g23_10",
+      "text": "As a user, I want frontend changes for managing enum lists.",
+      "entities": [
+        "Frontend Changes",
+        "Enum Lists"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Provided With Frontend Changes Managing Enum Lists"
+      ]
+    },
+    {
+      "identifier": "g23_11",
+      "text": "As an Authenticated User, I want to get access to links to contextual help.",
+      "entities": [
+        "Link",
+        "Access",
+        "Contextual Help"
+      ],
+      "personas": [
+        "Authenticated User"
+      ],
+      "actions": [
+        "Get Access To Links To Contextual Help"
+      ]
+    },
+    {
+      "identifier": "g23_12",
+      "text": "As an Archivist, I want to see Dates and Extents displayed in both the read and edit views for Accessions and/or Resources before the list of Subjects.",
+      "entities": [
+        "Resource",
+        "Date",
+        "Subject",
+        "Accession",
+        "Read View",
+        "Extent"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "See Dates In Both The Read Views For Accessions Before The List Of Subjects",
+        "See Dates In Both The Read Views Resource",
+        "See Extent",
+        "See Dates In",
+        "Edit"
+      ]
+    },
+    {
+      "identifier": "g23_13",
+      "text": "As an Archivist, I want to import Agent information from EAC-CPF records.",
+      "entities": [
+        "Agent Information",
+        "Eac Cpf Records"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Agent Information From Eac Cpf Records"
+      ]
+    },
+    {
+      "identifier": "g23_14",
+      "text": "As a user, I want backend changes to support loading enum value lists from the database.",
+      "entities": [
+        "Change",
+        "Database",
+        "Enum Value Lists"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Support",
+        "Loading Enum Value Lists From The Database",
+        "Backend Changes"
+      ]
+    },
+    {
+      "identifier": "g23_15",
+      "text": "As a user, I want backend changes for bulk updating one enum value to another.",
+      "entities": [
+        "Enum Value",
+        "Bulk"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Backend",
+        "Update Enum Value To Another"
+      ]
+    },
+    {
+      "identifier": "g23_16",
+      "text": "As an Archivist, I want to export agent records as EAC-CPF.",
+      "entities": [
+        "Agent Records",
+        "Eac Cpf"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Export Agent Records As Eac Cpf"
+      ]
+    },
+    {
+      "identifier": "g23_17",
+      "text": "As an Archivist, I want to import only Agent and Subject information from MARCXML records.",
+      "entities": [
+        "Subject Information",
+        "Agent",
+        "Marcxml Records"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Only Agent From Marcxml Records",
+        "Import Subject Information"
+      ]
+    },
+    {
+      "identifier": "g23_18",
+      "text": "As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.",
+      "entities": [
+        "User",
+        "Appropriate Permission",
+        "Data Entry"
+      ],
+      "personas": [
+        "Application Administrator"
+      ],
+      "actions": [
+        "Assign Users To An Advanced Data Entry",
+        "Ensure"
+      ]
+    },
+    {
+      "identifier": "g23_19",
+      "text": "As an Application Administrator , I want to be able to configure the help center URL and topic mappings.",
+      "entities": [
+        "Topic Mapping",
+        "Help Url"
+      ],
+      "personas": [
+        "Application Administrator"
+      ],
+      "actions": [
+        "Configure The Center Help Url",
+        "Configure Topic Mapping"
+      ]
+    },
+    {
+      "identifier": "g23_20",
+      "text": "As a user, I want to add additional properties for repositories.",
+      "entities": [
+        "Repository",
+        "Additional Property"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Add Additional Properties For Repositories"
+      ]
+    },
+    {
+      "identifier": "g23_21",
+      "text": "As an Archivist, I want to add Notes to other record types.",
+      "entities": [
+        "Note",
+        "Record Types"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Add Notes To Other Record Types"
+      ]
+    },
+    {
+      "identifier": "g23_22",
+      "text": "As an Administrator, I want to create a new User account for someone else.",
+      "entities": [
+        "User Account"
+      ],
+      "personas": [
+        "Administrator"
+      ],
+      "actions": [
+        "Create A New User Account For Else Someone"
+      ]
+    },
+    {
+      "identifier": "g23_23",
+      "text": "As an Archivist, I want to add administrative data about the archival description and finding aid-related data to a top-level Resource.",
+      "entities": [
+        "Administrative Datum",
+        "Archival Description",
+        "Aid , Related Datum",
+        "Level Resource"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Finding Add Administrative Data About The Archival Description Aid, Related Data To A Top Level Resource"
+      ]
+    },
+    {
+      "identifier": "g23_24",
+      "text": "As an Archivist, I want to assign a Level of description to a Resource or Resource Component and optionally specify another value if the Level is not in a predefined list.",
+      "entities": [
+        "Resource",
+        "Value",
+        "Level",
+        "Description"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Specify Another Value",
+        "Assign A Level Of Description To Resource Component",
+        "Assign A Level Of Description To A Resource"
+      ]
+    },
+    {
+      "identifier": "g23_25",
+      "text": "As a developer, I want to use a configuration that is not prepackaged within a built version of application.",
+      "entities": [
+        "Configuration",
+        "Application"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Use A Configuration Not Prepackaged Within A Built Version Of Application"
+      ]
+    },
+    {
+      "identifier": "g23_26",
+      "text": "As an Archivist, I want to import EAD files that were exported by the Archivists' Toolkit.",
+      "entities": [
+        "Ead Files",
+        "Toolkit",
+        "Archivist"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Ead Files Exported The Archivists' Toolkit"
+      ]
+    },
+    {
+      "identifier": "g23_27",
+      "text": "As a systems administrator, I want to be able to control the location of the demo database and I want it to be backed up.",
+      "entities": [
+        "Demo Database"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Backed Up",
+        "Control The Location Of The Demo Database"
+      ]
+    },
+    {
+      "identifier": "g23_28",
+      "text": "As an archivist, I want to search within a repository for resource and accession and digital object records.",
+      "entities": [
+        "Resource",
+        "Repository",
+        "Accession",
+        "Object Record"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Search Within A Repository For Digital Object Record",
+        "Search Within A Repository For Resource",
+        "Search Within A Repository For Accession"
+      ]
+    },
+    {
+      "identifier": "g23_29",
+      "text": "As an archivist, I want to create and edit a Collection Management subrecord.",
+      "entities": [
+        "Collection Management Subrecord"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Create A Collection Management Subrecord",
+        "Edit A Collection Management Subrecord"
+      ]
+    },
+    {
+      "identifier": "g23_30",
+      "text": "As an Archivist, I want to rearrange the Resource and/or Digital Object hierarchy using keyboard-based navigation.",
+      "entities": [
+        "Resource",
+        "Keyboard , Based Navigation",
+        "Digital"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Rearrange The Resource",
+        "Rearrange The Resource Digital",
+        "Use Keyboard, Based Navigation"
+      ]
+    },
+    {
+      "identifier": "g23_31",
+      "text": "As an Archivist, I want to rearrange the resource description hierarchy by dragging an archival object to a different position in the hierarchy.",
+      "entities": [
+        "Hierarchy",
+        "Archival Object",
+        "Different Position",
+        "Resource Description"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Rearrange The Resource Description Hierarchy Dragging An Archival Object To A Different Position In The Hierarchy"
+      ]
+    },
+    {
+      "identifier": "g23_32",
+      "text": "As an Archivist, I would like to indicate an Agent is either the creator or source or subject of an Accession or Resource or Resource Component.",
+      "entities": [
+        "Agent",
+        "Subject",
+        "Resource",
+        "Accession Component",
+        "Source"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g23_33",
+      "text": "As an Archivist, I want to export a description as EAD.",
+      "entities": [
+        "Description",
+        "Ead"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Export A Description As Ead"
+      ]
+    },
+    {
+      "identifier": "g23_34",
+      "text": "As an Archivist, I want to create and edit Event records.",
+      "entities": [
+        "Event Records"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Create Event Records",
+        "Edit Event Records"
+      ]
+    },
+    {
+      "identifier": "g23_35",
+      "text": "As an Archivist, I want to manage Digital Objects.",
+      "entities": [
+        "Digital Object"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Manage Digital Objects"
+      ]
+    },
+    {
+      "identifier": "g23_36",
+      "text": "As an Archivist, I want to associate an Instance with a Resource and/or Resource Component.",
+      "entities": [
+        "Instance",
+        "Resource"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Associate An Instance With Resource Component",
+        "Associate An Instance With A Resource"
+      ]
+    },
+    {
+      "identifier": "g23_37",
+      "text": "As an Archivist, I don't want to inadvertently overwrite someone else's changes to a record that I'm editing.",
+      "entities": [
+        "Record",
+        "Change"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "That Editing",
+        "Overwrite Changes To A Record"
+      ]
+    },
+    {
+      "identifier": "g23_38",
+      "text": "As an Archivist, I want to create and edit Rights Management statements.",
+      "entities": [
+        "Rights Management Statements"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Create Rights Management Statements",
+        "Edit Rights Management Statements"
+      ]
+    },
+    {
+      "identifier": "g23_39",
+      "text": "As an Archivist, I want to upload an EAD for import from within the frontend application.",
+      "entities": [
+        "Ead",
+        "Import",
+        "Frontend Application"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Upload An Ead For Import Within The Frontend Application"
+      ]
+    },
+    {
+      "identifier": "g23_40",
+      "text": "As an Archivist, I want to import EAD data.",
+      "entities": [
+        "Ead Data"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Import Ead Data"
+      ]
+    },
+    {
+      "identifier": "g23_41",
+      "text": "As a Repository Manager , I want to create, update and delete archival descriptions in my repository.",
+      "entities": [
+        "Repository"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Create",
+        "Delete Archival Descriptions In Repository"
+      ]
+    },
+    {
+      "identifier": "g23_42",
+      "text": "As a Developer , I want to develop a custom importer.",
+      "entities": [
+        "Custom Importer"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Develop A Custom Importer"
+      ]
+    },
+    {
+      "identifier": "g23_43",
+      "text": "As a Basic Data Entry user , I want to create and update basic archival description information.",
+      "entities": [
+        "Archival Description Information"
+      ],
+      "personas": [
+        "Data , Basic , Entry User"
+      ],
+      "actions": [
+        "Create Basic Archival Description Information",
+        "Update Basic Archival Description Information"
+      ]
+    },
+    {
+      "identifier": "g23_44",
+      "text": "As a Repository Manager , I want to create, update and delete any records in my repository.",
+      "entities": [
+        "Record",
+        "Repository"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Create Any Records In Repository",
+        "Update Any Records In Repository",
+        "Delete Any Records In Repository"
+      ]
+    },
+    {
+      "identifier": "g23_45",
+      "text": "As a ReadOnly user , I want to view archival descriptions in my repository.",
+      "entities": [
+        "Archival Descriptions",
+        "Repository"
+      ],
+      "personas": [
+        "Readonly User"
+      ],
+      "actions": [
+        "View Archival Descriptions In Repository"
+      ]
+    },
+    {
+      "identifier": "g23_46",
+      "text": "As an System Administrator, I want to declare that a user is has the Repository Manager role for a given Repository.",
+      "entities": [
+        "Repository",
+        "User",
+        "Manager Role"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Declare"
+      ]
+    },
+    {
+      "identifier": "g23_47",
+      "text": "As an Archivist, I want to specify the Source for a Name Form of an Agent and add new Sources and edit existing Sources.",
+      "entities": [
+        "Name Form",
+        "Agent",
+        "Source",
+        "New Source",
+        "Exist Source"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Specify The Source For A Name Form Of An Agent",
+        "Add New Sources",
+        "Edit Existing Sources"
+      ]
+    },
+    {
+      "identifier": "g23_48",
+      "text": "As an Archivist, I want to create and edit Agent records.",
+      "entities": [
+        "Agent Records"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Create Agent Records",
+        "Edit Agent Records"
+      ]
+    },
+    {
+      "identifier": "g23_49",
+      "text": "As an Archivist, I want to create and edit a Resource record.",
+      "entities": [
+        "Resource Record"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Create A Resource Record",
+        "Edit A Resource Record"
+      ]
+    },
+    {
+      "identifier": "g23_50",
+      "text": "As an Archivist, I want to associate a Subject record with a Resource description.",
+      "entities": [
+        "Resource Description",
+        "Subject Record"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Associate A Subject Record With A Resource Description"
+      ]
+    },
+    {
+      "identifier": "g23_53",
+      "text": "As an Archivist, I want to associate an Instance with a Container.",
+      "entities": [
+        "Container",
+        "Instance"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Associate An Instance With A Container"
+      ]
+    },
+    {
+      "identifier": "g23_54",
+      "text": "As an Archivist, I want to assign Location information to a Container.",
+      "entities": [
+        "Container",
+        "Location Information"
+      ],
+      "personas": [
+        "Archivist"
+      ],
+      "actions": [
+        "Assign Location Information To A Container"
+      ]
+    }
+  ]
+}

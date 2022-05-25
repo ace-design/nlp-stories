@@ -1,6 +1,8 @@
 #This file will compare the results of the baseline and the nlp tools annotations for accuracy
 import argparse
+from difflib import SequenceMatcher
 import json
+from tkinter import BASELINE
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -12,10 +14,10 @@ def main():
     baseline_data = extract_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
-    sorted_nlp_tool_data = sort(baseline_data, nlp_tool_data)
+    sorted_baseline_data, sorted_nlp_tool_data, missing_stories = sort(baseline_data, nlp_tool_data)
 
-    baseline_text, baseline_persona, baseline_entity, baseline_action = baseline_data
-    nlp_text, nlp_persona, nlp_entity, nlp_action = sorted_nlp_tool_data
+    baseline_text, baseline_persona, baseline_entity, baseline_action = sorted_baseline_data
+    _, nlp_persona, nlp_entity, nlp_action = sorted_nlp_tool_data
 
 
     persona_comparison_collection = []
@@ -60,7 +62,7 @@ def main():
 
     dataset_results = total_dataset(count_list)
 
-    output(baseline_text, comparison_collection, dataset_results, story_results)
+    output(baseline_text, comparison_collection, dataset_results, story_results, missing_stories)
 
 def command():
     '''
@@ -69,10 +71,11 @@ def command():
     Returns:
         args.load_baseline_path (str): Path to the baseline evaluation file to be loaded
         args.load_nlp_tool_path (str): Path to the nlp tool evaluation file to be loaded
-        args.save_path (str): Path to the file to be saved
+        args.save_folder_name (str): Path to the file to be saved
 
     Raises:
         FileNotFoundError: raises excpetion
+        FileExistsError: raise exception
         wrong file type: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program is to compare accuracy of NLP")
@@ -84,7 +87,7 @@ def command():
 
     if not(args.load_nlp_tool_path.endswith(".json") and args.load_baseline_path.endswith(".json")):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect saving file type. Save file type is .json")
+        raise Exception ("Incorrect input file type. input file type is .json")
     try:
         load_baseline_file = open(args.load_baseline_path)
         load_baseline_file.close()
@@ -160,41 +163,65 @@ def extract_nlp_tool_info(path):
     nlp_tool_data = [text, persona, entity, action]
 
     return nlp_tool_data
+
 def sort(baseline_data, nlp_tool_data):
     '''
-    sorts the list in order to match the text
+    sorts the list in order to match the text, and detect missing stories
 
     Parameters:
     baseline_data (2D list): contains text, persona, primary entity, and primnary action identifies by the baseline data
     nlp_tool_data (2D list): contains text, persona, entity, and action identifies by the nlp tool data
 
     Returns:
+    sorted_baseline_data(2D list): sorted text, persona, entity, and action identified of baseline_data (considering missing stories of nlp)
     sorted_nlp_tool_data (2D list): sorted text, persona, entity, and action identified coresponding to baseline_data
+    missing_stories (2D list): missing stories from baseline_data and nlp tool 
     '''
-    baseline_text,_, _, _ = baseline_data
+ 
+    baseline_text,baseline_persona, baseline_entity, baseline_action = baseline_data
     nlp_text, nlp_persona, nlp_entity, nlp_action  = nlp_tool_data
 
-    sorted_text = []
-    sorted_persona = []
-    sorted_entity = []
-    sorted_action= []
+    sorted_baseline_text = []
+    sorted_baseline_persona = []
+    sorted_baseline_entity = []
+    sorted_baseline_action= []
+
+    sorted_nlp_text = []
+    sorted_nlp_persona = []
+    sorted_nlp_entity = []
+    sorted_nlp_action= []
 
     for i in range(len(baseline_text)):
         for j in range(len(nlp_text)):
             if baseline_text[i] == nlp_text[j]:
-                sorted_text.append(nlp_text[j])
-                sorted_persona.append(nlp_persona[j])
-                sorted_entity.append(nlp_entity[j])
-                sorted_action.append(nlp_action[j])
+
+                sorted_baseline_text.append(baseline_text[i])
+                sorted_baseline_persona.append(baseline_persona[i])
+                sorted_baseline_entity.append(baseline_entity[i])
+                sorted_baseline_action.append(baseline_action[i])
+
+                sorted_nlp_text.append(nlp_text[j])
+                sorted_nlp_persona.append(nlp_persona[j])
+                sorted_nlp_entity.append(nlp_entity[j])
+                sorted_nlp_action.append(nlp_action[j])
+                
                 del nlp_text[j]
                 del nlp_persona[j]
                 del nlp_entity[j]
                 del nlp_action[j]
                 break
 
-    sorted_nlp_tool_data = [sorted_text, sorted_persona, sorted_entity, sorted_action]
+            
+    nlp_missing_story = set(baseline_text).difference(set(sorted_baseline_text))
+    nlp_missing_story_list = list(nlp_missing_story)
 
-    return sorted_nlp_tool_data
+    baseline_missing_story_list = nlp_text
+
+    sorted_baseline_data = [sorted_baseline_text, sorted_baseline_persona, sorted_baseline_entity, sorted_baseline_action]
+    sorted_nlp_tool_data = [sorted_nlp_text, sorted_nlp_persona, sorted_nlp_entity, sorted_nlp_action]
+    missing_stories = [baseline_missing_story_list, nlp_missing_story_list]
+
+    return sorted_baseline_data, sorted_nlp_tool_data, missing_stories
 
 def compare (baseline, nlp):
     '''
@@ -207,22 +234,61 @@ def compare (baseline, nlp):
     Returns:
     comparison_results (2D list): includes the elements identified as true/false positives and false negatives 
     '''
-
     true_positive = []
     false_positive = []
 
-    for element in nlp:
-        if element in baseline:
-            true_positive.append(element)
-            baseline.remove(element)
-        else:
-            false_positive.append(element)
+    for i in range(len(nlp)):
+        nlp_element = nlp[i].lower()
+        for j in range (len(baseline)):
+            baseline_element = baseline[j].lower()
+            if nlp_element == baseline_element or check_common_elements(nlp_element, baseline_element) == True or check_similar_elements(nlp_element, baseline_element) == True:
+                true_positive.append(baseline[j])
+                baseline.pop(j)
+                break
+            else:
+                false_positive.append(nlp_element)
     
     false_nagative = baseline
 
     comparison_results = [true_positive, false_positive, false_nagative]
 
     return comparison_results
+
+def check_common_elements(nlp_element, baseline_element):
+    '''
+    determine if an element is part of another element
+
+    Paramters:
+    nlp_element (str): element from nlp tool to evaluate if common element exist
+    baseline_element (str): element from baseline to evaluate if common element exist
+    '''
+
+    nlp_element_list = nlp_element.split()
+    baseline_element_list = baseline_element.split()
+    common_elements = set(nlp_element_list).intersection(baseline_element_list)
+
+    if len(common_elements) != 0:
+        return True
+    else:
+        return False
+def check_similar_elements(nlp_element, baseline_element):
+    '''
+    determine if an element is similar to part of another element
+
+    Paramters:
+    nlp_element (str): element from nlp tool to evaluate if common element exist
+    baseline_element (str): element from baseline to evaluate if common element exist
+    '''
+
+    nlp_element_list = nlp_element.split()
+    baseline_element_list = baseline_element.split()
+    for i in range(len(nlp_element_list)):
+        for j in range(len(baseline_element_list)):
+            similarity_ratio = SequenceMatcher(None, nlp_element_list[i], baseline_element_list[j]).ratio()
+            if similarity_ratio >= 75:
+                return True
+    return False
+        
 
 def count_true_false_positives_negatives(comparison_results):
     '''
@@ -428,9 +494,9 @@ def scatterplot(input_data, save_folder_path):
     story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
     story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
 
-    create_scattergraph(story_persona_precision, story_persona_recall, "m", "Linear Regression of Recall Vs. Precision for Persona", save_folder_path, "\\persona_recall_precision")
-    create_scattergraph(story_entity_precision, story_entity_recall, "r", "Linear Regression of Recall Vs. Precision for Entity", save_folder_path, "\\entity_recall_precision")
-    create_scattergraph(story_action_precision, story_action_recall, "b", "Linear Regression of Recall Vs. Precision for Action", save_folder_path, "\\action_recall_precision")
+    create_scattergraph(story_persona_precision, story_persona_recall, "m", "Recall Vs. Precision for Persona", save_folder_path, "\\persona_recall_precision")
+    create_scattergraph(story_entity_precision, story_entity_recall, "r", "Recall Vs. Precision for Entity", save_folder_path, "\\entity_recall_precision")
+    create_scattergraph(story_action_precision, story_action_recall, "b", "Recall Vs. Precision for Action", save_folder_path, "\\action_recall_precision")
 
 def create_scattergraph(precision_data, recall_data, graph_color, title, save_folder_path, save_name):
     '''
@@ -445,7 +511,7 @@ def create_scattergraph(precision_data, recall_data, graph_color, title, save_fo
     save_name (str): name of the file for saving
     '''
 
-    graph = sns.jointplot(x=tuple(precision_data), y=tuple(recall_data), kind="reg", xlim=(0,1), ylim=(0,1), color= graph_color, scatter_kws={"s": 40})
+    graph = sns.jointplot(x=tuple(precision_data), y=tuple(recall_data), kind="scatter", xlim=(0,1), ylim=(0,1), color= graph_color, clip_on = False)
     graph.set_axis_labels('Precision', 'Recall', fontsize=14)
     graph.fig.suptitle(title, fontsize = 16)
     graph.figure.tight_layout() 
@@ -548,7 +614,7 @@ def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title,
 
     graph.savefig(save_folder_path + save_name + ".png")
 
-def output(baseline_text, comparison_collection, dataset_results, story_results):
+def output(baseline_text, comparison_collection, dataset_results, story_results, missing_stories):
     '''
     output the results so that it is easy to read the results 
 
@@ -558,6 +624,7 @@ def output(baseline_text, comparison_collection, dataset_results, story_results)
     precision (list): precision of persona, entity, action 
     recall (list): recall of persona, entity, action 
     f_measure (list): f_measure of persona, entity, action 
+    missing_stories (2D list): contains missing stories and data from baseline and/or nlp tool 
     '''
 
     persona_comparison_collection, entity_comparison_collection, action_comparison_collection = comparison_collection
@@ -571,6 +638,8 @@ def output(baseline_text, comparison_collection, dataset_results, story_results)
     story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
     story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
     story_persona_f_measure, story_entity_f_measure, story_action_f_measure = story_f_measure_results
+
+    baseline_missing_stories, nlp_tool_missing_stories = missing_stories
 
     for i in range(len(baseline_text)):
         print("Text:", baseline_text[i])
@@ -611,5 +680,10 @@ def output(baseline_text, comparison_collection, dataset_results, story_results)
     print("Recall:", action_recall)
     print("F-Measure:", action_f_measure)
 
+    print("Missing Stories")
+    print("Missing stories from baseline:", baseline_missing_stories)
+    print("Missing stories from nlp tool:", nlp_tool_missing_stories)
+
+    
 if __name__ == "__main__":
     main()

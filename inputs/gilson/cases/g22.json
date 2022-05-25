@@ -1,0 +1,1158 @@
+{
+  "case": "g22",
+  "stories": [
+    {
+      "identifier": "g22_0",
+      "text": "As a PI, I want to properly record all metadata, so that I can ensure proper running of the project in case of staff changes.",
+      "entities": [
+        "Metadata"
+      ],
+      "personas": [
+        "Pi"
+      ],
+      "actions": [
+        "Record All Metadata"
+      ]
+    },
+    {
+      "identifier": "g22_1",
+      "text": "As a researcher, I want to indicate where my data will be stored during the project and where after the project, so that it remains accessible during all stages of the data lifecycle.",
+      "entities": [
+        "Datum",
+        "Project"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Indicate"
+      ]
+    },
+    {
+      "identifier": "g22_2",
+      "text": "As a researcher, I want to import metadata that I captured with a metadata tool, so that I do not have to capture it again in a DMP.",
+      "entities": [
+        "Metadata"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "That Captured With A Metadata Tool",
+        "Import Metadata"
+      ]
+    },
+    {
+      "identifier": "g22_3",
+      "text": "As a data manager, I want to know how the data is used, so that I can develop more detailed usage and support scenarios with researchers.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_4",
+      "text": "As a repository owner, I want to be able to check the planned provenance of the data that will be submitted at the end of a project, so that I can calculate necessary submission fees and check whether it belongs to our target group.",
+      "entities": [
+        "Datum",
+        "Project"
+      ],
+      "personas": [
+        "Repository Owner"
+      ],
+      "actions": [
+        "Check The Planned Provenance Of The Data Submitted At The End Of A Project"
+      ]
+    },
+    {
+      "identifier": "g22_5",
+      "text": "As an IT manager, I want to know about IT resource requirements early in the project lifecycle, so that I can enable resource acquisition planning.",
+      "entities": [
+        "It Resource Requirements",
+        "Project Lifecycle"
+      ],
+      "personas": [
+        "Manager"
+      ],
+      "actions": [
+        "Know About It Resource Requirements In The Project Lifecycle"
+      ]
+    },
+    {
+      "identifier": "g22_6",
+      "text": "As a PI, I want to plan what kind of data I want to record/store, so that I can ensure it will possible to store it.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Pi"
+      ],
+      "actions": [
+        "What Kind Of Data Record",
+        "Plan",
+        "What Kind Of Data Store"
+      ]
+    },
+    {
+      "identifier": "g22_7",
+      "text": "As an IT staff member, I want to know the security requirements of the data, so that I know which kind of security measures to apply.",
+      "entities": [
+        "Security Requirements",
+        "Datum"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know The Security Requirements Of The Data"
+      ]
+    },
+    {
+      "identifier": "g22_8",
+      "text": "As a data manager, I want to have the description of collected data sets that are used or updated throughout the project lifecycle, so that I can ensure the descriptions are current and add detail as the study proceeds.",
+      "entities": [
+        "Description",
+        "Project Lifecycle",
+        "Data Sets"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Update Throughout The Project Lifecycle",
+        "Have The Description Of Collected Data Sets Used",
+        "Have The Description Of Collected Sets"
+      ]
+    },
+    {
+      "identifier": "g22_9",
+      "text": "As a researcher, I want to know which topics are mandatory and similar in all DMPs, so that I can save time through quickly writing it.",
+      "entities": [
+        "Dmp",
+        "Topic"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Similar Know Topics In All Dmps"
+      ]
+    },
+    {
+      "identifier": "g22_10",
+      "text": "As a data manager, I want to know what the content of the data is, so that I can decide to which collection or repository the data fits.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_11",
+      "text": "As a PI, I want to record information about my DMP, so that an Ethics Committee can review this for compliance with ethical standards.",
+      "entities": [
+        "Information",
+        "Dmp"
+      ],
+      "personas": [
+        "Pi"
+      ],
+      "actions": [
+        "Record Information About Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_12",
+      "text": "As a legalofficer, I want to know about data sensitivity, so that I can establish sharing options.",
+      "entities": [
+        "Data Sensitivity"
+      ],
+      "personas": [
+        "Legalofficer"
+      ],
+      "actions": [
+        "Know About Data Sensitivity"
+      ]
+    },
+    {
+      "identifier": "g22_13",
+      "text": "As a data librarian, I want to extract pointers from the DMP to metadata held in other systems, so that I can import this metadata into a data catalogue.",
+      "entities": [
+        "Pointer",
+        "Metadata",
+        "Dmp",
+        "System"
+      ],
+      "personas": [
+        "Datum Librarian"
+      ],
+      "actions": [
+        "Extract Pointers From The Dmp To Metadata In Other Systems"
+      ]
+    },
+    {
+      "identifier": "g22_14",
+      "text": "As an IT staff member, I want to have an estimate of the produced data volume, so that I can plan the overall storage consumption.",
+      "entities": [
+        "Data Volume"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Have An Estimate Of The Produced Data Volume"
+      ]
+    },
+    {
+      "identifier": "g22_15",
+      "text": "As an administrator, I want to know who funded the project and their requirements, so that I can track the funder specific obligations.",
+      "entities": [
+        "Requirement",
+        "Project"
+      ],
+      "personas": [
+        "Administrator"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_16",
+      "text": "As an archivemanager, I want to know the legal status of data, so that I can apply the legal requirements accordingly.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Archivemanager"
+      ],
+      "actions": [
+        "Know The Legal Status Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_17",
+      "text": "As a data manager, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+      "entities": [
+        "Kind",
+        "Data Types",
+        "Type"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_18",
+      "text": "As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+      "entities": [
+        "Data Types",
+        "Kind",
+        "Type"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_19",
+      "text": "As an archivemanager, I want to know in advance the conservation period of data, so that I can better organize the service by adapting the preservation actions.",
+      "entities": [
+        "Datum",
+        "Advance",
+        "Conservation Period"
+      ],
+      "personas": [
+        "Archivemanager"
+      ],
+      "actions": [
+        "Know In Advance The Conservation Period Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_20",
+      "text": "As a data manager, I want to document all rights necessary for managing the data, so that I can curate and preserve the data.",
+      "entities": [
+        "Necessary Right",
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Document All Necessary Rights Managing The Data"
+      ]
+    },
+    {
+      "identifier": "g22_21",
+      "text": "As a data manager, I want to know what the content of the data is, so that I can check whether the necessary expertise for maintaining intellectual reusability is available.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_22",
+      "text": "As a research head, I want to access to the persistent identifiers of datasets provided in the DMP, so that I can check that the DMP has been implemented.",
+      "entities": [
+        "Dataset",
+        "Dmp"
+      ],
+      "personas": [
+        "Research Head"
+      ],
+      "actions": [
+        "Access To The Persistent Identifiers Of Datasets In The Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_23",
+      "text": "As a funder, I want to be able to read the costs for data management from the DMP, so that I can check whether our policies work as intended.",
+      "entities": [
+        "Dmp",
+        "Cost",
+        "Data Management"
+      ],
+      "personas": [
+        "Funder"
+      ],
+      "actions": [
+        "Read The Costs For Data Management From The Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_24",
+      "text": "As a researcher, I want the DMP to prepopulate information that I have already entered in other institutional systems, so that I do not have to re-enter information ensuring the DMP contains accurate and standardized information.",
+      "entities": [
+        "Institutional , System"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "That Enter In Institutional, Other Systems",
+        "Prepopulate"
+      ]
+    },
+    {
+      "identifier": "g22_25",
+      "text": "As a stakeholder, I want to know when the data management plan was created or updated, so that I know how up-to-date the plan is or whether it needs to be updated.",
+      "entities": [
+        "Plan",
+        "Data Management"
+      ],
+      "personas": [
+        "Stakeholder"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_26",
+      "text": "As a stakeholder, I want to know who is responsible for the DMP, so that I can ask them about further details.",
+      "entities": [
+        "Dmp"
+      ],
+      "personas": [
+        "Stakeholder"
+      ],
+      "actions": [
+        "Know Responsible For The Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_27",
+      "text": "As a stakeholder, I want to have references to the project proposal, so that I can look up further general information.",
+      "entities": [
+        "Project Proposal",
+        "Reference"
+      ],
+      "personas": [
+        "Stakeholder"
+      ],
+      "actions": [
+        "Have References To The Project Proposal"
+      ]
+    },
+    {
+      "identifier": "g22_28",
+      "text": "As a metadata manager, I want to have a short description of project, so that I can be informed about the metadata description.",
+      "entities": [
+        "Project"
+      ],
+      "personas": [
+        "Metadata Manager"
+      ],
+      "actions": [
+        "Have A Short Description Of Project"
+      ]
+    },
+    {
+      "identifier": "g22_29",
+      "text": "As a rector, I want to know how many data will be stored, so that I can plan long term resources.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Rector"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_30",
+      "text": "As a data manager, I want to know the time plan for collecting data, so that I can plan the data management.",
+      "entities": [
+        "Datum",
+        "Time Plan"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know The Time Plan Collecting Data"
+      ]
+    },
+    {
+      "identifier": "g22_31",
+      "text": "As a data librarian, I want to import administrative information regarding a project into DMP, so that I can prepopulate the DMP.",
+      "entities": [
+        "Project",
+        "Administrative Information",
+        "Dmp"
+      ],
+      "personas": [
+        "Datum Librarian"
+      ],
+      "actions": [
+        "Import Administrative Information Regarding A Project Into Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_32",
+      "text": "As a manager, I want to know about all resources and services used for the data, so that I can estimate the true cost of the project.",
+      "entities": [
+        "Datum",
+        "Resource",
+        "Service"
+      ],
+      "personas": [
+        "Manager"
+      ],
+      "actions": [
+        "Know About All Resources For The Data",
+        "Know About Service"
+      ]
+    },
+    {
+      "identifier": "g22_33",
+      "text": "As an archivemanager, I want to reuse the information regarding file format, so that I can apply automated checks for the file validation.",
+      "entities": [
+        "File Format",
+        "Information"
+      ],
+      "personas": [
+        "Archivemanager"
+      ],
+      "actions": [
+        "Reuse The Information Regarding File Format"
+      ]
+    },
+    {
+      "identifier": "g22_34",
+      "text": "As a researcher, I want to know how many resources are needed during the project, so that I can calculate costs.",
+      "entities": [
+        "Resource",
+        "Project"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_35",
+      "text": "As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Extract The Description Of The Data"
+      ]
+    },
+    {
+      "identifier": "g22_36",
+      "text": "As a researcher, I want to record research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.",
+      "entities": [
+        "Publication",
+        "Research Publications",
+        "Cris",
+        "Institutional Repository"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Record Research Publications In The Institutional Repository With Dmp Records",
+        "Record Publications In Cris"
+      ]
+    },
+    {
+      "identifier": "g22_37",
+      "text": "As a researcher, I want to link research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.",
+      "entities": [
+        "Institutional Repository",
+        "Publication",
+        "Dmp Records",
+        "Research Publications",
+        "Cris"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Link Publications In Cris",
+        "Link Research Publications In The Institutional Repository With Dmp Records"
+      ]
+    },
+    {
+      "identifier": "g22_38",
+      "text": "As a researcher, I want to store agreements relating to third party data used in a project, so that the data can be cited, attributed and used correctly.",
+      "entities": [
+        "Agreement",
+        "Project",
+        "Party Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Store Agreements To Third Party Data In A Project"
+      ]
+    },
+    {
+      "identifier": "g22_39",
+      "text": "As an ethics manager, I want to be informed about the data, so that I can check for sensitivity of data.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Ethics Manager"
+      ],
+      "actions": [
+        "Informed About The Data"
+      ]
+    },
+    {
+      "identifier": "g22_40",
+      "text": "As a repository operator, I want to know about the kind of data, so that I can evaluate the storage size and system.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Repository Operator"
+      ],
+      "actions": [
+        "Know About The Kind Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_41",
+      "text": "As a researcher, I want to know about costs, so that I can plan my research.",
+      "entities": [
+        "Cost"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Know About Costs"
+      ]
+    },
+    {
+      "identifier": "g22_42",
+      "text": "As a repository manager, I need details on the type of data, so that I can check if the archiving can be arranged.",
+      "entities": [
+        "Datum",
+        "Detail"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Provided With Details On The Type Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_43",
+      "text": "As an IT officer, I want to know how secure data is, so that I can ensure legal compliance.",
+      "entities": [
+        "Secure Datum"
+      ],
+      "personas": [
+        "Officer"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_44",
+      "text": "As a funder, I want to know how secure data is, so that I can ensure legal compliance.",
+      "entities": [
+        "Secure Datum"
+      ],
+      "personas": [
+        "Funder"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_45",
+      "text": "As a Research Centre Director, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.",
+      "entities": [
+        "Research Data"
+      ],
+      "personas": [
+        "Research , Centre Director"
+      ],
+      "actions": [
+        "Receive Summary, Regular Reports Of Research Data"
+      ]
+    },
+    {
+      "identifier": "g22_46",
+      "text": "As a Postgraduate Convenor, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.",
+      "entities": [
+        "Research Data"
+      ],
+      "personas": [
+        "Postgraduate Convenor"
+      ],
+      "actions": [
+        "Receive Summary, Regular Reports Of Research Data"
+      ]
+    },
+    {
+      "identifier": "g22_47",
+      "text": "As a research support officer, I want to ensure compliance to the funders\ufffd rules, so that I can ensure all costs will be accepted.",
+      "entities": [
+        "Compliance",
+        "Rule",
+        "Funder"
+      ],
+      "personas": [
+        "Research , Support Officer"
+      ],
+      "actions": [
+        "Ensure Compliance To The \ufffd Funders Rules"
+      ]
+    },
+    {
+      "identifier": "g22_48",
+      "text": "As a funder, I want to be able to check all the repositories mentioned in a DMP, so that I can verify whether the project has followed our funding rules.",
+      "entities": [
+        "Dmp",
+        "Repository"
+      ],
+      "personas": [
+        "Funder"
+      ],
+      "actions": [
+        "Check The Repositories In A Dmp"
+      ]
+    },
+    {
+      "identifier": "g22_49",
+      "text": "As a PI, I want to know how secure data is, so that I can ensure legal compliance.",
+      "entities": [
+        "Secure Datum"
+      ],
+      "personas": [
+        "Pi"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_50",
+      "text": "As a Director of Research Integrity, I want to access reports containing details of research projects in which data are classified as sensitive or highly sensitive, so that I can confirm security protocols are applied to these data.",
+      "entities": [
+        "Detail",
+        "Project",
+        "Datum",
+        "Sensitive",
+        "Research Projects"
+      ],
+      "personas": [
+        "Research Integrity",
+        "Director"
+      ],
+      "actions": [
+        "Contain Details Of Research Projects In Which Data Classified As Sensitive",
+        "Contain Details Of Projects In Which Data Classified As Highly Sensitive",
+        "Access"
+      ]
+    },
+    {
+      "identifier": "g22_51",
+      "text": "As an archive, I want to get information about the volume of data to preserve at an early stage, so that I can provide the adequate storage infrastructure.",
+      "entities": [
+        "Datum",
+        "Information",
+        "Early Stage"
+      ],
+      "personas": [
+        "Archive"
+      ],
+      "actions": [
+        "Preserve At An Early Stage",
+        "Get Information About The Volume Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_53",
+      "text": "As a PI, I want to know who owns the data, so that I know what I am allowed to do with it.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Pi"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_54",
+      "text": "As a data manager, I want to have references to documentation of the data and its creation process, so that the data can be re-used and managed.",
+      "entities": [
+        "Datum",
+        "Creation Process",
+        "Reference",
+        "Documentation"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Have References To Documentation Of Creation Process",
+        "Have References To Documentation Of The Data"
+      ]
+    },
+    {
+      "identifier": "g22_55",
+      "text": "As an archivemanager, I want to make sure that detailed metadata are associated to data so that it will be understandable by future users.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Archivemanager"
+      ],
+      "actions": [
+        "Associated To Data",
+        "Make"
+      ]
+    },
+    {
+      "identifier": "g22_56",
+      "text": "As a data manager, I want to know which kind of data types will be produced or collected, so that I can ensure that the necessary technical resources and technical know-how is available.",
+      "entities": [
+        "Kind",
+        "Data Types",
+        "Type"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_57",
+      "text": "As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can ensure that the necessary technical resources and technical know-how is available.",
+      "entities": [
+        "Type",
+        "Data Types",
+        "Kind"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_58",
+      "text": "As an IT staff member, I want to know how the data is used, so that I can determine what kind of basic services and functionalities are required.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_59",
+      "text": "As a data manager, I want to know whether the collected data depends on other data sets from my own or other institutions, so that I can ensure that these dependencies are maintained.",
+      "entities": [
+        "Collected Data",
+        "Institution"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_60",
+      "text": "As an IT staff member, I want to know which formats are used, so that I can determine what kind of technical services and functionalities are required.",
+      "entities": [
+        "Format"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_61",
+      "text": "As an IT staff member, I want to know with which software or technology the data is produced or used, so that I can determine what kind of technical services and functionalities are required.",
+      "entities": [
+        "Datum",
+        "Software",
+        "Technology"
+      ],
+      "personas": [
+        ", Staff Member"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_62",
+      "text": "As a data manager, I want to know which information is necessary to re-use the data, so that it can be checked whether all necessary information is available for researchers interested in re-using the data.",
+      "entities": [
+        "Datum",
+        "Information"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know Which Information",
+        "Use The Data"
+      ]
+    },
+    {
+      "identifier": "g22_63",
+      "text": "As a data manager, I want to know which formats are used, so that I know what technology or background information might be necessary to use the data.",
+      "entities": [
+        "Format"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_64",
+      "text": "As a data manager, I want to know whether the data can be reproduced efficiently, so that I can determine whether and how the data has to be stored.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_65",
+      "text": "As a data manager, I want to know with which software or technology the data is produced or used, so that I know what technology or background information might be necessary to (re-)use the data.",
+      "entities": [
+        "Software",
+        "Datum",
+        "Technology"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g22_66",
+      "text": "As a research evaluation manager, I want to ensure all data are quoted correctly with our affiliation, so that they are counted towards our citation counts.",
+      "entities": [
+        "Datum",
+        "Affiliation"
+      ],
+      "personas": [
+        "Research , Evaluation Manager"
+      ],
+      "actions": [
+        "Ensure"
+      ]
+    },
+    {
+      "identifier": "g22_67",
+      "text": "As an administrator, I want to check that all data has the appropriate security level, so that I can demonstrate compliance.",
+      "entities": [
+        "Datum",
+        "Security Level"
+      ],
+      "personas": [
+        "Administrator"
+      ],
+      "actions": [
+        "Check"
+      ]
+    },
+    {
+      "identifier": "g22_68",
+      "text": "As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.",
+      "entities": [
+        "Datum",
+        "Security Requirements"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know The Security Requirements Of The Data"
+      ]
+    },
+    {
+      "identifier": "g22_69",
+      "text": "As a institutional data steward, I want to be able to extract the data sets that are submitted to external repositories, so that I can add them to an institutional data catalogue.",
+      "entities": [
+        "External Repository",
+        "Data Sets"
+      ],
+      "personas": [
+        "Institutional , Data Steward"
+      ],
+      "actions": [
+        "Extract The Data Sets Submitted To External Repositories"
+      ]
+    },
+    {
+      "identifier": "g22_70",
+      "text": "As an institutional data manager, I want to know about the privacy and security requirements of the data, so that I can plan the right storage system and sharing permissions.",
+      "entities": [
+        "Security",
+        "Datum"
+      ],
+      "personas": [
+        "Institutional , Data Manager"
+      ],
+      "actions": [
+        "Know About Security",
+        "Know About The Privacy Requirements Of The Data"
+      ]
+    },
+    {
+      "identifier": "g22_71",
+      "text": "As a researcher, I want to see the sections on costing by other researchers in my department, so that I can see if we could share data manager posts.",
+      "entities": [
+        "Department",
+        "Researcher",
+        "Section"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "See The Sections Costing Other Researchers In Department"
+      ]
+    },
+    {
+      "identifier": "g22_72",
+      "text": "As a researcher, I want to see the sections on roles submitted by other researchers in my department, so that I can see if we could share data manager posts.",
+      "entities": [
+        "Researcher",
+        "Department",
+        "Role",
+        "Section"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "See The Sections On Roles Other Researchers In Department"
+      ]
+    },
+    {
+      "identifier": "g22_73",
+      "text": "As a researcher, I want to see the sections on responsibilities submitted by other researchers in my department, so that I can see if we could share data manager posts.",
+      "entities": [
+        "Department",
+        "Responsibility",
+        "Researcher",
+        "Section"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "See The Sections On Responsibilities Other Researchers In Department"
+      ]
+    },
+    {
+      "identifier": "g22_74",
+      "text": "As a faculty data steward, I want to see the sections on costing, so that I can ensure sufficient expertise on data management to support the project.",
+      "entities": [
+        "Section"
+      ],
+      "personas": [
+        "Faculty , Data Steward"
+      ],
+      "actions": [
+        "See The Sections Costing"
+      ]
+    },
+    {
+      "identifier": "g22_75",
+      "text": "As a faculty data steward, I want to see the sections on roles, so that I can ensure sufficient expertise on data management to support the project.",
+      "entities": [
+        "Role",
+        "Section"
+      ],
+      "personas": [
+        "Faculty , Data Steward"
+      ],
+      "actions": [
+        "See The Sections On Roles"
+      ]
+    },
+    {
+      "identifier": "g22_76",
+      "text": "As a faculty data steward, I want to see the sections on responsibilities, so that I can ensure sufficient expertise on data management to support the project.",
+      "entities": [
+        "Responsibility",
+        "Section"
+      ],
+      "personas": [
+        "Faculty , Data Steward"
+      ],
+      "actions": [
+        "See The Sections On Responsibilities"
+      ]
+    },
+    {
+      "identifier": "g22_77",
+      "text": "As a data manager, I want to clarify the necessary rights for re-using the data, so that it is legal to reuse the data.",
+      "entities": [
+        "Necessary Right",
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Clarify The Necessary Rights Using The Data"
+      ]
+    },
+    {
+      "identifier": "g22_78",
+      "text": "As a researcher, I want to record my intention to share data I have collected under terms of a particular licence, so that other researchers who use the data understand the rights of use.",
+      "entities": [
+        "Particular Licence",
+        "Datum"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Record",
+        "Share Data",
+        "Collected Under Terms Of A Particular Licence"
+      ]
+    },
+    {
+      "identifier": "g22_79",
+      "text": "As a data manager, I want to plan the anonymization of data, so that we protect the privacy of the people participating in the research as good as possible and still ensure reusability of data.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Plan The Anonymization Of Data"
+      ]
+    },
+    {
+      "identifier": "g22_80",
+      "text": "As a repository manager, I want to have metadata in additional languages, so that I can allow for multilingual data archive.",
+      "entities": [
+        "Metadata",
+        "Additional Language"
+      ],
+      "personas": [
+        "Repository Manager"
+      ],
+      "actions": [
+        "Have Metadata In Additional Languages"
+      ]
+    },
+    {
+      "identifier": "g22_81",
+      "text": "As a data manager, I want to know whether the DMP was approved, so that I can proceed with the required next steps.",
+      "entities": [
+        "Dmp"
+      ],
+      "personas": [
+        "Data Manager"
+      ],
+      "actions": [
+        "Know"
+      ]
+    }
+  ]
+}

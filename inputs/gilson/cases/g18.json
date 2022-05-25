@@ -1,0 +1,1590 @@
+{
+  "case": "g18",
+  "stories": [
+    {
+      "identifier": "g18_0",
+      "text": "As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.",
+      "entities": [
+        "Neurohub",
+        "Script",
+        "Operating System"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Run A Script Installs The Neurohub"
+      ]
+    },
+    {
+      "identifier": "g18_1",
+      "text": "As a system administrator, I want to run a script that tests to see if a Neurohub installation is functioning correctly.",
+      "entities": [
+        "Neurohub Installation",
+        "Script"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Run A Script Tests A Neurohub Installation Is Correctly Functioning",
+        "See"
+      ]
+    },
+    {
+      "identifier": "g18_2",
+      "text": "As a release engineer, I want to call a script to execute acceptance tests against a Neurohub installation and report back the results.",
+      "entities": [
+        "Neurohub Installation",
+        "Acceptance Tests",
+        "Script",
+        "Result"
+      ],
+      "personas": [
+        "Release Engineer"
+      ],
+      "actions": [
+        "Execute Acceptance Tests Against A Neurohub Installation",
+        "Call A Script",
+        "Report Back The Results"
+      ]
+    },
+    {
+      "identifier": "g18_3",
+      "text": "As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
+      "entities": [
+        "Acceptance Test Results"
+      ],
+      "personas": [
+        "Investigator"
+      ],
+      "actions": [
+        "View The Acceptance Test Results"
+      ]
+    },
+    {
+      "identifier": "g18_4",
+      "text": "As an MRI operator, I want to digitally record the responses that subjects make when completing paper-based forms.",
+      "entities": [
+        "Response",
+        "Subject",
+        "Paper , Based Form"
+      ],
+      "personas": [
+        "Mri Operator"
+      ],
+      "actions": [
+        "Record The Responses That Subjects Make When Completing Paper, Based Forms"
+      ]
+    },
+    {
+      "identifier": "g18_5",
+      "text": "As a user, I want to navigate forwards and backwards between log books and log book pages without having to use my browser's back button.",
+      "entities": [
+        "Forward",
+        "Button",
+        "Log Books",
+        "Browser",
+        "Book Pages"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Backwards Navigate Forwards Between",
+        "Log Book Pages Having",
+        "Backwards Navigate Forwards Between Log Books",
+        "Use Browser's Back Button"
+      ]
+    },
+    {
+      "identifier": "g18_6",
+      "text": "As a lab administrator, I want to theme the Web interface graphics/colours.",
+      "entities": [
+        "Web Interface Graphics",
+        "Colour"
+      ],
+      "personas": [
+        "Lab Administrator"
+      ],
+      "actions": [
+        "Theme Colour",
+        "Theme The Web Interface Graphics"
+      ]
+    },
+    {
+      "identifier": "g18_7",
+      "text": "As a systems administrator, I want  to install Neurohub dependencies into an Ubuntu 10.04 LTS machine using the normal Ubuntu package management tools.",
+      "entities": [
+        "Neurohub Dependencies",
+        "Ubuntu Package Management Tools"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Install Neurohub Dependencies Into",
+        "Use The Normal Ubuntu Package Management Tools"
+      ]
+    },
+    {
+      "identifier": "g18_8",
+      "text": "As a researcher, I want to create a log book page for an experiment and attach a file to this page.",
+      "entities": [
+        "Experiment",
+        "File",
+        "Page",
+        "Log Book"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Create A Log Book Page For An Experiment",
+        "Attach A File To This Page"
+      ]
+    },
+    {
+      "identifier": "g18_9",
+      "text": "As a researcher, I want to create a log book page for an experiment and attach a directory that contains multiple files.",
+      "entities": [
+        "Experiment",
+        "Log Book Page",
+        "Multiple File",
+        "Directory"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Create A Log Book Page For An Experiment",
+        "Attach A Directory Contains Multiple Files"
+      ]
+    },
+    {
+      "identifier": "g18_10",
+      "text": "As a researcher, I want to upload files prior to having them attached to a log book page.",
+      "entities": [
+        "File",
+        "Log Book Page"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Upload Files Having Files To A Log Book Page"
+      ]
+    },
+    {
+      "identifier": "g18_11",
+      "text": "As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.",
+      "entities": [
+        "File",
+        "Web Interface"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Upload Files Having Files To",
+        "Use The Web Interface"
+      ]
+    },
+    {
+      "identifier": "g18_12",
+      "text": "As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.",
+      "entities": [
+        "File",
+        "Network Drive"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Upload Files Having Files To",
+        "Use A Mapped Network Drive"
+      ]
+    },
+    {
+      "identifier": "g18_13",
+      "text": "As a researcher, I want to attach currently non-attached files to a log book page.",
+      "entities": [
+        "Attach File",
+        "Log Book Page"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Attach Currently Attached Files To A Log Book Page"
+      ]
+    },
+    {
+      "identifier": "g18_14",
+      "text": "As a researcher, I want to receive an alert of any unattached files that are in my workspace.",
+      "entities": [
+        "Workspace",
+        "Unattached File"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Receive An Alert Of Any Unattached Files Are In Workspace"
+      ]
+    },
+    {
+      "identifier": "g18_15",
+      "text": "As a researcher, I want to download files attached to an experiment using my Web browser.",
+      "entities": [
+        "File",
+        "Web Browser"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Download Files To",
+        "Use Web Browser"
+      ]
+    },
+    {
+      "identifier": "g18_16",
+      "text": "As a researcher, I want to access files stored in my Neurohub workspace, using a network drive attached to my workstation.",
+      "entities": [
+        "Network Drive",
+        "Neurohub Workspace",
+        "Workstation",
+        "File"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Access Files In Neurohub Workspace Using A Network Drive To Workstation"
+      ]
+    },
+    {
+      "identifier": "g18_17",
+      "text": "As a researcher, I want to create a log book page.",
+      "entities": [
+        "Log Book Page"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Create A Log Book Page"
+      ]
+    },
+    {
+      "identifier": "g18_18",
+      "text": "As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
+      "entities": [
+        "Build",
+        "Test",
+        "Result",
+        "Installation",
+        "Manual Input",
+        "Virgin System",
+        "Interaction",
+        "Operating System",
+        "Neurohub"
+      ],
+      "personas": [
+        "Release Engineer"
+      ],
+      "actions": [
+        "Configure Nightly Builds Automatically Perform A Neurohub Installation On A Virgin Operating System",
+        "Report Results",
+        "Configure",
+        "Configure Nightly Builds Automatically Perform A Installation On A Virgin System Requiring Interaction",
+        "Configure Nightly Builds Automatically Perform A Neurohub Installation On A Virgin Operating System Requiring Any Manual Input"
+      ]
+    },
+    {
+      "identifier": "g18_19",
+      "text": "As a supervisor, I want to view what my researchers were doing on a given date or period of time.",
+      "entities": [
+        "Date",
+        "Researcher",
+        "Time"
+      ],
+      "personas": [
+        "Supervisor"
+      ],
+      "actions": [
+        "View"
+      ]
+    },
+    {
+      "identifier": "g18_20",
+      "text": "As a user, I want to upload large files of over 1GB in size.",
+      "entities": [
+        "Gb",
+        "Size"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Upload Large Files Of Over Gb In Size"
+      ]
+    },
+    {
+      "identifier": "g18_21",
+      "text": "As a user, I want to assign tags to files that I have uploaded.",
+      "entities": [
+        "File",
+        "Tag"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Assign Tags To Files",
+        "That Uploaded"
+      ]
+    },
+    {
+      "identifier": "g18_22",
+      "text": "As a user, I want to assign bespoke information to a file dependent on its type.",
+      "entities": [
+        "Type",
+        "Bespoke Information",
+        "Dependent File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Assign Bespoke Information To A Dependent File On Type"
+      ]
+    },
+    {
+      "identifier": "g18_23",
+      "text": "As a user, I want to filter the files I get from search results based on their  type.",
+      "entities": [
+        "Type",
+        "File",
+        "Search Results"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get From Search Results",
+        "Filter The Files On Type"
+      ]
+    },
+    {
+      "identifier": "g18_24",
+      "text": "As a user, I want to use the tags that I use are part of a controlled vocabulary.",
+      "entities": [
+        "Tag",
+        "Control Vocabulary"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Use",
+        "Use The Tags"
+      ]
+    },
+    {
+      "identifier": "g18_25",
+      "text": "As a user, I want to make uploaded data files to be non-modifiable.",
+      "entities": [
+        "Data Files"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Make Uploaded Data Files"
+      ]
+    },
+    {
+      "identifier": "g18_26",
+      "text": "As a user, I want to make predicated links between files.",
+      "entities": [
+        "Predicate Link",
+        "File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Make Predicated Links Between Files"
+      ]
+    },
+    {
+      "identifier": "g18_27",
+      "text": "As a user, I want to restrict what can be entered to a metadata field.",
+      "entities": [
+        "Metadata Field"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Restrict",
+        "Entered To A Metadata Field"
+      ]
+    },
+    {
+      "identifier": "g18_28",
+      "text": "As a user, I want to have files I might accidentally delete to be restorable.",
+      "entities": [
+        "File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have Files",
+        "Delete Restorable"
+      ]
+    },
+    {
+      "identifier": "g18_29",
+      "text": "As a user, I want to revert to an older version of an uploaded file.",
+      "entities": [
+        "Upload File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Revert To An Older Version Of An Uploaded File"
+      ]
+    },
+    {
+      "identifier": "g18_30",
+      "text": "As a user, I want to have a visual way of viewing particular files uploaded over a time period.",
+      "entities": [
+        "Visual Way",
+        "Time Period",
+        "Particular File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have A Visual Way Viewing Particular Files Over A Time Period"
+      ]
+    },
+    {
+      "identifier": "g18_31",
+      "text": "As a user, I want to associate together files involved in a experiment.",
+      "entities": [
+        "Experiment",
+        "File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Associate Files In A Experiment"
+      ]
+    },
+    {
+      "identifier": "g18_32",
+      "text": "As a system administrator, I want to have a managed backup protocol for the system.",
+      "entities": [
+        "System",
+        "Backup Protocol"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Have A Managed Backup Protocol For The System"
+      ]
+    },
+    {
+      "identifier": "g18_33",
+      "text": "As a user, I want to enter metadata / describe an experiment protocol before a file is even created.",
+      "entities": [
+        "Metadata",
+        "Experiment Protocol"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Enter Metadata",
+        "Describe An Experiment Protocol"
+      ]
+    },
+    {
+      "identifier": "g18_34",
+      "text": "As lab administrator, I want to have increased access to the system to support regular users. ",
+      "entities": [
+        "Access",
+        "System",
+        "Regular User"
+      ],
+      "personas": [
+        "Lab Administrator"
+      ],
+      "actions": [
+        "Support Regular Users",
+        "Increased Access To The System"
+      ]
+    },
+    {
+      "identifier": "g18_35",
+      "text": "As a user, I want to link together experimental runs to build an experiment.",
+      "entities": [
+        "Experiment"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Link",
+        "Build An Experiment"
+      ]
+    },
+    {
+      "identifier": "g18_36",
+      "text": "As a lab administrator, I want to create page templates with bespoke metadata fields.",
+      "entities": [
+        "Bespoke Metadata Fields",
+        "Page Templates"
+      ],
+      "personas": [
+        "Lab Administrator"
+      ],
+      "actions": [
+        "Create Page Templates With Bespoke Metadata Fields"
+      ]
+    },
+    {
+      "identifier": "g18_37",
+      "text": "As a user, I want to capture the same metadata for each file created in an experimental run.",
+      "entities": [
+        "Metadata",
+        "Experimental Run",
+        "File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Capture The Same Metadata For Each File In An Experimental Run"
+      ]
+    },
+    {
+      "identifier": "g18_38",
+      "text": "As a lab administrator, I want a way of managing worm strain stocks that is integrated with Wormbase.",
+      "entities": [
+        "Wormbase",
+        "Worm",
+        "Way",
+        "Stock"
+      ],
+      "personas": [
+        "Lab Administrator"
+      ],
+      "actions": [
+        "Provided With A Way Managing Worm"
+      ]
+    },
+    {
+      "identifier": "g18_39",
+      "text": "As a user, I want to search for and download human-readable experimental protocols.",
+      "entities": [
+        "Experimental , Human , Readable Protocol"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search",
+        "Download Experimental, Human, Readable Protocols"
+      ]
+    },
+    {
+      "identifier": "g18_41",
+      "text": "As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+      "entities": [
+        "Time",
+        "Experimental Protocol"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View"
+      ]
+    },
+    {
+      "identifier": "g18_42",
+      "text": "As a user, I want to view how an experimental protocol has evolved over time.",
+      "entities": [
+        "Metadata",
+        "Protocol",
+        "Stag"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Assign Create A Protocol Metadata To Any Stag"
+      ]
+    },
+    {
+      "identifier": "g18_43",
+      "text": "As a user, I want to create a protocol and assign metadata to any stag.",
+      "entities": [
+        "Certain Date",
+        "Page"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Created A Page On A Certain Date",
+        "Prove"
+      ]
+    },
+    {
+      "identifier": "g18_44",
+      "text": "As a user, I want to prove definitively that I created a page on a certain date.",
+      "entities": [
+        "Paper",
+        "Reference"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Manage Paper",
+        "Investigated",
+        "Manage The References"
+      ]
+    },
+    {
+      "identifier": "g18_45",
+      "text": "As a user, I want to manage the references / papers I have investigated.",
+      "entities": [
+        "Book Log Page",
+        "File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search For Rather Files",
+        "Search For Book Log Page"
+      ]
+    },
+    {
+      "identifier": "g18_46",
+      "text": "As a user, I want to search specifically for files rather than log book pages.",
+      "entities": [
+        "Search",
+        "Log Books"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Limit Search To A Particular Set Of Log Books"
+      ]
+    },
+    {
+      "identifier": "g18_47",
+      "text": "As a user, I want to limit my search to a particular set of log books.",
+      "entities": [
+        "Result",
+        "Search Results",
+        "Log Books",
+        "Log Book Sections",
+        "Section"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Limit Results To More",
+        "Limit Search Results To Log Book Sections From Log Books",
+        "Limit Results To Sections From More"
+      ]
+    },
+    {
+      "identifier": "g18_48",
+      "text": "As a user, I want to limit my search results to one or more log book sections from one or more log books.",
+      "entities": [
+        "File",
+        "Search Results Page"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Download Files From The Search Results Page"
+      ]
+    },
+    {
+      "identifier": "g18_49",
+      "text": "As a user, I want to download files directly from the search results page.",
+      "entities": [
+        "Search Results",
+        "Page"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "See The Provenance Of The Page As Part Of The Search Results"
+      ]
+    },
+    {
+      "identifier": "g18_50",
+      "text": "As a user, I want to see the provenance of the page as part of the search results.",
+      "entities": [
+        "Log Book Page",
+        "Multiple File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Attach Multiple Files Once To A Log Book Page"
+      ]
+    },
+    {
+      "identifier": "g18_51",
+      "text": "As a user, I want to attach multiple files at once to a log book page.",
+      "entities": [
+        "Search Results",
+        "Multiple File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Download Multiple Files From The Search Results In Go"
+      ]
+    },
+    {
+      "identifier": "g18_52",
+      "text": "As a user, I want to download multiple files from the search results in one go.",
+      "entities": [
+        "Log Book Page",
+        "Table",
+        "Html Tags"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Draw Tables Using Html Tags As Part Of The Content Of A Log Book Page"
+      ]
+    },
+    {
+      "identifier": "g18_53",
+      "text": "As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
+      "entities": [
+        "Group",
+        "Equipment Booking",
+        "Event"
+      ],
+      "personas": [
+        "Lab Member"
+      ],
+      "actions": [
+        "View Equipment Booking",
+        "View Events Within The Group"
+      ]
+    },
+    {
+      "identifier": "g18_54",
+      "text": "As a lab member, I want to view events and equipment bookings within the group.",
+      "entities": [
+        "Worm Behaviour Videos",
+        "Encoding",
+        "Worm Analysis Software",
+        "Christopher James"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Store Worm Behaviour Videos With An Encoding Analysed The Worm Analysis Software Christopher James"
+      ]
+    },
+    {
+      "identifier": "g18_55",
+      "text": "As a user, I want to store worm behaviour videos with an encoding that can be analysed by the worm analysis software written by Christopher James.",
+      "entities": [
+        "Neurohub",
+        "Current Version",
+        "Datum"
+      ],
+      "personas": [
+        "System Administrator"
+      ],
+      "actions": [
+        "Migrate Data From An Older Version Of Neurohub To The Current Version"
+      ]
+    },
+    {
+      "identifier": "g18_56",
+      "text": "As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
+      "entities": [
+        "News Items",
+        "Mailing List"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Forward Important News Items To An External Mailing List",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_57",
+      "text": "As a user, I want to have the system to also forward important news items to an external mailing list.",
+      "entities": [
+        "Equipment",
+        "Inventory",
+        "Centre",
+        "Consumable"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View An Inventory Of Consumable",
+        "View An Inventory Of The Equipment Are Present In The Centre",
+        "Update An Inventory Of The Equipment Are Present In The Centre",
+        "Update An Inventory Of Consumable"
+      ]
+    },
+    {
+      "identifier": "g18_58",
+      "text": "As a user, I want to view and update an inventory of of the equipment and consumables that are present in the centre.",
+      "entities": [
+        "Spreadsheet",
+        "Neurohub Web Page"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have A Spreadsheet Within The Neurohub Web Page"
+      ]
+    },
+    {
+      "identifier": "g18_59",
+      "text": "As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
+      "entities": [
+        "Neurohub",
+        "Student",
+        "Feedback",
+        "Form",
+        "Course"
+      ],
+      "personas": [
+        "Supervisor"
+      ],
+      "actions": [
+        "Create Feedback Forms Within Neurohub",
+        "Forms Provide With Feedback About The Course That Attended"
+      ]
+    },
+    {
+      "identifier": "g18_60",
+      "text": "As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
+      "entities": [
+        "Neurohub",
+        "Twitter Feed",
+        "Time",
+        "Post Content"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Push Posted Content To Twitter Feed At The Same Time",
+        "Tell Neurohub",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_61",
+      "text": "As a user, I want to have the option to tell Neurohub to push posted content to my Twitter feed at the same time.",
+      "entities": [
+        "Group",
+        "Individual",
+        "Logbook Entry"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Keep A Private Logbook Entry",
+        "Share A Private Logbook Entry With Individuals Rather Than Groups"
+      ]
+    },
+    {
+      "identifier": "g18_62",
+      "text": "As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
+      "entities": [
+        "Workflow Execution",
+        "Neurohub Log Book",
+        "Workflow"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have",
+        "Recorded In A Neurohub Log Book Executing A Workflow"
+      ]
+    },
+    {
+      "identifier": "g18_63",
+      "text": "As a user, I want to have the details of the workflow execution to be recorded in a neurohub log book while executing a workflow.",
+      "entities": [
+        "Neurohub"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Twitter Have",
+        "Appear In Neurohub"
+      ]
+    },
+    {
+      "identifier": "g18_64",
+      "text": "As a user, I want to have that my Twitter Tweets to appear in Neurohub, so that other researchers in the centre can see what I am up to.",
+      "entities": [
+        "Group",
+        "Neurohub Nodes",
+        "Mobile Device",
+        "Share Calendar",
+        "Web Page"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View The Group Shared Calendars On Mobile Device",
+        "View The Group's Shared Calendars As Well Via The Neurohub Nodes' Web Page"
+      ]
+    },
+    {
+      "identifier": "g18_65",
+      "text": "As a user, I want to view the group's shared calendars via the Neurohub Nodes' Web page as well as on my mobile device.",
+      "entities": [
+        "Neurohub",
+        "Google Calendar",
+        "Event",
+        "Web , Based Calendar"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Sync Events In Neurohub With A Web, Based Calendar Such As Google Calendar"
+      ]
+    },
+    {
+      "identifier": "g18_66",
+      "text": "As a user, I want to sync events created in NeuroHub with a web-based Calendar such as Google Calendar.",
+      "entities": [
+        "Logbook Entries",
+        "Greek Symbol"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have",
+        "Insert Greek Symbols Into Logbook Entries"
+      ]
+    },
+    {
+      "identifier": "g18_67",
+      "text": "As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
+      "entities": [
+        "Multiple File",
+        "Neurohub File Browser"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Move Multiple Files",
+        "Have",
+        "Rearrange",
+        "Use The Neurohub File Browser"
+      ]
+    },
+    {
+      "identifier": "g18_68",
+      "text": "As a user, I want to have the ability to move multiple files around and rearrange them using the Neurohub file browser while processing data.",
+      "entities": [
+        "Research Papers",
+        "Notification",
+        "Mendeley"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Point Mendeley Client At A Shared, Group, Wide Repository Of Research Papers",
+        "Get Notifications Via Mendeley"
+      ]
+    },
+    {
+      "identifier": "g18_69",
+      "text": "As a researcher, I want to point my Mendeley client at a group-wide shared repository of research papers and get notifications via Mendeley when new content is added.",
+      "entities": [
+        "Track",
+        "Electronic Support",
+        "Particular Experiment",
+        "Output",
+        "Data Sets"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have Electronic Support Keeping Track Output",
+        "Have Electronic Support Keeping Track",
+        "Have Electronic Support Keeping Track Which Data Sets Used",
+        "Modify As Part Of A Particular Experiment"
+      ]
+    },
+    {
+      "identifier": "g18_70",
+      "text": "As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
+      "entities": [
+        "Note",
+        "Mechanism",
+        "Paper",
+        "Researcher"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Provided With A Mechanism Electronically Sharing Papers",
+        "Provided With A Mechanism Note With Other Researchers"
+      ]
+    },
+    {
+      "identifier": "g18_71",
+      "text": "As a user, I want a mechanism for electronically sharing papers and notes with other researchers, so that we can collaborate effectively.",
+      "entities": [
+        "Service",
+        "Datum",
+        "Term Curation"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Support The Long Term Curation Of Data",
+        "Have Services"
+      ]
+    },
+    {
+      "identifier": "g18_72",
+      "text": "As a researcher, I want to have services to support the long term curation of data, so that I can be sure that data will not get 'lost' with the passage of time.",
+      "entities": [
+        "Associated Image",
+        "Display",
+        "Data Files",
+        "Timeline"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have A Display Of Associated Image",
+        "Have A Timeline Display Of Multiple Data Files"
+      ]
+    },
+    {
+      "identifier": "g18_73",
+      "text": "As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.",
+      "entities": [
+        "Remote Access",
+        "Working",
+        "Datum",
+        "Site"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have Remote Access To Data For Site Off Working"
+      ]
+    },
+    {
+      "identifier": "g18_74",
+      "text": "As a researcher, I want to have remote access to my data for off-site working , so that I can still work effectively while away from the lab.",
+      "entities": [
+        "Researcher",
+        "Write Ups"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Share Experiment Write Ups With Other Researchers"
+      ]
+    },
+    {
+      "identifier": "g18_75",
+      "text": "As a researcher, I want to share post-experiment write-ups with other researchers, so that others can more easily replicate my work.",
+      "entities": [
+        "Experiment",
+        "Datum",
+        "Later Stage",
+        "Library",
+        "Multiple"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Collect Data As A Library Of Data Then Used Experiments Defined At A Later Stage",
+        "Collect Data As A Library Of Data Then Used Multiple"
+      ]
+    },
+    {
+      "identifier": "g18_76",
+      "text": "As a researcher, I want to collect data as a library of data, which can then be used by one or multiple experiments that are defined at a later stage.",
+      "entities": [
+        "Experimental Datum",
+        "Electronic Book",
+        "System",
+        "Bad Datum",
+        "Log Book"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Indicate Within Electronic Book Which Experimental Data",
+        "Hide The Bad Data",
+        "The Bad Data Keep In The System",
+        "Bad Indicate Within Electronic Book Which Experimental Data",
+        "Indicate Within Electronic Log Book Which Experimental Data"
+      ]
+    },
+    {
+      "identifier": "g18_77",
+      "text": "As a researcher, I want to indicate within my electronic log book which experimental data is good/bad, hide the bad data, but still keep it in the system just in case it is useful in the future.",
+      "entities": [
+        "Standard Metadata",
+        "System",
+        "Researcher",
+        "Centre"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have The System",
+        "Provide Standard Metadata"
+      ]
+    },
+    {
+      "identifier": "g18_78",
+      "text": "As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
+      "entities": [
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Annotated With Standard Meta Data",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_79",
+      "text": "As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
+      "entities": [
+        "Standard Datum",
+        "Video",
+        "Behavioural Observation",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Attach Standard Data For Video",
+        "Attach Standard Meta Data For Behavioural Observations",
+        "Have",
+        "Attach Standard Data For"
+      ]
+    },
+    {
+      "identifier": "g18_80",
+      "text": "As a researcher, I want to have the ability to attach standard meta data for behavioural observations (and video), so that my data can later be searched for and understood.",
+      "entities": [
+        "Drug Responses",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Attach Standard Meta Data For Drug Responses",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_81",
+      "text": "As a researcher,  I want to have the ability to attach standard meta data for drug responses, so that my data can later be searched for and understood.",
+      "entities": [
+        "Ability",
+        "Cell",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Use Standard Meta Data",
+        "Have The To Ability For"
+      ]
+    },
+    {
+      "identifier": "g18_82",
+      "text": "As a researcher, I want to have the ability to search for images of cells using standard meta data.",
+      "entities": [
+        "Meta Data",
+        "New Datum",
+        "System"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "New Data Added To The System",
+        "Have Least At Meta Data To Automatically Inserted"
+      ]
+    },
+    {
+      "identifier": "g18_83",
+      "text": "As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
+      "entities": [
+        "Entry",
+        "Detailed Datum",
+        "Datum",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Attach Detailed Data To",
+        "Attach Detailed Data To Entry",
+        "Attach Detailed Meta Data To The Data",
+        "Have",
+        "That Create"
+      ]
+    },
+    {
+      "identifier": "g18_84",
+      "text": "As a researcher,  I want to have the ability to attach detailed meta data to the data and entries that I create.",
+      "entities": [
+        "System",
+        "Populated Template",
+        "New Datum"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Select A Partially Populated Template",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_86",
+      "text": "As a user, I want to be sure that existing metadata corresponding to the file is not lost when moving a file to a new location.",
+      "entities": [
+        "Link",
+        "Object"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Form Links Between Objects",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_87",
+      "text": "As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
+      "entities": [
+        "File",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Locate",
+        "Use Meta Data",
+        "Have Those Files Where Located"
+      ]
+    },
+    {
+      "identifier": "g18_88",
+      "text": "As a researcher, I want to have the ability to locate experiment files using meta data, regardless of where those files are located.",
+      "entities": [
+        "Datum",
+        "Vre",
+        "Deletion",
+        "Modification"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have Any Data",
+        "Protected From Modification",
+        "That Written To The Vre",
+        "Protected From Deletion"
+      ]
+    },
+    {
+      "identifier": "g18_89",
+      "text": "As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+      "entities": [
+        "Datum",
+        "System",
+        "Share"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have",
+        "Keep Data On The System",
+        "Have Only Share Datum",
+        "That Deem"
+      ]
+    },
+    {
+      "identifier": "g18_90",
+      "text": "As a user,  I want to have the ability to keep my data private on the system, and only share data that I deem should be shared.",
+      "entities": [
+        "Experiment",
+        "Input"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Store The Inputs For An Experiment",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_91",
+      "text": "As a researcher,  I want to have the ability to store all the inputs for an experiment so that the provenance of the results can be verified.",
+      "entities": [
+        "Format",
+        "Ability",
+        "File"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have The To Ability For Files By",
+        "Have The To Ability For Files By Format"
+      ]
+    },
+    {
+      "identifier": "g18_92",
+      "text": "As a researcher, I want to have the ability to search for files by file type and format.",
+      "entities": [
+        "Ability",
+        "File",
+        "Minimal Effort",
+        "Upload Directories"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have The Ability To Bulk Upload Directories",
+        "Have The Ability To File With Minimal Effort"
+      ]
+    },
+    {
+      "identifier": "g18_93",
+      "text": "As a researcher,  I want to have the ability to bulk upload directories and files with minimal effort.",
+      "entities": [
+        "Time",
+        "Group",
+        "Point",
+        "Meta Data"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Associate Meta Data To The Group As A Whole At Some Point In Time"
+      ]
+    },
+    {
+      "identifier": "g18_94",
+      "text": "As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
+      "entities": [
+        "Ownership",
+        "Multiple File"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Change The Sharing Of Multiple Files",
+        "Have",
+        "Change Ownership",
+        "Change"
+      ]
+    },
+    {
+      "identifier": "g18_95",
+      "text": "As a user,  I want to have the ability to change the sharing and ownership of multiple files.",
+      "entities": [
+        "Certain Researcher",
+        "Datum",
+        "Researcher"
+      ],
+      "personas": [
+        "-pron-",
+        "Researcher"
+      ],
+      "actions": [
+        "Restrict The Data",
+        "Have",
+        "Share To Group Of Researchers",
+        "Share To",
+        "Share To Certain Researchers"
+      ]
+    },
+    {
+      "identifier": "g18_96",
+      "text": "As a researcher,  I want to have the ability to restrict the data I share to certain researchers or groups of researchers.",
+      "entities": [
+        "Colleague",
+        "Datum"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Locate Data Colleagues",
+        "That Share",
+        "Have",
+        "Access Data Colleagues Want"
+      ]
+    },
+    {
+      "identifier": "g18_97",
+      "text": "As a researcher,  I want to have the ability to locate and access data that colleagues want to share.",
+      "entities": [
+        "Revision Control System",
+        "Ability"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have The To Ability With A Revision Control System"
+      ]
+    },
+    {
+      "identifier": "g18_98",
+      "text": "As a researcher,  I want to have the ability to interact with a revision control system so that I can keep track of changes to files over time.",
+      "entities": [
+        "Knowledge",
+        "Group"
+      ],
+      "personas": [
+        "Juniorresearcher"
+      ],
+      "actions": [
+        "Harvest Knowledge Within The Group",
+        "Have"
+      ]
+    },
+    {
+      "identifier": "g18_99",
+      "text": "As a JuniorResearcher,  I want to have the ability to harvest knowledge from within the group, so that I can learn from more experienced researchers.",
+      "entities": [
+        "Laboratory",
+        "Neurohub Node",
+        "Remote Access"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Secure Remote Access To The Neurohub Node When Away Working From The Laboratory"
+      ]
+    },
+    {
+      "identifier": "g18_100",
+      "text": "As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory",
+      "entities": [
+        "Review",
+        "Repository",
+        "Paper",
+        "Comment",
+        "Researcher",
+        "Group Level"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have A Repository Comment With Other Researchers",
+        "Have A Group Level Repository Sharing Papers",
+        "Have A Repository Review"
+      ]
+    },
+    {
+      "identifier": "g18_101",
+      "text": "As a researcher, I want to have a group-level repository for sharing papers/reviews/comments with other researchers.",
+      "entities": [
+        "Workflow Plan",
+        "Result",
+        "Neurohub",
+        "Workflow",
+        "Execution History"
+      ],
+      "personas": [
+        "Researcher"
+      ],
+      "actions": [
+        "Have Result In Neurohub Executing A Workflow",
+        "Have The As Well Details Of The Workflow Plan",
+        "Have The Execution History"
+      ]
+    }
+  ]
+}

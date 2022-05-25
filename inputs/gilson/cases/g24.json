@@ -1,0 +1,762 @@
+{
+  "case": "g24",
+  "stories": [
+    {
+      "identifier": "g24_0",
+      "text": "As a depositor, I want to deposit and maintain datasets through a simple web interface, so that I don't need to install and learn new software to deposit.",
+      "entities": [
+        "Dataset",
+        "Web Interface"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit Datasets Through A Simple Web Interface",
+        "Maintain Datasets Through A Simple Web Interface"
+      ]
+    },
+    {
+      "identifier": "g24_1",
+      "text": "As a depositor, I want to have a user interface that is familiar to me, so that I feel like all the University systems are joined up.",
+      "entities": [
+        "User Interface"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Have A User Interface Is Familiar To"
+      ]
+    },
+    {
+      "identifier": "g24_2",
+      "text": "As a depositor, I want to deposit and maintain datasets through Pure, so that I have a single onestop shop for managing my research outputs.",
+      "entities": [
+        "Pure",
+        "Dataset"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit Datasets Through Pure",
+        "Maintain Datasets Through Pure"
+      ]
+    },
+    {
+      "identifier": "g24_3",
+      "text": "As a depositor, I want to deposit and maintain datasets through Virtual Research Environments and other workflow tools, so that I can continue to work with tools with which I'm familiar.",
+      "entities": [
+        "Dataset",
+        "Workflow , Tool",
+        "Research Environments"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit Datasets Through Workflow, Other Tool",
+        "Deposit Datasets Through Virtual Research Environments",
+        "Maintain Datasets Through Virtual Research Environments",
+        "Maintain Datasets Through Workflow, Other Tool"
+      ]
+    },
+    {
+      "identifier": "g24_4",
+      "text": "As a depositor, I want to deposit the files that I have, so that I don't have to spend a lot of time finding the right version and converting to the right format.",
+      "entities": [
+        "File"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit The Files"
+      ]
+    },
+    {
+      "identifier": "g24_5",
+      "text": "As a depositor, I want to place data under an embargo, so that my right of first use is protected, and I can fulfil my confidentiality responsibilities.",
+      "entities": [
+        "Datum",
+        "Embargo"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Place Data Under An Embargo"
+      ]
+    },
+    {
+      "identifier": "g24_6",
+      "text": "As a depositor, I want to apply licenses to datasets, so that my IP rights are protected appropriately.",
+      "entities": [
+        "License"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Apply Licenses"
+      ]
+    },
+    {
+      "identifier": "g24_7",
+      "text": "As a depositor, I want to allow my collaborators privileged access to datasets, so that we continue to have a productive relationship.",
+      "entities": [
+        "Dataset",
+        "Collaborator",
+        "Access"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Allow"
+      ]
+    },
+    {
+      "identifier": "g24_8",
+      "text": "As a depositor, I want to deposit arbitrarily large files, so that I am not limited in what files I can and cannot deposit.",
+      "entities": [
+        "Large File"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit Arbitrarily Large Files"
+      ]
+    },
+    {
+      "identifier": "g24_9",
+      "text": "As a depositor, I want to link datasets to publications in Opus, so that both my data and publications are more easily discovered.",
+      "entities": [
+        "Opus",
+        "Dataset",
+        "Publication"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Link Datasets To Publications In Opus"
+      ]
+    },
+    {
+      "identifier": "g24_10",
+      "text": "As a depositor, I want to mint DOIs for my data, so that it can be discovered and cited more easily and citations can be tracked so that I can receive credit.",
+      "entities": [
+        "Doi",
+        "Datum"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Mint Dois For Data"
+      ]
+    },
+    {
+      "identifier": "g24_11",
+      "text": "As a depositor, I want to have metadata automatically filled from other University systems and remembered from previous deposits, so that I don't have to waste time reentering the same information.",
+      "entities": [
+        "Previous Deposit",
+        "Metadata",
+        "University Systems"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Remembered Have Automatically Metadata From Other University Systems From Previous Deposits"
+      ]
+    },
+    {
+      "identifier": "g24_12",
+      "text": "As a depositor, I want to link to data stored in external repositories, so that I can store my data in an appropriate repository but still register it with the University and I don't have to deposit my data in multiple places.",
+      "entities": [
+        "Datum",
+        "External Repository"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Link To Data In External Repositories"
+      ]
+    },
+    {
+      "identifier": "g24_13",
+      "text": "As a depositor, I want to specify a disposal policy for my data, so that I do not accidentally breach laws or collaboration agreements.",
+      "entities": [
+        "Disposal Policy",
+        "Datum"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Specify A Disposal Policy For Data"
+      ]
+    },
+    {
+      "identifier": "g24_14",
+      "text": "As a depositor, I want to track downloads of my data, so that I can demonstrate the impact of my work.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Track Downloads Of Data"
+      ]
+    },
+    {
+      "identifier": "g24_15",
+      "text": "As a depositor, I want to track citations of my data, so that I can demonstrate the impact of my work",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Track Citations Of Data"
+      ]
+    },
+    {
+      "identifier": "g24_16",
+      "text": "As a depositor, I want to have guarantees about data integrity, so that I can use my data in the future and I can fulfil funder requirements for archival.",
+      "entities": [
+        "Guarantee",
+        "Data Integrity"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Have Guarantees About Data Integrity"
+      ]
+    },
+    {
+      "identifier": "g24_17",
+      "text": "As a depositor, I want to attach subject specific discoverability metadata to records, so that researchers in my discipline can find my data more easily.",
+      "entities": [
+        "Discoverability Metadata"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Attach Specific, Subject Discoverability Metadata"
+      ]
+    },
+    {
+      "identifier": "g24_18",
+      "text": "As a depositor, I want to link datasets with the project DMP, so that compliance with DMP can be demonstrated and whole project workflow is linked together.",
+      "entities": [
+        "Dataset",
+        "Project Dmp"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Link Datasets With The Project Dmp"
+      ]
+    },
+    {
+      "identifier": "g24_19",
+      "text": "As a depositor, I want to manage and share live research data, so that whole project workflow is linked together.",
+      "entities": [
+        "Research Data"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Manage Live Research Data",
+        "Share Live Research Data"
+      ]
+    },
+    {
+      "identifier": "g24_20",
+      "text": "As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
+      "entities": [
+        "Dataset"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Manage Multiple Versions Of The Same Dataset"
+      ]
+    },
+    {
+      "identifier": "g24_21",
+      "text": "As a depositor, I want to allow others to deposit on my behalf, so that I can delegate research data management tasks appropriately.",
+      "entities": [
+        "Behalf"
+      ],
+      "personas": [
+        "Depositor"
+      ],
+      "actions": [
+        "Deposit On Behalf",
+        "Allow"
+      ]
+    },
+    {
+      "identifier": "g24_22",
+      "text": "As a data reuser, I want to search the archive through the web, so that I can easily find data relevant to my needs.",
+      "entities": [
+        "Archive",
+        "Web"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "Search The Archive Through The Web"
+      ]
+    },
+    {
+      "identifier": "g24_23",
+      "text": "As a data reuser, I want to access the system in my native language, so that I am not put off reusing University of Bath data by language barriers.",
+      "entities": [
+        "Native Language",
+        "System"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "Access The System In Native Language"
+      ]
+    },
+    {
+      "identifier": "g24_24",
+      "text": "As a data reuser, I want to examine and identify deposited files, so that I can make a preliminary assessment of usefulness without downloading the whole dataset.",
+      "entities": [
+        "Deposited File"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "Examine Deposited Files",
+        "Identify Deposited Files"
+      ]
+    },
+    {
+      "identifier": "g24_25",
+      "text": "As a data reuser, I want to view an example citation for a dataset, so that I can reference it correctly.",
+      "entities": [
+        "Example Citation",
+        "Dataset"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "View An Example Citation For A Dataset"
+      ]
+    },
+    {
+      "identifier": "g24_26",
+      "text": "As a data reuser, I want to view a DOI for a dataset, so that I can get back to the data in future and I can import the dataset into my referencemanagement software automatically.",
+      "entities": [
+        "Doi",
+        "Dataset"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "View A Doi For A Dataset"
+      ]
+    },
+    {
+      "identifier": "g24_27",
+      "text": "As a data reuser, I want to get a persistent URL for a dataset, so that I can get back to the data in future.",
+      "entities": [
+        "Persistent Url",
+        "Dataset"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "Get A Persistent Url For A Dataset"
+      ]
+    },
+    {
+      "identifier": "g24_28",
+      "text": "As a data reuser, I want to search the archive through Primo , so that I can search books, articles and data all in one place.",
+      "entities": [
+        "Archive",
+        "Primo"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "Search The Archive Through Primo"
+      ]
+    },
+    {
+      "identifier": "g24_29",
+      "text": "As a data reuser, I want to see different versions of a dataset at a glance, so that I can be sure I'm using the right version of the dataset.",
+      "entities": [
+        "Glance",
+        "Dataset"
+      ],
+      "personas": [
+        "Datum Reuser"
+      ],
+      "actions": [
+        "See Different Versions Of A Dataset At A Glance"
+      ]
+    },
+    {
+      "identifier": "g24_30",
+      "text": "As an externalcollaborator, I want to gain privileged access to data for projects in which I am involved, so that I can collaborate effectively.",
+      "entities": [
+        "Project",
+        "Datum",
+        "Privileged Access"
+      ],
+      "personas": [
+        "Externalcollaborator"
+      ],
+      "actions": [
+        "Gain Privileged Access To Data For Projects In Which Involved"
+      ]
+    },
+    {
+      "identifier": "g24_31",
+      "text": "As an externalcoordinator, I want to have guarantees that my IP rights will not be breached, so that the risk of collaborating with Bath is acceptable to me.",
+      "entities": [
+        "Guarantee",
+        "Ip Rights"
+      ],
+      "personas": [
+        "Externalcoordinator"
+      ],
+      "actions": [
+        "Have Guarantees Ip Rights Not"
+      ]
+    },
+    {
+      "identifier": "g24_32",
+      "text": "AS an externalcoordinator, I want to access data from Bath collaborators off campus, so that I can collaborate effectively.",
+      "entities": [
+        "Campus",
+        "Datum",
+        "Bath Collaborators"
+      ],
+      "personas": [
+        "Externalcoordinator"
+      ],
+      "actions": [
+        "Access Data From Bath Collaborators Off Campus"
+      ]
+    },
+    {
+      "identifier": "g24_33",
+      "text": "As a research facility manager, I want to deposit data from my facility directly into the archive on behalf of researchers, so that I am no longer required to maintain my own archive of facility data and researchers can access their own data as needed. ",
+      "entities": [
+        "Datum",
+        "Archive",
+        "Researcher",
+        "Facility"
+      ],
+      "personas": [
+        "Research , Facility Manager"
+      ],
+      "actions": [
+        "Deposit Data From Facility Directly Into The Archive On Behalf Of Researchers"
+      ]
+    },
+    {
+      "identifier": "g24_34",
+      "text": "As a Bath Data Archive administrator, I want to make some checks on deposited datasets before they are made public, so that consistent quality of metadata is maintained, compliance with policies can be checked and details of licensing can be checked.",
+      "entities": [
+        "Check",
+        "Deposited Dataset"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Make Some Checks On Deposited Datasets"
+      ]
+    },
+    {
+      "identifier": "g24_35",
+      "text": "As a Bath Data Archive administrator, I want to require a minimum set of metadata, so that consistent quality of metadata is maintained.",
+      "entities": [
+        "Metadata"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Require A Minimum Set Of Metadata"
+      ]
+    },
+    {
+      "identifier": "g24_36",
+      "text": "As a Bath Data Archive administrator, I want to approve scheduled disposal of data, so that data which is still required is not destroyed.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Approve Scheduled Disposal Of Data"
+      ]
+    },
+    {
+      "identifier": "g24_37",
+      "text": "As a Bath Data Archive administrator, I want to query the entire archive , so that I can report on particular aspects of the archive holdings.",
+      "entities": [
+        "Entire Archive"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Query The Entire Archive"
+      ]
+    },
+    {
+      "identifier": "g24_38",
+      "text": "As a Bath Data Archive administrator, I want to import Bath data from an external data centre wholesale, so that Bath data holdings in external archives are not lost if they close down.",
+      "entities": [
+        "Bath Data",
+        "Data Centre Wholesale"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Import Bath Data From An External Data Centre Wholesale"
+      ]
+    },
+    {
+      "identifier": "g24_39",
+      "text": "As a Bath Data Archive administrator, I want to encourage and promote the use of open standards for deposit, so that data is as reusable as possible.",
+      "entities": [
+        "Deposit",
+        "Open Standard"
+      ],
+      "personas": [
+        "Archive , Data , Bath Administrator"
+      ],
+      "actions": [
+        "Encourage The Use Of Open Standards For Deposit",
+        "Promote The Use Of Open Standards For Deposit"
+      ]
+    },
+    {
+      "identifier": "g24_40",
+      "text": "As a Research Information manager, I want to integrate the archive with CRIS, so that I can analyse impact of research data publication I can link funding to all of the outputs it produces.",
+      "entities": [
+        "Cris",
+        "Archive"
+      ],
+      "personas": [
+        "Research , Information Manager"
+      ],
+      "actions": [
+        "Integrate The Archive With Cris"
+      ]
+    },
+    {
+      "identifier": "g24_41",
+      "text": "As a Research Information manager, I want to include records for externally held data complete, so that the university's record of data holdings is complete.",
+      "entities": [
+        "Record",
+        "Data Complete"
+      ],
+      "personas": [
+        "Research , Information Manager"
+      ],
+      "actions": [
+        "Include Records For Externally Held Data Complete"
+      ]
+    },
+    {
+      "identifier": "g24_42",
+      "text": "As a Research Information manager, I want to track citation counts for published datasets, so that impact of datasets within academia can be demonstrated.",
+      "entities": [
+        "Publish Dataset",
+        "Citation Counts"
+      ],
+      "personas": [
+        "Research , Information Manager"
+      ],
+      "actions": [
+        "Track Citation Counts For Published Datasets"
+      ]
+    },
+    {
+      "identifier": "g24_43",
+      "text": "As a Research Information manager, I want to segment the view and download statistics by country and sector so that impact of datasets outside academia can be demonstrated.",
+      "entities": [
+        "Sector",
+        "View",
+        "Download Statistic",
+        "Country"
+      ],
+      "personas": [
+        "Research , Information Manager"
+      ],
+      "actions": [
+        "Segment Download Statistic",
+        "Segment The View By Sector",
+        "Segment The View By Country"
+      ]
+    },
+    {
+      "identifier": "g24_44",
+      "text": "As a Research Information manager, I want to have datasets linked to metadata about projects, so that I can report on projects depositing datasets in relation to funder requirements.",
+      "entities": [
+        "Project",
+        "Metadata",
+        "Dataset"
+      ],
+      "personas": [
+        "Research , Information Manager"
+      ],
+      "actions": [
+        "Have Datasets To Metadata About Projects"
+      ]
+    },
+    {
+      "identifier": "g24_45",
+      "text": "As an UnivITservice, I want to store archived data on existing storage systems, so that university data storage is consistent and maintainable and future availability of data can be guaranteed.",
+      "entities": [
+        "Archive Datum",
+        "Storage Systems"
+      ],
+      "personas": [
+        "Univitservice"
+      ],
+      "actions": [
+        "Store Archived Data On Existing Storage Systems"
+      ]
+    },
+    {
+      "identifier": "g24_46",
+      "text": "As an UnivITservice, I want to integrate the archive with existing university systems such as LDAP, so that the cost of administering the system can be kept low.",
+      "entities": [
+        "Archive",
+        "Ldap",
+        "University Systems"
+      ],
+      "personas": [
+        "Univitservice"
+      ],
+      "actions": [
+        "Integrate The Archive With Existing University Systems Such As Ldap"
+      ]
+    },
+    {
+      "identifier": "g24_47",
+      "text": "As an UnivITservice, I want to store archived data directly on the HCP object store, so that  features can be made.",
+      "entities": [
+        "Archive Datum"
+      ],
+      "personas": [
+        "Univitservice"
+      ],
+      "actions": [
+        "Store Archived Data On The Hcp Object Store"
+      ]
+    },
+    {
+      "identifier": "g24_48",
+      "text": "As an UnivITservice, I want to be able to export all data to a different system, so that I am not tied into one system which may not be the most appropriate at some point in the future.",
+      "entities": [
+        "Different System",
+        "Datum"
+      ],
+      "personas": [
+        "Univitservice"
+      ],
+      "actions": [
+        "Export All Data To A Different System"
+      ]
+    },
+    {
+      "identifier": "g24_49",
+      "text": "As a developer, I want to deposit and maintain datasets via an API such as SWORD2, so that my service can interact with the archive. ",
+      "entities": [
+        "Api",
+        "Dataset"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Deposit Datasets Via An Such Api",
+        "Maintain Datasets Via An Such Api"
+      ]
+    },
+    {
+      "identifier": "g24_50",
+      "text": "As an academicpublisher, I want to make persistent web links between my articles and underlying datasets, so that my journals can be seen to be filled with robust, high quality research. ",
+      "entities": [
+        "Article",
+        "Persistent Link",
+        "Underlie Dataset",
+        "Web Links"
+      ],
+      "personas": [
+        "Academicpublisher"
+      ],
+      "actions": [
+        "Make Persistent Web Links Between Articles",
+        "Make Persistent Links Between Underlying Dataset"
+      ]
+    },
+    {
+      "identifier": "g24_51",
+      "text": "As a fundingbody, I want to be reassured that researchers I fund have robust archival plans for their data, so that I can be sure that funding them is a worthwhile investment.",
+      "entities": [
+        "Researcher",
+        "Datum",
+        "Archival Plans"
+      ],
+      "personas": [
+        "Fundingbody"
+      ],
+      "actions": [
+        "Reassured",
+        "Fund"
+      ]
+    },
+    {
+      "identifier": "g24_52",
+      "text": "As a fundingbody, I want to harvest metadata on outputs from research I fund, so that I can analyse effectiveness of funding strategy and I can encourage cross fertilisation of research outputs.",
+      "entities": [
+        "Output",
+        "Metadata",
+        "Research"
+      ],
+      "personas": [
+        "Fundingbody"
+      ],
+      "actions": [
+        "Harvest Metadata On Outputs From Research"
+      ]
+    }
+  ]
+}

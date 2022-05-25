@@ -1,5 +1,6 @@
-file = open("C:\\Users\\sathu\\nlp-stories\\sample_inputs\\dataset\\g03-loudoun.txt")
+file = open("C:\\Users\\sathu\\nlp-stories\\inputs\\dataset\\g05-openspending.txt")
 lines = file.readlines()
+print("start")
 for i in range(len(lines)):
     check = lines[0]
     del lines[0]

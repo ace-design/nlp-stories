@@ -1,0 +1,901 @@
+{
+  "case": "g28",
+  "stories": [
+    {
+      "identifier": "g28_0",
+      "text": "As a user, I want to search and discover music using content identification or fingerprinting.",
+      "entities": [
+        "Fingerprinting",
+        "Content Identification"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Use Content Identification",
+        "Use Fingerprinting",
+        "Search",
+        "Use",
+        "Discover"
+      ]
+    },
+    {
+      "identifier": "g28_1",
+      "text": "As a user, I want to search and discover music based on my profile.",
+      "entities": [
+        "Profile",
+        "Music"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search Music On Profile",
+        "Discover Music On Profile"
+      ]
+    },
+    {
+      "identifier": "g28_2",
+      "text": "As a user, I want to search and discover music based on other users similar to myself.",
+      "entities": [
+        "Music",
+        "Similar , User"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search Music On Similar, Other Users To",
+        "Discover Music On Similar, Other Users To"
+      ]
+    },
+    {
+      "identifier": "g28_3",
+      "text": "As a user, I want to search and discover music or ringback tones similar to a given music video based on content similarity.",
+      "entities": [
+        "Music",
+        "Content Similarity",
+        "Ringback Tone",
+        "Similar Music"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search Similar Ringback Tone To A Given Music Video On Content Similarity",
+        "Search Music",
+        "Discover Similar Music To",
+        "Discover Ringback Tone"
+      ]
+    },
+    {
+      "identifier": "g28_4",
+      "text": "As a user, I want to search and discover music by exploiting enriched metadata and image tags, so that I find related artists, new genre, or other relevant listening path.",
+      "entities": [
+        "Image Tag",
+        "Music",
+        "Enrich Metadata"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search Music Exploiting Image Tag",
+        "Search Music Exploiting Enriched Metadata",
+        "Discover Music Exploiting Image Tag",
+        "Discover Music Exploiting Enriched Metadata"
+      ]
+    },
+    {
+      "identifier": "g28_5",
+      "text": "As a user, I want to upload tagged videos and have tags available for all further processing steps.",
+      "entities": [
+        "Available Tag",
+        "Tag Video",
+        "Processing Steps"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Have Available Tags For All Further Processing Steps",
+        "Upload Tagged Videos"
+      ]
+    },
+    {
+      "identifier": "g28_6",
+      "text": "As a user, I want to view thumbnail sequences of video segments.",
+      "entities": [
+        "Thumbnail Sequences",
+        "Video Segments"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "View Thumbnail Sequences Of Video Segments"
+      ]
+    },
+    {
+      "identifier": "g28_7",
+      "text": "As a user, I want to get info about similar video items and segments.",
+      "entities": [
+        "Info",
+        "Segment",
+        "Video Items"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get Info About Similar Video Items",
+        "Get Info About Segment"
+      ]
+    },
+    {
+      "identifier": "g28_8",
+      "text": "As a user, I want to get info about perceptually similar video items and segments.",
+      "entities": [
+        "Info",
+        "Segment",
+        "Video Items"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Get Info About Segment",
+        "Get Info About Perceptually Similar Video Items"
+      ]
+    },
+    {
+      "identifier": "g28_9",
+      "text": "As a user, I want to receive content recommendations from similar profiles.",
+      "entities": [
+        "Similar Profile",
+        "Content Recommendations"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Receive Content Recommendations From Similar Profiles"
+      ]
+    },
+    {
+      "identifier": "g28_10",
+      "text": "As a user, I want to receive content recommendations based on most relevant news events in my area.",
+      "entities": [
+        "Area",
+        "Content Recommendations",
+        "News Events"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Receive Content Recommendations On Most Relevant News Events In Area"
+      ]
+    },
+    {
+      "identifier": "g28_11",
+      "text": "As a user, I want to identify persons in videos, and receive related information about them.",
+      "entities": [
+        "Person",
+        "Video",
+        "Related Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Identify Persons In Videos",
+        "Receive Related Information About Persons In Videos"
+      ]
+    },
+    {
+      "identifier": "g28_12",
+      "text": "As a user, I want to identify products in videos, and receive related information about them.",
+      "entities": [
+        "Video",
+        "Product",
+        "Related Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Identify Products In Videos",
+        "Receive Related Information About Products In Videos"
+      ]
+    },
+    {
+      "identifier": "g28_13",
+      "text": "As a user, I want to identify broadcaster logos in videos, and receive related information about them.",
+      "entities": [
+        "Broadcaster Logos",
+        "Video",
+        "Related Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Identify Broadcaster Logos In Videos",
+        "Receive Related Information About Broadcaster Logos In Videos"
+      ]
+    },
+    {
+      "identifier": "g28_14",
+      "text": "As a user, I want to identify brands in videos, and receive related information about them.",
+      "entities": [
+        "Brand",
+        "Video",
+        "Related Information"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Identify Brands In Videos",
+        "Receive Related Information About Brands"
+      ]
+    },
+    {
+      "identifier": "g28_15",
+      "text": "As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.",
+      "entities": [
+        "Picture"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Take A Picture",
+        "Upload An Image"
+      ]
+    },
+    {
+      "identifier": "g28_16",
+      "text": "As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.",
+      "entities": [
+        "Geographical Map"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Walk",
+        "Use A Geographical Map"
+      ]
+    },
+    {
+      "identifier": "g28_17",
+      "text": "As a user, I want to search content items using automatic speech recognition.",
+      "entities": [
+        "Speech Recognition"
+      ],
+      "personas": [
+        "User"
+      ],
+      "actions": [
+        "Search",
+        "Use Automatic Speech Recognition"
+      ]
+    },
+    {
+      "identifier": "g28_18",
+      "text": "As an admin, I want to see, validate and edit segmentation of videos.",
+      "entities": [
+        "Video"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "See Segmentation Of Videos",
+        "Validate Segmentation Of Videos",
+        "Edit Segmentation Of Videos"
+      ]
+    },
+    {
+      "identifier": "g28_19",
+      "text": "As an admin, I want to annotate news video segments and extract a topic for each segment.",
+      "entities": [
+        "News Video Segments",
+        "Segment",
+        "Topic"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Annotate News Video Segments",
+        "Extract A Topic For Each Segment"
+      ]
+    },
+    {
+      "identifier": "g28_20",
+      "text": "As an admin, I want to filter and rank videos based on A/V quality aspects.",
+      "entities": [
+        "Video",
+        "V",
+        "Quality Aspects"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Filter Videos On A Quality Aspects",
+        "Filter Videos On V",
+        "Rank Videos On A Quality Aspects",
+        "Rank Videos On V"
+      ]
+    },
+    {
+      "identifier": "g28_21",
+      "text": "As an admin, I want to get a quick assessment of whether audio material has been edited before the upload.",
+      "entities": [
+        "Audio Material",
+        "Quick Assessment",
+        "Upload"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Get A Quick Assessment Audio Material Has Edited Before The Upload"
+      ]
+    },
+    {
+      "identifier": "g28_22",
+      "text": "As an admin, I want to prefilter nudity content.",
+      "entities": [
+        "Nudity Content"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Prefilter Nudity Content"
+      ]
+    },
+    {
+      "identifier": "g28_23",
+      "text": "As an admin, I want to prefilter content using search based on low\ufffdlevel asset information.",
+      "entities": [
+        "Search",
+        "Level \ufffd Asset Information"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Use Search",
+        "Prefilter On Low Level \ufffd Asset Information"
+      ]
+    },
+    {
+      "identifier": "g28_24",
+      "text": "As an admin, I want to automatically validated the ingested contents for copyright infringement.",
+      "entities": [
+        "Ingested Content",
+        "Copyright Infringement"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Validated The Ingested Contents For Copyright Infringement"
+      ]
+    },
+    {
+      "identifier": "g28_25",
+      "text": "As an admin, I want to prefilter the content using search on high\ufffdlevel asset information such as metadata and tags either recognized by the system of provided by the user.",
+      "entities": [
+        "High \ufffd",
+        "System",
+        "User",
+        "Metadata",
+        "Tag",
+        "Content",
+        "Search",
+        "Information",
+        "Asset"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Prefilter The Content Using Search On High \ufffd"
+      ]
+    },
+    {
+      "identifier": "g28_26",
+      "text": "As a Zooniverse admin, I want to assess how interesting or appealing or complex a picture is based on automated analysis, citizen annotations, and comments on Talk.",
+      "entities": [
+        "Picture",
+        "Comment",
+        "Talk",
+        "Automate Analysis"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Assess"
+      ]
+    },
+    {
+      "identifier": "g28_28",
+      "text": "As a Zooniverse admin, I want to identify volunteer types.",
+      "entities": [
+        "Volunteer Types"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Identify Volunteer Types"
+      ]
+    },
+    {
+      "identifier": "g28_29",
+      "text": "As a Zooniverse admin, I want to preclassify the Galaxy Zoo images using simple low\ufffdlevel image features.",
+      "entities": [
+        "\ufffd Level Image Features"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Preclassify",
+        "Use Low, Simple \ufffd Level Image Features"
+      ]
+    },
+    {
+      "identifier": "g28_30",
+      "text": "As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
+      "entities": [
+        "Classifiable Animal",
+        "Serengeti Images"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Detect Snapshot Serengeti Images With No Classifiable Animals In"
+      ]
+    },
+    {
+      "identifier": "g28_31",
+      "text": "As a Zooniverse admin, I want to perform automatic image series detection for the case of timestamping malfunction in Snapshot Serengeti images.",
+      "entities": [
+        "Malfunction",
+        "Case",
+        "Serengeti Images",
+        "Image Series Detection"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Image Series Detection For The Case Timestamping Malfunction In Snapshot Serengeti Images"
+      ]
+    },
+    {
+      "identifier": "g28_32",
+      "text": "As a Zooniverse admin, I want to perform automatic animal species preclassification in Snapshot Serengeti.",
+      "entities": [
+        "Snapshot Serengeti",
+        "Animal Species Preclassification"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Animal Species Preclassification In Snapshot Serengeti"
+      ]
+    },
+    {
+      "identifier": "g28_33",
+      "text": "As a Zooniverse admin, I want to perform automatic animal attribute preclassification in Snapshot Serengeti.",
+      "entities": [
+        "Snapshot Serengeti",
+        "Animal Attribute Preclassification"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Animal Attribute Preclassification In Snapshot Serengeti"
+      ]
+    },
+    {
+      "identifier": "g28_34",
+      "text": "As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.",
+      "entities": [
+        "Snapshot Serengeti",
+        "Animal Number Detection"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Animal Number Detection In Snapshot Serengeti"
+      ]
+    },
+    {
+      "identifier": "g28_35",
+      "text": "As a Zooniverse admin, I want to perform automatic segmentation or localization of plankton in Plankton Portal.",
+      "entities": [
+        "Plankton",
+        "Automatic Segmentation"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Segmentation In Plankton Portal",
+        "Perform Localization Of Plankton"
+      ]
+    },
+    {
+      "identifier": "g28_36",
+      "text": "As a Zooniverse admin, I want to automatically detect Plankton Portal images with no classifiable plankton in them.",
+      "entities": [
+        "Plankton Portal Images",
+        "Classifiable Plankton"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Detect Plankton Portal Images With No Classifiable Plankton In"
+      ]
+    },
+    {
+      "identifier": "g28_37",
+      "text": "As a Zooniverse admin, I want to perform automatic detection of plankton size or orientation in Plankton Portal images.",
+      "entities": [
+        "Orientation",
+        "Plankton Portal Images",
+        "Plankton Size"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Detection Of Orientation",
+        "Perform Automatic Detection Of Plankton Size In Plankton Portal Images"
+      ]
+    },
+    {
+      "identifier": "g28_38",
+      "text": "As a Zooniverse admin, I want to perform automatic preclassification of plankton species in Plankton Portal images.",
+      "entities": [
+        "Plankton Species",
+        "Plankton Portal Images"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Preclassification Of Plankton Species In Plankton Portal Images"
+      ]
+    },
+    {
+      "identifier": "g28_39",
+      "text": "As a Zooniverse admin, I want to perform automatic worm motion analysis to reduce video duration in Worm Watch Lab.",
+      "entities": [
+        "Video Duration",
+        "Worm Watch Lab",
+        "Worm Motion Analysis"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Perform Automatic Worm Motion Analysis",
+        "Reduce Video Duration In Worm Watch Lab"
+      ]
+    },
+    {
+      "identifier": "g28_40",
+      "text": "As a Zooniverse admin, I want to automatically detect the time in a Worm Watch Lab video where the worm lays an egg.",
+      "entities": [
+        "Egg",
+        "Time",
+        "Worm"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Detect The Time In A Worm Watch Lab Video The Worm Where Lays An Egg"
+      ]
+    },
+    {
+      "identifier": "g28_41",
+      "text": "As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.",
+      "entities": [
+        "Important Feature",
+        "Flooding",
+        "Temporary Shelter",
+        "Area",
+        "Road",
+        "Damage"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Detect Important Features Such As Areas Of Flooding",
+        "Detect Important Features Such As Areas Of Damage",
+        "Detect Important Features Such As Areas Of Temporary Shelter"
+      ]
+    },
+    {
+      "identifier": "g28_42",
+      "text": "As a Zooniverse admin, I want to assess the probability/weight of a volunteer\ufffds classification based on their experience.",
+      "entities": [
+        "Volunteer",
+        "\ufffd",
+        "Experience",
+        "Weight"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Assess The Probability Of A Volunteer",
+        "Assess Weight"
+      ]
+    },
+    {
+      "identifier": "g28_43",
+      "text": "As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.",
+      "entities": [
+        "Artefact",
+        "Prefiltering",
+        "Camera",
+        "Image",
+        "Error",
+        "Bright Star"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Remove Artefacts Such As Bright Stars",
+        "Remove Artefacts Such As Camera",
+        "Perform Prefiltering Of The Images"
+      ]
+    },
+    {
+      "identifier": "g28_44",
+      "text": "As a Zooniverse admin, I want to detect moving and transient objects in the images.",
+      "entities": [
+        "Image",
+        "Object",
+        "Transient"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Detect Moving Objects In The Images",
+        "Detect Transient"
+      ]
+    },
+    {
+      "identifier": "g28_45",
+      "text": "As a Zooniverse admin, I want to remove background noise and distracting sounds from the audio files.",
+      "entities": [
+        "Background Noise",
+        "Sound",
+        "Audio File"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Distracting Background Noise Sounds From The Audio Files"
+      ]
+    },
+    {
+      "identifier": "g28_47",
+      "text": "As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.",
+      "entities": [
+        "Whale",
+        "Audio , Single File"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Identify The Number Of Whales In A Audio, Single File"
+      ]
+    },
+    {
+      "identifier": "g28_48",
+      "text": "As a Zooniverse admin, I want to know when I should interrupt a volunteer.",
+      "entities": [
+        "Volunteer"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Interrupt A Volunteer",
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_49",
+      "text": "As a Zooniverse admin, I want to know whether I should interrupt a volunteer with text, an image, or a video.",
+      "entities": [
+        "Volunteer",
+        "Text",
+        "Video",
+        "Image"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Interrupt A Volunteer With An Image",
+        "Interrupt A Volunteer With Text",
+        "Know",
+        "Interrupt A Volunteer With A Video"
+      ]
+    },
+    {
+      "identifier": "g28_50",
+      "text": "As a Zooniverse admin, I want to know when I should educate a volunteer.",
+      "entities": [
+        "Volunteer"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Educate A Volunteer",
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_51",
+      "text": "As a Zooniverse admin, I want to know whether I should educate a volunteer with text, an image, or a video.",
+      "entities": [
+        "Video",
+        "Volunteer",
+        "Image",
+        "Text"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Educate A Volunteer With Text",
+        "Know",
+        "Educate A Volunteer With A Video",
+        "Educate A Volunteer With An Image"
+      ]
+    },
+    {
+      "identifier": "g28_52",
+      "text": "As a Zooniverse admin,I want to know which piece of education I should give to a volunteer.",
+      "entities": [
+        "Education",
+        "Volunteer"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Which Piece Of Education Give To A Volunteer",
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_53",
+      "text": "As a Zooniverse admin, I want to know when a volunteer has made an interesting comment on a subject.",
+      "entities": [
+        "Interesting Comment",
+        "Volunteer",
+        "Subject"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_54",
+      "text": "As a Zooniverse admin, I want to know when Zoonibot should comment on a subject.",
+      "entities": [
+        "Zoonibot",
+        "Subject"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_55",
+      "text": "As a Zooniverse admin, I want to know when Zoonibot should give an explanation.",
+      "entities": [
+        "Zoonibot",
+        "Explanation"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Know"
+      ]
+    },
+    {
+      "identifier": "g28_56",
+      "text": "As a Zooniverse admin, I want to know what Zoonibot should say to a volunteer.",
+      "entities": [
+        "Volunteer"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Know",
+        "Say To A Volunteer"
+      ]
+    },
+    {
+      "identifier": "g28_57",
+      "text": "As a Zooniverse admin, I want to group subjects by similarity.",
+      "entities": [
+        "Similarity",
+        "Group Subjects"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "To Group Subjects By Similarity"
+      ]
+    },
+    {
+      "identifier": "g28_58",
+      "text": "As a Zooniverse admin, I want to recommend different projects to volunteers based on their previous experiences.",
+      "entities": [
+        "Different Project",
+        "Volunteer",
+        "Previous Experience"
+      ],
+      "personas": [
+        "Zooniverse Admin"
+      ],
+      "actions": [
+        "Recommend Different Projects To Volunteers On Previous Experiences"
+      ]
+    },
+    {
+      "identifier": "g28_59",
+      "text": "As an admin, I want to see a summary of articles, so that I reuse them.",
+      "entities": [
+        "Article"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "See A Summary Of Articles"
+      ]
+    }
+  ]
+}
