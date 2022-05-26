@@ -1,8 +1,9 @@
 #This file will compare the results of the baseline and the nlp tools annotations for accuracy
 import argparse
+import copy
+import csv
 from difflib import SequenceMatcher
 import json
-from tkinter import BASELINE
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -11,14 +12,44 @@ import sys
 
 def main():
     base_path, nlp_tool_path, save_folder_path = command()
-    baseline_data = extract_baseline_info(base_path)
+    primary_baseline_data = extract_primary_baseline_info(base_path)
+    all_baseline_data = extract_all_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
+
+    primary_save_path = save_folder_path + "\\primary"
+    all_save_path = save_folder_path + "\\all"
+    os.mkdir(primary_save_path)
+    os.mkdir(all_save_path)
+
+    primary_csv_path = "C:\\Users\\sathu\\nlp-stories\\primary_dataset_results.csv"
+    all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
+
+    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data)
+    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path)
+
+    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data)
+    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path)
+
+def compare_and_get_results(baseline_data, nlp_tool_data):
+    '''
+    Runs all the functions that will compare and get the results of the comparison
+
+    Parameters:
+    baseline_data (2D list): contains text, persona, primary entities, and primary actions identified by the baseline data
+    nlp_tool_data (2D list): contains text, persona, primary entities, and primary actions identified by the nlp tool 
+
+    Returns:
+    story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
+    count_list (3D list): has the count for persona, entity, action results for each story for the number of true/false postive and false negative
+    comparison_collection (3D list): has the elements for persona, entity, action results for each story for the elements that are true/false postive and false negative
+    missing_stories (2D list): missing stories from baseline_data and nlp tool 
+    baseline_text (list): story text in order based on evaluation order
+    '''
     sorted_baseline_data, sorted_nlp_tool_data, missing_stories = sort(baseline_data, nlp_tool_data)
 
     baseline_text, baseline_persona, baseline_entity, baseline_action = sorted_baseline_data
     _, nlp_persona, nlp_entity, nlp_action = sorted_nlp_tool_data
-
 
     persona_comparison_collection = []
     entity_comparison_collection = []
@@ -49,20 +80,131 @@ def main():
     comparison_collection = [persona_comparison_collection, entity_comparison_collection, action_comparison_collection]
     
     story_results = individual_story(count_list)
+
+    return story_results, count_list, comparison_collection, missing_stories, baseline_text
+
+def output_results(story_results, count_list, comparison_collection, missing_stories, baseline_text, save_folder_path, csv_saving_path):
+    ''''
+    Ouput the results to various formats
+
+    Parameters:
+    story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
+    count_list (3D list): has the count for persona, entity, action results for each story for the number of true/false postive and false negative
+    comparison_collection (3D list): has the elements for persona, entity, action results for each story for the elements that are true/false postive and false negative
+    missing_stories (2D list): missing stories from baseline_data and nlp tool 
+    baseline_text (list): story text in order based on evaluation order
+    save_folder_path (str): the path of the folder to save results
+    csv_saving_path (str): path to save final results to 
+    '''
     story_precision_results, story_recall_results, story_f_measure_results = story_results
 
-
+    
     scatterplot_data = [story_precision_results, story_recall_results]
     scatterplot(scatterplot_data, save_folder_path)
 
     x_axis_data = np.linspace(10,100,10)
     bargraph(story_results, x_axis_data, save_folder_path)
 
-
-
     dataset_results = total_dataset(count_list)
 
-    output(baseline_text, comparison_collection, dataset_results, story_results, missing_stories)
+    output_terminal(baseline_text, comparison_collection, dataset_results, story_results, missing_stories)
+    save_missing_stories(missing_stories, save_folder_path)
+    save_csv(csv_saving_path, dataset_results)
+
+def individual_story(count_list):
+    '''
+    get all the info for plotting for each individual story
+
+    Parameters:
+    count_list (2D list): for each story, has the total count for true/false positives and false negative
+
+    Returns:
+    story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity    
+    '''
+    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list
+
+    story_persona_precision = []
+    story_entity_precision = []
+    story_action_precision = []
+    
+    story_persona_recall = []
+    story_entity_recall = []
+    story_action_recall = []
+
+    story_persona_f_measure = []
+    story_entity_f_measure = []
+    story_action_f_measure = []
+
+    for i in range(len(count_persona_comparison_list)):
+        persona_precision = calculate_precision(count_persona_comparison_list[i])
+        entity_precision = calculate_precision(count_entity_comparison_list[i])
+        action_precision = calculate_precision(count_action_comparison_list[i])
+
+        story_persona_precision.append(persona_precision)
+        story_entity_precision.append(entity_precision)
+        story_action_precision.append(action_precision)
+
+        persona_recall = calculate_recall(count_persona_comparison_list[i])
+        entity_recall = calculate_recall(count_entity_comparison_list[i])
+        action_recall = calculate_recall(count_action_comparison_list[i])
+
+        story_persona_recall.append(persona_recall)
+        story_entity_recall.append(entity_recall)
+        story_action_recall.append(action_recall)
+
+        persona_f_measure = calculate_f_measure(persona_precision, persona_recall)
+        entity_f_measure = calculate_f_measure(entity_precision, entity_recall)
+        action_f_measure = calculate_f_measure(action_precision, action_recall)
+
+        story_persona_f_measure.append(persona_f_measure)
+        story_entity_f_measure.append(entity_f_measure)
+        story_action_f_measure.append(action_f_measure)
+
+    precision_results = [story_persona_precision, story_entity_precision, story_action_precision]
+    recall_results = [story_persona_recall, story_entity_recall, story_action_recall]
+    f_measure_results = [story_persona_f_measure, story_entity_f_measure, story_action_f_measure]
+
+    story_results = [precision_results, recall_results, f_measure_results]
+
+    return story_results
+
+def total_dataset(count_list):
+    '''
+    Gets all the required info for the entire dataset
+
+    Parameters:
+    count_list (2D list): for each story, has the total count for true/false positives and false negative
+    
+    Returns:
+    dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
+    '''
+
+    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list 
+
+    total_persona_comparison = count_total_result_dataset(count_persona_comparison_list)
+    total_entity_comparison = count_total_result_dataset(count_entity_comparison_list)
+    total_action_comparison = count_total_result_dataset(count_action_comparison_list)
+
+    dataset_persona_precision = calculate_precision(total_persona_comparison)
+    dataset_entity_precision = calculate_precision(total_entity_comparison)
+    dataset_action_precision = calculate_precision(total_action_comparison)
+
+    dataset_persona_recall = calculate_recall(total_persona_comparison)
+    dataset_entity_recall = calculate_recall(total_entity_comparison)
+    dataset_action_recall = calculate_recall(total_action_comparison)
+
+    total_persona_f_measure = calculate_f_measure(dataset_persona_precision, dataset_persona_recall)
+    total_entity_f_measure = calculate_f_measure(dataset_entity_precision, dataset_entity_recall)
+    total_action_f_measure = calculate_f_measure(dataset_action_precision, dataset_action_recall)
+
+    
+    dataset_precision = [dataset_persona_precision, dataset_entity_precision, dataset_action_precision]
+    dataset_recall = [dataset_persona_recall, dataset_entity_recall, dataset_action_recall]
+    dataset_f_measure = [total_persona_f_measure, total_entity_f_measure, total_action_f_measure]
+    
+    dataset_results = [dataset_precision, dataset_recall, dataset_f_measure]
+
+    return dataset_results
 
 def command():
     '''
@@ -106,9 +248,9 @@ def command():
     else:
         return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path  
 
-def extract_baseline_info(path):
+def extract_primary_baseline_info(path):
     '''
-    Extracts the info from the baseline 
+    Extracts the primary info from the baseline 
 
     Parameters:
     path (str): path to the file
@@ -132,6 +274,50 @@ def extract_baseline_info(path):
     file.close()
 
     baseline_data = [text, persona, primary_entity, primary_action]
+
+    return baseline_data
+
+def extract_all_baseline_info(path):
+    '''
+    Extracts the info from the baseline 
+
+    Parameters:
+    path (str): path to the file
+
+    Returns:
+    baseline_data (2D list): contains text, persona, entities, and actions identified by the baseline data
+    '''
+    text = []
+    persona = []
+    entity = []
+    action = []
+ 
+
+    file = open(path)
+    data = json.load(file)
+
+    for story in data:
+        text.append(story["Text"])
+        persona.append(story["Persona"])
+
+        primary_entity = story["Entity"]["Primary Entity"]
+        secondary_entity = story["Entity"]["Secondary Entity"]
+        primary_action = story["Action"]["Primary Action"]
+        secondary_action = story["Action"]["Secondary Action"]
+
+        if secondary_action != [""]:
+            action.append(primary_action + secondary_action)
+        else:
+            action.append(primary_action)
+
+        if secondary_entity != [""]:
+            entity.append(primary_entity + secondary_entity)
+        else:
+            entity.append(primary_entity)
+
+    file.close()
+
+    baseline_data = [text, persona, entity, action]
 
     return baseline_data
 
@@ -179,8 +365,9 @@ def sort(baseline_data, nlp_tool_data):
     '''
  
     baseline_text,baseline_persona, baseline_entity, baseline_action = baseline_data
-    nlp_text, nlp_persona, nlp_entity, nlp_action  = nlp_tool_data
-
+    nlp_tool_data_copy = copy.deepcopy(nlp_tool_data)
+    nlp_text, nlp_persona, nlp_entity, nlp_action  = nlp_tool_data_copy
+    
     sorted_baseline_text = []
     sorted_baseline_persona = []
     sorted_baseline_entity = []
@@ -236,17 +423,19 @@ def compare (baseline, nlp):
     '''
     true_positive = []
     false_positive = []
-
+    
     for i in range(len(nlp)):
         nlp_element = nlp[i].lower()
+        not_true_positive = True
         for j in range (len(baseline)):
             baseline_element = baseline[j].lower()
             if nlp_element == baseline_element or check_common_elements(nlp_element, baseline_element) == True or check_similar_elements(nlp_element, baseline_element) == True:
                 true_positive.append(baseline[j])
                 baseline.pop(j)
+                not_true_positive = False
                 break
-            else:
-                false_positive.append(nlp_element)
+        if not_true_positive:
+            false_positive.append(nlp_element)
     
     false_nagative = baseline
 
@@ -262,7 +451,6 @@ def check_common_elements(nlp_element, baseline_element):
     nlp_element (str): element from nlp tool to evaluate if common element exist
     baseline_element (str): element from baseline to evaluate if common element exist
     '''
-
     nlp_element_list = nlp_element.split()
     baseline_element_list = baseline_element.split()
     common_elements = set(nlp_element_list).intersection(baseline_element_list)
@@ -285,11 +473,10 @@ def check_similar_elements(nlp_element, baseline_element):
     for i in range(len(nlp_element_list)):
         for j in range(len(baseline_element_list)):
             similarity_ratio = SequenceMatcher(None, nlp_element_list[i], baseline_element_list[j]).ratio()
-            if similarity_ratio >= 75:
+            if similarity_ratio >= 0.75:
                 return True
     return False
         
-
 def count_true_false_positives_negatives(comparison_results):
     '''
     count the number of true/false positives and false negatives 
@@ -384,101 +571,6 @@ def calculate_f_measure (precision, recall):
         f_measure = 2 * (precision * recall)/ (precision + recall)
 
     return f_measure
-
-def individual_story(count_list):
-    '''
-    get all the info for plotting for each individual story
-
-    Parameters:
-    count_list (2D list): for each story, has the total count for true/false positives and false negative
-
-    Returns:
-    story_results (3D list): for each story, has the precision, recall and f-measure of the persona, action, entity    
-    '''
-    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list
-
-    story_persona_precision = []
-    story_entity_precision = []
-    story_action_precision = []
-    
-    story_persona_recall = []
-    story_entity_recall = []
-    story_action_recall = []
-
-    story_persona_f_measure = []
-    story_entity_f_measure = []
-    story_action_f_measure = []
-
-    for i in range(len(count_persona_comparison_list)):
-        persona_precision = calculate_precision(count_persona_comparison_list[i])
-        entity_precision = calculate_precision(count_entity_comparison_list[i])
-        action_precision = calculate_precision(count_action_comparison_list[i])
-
-        story_persona_precision.append(persona_precision)
-        story_entity_precision.append(entity_precision)
-        story_action_precision.append(action_precision)
-
-        persona_recall = calculate_recall(count_persona_comparison_list[i])
-        entity_recall = calculate_recall(count_entity_comparison_list[i])
-        action_recall = calculate_recall(count_action_comparison_list[i])
-
-        story_persona_recall.append(persona_recall)
-        story_entity_recall.append(entity_recall)
-        story_action_recall.append(action_recall)
-
-        persona_f_measure = calculate_f_measure(persona_precision, persona_recall)
-        entity_f_measure = calculate_f_measure(entity_precision, entity_recall)
-        action_f_measure = calculate_f_measure(action_precision, action_recall)
-
-        story_persona_f_measure.append(persona_f_measure)
-        story_entity_f_measure.append(entity_f_measure)
-        story_action_f_measure.append(action_f_measure)
-
-    precision_results = [story_persona_precision, story_entity_precision, story_action_precision]
-    recall_results = [story_persona_recall, story_entity_recall, story_action_recall]
-    f_measure_results = [story_persona_f_measure, story_entity_f_measure, story_action_f_measure]
-
-    story_results = [precision_results, recall_results, f_measure_results]
-
-    return story_results
-
-def total_dataset(count_list):
-    '''
-    Gets all the required info for the entire dataset
-
-    Parameters:
-    count_list (2D list): for each story, has the total count for true/false positives and false negative
-    
-    Returns:
-    dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
-    '''
-
-    count_persona_comparison_list, count_entity_comparison_list, count_action_comparison_list = count_list 
-
-    total_persona_comparison = count_total_result_dataset(count_persona_comparison_list)
-    total_entity_comparison = count_total_result_dataset(count_entity_comparison_list)
-    total_action_comparison = count_total_result_dataset(count_action_comparison_list)
-
-    dataset_persona_precision = calculate_precision(total_persona_comparison)
-    dataset_entity_precision = calculate_precision(total_entity_comparison)
-    dataset_action_precision = calculate_precision(total_action_comparison)
-
-    dataset_persona_recall = calculate_recall(total_persona_comparison)
-    dataset_entity_recall = calculate_recall(total_entity_comparison)
-    dataset_action_recall = calculate_recall(total_action_comparison)
-
-    total_persona_f_measure = calculate_f_measure(dataset_persona_precision, dataset_persona_recall)
-    total_entity_f_measure = calculate_f_measure(dataset_entity_precision, dataset_entity_recall)
-    total_action_f_measure = calculate_f_measure(dataset_action_precision, dataset_action_recall)
-
-    
-    dataset_precision = [dataset_persona_precision, dataset_entity_precision, dataset_action_precision]
-    dataset_recall = [dataset_persona_recall, dataset_entity_recall, dataset_action_recall]
-    dataset_f_measure = [total_persona_f_measure, total_entity_f_measure, total_action_f_measure]
-    
-    dataset_results = [dataset_precision, dataset_recall, dataset_f_measure]
-
-    return dataset_results
 
 def scatterplot(input_data, save_folder_path):
     '''
@@ -614,16 +706,15 @@ def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title,
 
     graph.savefig(save_folder_path + save_name + ".png")
 
-def output(baseline_text, comparison_collection, dataset_results, story_results, missing_stories):
+def output_terminal(baseline_text, comparison_collection, dataset_results, story_results, missing_stories):
     '''
     output the results so that it is easy to read the results 
 
     Parameters:
     baseline_text (list): story text 
     comparison_collection (3D list): true/false positive and false negative of each story 
-    precision (list): precision of persona, entity, action 
-    recall (list): recall of persona, entity, action 
-    f_measure (list): f_measure of persona, entity, action 
+    dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
+    story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
     missing_stories (2D list): contains missing stories and data from baseline and/or nlp tool 
     '''
 
@@ -684,6 +775,46 @@ def output(baseline_text, comparison_collection, dataset_results, story_results,
     print("Missing stories from baseline:", baseline_missing_stories)
     print("Missing stories from nlp tool:", nlp_tool_missing_stories)
 
-    
+def save_missing_stories(missing_stories, save_folder_path):
+    '''
+    save the missing stories from datasets into a text file
+
+    Parameters:
+    missing_stories (2D list): contains missing stories and data from baseline and/or nlp tool 
+    save_folder_path (str): path of folder to save
+    '''
+
+    baseline_missing_stories, nlp_tool_missing_stories = missing_stories
+    file_path = save_folder_path + "\\missing_stories.txt"
+    file = open(file_path, "w")
+    file.write("Missing Stories:\n")
+    file.write("Missing stories from baseline:\n")
+    for i in range(len(baseline_missing_stories)):
+        file.write(baseline_missing_stories[i] + "\n")
+    file.write("Missing stories from nlp tool:\n")
+    for i in range(len(nlp_tool_missing_stories)):
+        file.write(nlp_tool_missing_stories[i] + "\n")
+    file.close()
+
+def save_csv(saving_path, dataset_results):
+    '''
+    save the final results of dataset precision, recall and f-measure of persona, entity and action
+
+    Parameters:
+    saving_path (str): path to the file to save the data 
+    dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
+    '''
+    dataset_precision, dataset_recall, dataset_f_measure = dataset_results
+
+    persona_precision, entity_precision, action_precision = dataset_precision 
+    persona_recall, entity_recall, action_recall = dataset_recall
+    persona_f_measure, entity_f_measure, action_f_measure = dataset_f_measure
+
+    data = [persona_precision, entity_precision, action_precision,persona_recall, entity_recall, action_recall,persona_f_measure, entity_f_measure, action_f_measure]
+
+    with open (saving_path, "a", newline = "") as file:
+        writer = csv.writer(file)
+        writer.writerow(data)
+
 if __name__ == "__main__":
     main()
