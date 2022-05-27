@@ -592,7 +592,7 @@ def scatterplot(input_data, save_folder_path):
 
 def create_scattergraph(precision_data, recall_data, graph_color, title, save_folder_path, save_name):
     '''
-    creates and saves the bargraph
+    creates and saves the scattergraph
 
     Parameters:
     precision_data (list): data of the precision of each story in order 
