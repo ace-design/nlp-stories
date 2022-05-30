@@ -64,3 +64,13 @@ def test_empty_primary_Action_id_list(target_action,target_entity,empty_expected
     primary_action_id_list = []
     
     assert identify_primary_entity(primary_action_id_list,target_action,target_entity) == empty_expected
+
+@pytest.mark.identify_primary_entity
+def test_two_action_point_same_entity(primary_action_id_list,target_action,target_entity):
+    target_entity[2][1] = "tabs"
+    primary_entities = "tabs, "
+    primary_entity_list = ["tabs"]
+
+    expected = (primary_entities, primary_entity_list)
+
+    assert identify_primary_entity(primary_action_id_list,target_action,target_entity) == expected
