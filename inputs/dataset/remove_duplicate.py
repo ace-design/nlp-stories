@@ -1,4 +1,4 @@
-file = open("C:\\Users\\sathu\\nlp-stories\\inputs\\dataset\\g05-openspending.txt")
+file = open("C:\\Users\\sathu\\nlp-stories\\inputs\\dataset\\g08-frictionless.txt")
 lines = file.readlines()
 print("start")
 for i in range(len(lines)):

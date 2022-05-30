@@ -533,7 +533,10 @@ def calculate_precision(number_compared_results):
 
     number_true_positive, number_false_positive, _ = number_compared_results
 
-    precision = number_true_positive / (number_true_positive + number_false_positive)
+    if number_true_positive + number_false_positive == 0:
+        precision = 0
+    else:
+        precision = number_true_positive / (number_true_positive + number_false_positive)
 
     return precision
 def calculate_recall(number_compared_results):
@@ -549,7 +552,10 @@ def calculate_recall(number_compared_results):
 
     number_true_positive, _ , number_false_negative = number_compared_results
 
-    recall = number_true_positive / (number_true_positive + number_false_negative)
+    if number_true_positive + number_false_negative == 0:
+        recall = 0
+    else:
+        recall = number_true_positive / (number_true_positive + number_false_negative)
 
     return recall 
 
