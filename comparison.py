@@ -16,7 +16,6 @@ def main():
     all_baseline_data = extract_all_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
-
     primary_save_path = save_folder_path + "\\primary"
     all_save_path = save_folder_path + "\\all"
     os.mkdir(primary_save_path)
@@ -437,7 +436,7 @@ def compare (baseline, nlp):
         if not_true_positive:
             false_positive.append(nlp_element)
     
-    false_nagative = baseline
+    false_nagative = copy.deepcopy(baseline)
 
     comparison_results = [true_positive, false_positive, false_nagative]
 
@@ -459,6 +458,7 @@ def check_common_elements(nlp_element, baseline_element):
         return True
     else:
         return False
+        
 def check_similar_elements(nlp_element, baseline_element):
     '''
     determine if an element is similar to part of another element
