@@ -8,6 +8,8 @@ import seaborn as sns
 import statistics
 import sys
 
+number_dataset = 17
+
 def main():
     primary_path, all_path, saving_path = command()
     primary_data = extract_data(primary_path)
@@ -116,9 +118,9 @@ def extract_data (path):
     entity_f_measure = extract["Entity F-Measure"]
     action_f_measure = extract["Action F-Measure"]
 
-    if len(persona_precision) != 17:
+    if len(persona_precision) != number_dataset:
         sys.tracebacklimit = 0
-        raise Exception ("Invalid number of data. Expected number of rows is 17")
+        raise Exception ("Invalid number of data. Expected number of rows is", number_dataset)
 
     data = [persona_precision, persona_recall, persona_f_measure,entity_precision, entity_recall, entity_f_measure, action_precision, action_recall, action_f_measure]
 
@@ -151,7 +153,7 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
     csv_data = pd.read_csv(read_file)
-    x_label = list(range(1, 18))
+    x_label = list(range(1, number_dataset + 1))
 
     sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "m")
     for p in precision_plot.patches:

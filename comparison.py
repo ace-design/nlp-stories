@@ -418,9 +418,10 @@ def compare (baseline, nlp):
     nlp (list): the elements comparing for accuracy 
 
     Returns:
-    comparison_results (2D list): includes the elements identified as true/false positives and false negatives 
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives, including half points
     '''
-    true_positive = []
+    true_positive_full = []
+    true_positive_half =[]
     false_positive = []
     
     for i in range(len(nlp)):
@@ -428,8 +429,13 @@ def compare (baseline, nlp):
         not_true_positive = True
         for j in range (len(baseline)):
             baseline_element = baseline[j].lower()
-            if nlp_element == baseline_element or check_common_elements(nlp_element, baseline_element) == True or check_similar_elements(nlp_element, baseline_element) == True:
-                true_positive.append(baseline[j])
+            if nlp_element == baseline_element:
+                true_positive_full.append(baseline[j])
+                baseline.pop(j)
+                not_true_positive = False
+                break
+            elif check_common_elements(nlp_element, baseline_element) == True:
+                true_positive_half.append(baseline[j])
                 baseline.pop(j)
                 not_true_positive = False
                 break
@@ -438,7 +444,7 @@ def compare (baseline, nlp):
     
     false_nagative = copy.deepcopy(baseline)
 
-    comparison_results = [true_positive, false_positive, false_nagative]
+    comparison_results = [true_positive_full, true_positive_half, false_positive, false_nagative]
 
     return comparison_results
 
@@ -459,36 +465,36 @@ def check_common_elements(nlp_element, baseline_element):
     else:
         return False
         
-def check_similar_elements(nlp_element, baseline_element):
-    '''
-    determine if an element is similar to part of another element
+# def check_similar_elements(nlp_element, baseline_element):
+#     '''
+#     determine if an element is similar to part of another element
 
-    Paramters:
-    nlp_element (str): element from nlp tool to evaluate if common element exist
-    baseline_element (str): element from baseline to evaluate if common element exist
-    '''
+#     Paramters:
+#     nlp_element (str): element from nlp tool to evaluate if common element exist
+#     baseline_element (str): element from baseline to evaluate if common element exist
+#     '''
 
-    nlp_element_list = nlp_element.split()
-    baseline_element_list = baseline_element.split()
-    for i in range(len(nlp_element_list)):
-        for j in range(len(baseline_element_list)):
-            similarity_ratio = SequenceMatcher(None, nlp_element_list[i], baseline_element_list[j]).ratio()
-            if similarity_ratio >= 0.75:
-                return True
-    return False
+#     nlp_element_list = nlp_element.split()
+#     baseline_element_list = baseline_element.split()
+#     for i in range(len(nlp_element_list)):
+#         for j in range(len(baseline_element_list)):
+#             similarity_ratio = SequenceMatcher(None, nlp_element_list[i], baseline_element_list[j]).ratio()
+#             if similarity_ratio >= 0.75:
+#                 return True
+#     return False
         
 def count_true_false_positives_negatives(comparison_results):
     '''
     count the number of true/false positives and false negatives 
 
     Parameters:
-    comparison_results (2D list): includes the elements identified as true/false positives and false negatives
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives. including half points
 
     Returns:
     number_comparison (2D list): the number of elements identified as true/false positives and false negatives
     '''
-    true_positive, false_positive, false_negative = comparison_results
-    number_true_positive = len(true_positive)
+    true_positive_full, true_positive_half, false_positive, false_negative = comparison_results
+    number_true_positive = len(true_positive_full) + len(true_positive_half) * 0.5
     number_false_positive = len(false_positive)
     number_false_negative = len(false_negative)
 
@@ -723,7 +729,6 @@ def output_terminal(baseline_text, comparison_collection, dataset_results, story
     story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
     missing_stories (2D list): contains missing stories and data from baseline and/or nlp tool 
     '''
-
     persona_comparison_collection, entity_comparison_collection, action_comparison_collection = comparison_collection
     dataset_precision, dataset_recall, dataset_f_measure = dataset_results
     story_precision_results, story_recall_results, story_f_measure_results = story_results
@@ -742,22 +747,25 @@ def output_terminal(baseline_text, comparison_collection, dataset_results, story
         print("Text:", baseline_text[i])
         print("__PERSONA__")
         print("True Positive:", ", ".join(persona_comparison_collection[i][0]))
-        print("False Postive:", ", ".join(persona_comparison_collection[i][1]))
-        print("False Negative:", ", ".join(persona_comparison_collection[i][2]))
+        print("Partial True Positive:", ", ".join(persona_comparison_collection[i][1]))
+        print("False Postive:", ", ".join(persona_comparison_collection[i][2]))
+        print("False Negative:", ", ".join(persona_comparison_collection[i][3]))
         print("\nPrecision:", story_persona_precision [i])
         print("Recall:", story_persona_recall[i])
         print("F-Measure:", story_persona_f_measure[i])
         print("\n__ENTITY__")
         print("True Positive:", ", ".join(entity_comparison_collection[i][0]))
-        print("False Postive:", ", ".join(entity_comparison_collection[i][1]))
-        print("False Negative:", ", ".join(entity_comparison_collection[i][2]))
+        print("Partial True Positive:", ", ".join(entity_comparison_collection[i][1]))
+        print("False Postive:", ", ".join(entity_comparison_collection[i][2]))
+        print("False Negative:", ", ".join(entity_comparison_collection[i][3]))
         print("\nPrecision:", story_entity_precision [i])
         print("Recall:", story_entity_recall[i])
         print("F-Measure:", story_entity_f_measure[i])
         print("\n__ACTION__")
         print("True Positive:", ", ".join(action_comparison_collection[i][0]))
-        print("False Postive:", ", ".join(action_comparison_collection[i][1]))
-        print("False Negative:", ", ".join(action_comparison_collection[i][2]))
+        print("Partial True Positive:", ", ".join(action_comparison_collection[i][1]))
+        print("False Postive:", ", ".join(action_comparison_collection[i][2]))
+        print("False Negative:", ", ".join(action_comparison_collection[i][3]))
         print("\nPrecision:", story_action_precision [i])
         print("Recall:", story_action_recall[i])
         print("F-Measure:", story_action_f_measure[i])
@@ -777,9 +785,9 @@ def output_terminal(baseline_text, comparison_collection, dataset_results, story
     print("Recall:", action_recall)
     print("F-Measure:", action_f_measure)
 
-    print("Missing Stories")
+    print("\nMissing Stories")
     print("Missing stories from baseline:", baseline_missing_stories)
-    print("Missing stories from nlp tool:", nlp_tool_missing_stories)
+    print("\nMissing stories from nlp tool:", nlp_tool_missing_stories)
 
 def save_missing_stories(missing_stories, save_folder_path):
     '''
