@@ -25,10 +25,10 @@ def main():
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
     primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data)
-    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path)
+    #output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path)
 
-    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data)
-    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path)
+    # all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data)
+    # output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path)
 
 def compare_and_get_results(baseline_data, nlp_tool_data):
     '''
@@ -423,6 +423,9 @@ def compare (baseline, nlp):
     true_positive_full = []
     true_positive_half =[]
     false_positive = []
+
+    print(baseline)
+    print(nlp)
     
     for i in range(len(nlp)):
         nlp_element = nlp[i].lower()
@@ -434,15 +437,24 @@ def compare (baseline, nlp):
                 baseline.pop(j)
                 not_true_positive = False
                 break
-            elif check_common_elements(nlp_element, baseline_element) == True:
-                true_positive_half.append(baseline[j])
-                baseline.pop(j)
-                not_true_positive = False
-                break
+        if not_true_positive:
+            for j in range (len(baseline)):
+                baseline_element = baseline[j].lower()
+                if check_common_elements(nlp_element, baseline_element) == True:
+                    true_positive_half.append(baseline[j])
+                    baseline.pop(j)
+                    not_true_positive = False
+                    break
         if not_true_positive:
             false_positive.append(nlp_element)
     
     false_nagative = copy.deepcopy(baseline)
+
+    print(true_positive_full)
+    print(true_positive_half)
+    print(false_positive)
+    print(false_nagative)
+    print("\n")
 
     comparison_results = [true_positive_full, true_positive_half, false_positive, false_nagative]
 
