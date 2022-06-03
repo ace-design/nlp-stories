@@ -57,3 +57,10 @@ def test_different_type():
     
     with pytest.raises(AttributeError):
         result = check_common_elements(baseline, nlp)
+
+@pytest.mark.check_common_elements
+def test_slightly_different():
+    baseline = "user's stats"
+    nlp = "user"
+    
+    assert check_common_elements(baseline, nlp) == False
