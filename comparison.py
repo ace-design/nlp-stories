@@ -2,7 +2,6 @@
 import argparse
 import copy
 import csv
-from difflib import SequenceMatcher
 import json
 import matplotlib.pyplot as plt
 import numpy as np
@@ -476,24 +475,6 @@ def check_common_elements(nlp_element, baseline_element):
         return True
     else:
         return False
-        
-# def check_similar_elements(nlp_element, baseline_element):
-#     '''
-#     determine if an element is similar to part of another element
-
-#     Paramters:
-#     nlp_element (str): element from nlp tool to evaluate if common element exist
-#     baseline_element (str): element from baseline to evaluate if common element exist
-#     '''
-
-#     nlp_element_list = nlp_element.split()
-#     baseline_element_list = baseline_element.split()
-#     for i in range(len(nlp_element_list)):
-#         for j in range(len(baseline_element_list)):
-#             similarity_ratio = SequenceMatcher(None, nlp_element_list[i], baseline_element_list[j]).ratio()
-#             if similarity_ratio >= 0.75:
-#                 return True
-#     return False
         
 def count_true_false_positives_negatives(comparison_results):
     '''
