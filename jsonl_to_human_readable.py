@@ -337,7 +337,7 @@ def saveFile(path, dictionary_list):
         dictionary_list (list): info to be saved onto file
     '''
     json.dumps(dictionary_list)
-    with open(path,"w") as file:
+    with open(path,"w", encoding="utf-8") as file:
         json.dump(dictionary_list, file, ensure_ascii=False, indent = 4)
     print("File is saved")
 

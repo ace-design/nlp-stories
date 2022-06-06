@@ -10,8 +10,6 @@ def main():
     output_data = create_output(required_data)
     save_results(output_data, save_name)
 
-
-
 def command():
     '''
     Runs the command line inputs
@@ -24,6 +22,7 @@ def command():
         FileNotFoundError: raises excpetion
         wrong file type: raises exception
     '''
+    
     parser = argparse.ArgumentParser(description = "This program will convert fabian's output to output that is useable by comparison.py")
     parser.add_argument("load_path", type = str, help = "path to the file of to convert output")
     parser.add_argument("save_name", type = str, help = "name of the file of to save results")
@@ -115,7 +114,7 @@ def save_results(output_data, save_name):
     save_path = "outputs\\fabian\\" + save_name + ".json"
 
     json.dumps(output_data)
-    with open(save_path,"w") as file:
+    with open(save_path,"w", encoding="utf-8") as file:
         json.dump(output_data, file, ensure_ascii=False, indent = 4)
 
 if __name__ == "__main__":
