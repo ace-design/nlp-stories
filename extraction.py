@@ -160,7 +160,7 @@ def save_json(save_path, dictionary_list):
     '''
 
     json.dumps(dictionary_list)
-    with open(save_path,"w") as file:
+    with open(save_path,"w", encoding="utf-8") as file:
         json.dump(dictionary_list, file, ensure_ascii=False, indent = 4)
     print("File is saved")
     
