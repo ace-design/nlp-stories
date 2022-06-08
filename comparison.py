@@ -423,8 +423,7 @@ def compare (baseline, nlp):
     true_positive_half =[]
     false_positive = []
 
-    print(baseline)
-    print(nlp)
+    #ALSO do a strip() so whitespace do not affect comparisons. 
     
     for i in range(len(nlp)):
         nlp_element = nlp[i].lower()
@@ -448,12 +447,6 @@ def compare (baseline, nlp):
             false_positive.append(nlp_element)
     
     false_nagative = copy.deepcopy(baseline)
-
-    print(true_positive_full)
-    print(true_positive_half)
-    print(false_positive)
-    print(false_nagative)
-    print("\n")
 
     comparison_results = [true_positive_full, true_positive_half, false_positive, false_nagative]
 

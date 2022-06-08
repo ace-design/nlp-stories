@@ -77,8 +77,8 @@ def command():
     try:
         load_file = open(args.load_primary_path)
         load_file.close()
-        save_file = open(args.load_all_path)
-        save_file.close()
+        load_all_file = open(args.load_all_path)
+        load_all_file.close()
         save_folder_path = "final_results\\" + args.save_folder_name
         os.mkdir(save_folder_path)
 
