@@ -66,7 +66,9 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
             action_comparison = strict_compare(baseline_action[i], nlp_action[i])
         #Inclusion comparison
         elif comparison_mode == 2:
-            print()
+            persona_comparison = inclusion_compare(baseline_persona[i], nlp_persona[i])
+            entity_comparison = inclusion_compare(baseline_entity[i], nlp_entity[i])
+            action_comparison = inclusion_compare(baseline_action[i], nlp_action[i])
         #relaxed comparison
         else:
             print()
@@ -420,7 +422,6 @@ def sort(baseline_data, nlp_tool_data):
 
     return sorted_baseline_data, sorted_nlp_tool_data, missing_stories
 
-
 def strict_compare (baseline, nlp):
     '''
     calculate the number of true/false positives and false negatives using STRICT comparison
@@ -458,6 +459,69 @@ def strict_compare (baseline, nlp):
 
     return comparison_results
 
+def inclusion_compare (baseline, nlp):
+    '''
+    calculate the number of true/false positives and false negatives for inclusion comparison mode
+
+    Parameters:
+    baseline (list): the elements being compared to 
+    nlp (list): the elements comparing for accuracy 
+
+    Returns:
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives, including half points
+    '''
+    true_positive = []
+    false_positive = []
+
+    for i in range(len(nlp)):
+        nlp_element = nlp[i].lower().strip()
+        not_true_positive = True
+
+        #first checks if there are any exact cases
+        for j in range (len(baseline)):
+            baseline_element = baseline[j].lower().strip()
+
+            if nlp_element == baseline_element:
+                true_positive.append(baseline[j])
+                baseline.pop(j)
+                not_true_positive = False
+                break
+
+        #Checks if there is any inlcusions (not including qualifiers)
+        if not_true_positive:
+            for j in range (len(baseline)):
+                baseline_element = baseline[j].lower().strip()
+                if check_inclusion_elements(nlp_element, baseline_element) == True:
+                    true_positive.append(baseline[j])
+                    baseline.pop(j)
+                    not_true_positive = False
+                    break
+
+        #If it still not identified as true_positive, then the element is a false positive
+        if not_true_positive:
+            false_positive.append(nlp_element)
+    
+    false_nagative = copy.deepcopy(baseline)
+
+    comparison_results = [true_positive, false_positive, false_nagative]
+
+    return comparison_results
+
+def check_inclusion_elements(nlp_element, baseline_element):
+    '''
+    determine if an element is part of another element but does not contain any qualifiers
+
+    Paramters:
+    nlp_element (str): element from nlp tool to evaluate if common element exist
+    baseline_element (str): element from baseline to evaluate if common element exist
+    '''
+    nlp_element_list = nlp_element.split()
+    baseline_element_list = baseline_element.split()
+
+    if ((nlp_element in baseline_element) or (baseline_element in nlp_element)) and len(nlp_element_list) == len(baseline_element_list):
+        return True
+    else:
+        return False
 
 def compare (baseline, nlp):
     '''
@@ -487,7 +551,7 @@ def compare (baseline, nlp):
         if not_true_positive:
             for j in range (len(baseline)):
                 baseline_element = baseline[j].lower()
-                if check_common_elements(nlp_element, baseline_element) == True:
+                if check_inclusion_elements(nlp_element, baseline_element) == True:
                     true_positive_half.append(baseline[j])
                     baseline.pop(j)
                     not_true_positive = False
@@ -501,22 +565,7 @@ def compare (baseline, nlp):
 
     return comparison_results
 
-def check_common_elements(nlp_element, baseline_element):
-    '''
-    determine if an element is part of another element
 
-    Paramters:
-    nlp_element (str): element from nlp tool to evaluate if common element exist
-    baseline_element (str): element from baseline to evaluate if common element exist
-    '''
-    nlp_element_list = nlp_element.split()
-    baseline_element_list = baseline_element.split()
-    common_elements = set(nlp_element_list).intersection(baseline_element_list)
-
-    if len(common_elements) != 0:
-        return True
-    else:
-        return False
         
 def count_true_false_positives_negatives(comparison_results):
     '''
