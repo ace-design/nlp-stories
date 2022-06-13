@@ -24,10 +24,10 @@ def main():
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
     primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode)
-    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path)
+    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
 
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode)
-    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path)
+    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
 
 def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     '''
@@ -57,12 +57,20 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     count_entity_comparison_list = []
     count_action_comparison_list = []
 
-
+   
     for i in range(len(baseline_text)):
-        persona_comparison = compare(baseline_persona[i], nlp_persona[i])
-        entity_comparison = compare(baseline_entity[i], nlp_entity[i])
-        action_comparison = compare(baseline_action[i], nlp_action[i])
-
+        #Strict comparison 
+        if comparison_mode == 1:
+            persona_comparison = strict_compare(baseline_persona[i], nlp_persona[i])
+            entity_comparison = strict_compare(baseline_entity[i], nlp_entity[i])
+            action_comparison = strict_compare(baseline_action[i], nlp_action[i])
+        #Inclusion comparison
+        elif comparison_mode == 2:
+            print()
+        #relaxed comparison
+        else:
+            print()
+            
         persona_comparison_collection.append(persona_comparison)
         entity_comparison_collection.append(entity_comparison)
         action_comparison_collection.append(action_comparison)
@@ -82,7 +90,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
 
     return story_results, count_list, comparison_collection, missing_stories, baseline_text
 
-def output_results(story_results, count_list, comparison_collection, missing_stories, baseline_text, save_folder_path, csv_saving_path):
+def output_results(story_results, count_list, comparison_collection, missing_stories, baseline_text, save_folder_path, csv_saving_path, comparison_mode):
     ''''
     Ouput the results to various formats
 
@@ -94,6 +102,7 @@ def output_results(story_results, count_list, comparison_collection, missing_sto
     baseline_text (list): story text in order based on evaluation order
     save_folder_path (str): the path of the folder to save results
     csv_saving_path (str): path to save final results to 
+    comparison_mode (int): the mode of the comparision that was completed on the data (1-strict, 2-inclusive, 3-relaxed)
     '''
     x_axis_data = np.linspace(10,100,10)
     bargraph(story_results, x_axis_data, save_folder_path)
@@ -102,7 +111,7 @@ def output_results(story_results, count_list, comparison_collection, missing_sto
 
     output_terminal(baseline_text, comparison_collection, dataset_results, story_results, missing_stories)
     save_missing_stories(missing_stories, save_folder_path)
-    save_csv(csv_saving_path, dataset_results)
+    save_csv(csv_saving_path, dataset_results, comparison_mode)
 
 def individual_story(count_list):
     '''
@@ -411,6 +420,45 @@ def sort(baseline_data, nlp_tool_data):
 
     return sorted_baseline_data, sorted_nlp_tool_data, missing_stories
 
+
+def strict_compare (baseline, nlp):
+    '''
+    calculate the number of true/false positives and false negatives using STRICT comparison
+
+    Parameters:
+    baseline (list): the elements being compared to 
+    nlp (list): the elements comparing for accuracy 
+
+    Returns:
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives
+    '''
+
+    true_positive = []
+    false_positive = []
+
+    for i in range(len(nlp)):
+        nlp_element = nlp[i].lower().strip()
+        not_true_positive = True
+
+        for j in range (len(baseline)):
+            baseline_element = baseline[j].lower().strip()
+
+            if nlp_element == baseline_element:
+                true_positive.append(baseline[j])
+                baseline.pop(j)
+                not_true_positive = False
+                break
+
+        if not_true_positive:
+            false_positive.append(nlp_element)
+    
+    false_nagative = copy.deepcopy(baseline)
+
+    comparison_results = [true_positive, false_positive, false_nagative]
+
+    return comparison_results
+
+
 def compare (baseline, nlp):
     '''
     calculate the number of true/false positives and false negatives 
@@ -425,14 +473,12 @@ def compare (baseline, nlp):
     true_positive_full = []
     true_positive_half =[]
     false_positive = []
-
-    #ALSO do a strip() so whitespace do not affect comparisons. 
     
     for i in range(len(nlp)):
-        nlp_element = nlp[i].lower()
+        nlp_element = nlp[i].lower().strip()
         not_true_positive = True
         for j in range (len(baseline)):
-            baseline_element = baseline[j].lower()
+            baseline_element = baseline[j].lower().strip()
             if nlp_element == baseline_element:
                 true_positive_full.append(baseline[j])
                 baseline.pop(j)
@@ -477,13 +523,13 @@ def count_true_false_positives_negatives(comparison_results):
     count the number of true/false positives and false negatives 
 
     Parameters:
-    comparison_results (2D list): includes the elements identified as true/false positives and false negatives. including half points
+    comparison_results (2D list): includes the elements identified as true/false positives and false negatives.
 
     Returns:
     number_comparison (2D list): the number of elements identified as true/false positives and false negatives
     '''
-    true_positive_full, true_positive_half, false_positive, false_negative = comparison_results
-    number_true_positive = len(true_positive_full) + len(true_positive_half) * 0.5
+    true_positive_full, false_positive, false_negative = comparison_results
+    number_true_positive = len(true_positive_full)
     number_false_positive = len(false_positive)
     number_false_negative = len(false_negative)
 
@@ -698,25 +744,22 @@ def output_terminal(baseline_text, comparison_collection, dataset_results, story
         print("Text:", baseline_text[i])
         print("__PERSONA__")
         print("True Positive:", ", ".join(persona_comparison_collection[i][0]))
-        print("Partial True Positive:", ", ".join(persona_comparison_collection[i][1]))
-        print("False Postive:", ", ".join(persona_comparison_collection[i][2]))
-        print("False Negative:", ", ".join(persona_comparison_collection[i][3]))
+        print("False Postive:", ", ".join(persona_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(persona_comparison_collection[i][2]))
         print("\nPrecision:", story_persona_precision [i])
         print("Recall:", story_persona_recall[i])
         print("F-Measure:", story_persona_f_measure[i])
         print("\n__ENTITY__")
         print("True Positive:", ", ".join(entity_comparison_collection[i][0]))
-        print("Partial True Positive:", ", ".join(entity_comparison_collection[i][1]))
-        print("False Postive:", ", ".join(entity_comparison_collection[i][2]))
-        print("False Negative:", ", ".join(entity_comparison_collection[i][3]))
+        print("False Postive:", ", ".join(entity_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(entity_comparison_collection[i][2]))
         print("\nPrecision:", story_entity_precision [i])
         print("Recall:", story_entity_recall[i])
         print("F-Measure:", story_entity_f_measure[i])
         print("\n__ACTION__")
         print("True Positive:", ", ".join(action_comparison_collection[i][0]))
-        print("Partial True Positive:", ", ".join(action_comparison_collection[i][1]))
-        print("False Postive:", ", ".join(action_comparison_collection[i][2]))
-        print("False Negative:", ", ".join(action_comparison_collection[i][3]))
+        print("False Postive:", ", ".join(action_comparison_collection[i][1]))
+        print("False Negative:", ", ".join(action_comparison_collection[i][2]))
         print("\nPrecision:", story_action_precision [i])
         print("Recall:", story_action_recall[i])
         print("F-Measure:", story_action_f_measure[i])
@@ -761,13 +804,14 @@ def save_missing_stories(missing_stories, save_folder_path):
         file.write(nlp_tool_missing_stories[i] + "\n")
     file.close()
 
-def save_csv(saving_path, dataset_results):
+def save_csv(saving_path, dataset_results, comparison_mode):
     '''
     save the final results of dataset precision, recall and f-measure of persona, entity and action
 
     Parameters:
     saving_path (str): path to the file to save the data 
     dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
+    comparison_mode (int): the mode of the comparision that was completed on the data (1-strict, 2-inclusive, 3-relaxed)
     '''
     dataset_precision, dataset_recall, dataset_f_measure = dataset_results
 
@@ -775,7 +819,14 @@ def save_csv(saving_path, dataset_results):
     persona_recall, entity_recall, action_recall = dataset_recall
     persona_f_measure, entity_f_measure, action_f_measure = dataset_f_measure
 
-    data = [persona_precision, entity_precision, action_precision,persona_recall, entity_recall, action_recall,persona_f_measure, entity_f_measure, action_f_measure]
+    if comparison_mode == 1:
+        comparison_type = "Strict Comparison"
+    elif comparison_mode == 2:
+        comparison_type = "Inclusive Comparison"
+    else:
+        comparison_type = "Relaxed Comparison"
+
+    data = [persona_precision, entity_precision, action_precision,persona_recall, entity_recall, action_recall,persona_f_measure, entity_f_measure, action_f_measure, comparison_mode, comparison_type]
 
     with open (saving_path, "a", newline = "") as file:
         writer = csv.writer(file)
