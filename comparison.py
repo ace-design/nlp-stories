@@ -23,19 +23,20 @@ def main():
     primary_csv_path = "C:\\Users\\sathu\\nlp-stories\\primary_dataset_results.csv"
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
-    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data)
+    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode)
     output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path)
 
-    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data)
+    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode)
     output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path)
 
-def compare_and_get_results(baseline_data, nlp_tool_data):
+def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     '''
     Runs all the functions that will compare and get the results of the comparison
 
     Parameters:
     baseline_data (2D list): contains text, persona, primary entities, and primary actions identified by the baseline data
     nlp_tool_data (2D list): contains text, persona, primary entities, and primary actions identified by the nlp tool 
+    comparison_mode (int): determines the mode of comparing (1-strict, 2-inclusive, 3-relaxed)
 
     Returns:
     story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
@@ -94,12 +95,6 @@ def output_results(story_results, count_list, comparison_collection, missing_sto
     save_folder_path (str): the path of the folder to save results
     csv_saving_path (str): path to save final results to 
     '''
-    story_precision_results, story_recall_results, story_f_measure_results = story_results
-
-    
-    scatterplot_data = [story_precision_results, story_recall_results]
-    scatterplot(scatterplot_data, save_folder_path)
-
     x_axis_data = np.linspace(10,100,10)
     bargraph(story_results, x_axis_data, save_folder_path)
 
@@ -577,44 +572,6 @@ def calculate_f_measure (precision, recall):
         f_measure = 2 * (precision * recall)/ (precision + recall)
 
     return f_measure
-
-def scatterplot(input_data, save_folder_path):
-    '''
-    runs the commands to plot the precision and recall of each story as a scatterplot
-
-    Parameters:
-    input_data (2D list): contains the data of precision and corresponding recall for each story
-    save_folder_path (str): the path for saving the graphs
-
-    '''
-
-    story_precision_results, story_recall_results = input_data
-    story_persona_precision, story_entity_precision, story_action_precision = story_precision_results
-    story_persona_recall, story_entity_recall, story_action_recall = story_recall_results
-
-    create_scattergraph(story_persona_precision, story_persona_recall, "m", "Recall Vs. Precision for Persona", save_folder_path, "\\persona_recall_precision")
-    create_scattergraph(story_entity_precision, story_entity_recall, "r", "Recall Vs. Precision for Entity", save_folder_path, "\\entity_recall_precision")
-    create_scattergraph(story_action_precision, story_action_recall, "b", "Recall Vs. Precision for Action", save_folder_path, "\\action_recall_precision")
-
-def create_scattergraph(precision_data, recall_data, graph_color, title, save_folder_path, save_name):
-    '''
-    creates and saves the scattergraph
-
-    Parameters:
-    precision_data (list): data of the precision of each story in order 
-    recall_Data (list): data of the recall of each story in order
-    graph_color (str): the color of the plotting data
-    title (str): the title of the graph 
-    save_folder_path (str): the path to save the graphs
-    save_name (str): name of the file for saving
-    '''
-
-    graph = sns.jointplot(x=tuple(precision_data), y=tuple(recall_data), kind="scatter", xlim=(0,1), ylim=(0,1), color= graph_color, clip_on = False)
-    graph.set_axis_labels('Precision', 'Recall', fontsize=14)
-    graph.fig.suptitle(title, fontsize = 16)
-    graph.figure.tight_layout() 
-    
-    graph.savefig(save_folder_path + save_name +".png")
 
 def bargraph(story_results, x_axis_data, save_folder_path):
     '''
