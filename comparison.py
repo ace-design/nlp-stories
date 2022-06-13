@@ -10,7 +10,7 @@ import seaborn as sns
 import sys
 
 def main():
-    base_path, nlp_tool_path, save_folder_path = command()
+    base_path, nlp_tool_path, save_folder_path, comparison_mode = command()
     primary_baseline_data = extract_primary_baseline_info(base_path)
     all_baseline_data = extract_all_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
@@ -212,22 +212,31 @@ def command():
         args.load_baseline_path (str): Path to the baseline evaluation file to be loaded
         args.load_nlp_tool_path (str): Path to the nlp tool evaluation file to be loaded
         args.save_folder_name (str): Path to the file to be saved
+        args.comparison_mode (int): the comparison mode, where (1-strict, 2-inclusive, 3-relaxed)
 
     Raises:
         FileNotFoundError: raises excpetion
         FileExistsError: raise exception
         wrong file type: raises exception
+        wrpng comparioson mode value: raises exception (must be either 1, 2, or 3)
     '''
     parser = argparse.ArgumentParser(description = "This program is to compare accuracy of NLP")
     parser.add_argument("load_baseline_path", type = str, help = "path of file")
     parser.add_argument("load_nlp_tool_path", type = str, help = "path of file to save")
     parser.add_argument("save_folder_name", type = str, help = "name of the folder to save the graphs")
+    parser.add_argument("comparison_mode", type = int, help = "Comparision mode for comparing. Following are options: (1-strict, 2-inclusive, 3-relaxed)")
     
     args = parser.parse_args()
+
+    if not(args.comparison_mode == 1 or args.comparison_mode == 2 or args.comparison_mode == 3):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect mode value. Following are options: (1-strict, 2-inclusive, 3-relaxed)")
+
 
     if not(args.load_nlp_tool_path.endswith(".json") and args.load_baseline_path.endswith(".json")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. input file type is .json")
+
     try:
         load_baseline_file = open(args.load_baseline_path)
         load_baseline_file.close()
@@ -244,7 +253,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path  
+        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, args.comparison_mode
 
 def extract_primary_baseline_info(path):
     '''
@@ -396,7 +405,6 @@ def sort(baseline_data, nlp_tool_data):
                 del nlp_action[j]
                 break
 
-            
     nlp_missing_story = set(baseline_text).difference(set(sorted_baseline_text))
     nlp_missing_story_list = list(nlp_missing_story)
 
