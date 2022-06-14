@@ -41,3 +41,4 @@ The expected structure of the example text above will look something like:
 
 The following projects did not follow expected sentence structure: 
 * g02-federal-funding 
+* g13-planningpoker
