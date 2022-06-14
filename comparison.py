@@ -1,12 +1,14 @@
 #This file will compare the results of the baseline and the nlp tools annotations for accuracy
 import argparse
 import copy
+from copyreg import remove_extension
 import csv
 import json
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 import seaborn as sns
+import stanza
 import sys
 
 def main():
@@ -23,11 +25,16 @@ def main():
     primary_csv_path = "C:\\Users\\sathu\\nlp-stories\\primary_dataset_results.csv"
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
-    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode)
-    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
+    if comparison_mode == 3:
+        stanza.download('en') 
+        global stanza_nlp
+        stanza_nlp = stanza.Pipeline('en')
+ 
+    # primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode)
+    # output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
 
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode)
-    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
+    #output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
 
 def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     '''
@@ -57,6 +64,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     count_entity_comparison_list = []
     count_action_comparison_list = []
 
+    
    
     for i in range(len(baseline_text)):
         #Strict comparison 
@@ -71,7 +79,11 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
             action_comparison = inclusion_compare(baseline_action[i], nlp_action[i])
         #relaxed comparison
         else:
-            print()
+            persona_comparison = relaxed_compare(baseline_persona[i], nlp_persona[i])
+            entity_comparison = relaxed_compare(baseline_entity[i], nlp_entity[i])
+            action_comparison = relaxed_compare(baseline_action[i], nlp_action[i])
+
+
             
         persona_comparison_collection.append(persona_comparison)
         entity_comparison_collection.append(entity_comparison)
@@ -514,6 +526,10 @@ def check_inclusion_elements(nlp_element, baseline_element):
     Paramters:
     nlp_element (str): element from nlp tool to evaluate if common element exist
     baseline_element (str): element from baseline to evaluate if common element exist
+
+    Returns:
+    True if elements considers to be inclusive
+    False if elements not consider to be inclusive
     '''
     nlp_element_list = nlp_element.split()
     baseline_element_list = baseline_element.split()
@@ -522,51 +538,186 @@ def check_inclusion_elements(nlp_element, baseline_element):
         return True
     else:
         return False
-
-def compare (baseline, nlp):
+        
+def relaxed_compare(baseline, nlp):
     '''
-    calculate the number of true/false positives and false negatives 
+    calculate the number of true/false positives and false negatives for relaxed comparison mode
 
     Parameters:
-    baseline (list): the elements being compared to 
-    nlp (list): the elements comparing for accuracy 
+    baseline (class): the elements being compared to, the class the text and UPOS of each word
+    nlp (class): the elements comparing for accuracy, the class the text and UPOS of each word
 
     Returns:
     comparison_results (2D list): includes the elements identified as true/false positives and false negatives, including half points
     '''
-    true_positive_full = []
-    true_positive_half =[]
+    true_positive = []
     false_positive = []
-    
+    false_negative = []
+    left_over_baseline = []
+    left_over_nlp = []
+
+    a = copy.deepcopy(baseline)
+
     for i in range(len(nlp)):
         nlp_element = nlp[i].lower().strip()
         not_true_positive = True
+
+        #first checks if there are any exact cases
         for j in range (len(baseline)):
             baseline_element = baseline[j].lower().strip()
+
             if nlp_element == baseline_element:
-                true_positive_full.append(baseline[j])
+                true_positive.append(baseline[j])
                 baseline.pop(j)
                 not_true_positive = False
-                break
+                break 
+        #If it still not identified as true_positive, then the element is a false positive
         if not_true_positive:
-            for j in range (len(baseline)):
-                baseline_element = baseline[j].lower()
-                if check_inclusion_elements(nlp_element, baseline_element) == True:
-                    true_positive_half.append(baseline[j])
-                    baseline.pop(j)
-                    not_true_positive = False
-                    break
-        if not_true_positive:
-            false_positive.append(nlp_element)
-    
-    false_nagative = copy.deepcopy(baseline)
+            left_over_nlp.append(nlp_element)
 
-    comparison_results = [true_positive_full, true_positive_half, false_positive, false_nagative]
+    left_over_baseline = copy.deepcopy(baseline)
+
+    baseline_upos_tag = []
+    baseline_text = []
+    nlp_upos_tag = []
+    nlp_text = []
+    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT"]
+
+    for i in range(len(left_over_baseline)):
+        baseline_stanza = stanza_nlp(left_over_baseline[i])
+
+        text = ""
+        for sent in baseline_stanza.sentences:
+            for word in sent.words:
+                if not(word.upos in remove_qualifiers):
+                    baseline_upos_tag.append(word.upos)
+                    text += word.text + " "
+        baseline_text.append(text)
+
+    for i in range(len(left_over_nlp)):
+        nlp_stanza = stanza_nlp(left_over_nlp[i])
+        
+        text = ""
+        for sent in nlp_stanza.sentences:
+            for word in sent.words:
+                if not(word.upos in remove_qualifiers):
+                    nlp_upos_tag.append(word.upos)
+                    text += word.text + " "
+        nlp_text.append(text)
+
+
+    g = copy.deepcopy(baseline_text)
+    h = copy.deepcopy(nlp_text)
+
+
+    for i in range(len(nlp_text)):
+        nlp_element = nlp_text[i].lower().strip()
+        not_true_positive = True
+
+        #first checks if there are any exact cases
+        for j in range (len(baseline_text)):
+            baseline_element = baseline_text[j].lower().strip()
+
+            if nlp_element == baseline_element:
+                true_positive.append(left_over_baseline[j])
+                left_over_baseline.pop(j)
+                baseline_text.pop(j)
+                not_true_positive = False
+                break 
+        #If it still not identified as true_positive, then the element is a false positive
+        if not_true_positive:
+            false_positive.append(left_over_nlp[i])
+
+    false_nagative = copy.deepcopy(left_over_baseline)
+
+
+
+
+    print(a)
+    print(nlp)
+    print(true_positive)
+    print(false_positive)
+    print(false_nagative)
+    print(g)
+    print(h)
+    print("\n")
+
+    # for i in range(len(nlp)):
+    #     nlp_element = nlp[i].lower().strip()
+    #     not_true_positive = True
+
+    #     #first checks if there are any exact cases
+    #     for j in range (len(baseline)):
+    #         baseline_element = baseline[j].lower().strip()
+
+    #         if nlp_element == baseline_element:
+    #             true_positive.append(baseline[j])
+    #             baseline.pop(j)
+    #             not_true_positive = False
+    #             break
+
+    #     #Checks if there is any comparison using relaxed method
+    #     if not_true_positive:
+    #         for j in range (len(baseline)):
+    #             if upos_tag_compare(nlp[i], baseline[j]) == True:
+    #                 true_positive.append(baseline[j])
+    #                 baseline.pop(j)
+    #                 not_true_positive = False
+    #                 break
+
+    #     #If it still not identified as true_positive, then the element is a false positive
+    #     if not_true_positive:
+    #         false_positive.append(nlp_element)
+    # 
+    #       
+    # false_nagative = copy.deepcopy(baseline)
+
+
+    comparison_results = [true_positive, false_positive, false_nagative]
 
     return comparison_results
 
 
-        
+def upos_tag_compare(nlp_element, baseline_element):
+    '''
+    Uses UPOS tag comparison for relaxed comparison
+
+    Paramters:
+    nlp_element (str): element from nlp tool to evaluate if common element exist
+    baseline_element (str): element from baseline to evaluate if common element exist
+
+    Returns:
+    True if elements considers to be same in relaxed way
+    False if elements not consider to be same in relaxed way
+    '''
+
+    baseline_upos_tag = []
+    baseline_text = ""
+    nlp_upos_tag = []
+    nlp_text = ""
+    remove_qualifiers = ["ADJ", "ADV", "DET", "X"]
+
+    baseline_stanza = stanza_nlp(baseline_element)
+    nlp_stanza = stanza_nlp(nlp_element)
+    
+    for sent in baseline_stanza.sentences:
+        for word in sent.words:
+            if not(word.upos in remove_qualifiers):
+                baseline_upos_tag.append(word.upos)
+                baseline_text += word.text + " "
+    
+    for sent in nlp_stanza.sentences:
+        for word in sent.words:
+            if not(word.upos in remove_qualifiers):
+                nlp_upos_tag.append(word.upos)
+                nlp_text += word.text + " "
+
+    if baseline_text.lower() == nlp_text.lower():
+        return True
+    else:
+        return False
+            
+
 def count_true_false_positives_negatives(comparison_results):
     '''
     count the number of true/false positives and false negatives 
