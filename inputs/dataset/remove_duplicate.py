@@ -1,4 +1,4 @@
-file = open("inputs\\dataset\\g12-camperplus.txt")
+file = open("C:\\Users\\sathu\\nlp-stories\\inputs\\dataset\\g13-planningpoker.txt")
 lines = file.readlines()
 print("start")
 for i in range(len(lines)):
