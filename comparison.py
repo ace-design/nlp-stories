@@ -581,7 +581,7 @@ def relaxed_compare(baseline, nlp):
     baseline_text = []
     nlp_upos_tag = []
     nlp_text = []
-    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT"]
+    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT", "NUM", "AUX"]
 
     for i in range(len(left_over_baseline)):
         baseline_stanza = stanza_nlp(left_over_baseline[i])
@@ -628,7 +628,7 @@ def relaxed_compare(baseline, nlp):
         if not_true_positive:
             false_positive.append(left_over_nlp[i])
 
-    false_nagative = copy.deepcopy(left_over_baseline)
+    false_negative = copy.deepcopy(left_over_baseline)
 
 
 
@@ -637,7 +637,7 @@ def relaxed_compare(baseline, nlp):
     print(nlp)
     print(true_positive)
     print(false_positive)
-    print(false_nagative)
+    print(false_negative)
     print(g)
     print(h)
     print("\n")
@@ -673,7 +673,7 @@ def relaxed_compare(baseline, nlp):
     # false_nagative = copy.deepcopy(baseline)
 
 
-    comparison_results = [true_positive, false_positive, false_nagative]
+    comparison_results = [true_positive, false_positive, false_negative]
 
     return comparison_results
 
