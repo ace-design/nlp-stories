@@ -35,7 +35,7 @@ def main():
         dictionary_list.append(dictionary)
         
     print("Saving\n")
-    saveFile(save_path, dictionary_list)
+    save_file(save_path, dictionary_list)
 
 def command():
     '''
@@ -43,7 +43,7 @@ def command():
 
     Returns:
         args.load_path (str): Path to the file to be loaded
-        args.save_path (str): Path to the file to be saved
+        args.save_name (str): name of the file to save results
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -52,24 +52,20 @@ def command():
 
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
     parser.add_argument("load_path", type = str, help = "path of file")
-    parser.add_argument("save_path", type = str, help = "path of file to save")
+    parser.add_argument("save_name", type = str, help = "name of file to save")
     
     args = parser.parse_args()
 
-    if not(args.save_path.endswith(".json")):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect saving file type. Save file type is .json")
     try:
         load_file = open(args.load_path)
         load_file.close()
-        save_file = open(args.save_path)
-        save_file.close()
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
     else:
-        return args.load_path, args.save_path
+        save_folder_path = "outputs\\jsonl_to_human_readable\\" + args.save_name + ".json"
+        return args.load_path, save_folder_path
 
 def extract(path):
     '''
@@ -328,7 +324,7 @@ def convert_json_format(text, label_list, relation_list):
 
     return data 
 
-def saveFile(path, dictionary_list):
+def save_file(path, dictionary_list):
     '''
     save the results into json file
 
