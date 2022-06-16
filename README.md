@@ -35,7 +35,7 @@ You can use the followiong relations:
 In the given data set, a few projects contained stories that did not have the expected story structure.
 An example, shown below, is when the persona is not directly performing the action on an entity, but rather an entity performing the main action on another entity.
 **Annotation for these stories still followed the annotation guidelines**. Missing annotaions and relations will be considered when evaluating the results  
-<img width="750" alt="annotation_of_unexpected_structure_example" src="https://user-images.githubusercontent.com/71148152/169082188-d4b526a1-4707-4c98-a5e0-76190e86be95.png">  
+<img width="750" alt="passive" src="https://user-images.githubusercontent.com/71148152/174147148-d46c7b90-0b59-4303-95be-a34cbbcf5a4b.png">  
 The expected structure of the example text above will look something like:
 >#G02# As an agency user, I want to be able to submit zero and blank for loan records through the FABS validation rules.
 
