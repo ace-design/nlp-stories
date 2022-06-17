@@ -1,7 +1,8 @@
 #This file will compare the results of the baseline and the nlp tools annotations for accuracy
+#POS tags: https://universaldependencies.org/u/pos/ 
+
 import argparse
 import copy
-from copyreg import remove_extension
 import csv
 import json
 import matplotlib.pyplot as plt
@@ -9,12 +10,17 @@ import numpy as np
 import os
 import seaborn as sns
 import stanza
+import subprocess
 import sys
+import create_pos_baseline
 
 def main():
-    base_path, nlp_tool_path, save_folder_path, comparison_mode = command()
-    primary_baseline_data = extract_primary_baseline_info(base_path)
-    all_baseline_data = extract_all_baseline_info(base_path)
+    base_path, nlp_tool_path, save_folder_path, comparison_mode, save_name = command()
+
+    base_path = check_pos_file(base_path, save_name)
+
+    primary_baseline_data, primary_pos_data = extract_primary_baseline_info(base_path)
+    all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
     primary_save_path = save_folder_path + "\\primary"
@@ -25,18 +31,17 @@ def main():
     primary_csv_path = "C:\\Users\\sathu\\nlp-stories\\primary_dataset_results.csv"
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
-    if comparison_mode == 3:
-        stanza.download('en') 
-        global stanza_nlp
-        stanza_nlp = stanza.Pipeline('en')
+    stanza.download('en') 
+    global stanza_pos_nlp
+    stanza_pos_nlp = stanza.Pipeline('en')
  
-    # primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode)
-    # output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
+    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode, primary_pos_data)
+    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
 
-    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode)
-    #output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
+    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data)
+    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
 
-def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
+def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data):
     '''
     Runs all the functions that will compare and get the results of the comparison
 
@@ -44,6 +49,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     baseline_data (2D list): contains text, persona, primary entities, and primary actions identified by the baseline data
     nlp_tool_data (2D list): contains text, persona, primary entities, and primary actions identified by the nlp tool 
     comparison_mode (int): determines the mode of comparing (1-strict, 2-inclusive, 3-relaxed)
+    pos_data (3D list): contains the pos data of persona, entity, and action
 
     Returns:
     story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
@@ -52,7 +58,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     missing_stories (2D list): missing stories from baseline_data and nlp tool 
     baseline_text (list): story text in order based on evaluation order
     '''
-    sorted_baseline_data, sorted_nlp_tool_data, missing_stories = sort(baseline_data, nlp_tool_data)
+    sorted_baseline_data, sorted_nlp_tool_data, sorted_pos, missing_stories = sort(baseline_data, nlp_tool_data, pos_data)
 
     baseline_text, baseline_persona, baseline_entity, baseline_action = sorted_baseline_data
     _, nlp_persona, nlp_entity, nlp_action = sorted_nlp_tool_data
@@ -63,8 +69,6 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
     count_persona_comparison_list = []
     count_entity_comparison_list = []
     count_action_comparison_list = []
-
-    
    
     for i in range(len(baseline_text)):
         #Strict comparison 
@@ -79,12 +83,11 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode):
             action_comparison = inclusion_compare(baseline_action[i], nlp_action[i])
         #relaxed comparison
         else:
-            persona_comparison = relaxed_compare(baseline_persona[i], nlp_persona[i])
-            entity_comparison = relaxed_compare(baseline_entity[i], nlp_entity[i])
-            action_comparison = relaxed_compare(baseline_action[i], nlp_action[i])
+            persona_pos, entity_pos, action_pos = sorted_pos
+            persona_comparison = relaxed_compare(baseline_persona[i], nlp_persona[i], persona_pos[i])
+            entity_comparison = relaxed_compare(baseline_entity[i], nlp_entity[i], entity_pos[i])
+            action_comparison = relaxed_compare(baseline_action[i], nlp_action[i], action_pos[i])
 
-
-            
         persona_comparison_collection.append(persona_comparison)
         entity_comparison_collection.append(entity_comparison)
         action_comparison_collection.append(action_comparison)
@@ -231,6 +234,7 @@ def command():
         args.load_nlp_tool_path (str): Path to the nlp tool evaluation file to be loaded
         args.save_folder_name (str): Path to the file to be saved
         args.comparison_mode (int): the comparison mode, where (1-strict, 2-inclusive, 3-relaxed)
+        args.save_folder_name (str): name of file to save
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -271,7 +275,27 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, args.comparison_mode
+        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, args.comparison_mode, args.save_folder_name
+
+def check_pos_file(load_path, save_name):
+    '''
+    Checks if the input path is a pos.json file and if not, it will create a pos file that contains the pos info of the annotations
+
+    Parameters:
+    load_path (str): path of the input file
+    save_name (Str): name of the file when saving
+    '''
+
+    if not(load_path.endswith("pos.json")):
+        command_input = "python create_pos_baseline.py " + load_path + " " + save_name
+        
+        subprocess.run(command_input)
+
+        saving_path = "outputs\\pos_baseline\\" + save_name +  "_pos.json"
+
+        return saving_path
+    else:
+        return load_path
 
 def extract_primary_baseline_info(path):
     '''
@@ -282,11 +306,15 @@ def extract_primary_baseline_info(path):
 
     Returns:
     baseline_data (2D list): contains text, persona, primary entities, and primary actions identified by the baseline data
+    pos_data (3D list): contains the text and the POS of the each annotation in each story 
     '''
     text = []
     persona = []
     primary_entity = []
     primary_action = []
+    persona_pos = []
+    primary_entity_pos = []
+    primary_action_pos = []
 
     file = open(path)
     data = json.load(file)
@@ -296,11 +324,15 @@ def extract_primary_baseline_info(path):
         persona.append(story["Persona"])
         primary_entity.append(story["Entity"]["Primary Entity"])
         primary_action.append(story["Action"]["Primary Action"])
+        persona_pos.append([story["Persona POS"]["Persona POS tag"], story["Persona POS"]["Persona POS text"]])
+        primary_entity_pos.append([story["Entity POS"]["Primary Entity POS"]["Primary Entity POS tag"], story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"]])
+        primary_action_pos.append([story["Action POS"]["Primary Action POS"]["Primary Action POS tag"], story["Action POS"]["Primary Action POS"]["Primary Action POS text"]])
     file.close()
 
     baseline_data = [text, persona, primary_entity, primary_action]
+    pos_data = [persona_pos, primary_entity_pos, primary_action_pos]
 
-    return baseline_data
+    return baseline_data, pos_data
 
 def extract_all_baseline_info(path):
     '''
@@ -311,11 +343,15 @@ def extract_all_baseline_info(path):
 
     Returns:
     baseline_data (2D list): contains text, persona, entities, and actions identified by the baseline data
+    pos_data (3D list): contains the text and the POS of the each annotation in each story 
     '''
     text = []
     persona = []
     entity = []
     action = []
+    persona_pos = []
+    entity_pos = []
+    action_pos = []
  
 
     file = open(path)
@@ -330,21 +366,43 @@ def extract_all_baseline_info(path):
         primary_action = story["Action"]["Primary Action"]
         secondary_action = story["Action"]["Secondary Action"]
 
+        persona_pos.append([story["Persona POS"]["Persona POS tag"], story["Persona POS"]["Persona POS text"]])
+
+        primary_entity_pos = story["Entity POS"]["Primary Entity POS"]["Primary Entity POS tag"]
+        secondary_entity_pos = story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS tag"]
+        primary_action_pos = story["Action POS"]["Primary Action POS"]["Primary Action POS tag"]
+        secondary_action_pos = story["Action POS"]["Secondary Action POS"]["Secondary Action POS tag"]
+
         if secondary_action != [""]:
             action.append(primary_action + secondary_action)
         else:
             action.append(primary_action)
 
-        if secondary_entity != [""]:
+        if primary_entity != [""] and secondary_entity != [""]:
             entity.append(primary_entity + secondary_entity)
+        elif secondary_entity != [""]:
+            entity.append(secondary_entity)
         else:
             entity.append(primary_entity)
+
+        if secondary_action_pos != [[]]:
+            action_pos.append([primary_action_pos + secondary_action_pos, story["Action POS"]["Primary Action POS"]["Primary Action POS text"] + story["Action POS"]["Secondary Action POS"]["Secondary Action POS text"]])
+        else:
+            action_pos.append([primary_action_pos, story["Action POS"]["Primary Action POS"]["Primary Action POS text"]])
+
+        if primary_entity_pos != [[]] and secondary_entity_pos != [[]]:
+            entity_pos.append([primary_entity_pos + secondary_entity_pos, story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"] + story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
+        elif secondary_entity_pos != [[]]:
+            entity_pos.append([secondary_entity_pos, story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
+        else:
+            entity_pos.append([primary_entity_pos, story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"]])
 
     file.close()
 
     baseline_data = [text, persona, entity, action]
+    pos_data = [persona_pos, entity_pos, action_pos]
 
-    return baseline_data
+    return baseline_data, pos_data
 
 def extract_nlp_tool_info(path):
     '''
@@ -375,21 +433,24 @@ def extract_nlp_tool_info(path):
 
     return nlp_tool_data
 
-def sort(baseline_data, nlp_tool_data):
+def sort(baseline_data, nlp_tool_data, pos_data):
     '''
     sorts the list in order to match the text, and detect missing stories
 
     Parameters:
     baseline_data (2D list): contains text, persona, primary entity, and primnary action identifies by the baseline data
     nlp_tool_data (2D list): contains text, persona, entity, and action identifies by the nlp tool data
+    pos_data (3D list): contains the pos data of persona, entity, and action
 
     Returns:
     sorted_baseline_data(2D list): sorted text, persona, entity, and action identified of baseline_data (considering missing stories of nlp)
     sorted_nlp_tool_data (2D list): sorted text, persona, entity, and action identified coresponding to baseline_data
+    sorted_pos (3d): sorted pos data based on sorted_baseline_data
     missing_stories (2D list): missing stories from baseline_data and nlp tool 
     '''
  
     baseline_text,baseline_persona, baseline_entity, baseline_action = baseline_data
+    persona_pos_data, entity_pos_data, action_pos_data = pos_data
     nlp_tool_data_copy = copy.deepcopy(nlp_tool_data)
     nlp_text, nlp_persona, nlp_entity, nlp_action  = nlp_tool_data_copy
     
@@ -402,6 +463,10 @@ def sort(baseline_data, nlp_tool_data):
     sorted_nlp_persona = []
     sorted_nlp_entity = []
     sorted_nlp_action= []
+
+    sorted_persona_pos = []
+    sorted_entity_pos = []
+    sorted_action_pos = []
 
     for i in range(len(baseline_text)):
         for j in range(len(nlp_text)):
@@ -416,6 +481,10 @@ def sort(baseline_data, nlp_tool_data):
                 sorted_nlp_persona.append(nlp_persona[j])
                 sorted_nlp_entity.append(nlp_entity[j])
                 sorted_nlp_action.append(nlp_action[j])
+
+                sorted_persona_pos.append(persona_pos_data[i])
+                sorted_entity_pos.append(entity_pos_data[i])
+                sorted_action_pos.append(action_pos_data[i])
                 
                 del nlp_text[j]
                 del nlp_persona[j]
@@ -430,9 +499,10 @@ def sort(baseline_data, nlp_tool_data):
 
     sorted_baseline_data = [sorted_baseline_text, sorted_baseline_persona, sorted_baseline_entity, sorted_baseline_action]
     sorted_nlp_tool_data = [sorted_nlp_text, sorted_nlp_persona, sorted_nlp_entity, sorted_nlp_action]
+    sorted_pos = [sorted_persona_pos, sorted_entity_pos, sorted_action_pos]
     missing_stories = [baseline_missing_story_list, nlp_missing_story_list]
 
-    return sorted_baseline_data, sorted_nlp_tool_data, missing_stories
+    return sorted_baseline_data, sorted_nlp_tool_data, sorted_pos, missing_stories
 
 def strict_compare (baseline, nlp):
     '''
@@ -539,13 +609,14 @@ def check_inclusion_elements(nlp_element, baseline_element):
     else:
         return False
         
-def relaxed_compare(baseline, nlp):
+def relaxed_compare(baseline, nlp, pos_data):
     '''
     calculate the number of true/false positives and false negatives for relaxed comparison mode
 
     Parameters:
-    baseline (class): the elements being compared to, the class the text and UPOS of each word
-    nlp (class): the elements comparing for accuracy, the class the text and UPOS of each word
+    baseline (list): the elements being compared to 
+    nlp (list): the elements comparing for accuracy 
+    pos_data (2d list): contains the POS data for each annotation of the label type 
 
     Returns:
     comparison_results (2D list): includes the elements identified as true/false positives and false negatives, including half points
@@ -556,6 +627,8 @@ def relaxed_compare(baseline, nlp):
     left_over_baseline = []
     left_over_nlp = []
 
+    baseline_pos_tag, baseline_pos_text = pos_data
+
     a = copy.deepcopy(baseline)
 
     for i in range(len(nlp)):
@@ -565,49 +638,44 @@ def relaxed_compare(baseline, nlp):
         #first checks if there are any exact cases
         for j in range (len(baseline)):
             baseline_element = baseline[j].lower().strip()
-
             if nlp_element == baseline_element:
                 true_positive.append(baseline[j])
                 baseline.pop(j)
+                baseline_pos_tag.pop(j)
+                baseline_pos_text.pop(j)
                 not_true_positive = False
                 break 
-        #If it still not identified as true_positive, then the element is a false positive
+
         if not_true_positive:
             left_over_nlp.append(nlp_element)
 
     left_over_baseline = copy.deepcopy(baseline)
 
-    baseline_upos_tag = []
     baseline_text = []
-    nlp_upos_tag = []
     nlp_text = []
-    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT", "NUM", "AUX"]
+    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT", "AUX", "CCONJ"]
 
-    for i in range(len(left_over_baseline)):
-        baseline_stanza = stanza_nlp(left_over_baseline[i])
+    for i in range(len(baseline_pos_tag)):
+        pos_text = ""
 
-        text = ""
-        for sent in baseline_stanza.sentences:
-            for word in sent.words:
-                if not(word.upos in remove_qualifiers):
-                    baseline_upos_tag.append(word.upos)
-                    text += word.text + " "
-        baseline_text.append(text)
+        for j in range(len(baseline_pos_tag[i])):
+            if not(baseline_pos_tag[i][j] in remove_qualifiers):
+                pos_text += baseline_pos_text[i][j] + " "
+        baseline_text.append(pos_text)
 
     for i in range(len(left_over_nlp)):
-        nlp_stanza = stanza_nlp(left_over_nlp[i])
-        
-        text = ""
+        nlp_stanza = stanza_pos_nlp(left_over_nlp[i])
+        pos_text = ""
+
         for sent in nlp_stanza.sentences:
             for word in sent.words:
                 if not(word.upos in remove_qualifiers):
-                    nlp_upos_tag.append(word.upos)
-                    text += word.text + " "
-        nlp_text.append(text)
+                    pos_text += word.text + " "
+        nlp_text.append(pos_text)
 
 
-    g = copy.deepcopy(baseline_text)
-    h = copy.deepcopy(nlp_text)
+
+    h = copy.deepcopy(baseline_text)
 
 
     for i in range(len(nlp_text)):
@@ -631,91 +699,20 @@ def relaxed_compare(baseline, nlp):
     false_negative = copy.deepcopy(left_over_baseline)
 
 
-
-
     print(a)
     print(nlp)
     print(true_positive)
     print(false_positive)
     print(false_negative)
-    print(g)
     print(h)
-    print("\n")
-
-    # for i in range(len(nlp)):
-    #     nlp_element = nlp[i].lower().strip()
-    #     not_true_positive = True
-
-    #     #first checks if there are any exact cases
-    #     for j in range (len(baseline)):
-    #         baseline_element = baseline[j].lower().strip()
-
-    #         if nlp_element == baseline_element:
-    #             true_positive.append(baseline[j])
-    #             baseline.pop(j)
-    #             not_true_positive = False
-    #             break
-
-    #     #Checks if there is any comparison using relaxed method
-    #     if not_true_positive:
-    #         for j in range (len(baseline)):
-    #             if upos_tag_compare(nlp[i], baseline[j]) == True:
-    #                 true_positive.append(baseline[j])
-    #                 baseline.pop(j)
-    #                 not_true_positive = False
-    #                 break
-
-    #     #If it still not identified as true_positive, then the element is a false positive
-    #     if not_true_positive:
-    #         false_positive.append(nlp_element)
-    # 
-    #       
-    # false_nagative = copy.deepcopy(baseline)
-
+    print(nlp_text)
+    print()
 
     comparison_results = [true_positive, false_positive, false_negative]
 
     return comparison_results
 
 
-def upos_tag_compare(nlp_element, baseline_element):
-    '''
-    Uses UPOS tag comparison for relaxed comparison
-
-    Paramters:
-    nlp_element (str): element from nlp tool to evaluate if common element exist
-    baseline_element (str): element from baseline to evaluate if common element exist
-
-    Returns:
-    True if elements considers to be same in relaxed way
-    False if elements not consider to be same in relaxed way
-    '''
-
-    baseline_upos_tag = []
-    baseline_text = ""
-    nlp_upos_tag = []
-    nlp_text = ""
-    remove_qualifiers = ["ADJ", "ADV", "DET", "X"]
-
-    baseline_stanza = stanza_nlp(baseline_element)
-    nlp_stanza = stanza_nlp(nlp_element)
-    
-    for sent in baseline_stanza.sentences:
-        for word in sent.words:
-            if not(word.upos in remove_qualifiers):
-                baseline_upos_tag.append(word.upos)
-                baseline_text += word.text + " "
-    
-    for sent in nlp_stanza.sentences:
-        for word in sent.words:
-            if not(word.upos in remove_qualifiers):
-                nlp_upos_tag.append(word.upos)
-                nlp_text += word.text + " "
-
-    if baseline_text.lower() == nlp_text.lower():
-        return True
-    else:
-        return False
             
 
 def count_true_false_positives_negatives(comparison_results):
