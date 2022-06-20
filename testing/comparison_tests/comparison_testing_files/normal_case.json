@@ -1,0 +1,115 @@
+[
+    {
+        "PID": "#G00#",
+        "Text": "#G00# As a user, I want to quickly click on the button to go to next page in tab.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "quickly click"
+            ],
+            "Secondary Action": [
+                "go"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "button"
+            ],
+            "Secondary Entity": [
+                "next page",
+                "tab"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "quickly click"
+            ]
+        ],
+        "Targets": [
+            [
+                "quickly click",
+                "button"
+            ]
+        ],
+        "Contains": [
+            [
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADJ", "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "quickly", "click"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "go"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "button"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "next",
+                        "page"
+                    ],
+                    [
+                        "tab"
+                    ]
+                ]
+            }
+        }
+    }
+]
