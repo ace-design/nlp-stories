@@ -12,7 +12,6 @@ import seaborn as sns
 import stanza
 import subprocess
 import sys
-import create_pos_baseline
 
 def main():
     base_path, nlp_tool_path, save_folder_path, comparison_mode, save_name = command()
@@ -23,6 +22,7 @@ def main():
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
     nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
+    
     primary_save_path = save_folder_path + "\\primary"
     all_save_path = save_folder_path + "\\all"
     os.mkdir(primary_save_path)
@@ -264,7 +264,15 @@ def command():
         load_baseline_file.close()
         load_nlp_tool_path = open(args.load_nlp_tool_path)
         load_nlp_tool_path.close()
-        save_folder_path = "graphs\\" + args.save_folder_name
+
+        if args.comparison_mode == 1:
+            save_folder_path = "graphs\\" + args.save_folder_name + "_strict_comparison"
+        elif args.comparison_mode == 2:
+            save_folder_path = "graphs\\" + args.save_folder_name + "_inclusive_comparison"
+        else:
+            save_folder_path = "graphs\\" + args.save_folder_name + "_relaxed_comparison"
+        
+        
         os.mkdir(save_folder_path)
     except FileNotFoundError:
         sys.tracebacklimit = 0
@@ -373,17 +381,18 @@ def extract_all_baseline_info(path):
         primary_action_pos = story["Action POS"]["Primary Action POS"]["Primary Action POS tag"]
         secondary_action_pos = story["Action POS"]["Secondary Action POS"]["Secondary Action POS tag"]
 
-        if secondary_action != [""]:
-            action.append(primary_action + secondary_action)
-        else:
-            action.append(primary_action)
+        story_action = primary_action + secondary_action
+        story_entity = primary_entity + secondary_entity
 
-        if primary_entity != [""] and secondary_entity != [""]:
-            entity.append(primary_entity + secondary_entity)
-        elif secondary_entity != [""]:
-            entity.append(secondary_entity)
-        else:
-            entity.append(primary_entity)
+        while "" in story_action:
+            story_action.remove("")
+
+        action.append(story_action)
+
+        while "" in story_entity:
+            story_entity.remove("")
+        
+        entity.append(story_entity)
 
         if secondary_action_pos != [[]]:
             action_pos.append([primary_action_pos + secondary_action_pos, story["Action POS"]["Primary Action POS"]["Primary Action POS text"] + story["Action POS"]["Secondary Action POS"]["Secondary Action POS text"]])
@@ -392,10 +401,10 @@ def extract_all_baseline_info(path):
 
         if primary_entity_pos != [[]] and secondary_entity_pos != [[]]:
             entity_pos.append([primary_entity_pos + secondary_entity_pos, story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"] + story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
-        elif secondary_entity_pos != [[]]:
-            entity_pos.append([secondary_entity_pos, story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
-        else:
+        elif primary_entity_pos != [[]]:
             entity_pos.append([primary_entity_pos, story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"]])
+        else:
+            entity_pos.append([secondary_entity_pos, story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
 
     file.close()
 
@@ -629,8 +638,6 @@ def relaxed_compare(baseline, nlp, pos_data):
 
     baseline_pos_tag, baseline_pos_text = pos_data
 
-    a = copy.deepcopy(baseline)
-
     for i in range(len(nlp)):
         nlp_element = nlp[i].lower().strip()
         not_true_positive = True
@@ -651,9 +658,10 @@ def relaxed_compare(baseline, nlp, pos_data):
 
     left_over_baseline = copy.deepcopy(baseline)
 
+    #Remove qualifiers from annotations
     baseline_text = []
     nlp_text = []
-    remove_qualifiers = ["ADJ", "ADP", "ADV", "DET", "INTJ", "X", "PUNCT", "AUX", "CCONJ"]
+    remove_qualifiers = ["ADJ", "ADP", "ADV","AUX", "CCONJ", "DET", "INTJ", "PUNCT", "SCONJ", "X"]
 
     for i in range(len(baseline_pos_tag)):
         pos_text = ""
@@ -673,11 +681,7 @@ def relaxed_compare(baseline, nlp, pos_data):
                     pos_text += word.text + " "
         nlp_text.append(pos_text)
 
-
-
-    h = copy.deepcopy(baseline_text)
-
-
+    #Compare with removed Qualifiers
     for i in range(len(nlp_text)):
         nlp_element = nlp_text[i].lower().strip()
         not_true_positive = True
@@ -692,28 +696,16 @@ def relaxed_compare(baseline, nlp, pos_data):
                 baseline_text.pop(j)
                 not_true_positive = False
                 break 
+
         #If it still not identified as true_positive, then the element is a false positive
         if not_true_positive:
             false_positive.append(left_over_nlp[i])
 
     false_negative = copy.deepcopy(left_over_baseline)
 
-
-    print(a)
-    print(nlp)
-    print(true_positive)
-    print(false_positive)
-    print(false_negative)
-    print(h)
-    print(nlp_text)
-    print()
-
     comparison_results = [true_positive, false_positive, false_negative]
 
     return comparison_results
-
-
-            
 
 def count_true_false_positives_negatives(comparison_results):
     '''
@@ -725,8 +717,8 @@ def count_true_false_positives_negatives(comparison_results):
     Returns:
     number_comparison (2D list): the number of elements identified as true/false positives and false negatives
     '''
-    true_positive_full, false_positive, false_negative = comparison_results
-    number_true_positive = len(true_positive_full)
+    true_positive, false_positive, false_negative = comparison_results
+    number_true_positive = len(true_positive)
     number_false_positive = len(false_positive)
     number_false_negative = len(false_negative)
 
@@ -992,6 +984,7 @@ def save_missing_stories(missing_stories, save_folder_path):
     baseline_missing_stories, nlp_tool_missing_stories = missing_stories
     file_path = save_folder_path + "\\missing_stories.txt"
     file = open(file_path, "w")
+
     file.write("Missing Stories:\n")
     file.write("Missing stories from baseline:\n")
     for i in range(len(baseline_missing_stories)):
@@ -999,6 +992,7 @@ def save_missing_stories(missing_stories, save_folder_path):
     file.write("Missing stories from nlp tool:\n")
     for i in range(len(nlp_tool_missing_stories)):
         file.write(nlp_tool_missing_stories[i] + "\n")
+        
     file.close()
 
 def save_csv(saving_path, dataset_results, comparison_mode):
