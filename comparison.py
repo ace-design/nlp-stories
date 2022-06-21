@@ -394,10 +394,12 @@ def extract_all_baseline_info(path):
         
         entity.append(story_entity)
 
-        if secondary_action_pos != [[]]:
+        if primary_action_pos !=[[]] and secondary_action_pos != [[]]:
             action_pos.append([primary_action_pos + secondary_action_pos, story["Action POS"]["Primary Action POS"]["Primary Action POS text"] + story["Action POS"]["Secondary Action POS"]["Secondary Action POS text"]])
-        else:
+        elif primary_action_pos != [[]]:
             action_pos.append([primary_action_pos, story["Action POS"]["Primary Action POS"]["Primary Action POS text"]])
+        else:
+            action_pos.append([secondary_action_pos, story["Action POS"]["Secondary Action POS"]["Secondary Action POS text"]])
 
         if primary_entity_pos != [[]] and secondary_entity_pos != [[]]:
             entity_pos.append([primary_entity_pos + secondary_entity_pos, story["Entity POS"]["Primary Entity POS"]["Primary Entity POS text"] + story["Entity POS"]["Secondary Entity POS"]["Secondary Entity POS text"]])
