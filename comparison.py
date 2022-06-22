@@ -32,16 +32,15 @@ def main():
     all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
 
     stanza.download('en') 
-    global stanza_pos_nlp
     stanza_pos_nlp = stanza.Pipeline('en')
  
-    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode, primary_pos_data)
+    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode, primary_pos_data, stanza_pos_nlp)
     output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
 
-    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data)
+    all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data, stanza_pos_nlp)
     output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
 
-def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data):
+def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data, stanza_pos_nlp):
     '''
     Runs all the functions that will compare and get the results of the comparison
 
@@ -50,6 +49,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_d
     nlp_tool_data (2D list): contains text, persona, primary entities, and primary actions identified by the nlp tool 
     comparison_mode (int): determines the mode of comparing (1-strict, 2-inclusive, 3-relaxed)
     pos_data (3D list): contains the pos data of persona, entity, and action
+    stanza_pos_nlp (class): runs the stanza application to get the tags
 
     Returns:
     story_results (3D list): has the precision, recall and f-measure of each story for the persona, action, entity
@@ -84,9 +84,9 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_d
         #relaxed comparison
         else:
             persona_pos, entity_pos, action_pos = sorted_pos
-            persona_comparison = relaxed_compare(baseline_persona[i], nlp_persona[i], persona_pos[i])
-            entity_comparison = relaxed_compare(baseline_entity[i], nlp_entity[i], entity_pos[i])
-            action_comparison = relaxed_compare(baseline_action[i], nlp_action[i], action_pos[i])
+            persona_comparison = relaxed_compare(baseline_persona[i], nlp_persona[i], persona_pos[i], stanza_pos_nlp)
+            entity_comparison = relaxed_compare(baseline_entity[i], nlp_entity[i], entity_pos[i], stanza_pos_nlp)
+            action_comparison = relaxed_compare(baseline_action[i], nlp_action[i], action_pos[i], stanza_pos_nlp)
 
         persona_comparison_collection.append(persona_comparison)
         entity_comparison_collection.append(entity_comparison)
@@ -620,7 +620,7 @@ def check_inclusion_elements(nlp_element, baseline_element):
     else:
         return False
         
-def relaxed_compare(baseline, nlp, pos_data):
+def relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp):
     '''
     calculate the number of true/false positives and false negatives for relaxed comparison mode
 
@@ -628,6 +628,7 @@ def relaxed_compare(baseline, nlp, pos_data):
     baseline (list): the elements being compared to 
     nlp (list): the elements comparing for accuracy 
     pos_data (2d list): contains the POS data for each annotation of the label type 
+    stanza_pos_nlp (class): runs the stanza application to get the tags
 
     Returns:
     comparison_results (2D list): includes the elements identified as true/false positives and false negatives, including half points
@@ -672,6 +673,8 @@ def relaxed_compare(baseline, nlp, pos_data):
             if not(baseline_pos_tag[i][j] in remove_qualifiers):
                 pos_text += baseline_pos_text[i][j] + " "
         baseline_text.append(pos_text)
+
+    print(left_over_nlp)
 
     for i in range(len(left_over_nlp)):
         nlp_stanza = stanza_pos_nlp(left_over_nlp[i])
@@ -771,6 +774,7 @@ def calculate_precision(number_compared_results):
         precision = number_true_positive / (number_true_positive + number_false_positive)
 
     return precision
+
 def calculate_recall(number_compared_results):
     '''
     calculate the recall 
