@@ -615,10 +615,20 @@ def check_inclusion_elements(nlp_element, baseline_element):
     nlp_element_list = nlp_element.split()
     baseline_element_list = baseline_element.split()
 
-    if ((nlp_element in baseline_element) or (baseline_element in nlp_element)) and len(nlp_element_list) == len(baseline_element_list):
-        return True
-    else:
-        return False
+    if len(nlp_element_list) == len(baseline_element_list):
+        for nlp in nlp_element_list:
+            for baseline in baseline_element_list:
+                if nlp in baseline or baseline in nlp:
+                    #This part is to check if the other words in the annotation is the same or not (ex. baseline:["quickly", "adds"] and nlp["slowly", "add"],
+                    # when comparing "add" and "adds, it will also make sure that "quickly" and "slowly" are same for it to be pass, in this case, it is a fail)
+                    nlp_remove_comparing_word = copy.deepcopy(nlp_element_list)
+                    nlp_remove_comparing_word.remove(nlp)
+                    baseline_remove_comparing_word = copy.deepcopy(baseline_element_list)
+                    baseline_remove_comparing_word.remove(baseline)
+
+                    if nlp_remove_comparing_word == baseline_remove_comparing_word:
+                        return True
+    return False
         
 def relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp):
     '''

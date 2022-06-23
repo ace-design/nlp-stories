@@ -1,4 +1,4 @@
-file = open("C:\\Users\\sathu\\nlp-stories\\inputs\\dataset\\g16-mis.txt")
+file = open("inputs\\dataset\\g17-cask.txt")
 lines = file.readlines()
 print("start")
 for i in range(len(lines)):
