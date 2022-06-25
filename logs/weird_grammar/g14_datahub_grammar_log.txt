@@ -1,3 +1,24 @@
 #G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.
-#G14# As a Publisher, I want to data to be validated when I publish it, so that that I know immediately if I have accidentally broken my data or have bugs and can take action to correct.
 #G14# As an Admin, I want to see key metrics about usage such as users, API usage, downloads, so that that I know how things are going.
+#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.
+#G14# As a Publisher, I want to be warned that a tag exists when I try to overwrite it, so that that I don't accidentally overwrite stable tagged data which is relied on by consumers.
+#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.
+#G14# As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.
+#G14# As a Consumer, I want to download a DataPackage's data one coherent SQLite database, so that that I can get it easily in one form.
+#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.
+#G14# As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.
+#G14# As an owner, I want to remove a user as an owner, so that they are just a member and no longer have full control.
+#G14# As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.
+
+NOTES:
+1: unclear context at end of story (seems like a type with "that" -> "what")
+2: unclear context
+3: indirect action "don't have to enter"
+4: indirect action "dont accidentally overwrite"
+5: indirect action "no longer takes up"
+6: indirect action "no longer have"
+7: typo with "one" -> "on" (this is an assumption)
+8: indirect action "don't have to download"
+9: indirect action "do not break"
+10: indirect action "no longer have"
+11: indirect action "don't hack to check" and "run into"
