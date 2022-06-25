@@ -3,15 +3,16 @@ import argparse
 import csv
 import matplotlib.pyplot as plt
 import os
+from numpy import compare_chararrays
 import pandas as pd
 import seaborn as sns
 import statistics
 import sys
 
-number_dataset = 17
+number_dataset = 19
 
 def main():
-    primary_path, all_path, saving_path = command()
+    primary_path, all_path, saving_path, comparison_type = command()
     primary_data = extract_data(primary_path)
     all_data = extract_data(all_path)
 
@@ -20,19 +21,19 @@ def main():
     os.mkdir(primary_save_path)
     os.mkdir(all_save_path)
 
-    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona", "m", primary_save_path + "\\primary_persona_scatter.png")
-    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity", "r", primary_save_path + "\\primary_entity_scatter.png")
-    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action", "b", primary_save_path + "\\primary_action_scatter.png")
-    create_final_scatterplot(all_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona", "m", all_save_path + "\\all_persona_scatter.png")
-    create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity", "r", all_save_path + "\\all_entity_scatter.png")
-    create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action", "b", all_save_path + "\\all_action_scatter.png")
+    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "m", primary_save_path + "\\primary_persona_scatter.png")
+    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "r", primary_save_path + "\\primary_entity_scatter.png")
+    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "b", primary_save_path + "\\primary_action_scatter.png")
+    create_final_scatterplot(all_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "m", all_save_path + "\\all_persona_scatter.png")
+    create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "r", all_save_path + "\\all_entity_scatter.png")
+    create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "b", all_save_path + "\\all_action_scatter.png")
 
-    create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona", primary_save_path + "\\primary_persona_bargraph.png")
-    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity", primary_save_path + "\\primary_entity_bargraph.png")
-    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Action", primary_save_path + "\\primary_action_bargraph.png")
-    create_final_bargraph(all_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona", all_save_path + "\\all_persona_bargraph.png")
-    create_final_bargraph(all_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity", all_save_path + "\\all_entity_bargraph.png")
-    create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action", all_save_path + "\\all_action_bargraph.png")
+    create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, primary_save_path + "\\primary_persona_bargraph.png")
+    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png")
+    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, primary_save_path + "\\primary_action_bargraph.png")
+    create_final_bargraph(all_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, all_save_path + "\\all_persona_bargraph.png")
+    create_final_bargraph(all_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, all_save_path + "\\all_entity_bargraph.png")
+    create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png")
 
     primary_average = calculate_average(primary_data)
     primary_standard_deviation = calculate_standard_deviation(primary_data)
@@ -60,8 +61,9 @@ def command():
 
     Raises:
         FileNotFoundError: raises excpetion
-        FileExistsError: raise exception
+        FileExistsError: raises exception
         wrong file type: raises exception
+        not same comparison mode of both loading files: raises excpetion
     '''
 
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
@@ -74,12 +76,26 @@ def command():
     if not(args.load_primary_path.endswith(".csv")) or not(args.load_all_path.endswith(".csv")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. Save file type is .csv")
+
+    if "strict" in args.load_primary_path and "strict" in args.load_all_path:
+        comparison_type = "Strict Comparison"
+        saving_name = "strict_" + args.save_folder_name
+    elif "inclusion" in args.load_primary_path and "inclusion" in args.load_all_path:
+        comparison_type = 'Inclusion Comparison'
+        saving_name = "inclusion_" + args.save_folder_name
+    elif "relaxed" in args.load_primary_path and "relaxed" in args.load_all_path:
+        comparison_type = "Relaxed Comparison"
+        saving_name = "relaxed_" + args.save_folder_name
+    else:
+        sys.tracebacklimit = 0 
+        raise Exception("Incompatible combination. Both files must be evaluated by same comparison mode")
+
     try:
         load_file = open(args.load_primary_path)
         load_file.close()
         load_all_file = open(args.load_all_path)
         load_all_file.close()
-        save_folder_path = "final_results\\" + args.save_folder_name
+        save_folder_path = "final_results\\" + saving_name
         os.mkdir(save_folder_path)
 
     except FileNotFoundError:
@@ -91,7 +107,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_primary_path, args.load_all_path, save_folder_path
+        return args.load_primary_path, args.load_all_path, save_folder_path, comparison_type
 def extract_data (path):
     '''
     extract the data from the csv file 
@@ -279,6 +295,7 @@ def copy_and_clear(clear_path, saving_path):
         for rows in reader:
             copy_data.append(rows)
     
+    #overwrites original copy but keeps the title labels
     with open(clear_path, "w", newline = "") as clear_file:
         writer = csv.writer(clear_file)
         writer.writerow(copy_data[0])

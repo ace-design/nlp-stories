@@ -28,17 +28,17 @@ def main():
     os.mkdir(primary_save_path)
     os.mkdir(all_save_path)
 
-    primary_csv_path = "C:\\Users\\sathu\\nlp-stories\\primary_dataset_results.csv"
-    all_csv_path = "C:\\Users\\sathu\\nlp-stories\\all_dataset_results.csv"
+    primary_csv_folder_path = "dataset_csv_final_results\\primary_csv_results\\"
+    all_csv_folder_path = "dataset_csv_final_results\\all_csv_results\\"
 
     stanza.download('en') 
     stanza_pos_nlp = stanza.Pipeline('en')
  
     primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode, primary_pos_data, stanza_pos_nlp)
-    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_path, comparison_mode)
+    output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_folder_path, comparison_mode)
 
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data, stanza_pos_nlp)
-    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_path, comparison_mode)
+    output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_folder_path, comparison_mode)
 
 def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data, stanza_pos_nlp):
     '''
@@ -107,7 +107,7 @@ def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_d
 
     return story_results, count_list, comparison_collection, missing_stories, baseline_text
 
-def output_results(story_results, count_list, comparison_collection, missing_stories, baseline_text, save_folder_path, csv_saving_path, comparison_mode):
+def output_results(story_results, count_list, comparison_collection, missing_stories, baseline_text, save_folder_path, csv_folder_path, comparison_mode):
     ''''
     Ouput the results to various formats
 
@@ -118,7 +118,7 @@ def output_results(story_results, count_list, comparison_collection, missing_sto
     missing_stories (2D list): missing stories from baseline_data and nlp tool 
     baseline_text (list): story text in order based on evaluation order
     save_folder_path (str): the path of the folder to save results
-    csv_saving_path (str): path to save final results to 
+    csv_folder_path (str): path to save final results to 
     comparison_mode (int): the mode of the comparision that was completed on the data (1-strict, 2-inclusive, 3-relaxed)
     '''
     x_axis_data = np.linspace(10,100,10)
@@ -128,7 +128,7 @@ def output_results(story_results, count_list, comparison_collection, missing_sto
 
     output_terminal(baseline_text, comparison_collection, dataset_results, story_results, missing_stories)
     save_missing_stories(missing_stories, save_folder_path)
-    save_csv(csv_saving_path, dataset_results, comparison_mode)
+    save_csv(csv_folder_path, dataset_results, comparison_mode)
 
 def individual_story(count_list):
     '''
@@ -684,8 +684,6 @@ def relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp):
                 pos_text += baseline_pos_text[i][j] + " "
         baseline_text.append(pos_text)
 
-    print(left_over_nlp)
-
     for i in range(len(left_over_nlp)):
         nlp_stanza = stanza_pos_nlp(left_over_nlp[i])
         pos_text = ""
@@ -1011,12 +1009,12 @@ def save_missing_stories(missing_stories, save_folder_path):
         
     file.close()
 
-def save_csv(saving_path, dataset_results, comparison_mode):
+def save_csv(saving_folder_path, dataset_results, comparison_mode):
     '''
     save the final results of dataset precision, recall and f-measure of persona, entity and action
 
     Parameters:
-    saving_path (str): path to the file to save the data 
+    saving_folder_path (str): path to the folder to save the data 
     dataset_results (2D list): calculated precison, recall, and f-measure of persona, entity, action of the whole dataset
     comparison_mode (int): the mode of the comparision that was completed on the data (1-strict, 2-inclusive, 3-relaxed)
     '''
@@ -1027,13 +1025,13 @@ def save_csv(saving_path, dataset_results, comparison_mode):
     persona_f_measure, entity_f_measure, action_f_measure = dataset_f_measure
 
     if comparison_mode == 1:
-        comparison_type = "Strict Comparison"
+        saving_path = saving_folder_path + "strict_dataset_results.csv"
     elif comparison_mode == 2:
-        comparison_type = "Inclusive Comparison"
+        saving_path = saving_folder_path + "inclusion_dataset_results.csv"
     else:
-        comparison_type = "Relaxed Comparison"
+        saving_path = saving_folder_path + "relaxed_dataset_results.csv"
 
-    data = [persona_precision, entity_precision, action_precision,persona_recall, entity_recall, action_recall,persona_f_measure, entity_f_measure, action_f_measure, comparison_mode, comparison_type]
+    data = [persona_precision, entity_precision, action_precision,persona_recall, entity_recall, action_recall,persona_f_measure, entity_f_measure, action_f_measure]
 
     with open (saving_path, "a", newline = "") as file:
         writer = csv.writer(file)
