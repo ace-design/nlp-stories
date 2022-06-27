@@ -1,0 +1,1797 @@
+[
+    {
+        "Text": "#G27# As a faculty member, I want to access a collection within the repository, so that I can obtain research materials.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Collection"
+        ],
+        "Action": [
+            "Access A Collection Within The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to direct students to an item within the repository, so that I can facilitate my teaching (i.e. desires ability to link to content).",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Student",
+            "Item"
+        ],
+        "Action": [
+            "Direct Students To An Item Within The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to upload data to the repository and associate it with a publication, so that I receive attribution for my data as well as my publications.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Datum",
+            "Repository",
+            "Publication"
+        ],
+        "Action": [
+            "Upload Data To The Repository",
+            "Associate The Repository With A Publication"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to know which reports/datasets are coming out when, so that I can access latest report/dataset.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Report",
+            "Dataset"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to select/deselect reports/datasets to be emailed, possibly many at one time, when new versions are available.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Time",
+            "Report",
+            "Dataset",
+            "New Version"
+        ],
+        "Action": [
+            "Select Dataset",
+            "Select Reports To Emailed",
+            "Select Possibly Many At Time",
+            "Deselect Reports To Emailed New Versions When Are Available",
+            "Deselect Dataset",
+            "Deselect Possibly Many At Time"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to mark report/dataset not to be emailed/viewable due to error being discovered.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Error",
+            "Report"
+        ],
+        "Action": [
+            "Not Viewable Error Discovered",
+            "Mark Report",
+            "Dataset",
+            "Mark"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage report/dataset name changes so patrons are able to find historic reports that have a different name from current report.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Report",
+            "Dataset Name Change"
+        ],
+        "Action": [
+            "Manage Report",
+            "Manage Dataset Name Change"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to see clearly what reuse rights I have to files discovered in the repository, so that I know how I can reuse them.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Right"
+        ],
+        "Action": [
+            "See Rights"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to apply or remove an access embargo to an item when asked to do this by an item author.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Item",
+            "Access Embargo"
+        ],
+        "Action": [
+            "Apply An Access Embargo To An Item",
+            "Remove An Access Embargo To An Item"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to stay up to date on research related to a given topic at Cornell, including those in other departments/schools, so that my own research remains relevant and innovative.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Cornell",
+            "Date",
+            "Research",
+            "Topic",
+            "School",
+            "Department"
+        ],
+        "Action": [
+            "Stay Up To Date On Research To A Given Topic At Cornell Including Those In Other Departments",
+            "Stay Up To Date On Research To A Given Topic At Cornell Including Those In School"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to easily collect my publications -- both those within the repository and without -- into a single online access point, so that I can raise the profile of my work.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Publication",
+            "Access Point"
+        ],
+        "Action": [
+            "Collect Those Without",
+            "Collect Those Within The Repository",
+            "Collect Publications Into A Online, Single Access Point"
+        ]
+    },
+    {
+        "Text": "#G27# As a crossdeptprojteammember, I want to have a better place to collect and share project materials, with a range of organization/tagging and access options, including private (internal group use only), University and public.",
+        "Persona": [
+            "Crossdeptprojteammember"
+        ],
+        "Entity": [
+            "Material",
+            "Place",
+            "Private Use",
+            "Access",
+            "Internal Group",
+            "Range",
+            "Option",
+            "University",
+            "Project Materials",
+            "Public",
+            "Organization",
+            "Tagging"
+        ],
+        "Action": [
+            "Have A Better Place With Option Including Internal Group Private Use",
+            "Collect Materials",
+            "Have A Better Place With A Range Of Tagging",
+            "Have A Better Place With A Range Of Organization",
+            "Have A Better Place With Option Including Public",
+            "Collect Project Materials",
+            "Have A Better Place With A Range Of Access",
+            "Have A Better Place With Option Including University",
+            "Share Materials",
+            "Share Project Materials"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to upload data and provide a cut and paste formatted citation for people who use it, so that I receive proper attribution for my work.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Datum",
+            "People",
+            "Format , Cut Citation"
+        ],
+        "Action": [
+            "Upload Data",
+            "Provide A Formatted, Cut Citation For People Use",
+            "Provide",
+            "Paste"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to view/upload content in multiple formats, including old formats such as Lotus Works.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Content",
+            "Old Format",
+            "Lotus Works",
+            "Multiple Format"
+        ],
+        "Action": [
+            "View Content In Multiple Formats Including Old Formats Such As Lotus Works",
+            "Upload Content In Multiple Formats Including Old Formats Such As Lotus Works"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to search the repository and browse through its contents on my phone, so that I can check things on the go.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Content",
+            "Phone"
+        ],
+        "Action": [
+            "Search The Repository",
+            "Browse Through Contents On Phone"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to login remotely to the repository using Shibboleth, so that I can get remote access to Cornell campus-only content.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Use , Repository Shibboleth"
+        ],
+        "Action": [
+            "Login To The Using, Repository Shibboleth"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to have some control over how items within my collection sort in collection contents lists, so that I can control how my work is presented.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Collection Sort",
+            "Control",
+            "Item",
+            "Collection Contents Lists"
+        ],
+        "Action": [
+            "Have Some Control Over How Items Within Collection Sort In Collection Contents Lists"
+        ]
+    },
+    {
+        "Text": "#G27# As an administrator, I want to be able to use systems such as Symplectic Elements and Activity Insight to properly track faculty scholarly output in the repositories, so that I can facilitate personnel decisions.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Activity Insight",
+            "Repository",
+            "System",
+            "Scholarly , Faculty Output",
+            "Symplectic Element"
+        ],
+        "Action": [
+            "Track Scholarly, Faculty Output In The Repositories",
+            "Use Systems Such As Activity Insight",
+            "Use Systems Such As Symplectic Elements"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to access useful and comprehensive usage statistics and analytics, including altmetrics, at the repository, collection, author, and item level, so that I can assess the results of this service.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Collection",
+            "Altmetric",
+            "Useful Statistic",
+            "Comprehensive",
+            "Repository",
+            "Analytic",
+            "Item Level",
+            "Author",
+            "Usage Statistics"
+        ],
+        "Action": [
+            "Access Useful Statistics Including Altmetrics At Item Level",
+            "Access Useful Usage Statistics Including Altmetrics At The Repository",
+            "Access Analytic",
+            "Access Comprehensive",
+            "Access Useful Statistics Including Altmetrics At Author",
+            "Access Useful Statistics Including Altmetrics At Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As an administrator, I want to see comprehensive tracking statistics that can be presented to faculty in a digestible way, so that I can increase buy-in for contributing their work.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Faculty",
+            "Digestible Way",
+            "Tracking Statistics"
+        ],
+        "Action": [
+            "See Comprehensive Tracking Statistics Presented To Faculty In A Digestible Way"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to see list of subscribers for specified report in order research missing report complaints.",
+        "Persona": [
+            "Ir",
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Subscriber",
+            "Specify Report"
+        ],
+        "Action": [
+            "See List Of Subscribers For Specified Report In"
+        ]
+    },
+    {
+        "Text": "#G27# As an administrator, I want to disseminate the aforementioned works in a digital space that is strongly branded, so that I can make sure my school is credited for the work.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Aforementioned Work",
+            "Digital Space"
+        ],
+        "Action": [
+            "Disseminate The Aforementioned Works In A Digital Space Strongly Branded"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to upload my scholarly work to the repository, so that I can have a persistent URL that can be used for my personal web page and CV.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Scholarly Work",
+            "Repository"
+        ],
+        "Action": [
+            "Upload Scholarly Work To The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to create collections which highlight rare, archival, or endangered material, so that I can preserve and provide access to this material.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Collection",
+            "Rare",
+            "Archival",
+            "Endanger Material"
+        ],
+        "Action": [
+            "Create Collections Highlight Archival",
+            "Create Collections Highlight Rare",
+            "Create Collections Highlight Endangered Material"
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Administrator, I want to have easy, well documented and supported workflows that can be easily passed on to others when she/others retire, so that continuity can be maintained.",
+        "Persona": [
+            "Extension Administrator"
+        ],
+        "Entity": [
+            "Easy",
+            "Workflow"
+        ],
+        "Action": [
+            "Have Easy"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to maintain versioning of Extension brochures, FAQs, etc., so that only the most current are used/adapted by other CCE Educators in their work.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Faqs",
+            "Versioning",
+            "Extension Brochures",
+            "."
+        ],
+        "Action": [
+            "Maintain Versioning Of Extension Brochures",
+            "Maintain Versioning Of .",
+            "Maintain Versioning Of Faqs"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to upload a data file and put a CC-By or CC0 license on it, so that my licensing desires are clearly stated.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "File",
+            "Cc0",
+            "Cc License",
+            "Data"
+        ],
+        "Action": [
+            "Put Upload A Data File A By Cc License On A Data File",
+            "Put Upload A File Cc0"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to be able to tell the researchers I'm helping with DMPs that Cornell has a repository system I can use for archiving and sharing results of their research, so that I can easily meet the needs of funder DMP requirements.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Repository System",
+            "Dmp",
+            "Sharing",
+            "Research",
+            "Researcher",
+            "Cornell"
+        ],
+        "Action": [
+            "Tell The Researchers",
+            "Helping With Dmps"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to create a collection for my documents, or my organization's documents, and apply some distinctive branding to that collection, so that I can promote my work, or that of my organization.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Document",
+            "Collection",
+            "Organization",
+            "Distinctive Branding"
+        ],
+        "Action": [
+            "Create A Collection For Documents",
+            "Create A Collection For Organization's Document",
+            "Apply Some Distinctive Branding To That Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to easily find all the items in the repository that I have authored, by searching on my name (author name authority and/or identification issue), because I keeps my publications in the repository up-to-date and points people tithe repository.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Item",
+            "Identification",
+            "Issue"
+        ],
+        "Action": [
+            "Find The Items In The Repository Searching On Name Identification",
+            "That Authored",
+            "Find The Items In The Repository Searching On Name Or",
+            "Find The Items In The Repository Searching On Name Issue",
+            "Find The Items In The Repository Searching On Name Author Name Authority",
+            "Find The Items In The Repository Searching On Name"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to see items I have deposited in the repository appear high up in Google search results, because that's my ticket to stardom.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Item",
+            "Repository"
+        ],
+        "Action": [
+            "Deposited In The Repository",
+            "See Items"
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to alias (or map) an item from one collection to another (so the item will appear to belong to both collections), because the collection owner has asked them to.",
+        "Persona": [
+            "Support , Repository , Team Member"
+        ],
+        "Entity": [
+            "Collection",
+            "Item"
+        ],
+        "Action": [
+            "Map An Item From Collection To Another",
+            "The Collection Owner Asked Both Collections",
+            "Belong To Both Collections"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to discover items in the repository through the library's discovery system and Google, so that I can facilitate my easy use of the content.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Item",
+            "Discovery System",
+            "Library",
+            "Google",
+            "Repository"
+        ],
+        "Action": [
+            "Discover Items In The Repository Through The Library's Discovery System",
+            "Discover Items In The Repository Through Google"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to see descriptive metadata for the item whether I come to the item through the repository or directly to the PDF, so that I can correctly identify the source of the content.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Item",
+            "Descriptive Metadata",
+            "Repository",
+            "Pdf"
+        ],
+        "Action": [
+            "See Descriptive Metadata For The Item",
+            "Come To The Item Directly To The Pdf",
+            "Come To The Item Through The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to contact the author of a work that interests me, so that I can learn more about my research.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Author",
+            "Work"
+        ],
+        "Action": [
+            "Contact The Author Of A Work Interests"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to receive updates when new works are published in a given collection or by a given author, so that I can discover more of their work.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Update"
+        ],
+        "Action": [
+            "Receive Updates"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to search within a repository or collection in an effective manner, including searching within subsets of a given collection, so that I can facilitate my use of the collection.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Effective Manner",
+            "Collection",
+            "Repository"
+        ],
+        "Action": [
+            "Search Within A Repository In An Effective Manner Searching Within Subsets Of A Given Collection",
+            "Search Within Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As an academicresearcher, I want to find the works of a particular author in one easily sortable spot, so that I can see the evolution of their scholarship over time.",
+        "Persona": [
+            "Academicresearcher"
+        ],
+        "Entity": [
+            "Sortable Spot",
+            "Particular Author"
+        ],
+        "Action": [
+            "Find The Works Of A Particular Author In Easily Sortable Spot"
+        ]
+    },
+    {
+        "Text": "#G27# As an academicresearcher, I want to the thesis paper of an influential judge or legal thinker to gain insight into how their initial scholarship got started.",
+        "Persona": [
+            "Academicresearcher"
+        ],
+        "Entity": [
+            "Legal Thinker",
+            "Insight",
+            "Influential Judge",
+            "Initial Scholarship",
+            "Paper",
+            "Thesis"
+        ],
+        "Action": [
+            "Gain Insight Initial Scholarship How Started"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to search for report/dataset with keywords or a partial or complete title to locate needed report/dataset.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Partial Title",
+            "Dataset",
+            "Need Report",
+            "Need Dataset",
+            "Report",
+            "Complete",
+            "Keyword"
+        ],
+        "Action": [
+            "Search For Dataset With A Partial Title",
+            "Locate Needed Dataset",
+            "Search For Dataset With Complete",
+            "Search For",
+            "Search For Report",
+            "Locate Needed Report",
+            "Search For Dataset With Keywords"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to browse content by author or subject area to locate needed resources.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Subject Area",
+            "Need Resource",
+            "Content",
+            "Author"
+        ],
+        "Action": [
+            "Browse Content By Author",
+            "Locate Needed Resources",
+            "Browse Content By Subject Area"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage subject classifications for ease of patron browsing and searching.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Subject Classification",
+            "Ease",
+            "Patron Browsing",
+            "Searching"
+        ],
+        "Action": [
+            "Manage Subject Classifications For Ease Of Searching",
+            "Manage Subject Classifications For Ease Of Patron Browsing"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage customizable relationship groups in support of patron see also option.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Option",
+            "Patron",
+            "Relationship Groups"
+        ],
+        "Action": [
+            "Manage Customizable Relationship Groups In Support Of Patron Option"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to search for the dissertations in the repository for which I have been a thesis committee member, to quickly find work by a former student.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Dissertation",
+            "Repository",
+            "Student",
+            "Work"
+        ],
+        "Action": [
+            "Search For The Dissertations In The Repository Work By A Former Student",
+            "For Which Been A Thesis Committee Member"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to make digital items held in trusted external system searchable within our system, so that I can provide seamless access to disparate collections.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Digital Item",
+            "Searchable , External , Trusted System",
+            "System"
+        ],
+        "Action": [
+            "Make Digital Items In Searchable, External, Trusted System Within System"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to have information that will help me identify other faculty I might partner/collaborate with.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Information",
+            "Faculty"
+        ],
+        "Action": [
+            "Have Information Help Identify Other Faculty",
+            "Partner",
+            "Collaborate"
+        ]
+    },
+    {
+        "Text": "#G27# As an externaluser, I want to easily find and access research and educational materials from Cornell faculty related to a particular topic, which I can use to develop stronger research/evidence based programming, grant proposals, community policy, or business practices.",
+        "Persona": [
+            "Externaluser"
+        ],
+        "Entity": [
+            "Faculty",
+            "Research Material",
+            "Evidence , Based Programming",
+            "Strong Research",
+            "Particular Topic",
+            "Community Policy",
+            "Business Practice",
+            "Grant Proposal",
+            "Educational",
+            "Cornell"
+        ],
+        "Action": [
+            "Find",
+            "Access Research Materials From Faculty To A Particular Topic",
+            "Access Educational",
+            "Develop Business Practice",
+            "Access Research Materials From Cornell Faculty To A Particular Topic",
+            "Develop Community Policy",
+            "Which Use",
+            "Develop Evidence, Based Programming",
+            "Develop Stronger Research",
+            "Develop Grant Proposal"
+        ]
+    },
+    {
+        "Text": "#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can decide if I would like to pursue studies/research at Cornell.",
+        "Persona": [
+            "Student"
+        ],
+        "Entity": [
+            "Cornell",
+            "Research",
+            "Particular Topic"
+        ],
+        "Action": [
+            "Learn"
+        ]
+    },
+    {
+        "Text": "#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can find an appropriate advisor, choose which courses to enroll in, and identify work/internship opportunities.",
+        "Persona": [
+            "Student"
+        ],
+        "Entity": [
+            "Research",
+            "Particular Topic",
+            "Cornell"
+        ],
+        "Action": [
+            "Learn"
+        ]
+    },
+    {
+        "Text": "#G27# As a teachingfacultymember, I want to identify timely and relevant research suitable for use in my curriculum, and be notified of new research/content.",
+        "Persona": [
+            "Teachingfacultymember"
+        ],
+        "Entity": [
+            "Content",
+            "Relevant",
+            "Suitable , Timely Research",
+            "Use",
+            "Curriculum",
+            "New Research"
+        ],
+        "Action": [
+            "Notified Identify Suitable, Timely Research For Use In Curriculum Of Content",
+            "Notified Identify Suitable, Timely Research For Use In Curriculum Of New Research",
+            "Identify Relevant"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to view multiple versions of a report/dataset to get both timely and historical information.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Timely Information",
+            "Report",
+            "Historical Information",
+            "Dataset"
+        ],
+        "Action": [
+            "Get Timely Information",
+            "Get Historical Information",
+            "View Multiple Versions Of Dataset",
+            "View Multiple Versions Of",
+            "View Multiple Versions Of A Report"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to upload my scholarly work to the repository, so that I can reach a non-academic audience, expand my influence within my academic community, and use it for teaching.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Scholarly Work",
+            "Repository"
+        ],
+        "Action": [
+            "Upload Scholarly Work To The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to upload material to the repository on the author's behalf, so that I can fulfill a service obligation.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Author",
+            "Material",
+            "Behalf",
+            "Repository"
+        ],
+        "Action": [
+            "Upload Material To The Repository On The Author's Behalf"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to create metadata for items within the repository that includes document title, description, author, document type, status, file locations, subscribable flag, subject area, release frequency, and keywords for searching.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Item",
+            "Metadata",
+            "Subscribable Flag",
+            "Subject Area",
+            "Author",
+            "File Location",
+            "Repository",
+            "Release Frequency",
+            "Search",
+            "Document Title",
+            "Document Type",
+            "Description",
+            "Keyword",
+            "Status"
+        ],
+        "Action": [
+            "Create Metadata For Items Within The Repository Includes Description",
+            "Create Metadata For Items Within The Repository Includes Subscribable Flag",
+            "Create Metadata For Items Within The Repository Includes Document Title",
+            "Create Metadata For Items Within The Repository Includes File Location",
+            "Create Metadata For Items Within The Repository Includes Subject Area",
+            "Create Metadata For Items Within The Repository Includes Release Frequency For Searching",
+            "Create Metadata For Items Within The Repository Includes Status",
+            "Create Metadata For Items Within The Repository Includes Keyword",
+            "Create Metadata For Items Within The Repository Includes Document Type",
+            "Create Metadata For Items Within The Repository Includes Author"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to upload large batches of items simultaneously, including descriptive metadata, so that I can offer service to authors efficiently.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Descriptive Metadata",
+            "Item"
+        ],
+        "Action": [
+            "Upload Large Batches Of Items Including Descriptive Metadata"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to upload an item to the repository that will only become visible after a specific embargo period has expired, so that I can comply with author or publisher requirements.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Item",
+            "Repository"
+        ],
+        "Action": [
+            "Upload An Item To The Repository Only Become Visible"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. � with DOIs for each, as needed � when uploading a given work, so that I can provide a robust image of the work in question.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Dataset",
+            "Slideshow",
+            "Supplementary File",
+            "Doi"
+        ],
+        "Action": [
+            "Include Supplementary Files Such As Slideshow",
+            "Include Supplementary Files Such As Datasets With Dois For Each"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to deliver streaming media from within the repository, so that I can deliver such content in the manner expected and ensure continued access to said content.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Stream Medium"
+        ],
+        "Action": [
+            "Deliver Streaming Media Within The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As an administrator, I want to have a platform that can support a variety of media file and text-based formats, so that the intellectual output of the school can be showcased and preserved in a more comprehensive way.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Text , Based Format",
+            "Variety",
+            "Platform",
+            "Media File"
+        ],
+        "Action": [
+            "Have A Platform Support A Variety Of Text, Based Format",
+            "Have A Platform Support A Variety Of Media File"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to be able to assign an item to more than one collection.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            ", Collection",
+            "Item"
+        ],
+        "Action": [
+            "Assign An Item To Than, More Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to be able to add custom metadata fields for deposits I make on behalf of researchers to allow for better search capabilities.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Deposit",
+            "Researcher",
+            "Custom Metadata Fields",
+            "Search Capabilities"
+        ],
+        "Action": [
+            "Add Custom Metadata Fields For Deposits",
+            "Make On Behalf Of Researchers",
+            "Allow For Better Search Capabilities"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to upload revised report/dataset due to error in report/document.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Dataset",
+            "Error",
+            "Revise Report",
+            "Report",
+            "Document"
+        ],
+        "Action": [
+            "Upload Revised Report Due To Error In Document",
+            "Upload Revised Report Due To Error In Report",
+            "Upload Dataset"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to upload new version of report/dataset while retaining previous versions for patron use.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Report",
+            "Patron Use",
+            "Previous Version",
+            "Dataset"
+        ],
+        "Action": [
+            "Upload New Version Of Report Retaining Previous Versions For Patron Use",
+            "Upload New Version Of Dataset"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to have the system recognize/categorize document type (e.g. historical report still published, expired historical report, single topic dataset, broad topic dataset, report with subtopic, computer file), so that report/dataset is processed and displayed properly.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "System",
+            "Historical , Expired Report",
+            "Historical , E.g. Report",
+            "Computer File",
+            "Topic Dataset"
+        ],
+        "Action": [
+            "Have"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to easily assign a CC license to the files I are depositing, so that users know how the materials can be used.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Cc License",
+            "File"
+        ],
+        "Action": [
+            "Depositing",
+            "Assign A Cc License To The Files"
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to export a set of records and associated files, manipulate this data set, and reload into the system, because I am aware of a uniform error in a collection.",
+        "Persona": [
+            "Support , Repository , Team Member"
+        ],
+        "Entity": [
+            "Record",
+            "Associated File",
+            "Datum",
+            "Collection",
+            "System",
+            "Uniform Error"
+        ],
+        "Action": [
+            "Export A Set Of Associated File",
+            "Export A Set Of Records",
+            "Manipulate This Data",
+            "Am Aware Of A Uniform Error In A Collection",
+            "Reload Into The System"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to associate a researcherID or ORCID with a submission, so that there is no ambiguity between my work and someone else with the same name.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Orcid",
+            "Submission",
+            "Researcherid"
+        ],
+        "Action": [
+            "Associate Orcid",
+            "Associate A Researcherid With A Submission"
+        ]
+    },
+    {
+        "Text": "#G27# As a student, I want to upload to the repository the data that is associated with my embargoed dissertation to meet requirements of a DMP I submitted with my NSF DDIG.",
+        "Persona": [
+            "Student"
+        ],
+        "Entity": [
+            "Repository Datum",
+            "Embargoed Dissertation",
+            "Dmp",
+            "Nsf Ddig"
+        ],
+        "Action": [
+            "Upload To The The Repository Data Associated Embargoed Dissertation To Meet Requirements Of A Dmp",
+            "Submitted With Nsf Ddig"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to have customizable metadata fields, so that each project is described in the most accurate way possible.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Metadata Fields"
+        ],
+        "Action": [
+            "Have Customizable Metadata Fields"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to associate files with my scholarly works such that someone accessing the latter also receives access to the former, so that I can deliver the fullest picture of my research.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Access",
+            "File",
+            ", Scholarly Work"
+        ],
+        "Action": [
+            "Associate Files With Such, Scholarly Works",
+            "Access The Latter"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to use content and metadata from the repository in other systems and/or web pages easily, so that I can deliver such content in the manner best fit to the audience or occasion.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Metadata",
+            "System",
+            "Content",
+            "Repository",
+            "Web Page"
+        ],
+        "Action": [
+            "Use Metadata",
+            "Use Content From Web Page",
+            "Use Content From The Repository In Other Systems"
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Administrator, I want to make resources that were developed for specific projects and geographic areas available to other faculty and educators across NYS.",
+        "Persona": [
+            "Extension Administrator"
+        ],
+        "Entity": [
+            "Resource",
+            "Faculty",
+            "Nys",
+            "Available , Specific Project",
+            "Educator",
+            "Geographic Area"
+        ],
+        "Action": [
+            "Make Resources Developed For Geographic Area",
+            "Make Resources Developed For Available, Specific Projects To Other Faculty Across Nys",
+            "Make Resources Developed For Available, Specific Projects To Educator"
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Administrator or Staff Content Manager, I want to get periodic IR reminders, including when something needs attention (including next ingestion/approval steps), or something that might need to move from a current knowledge collection to Historical.",
+        "Persona": [
+            "Staff , Administrator , Extension , Content Manager"
+        ],
+        "Entity": [
+            "Periodic Reminder",
+            "Attention",
+            "Approval Step",
+            "Historical",
+            "Ingestion",
+            "Knowledge Collection",
+            "Ir Reminders"
+        ],
+        "Action": [
+            "Get Periodic Ir Reminders Something When Needs Attention Including Next Ingestion",
+            "Get Periodic Reminders Something When Needs Attention Including Approval Step",
+            "Get Periodic Reminders Something When Needs Attention Including Something Need",
+            "Move From A Current Knowledge Collection To Historical"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to promote/share my work through interactive maps, so that I can display the range and extent of my work graphically.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Work",
+            "Interactive Map"
+        ],
+        "Action": [
+            "Promote Work Through Interactive Maps",
+            "Share Work Through Interactive Maps"
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Educator, I want to have a place to store a variety of documents, presentations and data sets I've created, that doesn't require an extra step in making available on my own County/Region/Project site (i.e. a list or directory of materials there is automatically updated when placed in a central archive/repository).",
+        "Persona": [
+            "Extension Educator"
+        ],
+        "Entity": [
+            "Project Site",
+            "Variety",
+            "Place",
+            "Material",
+            "Extra Step",
+            "Directory",
+            "County",
+            "Region",
+            "Presentation",
+            "Document",
+            "Data Set"
+        ],
+        "Action": [
+            "Have A Place",
+            "Store A Variety Of Data Set",
+            "Store A Variety Of Documents",
+            "Store A Variety Of Presentation",
+            "Created"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to know other reports/datasets that are related (e.g. see also) to report/dataset being viewed for the purpose finding other related information.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "S",
+            "Report",
+            "Related , Information"
+        ],
+        "Action": [
+            "Report",
+            "Know Other Report S",
+            "Viewed For",
+            "Dataset",
+            "Find Related, Other Information",
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to create a personal account to request email notification when new version of report/dataset is available.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Personal Account",
+            "Email Notification"
+        ],
+        "Action": [
+            "Create A Personal Account",
+            "Request Email Notification"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to download report/dataset release calendar to load into own calendar.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "Report",
+            "Dataset Release",
+            "Calendar"
+        ],
+        "Action": [
+            "Download Dataset Release Calendar",
+            "Load Into Own Calendar",
+            "Download Report"
+        ]
+    },
+    {
+        "Text": "#G27# As a librarydiscoveryoperator, I want to harvest useful metadata from the repository via OAI, and continue to do so incrementally, so that I can make Cornell publications discoverable in my repository.",
+        "Persona": [
+            "Librarydiscoveryoperator"
+        ],
+        "Entity": [
+            "Oai",
+            "Repository",
+            "Useful Metadata"
+        ],
+        "Action": [
+            "Harvest Useful Metadata From The Repository Via Oai",
+            "Continue",
+            "Do"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to quickly correct errors in uploaded metadata, and even uploaded documents, while leaving a record of my revisions (and possibly the reasons behind them), so that I can present correct versions of content and to locate points of error.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Record",
+            "Revision",
+            "Error",
+            "Upload Metadata",
+            "Reason",
+            "Upload Document"
+        ],
+        "Action": [
+            "Correct Errors In Even Uploaded Document",
+            "Correct Errors In Uploaded Metadata"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to receive a quick response and a reasonable resolution to tech support issues, so that service can proceed with minimal interruption.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Reasonable Resolution",
+            "Tech Support Issues",
+            "Quick Response"
+        ],
+        "Action": [
+            "Receive A Quick Response",
+            "Receive A Reasonable Resolution To Tech Support Issues"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to share on the repository files that are larger than 1GB in a way that still allows users to download them if I want to use them, so that I can meet funder requirements.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Repository File",
+            "Gb",
+            "Way"
+        ],
+        "Action": [
+            "Want",
+            "Share On The Repository Files Are Larger Than Gb In A Way Still Allows",
+            "Use Users",
+            "Download Users"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to login to personal account with access to authorized functions.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Authorized Function",
+            "Access",
+            "Personal Account"
+        ],
+        "Action": [
+            "Login To Personal Account With Access To Authorized Functions"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to have a personal account with the ability to change passwords to make them more secure or to retrieve forgotten ones.",
+        "Persona": [
+            "Ir",
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Password",
+            "Personal Account"
+        ],
+        "Action": [
+            "Retrieve Forgotten Ones",
+            "Change Passwords",
+            "Make",
+            "Have A Personal Account With"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to set up or delete accounts for other administrators with various levels of permission.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Account",
+            "Permission",
+            "Administrator"
+        ],
+        "Action": [
+            "Set Up Accounts For Other Administrators With Various Levels Of Permission"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to see a list of all administrators for ease of administering accounts.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Administer Account",
+            "Administrator"
+        ],
+        "Action": [
+            "See A List Of All Administrators For Ease Of Administering Accounts"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to have robust searching and tracking features for existing and newly created patron accounts.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Feature",
+            "Search",
+            "Patron Accounts"
+        ],
+        "Action": [
+            "Have",
+            "Track Features For Existing Patron Accounts",
+            "Have Robust Searching",
+            "Create",
+            "Track Features For"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to unpublish a report/dataset if requested to do so by USDA agency.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Report",
+            "Dataset"
+        ],
+        "Action": [
+            "Unpublish A Report",
+            "Unpublish Dataset"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to add future release dates of reports/datasets to calendar for patron FYI.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Future Date",
+            "Dataset",
+            "Calendar",
+            "Report",
+            "Release Dates",
+            "Patron Fyi"
+        ],
+        "Action": [
+            "Add Future Release Dates Of Reports For Patron Fyi",
+            "Add Future Dates Of Dataset To Calendar"
+        ]
+    },
+    {
+        "Text": "#G27# As a faculty member, I want to recommend a digital collection be built in the repository, so that I can assist in my research.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Digital Collection"
+        ],
+        "Action": [
+            "Recommend"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to administrate patron accounts for purpose of closing accounts, viewing subscriptions, changing subscriptions, resetting passwords, changing email address, etc.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Closing Accounts",
+            "Account",
+            "Purpose",
+            "Etc",
+            "Subscription",
+            "Password",
+            "Email Address",
+            "Patron Accounts"
+        ],
+        "Action": [
+            "Administrate Patron Accounts For Purpose Of Closing Accounts Viewing Subscriptions",
+            "Administrate Accounts For Purpose Of Accounts Etc",
+            "Change Email Address",
+            "Administrate Accounts For Purpose Of Accounts",
+            "Change Subscriptions",
+            "Reset Passwords"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to create custom metadata fields for certain collections, and allow searching of those fields, so that I can best reflect and deliver diverse content.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Custom Metadata Fields",
+            "Certain Collection",
+            "Field"
+        ],
+        "Action": [
+            "Create Custom Metadata Fields For Certain Collections",
+            "Allow Searching Of Those Fields"
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to move a collection, so that I can fulfill the collection owner's request.",
+        "Persona": [
+            "Support , Repository , Team Member"
+        ],
+        "Entity": [
+            "Collection"
+        ],
+        "Action": [
+            "Move A Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to rename a collection, so that I can fulfill the collection owner's request.",
+        "Persona": [
+            "Support , Repository , Team Member"
+        ],
+        "Entity": [
+            "Collection"
+        ],
+        "Action": [
+            "Rename A Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that the digital copy I deposit is stored redundantly, so that when one copy suffers destruction or unwanted changes, I still have other good copies to restore from.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Digital Copy"
+        ],
+        "Action": [
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that threats to copies in one repository are not automatically incurred by the redundant copies.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Redundant Copy",
+            "Threat",
+            "Repository",
+            "Copy"
+        ],
+        "Action": [
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that the redundant copies are continuously monitored for unwanted changes, and that if/when changes do occur, there is a mechanism by which I can determine the original object and restore it to all copies.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Redundant Copy",
+            "Unwanted Change",
+            "Change",
+            "Original Object",
+            "Copy"
+        ],
+        "Action": [
+            "Assured",
+            "Changes Occur",
+            "By Which Restore The Original Object To All Copies"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that the assets can be taken out of the repository, and that the assets taken out are the same as those that are put in.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Asset",
+            "Repository"
+        ],
+        "Action": [
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to know what the intellectual value of the asset is to the institution at the time of deposit, so that I obtain guidance in the evaluation of it for current value for the institution.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Deposit",
+            "Institution",
+            "Asset"
+        ],
+        "Action": [
+            "Know",
+            "What Is To The Institution At The Time Of Deposit"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to have a mechanism to obtain a listing or understanding of all the assets that have been deposited, and their current status.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Understanding",
+            "Mechanism",
+            "Asset",
+            "Listing",
+            "Current Status"
+        ],
+        "Action": [
+            "Have A Mechanism",
+            "Obtain",
+            "Obtain A Listing Of The Assets Have Deposited",
+            "Obtain A Listing Of Current Status",
+            "Obtain Understanding"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that funding and staffing of the IR have a commitment to longevity of the repository through published plans and/or explicit contract clauses.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Commitment",
+            "Ir",
+            "Repository",
+            "Staffing",
+            "Funding",
+            "Explicit",
+            "Longevity",
+            "Publish Plan",
+            "Contract Clause"
+        ],
+        "Action": [
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As a stakeholder, I want to have files adequately described, so that I can successfully render them in my contemporary operating environment.",
+        "Persona": [
+            "Stakeholder"
+        ],
+        "Entity": [
+            "File"
+        ],
+        "Action": [
+            "Have Adequately Files"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to preserve both the content and the metadata within the repository in a robust manner, so that I can provide stable, long-term access to this material.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Robust Manner",
+            "Content",
+            "Metadata"
+        ],
+        "Action": [
+            "Preserve The Content In A Robust Manner",
+            "Preserve The Metadata Within The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As a data curator, I want to upload a new version of an item that has changed, while still allowing old versions to be accessed.",
+        "Persona": [
+            "Datum Curator"
+        ],
+        "Entity": [
+            "Item"
+        ],
+        "Action": [
+            "Upload A New Version Of An Item Has Changed",
+            "Accessed"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to preserve the scholarship of the law school by using sustainable links that will not succumb to link rot, so that I can create a permanent digital archive for the scholarship of my institution.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Law School",
+            "Rot"
+        ],
+        "Action": [
+            "Link Rot",
+            "Preserve The Scholarship Of The Law School Using Sustainable Links Not Succumb"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to create a collection, sometimes with custom metadata fields, so that I can house digital material for wider distribution.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Custom Metadata Fields",
+            "Collection"
+        ],
+        "Action": [
+            "Create A Collection Sometimes With Custom Metadata Fields"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to trace the list of revisors to determine who uploaded an item to the repository, so that I can confirm that proper procedures were followed.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Item",
+            "Revisor",
+            "Repository"
+        ],
+        "Action": [
+            "Determine",
+            "Trace The List Of Revisors",
+            "Uploaded An Item To The Repository"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that there is a formal plan for the disposition of assets if the IR should cease.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Ir",
+            "Asset"
+        ],
+        "Action": [
+            "The Ir Cease",
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to have mechanism to pass ownership/management of the assets to a successor.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Asset",
+            "Mechanism",
+            "Successor",
+            "Management"
+        ],
+        "Action": [
+            "Have Mechanism",
+            "Pass Management",
+            "Pass Ownership Of The Assets To A Successor"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to email system provider to report issues and ask questions.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "System Provider",
+            "Issue",
+            "Question"
+        ],
+        "Action": [
+            "Report Issues",
+            "Email System Provider",
+            "Ask Questions"
+        ]
+    },
+    {
+        "Text": "#G27# As a data curator, I want to have a mechanism to allow for records scheduling for items that do not need to be stored indefinitely.",
+        "Persona": [
+            "Datum Curator"
+        ],
+        "Entity": [
+            "Record",
+            "Mechanism",
+            "Item"
+        ],
+        "Action": [
+            "Allow For Records For Items Not Do Need",
+            "Stored",
+            "Have A Mechanism"
+        ]
+    }
+]
