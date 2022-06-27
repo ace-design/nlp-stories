@@ -1,0 +1,202 @@
+[
+    {
+        "Text": "As a PI, I want to properly record all metadata, so that I can ensure proper running of the project in case of staff changes.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "description"
+        ],
+        "Triggers": [
+            "manager",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "description"
+        ]
+    },
+    {
+        "Text": "As a researcher, I want to indicate where my data will be stored during the project and where after the project, so that it remains accessible during all stages of the data lifecycle.",
+        "Persona": [
+            "head"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "identifiers"
+        ],
+        "Triggers": [
+            "head",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "identifiers"
+        ]
+    },
+    {
+        "Text": "As a researcher, I want to import metadata that I captured with a metadata tool, so that I do not have to capture it again in a DMP.",
+        "Persona": [
+            "er"
+        ],
+        "Action": [
+            "read"
+        ],
+        "Entity": [
+            "costs"
+        ],
+        "Triggers": [
+            "er",
+            "read"
+        ],
+        "Targets": [
+            "read",
+            "costs"
+        ]
+    },
+    {
+        "Text": "As a data manager, I want to know how the data is used, so that I can develop more detailed usage and support scenarios with researchers.",
+        "Persona": [
+            "eholder"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "eholder",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "System"
+        ]
+    },
+    {
+        "Text": "As a repository owner, I want to be able to check the planned provenance of the data that will be submitted at the end of a project, so that I can calculate necessary submission fees and check whether it belongs to our target group.",
+        "Persona": [
+            "er"
+        ],
+        "Action": [
+            "check"
+        ],
+        "Entity": [
+            "repositories"
+        ],
+        "Triggers": [
+            "er",
+            "check"
+        ],
+        "Targets": [
+            "check",
+            "repositories"
+        ]
+    },
+    {
+        "Text": "As an IT manager, I want to know about IT resource requirements early in the project lifecycle, so that I can enable resource acquisition planning.",
+        "Persona": [
+            "Integrity"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "reports"
+        ],
+        "Triggers": [
+            "Integrity",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "reports"
+        ]
+    },
+    {
+        "Text": "As a PI, I want to plan what kind of data I want to record/store, so that I can ensure it will possible to store it.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "System"
+        ]
+    },
+    {
+        "Text": "As an IT staff member, I want to know the security requirements of the data, so that I know which kind of security measures to apply.",
+        "Persona": [
+            "inistrator"
+        ],
+        "Action": [
+            "check"
+        ],
+        "Entity": [
+            "level"
+        ],
+        "Triggers": [
+            "inistrator",
+            "check"
+        ],
+        "Targets": [
+            "check",
+            "level"
+        ]
+    },
+    {
+        "Text": "As a data manager, I want to have the description of collected data sets that are used or updated throughout the project lifecycle, so that I can ensure the descriptions are current and add detail as the study proceeds.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "plan"
+        ],
+        "Entity": [
+            "anonymization"
+        ],
+        "Triggers": [
+            "manager",
+            "plan"
+        ],
+        "Targets": [
+            "plan",
+            "anonymization"
+        ]
+    },
+    {
+        "Text": "As a researcher, I want to know which topics are mandatory and similar in all DMPs, so that I can save time through quickly writing it.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "System"
+        ]
+    }
+]

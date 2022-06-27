@@ -1,4 +1,4 @@
-#This file will extract the info from the visual narrator nlp tool 
+#This file will extract the info from the visual narrator nlp tool and output to json file
 import argparse
 import subprocess
 import sys
@@ -28,29 +28,28 @@ def extract_visual_Narrator():
 
     Returns:
     data (str) : output from the command window
-    args.save_path (str) : path of file to save restults
+    args.save_name (str) : path of file to save restults
     stories (list) : story text
 
     Raises:
-        FileNotFoundError: raises excpetion
+    FileNotFoundError: raises excpetion
 
     '''
     
     parser = argparse.ArgumentParser()
     parser.add_argument("load_path", type = str, help = "path to file of evaluation")
-    parser.add_argument("save_path", type = str, help = "path to file of evaluation")
+    parser.add_argument("save_name", type = str, help = "name of file to save")
     args = parser.parse_args()
 
     try:
         load_file = open(args.load_path)
         load_file.close()
-        save_file = open(args.save_path)
-        save_file.close()
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
     else:
+        #strip off PID because Visual narrator has trouble with them
         read_file = open(args.load_path)
         stories = read_file.readlines()
         text = []
@@ -59,14 +58,18 @@ def extract_visual_Narrator():
             text.append(story)
         read_file.close()
         
-        write_file = open("visual_narrator_extraction\stip_text_visual_narrator.txt", "w")
+        write_file = open("visual_narrator_extraction\\strip_text_visual_narrator.txt", "w")
         for story in text:
             write_file.write(story + "\n")
         write_file.close()
         
-        command = subprocess.run("python visual_narrator\\run.py visual_narrator_extraction\\stip_text_visual_narrator.txt -u", capture_output = True)
+        #runs visual narrator of stripped off PID
+        command = subprocess.run("python visual_narrator\\run.py visual_narrator_extraction\\strip_text_visual_narrator.txt -u", capture_output = True)
         data = command.stdout.decode()
-        return data, args.save_path, stories
+
+        save_path = "nlp_outputs\\visual_narrator\\" + args.save_name + "_visual_narrator.json"
+
+        return data, save_path, stories
 
 def split_data(data):
     '''
