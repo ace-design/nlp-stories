@@ -2,7 +2,6 @@
 #Noun and verb list from https://drive.google.com/file/d/0B5eYVI2s0XztOVdaUnNWQWFZOEU/edit?resourcekey=0-jNd6JksVlwXjv6YnXDu-wg via http://www.ashley-bovan.co.uk/words/partsofspeech.html
 import argparse
 import json
-import os
 import sys
 
 def main():
@@ -212,7 +211,7 @@ def save_results(save_name, final_results):
     final_results (dictionary): contains the annotations of each story from this simple nlp
     '''
 
-    save_file_name =  "outputs\\basic_nlp\\" + save_name + "_simple_nlp.json"
+    save_file_name =  "nlp_outputs\\basic_nlp\\" + save_name + "_simple_nlp.json"
 
     json.dumps(final_results)
     with open(save_file_name,"w", encoding="utf-8") as file:

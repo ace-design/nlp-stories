@@ -1,0 +1,2288 @@
+[
+    {
+        "Text": "#G18# As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.",
+        "Persona": [
+            " system administrator"
+        ],
+        "Action": [
+            "want",
+            "run",
+            "script",
+            "installs"
+        ],
+        "Entity": [
+            "run",
+            "script",
+            "node",
+            "virgin",
+            "system"
+        ]
+    },
+    {
+        "Text": "#G18# As a system administrator, I want to run a script that tests to see if a Neurohub installation is functioning correctly.",
+        "Persona": [
+            " system administrator"
+        ],
+        "Action": [
+            "want",
+            "run",
+            "script",
+            "tests",
+            "see"
+        ],
+        "Entity": [
+            "run",
+            "script",
+            "tests",
+            "see",
+            "installation",
+            "functioning"
+        ]
+    },
+    {
+        "Text": "#G18# As a release engineer, I want to call a script to execute acceptance tests against a Neurohub installation and report back the results.",
+        "Persona": [
+            " release engineer"
+        ],
+        "Action": [
+            "want",
+            "call",
+            "script",
+            "execute",
+            "tests",
+            "report",
+            "back",
+            "results"
+        ],
+        "Entity": [
+            "call",
+            "script",
+            "acceptance",
+            "tests",
+            "installation",
+            "report",
+            "back",
+            "results"
+        ]
+    },
+    {
+        "Text": "#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
+        "Persona": [
+            " investigator"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "test",
+            "results",
+            "can",
+            "understand"
+        ],
+        "Entity": [
+            "view",
+            "acceptance",
+            "test",
+            "results",
+            "can",
+            "how",
+            "node"
+        ]
+    },
+    {
+        "Text": "#G18# As an MRI operator, I want to digitally record the responses that subjects make when completing paper-based forms.",
+        "Persona": [
+            " MRI operator"
+        ],
+        "Action": [
+            "want",
+            "record",
+            "subjects",
+            "make",
+            "completing",
+            "forms"
+        ],
+        "Entity": [
+            "record",
+            "responses",
+            "subjects",
+            "make",
+            "forms"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to navigate forwards and backwards between log books and log book pages without having to use my browser's back button.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "navigate",
+            "forwards",
+            "log",
+            "books",
+            "log",
+            "book",
+            "pages",
+            "use",
+            "back",
+            "button"
+        ],
+        "Entity": [
+            "forwards",
+            "log",
+            "books",
+            "log",
+            "book",
+            "pages",
+            "use",
+            "back",
+            "button"
+        ]
+    },
+    {
+        "Text": "#G18# As a lab administrator, I want to theme the Web interface graphics/colours.",
+        "Persona": [
+            " lab administrator"
+        ],
+        "Action": [
+            "want",
+            "web"
+        ],
+        "Entity": [
+            "theme",
+            "web",
+            "interface"
+        ]
+    },
+    {
+        "Text": "#G18# As a systems administrator, I want  to install Neurohub dependencies into an Ubuntu 10.04 LTS machine using the normal Ubuntu package management tools.",
+        "Persona": [
+            " systems administrator"
+        ],
+        "Action": [
+            "want",
+            "install",
+            "machine",
+            "using",
+            "package",
+            "tools"
+        ],
+        "Entity": [
+            "dependencies",
+            "machine",
+            "using",
+            "normal",
+            "package",
+            "management",
+            "tools"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a file to this page.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "log",
+            "book",
+            "page",
+            "experiment",
+            "attach",
+            "file",
+            "page"
+        ],
+        "Entity": [
+            "log",
+            "book",
+            "page",
+            "experiment",
+            "attach",
+            "file",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a directory that contains multiple files.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "log",
+            "book",
+            "page",
+            "experiment",
+            "attach",
+            "contains",
+            "files"
+        ],
+        "Entity": [
+            "log",
+            "book",
+            "page",
+            "experiment",
+            "attach",
+            "directory",
+            "multiple",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "upload",
+            "files",
+            "log",
+            "book",
+            "page"
+        ],
+        "Entity": [
+            "files",
+            "prior",
+            "log",
+            "book",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "upload",
+            "files",
+            "log",
+            "book",
+            "page",
+            "using",
+            "web"
+        ],
+        "Entity": [
+            "files",
+            "prior",
+            "log",
+            "book",
+            "page",
+            "using",
+            "web",
+            "interface"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "upload",
+            "files",
+            "log",
+            "book",
+            "page",
+            "using",
+            "mapped",
+            "network",
+            "drive"
+        ],
+        "Entity": [
+            "files",
+            "prior",
+            "log",
+            "book",
+            "page",
+            "using",
+            "network",
+            "drive"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to attach currently non-attached files to a log book page.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "attach",
+            "files",
+            "log",
+            "book",
+            "page"
+        ],
+        "Entity": [
+            "attach",
+            "files",
+            "log",
+            "book",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to receive an alert of any unattached files that are in my workspace.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "receive",
+            "alert",
+            "files",
+            "are"
+        ],
+        "Entity": [
+            "alert",
+            "files",
+            "workspace"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to download files attached to an experiment using my Web browser.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "download",
+            "files",
+            "experiment",
+            "using",
+            "web"
+        ],
+        "Entity": [
+            "files",
+            "experiment",
+            "using",
+            "web",
+            "browser"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to access files stored in my Neurohub workspace, using a network drive attached to my workstation.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "access",
+            "files",
+            "stored",
+            "using",
+            "network",
+            "drive"
+        ],
+        "Entity": [
+            "access",
+            "files",
+            "workspace",
+            "using",
+            "network",
+            "drive",
+            "workstation"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to create a log book page.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "log",
+            "book",
+            "page"
+        ],
+        "Entity": [
+            "log",
+            "book",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
+        "Persona": [
+            " release engineer"
+        ],
+        "Action": [
+            "want",
+            "configure",
+            "builds",
+            "perform",
+            "execute",
+            "tests",
+            "report",
+            "back",
+            "results",
+            "requiring"
+        ],
+        "Entity": [
+            "builds",
+            "installation",
+            "virgin",
+            "system",
+            "tests",
+            "report",
+            "back",
+            "results",
+            "manual"
+        ]
+    },
+    {
+        "Text": "#G18# As a supervisor, I want to view what my researchers were doing on a given date or period of time.",
+        "Persona": [
+            " supervisor"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "were",
+            "given",
+            "date",
+            "time"
+        ],
+        "Entity": [
+            "view",
+            "researchers",
+            "doing",
+            "given",
+            "date",
+            "period",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to upload large files of over 1GB in size.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "upload",
+            "files",
+            "size"
+        ],
+        "Entity": [
+            "large",
+            "files",
+            "over",
+            "size"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to assign tags to files that I have uploaded.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "assign",
+            "tags",
+            "files",
+            "have"
+        ],
+        "Entity": [
+            "assign",
+            "tags",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to assign bespoke information to a file dependent on its type.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "assign",
+            "file",
+            "type"
+        ],
+        "Entity": [
+            "assign",
+            "information",
+            "file",
+            "dependent",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to filter the files I get from search results based on their  type.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "filter",
+            "files",
+            "get",
+            "search",
+            "results",
+            "based",
+            "type"
+        ],
+        "Entity": [
+            "filter",
+            "files",
+            "search",
+            "results",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to use the tags that I use are part of a controlled vocabulary.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "use",
+            "tags",
+            "use",
+            "are",
+            "part",
+            "controlled"
+        ],
+        "Entity": [
+            "use",
+            "tags",
+            "use",
+            "part",
+            "vocabulary"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to make uploaded data files to be non-modifiable.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "make",
+            "files"
+        ],
+        "Entity": [
+            "make",
+            "data",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to make predicated links between files.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "make",
+            "predicated",
+            "links",
+            "files"
+        ],
+        "Entity": [
+            "make",
+            "links",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to restrict what can be entered to a metadata field.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "restrict",
+            "can",
+            "field"
+        ],
+        "Entity": [
+            "can",
+            "field"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have files I might accidentally delete to be restorable.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "files",
+            "might",
+            "delete"
+        ],
+        "Entity": [
+            "files",
+            "might"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to revert to an older version of an uploaded file.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "revert",
+            "file"
+        ],
+        "Entity": [
+            "revert",
+            "version",
+            "file"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have a visual way of viewing particular files uploaded over a time period.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "files",
+            "time"
+        ],
+        "Entity": [
+            "visual",
+            "way",
+            "viewing",
+            "particular",
+            "files",
+            "over",
+            "time",
+            "period"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to associate together files involved in a experiment.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "associate",
+            "files",
+            "experiment"
+        ],
+        "Entity": [
+            "associate",
+            "files",
+            "experiment"
+        ]
+    },
+    {
+        "Text": "#G18# As a system administrator, I want to have a managed backup protocol for the system.",
+        "Persona": [
+            " system administrator"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "managed"
+        ],
+        "Entity": [
+            "protocol",
+            "system"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to enter metadata / describe an experiment protocol before a file is even created.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "enter",
+            "describe",
+            "experiment",
+            "file",
+            "even",
+            "created"
+        ],
+        "Entity": [
+            "experiment",
+            "protocol",
+            "file",
+            "even"
+        ]
+    },
+    {
+        "Text": "#G18# As lab administrator, I want to have increased access to the system to support regular users. ",
+        "Persona": [
+            "b administrator"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "increased",
+            "access",
+            "support"
+        ],
+        "Entity": [
+            "access",
+            "system",
+            "support",
+            "regular",
+            "users"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to link together experimental runs to build an experiment.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "link",
+            "runs",
+            "build",
+            "experiment"
+        ],
+        "Entity": [
+            "link",
+            "runs",
+            "build",
+            "experiment"
+        ]
+    },
+    {
+        "Text": "#G18# As a lab administrator, I want to create page templates with bespoke metadata fields.",
+        "Persona": [
+            " lab administrator"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "page",
+            "fields"
+        ],
+        "Entity": [
+            "page",
+            "templates",
+            "fields"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to capture the same metadata for each file created in an experimental run.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "capture",
+            "file",
+            "created",
+            "run"
+        ],
+        "Entity": [
+            "capture",
+            "file",
+            "run"
+        ]
+    },
+    {
+        "Text": "#G18# As a lab administrator, I want a way of managing worm strain stocks that is integrated with Wormbase.",
+        "Persona": [
+            " lab administrator"
+        ],
+        "Action": [
+            "want",
+            "worm",
+            "strain",
+            "stocks",
+            "integrated"
+        ],
+        "Entity": [
+            "way",
+            "managing",
+            "worm",
+            "strain",
+            "stocks"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to search for and download human-readable experimental protocols.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "search",
+            "download"
+        ],
+        "Entity": [
+            "search",
+            "protocols"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "modify",
+            "branch"
+        ],
+        "Entity": [
+            "branch",
+            "protocol",
+            "original"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to view how an experimental protocol has evolved over time.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "has",
+            "evolved",
+            "time"
+        ],
+        "Entity": [
+            "view",
+            "how",
+            "protocol",
+            "over",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to create a protocol and assign metadata to any stag.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "assign",
+            "stag"
+        ],
+        "Entity": [
+            "protocol",
+            "assign",
+            "stag"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to prove definitively that I created a page on a certain date.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "prove",
+            "created",
+            "page",
+            "date"
+        ],
+        "Entity": [
+            "page",
+            "date"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to manage the references / papers I have investigated.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "manage",
+            "references",
+            "papers",
+            "have",
+            "investigated"
+        ],
+        "Entity": [
+            "manage",
+            "references",
+            "papers"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to search specifically for files rather than log book pages.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "search",
+            "files",
+            "log",
+            "book",
+            "pages"
+        ],
+        "Entity": [
+            "search",
+            "files",
+            "log",
+            "book",
+            "pages"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to limit my search to a particular set of log books.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "limit",
+            "search",
+            "set",
+            "log",
+            "books"
+        ],
+        "Entity": [
+            "limit",
+            "search",
+            "particular",
+            "set",
+            "log",
+            "books"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to limit my search results to one or more log book sections from one or more log books.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "limit",
+            "search",
+            "results",
+            "log",
+            "book",
+            "sections",
+            "log",
+            "books"
+        ],
+        "Entity": [
+            "limit",
+            "search",
+            "results",
+            "one",
+            "more",
+            "log",
+            "book",
+            "sections",
+            "one",
+            "more",
+            "log",
+            "books"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to download files directly from the search results page.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "download",
+            "files",
+            "search",
+            "results",
+            "page"
+        ],
+        "Entity": [
+            "files",
+            "search",
+            "results",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to see the provenance of the page as part of the search results.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "see",
+            "page",
+            "part",
+            "search",
+            "results"
+        ],
+        "Entity": [
+            "see",
+            "provenance",
+            "page",
+            "part",
+            "search",
+            "results"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to attach multiple files at once to a log book page.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "attach",
+            "files",
+            "log",
+            "book",
+            "page"
+        ],
+        "Entity": [
+            "attach",
+            "multiple",
+            "files",
+            "once",
+            "log",
+            "book",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to download multiple files from the search results in one go.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "download",
+            "files",
+            "search",
+            "results"
+        ],
+        "Entity": [
+            "multiple",
+            "files",
+            "search",
+            "results",
+            "one"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "draw",
+            "tables",
+            "using",
+            "tags",
+            "part",
+            "content",
+            "log",
+            "book",
+            "page"
+        ],
+        "Entity": [
+            "draw",
+            "tables",
+            "using",
+            "tags",
+            "part",
+            "content",
+            "log",
+            "book",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G18# As a lab member, I want to view events and equipment bookings within the group.",
+        "Persona": [
+            " lab member"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "group"
+        ],
+        "Entity": [
+            "view",
+            "events",
+            "equipment",
+            "bookings",
+            "group"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to store worm behaviour videos with an encoding that can be analysed by the worm analysis software written by Christopher James.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "store",
+            "worm",
+            "encoding",
+            "can",
+            "analysed",
+            "worm",
+            "written",
+            "james"
+        ],
+        "Entity": [
+            "store",
+            "worm",
+            "behaviour",
+            "videos",
+            "encoding",
+            "can",
+            "worm",
+            "analysis",
+            "software",
+            "written",
+            "james"
+        ]
+    },
+    {
+        "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
+        "Persona": [
+            " system administrator"
+        ],
+        "Action": [
+            "want",
+            "migrate"
+        ],
+        "Entity": [
+            "data",
+            "version",
+            "current",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have the system to also forward important news items to an external mailing list.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "forward",
+            "items",
+            "list"
+        ],
+        "Entity": [
+            "system",
+            "forward",
+            "news",
+            "items",
+            "external",
+            "mailing",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to view and update an inventory of of the equipment and consumables that are present in the centre.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "update",
+            "inventory",
+            "are",
+            "present",
+            "centre"
+        ],
+        "Entity": [
+            "view",
+            "update",
+            "inventory",
+            "equipment",
+            "consumables",
+            "present",
+            "centre"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "web",
+            "page",
+            "can",
+            "edit",
+            "calculate",
+            "costs",
+            "while"
+        ],
+        "Entity": [
+            "spreadsheet",
+            "web",
+            "page",
+            "can",
+            "edit",
+            "costs",
+            "while",
+            "working",
+            "proposal"
+        ]
+    },
+    {
+        "Text": "#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
+        "Persona": [
+            " supervisor"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "forms",
+            "can",
+            "fill",
+            "submit",
+            "order",
+            "provide",
+            "course"
+        ],
+        "Entity": [
+            "forms",
+            "students",
+            "can",
+            "fill",
+            "order",
+            "course"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have the option to tell Neurohub to push posted content to my Twitter feed at the same time.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "tell",
+            "push",
+            "content",
+            "twitter",
+            "feed",
+            "time"
+        ],
+        "Entity": [
+            "option",
+            "tell",
+            "push",
+            "content",
+            "twitter",
+            "feed",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "keep",
+            "share",
+            "groups"
+        ],
+        "Entity": [
+            "keep",
+            "entry",
+            "private",
+            "share",
+            "individuals",
+            "groups"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have the details of the workflow execution to be recorded in a neurohub log book while executing a workflow.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "details",
+            "log",
+            "book",
+            "while",
+            "executing"
+        ],
+        "Entity": [
+            "details",
+            "execution",
+            "log",
+            "book",
+            "while",
+            "executing"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have that my Twitter Tweets to appear in Neurohub, so that other researchers in the centre can see what I am up to.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "twitter",
+            "tweets",
+            "appear",
+            "centre",
+            "can",
+            "see"
+        ],
+        "Entity": [
+            "twitter",
+            "tweets",
+            "researchers",
+            "centre",
+            "can",
+            "see"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to view the group's shared calendars via the Neurohub Nodes' Web page as well as on my mobile device.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "view",
+            "calendars",
+            "web",
+            "page",
+            "well"
+        ],
+        "Entity": [
+            "view",
+            "calendars",
+            "web",
+            "page",
+            "well",
+            "mobile",
+            "device"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to sync events created in NeuroHub with a web-based Calendar such as Google Calendar.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "sync",
+            "created",
+            "calendar",
+            "calendar"
+        ],
+        "Entity": [
+            "sync",
+            "events",
+            "calendar",
+            "calendar"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "insert",
+            "symbols"
+        ],
+        "Entity": [
+            "ability",
+            "insert",
+            "symbols",
+            "entries"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have the ability to move multiple files around and rearrange them using the Neurohub file browser while processing data.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "move",
+            "files",
+            "rearrange",
+            "using",
+            "file",
+            "while"
+        ],
+        "Entity": [
+            "ability",
+            "move",
+            "multiple",
+            "files",
+            "using",
+            "file",
+            "browser",
+            "while",
+            "processing",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to point my Mendeley client at a group-wide shared repository of research papers and get notifications via Mendeley when new content is added.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "point",
+            "research",
+            "papers",
+            "get",
+            "content"
+        ],
+        "Entity": [
+            "point",
+            "client",
+            "repository",
+            "research",
+            "papers",
+            "notifications",
+            "content"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "support",
+            "track",
+            "sets",
+            "were",
+            "part",
+            "experiment"
+        ],
+        "Entity": [
+            "support",
+            "keeping",
+            "track",
+            "data",
+            "sets",
+            "part",
+            "particular",
+            "experiment"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want a mechanism for electronically sharing papers and notes with other researchers, so that we can collaborate effectively.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "papers",
+            "notes",
+            "can",
+            "collaborate"
+        ],
+        "Entity": [
+            "mechanism",
+            "sharing",
+            "papers",
+            "notes",
+            "researchers",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have services to support the long term curation of data, so that I can be sure that data will not get 'lost' with the passage of time.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "services",
+            "support",
+            "long",
+            "term",
+            "can",
+            "will",
+            "get",
+            "passage",
+            "time"
+        ],
+        "Entity": [
+            "services",
+            "support",
+            "long",
+            "term",
+            "data",
+            "can",
+            "data",
+            "will",
+            "passage",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "display",
+            "files",
+            "associated",
+            "images",
+            "can",
+            "compare",
+            "taken",
+            "experiments",
+            "dates"
+        ],
+        "Entity": [
+            "display",
+            "multiple",
+            "data",
+            "files",
+            "images",
+            "can",
+            "compare",
+            "data",
+            "experiments",
+            "particular",
+            "dates"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have remote access to my data for off-site working , so that I can still work effectively while away from the lab.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "access",
+            "can",
+            "still",
+            "work",
+            "while"
+        ],
+        "Entity": [
+            "remote",
+            "access",
+            "data",
+            "working",
+            "can",
+            "still",
+            "work",
+            "while",
+            "away",
+            "lab"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to share post-experiment write-ups with other researchers, so that others can more easily replicate my work.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "share",
+            "write-ups",
+            "can",
+            "replicate",
+            "work"
+        ],
+        "Entity": [
+            "share",
+            "researchers",
+            "can",
+            "more",
+            "work"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to collect data as a library of data, which can then be used by one or multiple experiments that are defined at a later stage.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "collect",
+            "can",
+            "experiments",
+            "are",
+            "defined",
+            "stage"
+        ],
+        "Entity": [
+            "collect",
+            "data",
+            "library",
+            "data",
+            "can",
+            "then",
+            "one",
+            "multiple",
+            "experiments",
+            "stage"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to indicate within my electronic log book which experimental data is good/bad, hide the bad data, but still keep it in the system just in case it is useful in the future.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "indicate",
+            "log",
+            "book",
+            "hide",
+            "bad",
+            "still",
+            "keep",
+            "case"
+        ],
+        "Entity": [
+            "log",
+            "book",
+            "data",
+            "hide",
+            "bad",
+            "data",
+            "but",
+            "still",
+            "keep",
+            "system",
+            "case",
+            "useful",
+            "future"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "provide",
+            "centre",
+            "can",
+            "use",
+            "can",
+            "better",
+            "understand"
+        ],
+        "Entity": [
+            "system",
+            "standard",
+            "all",
+            "researchers",
+            "centre",
+            "can",
+            "use",
+            "can",
+            "better",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "images",
+            "annotated",
+            "can",
+            "understood"
+        ],
+        "Entity": [
+            "physiology",
+            "images",
+            "standard",
+            "data",
+            "data",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to attach standard meta data for behavioural observations (and video), so that my data can later be searched for and understood.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "attach",
+            "can",
+            "understood"
+        ],
+        "Entity": [
+            "ability",
+            "attach",
+            "standard",
+            "data",
+            "observations",
+            "data",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to attach standard meta data for drug responses, so that my data can later be searched for and understood.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "attach",
+            "drug",
+            "can",
+            "understood"
+        ],
+        "Entity": [
+            "ability",
+            "attach",
+            "standard",
+            "data",
+            "drug",
+            "responses",
+            "data",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to search for images of cells using standard meta data.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "search",
+            "images",
+            "using"
+        ],
+        "Entity": [
+            "ability",
+            "search",
+            "images",
+            "cells",
+            "using",
+            "standard",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have"
+        ],
+        "Entity": [
+            "least",
+            "data",
+            "data",
+            "system"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to attach detailed meta data to the data and entries that I create.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "attach",
+            "create"
+        ],
+        "Entity": [
+            "ability",
+            "attach",
+            "data",
+            "data",
+            "entries"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to select a partially pre-populated template that already contains commonly entered meta data while adding new data to the system, so that I do not waste time repeatedly inserting the same meta data over and over again for each individual file or log book entry.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "select",
+            "contains",
+            "while",
+            "waste",
+            "time",
+            "file",
+            "log",
+            "book"
+        ],
+        "Entity": [
+            "ability",
+            "template",
+            "data",
+            "while",
+            "data",
+            "system",
+            "waste",
+            "time",
+            "data",
+            "over",
+            "over",
+            "individual",
+            "file",
+            "log",
+            "book",
+            "entry"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to be sure that existing metadata corresponding to the file is not lost when moving a file to a new location.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "file",
+            "file"
+        ],
+        "Entity": [
+            "file",
+            "lost",
+            "moving",
+            "file",
+            "location"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "form",
+            "links",
+            "objects",
+            "example",
+            "file",
+            "file",
+            "can",
+            "type"
+        ],
+        "Entity": [
+            "ability",
+            "form",
+            "links",
+            "objects",
+            "example",
+            "file",
+            "analysis",
+            "file",
+            "data",
+            "can",
+            "type",
+            "association"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to locate experiment files using meta data, regardless of where those files are located.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "locate",
+            "experiment",
+            "files",
+            "using",
+            "files",
+            "are",
+            "located"
+        ],
+        "Entity": [
+            "ability",
+            "experiment",
+            "files",
+            "using",
+            "data",
+            "where",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "have",
+            "written",
+            "can",
+            "traced",
+            "back",
+            "experiment",
+            "point",
+            "time"
+        ],
+        "Entity": [
+            "data",
+            "written",
+            "modification",
+            "deletion",
+            "original",
+            "data",
+            "can",
+            "back",
+            "experiment",
+            "point",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a user,  I want to have the ability to keep my data private on the system, and only share data that I deem should be shared.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "keep",
+            "share",
+            "deem",
+            "should"
+        ],
+        "Entity": [
+            "ability",
+            "keep",
+            "data",
+            "private",
+            "system",
+            "share",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to store all the inputs for an experiment so that the provenance of the results can be verified.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "store",
+            "inputs",
+            "experiment",
+            "results",
+            "can",
+            "verified"
+        ],
+        "Entity": [
+            "ability",
+            "store",
+            "all",
+            "inputs",
+            "experiment",
+            "provenance",
+            "results",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to search for files by file type and format.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "search",
+            "files",
+            "file",
+            "type",
+            "format"
+        ],
+        "Entity": [
+            "ability",
+            "search",
+            "files",
+            "file",
+            "type",
+            "format"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to bulk upload directories and files with minimal effort.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "bulk",
+            "upload",
+            "files"
+        ],
+        "Entity": [
+            "ability",
+            "bulk",
+            "directories",
+            "files",
+            "effort"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "associate",
+            "group",
+            "point",
+            "time",
+            "bulk",
+            "upload",
+            "has",
+            "completed",
+            "have",
+            "time",
+            "reflect",
+            "values"
+        ],
+        "Entity": [
+            "associate",
+            "data",
+            "group",
+            "whole",
+            "point",
+            "time",
+            "bulk",
+            "period",
+            "time",
+            "values",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G18# As a user,  I want to have the ability to change the sharing and ownership of multiple files.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "change",
+            "files"
+        ],
+        "Entity": [
+            "ability",
+            "change",
+            "sharing",
+            "ownership",
+            "multiple",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to restrict the data I share to certain researchers or groups of researchers.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "restrict",
+            "share",
+            "groups"
+        ],
+        "Entity": [
+            "ability",
+            "data",
+            "share",
+            "researchers",
+            "groups",
+            "researchers"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to locate and access data that colleagues want to share.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "locate",
+            "access",
+            "want",
+            "share"
+        ],
+        "Entity": [
+            "ability",
+            "access",
+            "data",
+            "colleagues",
+            "share"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher,  I want to have the ability to interact with a revision control system so that I can keep track of changes to files over time.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "interact",
+            "control",
+            "can",
+            "keep",
+            "track",
+            "changes",
+            "files",
+            "time"
+        ],
+        "Entity": [
+            "ability",
+            "revision",
+            "control",
+            "system",
+            "can",
+            "keep",
+            "track",
+            "changes",
+            "files",
+            "over",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G18# As a JuniorResearcher,  I want to have the ability to harvest knowledge from within the group, so that I can learn from more experienced researchers.",
+        "Persona": [
+            " JuniorResearcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "harvest",
+            "group",
+            "can",
+            "learn"
+        ],
+        "Entity": [
+            "ability",
+            "harvest",
+            "knowledge",
+            "group",
+            "can",
+            "more",
+            "researchers"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "secure",
+            "access"
+        ],
+        "Entity": [
+            "remote",
+            "access",
+            "node",
+            "working",
+            "away",
+            "laboratory"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have a group-level repository for sharing papers/reviews/comments with other researchers.",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have"
+        ],
+        "Entity": [
+            "repository",
+            "sharing",
+            "researchers"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the details of the workflow plan as well as the execution history and results recorded in Neurohub while executing a workflow",
+        "Persona": [
+            " researcher"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "details",
+            "plan",
+            "well",
+            "results",
+            "while",
+            "executing"
+        ],
+        "Entity": [
+            "details",
+            "plan",
+            "well",
+            "execution",
+            "history",
+            "results",
+            "while",
+            "executing"
+        ]
+    }
+]
