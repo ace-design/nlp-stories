@@ -64,7 +64,7 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        save_folder_path = "outputs\\jsonl_to_human_readable\\" + args.save_name + ".json"
+        save_folder_path = "nlp_outputs\\jsonl_to_human_readable\\" + args.save_name + "_baseline.json"
         return args.load_path, save_folder_path
 
 def extract(path):

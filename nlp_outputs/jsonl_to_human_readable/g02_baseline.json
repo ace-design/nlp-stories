@@ -7,10 +7,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "processed"
+                "have"
             ],
             "Secondary Action": [
-                ""
+                "processed"
             ]
         },
         "Entity": {
@@ -25,12 +25,16 @@
         "Triggers": [
             [
                 "Data user",
-                "processed"
+                "have"
             ]
         ],
         "Targets": [
             [
                 "processed",
+                "12-19-2017 deletions"
+            ],
+            [
+                "have",
                 "12-19-2017 deletions"
             ]
         ],
@@ -93,7 +97,8 @@
                 "report"
             ],
             "Secondary Action": [
-                "aware"
+                "aware",
+                "making"
             ]
         },
         "Entity": {
@@ -122,14 +127,13 @@
             [
                 "aware",
                 "contributions"
+            ],
+            [
+                "making",
+                "Broker"
             ]
         ],
-        "Contains": [
-            [
-                "Broker",
-                "better UX"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G02#",
@@ -291,7 +295,9 @@
                 "add"
             ],
             "Secondary Action": [
-                "know"
+                "know",
+                "be modified",
+                "changes"
             ]
         },
         "Entity": {
@@ -320,12 +326,20 @@
             [
                 "know",
                 "status"
+            ],
+            [
+                "changes",
+                "publishStatus"
             ]
         ],
         "Contains": [
             [
                 "submission",
                 "status"
+            ],
+            [
+                "FABS submission",
+                "updates"
             ]
         ]
     },
@@ -337,18 +351,18 @@
         ],
         "Action": {
             "Primary Action": [
-                "provide"
+                "want"
             ],
             "Secondary Action": [
-                ""
+                "provide"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "useful data"
+                "New Relic"
             ],
             "Secondary Entity": [
-                "New Relic",
+                "useful data",
                 "all applications"
             ]
         },
@@ -356,13 +370,17 @@
         "Triggers": [
             [
                 "DevOps engineer",
-                "provide"
+                "want"
             ]
         ],
         "Targets": [
             [
                 "provide",
                 "useful data"
+            ],
+            [
+                "want",
+                "New Relic"
             ]
         ],
         "Contains": [
@@ -531,18 +549,19 @@
         ],
         "Action": {
             "Primary Action": [
-                "be synced"
+                "want"
             ],
             "Secondary Action": [
-                "don't have to regenerate"
+                "don't have to regenerate",
+                "be synced"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "FPDS data load",
                 "D1 file generation"
             ],
             "Secondary Entity": [
+                "FPDS data load",
                 "file",
                 "data"
             ]
@@ -551,7 +570,7 @@
         "Triggers": [
             [
                 "Broker user",
-                "be synced"
+                "want"
             ]
         ],
         "Targets": [
@@ -566,6 +585,10 @@
             [
                 "don't have to regenerate",
                 "file"
+            ],
+            [
+                "want",
+                "D1 file generation"
             ]
         ],
         "Contains": [
@@ -721,7 +744,8 @@
                 "add"
             ],
             "Secondary Action": [
-                "ensure"
+                "ensure",
+                "locked down"
             ]
         },
         "Entity": {
@@ -747,7 +771,7 @@
                 "GTAS window data"
             ],
             [
-                "ensure",
+                "locked down",
                 "site"
             ]
         ],
@@ -766,11 +790,12 @@
         ],
         "Action": {
             "Primary Action": [
-                "managed",
-                "cached"
+                "want"
             ],
             "Secondary Action": [
-                "do not cause"
+                "do not cause",
+                "managed",
+                "cached"
             ]
         },
         "Entity": {
@@ -786,11 +811,7 @@
         "Triggers": [
             [
                 "Developer",
-                "managed"
-            ],
-            [
-                "Developer",
-                "cached"
+                "want"
             ]
         ],
         "Targets": [
@@ -804,6 +825,10 @@
             ],
             [
                 "cached",
+                "D Files generation requests"
+            ],
+            [
+                "want",
                 "D Files generation requests"
             ]
         ],
@@ -859,7 +884,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "create"
+                "help create"
             ],
             "Secondary Action": [
                 "submit"
@@ -877,17 +902,17 @@
         "Triggers": [
             [
                 "Broker user",
-                "create"
+                "help create"
             ]
         ],
         "Targets": [
             [
-                "create",
-                "content mockups"
-            ],
-            [
                 "submit",
                 "data"
+            ],
+            [
+                "help create",
+                "content mockups"
             ]
         ],
         "Contains": []
@@ -1333,9 +1358,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "deleted FSRS records"
+                ""
             ],
             "Secondary Entity": [
+                "deleted FSRS records",
                 "submissions"
             ]
         },
@@ -1347,10 +1373,6 @@
             ]
         ],
         "Targets": [
-            [
-                "ensure",
-                "deleted FSRS records"
-            ],
             [
                 "not included",
                 "submissions"
@@ -1403,11 +1425,13 @@
         ],
         "Action": {
             "Primary Action": [
-                "deactivate"
+                "want"
             ],
             "Secondary Action": [
+                "deactivate",
                 "click",
-                "cannot click"
+                "cannot click",
+                "happening"
             ]
         },
         "Entity": {
@@ -1424,7 +1448,7 @@
         "Triggers": [
             [
                 "user",
-                "deactivate"
+                "want"
             ]
         ],
         "Targets": [
@@ -1439,6 +1463,14 @@
             [
                 "cannot click",
                 "publish button"
+            ],
+            [
+                "want",
+                "publish button"
+            ],
+            [
+                "happening",
+                "derivations"
             ]
         ],
         "Contains": [
@@ -1466,9 +1498,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "attempts"
+                ""
             ],
             "Secondary Entity": [
+                "attempts",
                 "non-existent records",
                 "new published data"
             ]
@@ -1484,10 +1517,6 @@
             [
                 "don't create",
                 "new published data"
-            ],
-            [
-                "ensure",
-                "attempts"
             ],
             [
                 "correct",
@@ -1541,10 +1570,6 @@
             [
                 "only take",
                 "Staging MAX permissions"
-            ],
-            [
-                "ensure",
-                "FABS testers"
             ],
             [
                 "no longer have",
@@ -1664,16 +1689,16 @@
                 "want"
             ],
             "Secondary Action": [
-                ""
+                "accept"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "zero",
-                "blank"
+                "FABS validation rules"
             ],
             "Secondary Entity": [
-                "FABS validation rules",
+                "zero",
+                "blank",
                 "loan records"
             ]
         },
@@ -1687,10 +1712,14 @@
         "Targets": [
             [
                 "want",
+                "FABS validation rules"
+            ],
+            [
+                "accept",
                 "zero"
             ],
             [
-                "want",
+                "accept",
                 "blank"
             ]
         ],
@@ -1750,12 +1779,7 @@
                 "FABS"
             ]
         ],
-        "Contains": [
-            [
-                "FABS",
-                "Financial Assistance data"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G02#",
@@ -1777,7 +1801,8 @@
             ],
             "Secondary Entity": [
                 "CFDA error code",
-                "case"
+                "each case",
+                "what"
             ]
         },
         "Benefit": "",
@@ -1795,14 +1820,13 @@
             [
                 "triggering",
                 "CFDA error code"
-            ]
-        ],
-        "Contains": [
+            ],
             [
-                "case",
+                "each case",
                 "CFDA error code"
             ]
-        ]
+        ],
+        "Contains": []
     },
     {
         "PID": "#G02#",
@@ -1812,7 +1836,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "want"
+                "be confident"
             ],
             "Secondary Action": [
                 ""
@@ -1830,12 +1854,12 @@
         "Triggers": [
             [
                 "agency user",
-                "want"
+                "be confident"
             ]
         ],
         "Targets": [
             [
-                "want",
+                "be confident",
                 "data"
             ]
         ],
@@ -1854,9 +1878,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "indexed properly"
+                "want"
             ],
             "Secondary Action": [
+                "indexed properly",
                 "get"
             ]
         },
@@ -1873,7 +1898,7 @@
         "Triggers": [
             [
                 "Developer",
-                "indexed properly"
+                "want"
             ]
         ],
         "Targets": [
@@ -1884,6 +1909,10 @@
             [
                 "get",
                 "validation results"
+            ],
+            [
+                "want",
+                "domain models"
             ]
         ],
         "Contains": []
@@ -1899,16 +1928,16 @@
                 "want"
             ],
             "Secondary Action": [
-                ""
+                "accept"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "zero",
-                "blank"
+                "FABS validation rules"
             ],
             "Secondary Entity": [
-                "FABS validation rules",
+                "zero",
+                "blank",
                 "non-loan records"
             ]
         },
@@ -1922,21 +1951,25 @@
         "Targets": [
             [
                 "want",
+                "FABS validation rules"
+            ],
+            [
+                "accept",
                 "zero"
             ],
             [
-                "want",
+                "accept",
                 "blank"
             ]
         ],
         "Contains": [
             [
-                "FABS validation rules",
-                "non-loan records"
+                "non-loan records",
+                "blank"
             ],
             [
                 "non-loan records",
-                "blank"
+                "zero"
             ]
         ]
     },
@@ -2014,6 +2047,10 @@
         "Targets": [
             [
                 "have",
+                "derived data elements"
+            ],
+            [
+                "derived properly",
                 "derived data elements"
             ]
         ],
@@ -2181,11 +2218,12 @@
         },
         "Entity": {
             "Primary Entity": [
-                "Broker resources",
-                "validations",
-                "P&P pages"
+                ""
             ],
             "Secondary Entity": [
+                "Broker resources",
+                "validations",
+                "P&P pages",
                 "launch",
                 "FABS",
                 "DAIMS v1.1"
@@ -2199,18 +2237,6 @@
             ]
         ],
         "Targets": [
-            [
-                "ensure",
-                "Broker resources"
-            ],
-            [
-                "ensure",
-                "validations"
-            ],
-            [
-                "ensure",
-                "P&P pages"
-            ],
             [
                 "updated appropriately",
                 "Broker resources"
@@ -2341,19 +2367,20 @@
                 "want"
             ],
             "Secondary Action": [
-                ""
+                "accept",
+                "registered"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "records"
+                "DUNS validations"
             ],
             "Secondary Entity": [
+                "records",
                 "ActionTypes",
                 "B",
                 "C",
                 "SAM",
-                "DUNS validations",
                 "D",
                 "DUNS"
             ]
@@ -2368,7 +2395,15 @@
         "Targets": [
             [
                 "want",
+                "DUNS validations"
+            ],
+            [
+                "accept",
                 "records"
+            ],
+            [
+                "registered",
+                "DUNS"
             ]
         ],
         "Contains": [
@@ -2379,10 +2414,6 @@
             [
                 "SAM",
                 "DUNS"
-            ],
-            [
-                "DUNS validations",
-                "records"
             ],
             [
                 "records",
@@ -2443,12 +2474,12 @@
         ],
         "Contains": [
             [
-                "SAM",
-                "current registration date"
-            ],
-            [
                 "records",
                 "ActionDates"
+            ],
+            [
+                "SAM",
+                "records"
             ]
         ]
     },
@@ -2509,12 +2540,12 @@
                 "want"
             ],
             "Secondary Action": [
-                ""
+                "match"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "maximum length"
+                "maximum length allowed"
             ],
             "Secondary Entity": [
                 "LegalEntityAddressLine3",
@@ -2531,13 +2562,17 @@
         "Targets": [
             [
                 "want",
-                "maximum length"
+                "maximum length allowed"
+            ],
+            [
+                "match",
+                "Schema v1.1"
             ]
         ],
         "Contains": [
             [
                 "LegalEntityAddressLine3",
-                "maximum length"
+                "maximum length allowed"
             ]
         ]
     },
@@ -2633,35 +2668,38 @@
         ],
         "Action": {
             "Primary Action": [
-                "work"
+                "have"
             ],
             "Secondary Action": [
-                ""
+                "work the same"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "PPoPZIP+4",
-                "Legal Entity ZIP validations"
+                "PPoPZIP+4"
             ],
             "Secondary Entity": [
-                ""
+                "Legal Entity ZIP validations"
             ]
         },
         "Benefit": "",
         "Triggers": [
             [
                 "Broker user",
-                "work"
+                "have"
             ]
         ],
         "Targets": [
             [
-                "work",
+                "have",
                 "PPoPZIP+4"
             ],
             [
-                "work",
+                "work the same",
+                "PPoPZIP+4"
+            ],
+            [
+                "work the same",
                 "Legal Entity ZIP validations"
             ]
         ],
@@ -2732,7 +2770,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "be"
+                "be up-to-date daily"
             ]
         },
         "Entity": {
@@ -2740,7 +2778,7 @@
                 "FPDS data"
             ],
             "Secondary Entity": [
-                "up-to-date daily"
+                ""
             ]
         },
         "Benefit": "",
@@ -2756,8 +2794,8 @@
                 "FPDS data"
             ],
             [
-                "be",
-                "up-to-date daily"
+                "be up-to-date daily",
+                "FPDS data"
             ]
         ],
         "Contains": []
@@ -2826,11 +2864,12 @@
         },
         "Entity": {
             "Primary Entity": [
-                "agencies"
+                "how"
             ],
             "Secondary Entity": [
                 "D Files",
                 "FABS",
+                "agencies",
                 "FPDS data"
             ]
         },
@@ -2843,16 +2882,16 @@
         ],
         "Targets": [
             [
-                "determine",
-                "agencies"
-            ],
-            [
                 "generate",
                 "D Files"
             ],
             [
                 "validate",
                 "D Files"
+            ],
+            [
+                "determine",
+                "how"
             ]
         ],
         "Contains": [
@@ -2930,25 +2969,28 @@
         ],
         "Action": {
             "Primary Action": [
-                "show"
+                "want"
             ],
             "Secondary Action": [
-                "know"
+                "show",
+                "know",
+                "updated"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "updated date AND time"
+                "header information box"
             ],
             "Secondary Entity": [
-                "header information box"
+                "updated date AND time",
+                "when"
             ]
         },
         "Benefit": "I know when it was updated",
         "Triggers": [
             [
                 "Agency user",
-                "show"
+                "want"
             ]
         ],
         "Targets": [
@@ -2957,8 +2999,12 @@
                 "updated date AND time"
             ],
             [
-                "know",
+                "want",
                 "header information box"
+            ],
+            [
+                "know",
+                "when"
             ]
         ],
         "Contains": [
@@ -3060,10 +3106,6 @@
         ],
         "Contains": [
             [
-                "test features",
-                "access"
-            ],
-            [
                 "environments",
                 "test features"
             ],
@@ -3074,6 +3116,10 @@
             [
                 "any environment",
                 "any nonProd feature"
+            ],
+            [
+                "test features",
+                "access"
             ]
         ]
     },
@@ -3089,7 +3135,8 @@
             ],
             "Secondary Action": [
                 "accurately represent",
-                "know"
+                "know",
+                "didn't work"
             ]
         },
         "Entity": {
@@ -3098,7 +3145,8 @@
             ],
             "Secondary Entity": [
                 "FABS errors",
-                "submission"
+                "submission",
+                "why"
             ]
         },
         "Benefit": "I know why my submission didn't work",
@@ -3118,8 +3166,12 @@
                 "FABS errors"
             ],
             [
-                "know",
+                "didn't work",
                 "submission"
+            ],
+            [
+                "know",
+                "why"
             ]
         ],
         "Contains": []
@@ -3183,15 +3235,15 @@
         ],
         "Action": {
             "Primary Action": [
-                "loaded"
+                "want"
             ],
             "Secondary Action": [
-                ""
+                "loaded"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "historical Financial Assistance data"
+                "all historical Financial Assistance data"
             ],
             "Secondary Entity": [
                 "FABS go-live"
@@ -3201,21 +3253,20 @@
         "Triggers": [
             [
                 "Agency user",
-                "loaded"
+                "want"
             ]
         ],
         "Targets": [
             [
+                "want",
+                "all historical Financial Assistance data"
+            ],
+            [
                 "loaded",
-                "historical Financial Assistance data"
+                "all historical Financial Assistance data"
             ]
         ],
-        "Contains": [
-            [
-                "FABS go-live",
-                "historical Financial Assistance data"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G02#",
@@ -3225,26 +3276,26 @@
         ],
         "Action": {
             "Primary Action": [
-                "include"
+                "want"
             ],
             "Secondary Action": [
-                ""
+                "include"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "extracted historical data",
-                "FPDS feed data"
+                "historical FPDS data loader"
             ],
             "Secondary Entity": [
-                "historical FPDS data loader"
+                "FPDS feed data",
+                "extracted historical data"
             ]
         },
         "Benefit": "",
         "Triggers": [
             [
                 "Developer",
-                "include"
+                "want"
             ]
         ],
         "Targets": [
@@ -3255,6 +3306,10 @@
             [
                 "include",
                 "FPDS feed data"
+            ],
+            [
+                "want",
+                "historical FPDS data loader"
             ]
         ],
         "Contains": [
@@ -3494,9 +3549,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "FABS"
+                ""
             ],
             "Secondary Entity": [
+                "FABS",
                 "fields",
                 "robust test file",
                 "follow up check"
@@ -3510,10 +3566,6 @@
             ]
         ],
         "Targets": [
-            [
-                "ensure",
-                "FABS"
-            ],
             [
                 "deriving",
                 "fields"
@@ -3615,8 +3667,8 @@
                 "want"
             ],
             "Secondary Action": [
-                "publish",
-                "deciding"
+                "deciding",
+                "published prior"
             ]
         },
         "Entity": {
@@ -3624,7 +3676,8 @@
                 "more information"
             ],
             "Secondary Entity": [
-                "rows"
+                "publish",
+                "how many rows"
             ]
         },
         "Benefit": "",
@@ -3640,14 +3693,18 @@
                 "more information"
             ],
             [
-                "publish",
-                "rows"
+                "published prior",
+                "how many rows"
+            ],
+            [
+                "deciding",
+                "publish"
             ]
         ],
         "Contains": [
             [
                 "more information",
-                "rows"
+                "how many rows"
             ]
         ]
     },
@@ -3771,7 +3828,9 @@
                 "have"
             ],
             "Secondary Action": [
-                "fix"
+                "fix",
+                "accurately reflect",
+                "provide"
             ]
         },
         "Entity": {
@@ -3799,6 +3858,14 @@
             [
                 "fix",
                 "submission"
+            ],
+            [
+                "accurately reflect",
+                "logic"
+            ],
+            [
+                "provide",
+                "enough information"
             ]
         ],
         "Contains": [
@@ -3832,8 +3899,8 @@
             ],
             "Secondary Entity": [
                 "ZIP",
-                "error",
-                "submissions"
+                "submissions",
+                "error"
             ]
         },
         "Benefit": "I can complete my submissions",
@@ -3872,47 +3939,44 @@
         ],
         "Action": {
             "Primary Action": [
-                "want"
+                "make sure"
             ],
             "Secondary Action": [
-                ""
+                "includes"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "necessary columns"
+                ""
             ],
             "Secondary Entity": [
-                "historical data",
+                "all necessary columns",
+                "information",
                 "database",
-                "information"
+                "historical data"
             ]
         },
         "Benefit": "the information in the database is correct",
         "Triggers": [
             [
                 "FABS user",
-                "want"
+                "make sure"
             ]
         ],
         "Targets": [
             [
-                "want",
-                "necessary columns"
+                "includes",
+                "all necessary columns"
             ]
         ],
         "Contains": [
-            [
-                "historical data",
-                "necessary columns"
-            ],
             [
                 "database",
                 "information"
             ],
             [
-                "information",
-                "historical data"
+                "historical data",
+                "all necessary columns"
             ]
         ]
     },
@@ -4257,7 +4321,8 @@
                 "have"
             ],
             "Secondary Action": [
-                "view"
+                "view",
+                "without wanting"
             ]
         },
         "Entity": {
@@ -4285,16 +4350,16 @@
             [
                 "view",
                 "DABS pages"
+            ],
+            [
+                "without wanting",
+                "two sets of permissions"
             ]
         ],
         "Contains": [
             [
                 "DABS",
                 "read-only access"
-            ],
-            [
-                "DABS pages",
-                "two sets of permissions"
             ]
         ]
     },
@@ -4504,10 +4569,9 @@
         },
         "Entity": {
             "Primary Entity": [
-                "data elements"
+                "data elements surrounded by quotation marks"
             ],
             "Secondary Entity": [
-                "quotation marks",
                 "leading and trailing zeroes",
                 "Excel"
             ]
@@ -4521,22 +4585,18 @@
         ],
         "Targets": [
             [
-                "submit",
-                "data elements"
-            ],
-            [
                 "won't strip off",
                 "leading and trailing zeroes"
+            ],
+            [
+                "submit",
+                "data elements surrounded by quotation marks"
             ]
         ],
         "Contains": [
             [
-                "data elements",
-                "quotation marks"
-            ],
-            [
                 "Excel",
-                "data elements"
+                "data elements surrounded by quotation marks"
             ]
         ]
     }

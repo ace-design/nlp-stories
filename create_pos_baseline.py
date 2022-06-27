@@ -46,7 +46,7 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        save_folder_path = "outputs\\pos_baseline\\" + args.save_name + "_pos.json"
+        save_folder_path = "nlp_outputs\\pos_baseline\\" + args.save_name + "_baseline_pos.json"
         return args.load_baseline_path, save_folder_path
 
 def load_data(load_path):
