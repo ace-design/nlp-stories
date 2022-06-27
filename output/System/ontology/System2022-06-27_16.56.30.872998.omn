@@ -1,0 +1,628 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/system.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/system.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "System",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :hasFile1
+	Domain: :FABS
+	Range: :FABSFile
+
+ObjectProperty: :hasFile2
+	Domain: :D
+	Range: :DFile
+
+ObjectProperty: :canBegin
+	Domain: :UIDesigner
+	Range: :UserTesting
+
+ObjectProperty: :canSchedule
+	Domain: :UIDesigner
+	Range: :UserTesting
+
+ObjectProperty: :hasElement
+	Domain: :Data
+	Range: :DataElement
+
+ObjectProperty: :hasCode
+	Domain: :Error
+	Range: :ErrorCode
+
+ObjectProperty: :canUse
+	Domain: :AgencyUser
+	Range: :Schema
+
+ObjectProperty: :canInclude
+	Domain: :AgencyUser
+	Range: :Number
+
+ObjectProperty: :canSee1
+	Domain: :WebsiteUser
+	Range: :File
+
+ObjectProperty: :canSee2
+	Domain: :AgencyUser
+	Range: :Submission
+
+ObjectProperty: :canProvide
+	Domain: :Developer
+	Range: :FABSGroup
+
+ObjectProperty: :canUnderstand
+	Domain: :AgencyUser
+	Range: :LevelError
+
+ObjectProperty: :canInvestigate
+	Domain: :Developer
+	Range: :Issue
+
+ObjectProperty: :canKnowOn
+	Domain: :Owner
+	Range: :UIImprovement
+
+ObjectProperty: :hasMember
+	Domain: :Team
+	Range: :TeamMember
+
+ObjectProperty: :canGenerate
+	Domain: :User
+	Range: :DFile
+
+ObjectProperty: :canFix
+	Domain: :BrokerUser
+	Range: :Submission
+
+ObjectProperty: :canEnsure1
+	Domain: :Developer
+	Range: :Data
+
+ObjectProperty: :canEnsure2
+	Domain: :Owner
+	Range: :Access
+
+ObjectProperty: :canEnsure3
+	Domain: :Tester
+	Range: :Field
+
+ObjectProperty: :canLog
+	Domain: :Developer
+	Range: :System
+
+ObjectProperty: :canLeave
+	Domain: :AgencyUser
+	Range: :Digit
+
+ObjectProperty: :canGet1
+	Domain: :UIDesigner
+	Range: :Approval
+
+ObjectProperty: :canGet2
+	Domain: :AgencyUser
+	Range: :FileF
+
+ObjectProperty: :canGet3
+	Domain: :FABSUser
+	Range: :File
+
+ObjectProperty: :canMove1
+	Domain: :UIDesigner
+	Range: :3
+
+ObjectProperty: :canMove2
+	Domain: :UIDesigner
+	Range: :2
+
+ObjectProperty: :hasDesigner
+	Domain: :UI
+	Range: :UIDesigner
+
+ObjectProperty: :canPrevent1
+	Domain: :Developer
+	Range: :User
+
+ObjectProperty: :canPrevent2
+	Domain: :Developer
+	Range: :Transaction
+
+ObjectProperty: :canComplete
+	Domain: :AgencyUser
+	Range: :Submission
+
+ObjectProperty: :canDownload
+	Domain: :FABSUser
+	Range: :FABSFile
+
+ObjectProperty: :canMake1
+	Domain: :TeamMember
+	Range: :Update
+
+ObjectProperty: :canMake2
+	Domain: :FABSUser
+	Range: :Column
+
+ObjectProperty: :canDesign1
+	Domain: :Owner
+	Range: :Schedule
+
+ObjectProperty: :canDesign2
+	Domain: :Owner
+	Range: :Audit
+
+ObjectProperty: :canUpdate
+	Domain: :BrokerUser
+	Range: :ErrorCode
+
+ObjectProperty: :canTroubleshoot
+	Domain: :Developer
+	Range: :Issue
+
+ObjectProperty: :hasMessage
+	Domain: :Error
+	Range: :ErrorMessage
+
+ObjectProperty: :hasF
+	Domain: :File
+	Range: :FileF
+
+ObjectProperty: :canAccess1
+	Domain: :WebsiteUser
+	Range: :FABSFile
+
+ObjectProperty: :canAccess2
+	Domain: :User
+	Range: :Agency
+
+ObjectProperty: :canAccess3
+	Domain: :DataUser
+	Range: :Field
+
+ObjectProperty: :canSubmit1
+	Domain: :BrokerUser
+	Range: :Data
+
+ObjectProperty: :canSubmit2
+	Domain: :BrokerUser
+	Range: :Record
+
+ObjectProperty: :canSubmit3
+	Domain: :FABSUser
+	Range: :Citywide
+
+ObjectProperty: :canSubmit4
+	Domain: :AgencyUser
+	Range: :DataElement
+
+ObjectProperty: :canSubmission
+	Domain: :FABSUser
+	Range: :Error
+
+ObjectProperty: :canEdit
+	Domain: :UIDesigner
+	Range: :2
+
+ObjectProperty: :canHave1
+	Domain: :DataUser
+	Range: :Deletion
+
+ObjectProperty: :canHave2
+	Domain: :User
+	Range: :Data
+
+ObjectProperty: :canHave3
+	Domain: :Tester
+	Range: :Access
+
+ObjectProperty: :canHave4
+	Domain: :FABSUser
+	Range: :Amount
+
+ObjectProperty: :hasTesting
+	Domain: :User
+	Range: :UserTesting
+
+ObjectProperty: :canAdd1
+	Domain: :Developer
+	Range: :Update
+
+ObjectProperty: :canAdd2
+	Domain: :TeamMember
+	Range: :00
+
+ObjectProperty: :canReset
+	Domain: :Owner
+	Range: :Environment
+
+ObjectProperty: :canMap
+	Domain: :AgencyUser
+	Range: :Federalactionobligation
+
+ObjectProperty: :hasGroup
+	Domain: :FABS
+	Range: :FABSGroup
+
+ObjectProperty: :hasUser1
+	Domain: :Data
+	Range: :DataUser
+
+ObjectProperty: :hasUser2
+	Domain: :Broker
+	Range: :BrokerUser
+
+ObjectProperty: :hasUser3
+	Domain: :Website
+	Range: :WebsiteUser
+
+ObjectProperty: :hasUser4
+	Domain: :Agency
+	Range: :AgencyUser
+
+ObjectProperty: :hasUser5
+	Domain: :FABS
+	Range: :FABSUser
+
+ObjectProperty: :hasError
+	Domain: :Level
+	Range: :LevelError
+
+ObjectProperty: :canRead
+	Domain: :FABSUser
+	Range: :Access
+
+ObjectProperty: :canKnow1
+	Domain: :Developer
+	Range: :Submission
+
+ObjectProperty: :canKnow2
+	Domain: :Owner
+	Range: :UIImprovement
+
+ObjectProperty: :canKnow3
+	Domain: :AgencyUser
+	Range: :System
+
+ObjectProperty: :canCreate
+	Domain: :Owner
+	Range: :TestingSummary
+
+ObjectProperty: :canDerive1
+	Domain: :AgencyUser
+	Range: :DataElement
+
+ObjectProperty: :canDerive2
+	Domain: :TeamMember
+	Range: :Fundingagencycode
+
+ObjectProperty: :canUpload
+	Domain: :BrokerUser
+	Range: :ErrorMessage
+
+ObjectProperty: :canDetermine1
+	Domain: :Developer
+	Range: :DFile
+
+ObjectProperty: :canDetermine2
+	Domain: :Developer
+	Range: :Way
+
+ObjectProperty: :canReceive1
+	Domain: :DataUser
+	Range: :Update
+
+ObjectProperty: :canReceive2
+	Domain: :AgencyUser
+	Range: :LevelError
+
+ObjectProperty: :canClarifyTo
+	Domain: :Developer
+	Range: :ErrorCode
+
+ObjectProperty: :canReportToAbout
+	Domain: :UIDesigner
+	Range: :Agencies
+
+ObjectProperty: :canTrack
+	Domain: :UIDesigner
+	Range: :Issue
+
+ObjectProperty: :canBe
+	Domain: :AgencyUser
+	Range: :SAM
+
+ObjectProperty: :hasSummary
+	Domain: :Testing
+	Range: :TestingSummary
+
+# Classes
+Class: :DataUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Data User",
+		rdfs:comment "Functional Role"
+
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Data
+
+
+Class: :Deletion
+
+
+Class: :UIDesigner
+	SubClassOf: :Designer
+	Annotations:
+		rdfs:label "UI Designer",
+		rdfs:comment "Functional Role"
+
+Class: :Designer
+
+
+Class: :UI
+
+
+Class: :Agencies
+
+
+Class: :2
+
+
+Class: :Approval
+
+
+Class: :3
+
+
+Class: :Developer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :System
+
+
+Class: :Issue
+
+
+Class: :Update
+
+
+Class: :Submission
+
+
+Class: :BrokerUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Broker User",
+		rdfs:comment "Functional Role"
+
+Class: :Broker
+
+
+Class: :ErrorMessage
+	SubClassOf: :Message
+	Annotations:
+		rdfs:label "Error Message"
+
+Class: :Message
+
+
+Class: :Error
+
+
+Class: :WebsiteUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Website User",
+		rdfs:comment "Functional Role"
+
+Class: :Website
+
+
+Class: :FABSFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "FABS File"
+
+Class: :File
+
+
+Class: :FABS
+
+
+Class: :Agency
+
+
+Class: :AgencyUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Agency User",
+		rdfs:comment "Functional Role"
+
+Class: :Number
+
+
+Class: :TestingSummary
+	SubClassOf: :Summary
+	Annotations:
+		rdfs:label "Testing Summary"
+
+Class: :Summary
+
+
+Class: :Testing
+
+
+Class: :Owner
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :UIImprovement
+	Annotations:
+		rdfs:label "UI Improvement"
+
+Class: :UserTesting
+	SubClassOf: :Testing
+	Annotations:
+		rdfs:label "User Testing"
+
+Class: :Schedule
+
+
+Class: :Audit
+
+
+Class: :Environment
+
+
+Class: :Access
+
+
+Class: :ErrorCode
+	SubClassOf: :Code
+	Annotations:
+		rdfs:label "Error Code"
+
+Class: :Code
+
+
+Class: :SAM
+
+
+Class: :TeamMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Team Member",
+		rdfs:comment "Functional Role"
+
+Class: :Member
+
+
+Class: :Team
+
+
+Class: :DataElement
+	SubClassOf: :Element
+	Annotations:
+		rdfs:label "Data Element"
+
+Class: :Element
+
+
+Class: :00
+
+
+Class: :Fundingagencycode
+
+
+Class: :Schema
+
+
+Class: :Federalactionobligation
+
+
+Class: :FABSUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "FABS User",
+		rdfs:comment "Functional Role"
+
+Class: :DFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "D File"
+
+Class: :D
+
+
+Class: :LevelError
+	SubClassOf: :Error
+	Annotations:
+		rdfs:label "Level Error"
+
+Class: :Level
+
+
+Class: :Tester
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :FileF
+	SubClassOf: :F
+	Annotations:
+		rdfs:label "File F"
+
+Class: :F
+
+
+Class: :FABSGroup
+	SubClassOf: :Group
+	Annotations:
+		rdfs:label "FABS Group"
+
+Class: :Group
+
+
+Class: :Field
+
+
+Class: :Record
+
+
+Class: :Transaction
+
+
+Class: :Citywide
+
+
+Class: :Digit
+
+
+Class: :Column
+
+
+Class: :Way
+
+
+Class: :Amount
+
+
+Class: :Page
+
+
+Class: :Validation
+
+
+Class: :Table
+
+
+Class: :Datum
+
+
+Class: :Mockup
+
+
+Class: :Improvement
+
+
+Class: :Name
+
+
+Class: :Label
+
+

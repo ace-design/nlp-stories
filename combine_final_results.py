@@ -8,7 +8,7 @@ import seaborn as sns
 import statistics
 import sys
 
-number_dataset = 2
+number_dataset = 9
 
 def main():
     primary_path, all_path, saving_path, comparison_type = command()
@@ -47,11 +47,16 @@ def main():
     primary_saving_path = saving_path + "\\primary_results_copy.csv"
     all_saving_path = saving_path + "\\all_results_copy.csv"
 
-    #copy_and_clear(primary_path, primary_saving_path)
-    #copy_and_clear(all_path, all_saving_path)
+    copy_and_clear(primary_path, primary_saving_path)
+    copy_and_clear(all_path, all_saving_path)
 def command():
     '''
     Runs the command line inputs
+
+    Parameters:
+    args.load_primary_path (str): path of primary csv file
+    args.load_all_path (str): path of all csv file
+    arfs.save_folder_name (str): name of folder to save
 
     Returns:
         args.load_primary_path (str): Path to the primary data csv file to be loaded
@@ -161,7 +166,7 @@ def create_final_scatterplot(read_file, x_data, y_data, title, graph_color, save
 
     csv_data = pd.read_csv(read_file)
 
-    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False)
+    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False, xlim=(0, 1.1),ylim=(0, 1.1))
     graph.fig.suptitle(title, fontsize = 16)
     graph.figure.tight_layout() 
     
@@ -173,7 +178,8 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
     csv_data = pd.read_csv(read_file)
-    x_label = list(range(1, number_dataset + 1))
+    #x_label = list(range(1, number_dataset + 1))
+    x_label = ["g02", "g04", "g05", "g08", "g10","g12","g13","g14","g17"]
 
     sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "m")
     for p in precision_plot.patches:
@@ -189,7 +195,7 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     
     precision_plot.set(ylim=(0, 1.1))
     recall_plot.set(ylim=(0, 1.1))
-    f_measure_plot.set(ylim=(0, 1.1))   
+    f_measure_plot.set(ylim=(0, 1.1)) 
     
     f_measure_plot.set_xlabel("Dataset")
     graph.suptitle(title, fontsize = 16)
@@ -271,8 +277,8 @@ def save_results(average, standard_deviation, saving_path):
     saving_path (str): the path of the file to save results
     '''
 
-    label = ["Measurement", "Persona Precision", "Entity Precision", "Action Precision", "Persona Recall", "Entity Recall",\
-            "Action Recall", "Persona F-Measure", "Entity F-Measure", "Action F-Measure"]
+    label = ["Measurement", "Persona Precision", "Persona Recall", "Persona F-Measure","Entity Precision", "Entity Recall", "Entity F-Measure",\
+            "Action Precision", "Action Recall", "Action F-Measure"]
 
     average.insert(0, "Average")
     standard_deviation.insert(0, "Standard Deviation")
