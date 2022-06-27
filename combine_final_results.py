@@ -3,13 +3,12 @@ import argparse
 import csv
 import matplotlib.pyplot as plt
 import os
-from numpy import compare_chararrays
 import pandas as pd
 import seaborn as sns
 import statistics
 import sys
 
-number_dataset = 19
+number_dataset = 2
 
 def main():
     primary_path, all_path, saving_path, comparison_type = command()
@@ -64,6 +63,7 @@ def command():
         FileExistsError: raises exception
         wrong file type: raises exception
         not same comparison mode of both loading files: raises excpetion
+        wrong file order: raises exception
     '''
 
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
@@ -76,6 +76,10 @@ def command():
     if not(args.load_primary_path.endswith(".csv")) or not(args.load_all_path.endswith(".csv")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. Save file type is .csv")
+
+    if not("primary" in args.load_primary_path) or not("all" in args.load_all_path):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect file order. First file must be primary data and the second file must be all data")
 
     if "strict" in args.load_primary_path and "strict" in args.load_all_path:
         comparison_type = "Strict Comparison"
