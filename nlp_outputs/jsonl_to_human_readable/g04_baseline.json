@@ -174,10 +174,10 @@
                 "hours"
             ],
             "Secondary Entity": [
-                "recycling facility",
                 "drop-offs",
                 "off days",
-                "after-work hours"
+                "after-work hours",
+                "each recycling facility"
             ]
         },
         "Benefit": "I can arrange drop-offs on my off days or during after-work hours",
@@ -199,7 +199,7 @@
         ],
         "Contains": [
             [
-                "recycling facility",
+                "each recycling facility",
                 "hours"
             ]
         ]
@@ -375,7 +375,8 @@
                 "give"
             ],
             "Secondary Action": [
-                "receive"
+                "receive",
+                "posted"
             ]
         },
         "Entity": {
@@ -402,6 +403,10 @@
             [
                 "receive",
                 "notifications"
+            ],
+            [
+                "posted",
+                "new events"
             ]
         ],
         "Contains": [
@@ -516,7 +521,7 @@
                 "view"
             ],
             "Secondary Action": [
-                ""
+                "currently being organised"
             ]
         },
         "Entity": {
@@ -538,9 +543,18 @@
             [
                 "view",
                 "safe disposal events"
+            ],
+            [
+                "currently being organised",
+                "safe disposal events"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "area",
+                "safe disposal events"
+            ]
+        ]
     },
     {
         "PID": "#G04#",
@@ -604,7 +618,8 @@
             ],
             "Secondary Entity": [
                 "website",
-                "web app"
+                "web app",
+                "how"
             ]
         },
         "Benefit": "I know how to use the web app",
@@ -618,6 +633,10 @@
             [
                 "view",
                 "user documentation"
+            ],
+            [
+                "know",
+                "how"
             ],
             [
                 "use",
@@ -1007,7 +1026,7 @@
                 "block"
             ],
             "Secondary Action": [
-                "prevent"
+                "prevent spamming"
             ]
         },
         "Entity": {
@@ -1016,7 +1035,6 @@
             ],
             "Secondary Entity": [
                 "IP address",
-                "spamming",
                 "websites"
             ]
         },
@@ -1033,8 +1051,8 @@
                 "specific users"
             ],
             [
-                "prevent",
-                "spamming"
+                "prevent spamming",
+                "websites"
             ]
         ],
         "Contains": [
@@ -1056,7 +1074,8 @@
             ],
             "Secondary Action": [
                 "know",
-                "have"
+                "have",
+                "monitors"
             ]
         },
         "Entity": {
@@ -1090,6 +1109,10 @@
             [
                 "know",
                 "service status"
+            ],
+            [
+                "monitors",
+                "sites' statuses"
             ]
         ],
         "Contains": [
@@ -1110,7 +1133,7 @@
                 "have"
             ],
             "Secondary Action": [
-                ""
+                "not be stolen"
             ]
         },
         "Entity": {
@@ -1134,6 +1157,10 @@
             [
                 "have",
                 "data encrypted"
+            ],
+            [
+                "not be stolen",
+                "important information"
             ]
         ],
         "Contains": [
@@ -1162,10 +1189,9 @@
                 "full access"
             ],
             "Secondary Entity": [
-                "company",
-                "data",
                 "company's performance",
-                "sense"
+                "sense",
+                "data related to my company"
             ]
         },
         "Benefit": "I can have a sense of my company's performance",
@@ -1187,11 +1213,7 @@
         ],
         "Contains": [
             [
-                "company",
-                "data"
-            ],
-            [
-                "data",
+                "data related to my company",
                 "full access"
             ]
         ]
@@ -1246,7 +1268,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "access"
+                "have"
             ],
             "Secondary Action": [
                 ""
@@ -1254,30 +1276,39 @@
         },
         "Entity": {
             "Primary Entity": [
-                "full information"
+                "access"
             ],
             "Secondary Entity": [
                 "employees",
-                "business"
+                "business",
+                "full information"
             ]
         },
         "Benefit": "",
         "Triggers": [
             [
                 "employee from the HR department",
-                "access"
+                "have"
             ]
         ],
         "Targets": [
             [
-                "access",
-                "full information"
+                "have",
+                "access"
             ]
         ],
         "Contains": [
             [
                 "business",
                 "employees"
+            ],
+            [
+                "full information",
+                "access"
+            ],
+            [
+                "employees",
+                "full information"
             ]
         ]
     },
@@ -1396,7 +1427,8 @@
                 "have"
             ],
             "Secondary Action": [
-                "not suffer"
+                "not suffer",
+                "kept securely"
             ]
         },
         "Entity": {
@@ -1429,6 +1461,10 @@
             [
                 "not suffer",
                 "telephone harassment"
+            ],
+            [
+                "kept securely",
+                "personal information"
             ]
         ],
         "Contains": [
@@ -1965,9 +2001,9 @@
                 "user error logs"
             ],
             "Secondary Entity": [
-                "issues",
                 "users",
-                "system"
+                "system",
+                "any issues"
             ]
         },
         "Benefit": "I can fix or review any issues that are being faced by users of the system",
@@ -1983,12 +2019,12 @@
                 "user error logs"
             ],
             [
-                "fix",
-                "issues"
+                "review",
+                "any issues"
             ],
             [
-                "review",
-                "issues"
+                "fix",
+                "any issues"
             ]
         ],
         "Contains": [
@@ -1998,7 +2034,11 @@
             ],
             [
                 "user error logs",
-                "issues"
+                "any issues"
+            ],
+            [
+                "users",
+                "any issues"
             ]
         ]
     },
@@ -2107,7 +2147,8 @@
                 "view"
             ],
             "Secondary Action": [
-                "view"
+                "view in real-time",
+                "visited"
             ]
         },
         "Entity": {
@@ -2116,7 +2157,8 @@
             ],
             "Secondary Entity": [
                 "recycling center information",
-                "recyclable waste."
+                "recyclable waste.",
+                "how many users"
             ]
         },
         "Benefit": "I can view in real-time how many users have visited my recycling center information and their recyclable waste",
@@ -2132,8 +2174,16 @@
                 "users' stats"
             ],
             [
-                "view",
+                "view in real-time",
                 "recyclable waste."
+            ],
+            [
+                "view in real-time",
+                "how many users"
+            ],
+            [
+                "visited",
+                "recycling center information"
             ]
         ],
         "Contains": []
@@ -2157,8 +2207,8 @@
                 "user questions"
             ],
             "Secondary Entity": [
-                "questions",
-                "recycling center"
+                "recycling center",
+                "any questions"
             ]
         },
         "Benefit": "I can answer any questions about my recycling center",
@@ -2175,7 +2225,7 @@
             ],
             [
                 "answer",
-                "questions"
+                "any questions"
             ]
         ],
         "Contains": []
@@ -2192,7 +2242,8 @@
             ],
             "Secondary Action": [
                 "identify",
-                "getting"
+                "getting",
+                "shows"
             ]
         },
         "Entity": {
@@ -2226,6 +2277,14 @@
             [
                 "getting",
                 "facilities"
+            ],
+            [
+                "shows",
+                "usage stats"
+            ],
+            [
+                "shows",
+                "locations"
             ]
         ],
         "Contains": [
@@ -2250,7 +2309,7 @@
                 "communicate directly"
             ],
             "Secondary Action": [
-                "update"
+                "keep them updated"
             ]
         },
         "Entity": {
@@ -2271,12 +2330,12 @@
         ],
         "Targets": [
             [
-                "update",
-                "features"
-            ],
-            [
                 "communicate directly",
                 "facilities"
+            ],
+            [
+                "keep them updated",
+                "features"
             ]
         ],
         "Contains": [
@@ -2339,7 +2398,7 @@
         "PID": "#G04#",
         "Text": "#G04# As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users.",
         "Persona": [
-            "ecyclingfacility representative"
+            "recyclingfacility representative"
         ],
         "Action": {
             "Primary Action": [
@@ -2356,14 +2415,14 @@
                 "type of material"
             ],
             "Secondary Entity": [
-                "miscommunication",
-                "users"
+                "users",
+                "any miscommunication"
             ]
         },
         "Benefit": "I can avoid any miscommunication with users",
         "Triggers": [
             [
-                "ecyclingfacility representative",
+                "recyclingfacility representative",
                 "update"
             ]
         ],
@@ -2382,7 +2441,7 @@
             ],
             [
                 "avoid",
-                "miscommunication"
+                "any miscommunication"
             ]
         ],
         "Contains": []
@@ -2395,7 +2454,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "access"
+                "have"
             ],
             "Secondary Action": [
                 "adjust",
@@ -2405,10 +2464,11 @@
         },
         "Entity": {
             "Primary Entity": [
-                "user stats",
-                "schedules"
+                "access"
             ],
             "Secondary Entity": [
+                "user stats",
+                "schedules",
                 "hours",
                 "equipment",
                 "capacity",
@@ -2419,18 +2479,10 @@
         "Triggers": [
             [
                 "recyclingfacility representative",
-                "access"
+                "have"
             ]
         ],
         "Targets": [
-            [
-                "access",
-                "user stats"
-            ],
-            [
-                "access",
-                "schedules"
-            ],
             [
                 "adjust",
                 "hours"
@@ -2446,12 +2498,20 @@
             [
                 "accomodate",
                 "larger amounts of recyclable materials"
+            ],
+            [
+                "have",
+                "access"
             ]
         ],
         "Contains": [
             [
                 "schedules",
                 "hours"
+            ],
+            [
+                "user stats",
+                "access"
             ]
         ]
     },
@@ -2463,20 +2523,21 @@
         ],
         "Action": {
             "Primary Action": [
-                "communicate directly"
+                "communicate directly",
+                "convey"
             ],
             "Secondary Action": [
-                "convey",
                 "fix"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "site admin"
+                "site admin",
+                "concerns",
+                "any issues"
             ],
             "Secondary Entity": [
-                "issues",
-                "concerns"
+                ""
             ]
         },
         "Benefit": "they fix them",
@@ -2484,13 +2545,13 @@
             [
                 "recyclingfacility",
                 "communicate directly"
+            ],
+            [
+                "recyclingfacility",
+                "convey"
             ]
         ],
         "Targets": [
-            [
-                "convey",
-                "issues"
-            ],
             [
                 "convey",
                 "concerns"
@@ -2501,11 +2562,15 @@
             ],
             [
                 "fix",
-                "issues"
+                "concerns"
+            ],
+            [
+                "convey",
+                "any issues"
             ],
             [
                 "fix",
-                "concerns"
+                "any issues"
             ]
         ],
         "Contains": []

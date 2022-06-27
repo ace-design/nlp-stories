@@ -370,7 +370,8 @@
                 "ways"
             ],
             "Secondary Entity": [
-                "data is invalid"
+                "how",
+                "data"
             ]
         },
         "Benefit": "I can know how to fix it",
@@ -386,16 +387,15 @@
                 "ways"
             ],
             [
+                "know",
+                "how"
+            ],
+            [
                 "fix",
-                "data is invalid"
+                "data"
             ]
         ],
-        "Contains": [
-            [
-                "data is invalid",
-                "ways"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1655,7 +1655,7 @@
                 "map"
             ],
             "Secondary Action": [
-                ""
+                "using"
             ]
         },
         "Entity": {
@@ -1681,6 +1681,10 @@
             [
                 "map",
                 "lines"
+            ],
+            [
+                "using",
+                "geographic data"
             ]
         ],
         "Contains": [
@@ -1945,7 +1949,7 @@
     },
     {
         "PID": "#G08#",
-        "Text": "#G08# As a ResearcherPublisher, I want an integration with Zenodo, so that when I store my dataset in GitHub, I don’t have to retype descriptive information about my dataset.",
+        "Text": "#G08# As a ResearcherPublisher, I want an integration with Zenodo, so that when I store my dataset in GitHub, I donâ€™t have to retype descriptive information about my dataset.",
         "Persona": [
             "ResearcherPublisher"
         ],
@@ -1955,7 +1959,7 @@
             ],
             "Secondary Action": [
                 "store",
-                "don’t have to retype"
+                "donâ€™t have to retype"
             ]
         },
         "Entity": {
@@ -1970,7 +1974,7 @@
                 "dataset"
             ]
         },
-        "Benefit": "when I store my dataset in GitHub, I don’t have to retype descriptive information about my dataset",
+        "Benefit": "when I store my dataset in GitHub, I donâ€™t have to retype descriptive information about my dataset",
         "Triggers": [
             [
                 "ResearcherPublisher",
@@ -1979,7 +1983,7 @@
         ],
         "Targets": [
             [
-                "don’t have to retype",
+                "donâ€™t have to retype",
                 "descriptive information"
             ],
             [
@@ -2148,7 +2152,16 @@
                 "Data Packages"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "workflows",
+                "Data Packages"
+            ],
+            [
+                "workflows",
+                "MS-SQL"
+            ]
+        ]
     },
     {
         "PID": "#G08#",
@@ -2656,7 +2669,8 @@
                 "make it easy to prove"
             ],
             "Secondary Action": [
-                "claim"
+                "claim",
+                "living up to"
             ]
         },
         "Entity": {
@@ -2682,6 +2696,10 @@
             [
                 "claim",
                 "transparency commitments"
+            ],
+            [
+                "living up to",
+                "transparency commitments"
             ]
         ],
         "Contains": []
@@ -2697,7 +2715,8 @@
                 "make it easy to assess"
             ],
             "Secondary Action": [
-                "make sure"
+                "make sure",
+                "living up"
             ]
         },
         "Entity": {
@@ -2723,7 +2742,7 @@
                 "quality of data"
             ],
             [
-                "make sure",
+                "living up",
                 "transparency commitments"
             ]
         ],
@@ -2731,10 +2750,6 @@
             [
                 "government",
                 "quality of data"
-            ],
-            [
-                "government",
-                "transparency commitments"
             ]
         ]
     },
@@ -2749,7 +2764,7 @@
                 "embed"
             ],
             "Secondary Action": [
-                ""
+                "encouraged"
             ]
         },
         "Entity": {
@@ -2774,6 +2789,10 @@
             [
                 "embed",
                 "interactive preview"
+            ],
+            [
+                "encouraged",
+                "correct data"
             ]
         ],
         "Contains": [
@@ -2806,7 +2825,8 @@
                 "embed"
             ],
             "Secondary Action": [
-                "preview"
+                "preview",
+                "encouraged"
             ]
         },
         "Entity": {
@@ -2835,6 +2855,10 @@
             [
                 "preview",
                 "data"
+            ],
+            [
+                "encouraged",
+                "correct data"
             ]
         ],
         "Contains": [
@@ -2867,7 +2891,9 @@
                 "know"
             ],
             "Secondary Action": [
-                "know"
+                "know",
+                "have previewed",
+                "relates"
             ]
         },
         "Entity": {
@@ -2875,10 +2901,11 @@
                 "how many users"
             ],
             "Secondary Entity": [
+                "dataset",
+                "actual download numbers",
                 "interest",
                 "dataset",
-                "dataset",
-                "actual download numbers"
+                "how"
             ]
         },
         "Benefit": "I know how interest in a dataset relates to its actual download numbers",
@@ -2891,21 +2918,25 @@
         "Targets": [
             [
                 "know",
-                "interest"
+                "how many users"
+            ],
+            [
+                "have previewed",
+                "dataset"
+            ],
+            [
+                "relates",
+                "actual download numbers"
             ],
             [
                 "know",
-                "how many users"
+                "how"
             ]
         ],
         "Contains": [
             [
                 "dataset",
                 "interest"
-            ],
-            [
-                "dataset",
-                "actual download numbers"
             ]
         ]
     },
@@ -3304,7 +3335,9 @@
                 "want"
             ],
             "Secondary Action": [
-                "load"
+                "load",
+                "create",
+                "using"
             ]
         },
         "Entity": {
@@ -3334,6 +3367,14 @@
             [
                 "load",
                 "high quality data"
+            ],
+            [
+                "create",
+                "proxy Data Packages"
+            ],
+            [
+                "using",
+                "Data Package tooling"
             ]
         ],
         "Contains": [
@@ -3362,7 +3403,8 @@
                 "want"
             ],
             "Secondary Action": [
-                "paired"
+                "paired",
+                "acts as"
             ]
         },
         "Entity": {
@@ -3395,6 +3437,10 @@
             [
                 "paired",
                 "owners"
+            ],
+            [
+                "acts as",
+                "match-making service"
             ]
         ],
         "Contains": [
@@ -3605,10 +3651,6 @@
             [
                 "dataset",
                 "DOI"
-            ],
-            [
-                "papers",
-                "dataset"
             ],
             [
                 "data",

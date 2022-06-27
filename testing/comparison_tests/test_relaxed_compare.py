@@ -167,6 +167,18 @@ def test_noun_and_verb(baseline, nlp, pos_data, expected):
     assert relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp) == expected
 
 @pytest.mark.relaxed_compare
+def test_adj_and_verb(baseline, nlp, pos_data, expected):
+    baseline.append("correct") #stanza will see this "correct" as a adjective instead of a verb
+    nlp.append("quickly correct") 
+    pos_data[0].append(["ADJ"])
+    pos_data[1].append(["correct"])
+    expected[0].append("correct")
+
+    assert relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp) == expected
+
+@pytest.mark.relaxed_compare
+
+@pytest.mark.relaxed_compare
 def test_empty_baseline(nlp):
     baseline = []
     pos_data = [[],[]]

@@ -16,7 +16,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "dataset"
+                "dataset I have published"
             ],
             "Secondary Entity": [
                 "existing data"
@@ -35,12 +35,12 @@
                 "existing data"
             ],
             [
-                "edit",
-                "dataset"
-            ],
-            [
                 "enhance",
                 "existing data"
+            ],
+            [
+                "edit",
+                "dataset I have published"
             ]
         ],
         "Contains": []
@@ -69,7 +69,7 @@
                 "enhancements",
                 "data",
                 "API",
-                "data"
+                "data I have already imported"
             ]
         },
         "Benefit": "I can fix bugs or make enhancements in the API built for my data",
@@ -103,7 +103,7 @@
                 "API"
             ],
             [
-                "data",
+                "data I have already imported",
                 "model"
             ]
         ]
@@ -124,7 +124,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "dataset"
+                "dataset I have published"
             ],
             "Secondary Entity": [
                 "unwanted data",
@@ -140,22 +140,18 @@
         ],
         "Targets": [
             [
-                "delete",
-                "dataset"
-            ],
-            [
                 "remove",
                 "unwanted data"
+            ],
+            [
+                "delete",
+                "dataset I have published"
             ]
         ],
         "Contains": [
             [
                 "OpenSpending",
                 "unwanted data"
-            ],
-            [
-                "unwanted data",
-                "dataset"
             ]
         ]
     },
@@ -326,11 +322,11 @@
                 "data source"
             ],
             "Secondary Entity": [
-                "data",
                 "bugs",
                 "enhancements",
                 "data",
-                "API"
+                "API",
+                "data I have already imported"
             ]
         },
         "Benefit": "I can fix bugs or make enhancements in the API built for my data",
@@ -364,7 +360,7 @@
                 "API"
             ],
             [
-                "data",
+                "data I have already imported",
                 "data source"
             ]
         ]
@@ -485,11 +481,12 @@
         },
         "Entity": {
             "Primary Entity": [
-                "data needs"
+                "what"
             ],
             "Secondary Entity": [
                 "map",
-                "map"
+                "map",
+                "data"
             ]
         },
         "Benefit": "I can visualise it on a map",
@@ -501,19 +498,28 @@
         ],
         "Targets": [
             [
+                "visualised",
+                "data"
+            ],
+            [
                 "visualise",
-                "map"
+                "data"
             ],
             [
                 "know",
-                "data needs"
-            ],
-            [
-                "visualised",
-                "map"
+                "what"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "map",
+                "data"
+            ],
+            [
+                "map",
+                "data"
+            ]
+        ]
     },
     {
         "PID": "#G05#",
@@ -984,8 +990,8 @@
             "Secondary Entity": [
                 "URL",
                 "social networks",
-                "data",
-                "others"
+                "others",
+                "data"
             ]
         },
         "Benefit": "I can share data that I have found with others",
@@ -999,6 +1005,10 @@
             [
                 "share",
                 "view state"
+            ],
+            [
+                "share",
+                "data"
             ]
         ],
         "Contains": [
@@ -1009,10 +1019,6 @@
             [
                 "social networks",
                 "view state"
-            ],
-            [
-                "share",
-                "data"
             ]
         ]
     },
@@ -1504,7 +1510,8 @@
                 "have"
             ],
             "Secondary Action": [
-                "visualise"
+                "visualise",
+                "using"
             ]
         },
         "Entity": {
@@ -1535,6 +1542,10 @@
             [
                 "visualise",
                 "budget data"
+            ],
+            [
+                "using",
+                "HASC codes"
             ]
         ],
         "Contains": [
@@ -1624,7 +1635,9 @@
                 "get"
             ],
             "Secondary Action": [
-                "use"
+                "use",
+                "transferred",
+                "enable"
             ]
         },
         "Entity": {
@@ -1652,6 +1665,14 @@
             [
                 "use",
                 "different currencies"
+            ],
+            [
+                "transferred",
+                "different currencies"
+            ],
+            [
+                "enable",
+                "comparison by normalisation"
             ]
         ],
         "Contains": [
@@ -2094,9 +2115,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "update automatically"
+                "have"
             ],
             "Secondary Action": [
+                "update automatically",
                 "always shows"
             ]
         },
@@ -2114,7 +2136,7 @@
         "Triggers": [
             [
                 "Data Publishing User",
-                "update automatically"
+                "have"
             ]
         ],
         "Targets": [
@@ -2124,6 +2146,10 @@
             ],
             [
                 "update automatically",
+                "dataset"
+            ],
+            [
+                "have",
                 "dataset"
             ]
         ],
@@ -2361,9 +2387,9 @@
                 "view"
             ],
             "Secondary Entity": [
-                "datasets",
                 "management actions",
-                "own datasets"
+                "own datasets",
+                "datasets I have published"
             ]
         },
         "Benefit": "I can perform management actions on my own datasets",
@@ -2389,8 +2415,8 @@
                 "management actions"
             ],
             [
-                "view",
-                "datasets"
+                "datasets I have published",
+                "view"
             ]
         ]
     },

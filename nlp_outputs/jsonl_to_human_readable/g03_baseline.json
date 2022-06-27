@@ -374,7 +374,8 @@
                 "Pay"
             ],
             "Secondary Action": [
-                "satisfy"
+                "satisfy",
+                "received from"
             ]
         },
         "Entity": {
@@ -402,6 +403,10 @@
             [
                 "Pay",
                 "Fee"
+            ],
+            [
+                "received from",
+                "County"
             ]
         ],
         "Contains": [
@@ -750,7 +755,8 @@
                 "Remove"
             ],
             "Secondary Action": [
-                "allow"
+                "allow",
+                "resolved"
             ]
         },
         "Entity": {
@@ -780,6 +786,10 @@
             [
                 "allow",
                 "progression"
+            ],
+            [
+                "resolved",
+                "issue"
             ]
         ],
         "Contains": [
@@ -1430,7 +1440,8 @@
                 "Issue"
             ],
             "Secondary Action": [
-                "satisfy"
+                "satisfy",
+                "proven to be eligible"
             ]
         },
         "Entity": {
@@ -1458,6 +1469,10 @@
             ],
             [
                 "satisfy",
+                "Applicant's request"
+            ],
+            [
+                "proven to be eligible",
                 "Applicant's request"
             ]
         ],
@@ -1682,8 +1697,7 @@
                 "Satisfy"
             ],
             "Secondary Action": [
-                "ensure",
-                "satisfied"
+                "ensure"
             ]
         },
         "Entity": {
@@ -1691,8 +1705,8 @@
                 "Hearing Requirements"
             ],
             "Secondary Entity": [
-                "pre-hearing requirements",
-                "hearing"
+                "hearing",
+                "all pre-hearing requirements"
             ]
         },
         "Benefit": "I can ensure all pre-hearing requirements are satisfied in time for the hearing",
@@ -1706,21 +1720,9 @@
             [
                 "Satisfy",
                 "Hearing Requirements"
-            ],
-            [
-                "ensure",
-                "pre-hearing requirements"
-            ],
-            [
-                "satisfied",
-                "pre-hearing requirements"
             ]
         ],
         "Contains": [
-            [
-                "hearing",
-                "pre-hearing requirements"
-            ],
             [
                 "hearing",
                 "Hearing Requirements"
@@ -1747,10 +1749,10 @@
                 "Hearing Execution"
             ],
             "Secondary Entity": [
-                "pre-hearing requirements",
                 "staff",
                 "Applicant",
-                "hearing"
+                "hearing",
+                "all pre-hearing requirements"
             ]
         },
         "Benefit": "I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing",
@@ -1772,10 +1774,6 @@
             [
                 "Prepare",
                 "Hearing Execution"
-            ],
-            [
-                "ensure",
-                "pre-hearing requirements"
             ]
         ],
         "Contains": []
@@ -1885,7 +1883,8 @@
                 "Assign"
             ],
             "Secondary Action": [
-                "ensure"
+                "ensure",
+                "assigned"
             ]
         },
         "Entity": {
@@ -1911,7 +1910,7 @@
                 "Plans"
             ],
             [
-                "ensure",
+                "assigned",
                 "plans"
             ]
         ],
@@ -1939,7 +1938,8 @@
             "Secondary Action": [
                 "monitor",
                 "effectively adjust",
-                "ensure"
+                "ensure",
+                "met"
             ]
         },
         "Entity": {
@@ -1972,7 +1972,7 @@
                 "workload"
             ],
             [
-                "ensure",
+                "met",
                 "service levels"
             ]
         ],
@@ -2323,20 +2323,8 @@
                 "plan review tasks"
             ],
             [
-                "ensure",
-                "results"
-            ],
-            [
-                "ensure",
-                "any downstream steps"
-            ],
-            [
                 "Track",
                 "Completion of Required Plan Reviews"
-            ],
-            [
-                "ensure",
-                "plan review tasks"
             ],
             [
                 "sent",
@@ -2377,7 +2365,8 @@
                 "Issue"
             ],
             "Secondary Action": [
-                "grant"
+                "grant",
+                "begin"
             ]
         },
         "Entity": {
@@ -2405,6 +2394,10 @@
             [
                 "grant",
                 "request"
+            ],
+            [
+                "begin",
+                "work"
             ]
         ],
         "Contains": [
@@ -2529,7 +2522,8 @@
                 "Request"
             ],
             "Secondary Action": [
-                "perform"
+                "perform",
+                "assigned"
             ]
         },
         "Entity": {
@@ -2557,14 +2551,13 @@
             [
                 "perform",
                 "inspection"
-            ]
-        ],
-        "Contains": [
+            ],
             [
-                "Inspection",
+                "assigned",
                 "County inspector"
             ]
-        ]
+        ],
+        "Contains": []
     },
     {
         "PID": "#G03#",
@@ -2646,10 +2639,6 @@
             [
                 "Assign",
                 "Inspections"
-            ],
-            [
-                "make sure",
-                "appropriate Inspector"
             ]
         ],
         "Contains": [
@@ -2862,7 +2851,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "notified"
+                "need to be notified"
             ],
             "Secondary Action": [
                 "reviewing",
@@ -2884,14 +2873,10 @@
         "Triggers": [
             [
                 "Staff member",
-                "notified"
+                "need to be notified"
             ]
         ],
         "Targets": [
-            [
-                "notified",
-                "Geospatial attributes"
-            ],
             [
                 "reviewing",
                 "permit"
@@ -2899,6 +2884,10 @@
             [
                 "reviewing",
                 "application"
+            ],
+            [
+                "need to be notified",
+                "Geospatial attributes"
             ]
         ],
         "Contains": [
@@ -2979,7 +2968,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "condo unit"
+                "each condo unit"
             ],
             "Secondary Entity": [
                 "child parcel",
@@ -2996,20 +2985,20 @@
         ],
         "Targets": [
             [
-                "create",
-                "condo unit"
-            ],
-            [
-                "associate",
-                "condo unit"
-            ],
-            [
                 "associate",
                 "child parcel"
             ],
             [
                 "address",
                 "condominiums"
+            ],
+            [
+                "create",
+                "each condo unit"
+            ],
+            [
+                "associate",
+                "each condo unit"
             ]
         ],
         "Contains": [
