@@ -166,7 +166,7 @@ def create_final_scatterplot(read_file, x_data, y_data, title, graph_color, save
 
     csv_data = pd.read_csv(read_file)
 
-    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False)
+    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False, xlim=(0, 1.1),ylim=(0, 1.1))
     graph.fig.suptitle(title, fontsize = 16)
     graph.figure.tight_layout() 
     
@@ -196,10 +196,6 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     precision_plot.set(ylim=(0, 1.1))
     recall_plot.set(ylim=(0, 1.1))
     f_measure_plot.set(ylim=(0, 1.1)) 
-
-    precision_plot.set(xlim=(0, 1.1))
-    recall_plot.set(xlim=(0, 1.1))
-    f_measure_plot.set(xlim=(0, 1.1))   
     
     f_measure_plot.set_xlabel("Dataset")
     graph.suptitle(title, fontsize = 16)
