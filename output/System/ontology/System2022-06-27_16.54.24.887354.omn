@@ -1,0 +1,524 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/system.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/system.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "System",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canReceive1
+	Domain: :User
+	Range: :Notification
+
+ObjectProperty: :canReceive2
+	Domain: :User
+	Range: :Reward
+
+ObjectProperty: :canKnowAbout
+	Domain: :User
+	Range: :Account
+
+ObjectProperty: :canCreate
+	Domain: :User
+	Range: :Acocunt
+
+ObjectProperty: :canContact
+	Domain: :User
+	Range: :Administrator
+
+ObjectProperty: :canDevelop
+	Domain: :Developer
+	Range: :FeatureWebsite
+
+ObjectProperty: :canUpdate1
+	Domain: :Superuser
+	Range: :CenterInformation
+
+ObjectProperty: :canUpdate2
+	Domain: :RecyclingfacilityRepresentative
+	Range: :Information
+
+ObjectProperty: :canCommunicate
+	Domain: :Recyclingfacility
+	Range: :Issue
+
+ObjectProperty: :hasStat
+	Domain: :User
+	Range: :UserStat
+
+ObjectProperty: :hasAccountant
+	Domain: :Company
+	Range: :CompanyAccountant
+
+ObjectProperty: :canAccess1
+	Domain: :User
+	Range: :Site
+
+ObjectProperty: :canAccess2
+	Domain: :Developer
+	Range: :API
+
+ObjectProperty: :canBlock
+	Domain: :Admin
+	Range: :User
+
+ObjectProperty: :canCommunicateWith
+	Domain: :Admin
+	Range: :Facility
+
+ObjectProperty: :hasQuestion
+	Domain: :User
+	Range: :UserQuestion
+
+ObjectProperty: :canBrowseThrough
+	Domain: :User
+	Range: :List
+
+ObjectProperty: :canAdd1
+	Domain: :Admin
+	Range: :Information
+
+ObjectProperty: :canAdd2
+	Domain: :Admin
+	Range: :CenterInformation
+
+ObjectProperty: :canFix1
+	Domain: :Admin
+	Range: :Issue
+
+ObjectProperty: :canFix2
+	Domain: :They
+	Range: :They
+
+ObjectProperty: :canDesign
+	Domain: :Developer
+	Range: :Website
+
+ObjectProperty: :canAnswer
+	Domain: :Superuser
+	Range: :Question
+
+ObjectProperty: :canReplyTo
+	Domain: :Superuser
+	Range: :UserQuestion
+
+ObjectProperty: :canGive1
+	Domain: :User
+	Range: :ID
+
+ObjectProperty: :canGive2
+	Domain: :User
+	Range: :Feedback
+
+ObjectProperty: :hasDocumentation
+	Domain: :User
+	Range: :UserDocumentation
+
+ObjectProperty: :canHandle
+	Domain: :Admin
+	Range: :Activity
+
+ObjectProperty: :canClickOn
+	Domain: :User
+	Range: :Address
+
+ObjectProperty: :canUse1
+	Domain: :User
+	Range: :Website
+
+ObjectProperty: :canUse2
+	Domain: :Developer
+	Range: :Bootstrap
+
+ObjectProperty: :hasInformation
+	Domain: :Center
+	Range: :CenterInformation
+
+ObjectProperty: :canViewIn
+	Domain: :Superuser
+	Range: :CenterInformation
+
+ObjectProperty: :canUpload
+	Domain: :User
+	Range: :Schedule
+
+ObjectProperty: :canProvide
+	Domain: :Superuser
+	Range: :Information
+
+ObjectProperty: :hasDisplay
+	Domain: :Map
+	Range: :MapDisplay
+
+ObjectProperty: :canAdjust
+	Domain: :RecyclingfacilityRepresentative
+	Range: :Hour
+
+ObjectProperty: :hasRepresentative
+	Domain: :Recyclingfacility
+	Range: :RecyclingfacilityRepresentative
+
+ObjectProperty: :canPrevent
+	Domain: :Admin
+	Range: :Website
+
+ObjectProperty: :hasFee
+	Domain: :Activity
+	Range: :ActivityFee
+
+ObjectProperty: :canGet1
+	Domain: :User
+	Range: :Hour
+
+ObjectProperty: :canGet2
+	Domain: :User
+	Range: :Feedback
+
+ObjectProperty: :canGet3
+	Domain: :User
+	Range: :Information
+
+ObjectProperty: :canGet4
+	Domain: :Employee
+	Range: :Notification
+
+ObjectProperty: :canChoose
+	Domain: :User
+	Range: :Pick
+
+ObjectProperty: :canIdentify
+	Domain: :Admin
+	Range: :Neighbourhood
+
+ObjectProperty: :canView1
+	Domain: :User
+	Range: :Information
+
+ObjectProperty: :canView2
+	Domain: :User
+	Range: :They
+
+ObjectProperty: :canView3
+	Domain: :User
+	Range: :MapDisplay
+
+ObjectProperty: :canView4
+	Domain: :User
+	Range: :UserDocumentation
+
+ObjectProperty: :canView5
+	Domain: :Admin
+	Range: :Dashboard
+
+ObjectProperty: :canView6
+	Domain: :CompanyAccountant
+	Range: :ActivityFee
+
+ObjectProperty: :canView7
+	Domain: :User
+	Range: :Location
+
+ObjectProperty: :canView8
+	Domain: :Superuser
+	Range: :Stat
+
+ObjectProperty: :canSelect
+	Domain: :User
+	Range: :Type
+
+ObjectProperty: :canRead
+	Domain: :Admin
+	Range: :Feedback
+
+ObjectProperty: :canHave1
+	Domain: :User
+	Range: :Pick
+
+ObjectProperty: :canHave2
+	Domain: :User
+	Range: :List
+
+ObjectProperty: :canHave3
+	Domain: :User
+	Range: :UI
+
+ObjectProperty: :canHave4
+	Domain: :Admin
+	Range: :Sense
+
+ObjectProperty: :canHave5
+	Domain: :Admin
+	Range: :System
+
+ObjectProperty: :canHave6
+	Domain: :Executive
+	Range: :Access
+
+ObjectProperty: :canHave7
+	Domain: :Executive
+	Range: :Sense
+
+ObjectProperty: :canHave8
+	Domain: :User
+	Range: :Database
+
+ObjectProperty: :canHave9
+	Domain: :Company
+	Range: :Website
+
+ObjectProperty: :canHave10
+	Domain: :Admin
+	Range: :Dashboard
+
+ObjectProperty: :canHave11
+	Domain: :RecyclingfacilityRepresentative
+	Range: :Access
+
+ObjectProperty: :canGuideThrough
+	Domain: :Employee
+	Range: :Neighbourhood
+
+ObjectProperty: :canKeep1
+	Domain: :Admin
+	Range: :Database
+
+ObjectProperty: :canKeep2
+	Domain: :Admin
+	Range: :They
+
+# Classes
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Address
+
+
+Class: :Information
+
+
+Class: :Account
+
+
+Class: :Hour
+
+
+Class: :Pick
+
+
+Class: :Website
+
+
+Class: :Type
+
+
+Class: :List
+
+
+Class: :They
+
+
+Class: :ID
+
+
+Class: :Notification
+
+
+Class: :MapDisplay
+	SubClassOf: :Display
+	Annotations:
+		rdfs:label "Map Display"
+
+Class: :Display
+
+
+Class: :Map
+
+
+Class: :UserDocumentation
+	SubClassOf: :Documentation
+	Annotations:
+		rdfs:label "User Documentation"
+
+Class: :Documentation
+
+
+Class: :Feedback
+
+
+Class: :Acocunt
+
+
+Class: :Admin
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :UI
+
+
+Class: :Site
+
+
+Class: :Dashboard
+
+
+Class: :Sense
+
+
+Class: :System
+
+
+Class: :Executive
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Access
+
+
+Class: :Employee
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Neighbourhood
+
+
+Class: :Developer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :API
+
+
+Class: :Reward
+
+
+Class: :Database
+
+
+Class: :Activity
+
+
+Class: :Company
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :CompanyAccountant
+	SubClassOf: :Accountant
+	Annotations:
+		rdfs:label "Company Accountant",
+		rdfs:comment "Functional Role"
+
+Class: :Accountant
+
+
+Class: :ActivityFee
+	SubClassOf: :Fee
+	Annotations:
+		rdfs:label "Activity Fee"
+
+Class: :Fee
+
+
+Class: :Bootstrap
+
+
+Class: :FeatureWebsite
+	Annotations:
+		rdfs:label "Feature Website"
+
+Class: :Location
+
+
+Class: :Schedule
+
+
+Class: :Administrator
+
+
+Class: :CenterInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Center Information"
+
+Class: :Center
+
+
+Class: :Issue
+
+
+Class: :Superuser
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Stat
+
+
+Class: :UserQuestion
+	SubClassOf: :Question
+	Annotations:
+		rdfs:label "User Question"
+
+Class: :Question
+
+
+Class: :Facility
+
+
+Class: :RecyclingfacilityRepresentative
+	SubClassOf: :Representative
+	Annotations:
+		rdfs:label "Recyclingfacility Representative",
+		rdfs:comment "Functional Role"
+
+Class: :Representative
+
+
+Class: :Recyclingfacility
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :UserStat
+	SubClassOf: :Stat
+	Annotations:
+		rdfs:label "User Stat"
+
+Class: :Code
+
+
+Class: :Event
+
+
+Class: :Feature
+
+
+Class: :History
+
+
+Class: :Department
+
+
+Class: :Lesson
+
+
+Class: :Log
+
+
+Class: :HRDepartment
+	Annotations:
+		rdfs:label "HR Department",
+		rdfs:comment "Functional Role"
+

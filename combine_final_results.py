@@ -8,7 +8,7 @@ import seaborn as sns
 import statistics
 import sys
 
-number_dataset = 12
+number_dataset = 9
 
 def main():
     primary_path, all_path, saving_path, comparison_type = command()
@@ -179,7 +179,7 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
 
     csv_data = pd.read_csv(read_file)
     #x_label = list(range(1, number_dataset + 1))
-    x_label = ["g02", "g03", "g04", "g05", "g08", "g10","g11","g12","g13","g14","g16","g17"]
+    x_label = ["g02", "g04", "g05", "g08", "g10","g12","g13","g14","g17"]
 
     sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "m")
     for p in precision_plot.patches:
