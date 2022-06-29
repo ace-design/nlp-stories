@@ -1,4 +1,4 @@
-file = open("inputs\\dataset\\g18-neurohub.txt")
+file = open("inputs\\dataset\\g19-alfred.txt")
 lines = file.readlines()
 print("start")
 for i in range(len(lines)):
