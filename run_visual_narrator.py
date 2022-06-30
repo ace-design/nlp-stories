@@ -66,6 +66,7 @@ def extract_visual_Narrator():
         #runs visual narrator of stripped off PID
         command = subprocess.run("python visual_narrator\\run.py visual_narrator_extraction\\strip_text_visual_narrator.txt -u", capture_output = True)
         data = command.stdout.decode()
+        #data = command.stdout.decode('latin-1')
 
         save_path = "nlp_outputs\\visual_narrator\\" + args.save_name + "_visual_narrator.json"
 

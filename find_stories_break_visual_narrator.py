@@ -1,3 +1,4 @@
+#this script will find stories in the dataset that visual narrator can not evaluate
 import argparse
 import subprocess
 import sys
