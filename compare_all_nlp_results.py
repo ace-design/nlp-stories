@@ -171,18 +171,21 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
 
     precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette)
     precision.set(xlabel=None)
+    precision.set(ylabel= "Precision")
 
     for i in precision.containers:
         precision.bar_label(i)
 
     recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette)
     recall.set(xlabel=None)
+    recall.set(ylabel= "Recall")
 
     for i in recall.containers:
         recall.bar_label(i)
 
     f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette)
     f_measure_plot.set_xlabel("Dataset")
+    f_measure.set(ylabel= "F-Measure")
 
     for i in f_measure.containers:
         f_measure.bar_label(i)
