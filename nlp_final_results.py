@@ -104,7 +104,7 @@ def command():
         load_file.close()
         load_all_file = open(args.load_all_path)
         load_all_file.close()
-        save_folder_path = "final_results\\" + saving_name
+        save_folder_path = "final_results\\individual_nlp_results\\" + saving_name
         os.mkdir(save_folder_path)
 
     except FileNotFoundError:
