@@ -1,4 +1,4 @@
-file = open("inputs\\dataset\\g19-alfred.txt")
+file = open("inputs\\dataset\\g27-culrepo.txt")
 lines = file.readlines()
 print("start")
 for i in range(len(lines)):
