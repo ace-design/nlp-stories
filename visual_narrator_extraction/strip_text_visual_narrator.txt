@@ -1,95 +1,199 @@
-As a Data user, I want to have the 12-19-2017 deletions processed.
-As a UI designer, I want to redesign the Resources page, so that it matches the new Broker design styles.
-As a UI designer, I want to report to the Agencies about user testing, so that they are aware of their contributions to making Broker a better UX.
-As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.
-As a UI designer, I want to move on to round 3 of the Help page edits, so that I can get approvals from leadership.
-As a Developer , I want to be able to log better, so that I can troubleshoot issues with particular submissions and functions.
-As a Developer, I want to add the updates on a FABS submission to be modified when the publishStatus changes, so that I know when the status of the submission has changed.
-As a DevOps engineer, I want New Relic to provide useful data across all applications.
-As a UI designer,  I want to move on to round 2 of the Help page edits, so that I can get approvals from leadership.
-As a UI designer, I want to move on to round 2 of Homepage edits, so that I can get approvals from leadership.
-As a Broker user, I want to Upload and Validate the error message to have accurate text.
-As a Broker user, I want the D1 file generation to be synced with the FPDS data load, so that I don't have to regenerate a file if no data has been updated.
-As a Website user, I want to access published FABS files, so that I can see the new files as they come in.
-As an owner, I want to be sure that USAspending only send grant records to my system.
-As a Developer, I want to update the Broker validation rule table to account for the rule updates in DB-2213.
-As a Developer, I want to add the GTAS window data to the database, so that I can ensure the site is locked down during the GTAS submission period.
-As a Developer, I want D Files generation requests to be managed and cached, so that duplicate requests do not cause performance issues.
-As a user, I want to access the raw agency published files from FABS via USAspending.
-As an Agency user, I want to be able to include a large number of flexfields without performance impact.
-As a Broker user, I want  to help create content mockups, so that I can submit my data efficiently.
-As a UI designer, I want to track the issues that come up in Tech Thursday, so that I know what to test and what want s to be fixed.
-As an Owner, I want to create a user testing summary from the UI SME, so that I can know what UI improvements we will follow through on.
-As a UI designer, I want to begin user testing, so that I can validate stakeholder UI improvement requests.
-As a UI designer, I want to schedule user testing, so that I can give the testers advanced notice to ensure buy-in.
-As an Owner, I want to design a schedule from the UI SME, so that I know the potential timeline of the UI improvements wanted.
-As an Owner, I want to design an audit from the UI SME, so that I know the potential scope of the UI improvements want ed.
-As a Developer, I want to prevent users from double publishing FABS submissions after refreshing, so that there are no duplicates.
-As an data user, I want to receive updates to FABS records.
-As a Developer , I want to update the FABS sample file to remove FundingAgencyCode after FABS is updated to no longer require the header.
-As an agency user, I want to ensure that deleted FSRS records are not included in submissions.
-As a website user, I want to see updated financial assistance data daily.
-As a user, I want the publish button in FABS to deactivate after I click it while the derivations are happening, so that I cannot click it multiple times for the same submission.
-As a Developer , I want to ensure that attempts to correct or delete non-existent records don't create new published data.
-As an Owner, I want to reset the environment to only take Staging MAX permissions, so that I can ensure that the FABS testers no longer have access.
-As a user, I want the flexfields in my submission file to appear in the warning and error files when the only error is a missing required element.
-As a user, I want to have accurate and complete data related to PPoPCode and PPoPCongressionalDistrict.
-As an agency user, I want the FABS validation rules to accept zero and blank for loan records.
-As an Agency user, I want FABS deployed into production, so I can submit my Financial Assistance data.
-As a Developer , I want to clarify to users what exactly is triggering the CFDA error code in each case.
-As an agency user, I want to be confident that the data coming from SAM is complete.
-As a Developer , I want my domain models to be indexed properly, so that I can get validation results back in a reasonable amount of time.
-As an agency user, I want the FABS validation rules to accept zero and blank for non-loan records.
-As a broker team member, I want to make some updates to the SQL codes for clarity.
-As an agency user, I want to have all derived data elements derived properly.
-As a broker team member, I want to add the 00***** and 00FORGN PPoPCode cases to the derivation logic.
-As a data user, I want to see the office names derived from office codes, so that I can have appropriate context for understanding them.
-As a broker user, I want the historical FABS loader to derive fields, so that my agency codes are correct in the PublishedAwardFinancialAssistance table.
-As a broker team member, I want to ensure the Broker resources, validations, and P&P pages are updated appropriately for the launch of FABS and DAIMS v1.1.
-As a Developer, I want the data loaded from historical FABS to include the FREC derivations, so that I can have consistent FREC data for USASpending.gov.
-As a user, I don't want to see NASA grants displayed as contracts.
-As a user, I want the DUNS validations to accept records whose ActionTypes are B, C, or D and the DUNS is registered in SAM, even though it may have expired.
-As a user, I want the DUNS validations to accept records whose ActionDates are before the current registration date in SAM, but after the initial registration date.
-As a broker team member, I want to derive FundingAgencyCode, so that the data quality and completeness improves.
-As an agency user, I want the maximum length allowed for LegalEntityAddressLine3 to match Schema v1.1.
-As an agency user, I want to use the schema v1.1 headers in my FABS file.
-As a agency user, I want to map the FederalActionObligation properly to the Atom Feed.
-As a Broker user, I want to have PPoPZIP+4 work the same as the Legal Entity ZIP validations.
-As a FABS user, I want to link the SAMPLE FILE on the "What you want  to submit" dialog to point to the correct file, so that I have an accurate reference for my agency submissions.
-As an Agency user, I want FPDS data to be up-to-date daily.
-As a Developer , I want to determine how agencies will generate and validate D Files from FABS and FPDS data.
-As a user, I want to generate and validate D Files from FABS and FPDS data.
-As an Agency user, I want the header information box to show updated date AND time, so that I know when it was updated.
-As an Agency user, I want to receive a more helpful file-level error when I upload a file with the wrong extension.
-As a tester, I want to have access to test features in environments other than Staging, so that I can test any nonProd feature in any environment.
-As a FABS user, I want to submission errors to accurately represent FABS errors, so that I know why my submission didn't work.
-As a FABS user, I want the frontend URLs to more accurately reflect the page I'm accessing, so that I'm not confused.
-As an Agency user, I want all historical Financial Assistance data loaded for FABS go-live.
-As a Developer , I want the historical FPDS data loader to include both extracted historical data and FPDS feed data.
-As an Agency user, I want historical FPDS data loaded.
-As an Agency user, I want to accurately see who created a submission, so that I'm not confused about who last updated a submission.
-As an agency user, I want to get File F in the correct format.
-As an Agency user, I want to better understand my file-level errors.
-As a Developer , I want to provide FABS groups that function under the FREC paradigm.
-As a tester, I want to ensure that FABS is deriving fields properly through a robust test file plus a follow up check.
-As an owner, I only want zero-padded fields, so that I can justify padding.
-As a Broker user, I want to submit records for individual recipients without receiving a DUNS error.
-As a user, I want more information about how many rows will be published prior to deciding whether to publish.
-As a Developer, I want to prevent duplicate transactions from being published and deal with the time gap between validation and the publishing decision.
-As a FABS user, I want to submit a citywide as a PPoPZIP and pass validations.
-As a Broker user, I want to have updated error codes that accurately reflect the logic and provide enough information, so that I can fix my submission.
-As an agency user, I want to leave off the last 4 digits of the ZIP without an error, so that I can complete my submissions.
-As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.
-As a data user, I want to access two additional fields from the FPDS data pull.
-As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.
-As a FABS user, I want to download the uploaded FABS file, so that I can get the uploaded file.
-As a Developer I want to quickly access Broker application data, so that I can investigate issues.
-As a Developer , I want to determine the best way to load historical FPDS data, so that I can load all FPDS data since 2007.
-As a FABS user, I want the language on FABS pages to be appropriate for me, so that I am not confused.
-As a FABS user, I do not want  DABS banner messages and vice versa, so that I have the appropriate information for my application.
-As a FABS user, I want to have read-only access to DABS, so that I can view DABS pages without wanting two sets of permissions.
-As a FABS user, I want to have my validations run in a reasonable amount of time.
-As a FABS user, I want to see correct status labels on the Submission Dashboard, so that I can quickly see my submission history.
-As an agency user, I want to know when the submission periods start and end, so that I know when the submission starts and ends.
-As an agency user, I want a landing page to navigate to either FABS or DABS pages, so that I can access both sides of the site.
-As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes
+As an archivist, I want to apply a license or rights statement, so that I know what I can do with a file.
+
+As an archivist, I want to mark individual files as restricted, so that they don't get shared by mistake.
+
+As an archivist, I want to mark groups of files as restricted, so that they don't get shared by mistake.
+
+As an archivist, I want to restrict a file from view.
+
+As an archivist, I want to restrict a group of files from view.
+
+As an archivist, I want to set a date on which restrictions will be removed from a file, so that that I don't have to update this by hand.
+
+As an archivist, I want to add restriction end date information to files, so that I can share files when they become open.
+
+As an archivist, I want to add detailed restrictions to groups of files, so that I know if and how they can be shared.
+
+As an archivist, I want to restrict access to some files by IP address, so that I can give reading room access only to certain digital files.
+
+As an archivist, I want to restrict access to certain files by user, so that I can allow donor representatives to see certain files.
+
+As an archivist, I want to know if a photo has already been scanned, so that I can license it to a researcher.
+
+As an archivist, I want to select existing rights statuses and statements, so that I can easily create uniform rights statements.
+
+As an archivist, I want to redact information in digital files for a period of time, so that I can provide access to non-sensitive portions of a record.
+
+As an archivist, I want to have an online form for licensing archival material, so that the process is more transparent and some of the back and forth can be eliminated.
+
+As an archivist, I want to batch edit metadata about files.
+
+As an archivist, I want to upload a single file.
+
+As an archivist, I want to upload groups of files, so that I can save time.
+
+As an archivist, I want to automatically create access copies of files, so that I don't have to do this manually.
+
+As an archivist, I want to automatically generate technical metadata, so that I know the file size.
+
+As an assistant archivist, I want to upload and tag staff generated working papers, so that staff and researchers are able to easily access them.
+
+As an archivist, I want to distinguish between digital objects digitized to preservation standards and those created for access purposes only, so that I know whether I should apply preservation actions.
+
+As an archivist, I want to link electronic versions of researchers' publications to citations, so that I can share them with other researchers.
+
+As an archivist, I want to upload scans of images created while answering research requests, so that they can be used again for other research requests.
+
+As an archivist, I want to create quality scans of images and documents, so that they can be reused.
+
+As an archivist, I want to automatically create access derivatives of digital objects, so that I don't have to do this manually.
+
+As an archivist, I want to automatically assign unique identifiers to material I scan, so that I avoid potential errors.
+
+As an archivist, I want to automatically embed metadata in file headers, so that I avoid repetitive and easily-forgotten tasks.
+
+As an archivist, I want to rotate images, so that I can orient them correctly.
+
+As an archivist, I want to apply automatic contrast and level operations to a scanned file, so that I can eliminate unnecessary work.
+
+As an archivist, I want to perform contrast, level and other manipulations manually, so that I can improve on results from automated tools.
+
+As a donor representative, I want to supply incremental accruals to new and existing collections, so that material can be transferred on an ongoing basis.
+
+As an archivist, I want to manage scans of archival material created for educational visits, so that find and refer to them for another visit.
+
+As an archivist, I want to manage loan documentation, including preservation photos, forms and correspondence, so that I can find it easily later.
+
+As a researcher, I want to generate structured citation data, so that so I can cite a file in a publication.
+
+As a researcher, I want to share a link to a file on social media, so that so I can show other people an interesting thing I found.
+
+As a researcher, I want to understand the copyright status of the image, so that I know if I can use it.
+
+As a researcher I want clear citation information on each document, so that I can cite accurately in a publication.
+
+As a researcher, I want to share reports I've written, so that it is available to staff and researchers.
+
+As a researcher, I want to download a file, so that I can use it for research without having to come to the reading room.
+
+As a researcher, I want to download reports, so that I can use them in immediate and future in talks and articles.
+
+As a researcher, I want to locate photographs and documents that I can share on social media.
+
+As a researcher, I want to request analog versions of digital objects, so that I can view them in the reading room.
+
+As a researcher, I want to order copies of photos, so that I can use them in a publication.
+
+As a researcher, I want to receive a notification if something I request in the reading room or for duplication is already digitized, so that I don't have to put in that request.
+
+As an archivist, I want to make information about rights available to researchers and donors, so that they know what they can do with images.
+
+As an archivist, I want to ensure that emails sent about specific objects contain accurate citation information, so that I can confirm which object is being referred to.
+
+As a researcher, I want to stream audio and video files in my web browser.
+
+As a researcher, I want to export descriptive data in a common format, so that I can use text mining tools on it.
+
+As an archivist, I want to track use of a photo, so that I know if I've sent it to a researcher before.
+
+As an archivist, I want to see what a particular user has downloaded, so that I can track use of assets.
+
+As an archivist, I want to provide access to digital copies of unprocessed material, so that donors can access things they have given us.
+
+As an archivist, I want to make as much archival material as possible available for use, so that I can fulfill the RAC's mission.
+
+As an archivist, I want to use archival content on the RAC website, so that I can integrate our collections into our web presence.
+
+As a donor representative, I want to access the descriptive information about the images scanned for my institutions needs.
+
+As a donor representative, I want to look at images that have been scanned from my collection, so that so that I can use them in my institutions exhibits, reports etc.
+
+As a researcher, I want to search all files by keyword.
+
+As a researcher, I want to search by keyword, so that I can learn what already exists digitally and avoid placing additional duplication requests.
+
+As a researcher, I want to see common material across collections, so that so I can prepare a comprehensive analysis.
+
+As a researcher, I want to browse through files in a collection.
+
+As an archivist, I want to browse through files in a collection.
+
+As an archivist, I want to search all files by keyword.
+
+As an archivist, I want to upload inventories, so that our donor representatives have an easier time requesting their material.
+
+As an archivist, I want to search by tag, so that it makes finding particular photographs easier.
+
+As an archivist, I want to access the digital files on the X-drive, so that I can use them.
+
+As an assistant archivist, I want to easily access interdepartmental forms.
+
+As an archivist, I want to have electronic versions of the collection files available for staff use, so that I increase accessibility and I do not lose the original files.
+
+As a researcher, I want to be able to search across photo collection images, so that I can prepare presentations.
+
+As a researcher, I want to search using structured data, so that I can find everything relevant to my inquiry across collections.
+
+As a researcher, I want to access tagged working papers, so that my research process is better informed.
+
+As a researcher, I want to access educational outreach materials, so that I can make connections with institutions.
+
+As a researcher, I want to have accurate cross-collection citation information, so that I can find materials again.
+
+As a researcher, I want to access digitized archival materials without mediation, so that I can decide what, I want to look at.
+
+As an archivist, I want to distinguish between images scanned in color or black and white, so that I know whether or not these images meet publication requirements.
+
+As a researcher, I want to ask a question about a specific file, so that I can find out more information.
+
+As a researcher, I want to search OCRed text in all available digitized textual documents, so that I can more efficiently locate digitized documents relevant to my research.
+
+As a researcher, I want to know the date on which something was digitized, so that I know if it's been digitized since I last looked.
+
+As a researcher, I want to keyword search across all of an RF program officer's scanned diaries, rather than having to search each scanned diary segment separately, so that I can more efficiently locate diary entries relevant to my research.
+
+As an archivist, I want to access inventories for unprocessed collections, so that I can provide reference services to donors.
+
+As a researcher, I want to view thumbnails of photos, so that I can make a selection of which one I want to license.
+
+As a researcher, I want to know when only part of a folder has been digitized, so that I know if I am seeing everything or only a portion.
+
+As a donor representative, I want to see thumbnails of images, so that I can select which one I want.
+
+As an researcher, I want to view film clips, so that I can see excerpts of films.
+
+As an archivist, I want to search images by photographer.
+
+As an archivist, I want to search images by people represented in them.
+
+As an archivist, I want to search images by place the photo was taken.
+
+As an archivist, I want to search images by rights.
+
+As an archivist, I want to search index cards and other non-public finding aids, so that I can provide better research assistance.
+
+As an archivist, I want to view collection files, so that I can gain background information for processing a collection.
+
+As an archivist, I want to view physical locations for non-archival material, so that I can provide research services to donors.
+
+As an archivist, I want to find files that cannot be made publicly available, so that I can easily access everything that's been digitized.
+
+As an archivist, I want to access metadata and visual representations of index cards, so that I can use that information to assist researchers.
+
+As an archivist, I want to search individual material types.
+
+As an archivist, I want to search images by uploading an image, so that so I can find images when i don't have any metadata.
+
+As an administrator, I want to create user groups, so that I can control user permissions.
+
+As an administrator, I want to create user roles, so that I can group users by role.
+
+As an administrator, I want to assign RAC staff to different user groups, so that I can control read/write access.
+
+As an administrator, I want to assign rights to user groups or roles, so that I can control what users can and can't do.
+
+As an administrator, I want to allow users to log in using Active Directory credentials, so that I don't have to manage another set of usernames and passwords.
+
+As an administrator, I want to have researchers reset their own passwords, so that I don't have to send passwords in cleartext.
+
+As an administrator, I want to limit who can see certain metadata fields, so that I can show or hide things from display based on user groups.
