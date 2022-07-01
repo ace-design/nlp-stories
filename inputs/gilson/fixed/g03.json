@@ -1,0 +1,758 @@
+{
+  "case": "g03",
+  "stories": [
+    {
+      "identifier": "g03_0",
+      "text": "As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.",
+      "entities": [
+        "Information"
+      ],
+      "personas": [
+        "Public User"
+      ],
+      "actions": [
+        "Search For Information"
+      ]
+    },
+    {
+      "identifier": "g03_1",
+      "text": "As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.",
+      "entities": [
+        "Requirement",
+        "Service"
+      ],
+      "personas": [
+        "Prospectiveapplicant"
+      ],
+      "actions": [
+        "Select A Service",
+        "Research Requirements"
+      ]
+    },
+    {
+      "identifier": "g03_2",
+      "text": "As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.",
+      "entities": [
+        "Preapplication Assistance"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Request Preapplication Assistance"
+      ]
+    },
+    {
+      "identifier": "g03_3",
+      "text": "As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
+      "entities": [
+        "User Account"
+      ],
+      "personas": [
+        "Customer"
+      ],
+      "actions": [
+        "Create A Portal, Customer User Account"
+      ]
+    },
+    {
+      "identifier": "g03_4",
+      "text": "As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.",
+      "entities": [
+        "Application"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Submit Application"
+      ]
+    },
+    {
+      "identifier": "g03_5",
+      "text": "As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.",
+      "entities": [
+        "Support Documentation"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Submit Supporting Documentation"
+      ]
+    },
+    {
+      "identifier": "g03_6",
+      "text": "As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.",
+      "entities": [
+        "Fee"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Pay Fee"
+      ]
+    },
+    {
+      "identifier": "g03_7",
+      "text": "As an Applicant, I want to Check the Status of a transaction, so that I can understand where the provisioning of my service is in the process, such as information related to service levels, fees, plan review, permit, or inspection results.",
+      "entities": [
+        "Transaction"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Check The Status Of A Transaction"
+      ]
+    },
+    {
+      "identifier": "g03_8",
+      "text": "As an Applicant, I want to Modify my Application, so that I can successfully change information on an application.",
+      "entities": [
+        "Application"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Modify Application"
+      ]
+    },
+    {
+      "identifier": "g03_9",
+      "text": "As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.",
+      "entities": [
+        "Completeness Review"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Perform A Completeness Review"
+      ]
+    },
+    {
+      "identifier": "g03_10",
+      "text": "As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.",
+      "entities": [
+        "Internal Note"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Record An Internal Note"
+      ]
+    },
+    {
+      "identifier": "g03_11",
+      "text": "As a Staff member, I want to Assign an Application for Detailed Review, so that I can review the for compliance and subsequently approved or denied.",
+      "entities": [
+        "Detailed Review",
+        "Application"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Assign An Application For Detailed Review"
+      ]
+    },
+    {
+      "identifier": "g03_12",
+      "text": "As a Staff member, I want to Apply a Hold, so that I can prevent progression through the workflow or other actions in the system until the issue is resolved.",
+      "entities": [
+        "Hold"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Apply A Hold"
+      ]
+    },
+    {
+      "identifier": "g03_13",
+      "text": "As a Staff member, I want to Remove a Hold, so that I can allow progression through the workflow or other actions in the system now that the issue has been resolved.",
+      "entities": [
+        "Hold"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Remove A Hold"
+      ]
+    },
+    {
+      "identifier": "g03_14",
+      "text": "As a Staff member, I want to Send a Formal Response to Applicant, so that I can satisfy communication and records responsibilities.",
+      "entities": [
+        "Formal Response",
+        "Applicant"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Send A Formal Response To Applicant"
+      ]
+    },
+    {
+      "identifier": "g03_15",
+      "text": "As a Staff member, I want to Track  the Draft Proffers, so that I can preserve the history of draft proffer statements submitted by the Applicant.",
+      "entities": [
+        "Draft Proffers"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Track The Draft Proffers"
+      ]
+    },
+    {
+      "identifier": "g03_16",
+      "text": "As a Staff member, I want to Manage Approved Proffers, so that I can ensure compliance with and satisfaction of the proffer in the future.",
+      "entities": [
+        "Approve Proffer"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Manage Approved Proffers"
+      ]
+    },
+    {
+      "identifier": "g03_17",
+      "text": "As a Staff member, I want to Manage Ordinances, so that I can maintain accurate ordinance information in the System.",
+      "entities": [
+        "Ordinance"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Manage Ordinances"
+      ]
+    },
+    {
+      "identifier": "g03_18",
+      "text": "As a Staff member, I want to Schedule a Meeting, so that I can bring the required parties together at a specific date/time to address an issue.",
+      "entities": [
+        "Meeting"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Schedule A Meeting"
+      ]
+    },
+    {
+      "identifier": "g03_19",
+      "text": "As a staff member, I want to denote an application with a Final Action status. So that I can finish it.",
+      "entities": [
+        "Application",
+        "Action Status"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Denote An Application With A Final Action Status"
+      ]
+    },
+    {
+      "identifier": "g03_20",
+      "text": "As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s).",
+      "entities": [
+        "Planning Study",
+        "Plan Amendments"
+      ],
+      "personas": [
+        "Planning , Staff Member"
+      ],
+      "actions": [
+        "Conduct Planning Study",
+        "Conduct Plan Amendments",
+        "Track Planning Study",
+        "Track Plan Amendments"
+      ]
+    },
+    {
+      "identifier": "g03_21",
+      "text": "As a Planning Staff member, I want to Generate Planning-related Reports, so that I can access, analyze and/or export the needed information in the format I requested.",
+      "entities": [
+        "Planning , Related Report"
+      ],
+      "personas": [
+        "Planning , Staff Member"
+      ],
+      "actions": [
+        "Generate Planning, Related Reports"
+      ]
+    },
+    {
+      "identifier": "g03_22",
+      "text": "As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.",
+      "entities": [
+        "Consistency",
+        "Comprehensive Plan"
+      ],
+      "personas": [
+        "Planning , Staff Member"
+      ],
+      "actions": [
+        "Evaluate Consistency With The Comprehensive Plan"
+      ]
+    },
+    {
+      "identifier": "g03_23",
+      "text": "As a Staff member, I want to Perform a Staff Review, so that I can validate compliance of an application with the Zoning Ordinance and impact approval/denial of the application accordingly.",
+      "entities": [
+        "Staff Review"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Perform A Staff Review"
+      ]
+    },
+    {
+      "identifier": "g03_24",
+      "text": "As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
+      "entities": [
+        "Request",
+        "Information"
+      ],
+      "personas": [
+        "Zoning , Staff Member"
+      ],
+      "actions": [
+        "Process The Requests Zoning Information"
+      ]
+    },
+    {
+      "identifier": "g03_25",
+      "text": "As a Zoning Staff member, I want to Issue the Zoning-Related Permits, so that I can satisfy an Applicant's request for service that has proven to be eligible and in compliance with the Zoning Ordinance.",
+      "entities": [
+        "Zoning , Related Permit"
+      ],
+      "personas": [
+        "Zoning , Staff Member"
+      ],
+      "actions": [
+        "Issue The Zoning, Related Permits"
+      ]
+    },
+    {
+      "identifier": "g03_26",
+      "text": "As a Staff member, I want to Develop a Staff Report, so that I can publish and distribute the report according to business rules.",
+      "entities": [
+        "Staff Report"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Develop A Staff Report"
+      ]
+    },
+    {
+      "identifier": "g03_27",
+      "text": "As a Staff member, I want to Manage Hearing Calendars, so that I can track hearing-related activities and due dates.",
+      "entities": [
+        "Hearing Calendars"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Manage Hearing Calendars"
+      ]
+    },
+    {
+      "identifier": "g03_28",
+      "text": "As a Staff member, I want to Assign a Hearing Date, so that I can present the application to the appropriate governing body within the timelines dictated by the relevant County rules and procedures.",
+      "entities": [
+        "Hearing Date"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Assign A Hearing Date"
+      ]
+    },
+    {
+      "identifier": "g03_29",
+      "text": "As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
+      "entities": [
+        "Affidavit"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Manage Affidavits"
+      ]
+    },
+    {
+      "identifier": "g03_30",
+      "text": "As an Applicant, I want to Satisfy Hearing Requirements, so that I can ensure all pre-hearing requirements are satisfied in time for the hearing.",
+      "entities": [
+        "Hearing Requirements"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Satisfy Hearing Requirements"
+      ]
+    },
+    {
+      "identifier": "g03_31",
+      "text": "As a Staff member, I want to Prepare for and Support Hearing Execution, so that I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing.",
+      "entities": [
+        "Execution"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Prepare",
+        "Hearing Execution",
+        "Support"
+      ]
+    },
+    {
+      "identifier": "g03_32",
+      "text": "As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.",
+      "entities": [
+        "Hearing Decision"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Capture A Hearing Decision"
+      ]
+    },
+    {
+      "identifier": "g03_33",
+      "text": "As a Staff member, I want to Process the Appeals, so that I can track the outcome and record the impact on the relevant records.",
+      "entities": [
+        "Appeal"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Process The Appeals"
+      ]
+    },
+    {
+      "identifier": "g03_34",
+      "text": "As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+      "entities": [
+        "Review",
+        "Plan"
+      ],
+      "personas": [
+        "Plan , Review , Staff Member"
+      ],
+      "actions": [
+        "Assign Plans For Review"
+      ]
+    },
+    {
+      "identifier": "g03_35",
+      "text": "As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met",
+      "entities": [
+        "Plan Reviewer Workload"
+      ],
+      "personas": [
+        "Plan , Review , Staff Supervisor"
+      ],
+      "actions": [
+        "Manage Plan Reviewer Workload"
+      ]
+    },
+    {
+      "identifier": "g03_36",
+      "text": "As an Applicant, I want to Request a Plan Review Meeting, so that I can meet with the Plan Review Staff regarding the plan review.",
+      "entities": [
+        "Plan Review Meeting"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Request A Plan Review Meeting"
+      ]
+    },
+    {
+      "identifier": "g03_37",
+      "text": "As a Plan Review Staff member, I want to successfully Conduct a Plan Review Meeting with the Applicant and record the outcome, so that I can listen to it again.",
+      "entities": [
+        "Plan Review Meeting",
+        "Applicant",
+        "Outcome"
+      ],
+      "personas": [
+        "Plan , Review , Staff Member"
+      ],
+      "actions": [
+        "Conduct A Plan Review Meeting With The Applicant",
+        "Record The Outcome"
+      ]
+    },
+    {
+      "identifier": "g03_38",
+      "text": "As a Plan Review Staff member, I want to Review Plans, so that I can review them for compliance and either approve, or fail or deny the plans and record any conditions, clearances, or corrections needed from the Applicant.",
+      "entities": [
+        "Plan"
+      ],
+      "personas": [
+        "Plan , Review , Staff Member"
+      ],
+      "actions": [
+        "Review Plans"
+      ]
+    },
+    {
+      "identifier": "g03_39",
+      "text": "As an Applicant, I want to Resubmit Plans, so that I can review revised plans. ",
+      "entities": [
+        "Plan"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Resubmit Plans"
+      ]
+    },
+    {
+      "identifier": "g03_40",
+      "text": "As a Plan Review Staff Member, I want to Review the Code Modifications submitted by the Applicant, so that I can review the request and if approved, associate it with the appropriate project.",
+      "entities": [
+        "Code Modifications",
+        "Applicant"
+      ],
+      "personas": [
+        "Plan , Review , Staff Member"
+      ],
+      "actions": [
+        "Review The Code Modifications The Applicant"
+      ]
+    },
+    {
+      "identifier": "g03_41",
+      "text": "As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+      "entities": [
+        "Plan Reviews"
+      ],
+      "personas": [
+        "Plan , Review , Staff Member"
+      ],
+      "actions": [
+        "Track The Completion Of Required Plan Reviews"
+      ]
+    },
+    {
+      "identifier": "g03_42",
+      "text": "As a Development Staff member, I want to Issue a Development-related Permit, so that I can grant the request to the Applicant to begin work",
+      "entities": [
+        "Development , Related Permit"
+      ],
+      "personas": [
+        "Development , Staff Member"
+      ],
+      "actions": [
+        "Issue A Development, Related Permit"
+      ]
+    },
+    {
+      "identifier": "g03_43",
+      "text": "As a Staff member, I want to Manage Bonds, so that I can track and manage bonds throughout the lifecycle of the project until release.",
+      "entities": [
+        "Bond"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Manage Bonds"
+      ]
+    },
+    {
+      "identifier": "g03_44",
+      "text": "As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+      "entities": [
+        "Building Development Project"
+      ],
+      "personas": [
+        "Applicant"
+      ],
+      "actions": [
+        "Complete Building Development Project"
+      ]
+    },
+    {
+      "identifier": "g03_45",
+      "text": "As a Customer, I want to Request Inspection, so that a County inspector is assigned to perform an inspection of my project.",
+      "entities": [
+        "Inspection"
+      ],
+      "personas": [
+        "Customer"
+      ],
+      "actions": [
+        "Request Inspection"
+      ]
+    },
+    {
+      "identifier": "g03_46",
+      "text": "As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.",
+      "entities": [
+        "Inspection"
+      ],
+      "personas": [
+        "Inspection , Staff Member"
+      ],
+      "actions": [
+        "Create An Inspection"
+      ]
+    },
+    {
+      "identifier": "g03_47",
+      "text": "As an Inspection Staff Supervisor, I want to Assign Inspections, so that I can make sure the appropriate Inspector receives the work.",
+      "entities": [
+        "Inspection"
+      ],
+      "personas": [
+        "Inspection , Staff Supervisor"
+      ],
+      "actions": [
+        "Assign Inspections"
+      ]
+    },
+    {
+      "identifier": "g03_48",
+      "text": "As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
+      "entities": [
+        "Inspector Workload"
+      ],
+      "personas": [
+        "Inspection Supervisor"
+      ],
+      "actions": [
+        "Manage Inspector Workload"
+      ]
+    },
+    {
+      "identifier": "g03_49",
+      "text": "As an Inspector, I want to Conduct Inspections, so that I can validate Customer compliance with code and regulations and provide results of the inspection to the Customer.",
+      "entities": [
+        "Inspection"
+      ],
+      "personas": [
+        "Inspector"
+      ],
+      "actions": [
+        "Conduct Inspections"
+      ]
+    },
+    {
+      "identifier": "g03_50",
+      "text": "As an Enforcement Staff member, I want to Issue a Notice of Violation, so that I can provide formal communication to the responsible party.",
+      "entities": [
+        "Violation"
+      ],
+      "personas": [
+        "Enforcement , Staff Member"
+      ],
+      "actions": [
+        "Issue A Notice Of Violation"
+      ]
+    },
+    {
+      "identifier": "g03_51",
+      "text": "As a l Staff member, I want to search for Property information, so that I can obtain all associated current and historic owners, permits, and applications.",
+      "entities": [
+        "Property Information"
+      ],
+      "personas": [
+        "L , Staff Member"
+      ],
+      "actions": [
+        "Search For Property Information"
+      ]
+    },
+    {
+      "identifier": "g03_53",
+      "text": "As a County Staff Member, I want to create a custom query/report outside of the common querying/reporting functionality, so that I can fulfill a request.",
+      "entities": [
+        "Custom Query",
+        "Common Querying",
+        "Functionality"
+      ],
+      "personas": [
+        "County , Staff Member"
+      ],
+      "actions": [
+        "Create A Custom Query",
+        "Reporting Report Of The Common Querying Functionality"
+      ]
+    },
+    {
+      "identifier": "g03_54",
+      "text": "As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.",
+      "entities": [
+        "Condo Unit"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Create Each Condo Unit"
+      ]
+    },
+    {
+      "identifier": "g03_55",
+      "text": "As a Technical Staff member, I want to update the GIS Property Management, so that I can successfully update the transactional Parcel Pin to reference the GIS layer where the Split or Merged Parcel Pin exists.",
+      "entities": [
+        "Gis Property Management"
+      ],
+      "personas": [
+        "Technical , Staff Member"
+      ],
+      "actions": [
+        "Update The Gis Property Management"
+      ]
+    },
+    {
+      "identifier": "g03_56",
+      "text": "As a Staff member, I want to Send or Post Citations and Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action.",
+      "entities": [
+        "Citation",
+        "Fine"
+      ],
+      "personas": [
+        "Staff Member"
+      ],
+      "actions": [
+        "Send Fine",
+        "Send Citations",
+        "Post Fine",
+        "Post Citations"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,767 @@
+{
+  "case": "g12",
+  "stories": [
+    {
+      "identifier": "g12_0",
+      "text": "As a camp administrator, I want to be able to add campers, so that I can keep track of each individual camper.",
+      "entities": [
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Add Campers"
+      ]
+    },
+    {
+      "identifier": "g12_1",
+      "text": "As a camp administrator, I want to be able to remove campers if they don't attend the camp anymore, so that I can keep the records organized.",
+      "entities": [
+        "Camper",
+        "Camp"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Attend The Camp",
+        "Remove Campers"
+      ]
+    },
+    {
+      "identifier": "g12_2",
+      "text": "As a camp administrator, I want to be able to keep camper records from previous years, so that the amount of work I need to do is lowered. ",
+      "entities": [
+        "Previous Year",
+        "Camper Record"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Keep Camper Records From Previous Years"
+      ]
+    },
+    {
+      "identifier": "g12_3",
+      "text": "As a camp administrator, I want to be able to upload consent forms, so that campers or their parents can easily access the forms.",
+      "entities": [
+        "Consent Forms"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Upload Consent Forms"
+      ]
+    },
+    {
+      "identifier": "g12_4",
+      "text": "As a camp administrator, I want to be able to keep track of which camper submitted which forms, so that legal issues are avoided.",
+      "entities": [
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Keep Track Of Which Camper Submitted Which Forms"
+      ]
+    },
+    {
+      "identifier": "g12_5",
+      "text": "As a camp administrator, I want to be able to schedule activities for campers, so that camp workers can easily keep track of who is where at all times.",
+      "entities": [
+        "Activity",
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Schedule Activities For Campers"
+      ]
+    },
+    {
+      "identifier": "g12_6",
+      "text": "As a camp administrator, I want to be able to automatically create nametags for campers, so that I can lower the amount of work I need to do.",
+      "entities": [
+        "Nametag",
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Create Nametags For Campers"
+      ]
+    },
+    {
+      "identifier": "g12_7",
+      "text": "As a camp administrator, I want to be able to suspend a camper who had behavioral problems.",
+      "entities": [
+        "Camper",
+        "Behavioral Problem"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Suspend A Camper Had Behavioral Problems"
+      ]
+    },
+    {
+      "identifier": "g12_8",
+      "text": "As a camp administrator, I want to be able to set a reminders related to specific tasks that has to be done.",
+      "entities": [
+        "Specific Task",
+        "Reminder"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Set A Reminders To Specific Tasks Has",
+        "Done"
+      ]
+    },
+    {
+      "identifier": "g12_9",
+      "text": "As a camp administrator, I want to be able to assign different positions to the staff members, so that it is possible to organize activities in terms of responsibilities.",
+      "entities": [
+        "Different Position",
+        "Staff Members"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Assign Different Positions To The Staff Members"
+      ]
+    },
+    {
+      "identifier": "g12_10",
+      "text": "As a camp administrator, I want to be able to warn a camp worker who I think did his/her job inappropriate.",
+      "entities": [
+        "Worker",
+        "Job",
+        "Camp"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Think Job",
+        "Think",
+        "Warn A Worker",
+        "Warn A Camp Worker"
+      ]
+    },
+    {
+      "identifier": "g12_11",
+      "text": "As a camp administrator, I want to be able to create, modify rules that campers and camp workers has to follow.",
+      "entities": [
+        "Camper",
+        "Camp Worker",
+        "Rule"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Create Rules Campers Has",
+        "That Follow",
+        "Create Rules Camp Worker Has",
+        "Modify Rules Campers Has",
+        "Modify Rules Camp Worker Has"
+      ]
+    },
+    {
+      "identifier": "g12_12",
+      "text": "As a camp administrator, I want to keep track of the usage of internal camp facilities, so that I don't create conflicting schedules for the different camp groups.",
+      "entities": [
+        "Camp Facilities"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Keep Track Of The Usage Of Internal Camp Facilities"
+      ]
+    },
+    {
+      "identifier": "g12_13",
+      "text": "As a camp administrator, I want to create an avenue so parents can submit feedback and general concerns, so that I can keep improving the services I provide.",
+      "entities": [
+        "Feedback",
+        "Parent",
+        "Avenue",
+        "General Concern"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Create An Avenue",
+        "Parents Submit General Concern",
+        "Parents Submit Feedback"
+      ]
+    },
+    {
+      "identifier": "g12_14",
+      "text": "As a camp administrator, I want to store campers' emergency information in a database, so that I can easily notify the necessary parties in case of an emergency.",
+      "entities": [
+        "Database",
+        "Camper",
+        "Emergency Information"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Store Campers' Emergency Information In A Database"
+      ]
+    },
+    {
+      "identifier": "g12_15",
+      "text": "As a camp administrator, I want to store camper's immediate parent/guardian's information, so that I can easily call to notify them in case a grossly unacceptable behavior.",
+      "entities": [
+        "Camper",
+        "Guardian",
+        "Immediate Parent",
+        "Information"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Store Guardian's Information",
+        "Store Camper's Immediate Parent"
+      ]
+    },
+    {
+      "identifier": "g12_16",
+      "text": "As a camp administrator, I want to provide bi-weekly feedback to camper's parents, so that they can be aware of their child's behavior and performance at camp.",
+      "entities": [
+        "Camper",
+        "Parent",
+        "Bi , Weekly Feedback"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Provide Bi, Weekly Feedback To Camper's Parents"
+      ]
+    },
+    {
+      "identifier": "g12_17",
+      "text": "As a camp administrator, I want to be able to create a registration form for both staff and kids, so that I can keep organized.",
+      "entities": [
+        "Form",
+        "Kid",
+        "Staff",
+        "Registration"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Create A Registration Form For Both Staff",
+        "Create A Form For Kid"
+      ]
+    },
+    {
+      "identifier": "g12_18",
+      "text": "As a camp administrator, I want to be able to keep my information in one place, so that the admins next year can improve on the previous years.",
+      "entities": [
+        "Information",
+        "Place"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Keep Information In Place"
+      ]
+    },
+    {
+      "identifier": "g12_19",
+      "text": "As a camp administrator, I want to be able to see medical forms, so that we can be prepared for an allergy attack",
+      "entities": [
+        "Medical Form"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "See Medical Forms"
+      ]
+    },
+    {
+      "identifier": "g12_20",
+      "text": "As a camp administrator, I want to be able to notify parents all at once, so that they can be notified of any upcoming events.",
+      "entities": [
+        "Parent"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Notify Parents Once",
+        "Notify All"
+      ]
+    },
+    {
+      "identifier": "g12_22",
+      "text": "As a camp administrator, I want to be able to add parents, so that they can enroll their kids at camp.",
+      "entities": [
+        "Parent"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Add Parents"
+      ]
+    },
+    {
+      "identifier": "g12_23",
+      "text": "As a camp administrator, I want to be able to create groups and add campers to the groups, so that I can easily organize the campers.",
+      "entities": [
+        "Group",
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Create Groups",
+        "Add Campers To The Groups"
+      ]
+    },
+    {
+      "identifier": "g12_24",
+      "text": "As a camp administrator, I want to be able to see all my camp groups and the events scheduled for each camp group, so that I can notify counselor of what their group will be doing for the day.",
+      "entities": [
+        "Camp Group",
+        "Event",
+        "Camp Groups"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "See Camp Groups",
+        "See The Event For Each Camp Group"
+      ]
+    },
+    {
+      "identifier": "g12_25",
+      "text": "As a camp administrator, I want to be able to schedule tasks/activities for a specific camp group, so that I can track each groups daily/weekly and monthly activities.",
+      "entities": [
+        "Activity",
+        "Task",
+        "Camp Group"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Schedule Activity",
+        "Schedule Tasks For A Specific Camp Group"
+      ]
+    },
+    {
+      "identifier": "g12_26",
+      "text": "As a camp administrator, I want to be able to delete tasks/activities I scheduled, so that I can keep the schedule clean of unneeded activities.",
+      "entities": [
+        "Task",
+        "Activity"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Delete Tasks",
+        "Delete Activity",
+        "Scheduled"
+      ]
+    },
+    {
+      "identifier": "g12_27",
+      "text": "As a camp administrator, I want to be able to modify tasks/events I scheduled in case there is a change, so that I can always keep the schedule up to date.",
+      "entities": [
+        "Event",
+        "Case",
+        "Task"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Modify Event",
+        "Modify Tasks",
+        "Scheduled In Case A Change"
+      ]
+    },
+    {
+      "identifier": "g12_28",
+      "text": "As a camp administrator, I want to be able to modify the information of enrolled campers, so that I can keep the campers information up to date.",
+      "entities": [
+        "Enrol Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Modify The Information Of Enrolled Campers"
+      ]
+    },
+    {
+      "identifier": "g12_29",
+      "text": "As a camp administrator, I want to be able to delete campers from the database, so that I can keep my pages free of clutter.",
+      "entities": [
+        "Database",
+        "Camper"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Delete Campers From The Database"
+      ]
+    },
+    {
+      "identifier": "g12_30",
+      "text": "As a camp administrator, I want to be able to modify the information of added parents, so that I can keep parent's information up to date.",
+      "entities": [
+        "Add Parent"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Modify The Information Of Added Parents"
+      ]
+    },
+    {
+      "identifier": "g12_31",
+      "text": "As a camp administrator, I want to be able to delete parents from the database, so that I can keep my pages free of unneeded clutter.",
+      "entities": [
+        "Parent",
+        "Database"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Delete Parents From The Database"
+      ]
+    },
+    {
+      "identifier": "g12_32",
+      "text": "As a camp administrator, I want to be able to modify a group's information, so that I can keep the groups up to date.",
+      "entities": [
+        "Group",
+        "Information"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "Modify A Group's Information"
+      ]
+    },
+    {
+      "identifier": "g12_33",
+      "text": "As a camp administrator, I want to be able to see only events for a specific group/groups on the event calendar, so that I can easily read the data on the calendar without too much clutter.",
+      "entities": [
+        "Event",
+        "Specific Group",
+        "Event Calendar",
+        "Group"
+      ],
+      "personas": [
+        "Camp Administrator"
+      ],
+      "actions": [
+        "See Only Events For A Specific Group On The Event Calendar",
+        "See Only Events For Group"
+      ]
+    },
+    {
+      "identifier": "g12_34",
+      "text": "As a parent, I want to be able to see which consent forms I have submitted, so that I can know what I still need to do.",
+      "entities": [
+        "Form"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Submitted",
+        "See Forms"
+      ]
+    },
+    {
+      "identifier": "g12_35",
+      "text": "As a parent, I want to be able to track my child's activity and schedule at camp, so that I can have peace of mind.",
+      "entities": [
+        "Activity",
+        "Child",
+        "Camp",
+        "Schedule"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Track Child's Activity At Camp",
+        "Track Schedule"
+      ]
+    },
+    {
+      "identifier": "g12_36",
+      "text": "As a parent, I want to be able to submit various type of forms to the camp management.",
+      "entities": [
+        "Form",
+        "Camp Management"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Submit Various Type Of Forms To The Camp Management"
+      ]
+    },
+    {
+      "identifier": "g12_37",
+      "text": "As a parent, I want to be able to create an account, so that I can sign up my kids for camp online.",
+      "entities": [
+        "Account"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Create An Account"
+      ]
+    },
+    {
+      "identifier": "g12_38",
+      "text": "As a parent, I want to see which counselors are assigned to my kids, so that I can have peace of mind.",
+      "entities": [
+        "Kid"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Assigned To Kids",
+        "See"
+      ]
+    },
+    {
+      "identifier": "g12_39",
+      "text": "As a parent, I want to be able to message my child's counselors, so that I can voice my concerns or check on my child's progress.",
+      "entities": [
+        "Child",
+        "Counselor"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Message Child's Counselors"
+      ]
+    },
+    {
+      "identifier": "g12_40",
+      "text": "As a parent, I want to be able to sign and submit consent forms online, so that I don't have to deal with my child losing a consent form.",
+      "entities": [
+        "Consent Forms"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Sign Consent Forms",
+        "Submit Consent Forms"
+      ]
+    },
+    {
+      "identifier": "g12_41",
+      "text": "As a parent, I want to be able to see if I made all the necessary payments.",
+      "entities": [
+        "Necessary Payment"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Made The Necessary Payments",
+        "See"
+      ]
+    },
+    {
+      "identifier": "g12_42",
+      "text": "As a parent, I want to be able to share any photos the camp has taken of my child.",
+      "entities": [
+        "Child",
+        "Photo",
+        "Camp"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Share Any Photos The Camp Has Taken Of Child"
+      ]
+    },
+    {
+      "identifier": "g12_43",
+      "text": "As a parent, I want to be able to connect with the staff in case of an emergency.",
+      "entities": [
+        "Staff",
+        "Emergency"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Connect With The Staff In Case Of An Emergency"
+      ]
+    },
+    {
+      "identifier": "g12_44",
+      "text": "As a parent, I want to be able to enroll my children, so that they can be admitted to camp.",
+      "entities": [
+        "Child"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "Enroll Children"
+      ]
+    },
+    {
+      "identifier": "g12_45",
+      "text": "As a parent, I want to be able to see and edit my enrolled children to the camp year, so that I can know who I already enrolled to camp, who is still pending admission etc.",
+      "entities": [
+        "Enrol Child",
+        "Camp Year"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "See Enrolled Children To The Camp Year",
+        "Edit Enrolled Children To The Camp Year"
+      ]
+    },
+    {
+      "identifier": "g12_46",
+      "text": "As a parent, I want to be able to see a schedule of the activities my children are involved in at camp, so that I can be more informed as to what they are doing at camp.",
+      "entities": [
+        "Camp",
+        "Activity",
+        "Child"
+      ],
+      "personas": [
+        "Parent"
+      ],
+      "actions": [
+        "See A Schedule Of The Activities Children Involved At Camp"
+      ]
+    },
+    {
+      "identifier": "g12_47",
+      "text": "As a camp worker, I want to be able to see which campers I am in charge of and where, so that I can make sure I am doing my job properly.",
+      "entities": [
+        "Camper",
+        "Charge"
+      ],
+      "personas": [
+        "Camp Worker"
+      ],
+      "actions": [
+        "See"
+      ]
+    },
+    {
+      "identifier": "g12_48",
+      "text": "As a camp worker, I would be able to submit a completion report for the tasks which was assigned to me.",
+      "entities": [
+        "Task",
+        "Completion Report"
+      ],
+      "personas": [
+        "Camp Worker"
+      ],
+      "actions": [
+        "Submit A Completion Report For The Tasks Assigned To"
+      ]
+    },
+    {
+      "identifier": "g12_49",
+      "text": "As a camp worker, I'm able to report a camper to the manager with an inappropriate behavior.",
+      "entities": [
+        "Manager",
+        "Inappropriate Behavior",
+        "Camper"
+      ],
+      "personas": [
+        "Camp Worker"
+      ],
+      "actions": [
+        "Report A Camper To The Manager With An Inappropriate Behavior"
+      ]
+    },
+    {
+      "identifier": "g12_50",
+      "text": "As a camp worker, I'm able to report a list of supplies to the manager that the camp is short of.",
+      "entities": [
+        "Manager",
+        "Supply",
+        "Camp"
+      ],
+      "personas": [
+        "Camp Worker"
+      ],
+      "actions": [
+        "Report A List Of Supplies To The Manager The Camp Short"
+      ]
+    },
+    {
+      "identifier": "g12_51",
+      "text": "As a camp worker, I'm able to report necessary repairs to the manager that the camp is needed of.",
+      "entities": [
+        "Manager",
+        "Camp",
+        "Necessary Repair"
+      ],
+      "personas": [
+        "Camp Worker"
+      ],
+      "actions": [
+        "Report Necessary Repairs To The Manager"
+      ]
+    },
+    {
+      "identifier": "g12_52",
+      "text": "As a camp counselor, I want to be able to take attendance of my assigned kids, so that I can make ensure everybody is accounted for.",
+      "entities": [
+        "Assign Kid"
+      ],
+      "personas": [
+        "Camp Counselor"
+      ],
+      "actions": [
+        "Take Attendance Of Assigned Kids"
+      ]
+    }
+  ]
+}

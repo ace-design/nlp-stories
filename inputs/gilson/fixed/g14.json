@@ -1,0 +1,924 @@
+{
+  "case": "g14",
+  "stories": [
+    {
+      "identifier": "g14_0",
+      "text": "As a Publisher, I want to publish a dataset, so that I can view just the dataset with a few people.",
+      "entities": [
+        "Dataset"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Publish A Dataset"
+      ]
+    },
+    {
+      "identifier": "g14_1",
+      "text": "As a Publisher, I want to publish a dataset, so that I can share the dataset publicly with everyone.",
+      "entities": [
+        "Dataset"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Publish A Dataset"
+      ]
+    },
+    {
+      "identifier": "g14_2",
+      "text": "As a Publisher, I want to sign up for an account, so that that I can publish my data package to the registry and to have a publisher account to publish my data package under.",
+      "entities": [
+        "Account"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Sign Up For An Account"
+      ]
+    },
+    {
+      "identifier": "g14_3",
+      "text": "As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.",
+      "entities": [
+        "Google",
+        "Github"
+      ],
+      "personas": [
+        "Visitor"
+      ],
+      "actions": [
+        "Sign Up Via Google",
+        "Sign Up Via Github"
+      ]
+    },
+    {
+      "identifier": "g14_5",
+      "text": "As an Admin, I want to invite someone to join the platform, so that that they can start contributing or using data.",
+      "entities": [
+        "Platform"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Invite Someone",
+        "Join The Platform"
+      ]
+    },
+    {
+      "identifier": "g14_6",
+      "text": "As a Publisher, I want to import my data package into the registry, so that my data has a permanent online home to access. ",
+      "entities": [
+        "Data Package",
+        "Registry"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Import Data Package Into The Registry"
+      ]
+    },
+    {
+      "identifier": "g14_7",
+      "text": "As a Publisher, I want to configure my client, so that I can start publishing data packages.",
+      "entities": [
+        "Client"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Configure Client"
+      ]
+    },
+    {
+      "identifier": "g14_8",
+      "text": "As a Publisher, I want to use a publish command to update a data package that is already in the registry, so that it appears there.",
+      "entities": [
+        "Publish Command",
+        "Data Package",
+        "Registry"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Use A Publish Command",
+        "Update A Data Package Already Is In The Registry"
+      ]
+    },
+    {
+      "identifier": "g14_9",
+      "text": "As a Publisher, I want to unpublish a data package, so that it is no longer visible to anyone.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Unpublish A Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_10",
+      "text": "As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Delete A Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_11",
+      "text": "As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
+      "entities": [
+        "Registry",
+        "Datum"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Validate The Data",
+        "Publish To The Registry",
+        "Am"
+      ]
+    },
+    {
+      "identifier": "g14_13",
+      "text": "As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "-pron-",
+        "Consumer"
+      ],
+      "actions": [
+        "Rely",
+        "Know The Data Good",
+        "Downloading"
+      ]
+    },
+    {
+      "identifier": "g14_14",
+      "text": "As a Publisher, I want to publish a data package where its resource data is stored on my servers but the registry caches a copy of that data, so that that if my data is lost or gets broken I still have a copy people can use.",
+      "entities": [
+        "Datum",
+        "Resource Data",
+        "Data Package",
+        "Registry",
+        "Server"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Publish A Data Package Resource Data Where Stored On Servers"
+      ]
+    },
+    {
+      "identifier": "g14_15",
+      "text": "As a Consumer, I want to be able to get the data for a data package even if the original data has been moved or removed, so that that I can still use is and my app or analysis keeps working.",
+      "entities": [
+        "Data Package",
+        "Datum"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Get The Data For A Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_16",
+      "text": "As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
+      "entities": [
+        "Data Package",
+        "Ui"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Publish A Data Package In The Ui"
+      ]
+    },
+    {
+      "identifier": "g14_17",
+      "text": "As a Publisher, I want to create a data package in the UI so that it is available and published.",
+      "entities": [
+        "Ui",
+        "Data Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Create A Data Package In The Ui"
+      ]
+    },
+    {
+      "identifier": "g14_18",
+      "text": "As a Publisher, I want to be able to restore the deleted data package via cli, so that that it is back visible and available to view, download.",
+      "entities": [
+        "Cli",
+        "Data Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Restore The Deleted Data Package Via Cli"
+      ]
+    },
+    {
+      "identifier": "g14_19",
+      "text": "As a Publisher, I want to undelete the deleted data packages, so that that the deleted data packages is now visible again.",
+      "entities": [
+        "Data Packages"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Undelete The Deleted Data Packages"
+      ]
+    },
+    {
+      "identifier": "g14_20",
+      "text": "As a Publisher, I want to be able to preview the views of the current data package using cli prior to publishing, so that that I can refine the json declarations of datapackage view section to achieve a great looking result.",
+      "entities": [
+        "Cli",
+        "Publishing",
+        "Data Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Preview The Views Of The Current Data Package Prior Using Cli To Publishing"
+      ]
+    },
+    {
+      "identifier": "g14_21",
+      "text": "As a Consumer, I want to view a data package online, so that I can get a sense of whether this is the dataset I want.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "View A Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_22",
+      "text": "As a publisher, I want to show the world how my published data is, so that that it immediately catches consumer's attention. ",
+      "entities": [
+        "World",
+        "Publish Datum"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Show The World"
+      ]
+    },
+    {
+      "identifier": "g14_23",
+      "text": "As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "View The Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_24",
+      "text": "As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
+      "entities": [
+        "Datapackage"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Preview A Datapackage",
+        "Prepared"
+      ]
+    },
+    {
+      "identifier": "g14_25",
+      "text": "As a Consumer, I want to see how much the data has been downloaded, so that that I can choose most popular in the case when there are several alternatives for my use case.",
+      "entities": [
+        "Datum"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "See"
+      ]
+    },
+    {
+      "identifier": "g14_26",
+      "text": "As a Publisher, I want to see real examples of published packages so that I can understand how useful and simple the datapackage format and the registry is.",
+      "entities": [
+        "Publish Package"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "See Real Examples Of Published Packages"
+      ]
+    },
+    {
+      "identifier": "g14_27",
+      "text": "As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
+      "entities": [
+        "Example Data Packages"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "See Some Example Data Packages"
+      ]
+    },
+    {
+      "identifier": "g14_28",
+      "text": "As a Consumer, I want to search data packages, so that that I can find the ones I want.",
+      "entities": [
+        "Data Packages"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Search Data Packages"
+      ]
+    },
+    {
+      "identifier": "g14_29",
+      "text": "As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Search On Description Of Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_30",
+      "text": "As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
+      "entities": [
+        "File",
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Download The Data Package In File"
+      ]
+    },
+    {
+      "identifier": "g14_31",
+      "text": "As a Developer, I want to use data package as a node lib in my project, so that that I can depend on it using my normal dependency framework.",
+      "entities": [
+        "Node Lib",
+        "Project",
+        "Data Package"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "Use Data Package As A Node Lib In Project"
+      ]
+    },
+    {
+      "identifier": "g14_32",
+      "text": "As a Consumer, I want to load a Data Package from R, so that that I can immediately start playing with it.",
+      "entities": [
+        "R",
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Load A Data Package From R"
+      ]
+    },
+    {
+      "identifier": "g14_33",
+      "text": "As a Data Analyst I want to download a data package, so that that I can study it and wrangle with it to infer new data or generate new insights.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Data Analyst"
+      ],
+      "actions": [
+        "Download A Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_34",
+      "text": "As a Data Analyst, I want to update previously downloaded data package, so that that I can work with the most recent data.",
+      "entities": [
+        "Data Package"
+      ],
+      "personas": [
+        "Data Analyst"
+      ],
+      "actions": [
+        "Update Previously Downloaded Data Package"
+      ]
+    },
+    {
+      "identifier": "g14_35",
+      "text": "As a Consumer, I want to download a DataPackage's data one coherent SQLite database, so that that I can get it easily in one form.",
+      "entities": [
+        "Datapackage",
+        "Datum",
+        "Sqlite Database"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Download A Datapackage's Data Coherent Sqlite Database"
+      ]
+    },
+    {
+      "identifier": "g14_36",
+      "text": "As a Data Analyst, I want to compare different versions of some datapackage locally, so that that I can see schema changes clearly and adjust my analytics code to the desired schema version.",
+      "entities": [
+        "Datapackage"
+      ],
+      "personas": [
+        "Data Analyst"
+      ],
+      "actions": [
+        "Compare Different Versions Of Some Datapackage"
+      ]
+    },
+    {
+      "identifier": "g14_37",
+      "text": "As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
+      "entities": [
+        "Datapackage"
+      ],
+      "personas": [
+        "Web Developer"
+      ],
+      "actions": [
+        "Install Multiple Versions Of The Same Datapackage"
+      ]
+    },
+    {
+      "identifier": "g14_38",
+      "text": "As a Developer, I want to list all DataPackages requirements for my project in the file and pin the exact versions of any DataPackage that my project depends on, so that that the project can be deterministically deployed locally and won't break because of the DataPackage schema changes. ",
+      "entities": [
+        "File",
+        "Project",
+        "Datapackages Requirements",
+        "Datapackage"
+      ],
+      "personas": [
+        "Developer"
+      ],
+      "actions": [
+        "List All Datapackages Requirements For Project In The File",
+        "Pin The Exact Versions Of Any Datapackage"
+      ]
+    },
+    {
+      "identifier": "g14_39",
+      "text": "As a Publisher, I want to tag datapackage to create a snapshot of data on the registry server, so that that consumers can refer to it.",
+      "entities": [
+        "Datapackage",
+        "Registry Server",
+        "Datum"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Tag Datapackage",
+        "Create A Snapshot Of Data On The Registry Server"
+      ]
+    },
+    {
+      "identifier": "g14_40",
+      "text": "As a Publisher, I want to be warned that a tag exists when I try to overwrite it, so that that I don't accidentally overwrite stable tagged data which is relied on by consumers.",
+      "entities": [
+        "Tag"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Overwrite A Tag",
+        "A Tag Exists Try",
+        "Warned"
+      ]
+    },
+    {
+      "identifier": "g14_41",
+      "text": "As a Publisher, I want to be able to overwrite the previously tagged datapackage, so that that I can fix it if I mess up.",
+      "entities": [
+        "Tag Datapackage"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Overwrite The Previously Tagged Datapackage"
+      ]
+    },
+    {
+      "identifier": "g14_42",
+      "text": "As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.",
+      "entities": [
+        "Data Package",
+        "Old Version",
+        "Multiple Version"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Version Data Package",
+        "Keep Multiple Versions Including Older Versions"
+      ]
+    },
+    {
+      "identifier": "g14_43",
+      "text": "As a Publisher, I want to be able to get access to a previous version I tagged, so that that I can return to it and review it. ",
+      "entities": [
+        "Previous Version",
+        "Access"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Tagged",
+        "Get Access To A Previous Version"
+      ]
+    },
+    {
+      "identifier": "g14_44",
+      "text": "As a Consumer, I want to know full details of how the data package schema has changed, so that that I can adjust my scripts to handle it.",
+      "entities": [
+        "Data Package Schema",
+        "Detail"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Know Full Details The Data Package Schema How Has Changed"
+      ]
+    },
+    {
+      "identifier": "g14_45",
+      "text": "As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
+      "entities": [
+        "Datapackage"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Get A Sense Of The Age Of The Datapackage",
+        "That Downloaded"
+      ]
+    },
+    {
+      "identifier": "g14_46",
+      "text": "As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
+      "entities": [
+        "Datapackage",
+        "Particular Version"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "View A Datapackage At A Online Particular Version"
+      ]
+    },
+    {
+      "identifier": "g14_47",
+      "text": "As a Consumer, I want to download a Data package at a particular version, so that that I know it is compatible with my scripts and system.",
+      "entities": [
+        "Particular Version",
+        "Data Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Download A Data Package At A Particular Version"
+      ]
+    },
+    {
+      "identifier": "g14_48",
+      "text": "As a Consumer, I want to be notified of changes to a package I care about, so that that I can check out what has changed and take action.",
+      "entities": [
+        "Change",
+        "Package"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Care",
+        "Notified Of Changes To A Package"
+      ]
+    },
+    {
+      "identifier": "g14_49",
+      "text": "As a Consumer, I want to see how active the site is, so that I can decide if I should get involved.",
+      "entities": [
+        "Site"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "See The Site"
+      ]
+    },
+    {
+      "identifier": "g14_50",
+      "text": "As a Consumer, I want to browse and find publishers, so that that I can find interesting publishers and their packages.",
+      "entities": [
+        "Publisher"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Browse Publishers",
+        "Find Publishers"
+      ]
+    },
+    {
+      "identifier": "g14_51",
+      "text": "As a Consumer, I want to see a publisher's profile, so that that I can discover their packages and get a sense of how active and good they are.",
+      "entities": [
+        "Profile",
+        "Publisher"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "See A Publisher's Profile"
+      ]
+    },
+    {
+      "identifier": "g14_52",
+      "text": "As a Consumer, I want to view a publisher's profile, so that that I can see who is behind a particular package or to see what other packages they produce. ",
+      "entities": [
+        "Publisher",
+        "Profile"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "View A Publisher's Profile"
+      ]
+    },
+    {
+      "identifier": "g14_53",
+      "text": "As a Consumer, I want to search among all data packages owned by a publisher, so that that I can easily find one data package amongst all the data packages by this publisher.",
+      "entities": [
+        "Data Packages",
+        "Publisher"
+      ],
+      "personas": [
+        "Consumer"
+      ],
+      "actions": [
+        "Search Among All Data Packages A Publisher"
+      ]
+    },
+    {
+      "identifier": "g14_54",
+      "text": "As an Owner, I want to edit my profile, so that that it is updated with new information.",
+      "entities": [
+        "Profile"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Edit Profile"
+      ]
+    },
+    {
+      "identifier": "g14_55",
+      "text": "As an Owner, I want to invite an existing user, so that the user can become a member of my publisher.",
+      "entities": [
+        "Exist User"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Invite An Existing User"
+      ]
+    },
+    {
+      "identifier": "g14_56",
+      "text": "As an owner, I want to invite someone using their email to sign up and become a member of my Publisher, so that that they are authorized to publish data packages under my Publisher.",
+      "entities": [
+        "Email",
+        "Publisher"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Use Email",
+        "Sign Up A Member Of Publisher",
+        "Invite",
+        "Become A Member Of Publisher"
+      ]
+    },
+    {
+      "identifier": "g14_57",
+      "text": "As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.",
+      "entities": [
+        "Publisher",
+        "Membership"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Remove Someone From Membership In Publisher"
+      ]
+    },
+    {
+      "identifier": "g14_58",
+      "text": "As an owner, I want to view all the people in my organization and what roles they have, so that that I can change these if I want.",
+      "entities": [
+        "People",
+        "Organization",
+        "Role"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "View The People In Organization"
+      ]
+    },
+    {
+      "identifier": "g14_59",
+      "text": "As an owner, I want to make a user an owner, so that they have full control.",
+      "entities": [
+        "User"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Make A User"
+      ]
+    },
+    {
+      "identifier": "g14_60",
+      "text": "As an owner, I want to remove a user as an owner, so that they are just a member and no longer have full control.",
+      "entities": [
+        "Owner",
+        "User"
+      ],
+      "personas": [
+        "Owner"
+      ],
+      "actions": [
+        "Remove A User As An Owner"
+      ]
+    },
+    {
+      "identifier": "g14_61",
+      "text": "As an Admin, I want to set key configuration parameters for my site deployment, so that that I can change key information like the site title.",
+      "entities": [
+        "Site Deployment",
+        "Configuration Parameters"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Set Key Configuration Parameters For Site Deployment"
+      ]
+    },
+    {
+      "identifier": "g14_62",
+      "text": "As an Admin, I want to see key metrics about usage such as users, API usage, downloads, so that that I know how things are going.",
+      "entities": [
+        "Usage",
+        "Key Metric",
+        "Download",
+        "User",
+        "Api"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "See Key Metrics About Usage Such As Users",
+        "See Key Metrics About Usage Such As Api Usage",
+        "See Key Metrics About Usage Such As Download"
+      ]
+    },
+    {
+      "identifier": "g14_63",
+      "text": "As an Admin, I want to have a pricing plan and billing system, so that that I can charge users and make my platform sustainable.",
+      "entities": [
+        "Billing",
+        "Pricing System"
+      ],
+      "personas": [
+        "Admin"
+      ],
+      "actions": [
+        "Have Billing",
+        "Have A Plan Pricing System"
+      ]
+    },
+    {
+      "identifier": "g14_64",
+      "text": "As a Publisher, I want to know if this site has a pricing plan and what the prices are, so that that I can work out what this will cost me in the future and have a sense that these guys are sustainable. ",
+      "entities": [
+        "Price",
+        "Site"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Know",
+        "What The Prices Be"
+      ]
+    },
+    {
+      "identifier": "g14_65",
+      "text": "As a Publisher, I want to sign up for a given pricing plan, so that that I am entitled to what it allows.",
+      "entities": [
+        "Pricing Plan"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Sign Up For A Given Pricing Plan"
+      ]
+    },
+    {
+      "identifier": "g14_66",
+      "text": "As a Publisher, I want to have private data packages, so that I can share just with my team.",
+      "entities": [
+        "Data Packages"
+      ],
+      "personas": [
+        "Publisher"
+      ],
+      "actions": [
+        "Have Private Data Packages"
+      ]
+    }
+  ]
+}

@@ -77,7 +77,7 @@ def extract_text_file(path):
     stories (list): all the stories in the file
     '''
 
-    with open(path, "r") as file:
+    with open(path, "r", encoding="utf-8") as file:
         data = file.readlines()
 
     stories = []
