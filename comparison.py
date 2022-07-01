@@ -40,6 +40,16 @@ def main():
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data, stanza_pos_nlp)
     output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_folder_path, comparison_mode)
 
+
+    if comparison_mode == 1:
+        path = "dataset_names_list\\dataset_list_strict.txt"
+    elif comparison_mode == 2:
+        path = "dataset_names_list\\dataset_list_inclusion.txt"
+    else:
+        path = "dataset_names_list\\dataset_list_relaxed.txt"
+
+    save_dataset(path, save_name)
+
 def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data, stanza_pos_nlp):
     '''
     Runs all the functions that will compare and get the results of the comparison
@@ -232,7 +242,7 @@ def command():
     Returns:
         args.load_baseline_path (str): Path to the baseline evaluation file to be loaded
         args.load_nlp_tool_path (str): Path to the nlp tool evaluation file to be loaded
-        args.save_folder_name (str): Path to the file to be saved
+        save_folder_path (str): Path to the file to be saved
         args.comparison_mode (int): the comparison mode, where (1-strict, 2-inclusive, 3-relaxed)
         args.save_folder_name (str): name of file to save
 
@@ -1036,6 +1046,17 @@ def save_csv(saving_folder_path, dataset_results, comparison_mode):
     with open (saving_path, "a", newline = "") as file:
         writer = csv.writer(file)
         writer.writerow(data)
+
+def save_dataset(path, dataset_name):
+    '''
+    save the dataset name (will use the name of the save file name as the dataset name)
+
+    Parameters:
+    path (str): path to folder to save
+    dataset_name(str): name of dataset
+    '''
+    with open(path, "a") as file:
+        file.write(dataset_name + "\n")
 
 if __name__ == "__main__":
     main()

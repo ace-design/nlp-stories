@@ -8,17 +8,19 @@ import seaborn as sns
 import statistics
 import sys
 
-number_dataset = 9
 
 def main():
-    primary_path, all_path, saving_path, comparison_type = command()
-    primary_data = extract_data(primary_path)
-    all_data = extract_data(all_path)
+    primary_path, all_path, dataset_name_path, saving_path, comparison_type, number_dataset = command()
+    primary_data = extract_data(primary_path, number_dataset)
+    all_data = extract_data(all_path, number_dataset)
 
     primary_save_path = saving_path + "\\primary"
     all_save_path = saving_path + "\\all"
     os.mkdir(primary_save_path)
     os.mkdir(all_save_path)
+
+    with open(dataset_name_path) as file:
+        dataset_names = file.readlines()
 
     create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "m", primary_save_path + "\\primary_persona_scatter.png")
     create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "r", primary_save_path + "\\primary_entity_scatter.png")
@@ -27,12 +29,12 @@ def main():
     create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "r", all_save_path + "\\all_entity_scatter.png")
     create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "b", all_save_path + "\\all_action_scatter.png")
 
-    create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, primary_save_path + "\\primary_persona_bargraph.png")
-    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png")
-    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, primary_save_path + "\\primary_action_bargraph.png")
-    create_final_bargraph(all_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, all_save_path + "\\all_persona_bargraph.png")
-    create_final_bargraph(all_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, all_save_path + "\\all_entity_bargraph.png")
-    create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png")
+    create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, primary_save_path + "\\primary_persona_bargraph.png", dataset_names)
+    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png", dataset_names)
+    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, primary_save_path + "\\primary_action_bargraph.png", dataset_names)
+    create_final_bargraph(all_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, all_save_path + "\\all_persona_bargraph.png", dataset_names)
+    create_final_bargraph(all_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, all_save_path + "\\all_entity_bargraph.png", dataset_names)
+    create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png", dataset_names)
 
     primary_average = calculate_average(primary_data)
     primary_standard_deviation = calculate_standard_deviation(primary_data)
@@ -53,15 +55,13 @@ def command():
     '''
     Runs the command line inputs
 
-    Parameters:
+    Returns:
     args.load_primary_path (str): path of primary csv file
     args.load_all_path (str): path of all csv file
-    arfs.save_folder_name (str): name of folder to save
-
-    Returns:
-        args.load_primary_path (str): Path to the primary data csv file to be loaded
-        args.load_all_path (str): Path to the all data csv file to be loaded
-        args.save_folder_name (str): name of the folder to be saved
+    args.load_dataset_names (str): path of the dataset names in a txt file
+    args.save_folder_name (str): name of folder to save
+    comparison_type (str): the type of comparison used for the data
+    args.number_dataset (int): number of dataset expected
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -74,13 +74,19 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
     parser.add_argument("load_primary_path", type = str, help = "path of primary csv file")
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
+    parser.add_argument("load_dataset_names_path", type = str, help = "path of dataset's name in txt file")
     parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
+    parser.add_argument("number_dataset", type = int, help = "number of dataset expected")
     
     args = parser.parse_args()
 
     if not(args.load_primary_path.endswith(".csv")) or not(args.load_all_path.endswith(".csv")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. Save file type is .csv")
+
+    if not(args.load_dataset_names_path.endswith("txt")):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect input file type. Save file type is .txt")
 
     if not("primary" in args.load_primary_path) or not("all" in args.load_all_path):
         sys.tracebacklimit = 0
@@ -102,8 +108,10 @@ def command():
     try:
         load_file = open(args.load_primary_path)
         load_file.close()
-        load_all_file = open(args.load_all_path)
-        load_all_file.close()
+        load_file = open(args.load_all_path)
+        load_file.close()
+        load_file = open(args.load_dataset_names_path)
+        load_file.close()
         save_folder_path = "final_results\\individual_nlp_results\\" + saving_name
         os.mkdir(save_folder_path)
 
@@ -116,13 +124,14 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_primary_path, args.load_all_path, save_folder_path, comparison_type
-def extract_data (path):
+        return args.load_primary_path, args.load_all_path, args.load_dataset_names_path, save_folder_path, comparison_type, args.number_dataset
+def extract_data (path, number_dataset):
     '''
     extract the data from the csv file 
 
     Parameters:
     path (str): path to the file to extract data
+    number_dataset(int): number of datset results in the file
 
     Returns:
     data (3D list): persona, entity, action data of the precision, recall and f-measure of each dataset
@@ -172,24 +181,34 @@ def create_final_scatterplot(read_file, x_data, y_data, title, graph_color, save
     
     graph.savefig(save_path)
 
-def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data, title, save_path):
-    
+def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data, title, save_path, dataset_names):
+    '''
+    creates a bargraph based on the final results
+
+    Parameters:
+    read_file (str): the path of csv file with results
+    precision_data (str): column name in csv file with the precision data
+    recall_data (str): column name in csv file with the recall data
+    f_measure_data (str): column name in csv file with the f-measure data
+    title (str): the title for the graph
+    save_path (str): the path to save the graph image
+    dataset_names (list): the x label names for the datasets that corresponds to the data in the csv file
+    '''
     
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
     csv_data = pd.read_csv(read_file)
-    #x_label = list(range(1, number_dataset + 1))
-    x_label = ["g02", "g04", "g05", "g08", "g10","g12","g13","g14","g17"]
+    x_label = dataset_names
 
-    sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "m")
+    sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "m", ci = None)
     for p in precision_plot.patches:
         precision_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
 
-    sns.barplot(x=x_label, y=recall_data, data = csv_data, ax=recall_plot, color= "r")
+    sns.barplot(x=x_label, y=recall_data, data = csv_data, ax=recall_plot, color= "r",  ci = None)
     for p in recall_plot.patches:
         recall_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
 
-    sns.barplot(x=x_label, y=f_measure_data, data = csv_data, ax=f_measure_plot , color= "b")
+    sns.barplot(x=x_label, y=f_measure_data, data = csv_data, ax=f_measure_plot , color= "b", ci = None)
     for p in f_measure_plot.patches:
         f_measure_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
     

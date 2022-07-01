@@ -1,6 +1,7 @@
 #This script will compare all the final results of the nlp with each other
 import argparse
 import matplotlib.pyplot as plt
+from numpy import compare_chararrays
 import pandas as pd
 import seaborn as sns
 import sys
@@ -11,7 +12,15 @@ def main():
     fabian_data = extract_data(fabian_path, number_dataset)
     visual_narrator_data = extract_data(visual_narrator_path, number_dataset)
 
-    datasets_label = ["g02", "g03", "g04", "g05", "g08", "g10", "g11", "g12", "g13", "g14", "g16", "g17"]
+    if comparison_type == "Strict Comparison":
+        path = "dataset_names_list\\dataset_list_strict.txt"
+    elif comparison_type == "Inclusion Comparison":
+        path = "dataset_names_list\\dataset_list_inclusion.txt"
+    else:
+        path = "dataset_names_list\\dataset_list_relaxed.txt"
+
+    with open (path, "r") as file:
+        datasets_label = file.readlines()
 
     formatted_data = format_data(datasets_label, number_dataset, simple_data, fabian_data, visual_narrator_data)
 
@@ -169,21 +178,21 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     palette ={"simple": "y", "fabian": "c", "visual narrator": "b"}
 
 
-    precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette)
+    precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None)
     precision.set(xlabel=None)
     precision.set(ylabel= "Precision")
 
     for i in precision.containers:
         precision.bar_label(i)
 
-    recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette)
+    recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette, ci = None)
     recall.set(xlabel=None)
     recall.set(ylabel= "Recall")
 
     for i in recall.containers:
         recall.bar_label(i)
 
-    f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette)
+    f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette, ci = None)
     f_measure_plot.set_xlabel("Dataset")
     f_measure.set(ylabel= "F-Measure")
 
