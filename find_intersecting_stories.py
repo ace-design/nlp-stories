@@ -3,7 +3,6 @@ import argparse
 import copy
 import json
 import sys
-from turtle import left
 
 
 def main():
@@ -99,7 +98,7 @@ def extract_fabian (path):
     '''
     text = []
 
-    file = open(path)
+    file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     stories = data["stories"]
