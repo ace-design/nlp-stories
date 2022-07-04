@@ -1,7 +1,6 @@
 #This script will compare all the final results of the nlp with each other
 import argparse
 import matplotlib.pyplot as plt
-from numpy import compare_chararrays
 import pandas as pd
 import seaborn as sns
 import sys
@@ -35,16 +34,19 @@ def command():
     Runs the command line inputs
 
     Returns:
-    args.load_primary_path (str): Path to the primary data csv file to be loaded
-    args.load_all_path (str): Path to the all data csv file to be loaded
-    args.save_folder_name (str): name of the folder to be saved
+    args.load_simple_path (str): Path to the simple data csv file to be loaded
+    args.load_fabian_path (str): Path to the fabian data csv file to be loaded
+    args.load_visual_narrator_path (str): Path to the visual narrator data csv file to be loaded
+    args.save_file_name (str): name of the file to be saved
+    args.number_of_datasets (str): number of datasets that are the csv files
+
 
     Raises:
-        FileNotFoundError: raises excpetion
-        FileExistsError: raises exception
-        wrong file type: raises exception
-        not same comparison mode of both loading files: raises excpetion
-        wrong file order: raises exception
+    FileNotFoundError: raises excpetion
+    FileExistsError: raises exception
+    wrong file type: raises exception
+    not same comparison mode of both loading files: raises excpetion
+    wrong file order: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
     parser.add_argument("load_simple_path", type = str, help = "path of simple csv file")
@@ -72,6 +74,10 @@ def command():
         sys.tracebacklimit = 0 
         raise Exception("Incompatible combination. All files must be evaluated by same comparison mode")
 
+    if not("simple" in args.load_simple_path) or not("fabian" in args.load_fabian_path) or not("visual_narrator" in args.load_visual_narrator_path):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect order of input file. First file is simple, then Fabian, and then visual narrator")
+
     try:
         load_file = open(args.load_simple_path)
         load_file.close()
@@ -79,7 +85,7 @@ def command():
         load_file.close()
         load_file = open(args.load_visual_narrator_path)
         load_file.close()
-        save_file_path = "final_results\\comparing_all_nlp\\" + saving_name
+        save_file_path = "final_results\\comparing_all_nlp_datasets\\" + saving_name
 
     except FileNotFoundError:
         sys.tracebacklimit = 0
