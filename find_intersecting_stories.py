@@ -37,7 +37,7 @@ def command():
         FileNotFoundError: raises excpetion
         wrong file type: raises exception
     '''
-    parser = argparse.ArgumentParser(description = "This program is to get POS tags of the elements of the annotations")
+    parser = argparse.ArgumentParser(description = "This program is to find the intersecting stories that work on and is compatible all the nlp")
     parser.add_argument("load_raw_data_path", type = str, help = "path of raw data text file")
     parser.add_argument("load_fabian_path", type = str, help = "path of fabian results file")
     parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator valid text file")

@@ -48,7 +48,7 @@ def command():
     not same comparison mode of both loading files: raises excpetion
     wrong file order: raises exception
     '''
-    parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
+    parser = argparse.ArgumentParser(description = "This program will compare all the nlp results and output visulations of the results")
     parser.add_argument("load_simple_path", type = str, help = "path of simple csv file")
     parser.add_argument("load_fabian_path", type = str, help = "path of fabian csv file")
     parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator csv file")

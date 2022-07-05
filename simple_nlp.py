@@ -44,7 +44,7 @@ def command():
         wrong file type: raises exception
     '''
 
-    parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
+    parser = argparse.ArgumentParser(description = "This program is the most basic nlp tool that identifies entities and action based on a dictionary")
     parser.add_argument("load_path", type = str, help = "path of input dataset file to be annotated")
     parser.add_argument("save_name", type = str, help = "name of the saving file")
 

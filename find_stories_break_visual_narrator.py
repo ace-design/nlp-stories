@@ -27,7 +27,7 @@ def command():
         FileNotFoundError: raises excpetion
         wrong file type: raises exception
     '''
-    parser = argparse.ArgumentParser(description = "This program is to get POS tags of the elements of the annotations")
+    parser = argparse.ArgumentParser(description = "This program is to find the stories that causes an error in visual narrator")
     parser.add_argument("load_path", type = str, help = "path of input text file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
     

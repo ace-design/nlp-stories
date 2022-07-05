@@ -71,7 +71,7 @@ def command():
         wrong file order: raises exception
     '''
 
-    parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
+    parser = argparse.ArgumentParser(description = "This program is to visualize the final results of the nlp")
     parser.add_argument("load_primary_path", type = str, help = "path of primary csv file")
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
     parser.add_argument("load_dataset_names_path", type = str, help = "path of dataset's name in txt file")

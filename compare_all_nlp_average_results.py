@@ -1,23 +1,22 @@
 #This script will compare the average of the final results of each nlp tool 
 
 import argparse
-from calendar import c
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 import sys
 
 def main():
     simple_path, fabian_path, visual_narrator_path, saving_path, comparison_type = command()
     simple_data = extract_data(simple_path)
-    fabian_data = extract_data(fabian_path)
-    visual_narrator_data = extract_data(visual_narrator_path)
+    fabian_data= extract_data(fabian_path)
+    visual_narrator_data= extract_data(visual_narrator_path)
 
-    measurement = ["Persona Precision", "Persona Recall", "Persona F-Measure", "Entity Precision", "Entity Recall", "Entity F-Measure","Action Precision", "Action Recall", "Action F-Measure"]
+    persona_formatted_data, entity_formatted_data, action_formatted_data  = format_data(simple_data, fabian_data, visual_narrator_data)
 
-    formatted_data = format_data(simple_data, fabian_data, visual_narrator_data, measurement)
+    create_final_bargraph(persona_formatted_data, "Final Persona Average " + comparison_type, saving_path + "_persona_compare_average.png")
+    create_final_bargraph(entity_formatted_data, "Final Entity Average " + comparison_type, saving_path + "_entity_compare_average.png")
+    create_final_bargraph(action_formatted_data, "Final Action Average " + comparison_type, saving_path + "_action_compare_average.png")
 
-    create_final_bargraph(formatted_data, "Final Average " + comparison_type, saving_path + "_compare_average.png", simple_data, fabian_data, visual_narrator_data)
 
 def command():
     '''
@@ -36,7 +35,7 @@ def command():
     not same comparison mode of both loading files: raises excpetion
     wrong file order: raises exception
     '''
-    parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
+    parser = argparse.ArgumentParser(description = "This program will output a visulation of the average final results")
     parser.add_argument("load_simple_path", type = str, help = "path of simple csv file")
     parser.add_argument("load_fabian_path", type = str, help = "path of fabian csv file")
     parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
@@ -85,7 +84,7 @@ def command():
     else:
         return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type
 
-def extract_data (path):
+def extract_data(path):
     '''
     extract the data from the csv file 
 
@@ -105,7 +104,7 @@ def extract_data (path):
 
     return data
 
-def format_data(simple_data, fabian_data, visual_narrator_data, measurement):
+def format_data(simple_data, fabian_data, visual_narrator_data):
     '''
     formats the data so that it can be easily plotted onto the graphs
 
@@ -118,55 +117,33 @@ def format_data(simple_data, fabian_data, visual_narrator_data, measurement):
     Returns:
     formatted_data (list): contains the formatted data to plot for persona, entity, action's precision, recall, f_measure
     '''
-    number_measurement = 9
+    simple_average, simple_sd = simple_data
+    fabian_average, fabian_sd = fabian_data
+    visual_narrator_average, visual_narrator_sd = visual_narrator_data
 
-    rounded_simple_average = round_data(simple_data[0].values.tolist())
-    rounded_fabian_average = round_data(fabian_data[0].values.tolist())
-    rounded_visual_narrator_average = round_data(visual_narrator_data[0].values.tolist())
+    row_data = []
 
-    formatted_data = pd.DataFrame({ "Measurement": measurement*3, "Average": rounded_simple_average + rounded_fabian_average + rounded_visual_narrator_average,
-                            "Standard Deviation": simple_data[1].values.tolist() + fabian_data[1].values.tolist() + visual_narrator_data [1].values.tolist(),
-                            "nlp": ["simple"]*number_measurement + ["fabian"]*number_measurement + ["visual narrator"]*number_measurement})
+    for i in range(9):
+        row_data.append([simple_average[i], fabian_average[i], visual_narrator_average[i], simple_sd[i], fabian_sd[i], visual_narrator_sd[i]])
 
-    return formatted_data
+    persona_data = pd.DataFrame([row_data[0],row_data[1],row_data[2]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Persona Precision", "Persona Recall", "Persona F-Measure"])
+    entity_data = pd.DataFrame([row_data[3],row_data[4],row_data[5]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Entity Precision", "Entity Recall", "Entity F-Measure"])
+    action_data = pd.DataFrame([row_data[6],row_data[7],row_data[8]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Action Precision", "Action Recall", "Action F-Measure"])
 
-def round_data(data):
-    '''
-    will round each element in list to nearest 2 decimaal
+    return persona_data, entity_data, action_data
 
-    Parameters:
-    data (list): elements to rounded
+def create_final_bargraph(data, title, saving_path):
+    yerr = data[["Simple SD","Fabian SD","VN SD"]].to_numpy().T
 
-    Returns:
-    rounded(list): rounded elements of data
-    '''
-    rounded = []
-
-    for num in data:
-        rounded.append(round(num, 2))
-
-    return rounded
-
-def create_final_bargraph(formatted_data, title, save_path, a, b, c):
-
-    palette ={"simple": "y", "fabian": "c", "visual narrator": "b"}
-
-    sns.set(rc = {'figure.figsize':(17,8)})
-    
-    
-    bargraph = sns.barplot(x= "Measurement", y= "Average", hue = "nlp",data = formatted_data, palette = palette)
-    bargraph.set(xlabel= "Measurement Calculation")
-    bargraph.set(ylabel= "Average Score")
-
-    for i in bargraph.containers:
-        bargraph.bar_label(i)
-
-    bargraph.set(ylim=(0, 1.1))
-
-    bargraph.set_title(title, fontsize = 16)
-    bargraph.legend(bbox_to_anchor=(1.12, 0.5), borderaxespad=0)
-
-    bargraph.figure.savefig(save_path)
+    data[["Simple Average", "Fabian Average","VN Average"]].plot(kind='bar', yerr=yerr, alpha=0.5, error_kw=dict(ecolor='k'), figsize=(17,7))
+    plt.title(title,fontsize= 20)
+    plt.ylabel("Average Score",fontsize=14)
+    plt.xlabel("Measurement Type", fontsize=14)
+    plt.ylim([0, 1.1])
+    plt.legend(loc=(1.005,0.5))
+    plt.xticks(rotation = 0)
+    plt.tight_layout()
+    plt.savefig(saving_path)
 
 if __name__ == "__main__":
     main()

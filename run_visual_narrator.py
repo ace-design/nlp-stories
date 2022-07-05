@@ -36,7 +36,7 @@ def extract_visual_Narrator():
 
     '''
     
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description = "This script is to run visual narrator on the given input datset")
     parser.add_argument("load_path", type = str, help = "path to file of evaluation")
     parser.add_argument("save_name", type = str, help = "name of file to save")
     args = parser.parse_args()
