@@ -11,11 +11,11 @@ def main():
     fabian_data= extract_data(fabian_path)
     visual_narrator_data= extract_data(visual_narrator_path)
 
-    persona_formatted_data, entity_formatted_data, action_formatted_data  = format_data(simple_data, fabian_data, visual_narrator_data)
+    precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(simple_data, fabian_data, visual_narrator_data)
 
-    create_final_bargraph(persona_formatted_data, "Final Persona Average " + comparison_type, saving_path + "_persona_compare_average.png")
-    create_final_bargraph(entity_formatted_data, "Final Entity Average " + comparison_type, saving_path + "_entity_compare_average.png")
-    create_final_bargraph(action_formatted_data, "Final Action Average " + comparison_type, saving_path + "_action_compare_average.png")
+    create_final_bargraph(precision_formatted_data, "Final Precision Average " + comparison_type, saving_path + "_precison_compare_average.png")
+    create_final_bargraph(recall_formatted_data, "Final Recall Average " + comparison_type, saving_path + "_recakk_compare_average.png")
+    create_final_bargraph(f_measure_formatted_data, "Final F-Measure Average " + comparison_type, saving_path + "_f_measure_compare_average.png")
 
 
 def command():
@@ -126,9 +126,9 @@ def format_data(simple_data, fabian_data, visual_narrator_data):
     for i in range(9):
         row_data.append([simple_average[i], fabian_average[i], visual_narrator_average[i], simple_sd[i], fabian_sd[i], visual_narrator_sd[i]])
 
-    persona_data = pd.DataFrame([row_data[0],row_data[1],row_data[2]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Persona Precision", "Persona Recall", "Persona F-Measure"])
-    entity_data = pd.DataFrame([row_data[3],row_data[4],row_data[5]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Entity Precision", "Entity Recall", "Entity F-Measure"])
-    action_data = pd.DataFrame([row_data[6],row_data[7],row_data[8]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Action Precision", "Action Recall", "Action F-Measure"])
+    persona_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+    entity_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+    action_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple Average", "Fabian Average","VN Average", "Simple SD","Fabian SD","VN SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
 
     return persona_data, entity_data, action_data
 
