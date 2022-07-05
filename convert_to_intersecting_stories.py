@@ -1,12 +1,15 @@
 #This script will convert nlp_outputs to only include the stories that were identified to be intersecting
 import argparse
+import json
 import sys
 
 
 def main():
     nlp_results_path, intersecting_path, save_file_path = command()
 
+    intersecting_data = get_intersecting_data(nlp_results_path, intersecting_path)
 
+    save_results(intersecting_data, save_file_path)
 
 
 def command():
@@ -30,7 +33,9 @@ def command():
     args = parser.parse_args()
 
     try:
-        load_file = open(args.load_path)
+        load_file = open(args.load_nlp_output_path)
+        load_file.close()
+        load_file = open(args.load_intersecting_path)
         load_file.close()
     except FileNotFoundError:
         sys.tracebacklimit = 0
@@ -47,6 +52,59 @@ def command():
             save_file_path = "nlp_outputs_intersecting\\fabian\\" + args.save_name + "_intersecting.json"
         
         return args.load_nlp_output_path, args.load_intersecting_path, save_file_path
+
+def get_intersecting_data(nlp_results_path, intersecting_path):
+    '''
+    will get the results of the stories that were indentifies as intersecting. 
+
+    Parameters:
+    nlp_results_path (str): path to the file that contains the nlp annotated results
+    intersecting_path (str): path to the file that contains the stories that are intersecting
+
+    Returns:
+    intersecting_data (list): the annotations results of only the intersecting stories
+    '''
+
+    intersecting_text = []
+    intersecting_data = []
+    passed_text = []
+
+    
+    nlp_file = open(nlp_results_path, encoding= "utf-8")
+    nlp_data = json.load(nlp_file) 
+    nlp_file.close()
+
+    with open(intersecting_path, encoding= "utf-8") as intersecting_file:
+        read_data = intersecting_file.readlines()
+
+    for story in read_data:
+        intersecting_text.append(story.strip(" \n\t"))
+
+    for i in range(len(nlp_data)):
+        nlp_text = nlp_data[i]["Text"].strip(" \n\t") 
+        if nlp_text in intersecting_text:
+                intersecting_data.append(nlp_data[i])
+                passed_text.append(nlp_text)
+
+    if len(intersecting_text) != len(intersecting_data):
+        print("ERROR: THERE ARE MISSING DATA IN THE FILE.\n")
+        difference = list(set(intersecting_text) - set(passed_text))
+        print(difference)
+
+    return intersecting_data
+    
+def save_results(intersecting_data, save_file_path):
+    '''
+    save the intersecting stories results
+
+    Parameters:
+    intersecting_data (list): the annotations results of only the intersecting stories
+    save_file_path (str): path to save the file
+    '''
+    with open(save_file_path,"w", encoding="utf-8") as file:
+        json.dump(intersecting_data, file, ensure_ascii=False, indent = 4)
+    print("File is saved")
+
 
 if __name__ == "__main__":
     main()

@@ -211,7 +211,7 @@ def save_results(save_name, final_results):
     final_results (dictionary): contains the annotations of each story from this simple nlp
     '''
 
-    save_file_name =  "nlp_outputs\\basic_nlp\\" + save_name + "_simple_nlp.json"
+    save_file_name =  "nlp_outputs\\simple_nlp\\" + save_name + "_simple_nlp.json"
 
     json.dumps(final_results)
     with open(save_file_name,"w", encoding="utf-8") as file:

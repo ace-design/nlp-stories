@@ -111,7 +111,7 @@ def save_results(output_data, save_name):
     save_name (str): name of the file to be saved 
     '''
 
-    save_path = "nlp_outputs\\fabian\\" + save_name + ".json"
+    save_path = "nlp_outputs\\fabian\\" + save_name + "_fabian.json"
 
     json.dumps(output_data)
     with open(save_path,"w", encoding="utf-8") as file:
