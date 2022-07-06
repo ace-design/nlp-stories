@@ -334,7 +334,7 @@ def extract_primary_baseline_info(path):
     primary_entity_pos = []
     primary_action_pos = []
 
-    file = open(path)
+    file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     for story in data:
@@ -372,7 +372,7 @@ def extract_all_baseline_info(path):
     action_pos = []
  
 
-    file = open(path)
+    file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     for story in data:
@@ -440,7 +440,7 @@ def extract_nlp_tool_info(path):
     entity = []
     action = []
 
-    file = open(path)
+    file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     for story in data:
