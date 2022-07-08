@@ -14,7 +14,7 @@ def main():
     precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(simple_data, fabian_data, visual_narrator_data)
 
     create_final_bargraph(precision_formatted_data, "Final Precision Average " + comparison_type, saving_path + "_precison_compare_average.png")
-    create_final_bargraph(recall_formatted_data, "Final Recall Average " + comparison_type, saving_path + "_recakk_compare_average.png")
+    create_final_bargraph(recall_formatted_data, "Final Recall Average " + comparison_type, saving_path + "_recall_compare_average.png")
     create_final_bargraph(f_measure_formatted_data, "Final F-Measure Average " + comparison_type, saving_path + "_f_measure_compare_average.png")
 
 

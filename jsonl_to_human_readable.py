@@ -80,6 +80,7 @@ def extract(path):
         relations (2D list): relations and their location within the story
     '''
     print(path)
+    
     text = []
     entities = []
     relations = [] 
