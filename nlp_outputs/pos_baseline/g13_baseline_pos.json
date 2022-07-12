@@ -4433,7 +4433,7 @@
             "Secondary Action": [
                 "know",
                 "already given",
-                "still waiting for"
+                "still waiting"
             ]
         },
         "Entity": {
@@ -4472,7 +4472,7 @@
                 "who"
             ],
             [
-                "still waiting for",
+                "still waiting",
                 "who"
             ]
         ],
@@ -4524,8 +4524,7 @@
                     ],
                     [
                         "ADV",
-                        "VERB",
-                        "ADP"
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -4538,8 +4537,7 @@
                     ],
                     [
                         "still",
-                        "waiting",
-                        "for"
+                        "waiting"
                     ]
                 ]
             }
@@ -4599,7 +4597,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "shown"
+                "be shown"
             ],
             "Secondary Action": [
                 "be sure",
@@ -4614,7 +4612,6 @@
                 "all estimators",
                 "estimate",
                 "estimates",
-                "independent",
                 "estimates",
                 "same draw"
             ]
@@ -4623,21 +4620,17 @@
         "Triggers": [
             [
                 "participant",
-                "shown"
+                "be shown"
             ]
         ],
         "Targets": [
             [
-                "shown",
-                "all estimates"
-            ],
-            [
-                "be sure",
-                "independent"
-            ],
-            [
                 "given",
                 "estimate"
+            ],
+            [
+                "be shown",
+                "all estimates"
             ]
         ],
         "Contains": [
@@ -4666,11 +4659,13 @@
             "Primary Action POS": {
                 "Primary Action POS tag": [
                     [
+                        "AUX",
                         "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
+                        "be",
                         "shown"
                     ]
                 ]
@@ -4724,9 +4719,6 @@
                         "NOUN"
                     ],
                     [
-                        "ADJ"
-                    ],
-                    [
                         "NOUN"
                     ],
                     [
@@ -4744,9 +4736,6 @@
                     ],
                     [
                         "estimates"
-                    ],
-                    [
-                        "independent"
                     ],
                     [
                         "estimates"

@@ -2206,10 +2206,11 @@
         },
         "Entity": {
             "Primary Entity": [
-                "provenance of the page"
+                "provenance"
             ],
             "Secondary Entity": [
-                "search results"
+                "search results",
+                "page"
             ]
         },
         "Benefit": "",
@@ -2222,13 +2223,17 @@
         "Targets": [
             [
                 "see",
-                "provenance of the page"
+                "provenance"
             ]
         ],
         "Contains": [
             [
+                "page",
+                "provenance"
+            ],
+            [
                 "search results",
-                "provenance of the page"
+                "provenance"
             ]
         ]
     },
@@ -4205,6 +4210,10 @@
             [
                 "data",
                 "association"
+            ],
+            [
+                "File B",
+                "analysis"
             ]
         ]
     },
@@ -4390,7 +4399,8 @@
             "Secondary Entity": [
                 "inputs",
                 "experiment",
-                "provenance of the results"
+                "provenance",
+                "results"
             ]
         },
         "Benefit": "the provenance of the results can be verified",
@@ -4411,13 +4421,17 @@
             ],
             [
                 "verified",
-                "provenance of the results"
+                "provenance"
             ]
         ],
         "Contains": [
             [
                 "experiment",
                 "inputs"
+            ],
+            [
+                "results",
+                "provenance"
             ]
         ]
     },

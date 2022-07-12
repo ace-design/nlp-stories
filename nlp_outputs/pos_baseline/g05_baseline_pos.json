@@ -2195,8 +2195,7 @@
                 "download"
             ],
             "Secondary Action": [
-                "use",
-                "viewing"
+                "use"
             ]
         },
         "Entity": {
@@ -2225,23 +2224,19 @@
             [
                 "use",
                 "data"
-            ],
-            [
-                "viewing",
-                "any visualisation"
             ]
         ],
         "Contains": [
-            [
-                "CSV",
-                "data"
-            ],
             [
                 "other tools",
                 "data"
             ],
             [
                 "any visualisation",
+                "data"
+            ],
+            [
+                "CSV",
                 "data"
             ]
         ],
@@ -2278,17 +2273,11 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "NOUN"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "use"
-                    ],
-                    [
-                        "viewing"
                     ]
                 ]
             }
@@ -2888,7 +2877,8 @@
             ],
             "Secondary Action": [
                 "sharing",
-                "provide"
+                "provide",
+                "support"
             ]
         },
         "Entity": {
@@ -2922,6 +2912,10 @@
             [
                 "sharing",
                 "data"
+            ],
+            [
+                "support",
+                "image"
             ]
         ],
         "Contains": [
@@ -2974,6 +2968,9 @@
                     ],
                     [
                         "VERB"
+                    ],
+                    [
+                        "NOUN"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -2982,6 +2979,9 @@
                     ],
                     [
                         "provide"
+                    ],
+                    [
+                        "support"
                     ]
                 ]
             }
@@ -4246,7 +4246,8 @@
                 "get"
             ],
             "Secondary Action": [
-                "use"
+                "use",
+                "read"
             ]
         },
         "Entity": {
@@ -4275,16 +4276,20 @@
             [
                 "use",
                 "work"
+            ],
+            [
+                "read",
+                "CSV"
             ]
         ],
         "Contains": [
             [
-                "CSV output",
-                "any cube-based query"
-            ],
-            [
                 "work",
                 "tools"
+            ],
+            [
+                "any cube-based query",
+                "CSV output"
             ]
         ],
         "Persona POS": {
@@ -4318,11 +4323,17 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "use"
+                    ],
+                    [
+                        "read"
                     ]
                 ]
             }

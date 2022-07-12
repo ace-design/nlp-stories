@@ -655,9 +655,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "USAspending"
+                ""
             ],
             "Secondary Entity": [
+                "USAspending",
                 "grant records",
                 "system"
             ]
@@ -673,10 +674,6 @@
             [
                 "only send",
                 "grant records"
-            ],
-            [
-                "be sure",
-                "USAspending"
             ]
         ],
         "Contains": [
@@ -1353,7 +1350,7 @@
                 "ensure"
             ],
             "Secondary Action": [
-                "not included"
+                ""
             ]
         },
         "Entity": {
@@ -1372,12 +1369,7 @@
                 "ensure"
             ]
         ],
-        "Targets": [
-            [
-                "not included",
-                "submissions"
-            ]
-        ],
+        "Targets": [],
         "Contains": []
     },
     {
@@ -1491,7 +1483,6 @@
                 "ensure"
             ],
             "Secondary Action": [
-                "don't create",
                 "correct",
                 "delete"
             ]
@@ -1514,10 +1505,6 @@
             ]
         ],
         "Targets": [
-            [
-                "don't create",
-                "new published data"
-            ],
             [
                 "correct",
                 "non-existent records"
@@ -3503,7 +3490,7 @@
                 "provide"
             ],
             "Secondary Action": [
-                "function under"
+                ""
             ]
         },
         "Entity": {
@@ -3525,13 +3512,14 @@
             [
                 "provide",
                 "FABS groups"
-            ],
-            [
-                "function under",
-                "FREC paradigm"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "FABS groups",
+                "FREC paradigm"
+            ]
+        ]
     },
     {
         "PID": "#G02#",
@@ -3676,8 +3664,8 @@
                 "more information"
             ],
             "Secondary Entity": [
-                "publish",
-                "how many rows"
+                "how many rows",
+                "whether to publish"
             ]
         },
         "Benefit": "",
@@ -3698,7 +3686,7 @@
             ],
             [
                 "deciding",
-                "publish"
+                "whether to publish"
             ]
         ],
         "Contains": [
@@ -3829,7 +3817,6 @@
             ],
             "Secondary Action": [
                 "fix",
-                "accurately reflect",
                 "provide"
             ]
         },
@@ -3858,10 +3845,6 @@
             [
                 "fix",
                 "submission"
-            ],
-            [
-                "accurately reflect",
-                "logic"
             ],
             [
                 "provide",

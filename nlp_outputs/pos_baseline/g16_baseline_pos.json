@@ -282,7 +282,8 @@
         },
         "Entity": {
             "Primary Entity": [
-                "who"
+                "who",
+                "who is financially responsible"
             ],
             "Secondary Entity": [
                 "each item",
@@ -292,8 +293,7 @@
                 "phone",
                 "email",
                 "title",
-                "address",
-                "who"
+                "address"
             ]
         },
         "Benefit": "",
@@ -310,7 +310,7 @@
             ],
             [
                 "track",
-                "who"
+                "who is financially responsible"
             ]
         ],
         "Contains": [
@@ -380,11 +380,23 @@
                 "Primary Entity POS tag": [
                     [
                         "PRON"
+                    ],
+                    [
+                        "PRON",
+                        "AUX",
+                        "ADV",
+                        "ADJ"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
                         "who"
+                    ],
+                    [
+                        "who",
+                        "is",
+                        "financially",
+                        "responsible"
                     ]
                 ]
             },
@@ -415,9 +427,6 @@
                     ],
                     [
                         "NOUN"
-                    ],
-                    [
-                        "PRON"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -446,9 +455,6 @@
                     ],
                     [
                         "address"
-                    ],
-                    [
-                        "who"
                     ]
                 ]
             }
@@ -6724,7 +6730,7 @@
                 "canonically identify"
             ],
             "Secondary Action": [
-                "easier to view"
+                "view"
             ]
         },
         "Entity": {
@@ -6752,12 +6758,12 @@
                 "creators"
             ],
             [
-                "easier to view",
-                "all of the works"
-            ],
-            [
                 "canonically identify",
                 "authors"
+            ],
+            [
+                "view",
+                "all of the works"
             ]
         ],
         "Contains": [
@@ -6814,15 +6820,11 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "ADJ",
-                        "PART",
-                        "VERB"
+                        "NOUN"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "easier",
-                        "to",
                         "view"
                     ]
                 ]

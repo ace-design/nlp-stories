@@ -785,7 +785,7 @@
             ],
             "Secondary Action": [
                 "access",
-                "remember"
+                "mention"
             ]
         },
         "Entity": {
@@ -793,10 +793,9 @@
                 "old news"
             ],
             "Secondary Entity": [
-                "things",
-                "past",
                 "others",
-                "home page"
+                "home page",
+                "things I remember"
             ]
         },
         "Benefit": "I can access things I remember from the past or that others mention to me",
@@ -813,19 +812,10 @@
             ],
             [
                 "access",
-                "things"
-            ],
-            [
-                "remember",
-                "past"
+                "things I remember"
             ]
         ],
-        "Contains": [
-            [
-                "past",
-                "things"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G10#",
@@ -1243,9 +1233,7 @@
                 "create"
             ],
             "Secondary Action": [
-                "don't list",
-                "charged",
-                "don't really intend to hold"
+                "charged"
             ]
         },
         "Entity": {
@@ -1278,14 +1266,6 @@
             [
                 "charged",
                 "listing fee"
-            ],
-            [
-                "don't list",
-                "events"
-            ],
-            [
-                "don't really intend to hold",
-                "events"
             ]
         ],
         "Contains": [
@@ -1306,7 +1286,6 @@
                 "create"
             ],
             "Secondary Action": [
-                "not charged",
                 "doesn't charge"
             ]
         },
@@ -1336,10 +1315,6 @@
             [
                 "create",
                 "Event"
-            ],
-            [
-                "not charged",
-                "listing fee"
             ],
             [
                 "doesn't charge",
@@ -1585,7 +1560,7 @@
                 "event"
             ],
             "Secondary Entity": [
-                "things that will no longer occu"
+                "things"
             ]
         },
         "Benefit": "I can remove things that will no longer occur",
@@ -1601,12 +1576,12 @@
                 "any course"
             ],
             [
-                "remove",
-                "things that will no longer occu"
-            ],
-            [
                 "delete",
                 "event"
+            ],
+            [
+                "remove",
+                "things"
             ]
         ],
         "Contains": []
@@ -2481,8 +2456,7 @@
                 "stop publishing"
             ],
             "Secondary Action": [
-                "delete",
-                "aren't still listed"
+                "delete"
             ]
         },
         "Entity": {
@@ -2493,8 +2467,8 @@
                 "site",
                 "hiring party",
                 "ad",
-                "obs that may have been filled",
-                "30 days"
+                "30 days",
+                "jobs"
             ]
         },
         "Benefit": "jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad",
@@ -2505,10 +2479,6 @@
             ]
         ],
         "Targets": [
-            [
-                "aren't still listed",
-                "obs that may have been filled"
-            ],
             [
                 "stop publishing",
                 "jobs"
@@ -2919,12 +2889,12 @@
                 "designate"
             ],
             "Secondary Action": [
-                "featured most prominently"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                ""
+                "whether"
             ],
             "Secondary Entity": [
                 "home page",
@@ -2940,8 +2910,8 @@
         ],
         "Targets": [
             [
-                "featured most prominently",
-                "best content"
+                "designate",
+                "whether"
             ]
         ],
         "Contains": []
@@ -3053,13 +3023,13 @@
                 "indicate"
             ],
             "Secondary Action": [
-                "incentivized to become"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "article is publicly available",
-                "for members only"
+                "members only",
+                "article"
             ],
             "Secondary Entity": [
                 "visitors",
@@ -3076,15 +3046,11 @@
         "Targets": [
             [
                 "indicate",
-                "article is publicly available"
+                "members only"
             ],
             [
                 "indicate",
-                "for members only"
-            ],
-            [
-                "incentivized to become",
-                "members"
+                "article"
             ]
         ],
         "Contains": []
@@ -3571,8 +3537,7 @@
                 "have"
             ],
             "Secondary Action": [
-                "come",
-                "easy to get to"
+                "come"
             ]
         },
         "Entity": {
@@ -3599,10 +3564,6 @@
             ],
             [
                 "have",
-                "articles that interest me"
-            ],
-            [
-                "easy to get to",
                 "articles that interest me"
             ]
         ],
@@ -3831,8 +3792,8 @@
                 "be assured"
             ],
             "Secondary Action": [
-                "no one can submit",
-                "skew"
+                "skew",
+                "submit"
             ]
         },
         "Entity": {
@@ -3843,7 +3804,7 @@
                 "ratings",
                 "same answers",
                 "results",
-                "multiple time"
+                "no one"
             ]
         },
         "Benefit": "my ratings are accurate",
@@ -3855,12 +3816,12 @@
         ],
         "Targets": [
             [
-                "no one can submit",
-                "same answers"
-            ],
-            [
                 "skew",
                 "results"
+            ],
+            [
+                "submit",
+                "same answers"
             ]
         ],
         "Contains": []

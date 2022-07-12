@@ -3324,12 +3324,7 @@
                 "Elasticsearch integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Elasticsearch"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -3456,12 +3451,7 @@
                 "SPSS integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "SPSS"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -3588,12 +3578,7 @@
                 "EPrints integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "EPrints"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -3720,12 +3705,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Mongo"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -3852,12 +3832,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "DAT"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -4504,10 +4479,6 @@
             [
                 "reference",
                 "remote-controlled vocabulary"
-            ],
-            [
-                "be sure",
-                "column"
             ]
         ],
         "Contains": [
@@ -4660,12 +4631,7 @@
                 "DSpace integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Dspace"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -4792,12 +4758,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Feather"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -4924,12 +4885,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "HDF5"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -6899,10 +6855,6 @@
         ],
         "Contains": [
             [
-                "online service",
-                "data repository"
-            ],
-            [
                 "third party",
                 "data validation"
             ]
@@ -7018,33 +6970,31 @@
         ],
         "Action": {
             "Primary Action": [
-                "make it easy to prove"
+                "make it easy"
             ],
             "Secondary Action": [
                 "claim",
-                "living up to"
+                "living up to",
+                "prove"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "published data is valid"
+                ""
             ],
             "Secondary Entity": [
-                "transparency commitments"
+                "transparency commitments",
+                "published data"
             ]
         },
         "Benefit": "I can claim that we are living up to our transparency commitments",
         "Triggers": [
             [
                 "government Publisher",
-                "make it easy to prove"
+                "make it easy"
             ]
         ],
         "Targets": [
-            [
-                "make it easy to prove",
-                "published data is valid"
-            ],
             [
                 "claim",
                 "transparency commitments"
@@ -7052,6 +7002,10 @@
             [
                 "living up to",
                 "transparency commitments"
+            ],
+            [
+                "prove",
+                "published data"
             ]
         ],
         "Contains": [],
@@ -7075,18 +7029,14 @@
                     [
                         "VERB",
                         "PRON",
-                        "ADJ",
-                        "PART",
-                        "VERB"
+                        "ADJ"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
                         "make",
                         "it",
-                        "easy",
-                        "to",
-                        "prove"
+                        "easy"
                     ]
                 ]
             },
@@ -7099,6 +7049,9 @@
                         "VERB",
                         "ADP",
                         "ADP"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -7109,6 +7062,9 @@
                         "living",
                         "up",
                         "to"
+                    ],
+                    [
+                        "prove"
                     ]
                 ]
             }
@@ -7116,20 +7072,10 @@
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    [
-                        "VERB",
-                        "NOUN",
-                        "AUX",
-                        "ADJ"
-                    ]
+                    []
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "published",
-                        "data",
-                        "is",
-                        "valid"
-                    ]
+                    []
                 ]
             },
             "Secondary Entity POS": {
@@ -7137,12 +7083,20 @@
                     [
                         "NOUN",
                         "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
                         "transparency",
                         "commitments"
+                    ],
+                    [
+                        "published",
+                        "data"
                     ]
                 ]
             }
@@ -7160,7 +7114,7 @@
             ],
             "Secondary Action": [
                 "make sure",
-                "living up"
+                "living up to"
             ]
         },
         "Entity": {
@@ -7186,7 +7140,7 @@
                 "quality of data"
             ],
             [
-                "living up",
+                "living up to",
                 "transparency commitments"
             ]
         ],
@@ -7241,6 +7195,7 @@
                     ],
                     [
                         "VERB",
+                        "ADP",
                         "ADP"
                     ]
                 ],
@@ -7251,7 +7206,8 @@
                     ],
                     [
                         "living",
-                        "up"
+                        "up",
+                        "to"
                     ]
                 ]
             }
@@ -8661,7 +8617,8 @@
             ],
             "Secondary Action": [
                 "use",
-                "clean"
+                "clean",
+                "generates"
             ]
         },
         "Entity": {
@@ -8693,14 +8650,13 @@
             [
                 "clean",
                 "messy data"
-            ]
-        ],
-        "Contains": [
+            ],
             [
-                "Tabular Data Package",
+                "generates",
                 "OpenRefine reconciliation API endpoint"
             ]
         ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -8733,6 +8689,9 @@
                     ],
                     [
                         "ADJ"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -8741,6 +8700,9 @@
                     ],
                     [
                         "clean"
+                    ],
+                    [
+                        "generates"
                     ]
                 ]
             }
@@ -9037,7 +8999,7 @@
         ],
         "Contains": [
             [
-                "app",
+                "packaging data",
                 "match-making service"
             ]
         ],

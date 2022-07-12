@@ -1306,12 +1306,7 @@
                 "Elasticsearch integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Elasticsearch"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1354,12 +1349,7 @@
                 "SPSS integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "SPSS"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1402,12 +1392,7 @@
                 "EPrints integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "EPrints"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1450,12 +1435,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Mongo"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1498,12 +1478,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "DAT"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1734,10 +1709,6 @@
             [
                 "reference",
                 "remote-controlled vocabulary"
-            ],
-            [
-                "be sure",
-                "column"
             ]
         ],
         "Contains": [
@@ -1792,12 +1763,7 @@
                 "DSpace integration"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Dspace"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1840,12 +1806,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "Feather"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -1888,12 +1849,7 @@
                 "data-packaged data"
             ]
         ],
-        "Contains": [
-            [
-                "pipelines",
-                "HDF5"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -2649,10 +2605,6 @@
         ],
         "Contains": [
             [
-                "online service",
-                "data repository"
-            ],
-            [
                 "third party",
                 "data validation"
             ]
@@ -2666,33 +2618,31 @@
         ],
         "Action": {
             "Primary Action": [
-                "make it easy to prove"
+                "make it easy"
             ],
             "Secondary Action": [
                 "claim",
-                "living up to"
+                "living up to",
+                "prove"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "published data is valid"
+                ""
             ],
             "Secondary Entity": [
-                "transparency commitments"
+                "transparency commitments",
+                "published data"
             ]
         },
         "Benefit": "I can claim that we are living up to our transparency commitments",
         "Triggers": [
             [
                 "government Publisher",
-                "make it easy to prove"
+                "make it easy"
             ]
         ],
         "Targets": [
-            [
-                "make it easy to prove",
-                "published data is valid"
-            ],
             [
                 "claim",
                 "transparency commitments"
@@ -2700,6 +2650,10 @@
             [
                 "living up to",
                 "transparency commitments"
+            ],
+            [
+                "prove",
+                "published data"
             ]
         ],
         "Contains": []
@@ -2716,7 +2670,7 @@
             ],
             "Secondary Action": [
                 "make sure",
-                "living up"
+                "living up to"
             ]
         },
         "Entity": {
@@ -2742,7 +2696,7 @@
                 "quality of data"
             ],
             [
-                "living up",
+                "living up to",
                 "transparency commitments"
             ]
         ],
@@ -3283,7 +3237,8 @@
             ],
             "Secondary Action": [
                 "use",
-                "clean"
+                "clean",
+                "generates"
             ]
         },
         "Entity": {
@@ -3315,14 +3270,13 @@
             [
                 "clean",
                 "messy data"
-            ]
-        ],
-        "Contains": [
+            ],
             [
-                "Tabular Data Package",
+                "generates",
                 "OpenRefine reconciliation API endpoint"
             ]
-        ]
+        ],
+        "Contains": []
     },
     {
         "PID": "#G08#",
@@ -3445,7 +3399,7 @@
         ],
         "Contains": [
             [
-                "app",
+                "packaging data",
                 "match-making service"
             ]
         ]

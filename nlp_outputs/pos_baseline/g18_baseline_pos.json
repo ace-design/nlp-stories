@@ -5776,10 +5776,11 @@
         },
         "Entity": {
             "Primary Entity": [
-                "provenance of the page"
+                "provenance"
             ],
             "Secondary Entity": [
-                "search results"
+                "search results",
+                "page"
             ]
         },
         "Benefit": "",
@@ -5792,13 +5793,17 @@
         "Targets": [
             [
                 "see",
-                "provenance of the page"
+                "provenance"
             ]
         ],
         "Contains": [
             [
+                "page",
+                "provenance"
+            ],
+            [
                 "search results",
-                "provenance of the page"
+                "provenance"
             ]
         ],
         "Persona POS": {
@@ -5839,18 +5844,12 @@
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
                     [
-                        "NOUN",
-                        "ADP",
-                        "DET",
                         "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "provenance",
-                        "of",
-                        "the",
-                        "page"
+                        "provenance"
                     ]
                 ]
             },
@@ -5859,12 +5858,18 @@
                     [
                         "VERB",
                         "NOUN"
+                    ],
+                    [
+                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
                         "search",
                         "results"
+                    ],
+                    [
+                        "page"
                     ]
                 ]
             }
@@ -10949,6 +10954,10 @@
             [
                 "data",
                 "association"
+            ],
+            [
+                "File B",
+                "analysis"
             ]
         ],
         "Persona POS": {
@@ -11520,7 +11529,8 @@
             "Secondary Entity": [
                 "inputs",
                 "experiment",
-                "provenance of the results"
+                "provenance",
+                "results"
             ]
         },
         "Benefit": "the provenance of the results can be verified",
@@ -11541,13 +11551,17 @@
             ],
             [
                 "verified",
-                "provenance of the results"
+                "provenance"
             ]
         ],
         "Contains": [
             [
                 "experiment",
                 "inputs"
+            ],
+            [
+                "results",
+                "provenance"
             ]
         ],
         "Persona POS": {
@@ -11616,9 +11630,9 @@
                         "VERB"
                     ],
                     [
-                        "NOUN",
-                        "ADP",
-                        "DET",
+                        "NOUN"
+                    ],
+                    [
                         "NOUN"
                     ]
                 ],
@@ -11630,9 +11644,9 @@
                         "experiment"
                     ],
                     [
-                        "provenance",
-                        "of",
-                        "the",
+                        "provenance"
+                    ],
+                    [
                         "results"
                     ]
                 ]

@@ -2079,7 +2079,7 @@
             ],
             "Secondary Action": [
                 "access",
-                "remember"
+                "mention"
             ]
         },
         "Entity": {
@@ -2087,10 +2087,9 @@
                 "old news"
             ],
             "Secondary Entity": [
-                "things",
-                "past",
                 "others",
-                "home page"
+                "home page",
+                "things I remember"
             ]
         },
         "Benefit": "I can access things I remember from the past or that others mention to me",
@@ -2107,19 +2106,10 @@
             ],
             [
                 "access",
-                "things"
-            ],
-            [
-                "remember",
-                "past"
+                "things I remember"
             ]
         ],
-        "Contains": [
-            [
-                "past",
-                "things"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -2161,7 +2151,7 @@
                         "access"
                     ],
                     [
-                        "remember"
+                        "mention"
                     ]
                 ]
             }
@@ -2187,29 +2177,27 @@
                         "NOUN"
                     ],
                     [
-                        "ADV"
-                    ],
-                    [
+                        "NOUN",
                         "NOUN"
                     ],
                     [
                         "NOUN",
-                        "NOUN"
+                        "PRON",
+                        "VERB"
                     ]
                 ],
                 "Secondary Entity POS text": [
-                    [
-                        "things"
-                    ],
-                    [
-                        "past"
-                    ],
                     [
                         "others"
                     ],
                     [
                         "home",
                         "page"
+                    ],
+                    [
+                        "things",
+                        "I",
+                        "remember"
                     ]
                 ]
             }
@@ -3321,9 +3309,7 @@
                 "create"
             ],
             "Secondary Action": [
-                "don't list",
-                "charged",
-                "don't really intend to hold"
+                "charged"
             ]
         },
         "Entity": {
@@ -3356,14 +3342,6 @@
             [
                 "charged",
                 "listing fee"
-            ],
-            [
-                "don't list",
-                "events"
-            ],
-            [
-                "don't really intend to hold",
-                "events"
             ]
         ],
         "Contains": [
@@ -3400,38 +3378,12 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
-                        "VERB"
-                    ],
-                    [
-                        "AUX",
-                        "PART",
-                        "ADV",
-                        "VERB",
-                        "PART",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "do",
-                        "n't",
-                        "list"
-                    ],
-                    [
                         "charged"
-                    ],
-                    [
-                        "do",
-                        "n't",
-                        "really",
-                        "intend",
-                        "to",
-                        "hold"
                     ]
                 ]
             }
@@ -3496,7 +3448,6 @@
                 "create"
             ],
             "Secondary Action": [
-                "not charged",
                 "doesn't charge"
             ]
         },
@@ -3526,10 +3477,6 @@
             [
                 "create",
                 "Event"
-            ],
-            [
-                "not charged",
-                "listing fee"
             ],
             [
                 "doesn't charge",
@@ -3572,20 +3519,12 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "PART",
-                        "VERB"
-                    ],
-                    [
                         "AUX",
                         "PART",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "not",
-                        "charged"
-                    ],
                     [
                         "does",
                         "n't",
@@ -4213,7 +4152,7 @@
                 "event"
             ],
             "Secondary Entity": [
-                "things that will no longer occu"
+                "things"
             ]
         },
         "Benefit": "I can remove things that will no longer occur",
@@ -4229,12 +4168,12 @@
                 "any course"
             ],
             [
-                "remove",
-                "things that will no longer occu"
-            ],
-            [
                 "delete",
                 "event"
+            ],
+            [
+                "remove",
+                "things"
             ]
         ],
         "Contains": [],
@@ -4302,22 +4241,12 @@
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
                     [
-                        "NOUN",
-                        "PRON",
-                        "AUX",
-                        "ADV",
-                        "ADV",
-                        "VERB"
+                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
-                        "things",
-                        "that",
-                        "will",
-                        "no",
-                        "longer",
-                        "occu"
+                        "things"
                     ]
                 ]
             }
@@ -6545,8 +6474,7 @@
                 "stop publishing"
             ],
             "Secondary Action": [
-                "delete",
-                "aren't still listed"
+                "delete"
             ]
         },
         "Entity": {
@@ -6557,8 +6485,8 @@
                 "site",
                 "hiring party",
                 "ad",
-                "obs that may have been filled",
-                "30 days"
+                "30 days",
+                "jobs"
             ]
         },
         "Benefit": "jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad",
@@ -6569,10 +6497,6 @@
             ]
         ],
         "Targets": [
-            [
-                "aren't still listed",
-                "obs that may have been filled"
-            ],
             [
                 "stop publishing",
                 "jobs"
@@ -6621,23 +6545,11 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "AUX",
-                        "PART",
-                        "ADV",
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "delete"
-                    ],
-                    [
-                        "are",
-                        "n't",
-                        "still",
-                        "listed"
                     ]
                 ]
             }
@@ -6668,15 +6580,10 @@
                         "NOUN"
                     ],
                     [
-                        "NOUN",
-                        "PRON",
-                        "AUX",
-                        "AUX",
-                        "AUX",
-                        "VERB"
+                        "NUM",
+                        "NOUN"
                     ],
                     [
-                        "NUM",
                         "NOUN"
                     ]
                 ],
@@ -6692,16 +6599,11 @@
                         "ad"
                     ],
                     [
-                        "obs",
-                        "that",
-                        "may",
-                        "have",
-                        "been",
-                        "filled"
-                    ],
-                    [
                         "30",
                         "days"
+                    ],
+                    [
+                        "jobs"
                     ]
                 ]
             }
@@ -7743,12 +7645,12 @@
                 "designate"
             ],
             "Secondary Action": [
-                "featured most prominently"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                ""
+                "whether"
             ],
             "Secondary Entity": [
                 "home page",
@@ -7764,8 +7666,8 @@
         ],
         "Targets": [
             [
-                "featured most prominently",
-                "best content"
+                "designate",
+                "whether"
             ]
         ],
         "Contains": [],
@@ -7798,28 +7700,24 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "VERB",
-                        "ADV",
-                        "ADV"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "featured",
-                        "most",
-                        "prominently"
-                    ]
+                    []
                 ]
             }
         },
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    []
+                    [
+                        "SCONJ"
+                    ]
                 ],
                 "Primary Entity POS text": [
-                    []
+                    [
+                        "whether"
+                    ]
                 ]
             },
             "Secondary Entity POS": {
@@ -8131,13 +8029,13 @@
                 "indicate"
             ],
             "Secondary Action": [
-                "incentivized to become"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "article is publicly available",
-                "for members only"
+                "members only",
+                "article"
             ],
             "Secondary Entity": [
                 "visitors",
@@ -8154,15 +8052,11 @@
         "Targets": [
             [
                 "indicate",
-                "article is publicly available"
+                "members only"
             ],
             [
                 "indicate",
-                "for members only"
-            ],
-            [
-                "incentivized to become",
-                "members"
+                "article"
             ]
         ],
         "Contains": [],
@@ -8195,18 +8089,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "VERB",
-                        "PART",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "incentivized",
-                        "to",
-                        "become"
-                    ]
+                    []
                 ]
             }
         },
@@ -8215,27 +8101,19 @@
                 "Primary Entity POS tag": [
                     [
                         "NOUN",
-                        "AUX",
-                        "ADV",
-                        "ADJ"
+                        "ADV"
                     ],
                     [
-                        "ADP",
-                        "NOUN",
-                        "ADV"
+                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "article",
-                        "is",
-                        "publicly",
-                        "available"
-                    ],
-                    [
-                        "for",
                         "members",
                         "only"
+                    ],
+                    [
+                        "article"
                     ]
                 ]
             },
@@ -9499,8 +9377,7 @@
                 "have"
             ],
             "Secondary Action": [
-                "come",
-                "easy to get to"
+                "come"
             ]
         },
         "Entity": {
@@ -9527,10 +9404,6 @@
             ],
             [
                 "have",
-                "articles that interest me"
-            ],
-            [
-                "easy to get to",
                 "articles that interest me"
             ]
         ],
@@ -9575,23 +9448,11 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "ADJ",
-                        "PART",
-                        "VERB",
-                        "ADP"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "come"
-                    ],
-                    [
-                        "easy",
-                        "to",
-                        "get",
-                        "to"
                     ]
                 ]
             }
@@ -10211,8 +10072,8 @@
                 "be assured"
             ],
             "Secondary Action": [
-                "no one can submit",
-                "skew"
+                "skew",
+                "submit"
             ]
         },
         "Entity": {
@@ -10223,7 +10084,7 @@
                 "ratings",
                 "same answers",
                 "results",
-                "multiple time"
+                "no one"
             ]
         },
         "Benefit": "my ratings are accurate",
@@ -10235,12 +10096,12 @@
         ],
         "Targets": [
             [
-                "no one can submit",
-                "same answers"
-            ],
-            [
                 "skew",
                 "results"
+            ],
+            [
+                "submit",
+                "same answers"
             ]
         ],
         "Contains": [],
@@ -10274,9 +10135,6 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "DET",
-                        "NOUN",
-                        "AUX",
                         "VERB"
                     ],
                     [
@@ -10285,13 +10143,10 @@
                 ],
                 "Secondary Action POS text": [
                     [
-                        "no",
-                        "one",
-                        "can",
-                        "submit"
+                        "skew"
                     ],
                     [
-                        "skew"
+                        "submit"
                     ]
                 ]
             }
@@ -10318,7 +10173,7 @@
                         "NOUN"
                     ],
                     [
-                        "ADJ",
+                        "DET",
                         "NOUN"
                     ]
                 ],
@@ -10334,8 +10189,8 @@
                         "results"
                     ],
                     [
-                        "multiple",
-                        "time"
+                        "no",
+                        "one"
                     ]
                 ]
             }

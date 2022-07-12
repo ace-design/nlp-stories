@@ -153,7 +153,8 @@
                 "request for a meeting",
                 "information",
                 "preapplication assistance",
-                "response"
+                "response",
+                "result"
             ]
         },
         "Benefit": "I can receive a response to a request for a meeting or information that is a result of the preapplication assistance",
@@ -179,8 +180,12 @@
         ],
         "Contains": [
             [
-                "response",
-                "request for a meeting"
+                "request for a meeting",
+                "response"
+            ],
+            [
+                "preapplication assistance",
+                "result"
             ]
         ]
     },
@@ -912,8 +917,7 @@
                 "Manage"
             ],
             "Secondary Action": [
-                "ensure",
-                "satisfaction"
+                "ensure"
             ]
         },
         "Entity": {
@@ -922,7 +926,8 @@
             ],
             "Secondary Entity": [
                 "compliance",
-                "proffer"
+                "proffer",
+                "satisfaction"
             ]
         },
         "Benefit": "I can ensure compliance with and satisfaction of the proffer in the future",
@@ -942,11 +947,15 @@
                 "compliance"
             ],
             [
-                "satisfaction",
-                "proffer"
+                "ensure",
+                "satisfaction"
             ]
         ],
         "Contains": [
+            [
+                "proffer",
+                "satisfaction"
+            ],
             [
                 "proffer",
                 "compliance"
@@ -1440,8 +1449,7 @@
                 "Issue"
             ],
             "Secondary Action": [
-                "satisfy",
-                "proven to be eligible"
+                "satisfy"
             ]
         },
         "Entity": {
@@ -1469,10 +1477,6 @@
             ],
             [
                 "satisfy",
-                "Applicant's request"
-            ],
-            [
-                "proven to be eligible",
                 "Applicant's request"
             ]
         ],

@@ -1317,7 +1317,7 @@
                 "modify"
             ],
             "Secondary Action": [
-                ""
+                "follow"
             ]
         },
         "Entity": {
@@ -1347,6 +1347,10 @@
             ],
             [
                 "modify",
+                "rules"
+            ],
+            [
+                "follow",
                 "rules"
             ]
         ],
@@ -1386,10 +1390,14 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    []
+                    [
+                        "VERB"
+                    ]
                 ],
                 "Secondary Action POS text": [
-                    []
+                    [
+                        "follow"
+                    ]
                 ]
             }
         },
@@ -6188,10 +6196,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "campers"
+                "campers I am in charge of"
             ],
             "Secondary Entity": [
-                "job properly"
+                "job"
             ]
         },
         "Benefit": "I can make sure I am doing my job properly",
@@ -6203,12 +6211,12 @@
         ],
         "Targets": [
             [
-                "see",
-                "campers"
+                "doing",
+                "job"
             ],
             [
-                "doing",
-                "job properly"
+                "see",
+                "campers I am in charge of"
             ]
         ],
         "Contains": [],
@@ -6264,26 +6272,34 @@
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
                     [
-                        "NOUN"
+                        "NOUN",
+                        "PRON",
+                        "AUX",
+                        "ADP",
+                        "NOUN",
+                        "ADP"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "campers"
+                        "campers",
+                        "I",
+                        "am",
+                        "in",
+                        "charge",
+                        "of"
                     ]
                 ]
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
                     [
-                        "NOUN",
-                        "ADV"
+                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
-                        "job",
-                        "properly"
+                        "job"
                     ]
                 ]
             }

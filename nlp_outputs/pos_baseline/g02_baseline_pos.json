@@ -1733,9 +1733,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "USAspending"
+                ""
             ],
             "Secondary Entity": [
+                "USAspending",
                 "grant records",
                 "system"
             ]
@@ -1751,10 +1752,6 @@
             [
                 "only send",
                 "grant records"
-            ],
-            [
-                "be sure",
-                "USAspending"
             ]
         ],
         "Contains": [
@@ -1808,18 +1805,17 @@
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    [
-                        "PROPN"
-                    ]
+                    []
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "USAspending"
-                    ]
+                    []
                 ]
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
                     [
                         "NOUN",
                         "NOUN"
@@ -1829,6 +1825,9 @@
                     ]
                 ],
                 "Secondary Entity POS text": [
+                    [
+                        "USAspending"
+                    ],
                     [
                         "grant",
                         "records"
@@ -3641,7 +3640,7 @@
                 "ensure"
             ],
             "Secondary Action": [
-                "not included"
+                ""
             ]
         },
         "Entity": {
@@ -3660,12 +3659,7 @@
                 "ensure"
             ]
         ],
-        "Targets": [
-            [
-                "not included",
-                "submissions"
-            ]
-        ],
+        "Targets": [],
         "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
@@ -3696,16 +3690,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "PART",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "not",
-                        "included"
-                    ]
+                    []
                 ]
             }
         },
@@ -4019,7 +4007,6 @@
                 "ensure"
             ],
             "Secondary Action": [
-                "don't create",
                 "correct",
                 "delete"
             ]
@@ -4042,10 +4029,6 @@
             ]
         ],
         "Targets": [
-            [
-                "don't create",
-                "new published data"
-            ],
             [
                 "correct",
                 "non-existent records"
@@ -4084,11 +4067,6 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
                         "ADJ"
                     ],
                     [
@@ -4096,11 +4074,6 @@
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "do",
-                        "n't",
-                        "create"
-                    ],
                     [
                         "correct"
                     ],
@@ -9433,7 +9406,7 @@
                 "provide"
             ],
             "Secondary Action": [
-                "function under"
+                ""
             ]
         },
         "Entity": {
@@ -9455,13 +9428,14 @@
             [
                 "provide",
                 "FABS groups"
-            ],
+            ]
+        ],
+        "Contains": [
             [
-                "function under",
+                "FABS groups",
                 "FREC paradigm"
             ]
         ],
-        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -9489,16 +9463,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "VERB",
-                        "ADV"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "function",
-                        "under"
-                    ]
+                    []
                 ]
             }
         },
@@ -9912,8 +9880,8 @@
                 "more information"
             ],
             "Secondary Entity": [
-                "publish",
-                "how many rows"
+                "how many rows",
+                "whether to publish"
             ]
         },
         "Benefit": "",
@@ -9934,7 +9902,7 @@
             ],
             [
                 "deciding",
-                "publish"
+                "whether to publish"
             ]
         ],
         "Contains": [
@@ -10007,22 +9975,26 @@
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
                     [
-                        "VERB"
-                    ],
-                    [
                         "ADV",
                         "ADJ",
                         "NOUN"
+                    ],
+                    [
+                        "SCONJ",
+                        "PART",
+                        "VERB"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
-                        "publish"
-                    ],
-                    [
                         "how",
                         "many",
                         "rows"
+                    ],
+                    [
+                        "whether",
+                        "to",
+                        "publish"
                     ]
                 ]
             }
@@ -10311,7 +10283,6 @@
             ],
             "Secondary Action": [
                 "fix",
-                "accurately reflect",
                 "provide"
             ]
         },
@@ -10340,10 +10311,6 @@
             [
                 "fix",
                 "submission"
-            ],
-            [
-                "accurately reflect",
-                "logic"
             ],
             [
                 "provide",
@@ -10393,20 +10360,12 @@
                         "VERB"
                     ],
                     [
-                        "ADV",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "fix"
-                    ],
-                    [
-                        "accurately",
-                        "reflect"
                     ],
                     [
                         "provide"

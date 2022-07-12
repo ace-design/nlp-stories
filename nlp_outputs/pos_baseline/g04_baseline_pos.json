@@ -6179,21 +6179,21 @@
         ],
         "Action": {
             "Primary Action": [
-                "browse"
+                "browse",
+                "see"
             ],
             "Secondary Action": [
-                "see",
                 "know"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "list"
+                "list",
+                "facolities"
             ],
             "Secondary Entity": [
                 "waste",
-                "negative ecological footprint",
-                "facolities"
+                "negative ecological footprint"
             ]
         },
         "Benefit": "I can know for sure my waste is not going to leave a negative ecological footprint",
@@ -6201,6 +6201,10 @@
             [
                 "user",
                 "browse"
+            ],
+            [
+                "user",
+                "see"
             ]
         ],
         "Targets": [
@@ -6236,11 +6240,17 @@
                 "Primary Action POS tag": [
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
                         "browse"
+                    ],
+                    [
+                        "see"
                     ]
                 ]
             },
@@ -6248,15 +6258,9 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "see"
-                    ],
                     [
                         "know"
                     ]
@@ -6268,11 +6272,17 @@
                 "Primary Entity POS tag": [
                     [
                         "NOUN"
+                    ],
+                    [
+                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
                         "list"
+                    ],
+                    [
+                        "facolities"
                     ]
                 ]
             },
@@ -6285,9 +6295,6 @@
                         "ADJ",
                         "ADJ",
                         "NOUN"
-                    ],
-                    [
-                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -6298,9 +6305,6 @@
                         "negative",
                         "ecological",
                         "footprint"
-                    ],
-                    [
-                        "facolities"
                     ]
                 ]
             }
@@ -6653,8 +6657,8 @@
         "Entity": {
             "Primary Entity": [
                 "site admin",
-                "concerns",
-                "any issues"
+                "any issues",
+                "concerns I have"
             ],
             "Secondary Entity": [
                 ""
@@ -6673,24 +6677,24 @@
         ],
         "Targets": [
             [
-                "convey",
-                "concerns"
-            ],
-            [
                 "communicate directly",
                 "site admin"
             ],
             [
-                "fix",
-                "concerns"
-            ],
-            [
                 "convey",
                 "any issues"
             ],
             [
                 "fix",
                 "any issues"
+            ],
+            [
+                "fix",
+                "concerns I have"
+            ],
+            [
+                "convey",
+                "concerns I have"
             ]
         ],
         "Contains": [],
@@ -6748,11 +6752,13 @@
                         "NOUN"
                     ],
                     [
+                        "DET",
                         "NOUN"
                     ],
                     [
-                        "DET",
-                        "NOUN"
+                        "NOUN",
+                        "PRON",
+                        "VERB"
                     ]
                 ],
                 "Primary Entity POS text": [
@@ -6761,11 +6767,13 @@
                         "admin"
                     ],
                     [
-                        "concerns"
-                    ],
-                    [
                         "any",
                         "issues"
+                    ],
+                    [
+                        "concerns",
+                        "I",
+                        "have"
                     ]
                 ]
             },
