@@ -43,13 +43,13 @@ def command():
         raise
     else:
         if args.nlp_type == "VN":
-            save_file_path = "nlp_outputs_intersecting\\visual_narrator\\" + args.save_name + "_intersecting.json"
+            save_file_path = "nlp_outputs_intersecting\\visual_narrator\\" + args.save_name + "_visual_narrator_intersecting.json"
         elif args.nlp_type == "BASE":
-            save_file_path = "nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_intersecting.json"
+            save_file_path = "nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_baseline_intersecting.json"
         elif args.nlp_type == "SIMPLE":
-            save_file_path = "nlp_outputs_intersecting\\simple\\" + args.save_name + "_intersecting.json"
+            save_file_path = "nlp_outputs_intersecting\\simple\\" + args.save_name + "_simple_intersecting.json"
         else:
-            save_file_path = "nlp_outputs_intersecting\\fabian\\" + args.save_name + "_intersecting.json"
+            save_file_path = "nlp_outputs_intersecting\\fabian\\" + args.save_name + "_fabian_intersecting.json"
         
         return args.load_nlp_output_path, args.load_intersecting_path, save_file_path
 
@@ -70,7 +70,7 @@ def get_intersecting_data(nlp_results_path, intersecting_path):
     passed_text = []
 
     
-    nlp_file = open(nlp_results_path, encoding= "utf-8")
+    nlp_file = open(nlp_results_path, encoding= "UTF-8")
     nlp_data = json.load(nlp_file) 
     nlp_file.close()
 
@@ -82,7 +82,7 @@ def get_intersecting_data(nlp_results_path, intersecting_path):
 
     for i in range(len(nlp_data)):
         nlp_text = nlp_data[i]["Text"].strip(" \n\t") 
-        if nlp_text in intersecting_text:
+        if nlp_text in intersecting_text and not(nlp_text in passed_text):
                 intersecting_data.append(nlp_data[i])
                 passed_text.append(nlp_text)
 

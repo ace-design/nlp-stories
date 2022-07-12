@@ -1,0 +1,1289 @@
+[
+    {
+        "Text": "#G17# As an app developer, I want to include the code of a dataset type in my app artifact and create a dataset of that type when deploying the app.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "include",
+            "code",
+            "type",
+            "create",
+            "type"
+        ],
+        "Entity": [
+            "code",
+            "type",
+            "artifact",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "deploy",
+            "type",
+            "part",
+            "includes",
+            "expect",
+            "instances",
+            "type",
+            "were",
+            "created",
+            "part",
+            "start",
+            "using",
+            "code"
+        ],
+        "Entity": [
+            "version",
+            "type",
+            "part",
+            "version",
+            "all",
+            "instances",
+            "type",
+            "part",
+            "deployment",
+            "start",
+            "using",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of an app artifact, without affecting other datasets of this type.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "deploy",
+            "type",
+            "part",
+            "type"
+        ],
+        "Entity": [
+            "version",
+            "type",
+            "part",
+            "artifact",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "explore",
+            "instance",
+            "type",
+            "was",
+            "part"
+        ],
+        "Entity": [
+            "instance",
+            "type",
+            "part"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy an artifact without creating an app this will not create any dataset types or instances.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "deploy",
+            "creating",
+            "will",
+            "create",
+            "types",
+            "instances"
+        ],
+        "Entity": [
+            "ensure",
+            "artifact",
+            "will",
+            "types",
+            "instances"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to share a dataset type across multiple applications that include the dataset type's code in their artifacts.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "share",
+            "type",
+            "include",
+            "code"
+        ],
+        "Entity": [
+            "share",
+            "type",
+            "multiple",
+            "applications",
+            "code",
+            "artifacts"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a shared dataset type that all dataset instances created by this app start using the new code but all dataset instances created by other apps remain unchanged.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "deploy",
+            "includes",
+            "type",
+            "instances",
+            "created",
+            "start",
+            "using",
+            "code",
+            "instances",
+            "created",
+            "remain"
+        ],
+        "Entity": [
+            "ensure",
+            "version",
+            "type",
+            "all",
+            "instances",
+            "start",
+            "using",
+            "code",
+            "but",
+            "all",
+            "instances"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "deploy",
+            "includes",
+            "type",
+            "expect",
+            "instances",
+            "created",
+            "use",
+            "type",
+            "code"
+        ],
+        "Entity": [
+            "ensure",
+            "version",
+            "version",
+            "type",
+            "instances",
+            "use",
+            "type",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error. ",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "deploy",
+            "includes",
+            "type",
+            "shares",
+            "instance",
+            "type",
+            "will",
+            "fail",
+            "conflict"
+        ],
+        "Entity": [
+            "ensure",
+            "version",
+            "version",
+            "type",
+            "shares",
+            "instance",
+            "type",
+            "deployment",
+            "will",
+            "fail",
+            "version",
+            "conflict",
+            "error"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to share a dataset type that I had previously deployed as part of an app.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "share",
+            "type",
+            "had",
+            "part"
+        ],
+        "Entity": [
+            "share",
+            "type",
+            "part"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to deploy a dataset type independent from any app and allow apps to create and use dataset instances of that type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "deploy",
+            "type",
+            "allow",
+            "create",
+            "use",
+            "instances",
+            "type"
+        ],
+        "Entity": [
+            "type",
+            "independent",
+            "use",
+            "instances",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have the option of forcing applications to have the dataset code injected at runtime.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "forcing",
+            "have",
+            "code"
+        ],
+        "Entity": [
+            "option",
+            "applications",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "helps",
+            "package",
+            "type"
+        ],
+        "Entity": [
+            "archetype",
+            "helps",
+            "package",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to separate the interface from the implementation of a dataset type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "separate",
+            "type"
+        ],
+        "Entity": [
+            "separate",
+            "interface",
+            "implementation",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "depend",
+            "type",
+            "have",
+            "inject"
+        ],
+        "Entity": [
+            "interface",
+            "type",
+            "system",
+            "implementation"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to write unit tests for an app that depends on the interface of a dataset type.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "write",
+            "tests",
+            "depends",
+            "type"
+        ],
+        "Entity": [
+            "unit",
+            "tests",
+            "interface",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to assign explicit versions to the code of a dataset type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "assign",
+            "code",
+            "type"
+        ],
+        "Entity": [
+            "assign",
+            "versions",
+            "code",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to deploy a new version of a dataset type without affecting the dataset instances of that type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "deploy",
+            "type",
+            "instances",
+            "type"
+        ],
+        "Entity": [
+            "version",
+            "type",
+            "instances",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to create a dataset instance with a specific version of a dataset type.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "instance",
+            "type"
+        ],
+        "Entity": [
+            "instance",
+            "specific",
+            "version",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to explore a dataset instance created from a dataset type that was deployed by itself.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "explore",
+            "instance",
+            "created",
+            "type",
+            "was"
+        ],
+        "Entity": [
+            "instance",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to delete outdated versions of a dataset type and I expect this to fail if there are any dataset instances with that version of the type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "delete",
+            "type",
+            "expect",
+            "fail",
+            "are",
+            "instances",
+            "type"
+        ],
+        "Entity": [
+            "versions",
+            "type",
+            "fail",
+            "there",
+            "instances",
+            "version",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to list all dataset instances that use a dataset type or a specific version of a type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "list",
+            "instances",
+            "use",
+            "type",
+            "type"
+        ],
+        "Entity": [
+            "list",
+            "all",
+            "instances",
+            "use",
+            "type",
+            "specific",
+            "version",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.",
+        "Persona": [
+            " data scientist"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "instance",
+            "type",
+            "code"
+        ],
+        "Entity": [
+            "able",
+            "instance",
+            "type",
+            "writing",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As a data scientist, I want to be able to upgrade a dataset instance to a new version of its code.",
+        "Persona": [
+            " data scientist"
+        ],
+        "Action": [
+            "want",
+            "upgrade",
+            "instance",
+            "code"
+        ],
+        "Entity": [
+            "able",
+            "upgrade",
+            "instance",
+            "version",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes an existing dataset instance.",
+        "Persona": [
+            " hydrator user"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "pipeline",
+            "reads",
+            "writes",
+            "instance"
+        ],
+        "Entity": [
+            "pipeline",
+            "reads",
+            "writes",
+            "instance"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes a new dataset instance and I want to create that dataset instance as part of pipeline creation.",
+        "Persona": [
+            " hydrator user"
+        ],
+        "Action": [
+            "want",
+            "create",
+            "pipeline",
+            "reads",
+            "writes",
+            "instance",
+            "want",
+            "create",
+            "instance",
+            "part",
+            "pipeline"
+        ],
+        "Entity": [
+            "pipeline",
+            "reads",
+            "writes",
+            "instance",
+            "instance",
+            "part",
+            "pipeline",
+            "creation"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.",
+        "Persona": [
+            " hydrator user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "types",
+            "instances",
+            "created",
+            "pipeline",
+            "expect",
+            "pipeline",
+            "fail",
+            "results",
+            "upgrade",
+            "instance",
+            "pipelines"
+        ],
+        "Entity": [
+            "version",
+            "types",
+            "instances",
+            "pipeline",
+            "pipeline",
+            "creation",
+            "fail",
+            "results",
+            "incompatible",
+            "upgrade",
+            "instance",
+            "pipelines"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to explore the datasets created by my pipeline.",
+        "Persona": [
+            " hydrator user"
+        ],
+        "Action": [
+            "want",
+            "explore",
+            "created",
+            "pipeline"
+        ],
+        "Entity": [
+            "pipeline"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            " hydrator user"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "instances",
+            "created",
+            "are",
+            "sinks",
+            "pipelines"
+        ],
+        "Entity": [
+            "ensure",
+            "all",
+            "instances",
+            "sinks",
+            "sources",
+            "pipelines"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that all dataset instances created by Hydrator pipelines are accessible to the app.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "instances",
+            "created",
+            "pipelines",
+            "are"
+        ],
+        "Entity": [
+            "ensure",
+            "all",
+            "instances",
+            "pipelines"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            " plugin developer"
+        ],
+        "Action": [
+            "want",
+            "include",
+            "code",
+            "type",
+            "pipeline",
+            "using",
+            "created",
+            "instance",
+            "type",
+            "created"
+        ],
+        "Entity": [
+            "code",
+            "type",
+            "artifact",
+            "pipeline",
+            "using",
+            "instance",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin. ",
+        "Persona": [
+            " plugin developer"
+        ],
+        "Action": [
+            "want",
+            "use",
+            "type",
+            "was",
+            "part"
+        ],
+        "Entity": [
+            "use",
+            "custom",
+            "type",
+            "part",
+            "inside"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to upgrade the code of a dataset type used by a dataset instance created by that plugin when I deploy a new version of the plugin and update the pipeline to use that version.",
+        "Persona": [
+            " plugin developer"
+        ],
+        "Action": [
+            "want",
+            "upgrade",
+            "code",
+            "type",
+            "instance",
+            "created",
+            "deploy",
+            "update",
+            "pipeline",
+            "use"
+        ],
+        "Entity": [
+            "upgrade",
+            "code",
+            "type",
+            "instance",
+            "version",
+            "update",
+            "pipeline",
+            "use",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G17# As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.",
+        "Persona": [
+            " pipeline developer"
+        ],
+        "Action": [
+            "want",
+            "upgrade",
+            "instance",
+            "code",
+            "pipeline",
+            "was",
+            "created"
+        ],
+        "Entity": [
+            "upgrade",
+            "instance",
+            "version",
+            "code",
+            "pipeline"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have the option of implementing an upgrade step for when a dataset instance is upgraded to a new version of the dataset type.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "upgrade",
+            "step",
+            "instance",
+            "upgraded",
+            "type"
+        ],
+        "Entity": [
+            "option",
+            "upgrade",
+            "step",
+            "instance",
+            "version",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have a way to reject an upgrade of a dataset instance to a newer version of it type if the upgrade is not compatible.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "reject",
+            "upgrade",
+            "instance",
+            "type",
+            "upgrade"
+        ],
+        "Entity": [
+            "way",
+            "reject",
+            "upgrade",
+            "instance",
+            "version",
+            "type",
+            "upgrade"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have the option of implementing a migration procedure that can be run after an upgrade of a dataset instance to a new version of it type. ",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "have",
+            "can",
+            "run",
+            "upgrade",
+            "instance",
+            "type"
+        ],
+        "Entity": [
+            "option",
+            "migration",
+            "procedure",
+            "can",
+            "run",
+            "upgrade",
+            "instance",
+            "version",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G17# As a developer, I want to take a dataset offline, so that I can perform a long-running maintenance or migration procedure.",
+        "Persona": [
+            " developer"
+        ],
+        "Action": [
+            "want",
+            "take",
+            "can",
+            "perform"
+        ],
+        "Entity": [
+            "take",
+            "can",
+            "maintenance",
+            "migration",
+            "procedure"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to implement custom administrative operations such as \"compaction\" or \"rebalance\" that are no common to all dataset types.",
+        "Persona": [
+            " dataset developer"
+        ],
+        "Action": [
+            "want",
+            "implement",
+            "are",
+            "types"
+        ],
+        "Entity": [
+            "implement",
+            "custom",
+            "operations",
+            "common",
+            "all",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to perform custom administrative operations on dataset instances from my app and the CLI and REST or the UI.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "perform",
+            "instances",
+            "rest"
+        ],
+        "Entity": [
+            "custom",
+            "operations",
+            "instances",
+            "rest"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to find out what properties are supported by the dataset type what values are allowed and what the defaults are when creating a dataset instance. ",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "find",
+            "out",
+            "are",
+            "type",
+            "values",
+            "are",
+            "defaults",
+            "are",
+            "creating",
+            "instance"
+        ],
+        "Entity": [
+            "find",
+            "out",
+            "properties",
+            "type",
+            "values",
+            "defaults",
+            "instance"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify the schema of a dataset in a uniform way across all dataset types.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "uniform",
+            "types"
+        ],
+        "Entity": [
+            "schema",
+            "uniform",
+            "way",
+            "all",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a JSON string.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "string"
+        ],
+        "Entity": [
+            "schema",
+            "string"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "string"
+        ],
+        "Entity": [
+            "schema",
+            "schema",
+            "string"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "configure",
+            "uniform",
+            "types"
+        ],
+        "Entity": [
+            "uniform",
+            "way",
+            "all",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to see the properties that were used to configure a dataset instance.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "see",
+            "were",
+            "configure",
+            "instance"
+        ],
+        "Entity": [
+            "see",
+            "properties",
+            "instance"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to find out what properties of a dataset can be updated.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "find",
+            "out",
+            "can",
+            "updated"
+        ],
+        "Entity": [
+            "find",
+            "out",
+            "properties",
+            "can"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "update",
+            "instance",
+            "expect",
+            "fail",
+            "are",
+            "message"
+        ],
+        "Entity": [
+            "update",
+            "properties",
+            "instance",
+            "fail",
+            "properties",
+            "error",
+            "message"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to update a single property of a dataset instance without knowing all other properties. ",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "update",
+            "single",
+            "instance"
+        ],
+        "Entity": [
+            "update",
+            "single",
+            "property",
+            "instance",
+            "knowing",
+            "all",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties. ",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "remove",
+            "single",
+            "instance"
+        ],
+        "Entity": [
+            "remove",
+            "single",
+            "property",
+            "instance",
+            "knowing",
+            "all",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to trigger a migration process for a dataset if updating its properties requires that.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "trigger",
+            "process",
+            "updating",
+            "requires"
+        ],
+        "Entity": [
+            "trigger",
+            "migration",
+            "process",
+            "updating",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to ensure that if reconfiguration of a dataset fails then no changes have taken effect, so that all steps required to reconfigure a dataset must be done as a single atomic action.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "fails",
+            "changes",
+            "have",
+            "taken",
+            "effect",
+            "steps",
+            "required",
+            "must",
+            "done",
+            "single"
+        ],
+        "Entity": [
+            "ensure",
+            "fails",
+            "then",
+            "changes",
+            "effect",
+            "all",
+            "steps",
+            "must",
+            "single",
+            "action"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "fails",
+            "cannot"
+        ],
+        "Entity": [
+            "ensure",
+            "application",
+            "redeployment",
+            "fails"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to tolerate existing datasets if their properties are different but compatible when creating a dataset as part of app deployment. ",
+        "Persona": [
+            " app developer"
+        ],
+        "Action": [
+            "want",
+            "tolerate",
+            "are",
+            "creating",
+            "part"
+        ],
+        "Entity": [
+            "properties",
+            "but",
+            "part",
+            "deployment"
+        ]
+    },
+    {
+        "Text": "#G17# As a pipeline designer, I want to get a meaningful error message when pipeline creation fails when I use an existing dataset as a sink or source, so that I know that the schema or any other property of the dataset is incompatible with what the pipeline requires. ",
+        "Persona": [
+            " pipeline designer"
+        ],
+        "Action": [
+            "want",
+            "get",
+            "message",
+            "pipeline",
+            "fails",
+            "use",
+            "sink",
+            "know",
+            "pipeline",
+            "requires"
+        ],
+        "Entity": [
+            "error",
+            "message",
+            "pipeline",
+            "creation",
+            "fails",
+            "use",
+            "sink",
+            "source",
+            "know",
+            "schema",
+            "property",
+            "incompatible",
+            "pipeline"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify as part of dataset configuration whether it is explorable.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "part"
+        ],
+        "Entity": [
+            "part",
+            "configuration"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify the explore schema separately.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "specify",
+            "explore"
+        ],
+        "Entity": [
+            "schema"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore. ",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "ensure",
+            "update",
+            "explore",
+            "leads",
+            "explore"
+        ],
+        "Entity": [
+            "ensure",
+            "update",
+            "leads",
+            "silent",
+            "loss",
+            "data",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to enable explore for a dataset that was not configured for explore initially.",
+        "Persona": [
+            " user"
+        ],
+        "Action": [
+            "want",
+            "enable",
+            "explore",
+            "was",
+            "explore"
+        ],
+        "Entity": []
+    }
+]

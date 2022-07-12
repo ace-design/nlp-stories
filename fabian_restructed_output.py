@@ -59,7 +59,7 @@ def extract (path):
     entity = []
     action = []
 
-    file = open(path)
+    file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     stories = data["stories"]

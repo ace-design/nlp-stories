@@ -72,7 +72,7 @@ def extract(load_path):
     stories (list): each story in the datset
     '''
 
-    with open (load_path) as file:
+    with open (load_path, encoding="utf-8") as file:
         stories = file.readlines()
         for i in range(len(stories)):
             stories[i] = stories[i].strip("\n")
