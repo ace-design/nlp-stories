@@ -1,6 +1,6 @@
 #This script will create the input files for crf
 
-#Output labels: "PER": Persona, "P-ACT": primary action, "S-ACT": secondary action, "P-ENT": primary entity, "S-ENT": secondary entity
+#Output labels: "PER": Persona, "P-ACT": primary action, "S-ACT": secondary action, "P-ENT": primary entity, "S-ENT": secondary entity, "O": no labels
 
 import argparse
 import json
@@ -17,20 +17,20 @@ def main():
     global stanza_nlp
     stanza_nlp = stanza.Pipeline('en')
 
-    final_results_testing = []
+    final_results_training = []
     final_results_evaluation = []
 
     for i in range(len(stories)):
-        testing_stories_info = pos_tags_testing(stories[i], annotated_stories[i], stanza_nlp)
-        story_format_testing = format_output(stories[i], testing_stories_info)
-        final_results_testing.append(story_format_testing)
+        training_stories_info = pos_tags(stories[i], annotated_stories[i], stanza_nlp)
+        story_format_training = format_output(stories[i], training_stories_info)
+        final_results_training.append(story_format_training)
 
     for i in range(len(stories)):
-        evaluation_stories_info = pos_tags_evaluation(stories[i], stanza_nlp)
+        evaluation_stories_info = pos_tags(stories[i], annotated_stories[i], stanza_nlp)
         story_format_evaluation = format_output(stories[i], evaluation_stories_info)
         final_results_evaluation.append(story_format_evaluation)
 
-    save_results(final_results_testing, final_results_evaluation, save_name)
+    save_results(final_results_training, final_results_evaluation, save_name)
 
 def command():
     '''
@@ -191,7 +191,7 @@ def identify_primary_entity(annotated_story, primary_action_id_list, label_id_li
 
     return annotated_story
 
-def pos_tags_testing(story, annotated_story, stanza_nlp):
+def pos_tags(story, annotated_story, stanza_nlp):
     '''
     get the pos tags and the cooresponding label type of each token determined by stanza tool
 
@@ -214,7 +214,7 @@ def pos_tags_testing(story, annotated_story, stanza_nlp):
             stanza_text.append(word.text)
 
 
-    # "" = no annotation, "P" = persona, "A" = primary action, "E" = primary entity, "e" = secondary entity, "a" = secondary action  
+    # "O" = no annotation, "P" = persona, "A" = primary action, "E" = primary entity, "e" = secondary entity, "a" = secondary action  
 
     story_counter = 0
 
@@ -236,7 +236,7 @@ def pos_tags_testing(story, annotated_story, stanza_nlp):
         elif annotated_story[start : end] ==  ["e"] * word_length:
             word_info = (stanza_text[i], pos[i], "S-ENT")
         else:
-            word_info = (stanza_text[i], pos[i], "-")
+            word_info = (stanza_text[i], pos[i], "O")
 
         story_counter = end
 
@@ -252,33 +252,33 @@ def pos_tags_testing(story, annotated_story, stanza_nlp):
 
     return story_info
 
-def pos_tags_evaluation(story, stanza_nlp):
-    '''
-    get the pos tags of each word in the story for the evaluation story set
+# def pos_tags_evaluation(story, stanza_nlp):
+#     '''
+#     get the pos tags of each word in the story for the evaluation story set
 
-    Parameters:
-    story (str): the story that is getting the pos tags
-    stanza_nlp (obj): the nlp that will get the pos tags of each word
+#     Parameters:
+#     story (str): the story that is getting the pos tags
+#     stanza_nlp (obj): the nlp that will get the pos tags of each word
 
-    Returns:
-    story_info (list): contains tuples of each word in the sentence in the format of (word, pos tag)
-    '''
+#     Returns:
+#     story_info (list): contains tuples of each word in the sentence in the format of (word, pos tag)
+#     '''
 
-    pos = []
-    text = []
-    story_info = []
+#     pos = []
+#     text = []
+#     story_info = []
 
-    evaluated_story = stanza_nlp(story)
-    for sent in evaluated_story.sentences:
-        for word in sent.words:
-            pos.append(word.upos)
-            text.append(word.text)
+#     evaluated_story = stanza_nlp(story)
+#     for sent in evaluated_story.sentences:
+#         for word in sent.words:
+#             pos.append(word.upos)
+#             text.append(word.text)
 
-    for i in range(len(text)):
-        word_info = (text[i], pos[i])
-        story_info.append(word_info)
+#     for i in range(len(text)):
+#         word_info = (text[i], pos[i])
+#         story_info.append(word_info)
 
-    return story_info
+#     return story_info
 
 def format_output(story_text, story_info):
     '''
@@ -296,26 +296,26 @@ def format_output(story_text, story_info):
 
     return story_format
 
-def save_results(final_results_testing, final_results_evaluation, save_name):
+def save_results(final_results_training, final_results_evaluation, save_name):
     '''
     save the results to a json file
 
     Parameters:
-    final_results_testing (list): final results for testing story set to output to the json file
+    final_results_training (list): final results for training story set to output to the json file
     final_results_evaluation (list): final results for evaluating story set to output to the json file
     save_name (str): name of the file to save
     '''
 
-    testing_saving_path = "crf_input\\testing_input\\" + save_name + ".json"
+    training_saving_path = "crf_input\\training_input\\" + save_name + ".json"
     evaluation_saving_path = "crf_input\\evaluation_input\\" + save_name + ".json"
 
-    with open(testing_saving_path,"w", encoding="utf-8") as file:
-        json.dump(final_results_testing, file, indent = 4)
+    with open(training_saving_path,"w", encoding="utf-8") as file:
+        json.dump(final_results_training, file, indent = 4)
 
     with open(evaluation_saving_path,"w", encoding="utf-8") as file:
         json.dump(final_results_evaluation, file,  indent = 4)
 
-    print("File is saved")
+    print("Files are saved")
 
 
 if __name__ == "__main__":
