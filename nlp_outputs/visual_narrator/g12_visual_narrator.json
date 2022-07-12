@@ -980,26 +980,6 @@
         ]
     },
     {
-        "Text": "#G12# As a camp worker, I would be able to submit a completion report for the tasks which was assigned to me.",
-        "Persona": [
-            "worker"
-        ],
-        "Action": [
-            "report"
-        ],
-        "Entity": [
-            "camper"
-        ],
-        "Triggers": [
-            "worker",
-            "report"
-        ],
-        "Targets": [
-            "report",
-            "camper"
-        ]
-    },
-    {
         "Text": "#G12# As a camp worker, I'm able to report a camper to the manager with an inappropriate behavior.",
         "Persona": [
             "worker"
@@ -1008,7 +988,7 @@
             "report"
         ],
         "Entity": [
-            "list"
+            "camper"
         ],
         "Triggers": [
             "worker",
@@ -1016,7 +996,7 @@
         ],
         "Targets": [
             "report",
-            "list"
+            "camper"
         ]
     },
     {
@@ -1028,6 +1008,26 @@
             "report"
         ],
         "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "worker",
+            "report"
+        ],
+        "Targets": [
+            "report",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I'm able to report necessary repairs to the manager that the camp is needed of.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "report"
+        ],
+        "Entity": [
             "repairs"
         ],
         "Triggers": [
@@ -1040,7 +1040,27 @@
         ]
     },
     {
-        "Text": "#G12# As a camp worker, I'm able to report necessary repairs to the manager that the camp is needed of.",
+        "Text": "#G12# As a camp worker, I want to be able to see which campers I am in charge of and where, so that I can make sure I am doing my job properly.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "worker",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp counselor, I want to be able to take attendance of my assigned kids, so that I can make ensure everybody is accounted for.",
         "Persona": [
             "counselor"
         ],
