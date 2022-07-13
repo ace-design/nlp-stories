@@ -309,7 +309,7 @@ def check_pos_file(load_path, save_name):
         
         subprocess.run(command_input)
 
-        saving_path = "outputs\\pos_baseline\\" + save_name +  "_pos.json"
+        saving_path = "nlp_outputs\\pos_baseline\\" + save_name +  "_pos.json"
 
         return saving_path
     else:

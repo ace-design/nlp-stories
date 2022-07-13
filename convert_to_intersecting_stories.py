@@ -45,7 +45,7 @@ def command():
         if args.nlp_type == "VN":
             save_file_path = "nlp_outputs_intersecting\\visual_narrator\\" + args.save_name + "_visual_narrator_intersecting.json"
         elif args.nlp_type == "BASE":
-            save_file_path = "nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_baseline_intersecting.json"
+            save_file_path = "nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_baseline_intersecting_pos.json"
         elif args.nlp_type == "SIMPLE":
             save_file_path = "nlp_outputs_intersecting\\simple\\" + args.save_name + "_simple_intersecting.json"
         else:
