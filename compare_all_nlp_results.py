@@ -6,7 +6,7 @@ import seaborn as sns
 import sys
 
 def main():
-    simple_path, fabian_path, visual_narrator_path, saving_path, comparison_type, number_dataset = command()
+    simple_path, fabian_path, visual_narrator_path, saving_path, comparison_type, number_dataset, save_name = command()
     simple_data = extract_data(simple_path, number_dataset)
     fabian_data = extract_data(fabian_path, number_dataset)
     visual_narrator_data = extract_data(visual_narrator_path, number_dataset)
@@ -25,9 +25,9 @@ def main():
 
     persona_precision, persona_recall, persona_f_measure,entity_precision, entity_recall, entity_f_measure, action_precision, action_recall, action_f_measure = formatted_data
 
-    create_final_bargraph(persona_precision,persona_recall, persona_f_measure, "Persona " + comparison_type, saving_path + "_persona_nlp_compare.png")
-    create_final_bargraph(entity_precision,entity_recall, entity_f_measure, "Entity " + comparison_type, saving_path + "_entity_nlp_compare.png")
-    create_final_bargraph(action_precision,action_recall, action_f_measure, "Action " + comparison_type, saving_path + "_action_nlp_compare.png")
+    create_final_bargraph(persona_precision,persona_recall, persona_f_measure, save_name.title() + " Persona " + comparison_type, saving_path + "_persona_nlp_compare.png")
+    create_final_bargraph(entity_precision,entity_recall, entity_f_measure, save_name.title() + " Entity " + comparison_type, saving_path + "_entity_nlp_compare.png")
+    create_final_bargraph(action_precision,action_recall, action_f_measure, save_name.title() + " Action " + comparison_type, saving_path + "_action_nlp_compare.png")
 
 def command():
     '''
@@ -96,7 +96,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type, args.number_of_datasets
+        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type, args.number_of_datasets, args.save_file_name
 
 def extract_data (path, number_dataset):
     '''
@@ -179,7 +179,7 @@ def round_data(data):
 
 def create_final_bargraph(precision_results,recall_results, f_measure_results, title, save_path):
     
-    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 5), sharex=True)
+    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(25, 5), sharex=True)
 
     palette ={"simple": "y", "fabian": "c", "visual narrator": "b"}
 
@@ -217,7 +217,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     f_measure.legend([],[], frameon=False)
 
     handles, labels = precision_plot.get_legend_handles_labels()
-    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(1, 0.5))
+    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(0.97, 0.5))
 
     graph.savefig(save_path)
 

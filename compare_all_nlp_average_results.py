@@ -6,16 +6,16 @@ import pandas as pd
 import sys
 
 def main():
-    simple_path, fabian_path, visual_narrator_path, saving_path, comparison_type = command()
+    simple_path, fabian_path, visual_narrator_path, saving_path, comparison_type, save_name = command()
     simple_data = extract_data(simple_path)
     fabian_data= extract_data(fabian_path)
     visual_narrator_data= extract_data(visual_narrator_path)
 
     precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(simple_data, fabian_data, visual_narrator_data)
 
-    create_final_bargraph(precision_formatted_data, "Final Precision Average " + comparison_type, saving_path + "_precison_compare_average.png")
-    create_final_bargraph(recall_formatted_data, "Final Recall Average " + comparison_type, saving_path + "_recall_compare_average.png")
-    create_final_bargraph(f_measure_formatted_data, "Final F-Measure Average " + comparison_type, saving_path + "_f_measure_compare_average.png")
+    create_final_bargraph(precision_formatted_data, save_name.title() + " Precision Average " + comparison_type, saving_path + "_precison_compare_average.png")
+    create_final_bargraph(recall_formatted_data, save_name.title() + " Recall Average " + comparison_type, saving_path + "_recall_compare_average.png")
+    create_final_bargraph(f_measure_formatted_data, save_name.title() + " F-Measure Average " + comparison_type, saving_path + "_f_measure_compare_average.png")
 
 
 def command():
@@ -82,7 +82,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type
+        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type, args.save_file_name
 
 def extract_data(path):
     '''
