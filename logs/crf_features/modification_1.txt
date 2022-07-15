@@ -1,0 +1,71 @@
+Changes:
+-looking at the second word behind
+-last three values of POS tag
+-isalpha() for the word after
+
+
+features = { # Features for each and every word in the dataset
+        'bias': 1.0,
+        'word.lower()':   word.lower(),   # lower case word to harmonize -> str
+        'word[-3:]':      word[-3:],      # last 3 letters -> str
+        'word[-2:]':      word[-2:],      # last 2 letters -> str
+        'word.isupper()': word.isupper(), # all letter upopercase -> bool
+        'word.istitle()': word.istitle(), # first letter uppercase -> bool
+        'postag':         postag,         # Part-of-speech tag
+        'postag[:2]':     postag[:2],     # first two letters of the POS tag
+        'postag[-3:]':     postag[-3:],
+    }
+    ## Update for words that are not the first one
+    if i > 0: 
+        word1 = sent[i-1][0]      # previous word
+        postag1 = sent[i-1][1]    # previous POS tag
+        features.update({
+            '-1:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-1:word.istitle()': word1.istitle(),  # is it a title?
+            '-1:word.isupper()': word1.isupper(),  # is it upper case?
+            '-1:postag':         postag1,          # POS tag for the previous word
+            '-1:postag[:2]':     postag1[:2],      # first 2 letters of the previous POS tag
+            
+        })
+    else:
+        features['BOS'] = True # If the first one, Beginning Of Sentence is True
+
+    # Update for words that are not the last ones
+    if i < len(sent)-1:
+        word1 = sent[i+1][0]   # Next word
+        postag1 = sent[i+1][1] # next POS tag
+        features.update({
+            '+1:word.lower()':   word1.lower(),   # next word spelled uniformously
+            '+1:word.istitle()': word1.istitle(), # is it a title?
+            '+1:word.isupper()': word1.isupper(), # is it uppercase?
+            '+1:postag':         postag1,         # next POS tag
+            '+1:postag[:2]':     postag1[:2],     # first 2 letters of the POS tag
+            "isalpha()": word1.isalpha(),
+        })
+    else:
+        features['EOS'] = True # If the last one, then End Of Sentence is True.
+
+
+    if i > 1: 
+        word1 = sent[i-2][0]      # previous word
+        postag1 = sent[i-2][1]    # previous POS tag
+        features.update({
+            '-2:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-2:word.istitle()': word1.istitle(),  # is it a title?
+            '-2:word.isupper()': word1.isupper(),  # is it upper case?
+            '-2:postag':         postag1,          # POS tag for the previous word
+            '-2:postag[:2]':     postag1[:2],      # first 2 letters of the previous POS tag
+        })
+
+Results:
+P-Act: 0.907
+S-Act: 0.721
+P-Ent: 0.746
+S-Ent: 0.847
+Per: 0.999
+Wegithed Average:0.843
+
+Act:0.863
+Ent:0.919
+Per:0.999
+Weighted Average: 0.914

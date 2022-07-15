@@ -1,0 +1,78 @@
+Changes:
+looking at the last three letters of the word ahead
+
+features = { # Features for each and every word in the dataset
+        'bias': 1.0,
+        'word.lower()':   word.lower(),   # lower case word to harmonize -> str
+        'word[-3:]':      word[-3:],      # last 3 letters -> str
+        'word[-2:]':      word[-2:],      # last 2 letters -> str
+        'word.isupper()': word.isupper(), # all letter upopercase -> bool
+        'word.istitle()': word.istitle(), # first letter uppercase -> bool
+        'postag':         postag,         # Part-of-speech tag
+    }
+
+    ## Update for words that are not the first one
+    if i > 0: 
+        word1 = sent[i-1][0]      # previous word
+        postag1 = sent[i-1][1]    # previous POS tag
+        features.update({
+            '-1:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-1:word.istitle()': word1.istitle(),  # is it a title?
+            '-1:word.isupper()': word1.isupper(),  # is it upper case?
+            '-1:postag':         postag1,          # POS tag for the previous word
+            
+        })
+    else:
+        features['BOS'] = True # If the first one, Beginning Of Sentence is True
+
+    # Update for words that are not the last ones
+    if i < len(sent)-1:
+        word1 = sent[i+1][0]   # Next word
+        postag1 = sent[i+1][1] # next POS tag
+        features.update({
+            '+1:word.lower()':   word1.lower(),   # next word spelled uniformously
+            '+1:word.istitle()': word1.istitle(), # is it a title?
+            '+1:word.isupper()': word1.isupper(), # is it uppercase?
+            '+1:postag':         postag1,         # next POS tag
+            "isalpha()": word1.isalpha(),
+            '-1:word[-2:]':      word1[-3:],      # last 2 letters -> str
+        })
+    else:
+        features['EOS'] = True # If the last one, then End Of Sentence is True.
+
+
+    if i > 1: 
+        word1 = sent[i-2][0]      # two words before
+        postag1 = sent[i-2][1]    # two POS tags before
+        features.update({
+            '-2:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-2:word.istitle()': word1.istitle(),  # is it a title?
+            '-2:word.isupper()': word1.isupper(),  # is it upper case?
+            '-2:postag':         postag1,          # POS tag for the previous word
+        })
+
+    if i > 2: 
+        word1 = sent[i-3][0]      # three word before
+        postag1 = sent[i-3][1]    # three POS tag before
+        features.update({
+            '-3:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-3:word.istitle()': word1.istitle(),  # is it a title?
+            '-3:word.isupper()': word1.isupper(),  # is it upper case?
+            '-3:postag':         postag1,          # POS tag for the previous word
+        })
+
+Results:
+P-Act 0.915
+S-Act 0.732
+P-Ent 0.808
+S-Ent 0.86
+Per 0.999
+Weighted Average 0.862
+
+Act 0.87
+Ent 0.921
+Per 0.999
+Weighted Average 0.917
+
+Conclusions:
+performans better at identify just action and entity, but performs worse when considering primary and secondary elements compared to without these new changes

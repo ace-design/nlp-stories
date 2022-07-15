@@ -21,8 +21,11 @@ def main():
     X_test = [sent2features(s) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
+
+    saving_path = "crf_models\\"  + save_name + "_crf_model.pkl"
+
     config = CRF( algorithm = 'lbfgs', c1 = 0.1, c2 = 0.1, max_iterations = 100, all_possible_transitions = True)
-    crf = train_model(config, X_train, y_train, save_name + "_crf_model.pkl")
+    crf = train_model(config, X_train, y_train, saving_path)
 
     y_pred = crf.predict(X_test)
 
@@ -115,10 +118,9 @@ def word2features(sent, i):
         'word[-2:]':      word[-2:],      # last 2 letters -> str
         'word.isupper()': word.isupper(), # all letter upopercase -> bool
         'word.istitle()': word.istitle(), # first letter uppercase -> bool
-        'word.isdigit()': word.isdigit(), # is a digit? -> bool
         'postag':         postag,         # Part-of-speech tag
-        'postag[:2]':     postag[:2],     # first 2 letters of the POS tag
     }
+
     ## Update for words that are not the first one
     if i > 0: 
         word1 = sent[i-1][0]      # previous word
@@ -127,8 +129,7 @@ def word2features(sent, i):
             '-1:word.lower()':   word1.lower(),    # Previous word spelled uniformously
             '-1:word.istitle()': word1.istitle(),  # is it a title?
             '-1:word.isupper()': word1.isupper(),  # is it upper case?
-            '-1:postag':         postag1,          # POS tag for the previous word
-            '-1:postag[:2]':     postag1[:2],      # first 2 letters of the previous POS tag
+            '-1:postag':         postag1,          # POS tag for the previous word           
         })
     else:
         features['BOS'] = True # If the first one, Beginning Of Sentence is True
@@ -142,10 +143,45 @@ def word2features(sent, i):
             '+1:word.istitle()': word1.istitle(), # is it a title?
             '+1:word.isupper()': word1.isupper(), # is it uppercase?
             '+1:postag':         postag1,         # next POS tag
-            '+1:postag[:2]':     postag1[:2],     # first 2 letters of the POS tag
+            "isalpha()": word1.isalpha(),
+            '+1:word[-3:]':      word1[-3:],      # last 3 lett
         })
     else:
         features['EOS'] = True # If the last one, then End Of Sentence is True.
+
+
+    if i > 1: 
+        word1 = sent[i-2][0]      # two words before
+        postag1 = sent[i-2][1]    # two POS tags before
+        features.update({
+            '-2:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-2:word.istitle()': word1.istitle(),  # is it a title?
+            '-2:word.isupper()': word1.isupper(),  # is it upper case?
+            '-2:postag':         postag1,          # POS tag for the previous word
+            '-2:word[-3:]':      word1[-3:],      # last 2 letters -> str
+            
+        })
+
+    if i > 2: 
+        word1 = sent[i-3][0]      # three word before
+        postag1 = sent[i-3][1]    # three POS tag before
+        features.update({
+            '-3:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-3:word.istitle()': word1.istitle(),  # is it a title?
+            '-3:word.isupper()': word1.isupper(),  # is it upper case?
+            '-3:postag':         postag1,          # POS tag for the previous word
+            '-3:word[-2:]':      word1[-2:],      # last 2 letters -> str
+        })
+
+    if i > 3: 
+        word1 = sent[i-4][0]      # four word before
+        postag1 = sent[i-4][1]    # four POS tag before
+        features.update({
+            '-4:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-4:word.istitle()': word1.istitle(),  # is it a title?
+            '-4:word.isupper()': word1.isupper(),  # is it upper case?
+            '-4:postag':         postag1,          # POS tag for the previous word
+        })
 
     return features # return the feature vector for this very sentence
 

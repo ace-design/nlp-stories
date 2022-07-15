@@ -1,0 +1,90 @@
+Changes:
+-looking four words back
+-looking last two letters of three words back
+-looking at last three letters a word ahead
+-looking at last three letters of two words back
+
+features = { # Features for each and every word in the dataset
+        'bias': 1.0,
+        'word.lower()':   word.lower(),   # lower case word to harmonize -> str
+        'word[-3:]':      word[-3:],      # last 3 letters -> str
+        'word[-2:]':      word[-2:],      # last 2 letters -> str
+        'word.isupper()': word.isupper(), # all letter upopercase -> bool
+        'word.istitle()': word.istitle(), # first letter uppercase -> bool
+        'postag':         postag,         # Part-of-speech tag
+    }
+
+    ## Update for words that are not the first one
+    if i > 0: 
+        word1 = sent[i-1][0]      # previous word
+        postag1 = sent[i-1][1]    # previous POS tag
+        features.update({
+            '-1:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-1:word.istitle()': word1.istitle(),  # is it a title?
+            '-1:word.isupper()': word1.isupper(),  # is it upper case?
+            '-1:postag':         postag1,          # POS tag for the previous word           
+        })
+    else:
+        features['BOS'] = True # If the first one, Beginning Of Sentence is True
+
+    # Update for words that are not the last ones
+    if i < len(sent)-1:
+        word1 = sent[i+1][0]   # Next word
+        postag1 = sent[i+1][1] # next POS tag
+        features.update({
+            '+1:word.lower()':   word1.lower(),   # next word spelled uniformously
+            '+1:word.istitle()': word1.istitle(), # is it a title?
+            '+1:word.isupper()': word1.isupper(), # is it uppercase?
+            '+1:postag':         postag1,         # next POS tag
+            "isalpha()": word1.isalpha(),
+            '+1:word[-3:]':      word1[-3:],      # last 3 lett
+        })
+    else:
+        features['EOS'] = True # If the last one, then End Of Sentence is True.
+
+
+    if i > 1: 
+        word1 = sent[i-2][0]      # two words before
+        postag1 = sent[i-2][1]    # two POS tags before
+        features.update({
+            '-2:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-2:word.istitle()': word1.istitle(),  # is it a title?
+            '-2:word.isupper()': word1.isupper(),  # is it upper case?
+            '-2:postag':         postag1,          # POS tag for the previous word
+            '-2:word[-3:]':      word1[-3:],      # last 2 letters -> str
+            
+        })
+
+    if i > 2: 
+        word1 = sent[i-3][0]      # three word before
+        postag1 = sent[i-3][1]    # three POS tag before
+        features.update({
+            '-3:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-3:word.istitle()': word1.istitle(),  # is it a title?
+            '-3:word.isupper()': word1.isupper(),  # is it upper case?
+            '-3:postag':         postag1,          # POS tag for the previous word
+            '-3:word[-2:]':      word1[-2:],      # last 2 letters -> str
+        })
+
+    if i > 3: 
+        word1 = sent[i-4][0]      # four word before
+        postag1 = sent[i-4][1]    # four POS tag before
+        features.update({
+            '-4:word.lower()':   word1.lower(),    # Previous word spelled uniformously
+            '-4:word.istitle()': word1.istitle(),  # is it a title?
+            '-4:word.isupper()': word1.isupper(),  # is it upper case?
+            '-4:postag':         postag1,          # POS tag for the previous word
+        })
+
+Results:
+P-Act 0.916
+S-Act 0.739
+P-Ent 0.833
+S-Ent 0.868
+Per 0.999
+Weighted Average 0.872
+
+Act 0.865
+Ent 0.921
+Per 0.999
+Weighted Average 0.916

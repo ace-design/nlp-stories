@@ -1,6 +1,6 @@
 [
     {
-        "Text": "#G02# As a Broker user, I want to have updated error codes that accurately reflect the logic and provide enough information, so that I can fix my submission.",
+        "Text": "#G22# As a data manager, I want to clarify the necessary rights for re-using the data, so that it is legal to reuse the data.",
         "Word Data": [
             [
                 "#",
@@ -8,8 +8,8 @@
                 "O"
             ],
             [
-                "G02",
-                "PROPN",
+                "G22",
+                "NOUN",
                 "O"
             ],
             [
@@ -28,12 +28,167 @@
                 "O"
             ],
             [
-                "Broker",
+                "data",
                 "NOUN",
                 "PER"
             ],
             [
-                "user",
+                "manager",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "clarify",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "necessary",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "rights",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "for",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "re-using",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "it",
+                "PRON",
+                "O"
+            ],
+            [
+                "is",
+                "AUX",
+                "O"
+            ],
+            [
+                "legal",
+                "ADJ",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "reuse",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a repository manager, I want to have metadata in additional languages, so that I can allow for multilingual data archive.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "repository",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "manager",
                 "NOUN",
                 "PER"
             ],
@@ -63,62 +218,22 @@
                 "P-ACT"
             ],
             [
-                "updated",
-                "VERB",
-                "P-ENT"
-            ],
-            [
-                "error",
+                "metadata",
                 "NOUN",
                 "P-ENT"
             ],
             [
-                "codes",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "that",
-                "PRON",
+                "in",
+                "ADP",
                 "O"
             ],
             [
-                "accurately",
-                "ADV",
-                "O"
-            ],
-            [
-                "reflect",
-                "VERB",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "logic",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "provide",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "enough",
+                "additional",
                 "ADJ",
                 "S-ENT"
             ],
             [
-                "information",
+                "languages",
                 "NOUN",
                 "S-ENT"
             ],
@@ -148,94 +263,9 @@
                 "O"
             ],
             [
-                "fix",
+                "allow",
                 "VERB",
                 "S-ACT"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "submission",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a Broker user, I want to submit records for individual recipients without receiving a DUNS error.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Broker",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "submit",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "records",
-                "NOUN",
-                "P-ENT"
             ],
             [
                 "for",
@@ -243,37 +273,17 @@
                 "O"
             ],
             [
-                "individual",
+                "multilingual",
                 "ADJ",
                 "S-ENT"
             ],
             [
-                "recipients",
+                "data",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "without",
-                "SCONJ",
-                "S-ACT"
-            ],
-            [
-                "receiving",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "DUNS",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "error",
+                "archive",
                 "NOUN",
                 "S-ENT"
             ],
@@ -285,7 +295,7 @@
         ]
     },
     {
-        "Text": "#G02# As an Owner, I want to design a schedule from the UI SME, so that I know the potential timeline of the UI improvements wanted.",
+        "Text": "#G22# As a PI, I want to know who owns the data, so that I know what I am allowed to do with it.",
         "Word Data": [
             [
                 "#",
@@ -293,8 +303,8 @@
                 "O"
             ],
             [
-                "G02",
-                "PROPN",
+                "G22",
+                "NOUN",
                 "O"
             ],
             [
@@ -308,12 +318,12 @@
                 "O"
             ],
             [
-                "an",
+                "a",
                 "DET",
                 "O"
             ],
             [
-                "Owner",
+                "PI",
                 "NOUN",
                 "PER"
             ],
@@ -338,23 +348,18 @@
                 "O"
             ],
             [
-                "design",
+                "know",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "schedule",
-                "NOUN",
+                "who",
+                "PRON",
                 "P-ENT"
             ],
             [
-                "from",
-                "ADP",
+                "owns",
+                "VERB",
                 "O"
             ],
             [
@@ -363,13 +368,8 @@
                 "O"
             ],
             [
-                "UI",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "SME",
-                "PROPN",
+                "data",
+                "NOUN",
                 "S-ENT"
             ],
             [
@@ -379,7 +379,7 @@
             ],
             [
                 "so",
-                "SCONJ",
+                "ADV",
                 "O"
             ],
             [
@@ -398,94 +398,9 @@
                 "S-ACT"
             ],
             [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "potential",
-                "ADJ",
+                "what",
+                "PRON",
                 "S-ENT"
-            ],
-            [
-                "timeline",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "UI",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "improvements",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "wanted",
-                "VERB",
-                "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want the frontend URLs to more accurately reflect the page I'm accessing, so that I'm not confused.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
             ],
             [
                 "I",
@@ -493,339 +408,34 @@
                 "O"
             ],
             [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "the",
-                "DET",
+                "am",
+                "AUX",
                 "O"
             ],
             [
-                "frontend",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "URLs",
-                "NOUN",
-                "P-ENT"
+                "allowed",
+                "VERB",
+                "O"
             ],
             [
                 "to",
                 "PART",
-                "O"
-            ],
-            [
-                "more",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "accurately",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "reflect",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "page",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "'m",
-                "AUX",
-                "O"
-            ],
-            [
-                "accessing",
-                "VERB",
-                "O"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "'m",
-                "AUX",
-                "O"
-            ],
-            [
-                "not",
-                "PART",
-                "S-ACT"
-            ],
-            [
-                "confused",
-                "ADJ",
-                "S-ACT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an Agency user, I want historical FPDS data loaded.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Agency",
-                "PROPN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "historical",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "FPDS",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "loaded",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I do not want  DABS banner messages and vice versa, so that I have the appropriate information for my application.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
                 "O"
             ],
             [
                 "do",
-                "AUX",
-                "P-ACT"
-            ],
-            [
-                "not",
-                "PART",
-                "P-ACT"
-            ],
-            [
-                "want",
                 "VERB",
-                "P-ACT"
-            ],
-            [
-                "DABS",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "banner",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "messages",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
                 "O"
             ],
             [
-                "vice",
-                "ADV",
-                "O"
-            ],
-            [
-                "versa",
-                "ADV",
-                "O"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "appropriate",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "information",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "for",
+                "with",
                 "ADP",
                 "O"
             ],
             [
-                "my",
+                "it",
                 "PRON",
                 "O"
-            ],
-            [
-                "application",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -835,7 +445,7 @@
         ]
     },
     {
-        "Text": "#G02# As an Owner, I want to reset the environment to only take Staging MAX permissions, so that I can ensure that the FABS testers no longer have access.",
+        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders’ rules, so that I can ensure all costs will be accepted.",
         "Word Data": [
             [
                 "#",
@@ -843,8 +453,8 @@
                 "O"
             ],
             [
-                "G02",
-                "PROPN",
+                "G22",
+                "NOUN",
                 "O"
             ],
             [
@@ -858,12 +468,22 @@
                 "O"
             ],
             [
-                "an",
+                "a",
                 "DET",
                 "O"
             ],
             [
-                "Owner",
+                "research",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "support",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "officer",
                 "NOUN",
                 "PER"
             ],
@@ -888,9 +508,19 @@
                 "O"
             ],
             [
-                "reset",
+                "ensure",
                 "VERB",
                 "P-ACT"
+            ],
+            [
+                "compliance",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "ADP",
+                "O"
             ],
             [
                 "the",
@@ -898,37 +528,17 @@
                 "O"
             ],
             [
-                "environment",
+                "funders",
                 "NOUN",
-                "P-ENT"
+                "S-ENT"
             ],
             [
-                "to",
+                "’",
                 "PART",
-                "O"
-            ],
-            [
-                "only",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "take",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "Staging",
-                "VERB",
                 "S-ENT"
             ],
             [
-                "MAX",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "permissions",
+                "rules",
                 "NOUN",
                 "S-ENT"
             ],
@@ -963,44 +573,29 @@
                 "S-ACT"
             ],
             [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "the",
+                "all",
                 "DET",
+                "S-ENT"
+            ],
+            [
+                "costs",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "will",
+                "AUX",
                 "O"
             ],
             [
-                "FABS",
-                "NOUN",
-                "S-ENT"
+                "be",
+                "AUX",
+                "O"
             ],
             [
-                "testers",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "no",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "longer",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "have",
+                "accepted",
                 "VERB",
                 "S-ACT"
-            ],
-            [
-                "access",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -1010,7 +605,7 @@
         ]
     },
     {
-        "Text": "#G02# As an Agency user, I want all historical Financial Assistance data loaded for FABS go-live.",
+        "Text": "#G22# As an institutional data manager, I want to know about the privacy and security requirements of the data, so that I can plan the right storage system and sharing permissions.",
         "Word Data": [
             [
                 "#",
@@ -1018,8 +613,8 @@
                 "O"
             ],
             [
-                "G02",
-                "NUM",
+                "G22",
+                "NOUN",
                 "O"
             ],
             [
@@ -1038,127 +633,17 @@
                 "O"
             ],
             [
-                "Agency",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "all",
-                "DET",
-                "P-ENT"
-            ],
-            [
-                "historical",
+                "institutional",
                 "ADJ",
-                "P-ENT"
-            ],
-            [
-                "Financial",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "Assistance",
-                "NOUN",
-                "P-ENT"
+                "PER"
             ],
             [
                 "data",
                 "NOUN",
-                "P-ENT"
-            ],
-            [
-                "loaded",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "go",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "-",
-                "PUNCT",
-                "S-ENT"
-            ],
-            [
-                "live",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "NOUN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
                 "PER"
             ],
             [
-                "user",
+                "manager",
                 "NOUN",
                 "PER"
             ],
@@ -1183,14 +668,14 @@
                 "O"
             ],
             [
-                "make",
+                "know",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "sure",
-                "ADJ",
-                "P-ACT"
+                "about",
+                "ADP",
+                "O"
             ],
             [
                 "the",
@@ -1198,32 +683,37 @@
                 "O"
             ],
             [
-                "historical",
-                "ADJ",
-                "S-ENT"
+                "privacy",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "security",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "requirements",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
             ],
             [
                 "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "includes",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "all",
-                "DET",
-                "S-ENT"
-            ],
-            [
-                "necessary",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "columns",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1243,39 +733,54 @@
                 "O"
             ],
             [
-                "the",
-                "DET",
+                "I",
+                "PRON",
                 "O"
             ],
             [
-                "information",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "database",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "is",
+                "can",
                 "AUX",
                 "O"
             ],
             [
-                "correct",
-                "ADJ",
+                "plan",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
                 "O"
+            ],
+            [
+                "right",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "storage",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "system",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "sharing",
+                "VERB",
+                "S-ENT"
+            ],
+            [
+                "permissions",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 ".",
@@ -1285,7 +790,7 @@
         ]
     },
     {
-        "Text": "#G02# As a Developer , I want to be able to log better, so that I can troubleshoot issues with particular submissions and functions.",
+        "Text": "#G22# As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.",
         "Word Data": [
             [
                 "#",
@@ -1293,7 +798,477 @@
                 "O"
             ],
             [
-                "G02",
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "manager",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "know",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "security",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "requirements",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "check",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "whether",
+                "SCONJ",
+                "S-ENT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "kept",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "secure",
+                "ADJ",
+                "S-ACT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "researcher",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "extract",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "description",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "collected",
+                "VERB",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "reuse",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "it",
+                "PRON",
+                "O"
+            ],
+            [
+                "for",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "writing",
+                "NOUN",
+                "S-ACT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "paper",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a rector, I want to know how many data will be stored, so that I can plan long term resources.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "rector",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "know",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "how",
+                "SCONJ",
+                "P-ENT"
+            ],
+            [
+                "many",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "will",
+                "AUX",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "stored",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "plan",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "long",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "term",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "resources",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a Postgraduate Convenor, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
                 "PROPN",
                 "O"
             ],
@@ -1313,7 +1288,987 @@
                 "O"
             ],
             [
-                "Developer",
+                "Postgraduate",
+                "PROPN",
+                "PER"
+            ],
+            [
+                "Convenor",
+                "PROPN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "receive",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "regular",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "summary",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "reports",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "research",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "understand",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "trends",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "use",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "among",
+                "ADP",
+                "O"
+            ],
+            [
+                "staff",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "postgraduate",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "students",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to see the sections on roles submitted by other researchers in my department, so that I can see if we could share data manager posts.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "researcher",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "see",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "sections",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "on",
+                "ADP",
+                "O"
+            ],
+            [
+                "roles",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "submitted",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "by",
+                "ADP",
+                "O"
+            ],
+            [
+                "other",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "researchers",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "department",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "see",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "if",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "we",
+                "PRON",
+                "O"
+            ],
+            [
+                "could",
+                "AUX",
+                "O"
+            ],
+            [
+                "share",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "manager",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "posts",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to plan what kind of data I want to store, so that I can ensure it will be possible to store it.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "PI",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "plan",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "what",
+                "DET",
+                "O"
+            ],
+            [
+                "kind",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "P-ENT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "I",
+                "PRON",
+                "P-ENT"
+            ],
+            [
+                "want",
+                "VERB",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "P-ENT"
+            ],
+            [
+                "store",
+                "VERB",
+                "P-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "ensure",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "it",
+                "PRON",
+                "O"
+            ],
+            [
+                "will",
+                "AUX",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "possible",
+                "ADJ",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "store",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "it",
+                "PRON",
+                "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As an administrator, I want to know who funded the project and their requirements, so that I can track the funder specific obligations.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "administrator",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "know",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "who",
+                "PRON",
+                "P-ENT"
+            ],
+            [
+                "funded",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "project",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "their",
+                "PRON",
+                "O"
+            ],
+            [
+                "requirements",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "track",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "funder",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "specific",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "obligations",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As an IT staff member, I want to know how the data is used, so that I can determine what kind of basic services and functionalities are required.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "IT",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "staff",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "member",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "know",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "how",
+                "SCONJ",
+                "P-ENT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "is",
+                "AUX",
+                "O"
+            ],
+            [
+                "used",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "determine",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "what",
+                "DET",
+                "O"
+            ],
+            [
+                "kind",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "S-ENT"
+            ],
+            [
+                "basic",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "services",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "functionalities",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "required",
+                "VERB",
+                "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to know how secure data is, so that I can ensure legal compliance.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "PI",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "know",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "how",
+                "SCONJ",
+                "P-ENT"
+            ],
+            [
+                "secure",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "is",
+                "AUX",
+                "O"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "can",
+                "AUX",
+                "O"
+            ],
+            [
+                "ensure",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "legal",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "compliance",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G22# As a repository owner, I want to be able to check the planned provenance of the data that will be submitted at the end of a project, so that I can calculate necessary submission fees and check whether it belongs to our target group.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G22",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "repository",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "owner",
                 "NOUN",
                 "PER"
             ],
@@ -1353,328 +2308,23 @@
                 "O"
             ],
             [
-                "log",
+                "check",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "better",
-                "ADV",
-                "P-ACT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "troubleshoot",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "issues",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "with",
-                "ADP",
-                "O"
-            ],
-            [
-                "particular",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "submissions",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "functions",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
+                "the",
                 "DET",
                 "O"
             ],
             [
-                "agency",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "submit",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "elements",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "surrounded",
+                "planned",
                 "VERB",
                 "P-ENT"
             ],
             [
-                "by",
-                "ADP",
-                "P-ENT"
-            ],
-            [
-                "quotation",
+                "provenance",
                 "NOUN",
-                "P-ENT"
-            ],
-            [
-                "marks",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "Excel",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "wo",
-                "AUX",
-                "S-ACT"
-            ],
-            [
-                "n't",
-                "PART",
-                "S-ACT"
-            ],
-            [
-                "strip",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "off",
-                "ADP",
-                "S-ACT"
-            ],
-            [
-                "leading",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "S-ENT"
-            ],
-            [
-                "trailing",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "zeroes",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "NUM",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "UI",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "designer",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "move",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "on",
-                "ADP",
-                "P-ACT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "round",
-                "ADV",
-                "P-ENT"
-            ],
-            [
-                "2",
-                "NUM",
                 "P-ENT"
             ],
             [
@@ -1683,157 +2333,37 @@
                 "O"
             ],
             [
-                "DABS",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "landing",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "page",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "edits",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "get",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "approvals",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "from",
-                "ADP",
-                "O"
-            ],
-            [
-                "leadership",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
+                "the",
                 "DET",
                 "O"
             ],
             [
-                "FABS",
+                "data",
                 "NOUN",
-                "PER"
+                "S-ENT"
             ],
             [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
+                "that",
                 "PRON",
                 "O"
             ],
             [
-                "want",
+                "will",
+                "AUX",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "submitted",
                 "VERB",
-                "P-ACT"
+                "S-ACT"
             ],
             [
-                "additional",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "helpful",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "info",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "in",
+                "at",
                 "ADP",
                 "O"
             ],
@@ -1843,12 +2373,22 @@
                 "O"
             ],
             [
-                "submission",
+                "end",
                 "NOUN",
-                "S-ENT"
+                "O"
             ],
             [
-                "dashboard",
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "project",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1878,17 +2418,22 @@
                 "O"
             ],
             [
-                "better",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "manage",
+                "calculate",
                 "VERB",
                 "S-ACT"
             ],
             [
-                "submissions",
+                "necessary",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "submission",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "fees",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1898,12 +2443,42 @@
                 "O"
             ],
             [
-                "IG",
+                "check",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "whether",
+                "SCONJ",
+                "S-ENT"
+            ],
+            [
+                "it",
+                "PRON",
+                "O"
+            ],
+            [
+                "belongs",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "ADP",
+                "O"
+            ],
+            [
+                "our",
+                "PRON",
+                "O"
+            ],
+            [
+                "target",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "requests",
+                "group",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1915,7 +2490,7 @@
         ]
     },
     {
-        "Text": "#G02# As a Developer, I want to add the GTAS window data to the database, so that I can ensure the site is locked down during the GTAS submission period.",
+        "Text": "#G22# As a data manager, I want to know how the data is used, so that I can develop more detailed usage and support scenarios with researchers.",
         "Word Data": [
             [
                 "#",
@@ -1923,8 +2498,8 @@
                 "O"
             ],
             [
-                "G02",
-                "PROPN",
+                "G22",
+                "NOUN",
                 "O"
             ],
             [
@@ -1943,8 +2518,13 @@
                 "O"
             ],
             [
-                "Developer",
-                "PROPN",
+                "data",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "manager",
+                "NOUN",
                 "PER"
             ],
             [
@@ -1968,82 +2548,22 @@
                 "O"
             ],
             [
-                "add",
+                "know",
                 "VERB",
                 "P-ACT"
             ],
             [
+                "how",
+                "SCONJ",
+                "P-ENT"
+            ],
+            [
                 "the",
                 "DET",
                 "O"
-            ],
-            [
-                "GTAS",
-                "PROPN",
-                "P-ENT"
-            ],
-            [
-                "window",
-                "NOUN",
-                "P-ENT"
             ],
             [
                 "data",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "database",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "ensure",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "site",
                 "NOUN",
                 "S-ENT"
             ],
@@ -2053,119 +2573,9 @@
                 "O"
             ],
             [
-                "locked",
+                "used",
                 "VERB",
                 "S-ACT"
-            ],
-            [
-                "down",
-                "ADP",
-                "S-ACT"
-            ],
-            [
-                "during",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "GTAS",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "submission",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "period",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an Agency user, I want FABS deployed into production, so I can submit my Financial Assistance data.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "NUM",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Agency",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "deployed",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "into",
-                "ADP",
-                "O"
-            ],
-            [
-                "production",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ",",
@@ -2174,7 +2584,12 @@
             ],
             [
                 "so",
-                "ADV",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
                 "O"
             ],
             [
@@ -2188,224 +2603,39 @@
                 "O"
             ],
             [
-                "submit",
+                "develop",
                 "VERB",
                 "S-ACT"
             ],
             [
-                "my",
-                "PRON",
-                "O"
+                "more",
+                "ADV",
+                "S-ENT"
             ],
             [
-                "Financial",
+                "detailed",
                 "ADJ",
                 "S-ENT"
             ],
             [
-                "Assistance",
+                "usage",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "data",
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "support",
+                "NOUN",
+                "S-ACT"
+            ],
+            [
+                "scenarios",
                 "NOUN",
                 "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a user, I don't want to see NASA grants displayed as contracts.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "do",
-                "AUX",
-                "P-ACT"
-            ],
-            [
-                "n't",
-                "PART",
-                "P-ACT"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "to",
-                "PART",
-                "P-ACT"
-            ],
-            [
-                "see",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "NASA",
-                "PROPN",
-                "P-ENT"
-            ],
-            [
-                "grants",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "displayed",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "contracts",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a Broker user, I want the D1 file generation to be synced with the FPDS data load, so that I don't have to regenerate a file if no data has been updated.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "NUM",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Broker",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "D1",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "file",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "generation",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "S-ACT"
-            ],
-            [
-                "synced",
-                "VERB",
-                "S-ACT"
             ],
             [
                 "with",
@@ -2413,369 +2643,9 @@
                 "O"
             ],
             [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "FPDS",
+                "researchers",
                 "NOUN",
                 "S-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "load",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "do",
-                "AUX",
-                "S-ACT"
-            ],
-            [
-                "n't",
-                "PART",
-                "S-ACT"
-            ],
-            [
-                "have",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "to",
-                "PART",
-                "S-ACT"
-            ],
-            [
-                "regenerate",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "file",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "if",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "no",
-                "DET",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "has",
-                "AUX",
-                "O"
-            ],
-            [
-                "been",
-                "AUX",
-                "O"
-            ],
-            [
-                "updated",
-                "VERB",
-                "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an owner, I only want zero-padded fields, so that I can justify padding.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "owner",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "only",
-                "ADV",
-                "P-ACT"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "zero",
-                "NUM",
-                "P-ENT"
-            ],
-            [
-                "-",
-                "PUNCT",
-                "P-ENT"
-            ],
-            [
-                "padded",
-                "VERB",
-                "P-ENT"
-            ],
-            [
-                "fields",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "justify",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "padding",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want the language on FABS pages to be appropriate for me, so that I am not confused.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G02",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "language",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "on",
-                "ADP",
-                "O"
-            ],
-            [
-                "FABS",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "pages",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "appropriate",
-                "ADJ",
-                "O"
-            ],
-            [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "me",
-                "PRON",
-                "O"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "ADV",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "am",
-                "AUX",
-                "O"
-            ],
-            [
-                "not",
-                "PART",
-                "S-ACT"
-            ],
-            [
-                "confused",
-                "ADJ",
-                "S-ACT"
             ],
             [
                 ".",
