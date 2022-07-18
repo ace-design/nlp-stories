@@ -5,6 +5,7 @@
 import argparse
 import json
 import jsonl_to_human_readable
+import random
 import stanza
 import sys
 
@@ -17,17 +18,19 @@ def main():
     global stanza_nlp
     stanza_nlp = stanza.Pipeline('en')
 
+    training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories)
+
     final_results_training = []
     final_results_evaluation = []
 
-    for i in range(len(stories)):
-        training_stories_info = pos_tags(stories[i], annotated_stories[i], stanza_nlp)
-        story_format_training = format_output(stories[i], training_stories_info)
+    for i in range(len(training_stories)):
+        training_stories_info = pos_tags(training_stories[i], training_annotated[i], stanza_nlp)
+        story_format_training = format_output(training_stories[i], training_stories_info)
         final_results_training.append(story_format_training)
 
-    for i in range(len(stories)):
-        evaluation_stories_info = pos_tags(stories[i], annotated_stories[i], stanza_nlp)
-        story_format_evaluation = format_output(stories[i], evaluation_stories_info)
+    for i in range(len(testing_stories)):
+        evaluation_stories_info = pos_tags(testing_stories[i], testing_annotated[i], stanza_nlp)
+        story_format_evaluation = format_output(testing_stories[i], evaluation_stories_info)
         final_results_evaluation.append(story_format_evaluation)
 
     save_results(final_results_training, final_results_evaluation, save_name)
@@ -88,6 +91,38 @@ def extract_stories(path):
 
     return text, annotated_stories
        
+def randomize_stories(stories, annotated_stories):
+    '''
+    randomize the stories to have 20% of set for testing and 80% of set for training
+
+    Parameters:
+    stories (list): contains the text of every story in the dataset
+    annotated_stories (list): contains the annotated information corresponding to the stories list
+
+    Returns:
+    training_stories (list): stories for the training set
+    training_annotated (list): contains the annotated information corresponding to the training_stories list
+    testing_stories (list): stories for the testing set
+    testing_annotated (list): contains the annotated infromation correspongind the the testing_stories list  
+    '''
+
+    training_stories = stories
+    training_annotated = annotated_stories
+    testing_stories = []
+    testing_annotated = []
+
+    num_test = int(len(training_stories) * 0.2)
+
+    for i in range(num_test):
+        length = len(training_stories)
+        index = random.randint(0, length -1)
+        testing_stories.append(training_stories[index])
+        testing_annotated.append(training_annotated[index])
+        training_stories.pop(index)
+        training_annotated.pop(index)
+
+    return training_stories, training_annotated, testing_stories, testing_annotated
+
 def identify_labels(text, entities):
     '''
     Identify and sort labels within story
@@ -252,34 +287,6 @@ def pos_tags(story, annotated_story, stanza_nlp):
 
     return story_info
 
-# def pos_tags_evaluation(story, stanza_nlp):
-#     '''
-#     get the pos tags of each word in the story for the evaluation story set
-
-#     Parameters:
-#     story (str): the story that is getting the pos tags
-#     stanza_nlp (obj): the nlp that will get the pos tags of each word
-
-#     Returns:
-#     story_info (list): contains tuples of each word in the sentence in the format of (word, pos tag)
-#     '''
-
-#     pos = []
-#     text = []
-#     story_info = []
-
-#     evaluated_story = stanza_nlp(story)
-#     for sent in evaluated_story.sentences:
-#         for word in sent.words:
-#             pos.append(word.upos)
-#             text.append(word.text)
-
-#     for i in range(len(text)):
-#         word_info = (text[i], pos[i])
-#         story_info.append(word_info)
-
-#     return story_info
-
 def format_output(story_text, story_info):
     '''
     will format the results for json file
@@ -307,7 +314,7 @@ def save_results(final_results_training, final_results_evaluation, save_name):
     '''
 
     training_saving_path = "crf_input\\training_input\\" + save_name + ".json"
-    evaluation_saving_path = "crf_input\\evaluation_input\\" + save_name + ".json"
+    evaluation_saving_path = "crf_input\\testing_input\\" + save_name + ".json"
 
     with open(training_saving_path,"w", encoding="utf-8") as file:
         json.dump(final_results_training, file, indent = 4)
