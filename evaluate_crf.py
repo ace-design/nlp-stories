@@ -14,8 +14,8 @@ def main():
 
     #Find the results for persona, primary/secondary action and entity
     for dataset in datasets:
-        train.append("crf_input\\training_input\\" + dataset + ".json")
-        test.append("crf_input\\evaluation_input\\" + dataset + ".json")
+        train.append("crf_input\\training_input1\\" + dataset + ".json")
+        test.append("crf_input\\testing_input1\\" + dataset + ".json")
 
     p_act = []
     s_act = []
@@ -25,7 +25,7 @@ def main():
     weighted_average = []
 
     for i in range(len(datasets)):
-        line = "python crf_nlp.py " + train[i] + " " + test[i] + " " + save_name + str(i)
+        line = "python crf_nlp.py " + train[i] + " " + test[i] + " " + datasets[i] + "_" + save_name
         results = subprocess.run(line, capture_output = True)
         data = results.stdout.decode()
         print(data)
@@ -52,8 +52,8 @@ def main():
     test = []
 
     for dataset in datasets:
-        train.append("crf_input\\training_input_no_secondary\\" + dataset + ".json")
-        test.append("crf_input\\evaluation_input_no_secondary\\" + dataset + ".json")
+        train.append("crf_input\\training_input1_no_secondary\\" + dataset + ".json")
+        test.append("crf_input\\testing_input1_no_secondary\\" + dataset + ".json")
 
     act = []
     ent = []
@@ -61,7 +61,7 @@ def main():
     weighted_average = []
 
     for i in range(len(datasets)):
-        line = "python crf_nlp.py " + train[i] + " " + test[i] + " " + save_name + str(i)+ str(i)+ str(i)
+        line = "python crf_nlp.py " + train[i] + " " + test[i] + " " + datasets[i] + "_" + save_name + str(i)
         results = subprocess.run(line, capture_output = True)
         data = results.stdout.decode()
         print(data)

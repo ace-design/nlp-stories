@@ -1,5 +1,6 @@
 #nlp tool that will train and test the set given
 
+from lib2to3.pgen2 import token
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
@@ -12,8 +13,8 @@ import sys
 
 def main():
     train_path, test_path, save_name = command()
-    training_set = extract_info(train_path)
-    testing_set = extract_info(test_path)
+    training_set, _ = extract_info(train_path)
+    testing_set, training_stories = extract_info(test_path)
 
     X_train = [sent2features(s) for s in training_set] # Features for the training set
     y_train = [sent2labels(s) for s in training_set]   # expected labels
@@ -41,6 +42,9 @@ def main():
 
     report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
     print(report)
+
+    for i in range(len(y_pred)):
+        match_annotations(y_pred[i], testing_set[i], training_stories[i])
 
 def command():
     '''
@@ -86,16 +90,19 @@ def extract_info(path):
 
     Returns:
     word_data (list): contains tuples of each word in each story in format of (word, POS, label)
+    story_data (list): contains the text of each story in the dataset
     '''
     word_data = []
+    story_data = []
 
     file = open(path, encoding= "utf-8")
     data = json.load(file)
 
     for story in data:
         word_data.append([tuple(element) for element in story["Word Data"]])
+        story_data.append(story["Text"])
 
-    return word_data
+    return word_data, story_data
 
 def sent2tokens(sentence): 
     return [tok for tok, _, _ in sentence]
@@ -209,6 +216,92 @@ def train_model(model, x_features, y_labels, file):
     print('Execution time:', end-start, 'seconds')
     return model
 
+def match_annotations(y_pred, testing_set, story_text):
+    '''
+    match the annotation to the words in the story
+
+    Parameters:
+    y_pred (list): contains the annotated informations for each token in each story of the testing set
+    testing_set (list): contains the tuples of all the information of the the testing set 
+    story_text (str): the story
+
+    Returns:
+    
+    '''
+
+    tokens = sent2tokens(testing_set)
+
+    print(y_pred)
+    print(tokens)
+    persona = []
+    primary_action = []
+    secondary_action = []
+    primary_entity = []
+    secondary_entity = []
+
+    i = 0
+    j = 0 
+    while i < len(y_pred):
+        #match the tokens with the story text by identifying start and end characters
+        start = story_text.find(tokens[i], j)
+        end = start + len(tokens[i])
+
+        #match labels (if the same label appears in next token, then merge the annotations as one)
+        if y_pred[i] == "PER":
+            end, i = check_next(y_pred, story_text, tokens, end, i, "PER")
+            persona.append(story_text[start:end])
+
+        elif y_pred[i] == "P-ACT":
+            end, i = check_next(y_pred, story_text, tokens, end, i, "P-ACT")
+            primary_action.append(story_text[start:end])
+
+        elif y_pred[i] == "S-ACT":
+            end, i = check_next(y_pred, story_text, tokens, end, i, "S-ACT")
+            secondary_action.append(story_text[start:end])
+
+        elif y_pred[i] == "P-ENT":
+            end, i = check_next(y_pred, story_text, tokens, end, i, "P-ENT")
+            primary_entity.append(story_text[start:end])
+
+        elif y_pred[i] == "S-ENT":
+            end, i = check_next(y_pred, story_text, tokens, end, i, "S-ENT")
+            secondary_entity.append(story_text[start:end])
+
+        i += 1
+        j = end
+
+    print(persona)
+    print(primary_action)
+    print(secondary_action)
+    print(primary_entity)
+    print(secondary_entity)
+    print()
+
+
+
+def check_next (y_pred, story_text, tokens, end, i, label_type): 
+    '''
+    checks if the next token is the same annotation type
+
+    Parameters:
+    y_pred (list): contains the annotated informations for each token in each story of the testing set
+    story_text (str): the story
+    tokens (list): contains the tokens of the text in the story
+    end (int): position of end character of the annotation
+    i (int): counter that goes through positions of y_pred and tokens
+    label_type (str): the label type of the annotation ex. "PER" pr "ACT"
+
+    Returns:
+    end (int): position of end character of the annotation
+    i (int): counter that goes through positions of y_pred and tokens
+    '''
+    #runs process if next token label is the same as the token we were just looking at 
+    while y_pred [i + 1] == label_type and i < len(y_pred):
+        #adjust the end character position to include this token so we can identify as one annotation
+        end = story_text.find(tokens[i+1], end) + len(tokens[i+1])
+        i += 1
+
+    return end, i
 
 if __name__ == "__main__":
     main()
