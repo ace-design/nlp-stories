@@ -53,7 +53,8 @@ def command():
     gets info from the commandline input
 
     Returns:
-    args.load_crf_input_path (str): Path to the dataset file to be loaded
+    args.load_training_path (str): path of crf file with the training set input
+    args.load_testing_path (str): path of crf file with the testing set input
     args.save_name (str): name to the saving file
 
     Raises:
@@ -251,8 +252,8 @@ def match_annotations(y_pred, testing_set, story_text):
 
     tokens = sent2tokens(testing_set)
 
-    print(y_pred)
-    print(tokens)
+    # print(y_pred)
+    # print(tokens)
     persona = []
     primary_action = []
     secondary_action = []
@@ -290,12 +291,12 @@ def match_annotations(y_pred, testing_set, story_text):
         i += 1
         j = end
 
-    print(persona)
-    print(primary_action)
-    print(secondary_action)
-    print(primary_entity)
-    print(secondary_entity)
-    print()
+    # print(persona)
+    # print(primary_action)
+    # print(secondary_action)
+    # print(primary_entity)
+    # print(secondary_entity)
+    # print()
 
 
 
@@ -316,7 +317,7 @@ def check_next (y_pred, story_text, tokens, end, i, label_type):
     i (int): counter that goes through positions of y_pred and tokens
     '''
     #runs process if next token label is the same as the token we were just looking at 
-    while y_pred [i + 1] == label_type and i < len(y_pred):
+    while i < len(y_pred) -1 and y_pred [i + 1] == label_type:
         #adjust the end character position to include this token so we can identify as one annotation
         end = story_text.find(tokens[i+1], end) + len(tokens[i+1])
         i += 1

@@ -14,8 +14,8 @@ def main():
 
     #Find the results for persona, primary/secondary action and entity
     for dataset in datasets:
-        train.append("crf_input\\training_input1\\" + dataset + ".json")
-        test.append("crf_input\\testing_input1\\" + dataset + ".json")
+        train.append("crf_input\\training_input\\" + dataset + ".json")
+        test.append("crf_input\\testing_input\\" + dataset + ".json")
 
     p_act = []
     s_act = []
@@ -52,8 +52,8 @@ def main():
     test = []
 
     for dataset in datasets:
-        train.append("crf_input\\training_input1_no_secondary\\" + dataset + ".json")
-        test.append("crf_input\\testing_input1_no_secondary\\" + dataset + ".json")
+        train.append("crf_input\\training_input_no_secondary\\" + dataset + ".json")
+        test.append("crf_input\\testing_input_no_secondary\\" + dataset + ".json")
 
     act = []
     ent = []
