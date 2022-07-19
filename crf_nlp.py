@@ -1,12 +1,12 @@
 #nlp tool that will train and test the set given
 
-from configparser import SectionProxy
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
 import json
 import os
 import pickle
+import stanza
 import time
 from sklearn.metrics import make_scorer, classification_report
 import sys
@@ -46,9 +46,12 @@ def main():
     report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
     print(report)
 
+    stanza.download('en') 
+    stanza_nlp = stanza.Pipeline('en')
+
     output = []
     for i in range(len(y_pred)):
-        persona, primary_action, secondary_action, primary_entity, secondary_entity = match_annotations(y_pred[i], testing_set[i], testing_stories[i])
+        persona, primary_action, secondary_action, primary_entity, secondary_entity = match_annotations(y_pred[i], testing_set[i], testing_stories[i], stanza_nlp)
         formatted_data = format_results(testing_stories[i], persona, primary_action, secondary_action, primary_entity, secondary_entity)
         output.append(formatted_data)
 
@@ -129,7 +132,6 @@ def ensure_no_intersection(training_set, testing_set):
     if len(same_data) != 0:
         print(same_data)
         raise Exception ("Same stories exist in both training and testing set")
-
 
 def sent2tokens(sentence): 
     return [tok for tok, _, _ in sentence]
@@ -243,7 +245,7 @@ def train_model(model, x_features, y_labels, file):
     print('Execution time:', end-start, 'seconds')
     return model
 
-def match_annotations(y_pred, testing_set, story_text):
+def match_annotations(y_pred, testing_set, story_text, stanza_nlp):
     '''
     match the annotation to the words in the story
 
@@ -251,6 +253,7 @@ def match_annotations(y_pred, testing_set, story_text):
     y_pred (list): contains the annotated informations for each token in each story of the testing set
     testing_set (list): contains the tuples of all the information of the the testing set 
     story_text (str): the story
+    stanza_nlp (obj): stanza nlp tool for getting POS tags
 
     Returns:
     persona (list): identifies persona in the story
@@ -283,11 +286,11 @@ def match_annotations(y_pred, testing_set, story_text):
             persona.append(story_text[start:end])
 
         elif y_pred[i] == "P-ACT":
-            end, i = check_next(y_pred, story_text, tokens, end, i, "P-ACT")
+            end, i = check_next_action(y_pred, story_text, tokens, end, i, "P-ACT", stanza_nlp)
             primary_action.append(story_text[start:end])
 
         elif y_pred[i] == "S-ACT":
-            end, i = check_next(y_pred, story_text, tokens, end, i, "S-ACT")
+            end, i = check_next_action(y_pred, story_text, tokens, end, i, "S-ACT", stanza_nlp)
             secondary_action.append(story_text[start:end])
 
         elif y_pred[i] == "P-ENT":
@@ -320,7 +323,7 @@ def check_next (y_pred, story_text, tokens, end, i, label_type):
     tokens (list): contains the tokens of the text in the story
     end (int): position of end character of the annotation
     i (int): counter that goes through positions of y_pred and tokens
-    label_type (str): the label type of the annotation ex. "PER" pr "ACT"
+    label_type (str): the label type of the annotation ex. "PER" or "ENT"
 
     Returns:
     end (int): position of end character of the annotation
@@ -331,6 +334,37 @@ def check_next (y_pred, story_text, tokens, end, i, label_type):
         #adjust the end character position to include this token so we can identify as one annotation
         end = story_text.find(tokens[i+1], end) + len(tokens[i+1])
         i += 1
+
+    return end, i
+
+def check_next_action(y_pred, story_text, tokens, end, i, label_type, stanza_nlp): 
+    '''
+    checks if the next token is the same annotation type for action type labels 
+
+    Parameters:
+    y_pred (list): contains the annotated informations for each token in each story of the testing set
+    story_text (str): the story
+    tokens (list): contains the tokens of the text in the story
+    end (int): position of end character of the annotation
+    i (int): counter that goes through positions of y_pred and tokens
+    label_type (str): the label type of the annotation ex. "P-ACT" or "S-ACT"
+    stanza_nlp (obj): stanza nlp tool for getting POS tags
+
+    Returns:
+    end (int): position of end character of the annotation
+    i (int): counter that goes through positions of y_pred and tokens
+    '''
+    #runs process if next token label is the same as the token we were just looking at 
+    while i < len(y_pred) -1 and y_pred [i + 1] == label_type:
+        #if next token has a POS tag as verb, then they are two seperate actions and should not be considered under the same annotation
+        word = tokens[i+1]
+        nlp_evalution = stanza_nlp(word)
+        if nlp_evalution.sentences[0].words[0].upos == "VERB":
+            break
+        else:
+            #adjust the end character position to include this token so we can identify as one annotation
+            end = story_text.find(tokens[i+1], end) + len(tokens[i+1])
+            i += 1
 
     return end, i
 
@@ -371,7 +405,7 @@ def save_results(save_name, output):
 
     with open(saving_path,"w", encoding="utf-8") as file:
         json.dump(output, file, indent = 4)
-        
+
     print("File is saved")
 
 if __name__ == "__main__":
