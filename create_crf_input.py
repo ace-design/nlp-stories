@@ -19,6 +19,8 @@ def main():
     stanza_nlp = stanza.Pipeline('en')
 
     training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories)
+    ensure_no_intersection(training_stories, testing_stories)
+    ensure_no_intersection(training_annotated, testing_annotated)
 
     final_results_training = []
     final_results_evaluation = []
@@ -122,6 +124,23 @@ def randomize_stories(stories, annotated_stories):
         training_annotated.pop(index)
 
     return training_stories, training_annotated, testing_stories, testing_annotated
+
+def ensure_no_intersection(training_set, testing_set):
+    '''
+    Ensures that stories and information in the training set is not in the testing set
+
+    Parameters:
+    training_set (list): data in the training set
+    testing_set (list): data in the testing set
+
+    Raises error if same story or information in both training and testing set. 
+    '''
+
+    same_data = set(training_set).intersection(set(testing_set))
+
+    if len(same_data) != 0:
+        print(same_data)
+        raise Exception ("Same stories exist in both training and testing set")
 
 def identify_labels(text, entities):
     '''

@@ -1,6 +1,5 @@
 #nlp tool that will train and test the set given
 
-from lib2to3.pgen2 import token
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
@@ -13,8 +12,11 @@ import sys
 
 def main():
     train_path, test_path, save_name = command()
-    training_set, _ = extract_info(train_path)
+    training_set, testing_stories = extract_info(train_path)
     testing_set, training_stories = extract_info(test_path)
+
+    ensure_no_intersection(training_stories, testing_stories)
+    ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
 
     X_train = [sent2features(s) for s in training_set] # Features for the training set
     y_train = [sent2labels(s) for s in training_set]   # expected labels
@@ -103,6 +105,24 @@ def extract_info(path):
         story_data.append(story["Text"])
 
     return word_data, story_data
+
+def ensure_no_intersection(training_set, testing_set):
+    '''
+    Ensures that stories and information in the training set is not in the testing set
+
+    Parameters:
+    training_set (list): data in the training set
+    testing_set (list): data in the testing set
+
+    Raises error if same story or information in both training and testing set. 
+    '''
+
+    same_data = set(training_set).intersection(set(testing_set))
+
+    if len(same_data) != 0:
+        print(same_data)
+        raise Exception ("Same stories exist in both training and testing set")
+
 
 def sent2tokens(sentence): 
     return [tok for tok, _, _ in sentence]
