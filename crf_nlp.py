@@ -1,5 +1,6 @@
 #nlp tool that will train and test the set given
 
+from configparser import SectionProxy
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
@@ -12,8 +13,8 @@ import sys
 
 def main():
     train_path, test_path, save_name = command()
-    training_set, testing_stories = extract_info(train_path)
-    testing_set, training_stories = extract_info(test_path)
+    training_set, training_stories = extract_info(train_path)
+    testing_set, testing_stories = extract_info(test_path)
 
     ensure_no_intersection(training_stories, testing_stories)
     ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
@@ -45,8 +46,13 @@ def main():
     report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
     print(report)
 
+    output = []
     for i in range(len(y_pred)):
-        match_annotations(y_pred[i], testing_set[i], training_stories[i])
+        persona, primary_action, secondary_action, primary_entity, secondary_entity = match_annotations(y_pred[i], testing_set[i], testing_stories[i])
+        formatted_data = format_results(testing_stories[i], persona, primary_action, secondary_action, primary_entity, secondary_entity)
+        output.append(formatted_data)
+
+    save_results(save_name, output)
 
 def command():
     '''
@@ -247,13 +253,17 @@ def match_annotations(y_pred, testing_set, story_text):
     story_text (str): the story
 
     Returns:
-    
+    persona (list): identifies persona in the story
+    primary_action (list): identifies primary action in the story
+    secondary_action (list): identifies secondary action in the story
+    primary_entity (list): identifies primary entity in the story
+    secondary_entity (list): identifies secondary entity in the story
     '''
 
     tokens = sent2tokens(testing_set)
 
-    # print(y_pred)
-    # print(tokens)
+    print(y_pred)
+    print(tokens)
     persona = []
     primary_action = []
     secondary_action = []
@@ -291,14 +301,14 @@ def match_annotations(y_pred, testing_set, story_text):
         i += 1
         j = end
 
-    # print(persona)
-    # print(primary_action)
-    # print(secondary_action)
-    # print(primary_entity)
-    # print(secondary_entity)
-    # print()
+    print(persona)
+    print(primary_action)
+    print(secondary_action)
+    print(primary_entity)
+    print(secondary_entity)
+    print()
 
-
+    return persona, primary_action, secondary_action, primary_entity, secondary_entity
 
 def check_next (y_pred, story_text, tokens, end, i, label_type): 
     '''
@@ -323,6 +333,46 @@ def check_next (y_pred, story_text, tokens, end, i, label_type):
         i += 1
 
     return end, i
+
+def format_results(story, persona, primary_action, secondary_action, primary_entity, secondary_entity):
+    '''
+    format the results for json output
+
+    Parameters:
+    story (str): story text
+    persona (list): identifies persona in the story
+    primary_action (list): identifies primary action in the story
+    secondary_action (list): identifies secondary action in the story
+    primary_entity (list): identifies primary entity in the story
+    secondary_entity (list): identifies secondary entity in the story
+    
+    Returns:
+    formatted_data (dict): formatted dictionary for output into json
+    '''
+
+    formatted_data = {  "Text": story, 
+                        "Persona": persona,
+                        "Action": {"Primary Action": primary_action, "Secondary Action": secondary_action}, 
+                        "Entity": {"Primary Entity": primary_entity, "Secondary Entity": secondary_entity}
+                    }
+
+    return formatted_data
+
+def save_results(save_name, output):
+    '''
+    save the final results to a json file
+
+    Parameters: 
+    save_name (str): the name of the file to save
+    output (list): contains the data to save into the file    
+    '''   
+
+    saving_path = "nlp_outputs\\crf\\" + save_name +".json"
+
+    with open(saving_path,"w", encoding="utf-8") as file:
+        json.dump(output, file, indent = 4)
+        
+    print("File is saved")
 
 if __name__ == "__main__":
     main()
