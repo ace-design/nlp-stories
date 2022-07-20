@@ -3,52 +3,34 @@
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
+import matplotlib.pyplot as plt
 import json
+import numpy as np
 import os
 import pickle
 import stanza
 import time
+import scipy.stats
 from sklearn.metrics import make_scorer, classification_report
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
 import sys
 
 def main():
-    train_path, test_path, save_name = command()
-    training_set, training_stories = extract_info(train_path)
+    train_path, test_path, random_optimize, grid_optimize, save_name, saving_path = command()
+
+    stanza.download('en') 
+    stanza_nlp = stanza.Pipeline('en')
+    
     testing_set, testing_stories = extract_info(test_path)
-
-    ensure_no_intersection(training_stories, testing_stories)
-    ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
-
-    X_train = [sent2features(s) for s in training_set] # Features for the training set
-    y_train = [sent2labels(s) for s in training_set]   # expected labels
 
     X_test = [sent2features(s) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
-
-    saving_path = "crf_models\\"  + save_name + "_crf_model.pkl"
-
-    config = CRF( algorithm = 'lbfgs', c1 = 0.1, c2 = 0.1, max_iterations = 100, all_possible_transitions = True)
-    crf = train_model(config, X_train, y_train, saving_path)
-
-    y_pred = crf.predict(X_test)
-
-    available_labels = list(crf.classes_)
-    available_labels.remove('O')
-
-    print("Relevant labels: " + str(available_labels))
-
-    f1 = metrics.flat_f1_score(y_test, y_pred, average='weighted', labels=available_labels)
-    print("Weighted f-measure:" + str(f1))
-
-    sorted_labels = sorted(available_labels, key = lambda name: (name[1:], name[0]))
-
-    report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
-    print(report)
-
-    stanza.download('en') 
-    stanza_nlp = stanza.Pipeline('en')
-
+    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path)
+    
+    y_pred, available_labels = get_results(crf, X_test, y_test)
+    
     output = []
     for i in range(len(y_pred)):
         persona, primary_action, secondary_action, primary_entity, secondary_entity = match_annotations(y_pred[i], testing_set[i], testing_stories[i], stanza_nlp)
@@ -56,7 +38,8 @@ def main():
         output.append(formatted_data)
 
     save_results(save_name, output)
-
+    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, save_name)
+    
 def command():
     '''
     gets info from the commandline input
@@ -69,21 +52,36 @@ def command():
     Raises:
         FileNotFoundError: raises excpetion
         wrong file type: raises exception
+        optimize without training set given: raises exception
+        model does not exist and training set not given: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will create the input files for crf")
-    parser.add_argument("load_training_path", type = str, help = "path of crf file with the training set input")
     parser.add_argument("load_testing_path", type = str, help = "path of crf file with the testing set input")
+    parser.add_argument("--load_training_path", nargs="?", type = str, help = "path of crf file with the training set input")
+    parser.add_argument('--random_optimize', default = False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--grid_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
     
     args = parser.parse_args()
 
-    if not(args.load_training_path.endswith(".json")) and not(args.load_testing_path.endswith(".json")):
+    if  not(args.load_testing_path.endswith(".json")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. input file type is .jsonl")
 
+    saving_path = "crf_models\\"  + args.save_name + "_crf_model.pkl"
+
+    if args.load_training_path == None and not(os.path.exists(saving_path)):
+        sys.tracebacklimit = 0
+        raise Exception ("Missing training path file")
+
+    if args.load_training_path == None and (args.random_optimize or args.grid_optimize):
+        sys.tracebacklimit = 0
+        raise Exception ("Can not optimize if no training dataset is given")
+
     try:
-        load_file = open(args.load_training_path)
-        load_file.close()
+        if args.load_training_path != None:
+            load_file = open(args.load_training_path)
+            load_file.close()
         load_file = open(args.load_testing_path)
         load_file.close()
     except FileNotFoundError:
@@ -91,7 +89,31 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_training_path, args.load_testing_path, args.save_name
+        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.save_name, saving_path
+
+def get_model(train_path, testing_stories, testing_set, saving_path):
+    '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''
+    if train_path != None:
+        training_set, training_stories = extract_info(train_path)
+
+        ensure_no_intersection(training_stories, testing_stories)
+        ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
+
+        X_train = [sent2features(s) for s in training_set] # Features for the training set
+        y_train = [sent2labels(s) for s in training_set]   # expected labels
+
+        config = CRF( algorithm = 'lbfgs', c1 = 2.0435192749302566, c2 = 0.01421712968053971, max_iterations = 100, all_possible_transitions = True)
+
+        crf = train_model(config, X_train, y_train, saving_path)
+    else:
+        print("\nLoading from memory")
+        with bz2.BZ2File(saving_path, 'r') as infile:
+            crf = pickle.load(infile)
+
+        X_train = None
+        y_train = None
+
+    return crf, X_train, y_train
 
 def extract_info(path):
     '''
@@ -157,67 +179,65 @@ def word2features(sent, i):
         'postag':         postag,         # Part-of-speech tag
     }
 
-    ## Update for words that are not the first one
+    ## Update for words that are not the current word we are looking at
+
     if i > 0: 
         word1 = sent[i-1][0]      # previous word
         postag1 = sent[i-1][1]    # previous POS tag
         features.update({
             '-1:word.lower()':   word1.lower(),    # Previous word spelled uniformously
-            '-1:word.istitle()': word1.istitle(),  # is it a title?
-            '-1:word.isupper()': word1.isupper(),  # is it upper case?
-            '-1:postag':         postag1,          # POS tag for the previous word           
+            '-1:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-1:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-1:postag':         postag1,          # POS tag           
         })
     else:
         features['BOS'] = True # If the first one, Beginning Of Sentence is True
-
-    # Update for words that are not the last ones
-    if i < len(sent)-1:
-        word1 = sent[i+1][0]   # Next word
-        postag1 = sent[i+1][1] # next POS tag
-        features.update({
-            '+1:word.lower()':   word1.lower(),   # next word spelled uniformously
-            '+1:word.istitle()': word1.istitle(), # is it a title?
-            '+1:word.isupper()': word1.isupper(), # is it uppercase?
-            '+1:postag':         postag1,         # next POS tag
-            "isalpha()": word1.isalpha(),
-            '+1:word[-3:]':      word1[-3:],      # last 3 lett
-        })
-    else:
-        features['EOS'] = True # If the last one, then End Of Sentence is True.
-
 
     if i > 1: 
         word1 = sent[i-2][0]      # two words before
         postag1 = sent[i-2][1]    # two POS tags before
         features.update({
-            '-2:word.lower()':   word1.lower(),    # Previous word spelled uniformously
-            '-2:word.istitle()': word1.istitle(),  # is it a title?
-            '-2:word.isupper()': word1.isupper(),  # is it upper case?
-            '-2:postag':         postag1,          # POS tag for the previous word
-            '-2:word[-3:]':      word1[-3:],      # last 2 letters -> str
-            
+            '-2:word.lower()':   word1.lower(),    # word spelled uniformously
+            '-2:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-2:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-2:postag':         postag1,          # POS tag 
+            '-2:word[-3:]':      word1[-3:],       # last 3 letters -> str
         })
 
     if i > 2: 
         word1 = sent[i-3][0]      # three word before
         postag1 = sent[i-3][1]    # three POS tag before
         features.update({
-            '-3:word.lower()':   word1.lower(),    # Previous word spelled uniformously
-            '-3:word.istitle()': word1.istitle(),  # is it a title?
-            '-3:word.isupper()': word1.isupper(),  # is it upper case?
-            '-3:postag':         postag1,          # POS tag for the previous word
-            '-3:word[-2:]':      word1[-2:],      # last 2 letters -> str
+            '-3:word.lower()':   word1.lower(),    # word spelled uniformously
+            '-3:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-3:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-3:postag':         postag1,          # POS tag 
+            '-3:word[-2:]':      word1[-2:],       # last 2 letters -> str
         })
 
     if i > 3: 
         word1 = sent[i-4][0]      # four word before
         postag1 = sent[i-4][1]    # four POS tag before
         features.update({
-            '-4:word.lower()':   word1.lower(),    # Previous word spelled uniformously
-            '-4:word.istitle()': word1.istitle(),  # is it a title?
-            '-4:word.isupper()': word1.isupper(),  # is it upper case?
-            '-4:postag':         postag1,          # POS tag for the previous word
+            '-4:word.lower()':   word1.lower(),    # word spelled uniformously
+            '-4:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-4:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-4:postag':         postag1,          # POS tag
         })
+
+    if i < len(sent)-1:
+        word1 = sent[i+1][0]   # Next word
+        postag1 = sent[i+1][1] # next POS tag
+        features.update({
+            '+1:word.lower()':   word1.lower(),   # next word spelled uniformously
+            '+1:word.istitle()': word1.istitle(), # first letter uppercase -> bool
+            '+1:word.isupper()': word1.isupper(), # all letter upopercase -> bool
+            '+1:postag':         postag1,         # POS tag
+            "+1:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+            '+1:word[-3:]':      word1[-3:],      # last 3 letters -> str
+        })
+    else:
+        features['EOS'] = True # If the last one, then End Of Sentence is True.
 
     return features # return the feature vector for this very sentence
 
@@ -229,11 +249,11 @@ def train_model(model, x_features, y_labels, file):
     """Train model so that X fits Y, used file to store the model and avoid unnecessary training"""
     start = time.time()
     if os.path.exists(file):
-        print("Loading from memory")
+        print("\nLoading from memory")
         with bz2.BZ2File(file, 'r') as infile:
             model = pickle.load(infile)
     else:
-        print("Starting training")
+        print("\nStarting training")
         # training the model to fit the X space (features) with the Y one (labels)
         model.fit(x_features, y_labels)  ## <<== this is the training call
         print("training completed")
@@ -244,6 +264,25 @@ def train_model(model, x_features, y_labels, file):
     end = time.time()
     print('Execution time:', end-start, 'seconds')
     return model
+
+def get_results(crf, X_test, y_test):
+    '''runs crf to get the annotations in the stories based on the model'''
+    y_pred = crf.predict(X_test)
+
+    available_labels = list(crf.classes_)
+    available_labels.remove('O')
+
+    print("Relevant labels: " + str(available_labels))
+
+    f1 = metrics.flat_f1_score(y_test, y_pred, average='weighted', labels=available_labels)
+    print("Weighted f-measure:" + str(f1))
+
+    sorted_labels = sorted(available_labels, key = lambda name: (name[1:], name[0]))
+
+    report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
+    print(report)
+
+    return y_pred, available_labels
 
 def match_annotations(y_pred, testing_set, story_text, stanza_nlp):
     '''
@@ -265,8 +304,6 @@ def match_annotations(y_pred, testing_set, story_text, stanza_nlp):
 
     tokens = sent2tokens(testing_set)
 
-    print(y_pred)
-    print(tokens)
     persona = []
     primary_action = []
     secondary_action = []
@@ -303,13 +340,6 @@ def match_annotations(y_pred, testing_set, story_text, stanza_nlp):
 
         i += 1
         j = end
-
-    print(persona)
-    print(primary_action)
-    print(secondary_action)
-    print(primary_entity)
-    print(secondary_entity)
-    print()
 
     return persona, primary_action, secondary_action, primary_entity, secondary_entity
 
@@ -407,6 +437,88 @@ def save_results(save_name, output):
         json.dump(output, file, indent = 4)
 
     print("File is saved")
+
+def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, save_name):
+    '''optimize the c1 and c2 parameters'''
+
+    f1_scorer = make_scorer(metrics.flat_f1_score, average='weighted', labels=available_labels)
+
+    if random_optimize:
+        hp_best_param, hp_best_score = random_hyperparameter_optimization(X_train, y_train, f1_scorer, save_name)
+        
+        print("\n")
+        print('best hp params:', hp_best_param)
+        print('best hp CV score:', hp_best_score)
+    
+    if grid_optimize:
+        grid_best_param, grid_best_score =grid_hyperparameter_optimization(X_train, y_train, f1_scorer, save_name)
+        
+        print("\n")
+        print('best hp params:', grid_best_param)
+        print('best hp CV score:', grid_best_score)
+
+    if random_optimize and grid_optimize:
+        print("\n\nRandom optimize results:")
+        print('best hp params:', hp_best_param)
+        print('best hp CV score:', hp_best_score)
+        print("Grid optimize results:")
+        print('best hp params:', grid_best_param)
+        print('best hp CV score:', grid_best_score)
+
+def random_hyperparameter_optimization(X_train, y_train, f1_scorer, save_name):
+    '''hyperparameter optimization for finding c1 and c2 randomly'''
+
+    crf_hp = CRF(algorithm='lbfgs', max_iterations=100, all_possible_transitions=True)
+
+    # Isntead of fixing c1 and c2 to 0.1, we let the system explore the space to find the "best" value
+    params_space = { 'c1': scipy.stats.expon(scale=0.5), 'c2': scipy.stats.expon(scale=0.05)}
+    
+    config_rs = RandomizedSearchCV(crf_hp, params_space, cv=5, verbose=100, n_jobs=-1, n_iter=50, scoring= f1_scorer, return_train_score=True, refit=False)
+
+    crf_hp = train_model(config_rs, X_train, y_train, "crf_models\\"+ save_name + "_crf_model_hp.pkl")
+
+    plt.style.use('ggplot')
+    
+    plot_hp(crf_hp, 'mean_train_score') # How it behave on the training sets
+    plt.savefig("crf_graphs\\" + save_name + "_training_parameter_space.png")
+    plot_hp(crf_hp, 'mean_test_score') # How it behave on the validation sets
+    plt.savefig("crf_graphs\\" + save_name + "_testing_parameter_space.png")
+    print("\ngraphs are saved")
+
+    return crf_hp.best_params_, crf_hp.best_score_
+
+def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, save_name):
+
+    crf_grid = CRF(algorithm='lbfgs',max_iterations=100,all_possible_transitions=True,)
+
+    params_space_grid = {"c1": np.linspace(0.0, 0.5, 11),"c2": np.linspace(0.0, 0.1, 11)}
+
+    print()
+    print(params_space_grid)
+
+    config_grid = GridSearchCV(crf_grid, params_space_grid, cv=5, verbose=100, n_jobs=-1, scoring= f1_scorer, return_train_score=True, refit=False)
+
+    crf_grid = train_model(config_grid, X_train, y_train, "crf_models\\"+ save_name + "_crf_model_grid.pkl")
+
+    plot_hp(crf_grid, 'mean_test_score')
+    plt.savefig("crf_graphs\\" + save_name + "_grid_parameter_space.png")
+    print("\ngraph is saved")
+
+    return crf_grid.best_params_, crf_grid.best_score_
+
+def plot_hp(hp_model, color):
+    _x = [s['c1'] for s in hp_model.cv_results_['params']]
+    _y = [s['c2'] for s in hp_model.cv_results_['params']]
+    _c = [s for s in hp_model.cv_results_[color]]
+
+    fig = plt.figure()
+
+    plt.scatter(_x, _y, c=_c, s=60, alpha=0.3,cmap='coolwarm')
+    plt.xlabel("C1")
+    plt.ylabel("C2")
+    plt.title("Exploring {C1,C2} parameter space")
+    cb = plt.colorbar()
+    cb.ax.set_ylabel('F1-score')
 
 if __name__ == "__main__":
     main()
