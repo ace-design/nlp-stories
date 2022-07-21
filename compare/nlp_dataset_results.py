@@ -61,7 +61,6 @@ def command():
     args.load_dataset_names (str): path of the dataset names in a txt file
     args.save_folder_name (str): name of folder to save
     comparison_type (str): the type of comparison used for the data
-    args.number_dataset (int): number of dataset expected
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -76,7 +75,6 @@ def command():
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
     parser.add_argument("load_dataset_names_path", type = str, help = "path of dataset's name in txt file")
     parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
-    parser.add_argument("number_dataset", type = int, help = "number of dataset expected")
     
     args = parser.parse_args()
 
@@ -124,7 +122,11 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_primary_path, args.load_all_path, args.load_dataset_names_path, save_folder_path, comparison_type, args.number_dataset
+        with open(args.load_dataset_names_path, encoding = "utf-8") as file:
+            data = file.readlines()
+            number_dataset = len(data)
+
+        return args.load_primary_path, args.load_all_path, args.load_dataset_names_path, save_folder_path, comparison_type, number_dataset
 def extract_data (path, number_dataset):
     '''
     extract the data from the csv file 

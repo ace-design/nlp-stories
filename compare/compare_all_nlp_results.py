@@ -38,7 +38,6 @@ def command():
     args.load_fabian_path (str): Path to the fabian data csv file to be loaded
     args.load_visual_narrator_path (str): Path to the visual narrator data csv file to be loaded
     args.save_file_name (str): name of the file to be saved
-    args.number_of_datasets (str): number of datasets that are the csv files
 
 
     Raises:
@@ -53,7 +52,6 @@ def command():
     parser.add_argument("load_fabian_path", type = str, help = "path of fabian csv file")
     parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
     parser.add_argument("save_file_name", type = str, help = "name of file to save")
-    parser.add_argument("number_of_datasets", type = int, help = "number of dataset un the csv file, Note: must be same amount for all three files")
     
     args = parser.parse_args()
 
@@ -96,7 +94,10 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type, args.number_of_datasets, args.save_file_name
+        data = pd.read_csv(args.load_simple_path)
+        number_dataset = len(data)
+
+        return args.load_simple_path, args.load_fabian_path, args.load_visual_narrator_path, save_file_path, comparison_type, number_dataset, args.save_file_name
 
 def extract_data (path, number_dataset):
     '''
