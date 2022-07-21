@@ -1,6 +1,6 @@
 import pytest
 import stanza
-from comparison import relaxed_compare
+from compare.comparison import relaxed_compare
 
 stanza.download('en') 
 global stanza_pos_nlp

@@ -1,5 +1,5 @@
 import pytest 
-from comparison import calculate_precision
+from compare.comparison import calculate_precision
 
 @pytest.mark.calculate_precision
 def test_normal_case():

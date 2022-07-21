@@ -1,5 +1,5 @@
 import pytest 
-from comparison import calculate_recall
+from compare.comparison import calculate_recall
 
 @pytest.mark.calculate_recall
 def test_normal_case():

@@ -1,5 +1,5 @@
 import pytest
-from comparison import strict_compare
+from compare.comparison import strict_compare
 
 @pytest.fixture
 def baseline():

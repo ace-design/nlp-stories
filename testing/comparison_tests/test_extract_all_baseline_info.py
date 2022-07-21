@@ -1,5 +1,5 @@
 import pytest
-from comparison import extract_all_baseline_info
+from compare.comparison import extract_all_baseline_info
 from testing.comparison_tests.test_sort import pos_data
 
 @pytest.fixture

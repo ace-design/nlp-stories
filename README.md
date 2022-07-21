@@ -104,8 +104,8 @@ We compare the nlp's annotation with the manual baseline annotations to evaluate
     > python comparison.py `path to json file of baseline results` `path to json file of nlp results` `name of file to save` `comparison mode`
       - outputs: `png bargraphs of results for persona, entity, action for all and primary comparison` `txt file with missing stories that were not compared` `update csv files with final results` `update dataset txt file to indicate what dataset has just been compared`
 
-10. nlp_final_results.py: combine all the results of each dataset annotated by one nlp tool
-    > python nlp_final_results.py `path to csv file of primary results` `path to csv file of all results` `path to txt file of datasets that were used` `name of file to save` `number of datasets in csv files`
+10. nlp_dataset_results.py: combine all the results of each dataset annotated by one nlp tool
+    > python nlp_dataset_results.py `path to csv file of primary results` `path to csv file of all results` `path to txt file of datasets that were used` `name of file to save` `number of datasets in csv files`
       - outputs: `png bargraphs for persona, entity, action for all and primary comparison of all datasets` `png scatterplot graphs for persona, entity, action for all and primary comparison of all datasets` `copy of csv files`
 
 11. compare_all_nlp_results.py: compare the final results for each dataset among all the different nlp tools

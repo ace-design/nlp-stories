@@ -1,5 +1,5 @@
 import pytest 
-from comparison import calculate_f_measure
+from compare.comparison import calculate_f_measure
 
 @pytest.mark.calculate_f_measure
 def test_normal_case():

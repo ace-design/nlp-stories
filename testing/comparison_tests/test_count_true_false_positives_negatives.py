@@ -1,6 +1,6 @@
 from itertools import count
 import pytest
-from comparison import count_true_false_positives_negatives
+from compare.comparison import count_true_false_positives_negatives
 
 @pytest.fixture
 def comparison_results():

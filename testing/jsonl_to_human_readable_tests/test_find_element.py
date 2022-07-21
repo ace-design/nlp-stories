@@ -1,5 +1,5 @@
 import pytest
-from jsonl_to_human_readable import find_element
+from setup_data.jsonl_to_human_readable import find_element
 
 @pytest.fixture()
 def label_id():

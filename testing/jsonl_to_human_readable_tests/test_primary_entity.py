@@ -1,5 +1,5 @@
 import pytest
-from jsonl_to_human_readable import identify_primary_entity
+from setup_data.jsonl_to_human_readable import identify_primary_entity
 
 
 @pytest.fixture

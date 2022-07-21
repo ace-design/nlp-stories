@@ -1,5 +1,5 @@
 import pytest
-from comparison import count_total_result_dataset
+from compare.comparison import count_total_result_dataset
 
 @pytest.mark.count_total_result_dataset
 def test_normal_case():

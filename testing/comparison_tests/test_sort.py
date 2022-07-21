@@ -1,6 +1,6 @@
 import copy
 import pytest 
-from comparison import sort
+from compare.comparison import sort
 
 @pytest.fixture
 def baseline_data():
