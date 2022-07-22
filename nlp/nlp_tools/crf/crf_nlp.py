@@ -387,10 +387,14 @@ def check_next_action(y_pred, story_text, tokens, end, i, label_type, stanza_nlp
     '''
     #runs process if next token label is the same as the token we were just looking at 
     while i < len(y_pred) -1 and y_pred [i + 1] == label_type:
-        #if next token has a POS tag as verb, then they are two seperate actions and should not be considered under the same annotation
-        word = tokens[i+1]
+        #if next token and current token has a POS tag as verb, then they are two seperate actions and should not be considered under the same annotation
+        word1 = tokens[i+1]
+        nlp_evalution1 = stanza_nlp(word1)
+
+        word = tokens[i]
         nlp_evalution = stanza_nlp(word)
-        if nlp_evalution.sentences[0].words[0].upos == "VERB":
+
+        if nlp_evalution.sentences[0].words[0].upos == "VERB" and nlp_evalution1.sentences[0].words[0].upos == "VERB":
             break
         else:
             #adjust the end character position to include this token so we can identify as one annotation

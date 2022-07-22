@@ -4,25 +4,27 @@
 
 import argparse
 import json
-import setup_data.jsonl_to_human_readable
 import random
 import stanza
 import sys
+sys.path.append("setup_data")
+import jsonl_to_human_readable
 
 
 def main():
-    load_path, save_name = command()
+    load_path, intersecting_path, save_name = command()
     stories, annotated_stories = extract_stories(load_path)
-    
+    intersecting_stories = extract_intersecting_stories(intersecting_path)
+
     stanza.download('en') 
     global stanza_nlp
     stanza_nlp = stanza.Pipeline('en')
 
-    training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories)
+    training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories, intersecting_stories)
     ensure_no_intersection(training_stories, testing_stories)
 
     final_results_training = []
-    final_results_evaluation = []
+    final_results_testing = []
 
     for i in range(len(training_stories)):
         training_stories_info = pos_tags(training_stories[i], training_annotated[i], stanza_nlp)
@@ -30,11 +32,11 @@ def main():
         final_results_training.append(story_format_training)
 
     for i in range(len(testing_stories)):
-        evaluation_stories_info = pos_tags(testing_stories[i], testing_annotated[i], stanza_nlp)
-        story_format_evaluation = format_output(testing_stories[i], evaluation_stories_info)
-        final_results_evaluation.append(story_format_evaluation)
+        testing_stories_info = pos_tags(testing_stories[i], testing_annotated[i], stanza_nlp)
+        story_format_testing = format_output(testing_stories[i], testing_stories_info)
+        final_results_testing.append(story_format_testing)
 
-    save_results(final_results_training, final_results_evaluation, save_name)
+    save_results(final_results_training, final_results_testing, save_name)
 
 def command():
     '''
@@ -50,23 +52,30 @@ def command():
     '''
     parser = argparse.ArgumentParser(description = "This program will create the input files for crf")
     parser.add_argument("load_baseline_path", type = str, help = "path of baseline file from doccano (jsonl)")
+    parser.add_argument("load_intersecting_path", type = str, help = "path of intersecting file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
     
     args = parser.parse_args()
 
     if not(args.load_baseline_path.endswith(".jsonl")):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. input file type is .jsonl")
+        raise Exception ("Incorrect input file type. Input file type is .jsonl")
+
+    if not(args.load_intersecting_path.endswith(".txt")):
+        sys.tracebacklimit = 0
+        raise Exception ("Incorrect input file type. Input file type is .txt")
 
     try:
         load_file = open(args.load_baseline_path)
+        load_file.close()
+        load_file = open (args.load_intersecting_path)
         load_file.close()
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
         raise
     else:
-        return args.load_baseline_path, args.save_name
+        return args.load_baseline_path, args.load_intersecting_path, args.save_name
 
 def extract_stories(path):
     '''
@@ -80,7 +89,7 @@ def extract_stories(path):
     annotated_stories (list): annotated story that indicates the label type of each character in each story
     '''
 
-    text, entities, relations = setup_data.jsonl_to_human_readable.extract(path)
+    text, entities, relations = jsonl_to_human_readable.extract(path)
 
     annotated_stories = []
 
@@ -92,13 +101,35 @@ def extract_stories(path):
 
     return text, annotated_stories
        
-def randomize_stories(stories, annotated_stories):
+def extract_intersecting_stories(path):
+    '''
+    extract the data from intersecting stories 
+
+    Parameters
+    path (str): path to the intersecting stories file
+
+    Returns
+    intersecting_stories (list): all the stories in the intersecting set
+    '''
+
+    with open(path, encoding = "utf8") as file:
+        data = file.readlines()
+
+    intersecting_stories = []
+
+    for story in data:
+        intersecting_stories.append(story.strip(" \n\t"))
+
+    return intersecting_stories
+
+def randomize_stories(stories, annotated_stories, intersecting_stories):
     '''
     randomize the stories to have 20% of set for testing and 80% of set for training
 
     Parameters:
     stories (list): contains the text of every story in the dataset
     annotated_stories (list): contains the annotated information corresponding to the stories list
+    intersecting_stories (list): all the stories in the intersecting set of the dataset
 
     Returns:
     training_stories (list): stories for the training set
@@ -116,11 +147,17 @@ def randomize_stories(stories, annotated_stories):
 
     for i in range(num_test):
         length = len(training_stories)
-        index = random.randint(0, length -1)
-        testing_stories.append(training_stories[index])
-        testing_annotated.append(training_annotated[index])
-        training_stories.pop(index)
-        training_annotated.pop(index)
+
+        while True:
+            index = random.randint(0, length -1)
+            
+            if training_stories[index].strip(" \t") in intersecting_stories:
+            
+                testing_stories.append(training_stories[index])
+                testing_annotated.append(training_annotated[index])
+                training_stories.pop(index)
+                training_annotated.pop(index)
+                break
 
     return training_stories, training_annotated, testing_stories, testing_annotated
 
@@ -321,24 +358,24 @@ def format_output(story_text, story_info):
 
     return story_format
 
-def save_results(final_results_training, final_results_evaluation, save_name):
+def save_results(final_results_training, final_results_testing, save_name):
     '''
     save the results to a json file
 
     Parameters:
     final_results_training (list): final results for training story set to output to the json file
-    final_results_evaluation (list): final results for evaluating story set to output to the json file
+    final_results_testing (list): final results for evaluating story set to output to the json file
     save_name (str): name of the file to save
     '''
 
-    training_saving_path = "inputs\\crf_input\\testing_input\\" + save_name + ".json"
-    evaluation_saving_path = "inputs\\crf_input\\testing_input\\" + save_name + ".json"
+    training_saving_path = "inputs\\crf_input\\training_input\\" + save_name + ".json"
+    testing_saving_path = "inputs\\crf_input\\testing_input\\" + save_name + ".json"
 
     with open(training_saving_path,"w", encoding="utf-8") as file:
         json.dump(final_results_training, file, indent = 4)
 
-    with open(evaluation_saving_path,"w", encoding="utf-8") as file:
-        json.dump(final_results_evaluation, file,  indent = 4)
+    with open(testing_saving_path,"w", encoding="utf-8") as file:
+        json.dump(final_results_testing, file,  indent = 4)
 
     print("Files are saved")
 

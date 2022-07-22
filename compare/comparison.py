@@ -22,7 +22,7 @@ def main():
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
 
     if "crf" in nlp_tool_path:
-        nlp_tool_data = extract_crf_info(nlp_tool_data)
+        nlp_tool_data = extract_crf_info(nlp_tool_path)
     else:
         nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
     
