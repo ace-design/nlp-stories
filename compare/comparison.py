@@ -20,8 +20,11 @@ def main():
 
     primary_baseline_data, primary_pos_data = extract_primary_baseline_info(base_path)
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
-    nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
 
+    if "crf" in nlp_tool_path:
+        nlp_tool_data = extract_crf_info(nlp_tool_data)
+    else:
+        nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
     
     primary_save_path = save_folder_path + "\\primary"
     all_save_path = save_folder_path + "\\all"
@@ -40,15 +43,7 @@ def main():
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data, stanza_pos_nlp)
     output_results(all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text, all_save_path, all_csv_folder_path, comparison_mode)
 
-
-    if comparison_mode == 1:
-        path = "compare\\nlp_dataset_names_list\\dataset_list_strict.txt"
-    elif comparison_mode == 2:
-        path = "compare\\nlp_dataset_names_list\\dataset_list_inclusion.txt"
-    else:
-        path = "compare\\nlp_dataset_names_list\\dataset_list_relaxed.txt"
-
-    save_dataset(path, save_name)
+    save_dataset(comparison_mode, save_name)
 
 def compare_and_get_results(baseline_data, nlp_tool_data, comparison_mode, pos_data, stanza_pos_nlp):
     '''
@@ -243,7 +238,7 @@ def command():
         args.load_baseline_path (str): Path to the baseline evaluation file to be loaded
         args.load_nlp_tool_path (str): Path to the nlp tool evaluation file to be loaded
         save_folder_path (str): Path to the file to be saved
-        args.comparison_mode (int): the comparison mode, where (1-strict, 2-inclusive, 3-relaxed)
+        comparison_mode (int): the comparison mode, where (1-strict, 2-inclusive, 3-relaxed)
         args.save_folder_name (str): name of file to save
 
     Raises:
@@ -252,18 +247,13 @@ def command():
         wrong file type: raises exception
         wrpng comparioson mode value: raises exception (must be either 1, 2, or 3)
     '''
-    parser = argparse.ArgumentParser(description = "This program is to compare accuracy of NLP")
+    parser = argparse.ArgumentParser(description = "This program is to compare accuracy of the NLP tool against the baseline annotations")
     parser.add_argument("load_baseline_path", type = str, help = "path of file")
     parser.add_argument("load_nlp_tool_path", type = str, help = "path of file to save")
     parser.add_argument("save_folder_name", type = str, help = "name of the folder to save the graphs")
-    parser.add_argument("comparison_mode", type = int, help = "Comparision mode for comparing. Following are options: (1-strict, 2-inclusive, 3-relaxed)")
+    parser.add_argument("comparison_mode", type = str, choices=["STRICT", "INCLU", "RELAX"], help = "Comparision mode for comparing. Following are options: (STRICT-strict, INCLU-inclusive, RELAX-relaxed)")
     
     args = parser.parse_args()
-
-    if not(args.comparison_mode == 1 or args.comparison_mode == 2 or args.comparison_mode == 3):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect mode value. Following are options: (1-strict, 2-inclusive, 3-relaxed)")
-
 
     if not(args.load_nlp_tool_path.endswith(".json") and args.load_baseline_path.endswith(".json")):
         sys.tracebacklimit = 0
@@ -275,12 +265,15 @@ def command():
         load_nlp_tool_path = open(args.load_nlp_tool_path)
         load_nlp_tool_path.close()
 
-        if args.comparison_mode == 1:
+        if args.comparison_mode == "STRICT":
             save_folder_path = "final_results\\individual_nlp_results\\individual_dataset_results\\" + args.save_folder_name + "_strict_comparison"
-        elif args.comparison_mode == 2:
+            comparison_mode = 1
+        elif args.comparison_mode == "INCLU":
             save_folder_path = "final_results\\individual_nlp_results\\individual_dataset_results\\" + args.save_folder_name + "_inclusive_comparison"
+            comparison_mode = 2
         else:
             save_folder_path = "final_results\\individual_nlp_results\\individual_dataset_results\\" + args.save_folder_name + "_relaxed_comparison"
+            comparison_mode = 3
         
         
         os.mkdir(save_folder_path)
@@ -293,7 +286,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, args.comparison_mode, args.save_folder_name
+        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, comparison_mode, args.save_folder_name
 
 def check_pos_file(load_path, save_name):
     '''
@@ -424,6 +417,53 @@ def extract_all_baseline_info(path):
     pos_data = [persona_pos, entity_pos, action_pos]
 
     return baseline_data, pos_data
+
+def extract_crf_info(path):
+    '''
+    Extracts the info from crf resutls 
+
+    Parameters:
+    path (str): path to the file
+
+    Returns:
+    nlp_tool_data (2D list): contains text, persona, primary entities, and primary actions identified by crf
+    '''
+    text = []
+    persona = []
+    entity = []
+    action = []
+
+    file = open(path, encoding= "utf-8")
+    data = json.load(file)
+
+    for story in data:
+        text.append(story["Text"])
+        persona.append(story["Persona"])
+
+        primary_entity = story["Entity"]["Primary Entity"]
+        secondary_entity = story["Entity"]["Secondary Entity"]
+        primary_action = story["Action"]["Primary Action"]
+        secondary_action = story["Action"]["Secondary Action"]
+
+        story_action = primary_action + secondary_action
+        story_entity = primary_entity + secondary_entity
+
+        while "" in story_action:
+            story_action.remove("")
+
+        action.append(story_action)
+
+        while "" in story_entity:
+            story_entity.remove("")
+        
+        entity.append(story_entity)
+        
+    file.close()
+
+    nlp_tool_data = [text, persona, entity, action]
+
+    return nlp_tool_data
+
 
 def extract_nlp_tool_info(path):
     '''
@@ -1047,14 +1087,22 @@ def save_csv(saving_folder_path, dataset_results, comparison_mode):
         writer = csv.writer(file)
         writer.writerow(data)
 
-def save_dataset(path, dataset_name):
+def save_dataset(comparison_mode, dataset_name):
     '''
     save the dataset name (will use the name of the save file name as the dataset name)
 
     Parameters:
-    path (str): path to folder to save
+    comparison_mode (int): type of comparison 
     dataset_name(str): name of dataset
     '''
+
+    if comparison_mode == 1:
+        path = "compare\\nlp_dataset_names_list\\dataset_list_strict.txt"
+    elif comparison_mode == 2:
+        path = "compare\\nlp_dataset_names_list\\dataset_list_inclusion.txt"
+    else:
+        path = "compare\\nlp_dataset_names_list\\dataset_list_relaxed.txt"
+
     with open(path, "a") as file:
         file.write(dataset_name + "\n")
 

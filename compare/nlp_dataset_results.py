@@ -58,7 +58,6 @@ def command():
     Returns:
     args.load_primary_path (str): path of primary csv file
     args.load_all_path (str): path of all csv file
-    args.load_dataset_names (str): path of the dataset names in a txt file
     args.save_folder_name (str): name of folder to save
     comparison_type (str): the type of comparison used for the data
 
@@ -73,7 +72,6 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to visualize the final results of the nlp")
     parser.add_argument("load_primary_path", type = str, help = "path of primary csv file")
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
-    parser.add_argument("load_dataset_names_path", type = str, help = "path of dataset's name in txt file")
     parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
     
     args = parser.parse_args()
@@ -82,10 +80,6 @@ def command():
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. Save file type is .csv")
 
-    if not(args.load_dataset_names_path.endswith("txt")):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. Save file type is .txt")
-
     if not("primary" in args.load_primary_path) or not("all" in args.load_all_path):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect file order. First file must be primary data and the second file must be all data")
@@ -93,12 +87,15 @@ def command():
     if "strict" in args.load_primary_path and "strict" in args.load_all_path:
         comparison_type = "Strict Comparison"
         saving_name = "strict_" + args.save_folder_name
+        dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_strict.txt"
     elif "inclusion" in args.load_primary_path and "inclusion" in args.load_all_path:
         comparison_type = 'Inclusion Comparison'
         saving_name = "inclusion_" + args.save_folder_name
+        dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_inclusion.txt"
     elif "relaxed" in args.load_primary_path and "relaxed" in args.load_all_path:
         comparison_type = "Relaxed Comparison"
         saving_name = "relaxed_" + args.save_folder_name
+        dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_relaxed.txt"
     else:
         sys.tracebacklimit = 0 
         raise Exception("Incompatible combination. Both files must be evaluated by same comparison mode")
@@ -108,11 +105,8 @@ def command():
         load_file.close()
         load_file = open(args.load_all_path)
         load_file.close()
-        load_file = open(args.load_dataset_names_path)
-        load_file.close()
         save_folder_path = "final_results\\individual_nlp_results\\all_datasets_results\\" + saving_name
         os.mkdir(save_folder_path)
-
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
@@ -122,11 +116,11 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        with open(args.load_dataset_names_path, encoding = "utf-8") as file:
+        with open(dataset_names_path, encoding = "utf-8") as file:
             data = file.readlines()
             number_dataset = len(data)
 
-        return args.load_primary_path, args.load_all_path, args.load_dataset_names_path, save_folder_path, comparison_type, number_dataset
+        return args.load_primary_path, args.load_all_path, dataset_names_path, save_folder_path, comparison_type, number_dataset
 def extract_data (path, number_dataset):
     '''
     extract the data from the csv file 
