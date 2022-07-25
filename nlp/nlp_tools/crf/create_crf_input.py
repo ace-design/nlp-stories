@@ -94,7 +94,7 @@ def extract_stories(path):
     annotated_stories = []
 
     for i in range(len(text)):
-        annotated_story, label_id_list, offset_list = identify_labels(text[i], entities[i])
+        annotated_story, label_id_list, offset_list = identify_labels_crf(text[i], entities[i])
         annotated_story, primary_action_id_list = identify_primary_action(annotated_story, label_id_list, offset_list, relations[i])
         annotated_story = identify_primary_entity(annotated_story, primary_action_id_list, label_id_list, offset_list, relations[i])
         annotated_stories.append(annotated_story)
@@ -178,7 +178,7 @@ def ensure_no_intersection(training_set, testing_set):
         print(same_data)
         raise Exception ("Same stories exist in both training and testing set")
 
-def identify_labels(text, entities):
+def identify_labels_crf(text, entities):
     '''
     Identify and sort labels within story
 

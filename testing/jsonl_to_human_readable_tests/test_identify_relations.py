@@ -162,3 +162,29 @@ def test_invalid_relation_id(relations,label_id_list, element_list):
 
     with pytest.raises(TypeError):
         results = identify_relations(relations, label_id_list, element_list)
+
+@pytest.mark.identify_relations
+def test_same_trigger_words(relations, label_id_list, element_list, expected):
+    relations.append({"id": 108,"from_id": 2,"to_id": 12,"type":"triggers"})
+    label_id_list.append(12)
+    element_list.append("click")
+
+    relation_string_list, relation_list, primary_element_data = expected
+
+    triggers, targets, contains= relation_string_list
+    triggers += "applicant --> click, "
+    relation_string_list = [triggers, targets, contains]
+
+    triggers_list, targets_list, contains_list = relation_list
+    triggers_list.append(["applicant", "click"])
+    relation_list = [triggers_list, targets_list, contains_list]
+
+    primary_actions, primary_action_list, primary_action_id_list, target_action, target_entity = primary_element_data
+    primary_actions += "click, "
+    primary_action_list.append("click")
+    primary_action_id_list.append(12)
+    primary_element_data = [primary_actions, primary_action_list, primary_action_id_list, target_action, target_entity]
+    
+    expected = (relation_string_list, relation_list, primary_element_data)
+
+    assert identify_relations(relations, label_id_list, element_list) == expected

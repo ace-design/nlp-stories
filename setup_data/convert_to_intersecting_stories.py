@@ -24,7 +24,7 @@ def command():
         wrong file type: raises exception
     '''
 
-    parser = argparse.ArgumentParser(description = "This program is to cconvert nlp outputs to only contain results from the intersecting stories")
+    parser = argparse.ArgumentParser(description = "This program is to convert nlp outputs to only contain results from the intersecting stories")
     parser.add_argument("load_nlp_output_path", type = str, help = "path of file that contains the nlp outputs")
     parser.add_argument("load_intersecting_path", type = str, help = "path of file that contains the intersecting stories")
     parser.add_argument("save_name", type = str, help = "name of file to save")
