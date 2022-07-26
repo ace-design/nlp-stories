@@ -132,3 +132,4 @@ The following projects did not follow expected sentence structure:
 * g02-federal-funding 
 * g13-planningpoker
 * g17-cask
+* g27-culrepo

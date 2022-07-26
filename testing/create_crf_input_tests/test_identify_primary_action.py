@@ -16,8 +16,6 @@ def offset_list():
     offset_list = [[0,3],[10,19],[31,37],[40,46],[55,82],[61,65],[73,82]]
     return offset_list
 
-"11: As an applicant, I want to create a button so that I can move to the next page"
-
 @pytest.fixture
 def relations():
     relations = [{"id": 100,"from_id": 2,"to_id": 3,"type":"triggers"},\

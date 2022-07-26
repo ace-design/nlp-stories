@@ -17,7 +17,6 @@ def main():
     intersecting_stories = extract_intersecting_stories(intersecting_path)
 
     stanza.download('en') 
-    global stanza_nlp
     stanza_nlp = stanza.Pipeline('en')
 
     training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories, intersecting_stories)
