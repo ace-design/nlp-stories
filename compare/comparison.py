@@ -531,7 +531,7 @@ def sort(baseline_data, nlp_tool_data, pos_data):
 
     for i in range(len(baseline_text)):
         for j in range(len(nlp_text)):
-            if baseline_text[i].strip() == nlp_text[j].strip():
+            if baseline_text[i].strip(" \n\t") == nlp_text[j].strip(" \n\t"):
 
                 sorted_baseline_text.append(baseline_text[i])
                 sorted_baseline_persona.append(baseline_persona[i])
