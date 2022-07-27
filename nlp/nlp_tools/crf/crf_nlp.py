@@ -419,10 +419,25 @@ def format_results(story, persona, primary_action, secondary_action, primary_ent
     formatted_data (dict): formatted dictionary for output into json
     '''
 
+    trigger_list = []
+    target_list = []
+
+    for p_action in primary_action:
+        for per in persona:
+            trigger_list.append([per, p_action])
+
+    for p_entity in primary_entity:
+        for p_action in primary_action:
+            target_list.append([p_action, p_entity])
+        
+
+
     formatted_data = {  "Text": story, 
                         "Persona": persona,
                         "Action": {"Primary Action": primary_action, "Secondary Action": secondary_action}, 
-                        "Entity": {"Primary Entity": primary_entity, "Secondary Entity": secondary_entity}
+                        "Entity": {"Primary Entity": primary_entity, "Secondary Entity": secondary_entity},
+                        "Triggers" : trigger_list,
+                        "Targets" : target_list
                     }
 
     return formatted_data

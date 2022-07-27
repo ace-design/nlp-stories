@@ -22,7 +22,19 @@
                 "enough information",
                 "submission"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Broker user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "updated error codes"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a Broker user, I want to submit records for individual recipients without receiving a DUNS error.",
@@ -45,7 +57,19 @@
                 "individual recipients",
                 "DUNS error"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Broker user",
+                "submit"
+            ]
+        ],
+        "Targets": [
+            [
+                "submit",
+                "records"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an Owner, I want to design a schedule from the UI SME, so that I know the potential timeline of the UI improvements wanted.",
@@ -69,7 +93,19 @@
                 "potential timeline",
                 "UI improvements"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Owner",
+                "design"
+            ]
+        ],
+        "Targets": [
+            [
+                "design",
+                "schedule"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a FABS user, I want the frontend URLs to more accurately reflect the page I'm accessing, so that I'm not confused.",
@@ -81,8 +117,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "more accurately",
-                "reflect",
+                "more accurately reflect",
                 "accessing"
             ]
         },
@@ -93,7 +128,19 @@
             "Secondary Entity": [
                 "page"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "FABS user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "frontend URLs"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an Agency user, I want historical FPDS data loaded.",
@@ -111,7 +158,19 @@
                 "historical FPDS data"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "Agency user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "historical FPDS data"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a FABS user, I do not want  DABS banner messages and vice versa, so that I have the appropriate information for my application.",
@@ -134,7 +193,19 @@
                 "appropriate information",
                 "application"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "FABS user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "DABS banner messages"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an Owner, I want to reset the environment to only take Staging MAX permissions, so that I can ensure that the FABS testers no longer have access.",
@@ -158,7 +229,19 @@
                 "FABS testers",
                 "access"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Owner",
+                "reset"
+            ]
+        ],
+        "Targets": [
+            [
+                "reset",
+                "environment"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an Agency user, I want all historical Financial Assistance data loaded for FABS go-live.",
@@ -180,7 +263,19 @@
             "Secondary Entity": [
                 "FABS go"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Agency user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "all historical Financial Assistance data"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.",
@@ -200,7 +295,14 @@
                 "information",
                 "database"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "FABS user",
+                "make sure"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G02# As a Developer , I want to be able to log better, so that I can troubleshoot issues with particular submissions and functions.",
@@ -222,7 +324,14 @@
                 "particular submissions",
                 "functions"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "log"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G02# As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes.",
@@ -234,8 +343,7 @@
                 "submit"
             ],
             "Secondary Action": [
-                "won't strip off",
-                "leading",
+                "won't strip off leading",
                 "trailing"
             ]
         },
@@ -248,7 +356,19 @@
                 "Excel",
                 "zeroes"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "agency user",
+                "submit"
+            ]
+        ],
+        "Targets": [
+            [
+                "submit",
+                "data elements"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.",
@@ -272,7 +392,19 @@
                 "approvals",
                 "leadership"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "UI designer",
+                "move"
+            ]
+        ],
+        "Targets": [
+            [
+                "move",
+                "round 2 of DABS"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.",
@@ -284,8 +416,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "better",
-                "manage"
+                "better manage"
             ]
         },
         "Entity": {
@@ -297,7 +428,19 @@
                 "submissions",
                 "IG requests"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "FABS user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "additional helpful info"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a Developer, I want to add the GTAS window data to the database, so that I can ensure the site is locked down during the GTAS submission period.",
@@ -321,7 +464,19 @@
                 "site",
                 "GTAS submission period"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "GTAS window data"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an Agency user, I want FABS deployed into production, so I can submit my Financial Assistance data.",
@@ -343,7 +498,19 @@
             "Secondary Entity": [
                 "Financial Assistance data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Agency user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "FABS deployed into production"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a user, I don't want to see NASA grants displayed as contracts.",
@@ -363,7 +530,19 @@
             "Secondary Entity": [
                 "contracts"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "NASA grants"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a Broker user, I want the D1 file generation to be synced with the FPDS data load, so that I don't have to regenerate a file if no data has been updated.",
@@ -376,9 +555,7 @@
             ],
             "Secondary Action": [
                 "synced",
-                "don't",
-                "have to",
-                "regenerate"
+                "don't have to regenerate"
             ]
         },
         "Entity": {
@@ -390,7 +567,19 @@
                 "file",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Broker user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "D1 file generation"
+            ]
+        ]
     },
     {
         "Text": "#G02# As an owner, I only want zero-padded fields, so that I can justify padding.",
@@ -399,8 +588,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "only",
-                "want"
+                "only want"
             ],
             "Secondary Action": [
                 "justify"
@@ -413,7 +601,19 @@
             "Secondary Entity": [
                 "padding"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "owner",
+                "only want"
+            ]
+        ],
+        "Targets": [
+            [
+                "only want",
+                "zero-padded fields"
+            ]
+        ]
     },
     {
         "Text": "#G02# As a FABS user, I want the language on FABS pages to be appropriate for me, so that I am not confused.",
@@ -432,7 +632,23 @@
                 "FABS pages"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "FABS user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "language"
+            ],
+            [
+                "want",
+                "FABS pages"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Planning Staff member, I want to Generate Planning-related Reports, so that I can access, analyze and/or export the needed information in the format I requested.",
@@ -458,7 +674,19 @@
                 "needed information",
                 "format"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Planning Staff member",
+                "Generate"
+            ]
+        ],
+        "Targets": [
+            [
+                "Generate",
+                "Planning-related Reports"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Track  the Draft Proffers, so that I can preserve the history of draft proffer statements submitted by the Applicant.",
@@ -481,7 +709,19 @@
                 "history of draft proffer statements",
                 "Applicant"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Track"
+            ]
+        ],
+        "Targets": [
+            [
+                "Track",
+                "Draft Proffers"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Develop a Staff Report, so that I can publish and distribute the report according to business rules.",
@@ -505,7 +745,23 @@
             "Secondary Entity": [
                 "business rules"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Develop"
+            ]
+        ],
+        "Targets": [
+            [
+                "Develop",
+                "Staff Report"
+            ],
+            [
+                "Develop",
+                "report according"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Development Staff member, I want to Issue a Development-related Permit, so that I can grant the request to the Applicant to begin work",
@@ -530,7 +786,19 @@
                 "Applicant",
                 "work"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Development Staff member",
+                "Issue"
+            ]
+        ],
+        "Targets": [
+            [
+                "Issue",
+                "Development-related Permit"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Assign an Application for Detailed Review, so that I can review the for compliance and subsequently approved or denied.",
@@ -543,8 +811,7 @@
             ],
             "Secondary Action": [
                 "review",
-                "subsequently",
-                "approved",
+                "subsequently approved",
                 "denied"
             ]
         },
@@ -556,7 +823,19 @@
                 "Detailed Review",
                 "compliance"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "Assign",
+                "Application"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Send a Formal Response to Applicant, so that I can satisfy communication and records responsibilities.",
@@ -580,7 +859,19 @@
                 "communication",
                 "records responsibilities"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Send"
+            ]
+        ],
+        "Targets": [
+            [
+                "Send",
+                "Formal Response"
+            ]
+        ]
     },
     {
         "Text": "#G03# As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.",
@@ -605,7 +896,19 @@
                 "service requested",
                 "County"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Applicant",
+                "Pay"
+            ]
+        ],
+        "Targets": [
+            [
+                "Pay",
+                "Fee"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Prepare for and Support Hearing Execution, so that I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing.",
@@ -631,7 +934,27 @@
                 "Applicant",
                 "hearing"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Prepare"
+            ],
+            [
+                "Staff member",
+                "Support"
+            ]
+        ],
+        "Targets": [
+            [
+                "Prepare",
+                "Hearing Execution"
+            ],
+            [
+                "Support",
+                "Hearing Execution"
+            ]
+        ]
     },
     {
         "Text": "#G03# As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.",
@@ -654,7 +977,19 @@
             "Secondary Entity": [
                 "inspection"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Inspection Staff member",
+                "Create"
+            ]
+        ],
+        "Targets": [
+            [
+                "Create",
+                "Inspection"
+            ]
+        ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Process the Appeals, so that I can track the outcome and record the impact on the relevant records.",
@@ -679,7 +1014,19 @@
                 "impact",
                 "relevant records"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Staff member",
+                "Process"
+            ]
+        ],
+        "Targets": [
+            [
+                "Process",
+                "Appeals"
+            ]
+        ]
     },
     {
         "Text": "#G03# As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
@@ -702,7 +1049,19 @@
                 "service level",
                 "quality requirements"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Inspection Supervisor",
+                "Manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "Manage",
+                "Inspector Workload"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
@@ -724,7 +1083,14 @@
                 "new tab",
                 "Google Maps"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "click"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G04# As a user, I want to be able to anonymously view public information, so that I know about recycling centers near me before creating an account.",
@@ -748,7 +1114,19 @@
                 "recycling centers",
                 "account"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "anonymously view"
+            ]
+        ],
+        "Targets": [
+            [
+                "anonymously view",
+                "public information"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider.",
@@ -773,7 +1151,19 @@
                 "nearby recycling facilities",
                 "ones"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "enter"
+            ]
+        ],
+        "Targets": [
+            [
+                "enter",
+                "zip code"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to get the hours of each recycling facility, so that I can arrange drop-offs on my off days or during after-work hours.",
@@ -798,7 +1188,19 @@
                 "days",
                 "-work hours"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "hours"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to have a flexible pick up time, so that I can more conveniently use the website.",
@@ -810,8 +1212,7 @@
                 "have"
             ],
             "Secondary Action": [
-                "more conveniently",
-                "use"
+                "more conveniently use"
             ]
         },
         "Entity": {
@@ -821,7 +1222,19 @@
             "Secondary Entity": [
                 "website"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "flexible pick up time"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
@@ -851,7 +1264,35 @@
                 "optimal route",
                 "schedule"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "select"
+            ],
+            [
+                "user",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "select",
+                "different types"
+            ],
+            [
+                "get",
+                "different types"
+            ],
+            [
+                "select",
+                "list"
+            ],
+            [
+                "get",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
@@ -874,7 +1315,19 @@
                 "favorites",
                 "profile"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "donation centers"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
@@ -897,7 +1350,19 @@
                 "notifications",
                 "new events"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "give"
+            ]
+        ],
+        "Targets": [
+            [
+                "give",
+                "email ID"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
@@ -918,7 +1383,19 @@
                 "public recycling bins",
                 "area"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "map display"
+            ]
+        ]
     },
     {
         "Text": "#G04# As a user, I want to be able to view a map display of the special waste drop off sites around my area.",
@@ -940,7 +1417,19 @@
                 "sites",
                 "area"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "map display"
+            ]
+        ]
     },
     {
         "Text": "#G05# As an API User, I want to be able to use metadata to get results from multiple datasets, So that I can build user experiences based on more than one dataset more easily.",
@@ -966,7 +1455,19 @@
                 "user experiences",
                 "more than one dataset"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "API User",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "metadata"
+            ]
+        ]
     },
     {
         "Text": "#G05# As an API User, I want to be able to normalise measures by GDP, so I work with datasets in reference to their contextual constraints.",
@@ -991,7 +1492,19 @@
                 "reference",
                 "contextual constraints"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "API User",
+                "normalise"
+            ]
+        ],
+        "Targets": [
+            [
+                "normalise",
+                "measures"
+            ]
+        ]
     },
     {
         "Text": "#G05# As a Data Consuming User, I want to see textual descriptions that accompany embedded visualisations, So that I can more easily understand what I am viewing.",
@@ -1003,8 +1516,7 @@
                 "see"
             ],
             "Secondary Action": [
-                "more easily",
-                "understand"
+                "more easily understand"
             ]
         },
         "Entity": {
@@ -1014,7 +1526,19 @@
             "Secondary Entity": [
                 "accompany embedded visualisations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "textual descriptions"
+            ]
+        ]
     },
     {
         "Text": "#G05# As a Platform Administrator, I want to have a view on all datasets published by all users, So that I can perform management actions on any dataset.",
@@ -1039,7 +1563,19 @@
                 "management actions",
                 "any dataset"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Platform Administrator",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "view"
+            ]
+        ]
     },
     {
         "Text": "#G05# As an API User, I want to be able to get a relative percentage of a measure to the total of the dataset it comes from, So that I can build alternative displays of the data.",
@@ -1065,7 +1601,19 @@
                 "alternative displays",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "API User",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "relative percentage"
+            ]
+        ]
     },
     {
         "Text": "#G05# As a Data Consuming User, I want to be able to filter, sort and aggregate data by multiple dimensions and measures, So that I can get more granular views on the data.",
@@ -1091,7 +1639,19 @@
                 "more granular views",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "filter"
+            ]
+        ],
+        "Targets": [
+            [
+                "filter",
+                "sort"
+            ]
+        ]
     },
     {
         "Text": "#G05# As an API user, I want to be able to change some of the styling of the embedded Viewer in my own platform, So that I can brand it to my own organisation's color scheme.",
@@ -1114,7 +1674,14 @@
                 "own platform",
                 "own organisation's color scheme"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "API user",
+                "change"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G05# As a Data Publishing User, I want to be able to import data in JSON, So that I do not have to convert data formats in order to use the data packager.",
@@ -1140,7 +1707,19 @@
                 "order",
                 "data packager"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "import"
+            ]
+        ],
+        "Targets": [
+            [
+                "import",
+                "data"
+            ]
+        ]
     },
     {
         "Text": "#G05# As a Platform Administrator, I want to be able to Hide any dataset already added as Public, So that I can maintain Public/Hidden status for other users.",
@@ -1164,7 +1743,19 @@
                 "Public/Hidden status",
                 "other users"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Platform Administrator",
+                "Hide"
+            ]
+        ],
+        "Targets": [
+            [
+                "Hide",
+                "any dataset already added"
+            ]
+        ]
     },
     {
         "Text": "#G05# As a Data Publishing User, I want to be able to import data from Fiscal Data Package descriptor file, So that I do not have to convert data formats in order to use the data packager.",
@@ -1190,7 +1781,19 @@
                 "order",
                 "data packager"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "import"
+            ]
+        ],
+        "Targets": [
+            [
+                "import",
+                "data"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a ResearcherPublisher, I want to publish Data Packages to CKAN, so that my data is findable, and I can have a data API.",
@@ -1214,7 +1817,19 @@
                 "data",
                 "data API"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "Data Packages"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want Feather integration, so that I can integrate data-packaged data with pipelines that use Feather.",
@@ -1238,7 +1853,19 @@
                 "pipelines",
                 "Feather"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "Feather integration"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want to customize an existing wizard for my specific type of data, so that I can give my users a great user experience.",
@@ -1263,7 +1890,19 @@
                 "users",
                 "great user experience"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "customize"
+            ]
+        ],
+        "Targets": [
+            [
+                "customize",
+                "existing wizard"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want an SPSS integration, so that I can integrate data-packaged data with pipelines that use SPSS.",
@@ -1287,7 +1926,19 @@
                 "pipelines",
                 "SPSS"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "SPSS integration"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Researcher, I want to be able to translate my EML dataset to a Data Package, so that I can benefit from the wide array of tools available for Data Packages.",
@@ -1311,7 +1962,19 @@
                 "wide array",
                 "tools available for Data Packages"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Researcher",
+                "translate"
+            ]
+        ],
+        "Targets": [
+            [
+                "translate",
+                "EML dataset"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want a jQuery plugin for Core Data Packages, so that I can use it to apply to form control that uses a core dataset for autocompletion.",
@@ -1338,7 +2001,19 @@
                 "core dataset",
                 "autocompletion"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "jQuery plugin"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want a Mongo integration, so that I can integrate data-packaged data with pipelines that use Mongo.",
@@ -1362,7 +2037,19 @@
                 "pipelines",
                 "Mongo"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "Mongo integration"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Researcher, I want an app that create proxy Data Packages for well know and reliable data, sources, so that I can load high quality data using Data Package tooling.",
@@ -1375,8 +2062,7 @@
             ],
             "Secondary Action": [
                 "create",
-                "well",
-                "know",
+                "well know",
                 "load",
                 "using"
             ]
@@ -1392,7 +2078,23 @@
                 "high quality data",
                 "Data Package tooling"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "app"
+            ],
+            [
+                "want",
+                "reliable data"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a ResearcherGovernment Publisher, I want to map lines in my dataset using geographic data in my dataset, so that my dataset is more engaging for non-technical users.",
@@ -1418,7 +2120,19 @@
                 "dataset",
                 "non-technical users"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "map"
+            ]
+        ],
+        "Targets": [
+            [
+                "map",
+                "lines"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Researcher, I want to get my Excel spreadsheet into a Data Package, so that I can benefit from better tooling and standardization.",
@@ -1442,7 +2156,19 @@
                 "better tooling",
                 "standardization"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Excel spreadsheet"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Researcher, I want to get a Data Package into Excel in seconds, so that I can start using the data for doing analysis and visualizations.",
@@ -1469,7 +2195,19 @@
                 "analysis",
                 "visualizations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Researcher, I want to get a Data Package into STATA in seconds, so that I can start using the data for doing analysis and visualizations.",
@@ -1496,7 +2234,19 @@
                 "analysis",
                 "visualizations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ]
+        ]
     },
     {
         "Text": "#G08# As a Developer, I want to get a Data Package into Python in seconds, so that I can start using the data for doing analysis and visualizations.",
@@ -1523,7 +2273,19 @@
                 "analysis",
                 "visualizations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to view a course I can click on the trainer's name and be taken to the trainer's profile, so that I can read more about a trainer before registering for a course.",
@@ -1550,7 +2312,19 @@
                 "trainer",
                 "course"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "course"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site editor, I want to maintain a FAQ section, so that support gets fewer easily answered questions.",
@@ -1562,8 +2336,7 @@
                 "maintain"
             ],
             "Secondary Action": [
-                "gets fewer easily",
-                "answered"
+                "gets fewer easily answered"
             ]
         },
         "Entity": {
@@ -1574,7 +2347,19 @@
                 "support",
                 "questions"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site editor",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "maintain",
+                "FAQ section"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a recruiter, I want to be able to extend an ad for another 30 days by visiting the site and updating the posting, so that my ad remains active.",
@@ -1600,7 +2385,19 @@
                 "posting",
                 "ad"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "recruiter",
+                "extend"
+            ]
+        ],
+        "Targets": [
+            [
+                "extend",
+                "ad"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a member, I want to have the system email me a new password or a password reminder since i have short-term memory problems.",
@@ -1624,7 +2421,19 @@
                 "password reminder",
                 "short-term memory problems"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "system email me"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading.",
@@ -1653,7 +2462,19 @@
                 "others",
                 "certifications"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Practitioner",
+                "write"
+            ]
+        ],
+        "Targets": [
+            [
+                "write",
+                "article"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to email news items to the editor, so that they can be considered for publication.",
@@ -1674,7 +2495,19 @@
                 "editor",
                 "publication"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "email"
+            ]
+        ],
+        "Targets": [
+            [
+                "email",
+                "news items"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a member, I want to receive a reminder and a link, so that I can renew my membership.",
@@ -1697,7 +2530,19 @@
                 "link",
                 "membership"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "member",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "reminder"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to see a list of all upcoming Certification Courses and can page through them if there are a lot, so that I can choose the best course for me.",
@@ -1722,7 +2567,19 @@
                 "lot",
                 "best course"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site admin, I want to approve each help wanted ad before it gets to the site, so that we're sure of the quality of jobs being listed.",
@@ -1746,7 +2603,19 @@
                 "site",
                 "quality of jobs"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site admin",
+                "approve"
+            ]
+        ],
+        "Targets": [
+            [
+                "approve",
+                "each help wanted ad"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with.",
@@ -1770,7 +2639,27 @@
                 "other members",
                 "others"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site member",
+                "view"
+            ],
+            [
+                "site member",
+                "connect"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "profiles"
+            ],
+            [
+                "connect",
+                "profiles"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site administrator, I want to read practicing and training applications and approve or reject them, so that only applicants who qualify can become CSPs or CSTs.",
@@ -1784,8 +2673,7 @@
             "Secondary Action": [
                 "approve",
                 "reject",
-                "only applicants who",
-                "qualify"
+                "only applicants who qualify"
             ]
         },
         "Entity": {
@@ -1796,7 +2684,19 @@
                 "CSPs",
                 "CSTs"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site administrator",
+                "read"
+            ]
+        ],
+        "Targets": [
+            [
+                "read",
+                "practicing and training applications"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to do a full-text search of the FAQs, so that I can find an answer quickly.",
@@ -1819,7 +2719,19 @@
                 "FAQs",
                 "answer"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "do"
+            ]
+        ],
+        "Targets": [
+            [
+                "do",
+                "full-text search"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a CSM, I want to be charged a fee once I am approved for Practitioner status, so that my certification status can be activated.",
@@ -1844,7 +2756,27 @@
                 "Practitioner status",
                 "certification status"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "CSM",
+                "be"
+            ],
+            [
+                "CSM",
+                "charged"
+            ]
+        ],
+        "Targets": [
+            [
+                "be",
+                "fee"
+            ],
+            [
+                "charged",
+                "fee"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to read current news on the home page, so that I stay current on agile news.",
@@ -1867,7 +2799,19 @@
                 "home page",
                 "agile news"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "read"
+            ]
+        ],
+        "Targets": [
+            [
+                "read",
+                "current news"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses.",
@@ -1895,7 +2839,27 @@
                 "prospective attendees",
                 "courses"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "trainer",
+                "list"
+            ],
+            [
+                "trainer",
+                "include"
+            ]
+        ],
+        "Targets": [
+            [
+                "list",
+                "upcoming classes"
+            ],
+            [
+                "include",
+                "upcoming classes"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a CSM, I want to be sent an email welcoming me to the Scrum Alliance and with instructions to register or activate my membership once my name has been loaded to the registry.",
@@ -1908,8 +2872,7 @@
                 "sent"
             ],
             "Secondary Action": [
-                "register or",
-                "activate"
+                "register or activate"
             ]
         },
         "Entity": {
@@ -1923,7 +2886,27 @@
                 "name",
                 "registry"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "CSM",
+                "be"
+            ],
+            [
+                "CSM",
+                "sent"
+            ]
+        ],
+        "Targets": [
+            [
+                "be",
+                "email welcoming me"
+            ],
+            [
+                "sent",
+                "email welcoming me"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site visitor, I want to see a list of all upcoming Other Courses and can page through them if necessary, so that I can choose the best course for me.",
@@ -1947,7 +2930,19 @@
                 "all upcoming Other Courses",
                 "best course"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site visitor",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site editor, I want to edit the content of the email automatically sent to new Certified Scrum Masters and Product Owners, so that I don't need to involve a programmer on simple email edits.",
@@ -1959,11 +2954,8 @@
                 "edit"
             ],
             "Secondary Action": [
-                "automatically",
-                "sent",
-                "don't",
-                "need to",
-                "involve"
+                "automatically sent",
+                "don't need to involve"
             ]
         },
         "Entity": {
@@ -1977,7 +2969,19 @@
                 "programmer",
                 "simple email edits"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site editor",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "edit",
+                "content"
+            ]
+        ]
     },
     {
         "Text": "#G10# As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.",
@@ -2000,7 +3004,19 @@
                 "Certified Scrum Practitioner",
                 "designation"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site member",
+                "fill out"
+            ]
+        ],
+        "Targets": [
+            [
+                "fill out",
+                "application"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a VisualDesigner, I want to create a moodboard to aid with visual design concepts for the nsf.gov website, so that we can discuss different design concepts with stakeholders.",
@@ -2026,7 +3042,19 @@
                 "different design concepts",
                 "stakeholders"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "VisualDesigner",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "moodboard"
+            ]
+        ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have a final workshop to identify key lessons and features for the content management system decision.",
@@ -2050,7 +3078,19 @@
                 "features",
                 "content management system decision"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "final workshop"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a team member, I want to have a schedule of more coworking slots, so that I can work in tandem with the rest of the team on a more regular basis.",
@@ -2076,7 +3116,19 @@
                 "team",
                 "more regular basis"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "team member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "schedule"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a user, I want to add a video to my article.",
@@ -2096,7 +3148,19 @@
             "Secondary Entity": [
                 "article"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "video"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a team member, I want to have a prototype strategy, so that I understand how we will gain understandings from tests that will drive recommendations.",
@@ -2120,7 +3184,19 @@
                 "tests",
                 "recommendations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "team member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "prototype strategy"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a team member, I want to understand how time off overlaps with plans around the user research.",
@@ -2143,7 +3219,19 @@
                 "plans",
                 "user research"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "team member",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "understand",
+                "how time"
+            ]
+        ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have editorial-planning recommendations, so that I can understand how they might impact an eventual CMS / future web presence.",
@@ -2168,7 +3256,19 @@
                 "eventual CMS",
                 "web presence"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "editorial-planning recommendations"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a user researcher, I want to begin drafting a research plan, so that I can begin recruiting participants.",
@@ -2189,7 +3289,14 @@
                 "research plan",
                 "recruiting participants"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user researcher",
+                "begin drafting"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G11# As a content designer, I want to demonstrate the value of user-centered content design to ensure it's an integral part of our recommendations.",
@@ -2213,7 +3320,19 @@
                 "it's an integral part",
                 "recommendations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "content designer",
+                "demonstrate"
+            ]
+        ],
+        "Targets": [
+            [
+                "demonstrate",
+                "value"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a site administrator, I want to understand how other similar organizations are handling visual design, so that I can make informed decisions about what appears to work well and what doesn't.",
@@ -2240,7 +3359,19 @@
                 "decisions",
                 "what appears to work well"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "site administrator",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "understand",
+                "how other similar organizations"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a team member, I want to have an updated acquisitions roadmap, so that I can plan accordingly.",
@@ -2260,7 +3391,19 @@
                 "updated acquisitions roadmap"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "team member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "updated acquisitions roadmap"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a user researcher, I want to have the WIG prototype, so that I can finalize the second task script.",
@@ -2282,7 +3425,19 @@
             "Secondary Entity": [
                 "second task script"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "WIG prototype"
+            ]
+        ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to understand work performed, so that I can understand when and what I can use later.",
@@ -2302,7 +3457,19 @@
                 "work performed"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "understand",
+                "work performed"
+            ]
+        ]
     },
     {
         "Text": "#G11# As a user researcher, I want to make sure the correct NSF people are invited to user interviews, so that they can observe the interviews and make recommendations accordingly.",
@@ -2327,7 +3494,14 @@
                 "interviews",
                 "recommendations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user researcher",
+                "make sure"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to see medical forms, so that we can be prepared for an allergy attack",
@@ -2349,7 +3523,23 @@
                 "allergy attack"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "medical forms"
+            ],
+            [
+                "see",
+                "allergy attack"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to add campers, so that I can keep track of each individual camper.",
@@ -2371,7 +3561,19 @@
             "Secondary Entity": [
                 "track of each individual camper"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "campers"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to add parents, so that they can enroll their kids at camp.",
@@ -2394,7 +3596,19 @@
                 "kids",
                 "camp"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "parents"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to keep my information in one place, so that the admins next year can improve on the previous years.",
@@ -2418,7 +3632,19 @@
                 "admins next year",
                 "previous years"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "keep"
+            ]
+        ],
+        "Targets": [
+            [
+                "keep",
+                "information"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a parent, I want to be able to create an account, so that I can sign up my kids for camp online.",
@@ -2441,7 +3667,19 @@
                 "kids",
                 "camp"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "parent",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "account"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to see only events for a specific group/groups on the event calendar, so that I can easily read the data on the calendar without too much clutter.",
@@ -2453,8 +3691,7 @@
                 "see"
             ],
             "Secondary Action": [
-                "easily",
-                "read"
+                "easily read"
             ]
         },
         "Entity": {
@@ -2469,7 +3706,19 @@
                 "calendar",
                 "much clutter"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "only events"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp worker, I'm able to report a list of supplies to the manager that the camp is short of.",
@@ -2491,7 +3740,19 @@
                 "manager",
                 "camp"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp worker",
+                "report"
+            ]
+        ],
+        "Targets": [
+            [
+                "report",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a camp administrator, I want to be able to schedule activities for campers, so that camp workers can easily keep track of who is where at all times.",
@@ -2503,8 +3764,7 @@
                 "schedule"
             ],
             "Secondary Action": [
-                "easily",
-                "keep"
+                "easily keep"
             ]
         },
         "Entity": {
@@ -2517,7 +3777,19 @@
                 "track of who",
                 "all times"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "camp administrator",
+                "schedule"
+            ]
+        ],
+        "Targets": [
+            [
+                "schedule",
+                "activities"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a parent, I want to be able to see which consent forms I have submitted, so that I can know what I still need to do.",
@@ -2538,7 +3810,19 @@
                 "consent forms I have submitted"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "parent",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "consent forms I have submitted"
+            ]
+        ]
     },
     {
         "Text": "#G12# As a parent, I want to be able to message my child's counselors, so that I can voice my concerns or check on my child's progress.",
@@ -2562,7 +3846,19 @@
                 "concerns",
                 "child's progress"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "parent",
+                "message"
+            ]
+        ],
+        "Targets": [
+            [
+                "message",
+                "child's counselors"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a developer, I want to have the application function correctly in Internet Explorer 6 and 7, Firefox 1.5 and 2, and Safari 2, so that as many people as possible can fully use the application.",
@@ -2574,8 +3870,7 @@
                 "have"
             ],
             "Secondary Action": [
-                "fully",
-                "use"
+                "fully use"
             ]
         },
         "Entity": {
@@ -2589,7 +3884,27 @@
                 "many people",
                 "application"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "application function"
+            ],
+            [
+                "have",
+                "Firefox 1.5 and 2"
+            ],
+            [
+                "have",
+                "Safari 2"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a participant, I want to be able to see each estimator's prior estimates for the story being estimated, so that I can see how his or her opinion has changed so I can ask questions.",
@@ -2615,7 +3930,19 @@
                 "how his or her opinion",
                 "questions"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "participant",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "each estimator's prior estimates"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a developer, I want to have created database indexes, so that the queries run as fast as possible.",
@@ -2636,7 +3963,27 @@
             "Secondary Entity": [
                 "queries"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ],
+            [
+                "developer",
+                "created"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "database indexes"
+            ],
+            [
+                "created",
+                "database indexes"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a moderator, I want to accept the average of all estimates, so that we can move on to the next item when we agree.",
@@ -2660,7 +4007,19 @@
                 "all estimates",
                 "next item"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "moderator",
+                "accept"
+            ]
+        ],
+        "Targets": [
+            [
+                "accept",
+                "average"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a moderator, I want to export a transcript of a game as a CSV file, so that I can further process the stories and estimates.",
@@ -2685,7 +4044,19 @@
                 "stories",
                 "estimates"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "moderator",
+                "export"
+            ]
+        ],
+        "Targets": [
+            [
+                "export",
+                "transcript"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a participant, I want to change my estimate as long as the draw has not been completed, so that I can change my mind.",
@@ -2708,7 +4079,19 @@
                 "draw",
                 "mind"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "participant",
+                "change"
+            ]
+        ],
+        "Targets": [
+            [
+                "change",
+                "estimate"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a moderator, I want to create a new game by entering a name and an optional description, so that I can start inviting estimators.",
@@ -2734,7 +4117,19 @@
                 "optional description",
                 "estimators"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "moderator",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "new game"
+            ]
+        ]
     },
     {
         "Text": "#G13# As a moderator, I want to invite up to 15 estimators, so that we can play with large but not immense teams.",
@@ -2755,7 +4150,14 @@
                 "15 estimators",
                 "large but not immense teams"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "moderator",
+                "invite up"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G13# As a developer, I want to have written a site which is compliant with XHTML and CSS standards, so that as many people as possible can access the site and view it as intended.",
@@ -2781,7 +4183,18 @@
                 "many people",
                 "site"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ],
+            [
+                "developer",
+                "written"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G13# As an estimator, I want to see the item we're estimating, so that I know what I'm giving an estimate for.",
@@ -2805,7 +4218,19 @@
             "Secondary Entity": [
                 "estimate"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "estimator",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "item"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.",
@@ -2827,7 +4252,19 @@
             "Secondary Entity": [
                 "UI"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Publisher",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "data package"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Publisher, I want to know if this site has a pricing plan and what the prices are, so that that I can work out what this will cost me in the future and have a sense that these guys are sustainable.",
@@ -2855,7 +4292,27 @@
                 "future",
                 "guys"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Publisher",
+                "know"
+            ],
+            [
+                "Publisher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "sense"
+            ],
+            [
+                "have",
+                "sense"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Consumer, I want to view a publisher's profile, so that that I can see who is behind a particular package or to see what other packages they produce.",
@@ -2880,7 +4337,19 @@
                 "particular package",
                 "what other packages"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Consumer",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "publisher's profile"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
@@ -2889,12 +4358,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "permanently",
-                "delete"
+                "permanently delete"
             ],
             "Secondary Action": [
-                "no longer",
-                "takes"
+                "no longer takes"
             ]
         },
         "Entity": {
@@ -2903,7 +4370,14 @@
                 "data package",
                 "up storage space"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Publisher",
+                "permanently delete"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G14# As a Consumer, I want to see how much the data has been downloaded, so that that I can choose most popular in the case when there are several alternatives for my use case.",
@@ -2929,7 +4403,19 @@
                 "several alternatives",
                 "use case"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Consumer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "how much"
+            ]
+        ]
     },
     {
         "Text": "#G14# As an owner, I want to invite someone using their email to sign up and become a member of my Publisher, so that that they are authorized to publish data packages under my Publisher.",
@@ -2957,7 +4443,27 @@
                 "data packages",
                 "Publisher"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "owner",
+                "invite"
+            ],
+            [
+                "owner",
+                "become"
+            ]
+        ],
+        "Targets": [
+            [
+                "invite",
+                "member"
+            ],
+            [
+                "become",
+                "member"
+            ]
+        ]
     },
     {
         "Text": "#G14# As an Admin, I want to set key configuration parameters for my site deployment, so that that I can change key information like the site title.",
@@ -2981,7 +4487,19 @@
                 "key information",
                 "site title"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Admin",
+                "set"
+            ]
+        ],
+        "Targets": [
+            [
+                "set",
+                "key configuration parameters"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Publisher, I want to use a publish command to update a data package that is already in the registry, so that it appears there.",
@@ -3005,7 +4523,19 @@
                 "data package",
                 "registry"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Publisher",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "publish command"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
@@ -3031,7 +4561,35 @@
                 "interest",
                 "other people"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Consumer",
+                "view"
+            ],
+            [
+                "Consumer",
+                "discuss"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "Datapackage"
+            ],
+            [
+                "discuss",
+                "Datapackage"
+            ],
+            [
+                "view",
+                "particular data timeslice"
+            ],
+            [
+                "discuss",
+                "particular data timeslice"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Publisher, I want to tag datapackage to create a snapshot of data on the registry server, so that that consumers can refer to it.",
@@ -3056,7 +4614,19 @@
                 "registry server",
                 "consumers"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Publisher",
+                "tag"
+            ]
+        ],
+        "Targets": [
+            [
+                "tag",
+                "datapackage"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Consumer, I want to browse and find publishers, so that that I can find interesting publishers and their packages.",
@@ -3080,7 +4650,27 @@
                 "interesting publishers",
                 "packages"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Consumer",
+                "browse"
+            ],
+            [
+                "Consumer",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "browse",
+                "publishers"
+            ],
+            [
+                "find",
+                "publishers"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Consumer, I want to be able to get the data for a data package even if the original data has been moved or removed, so that that I can still use is and my app or analysis keeps working.",
@@ -3106,7 +4696,19 @@
                 "app",
                 "analysis"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Consumer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "data"
+            ]
+        ]
     },
     {
         "Text": "#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.",
@@ -3133,7 +4735,19 @@
                 "password",
                 "website"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Visitor",
+                "sign up via"
+            ]
+        ],
+        "Targets": [
+            [
+                "sign up via",
+                "github"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a repoadmin, I want to provide the server SLA to data contributors.",
@@ -3153,7 +4767,19 @@
             "Secondary Entity": [
                 "data contributors"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "repoadmin",
+                "provide"
+            ]
+        ],
+        "Targets": [
+            [
+                "provide",
+                "server SLA"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a collection curator, I want to have metadata changes made to items with repository-assigned DOIs to be propagated to the EZID.",
@@ -3178,7 +4804,19 @@
                 "repository-assigned DOIs",
                 "EZID"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "collection curator",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "metadata changes"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a collection curator, I want to see a dashboard widget showing a summary of recent submissions to my collection.",
@@ -3200,7 +4838,19 @@
                 "recent submissions",
                 "collection"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "collection curator",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "dashboard widget"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a collection curator, I want to create deposit forms specific to the collection.",
@@ -3220,7 +4870,19 @@
             "Secondary Entity": [
                 "collection"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "collection curator",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "deposit forms specific"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a collection curator, I want to set a date after which data will expire and be deleted or hidden then deleted.",
@@ -3234,8 +4896,7 @@
             "Secondary Action": [
                 "expire",
                 "deleted",
-                "hidden then",
-                "deleted"
+                "hidden then deleted"
             ]
         },
         "Entity": {
@@ -3245,7 +4906,19 @@
             "Secondary Entity": [
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "collection curator",
+                "set"
+            ]
+        ],
+        "Targets": [
+            [
+                "set",
+                "date"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a depositor, I want to see what kinds of things the repository accepts and what formats are accepted and recommended.",
@@ -3268,7 +4941,19 @@
                 "things",
                 "repository accepts and what formats"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "what kinds"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a repoadmin, I want to continue to provide access to the repository in the event that the server fails.",
@@ -3289,7 +4974,9 @@
                 "event",
                 "server"
             ]
-        }
+        },
+        "Triggers": [],
+        "Targets": []
     },
     {
         "Text": "#G16# As a repoadmin, I want to expose repository contents via OAI-PMH.",
@@ -3309,7 +4996,19 @@
             "Secondary Entity": [
                 "OAI-PMH"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "repoadmin",
+                "expose"
+            ]
+        ],
+        "Targets": [
+            [
+                "expose",
+                "repository contents"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a DPC, I want events to be created when a publication is published and unpublished, who did it, comment, so that I can record when and why something was made unavailable.",
@@ -3336,7 +5035,19 @@
                 "publication",
                 "unpublished"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "DPC",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "events"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a collection curator, I want users to contact me directly from the repository to request access to restricted objects.",
@@ -3358,7 +5069,9 @@
                 "access",
                 "restricted objects"
             ]
-        }
+        },
+        "Triggers": [],
+        "Targets": []
     },
     {
         "Text": "#G16# As a DigitalRecords Archivist, I want to grant embargo privileges to other repository administrators.",
@@ -3378,7 +5091,19 @@
             "Secondary Entity": [
                 "other repository administrators"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "DigitalRecords Archivist",
+                "grant"
+            ]
+        ],
+        "Targets": [
+            [
+                "grant",
+                "embargo privileges"
+            ]
+        ]
     },
     {
         "Text": "#G16# As a repository manager, I want to elect to either replicate remotely or not and possibly to replicate beyond the primary remote site.",
@@ -3397,7 +5122,9 @@
             "Secondary Entity": [
                 "primary remote site"
             ]
-        }
+        },
+        "Triggers": [],
+        "Targets": []
     },
     {
         "Text": "#G16# As a DigitalRecords Archivist, I want to edit the length of embargoes.",
@@ -3417,7 +5144,19 @@
             "Secondary Entity": [
                 "embargoes"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "DigitalRecords Archivist",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "edit",
+                "length"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.",
@@ -3445,7 +5184,23 @@
                 "other apps",
                 "pipelines"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "hydrator user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "explicit version"
+            ],
+            [
+                "specify",
+                "I expect pipeline creation"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.",
@@ -3469,7 +5224,19 @@
                 "code",
                 "pipeline"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "pipeline developer",
+                "upgrade"
+            ]
+        ],
+        "Targets": [
+            [
+                "upgrade",
+                "dataset instance"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
@@ -3491,7 +5258,19 @@
             "Secondary Entity": [
                 "dataset type"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "archetype"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a user, I want to specify the explore schema separately.",
@@ -3509,7 +5288,19 @@
                 "explore schema"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "explore schema"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.",
@@ -3530,7 +5321,19 @@
                 "existing dataset type",
                 "writing code"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "data scientist",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "dataset instance"
+            ]
+        ]
     },
     {
         "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.",
@@ -3560,7 +5363,19 @@
                 "app deployment start",
                 "new code"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "app developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
@@ -3589,7 +5404,19 @@
                 "type",
                 "apps"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "plugin developer",
+                "include"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "code"
+            ]
+        ]
     },
     {
         "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
@@ -3610,7 +5437,19 @@
                 "type",
                 "app"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "app developer",
+                "explore"
+            ]
+        ],
+        "Targets": [
+            [
+                "explore",
+                "dataset instance"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin.",
@@ -3631,7 +5470,19 @@
                 "app",
                 "plugin"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "plugin developer",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "custom dataset type"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore.",
@@ -3653,7 +5504,14 @@
                 "data",
                 "data available for explore"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
@@ -3665,8 +5523,7 @@
                 "configure"
             ],
             "Secondary Action": [
-                "-",
-                "live"
+                "-live"
             ]
         },
         "Entity": {
@@ -3677,7 +5534,19 @@
                 "uniform way",
                 "all dataset types"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "configure"
+            ]
+        ],
+        "Targets": [
+            [
+                "configure",
+                "time-"
+            ]
+        ]
     },
     {
         "Text": "#G17# As a dataset developer, I want to implement custom administrative operations such as \"compaction\" or \"rebalance\" that are no common to all dataset types.",
@@ -3698,7 +5567,19 @@
                 "\"compaction\" or \"rebalance",
                 "all dataset types"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "dataset developer",
+                "implement"
+            ]
+        ],
+        "Targets": [
+            [
+                "implement",
+                "custom administrative operations"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to have the ability to search for images of cells using standard meta data.",
@@ -3723,7 +5604,19 @@
                 "cells",
                 "standard meta data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a user, I want to prove definitively that I created a page on a certain date.",
@@ -3744,7 +5637,14 @@
                 "page",
                 "certain date"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "prove definitively"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
@@ -3771,7 +5671,19 @@
                 "feedback",
                 "course"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "supervisor",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "feedback forms"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to create a log book page.",
@@ -3789,7 +5701,19 @@
                 "log book page"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "log book page"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a user, I want to view how an experimental protocol has evolved over time.",
@@ -3809,7 +5733,14 @@
             "Secondary Entity": [
                 "experimental protocol"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G18# As a user,  I want to have the ability to keep my data private on the system, and only share data that I deem should be shared.",
@@ -3819,8 +5750,7 @@
         "Action": {
             "Primary Action": [
                 "have",
-                "only",
-                "share"
+                "only share"
             ],
             "Secondary Action": [
                 "keep",
@@ -3836,7 +5766,35 @@
                 "data private",
                 "system"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ],
+            [
+                "user",
+                "only share"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ],
+            [
+                "only share",
+                "ability"
+            ],
+            [
+                "have",
+                "data"
+            ],
+            [
+                "only share",
+                "data"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
@@ -3850,8 +5808,7 @@
             "Secondary Action": [
                 "provide",
                 "use",
-                "better",
-                "understand"
+                "better understand"
             ]
         },
         "Entity": {
@@ -3864,7 +5821,19 @@
                 "centre",
                 "each others' data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "system"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a user, I want to have a visual way of viewing particular files uploaded over a time period.",
@@ -3887,7 +5856,19 @@
                 "particular files",
                 "time period"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "visual way"
+            ]
+        ]
     },
     {
         "Text": "#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
@@ -3900,8 +5881,7 @@
             ],
             "Secondary Action": [
                 "understand",
-                "currently",
-                "is"
+                "currently is"
             ]
         },
         "Entity": {
@@ -3912,7 +5892,19 @@
                 "how feature-complete",
                 "Neurohub node"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "investigator",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "acceptance test results"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
@@ -3942,7 +5934,19 @@
                 "type",
                 "association"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.",
@@ -3967,7 +5971,19 @@
                 "log book page",
                 "web interface"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "files"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a user, I want to make predicated links between files.",
@@ -3987,7 +6003,19 @@
             "Secondary Entity": [
                 "files"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "make"
+            ]
+        ],
+        "Targets": [
+            [
+                "make",
+                "predicated links"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to have the ability to locate experiment files using meta data, regardless of where those files are located.",
@@ -4013,7 +6041,19 @@
                 "meta data",
                 "where those files"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory",
@@ -4034,7 +6074,19 @@
                 "Neurohub node",
                 "laboratory"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "secure"
+            ]
+        ],
+        "Targets": [
+            [
+                "secure",
+                "remote access"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher, I want to receive an alert of any unattached files that are in my workspace.",
@@ -4055,7 +6107,19 @@
                 "any unattached files",
                 "workspace"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "alert"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a user, I want to use the tags that I use are part of a controlled vocabulary.",
@@ -4075,7 +6139,19 @@
             "Secondary Entity": [
                 "controlled vocabulary"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "tags"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a supervisor, I want to view what my researchers were doing on a given date or period of time.",
@@ -4097,7 +6173,14 @@
                 "given date",
                 "period"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "supervisor",
+                "view"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G18# As a researcher, I want to attach currently non-attached files to a log book page.",
@@ -4117,7 +6200,19 @@
             "Secondary Entity": [
                 "log book page"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "attach"
+            ]
+        ],
+        "Targets": [
+            [
+                "attach",
+                "currently non-attached files"
+            ]
+        ]
     },
     {
         "Text": "#G18# As a researcher,  I want to have the ability to attach standard meta data for drug responses, so that my data can later be searched for and understood.",
@@ -4143,7 +6238,19 @@
                 "drug responses",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ]
+        ]
     },
     {
         "Text": "#G18# As lab administrator, I want to have increased access to the system to support regular users.",
@@ -4166,7 +6273,19 @@
                 "system",
                 "regular users"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "lab administrator",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "increased access"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to learn about all the social activities that are organized in my neighborhood.",
@@ -4189,7 +6308,19 @@
                 "social activities",
                 "neighborhood"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to play online games together with other users.",
@@ -4209,7 +6340,19 @@
             "Secondary Entity": [
                 "other users"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "play"
+            ]
+        ],
+        "Targets": [
+            [
+                "play",
+                "online games"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to have some games that show me how good my memory and physical health is.",
@@ -4233,7 +6376,23 @@
                 "me how good",
                 "memory"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "some games"
+            ],
+            [
+                "have",
+                "physical health"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to organize a meeting with a group of friends at a certain place.",
@@ -4257,7 +6416,19 @@
                 "group of friends",
                 "certain place"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a developer, I want to enable customers to provide feedback about my App and need an easy way to watch this feedback.",
@@ -4284,7 +6455,23 @@
                 "App",
                 "feedback"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "enable"
+            ]
+        ],
+        "Targets": [
+            [
+                "enable",
+                "customers"
+            ],
+            [
+                "enable",
+                "easy way"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to help me navigate despite my mild cognitive impairments.",
@@ -4296,8 +6483,7 @@
                 "use"
             ],
             "Secondary Action": [
-                "help me",
-                "navigate"
+                "help me navigate"
             ]
         },
         "Entity": {
@@ -4307,7 +6493,19 @@
             "Secondary Entity": [
                 "mild cognitive impairments"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to have ALFRED to enable me to have face to face contacts as well, so that I do not just have virtual contacts over ALFRED.",
@@ -4321,8 +6519,7 @@
             "Secondary Action": [
                 "enable",
                 "face",
-                "do not just",
-                "have"
+                "do not just have"
             ]
         },
         "Entity": {
@@ -4335,7 +6532,19 @@
                 "virtual contacts",
                 "ALFRED"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a MedicalCaregiver, I want to be sure that the user can decide who has access to her data.",
@@ -4357,7 +6566,14 @@
                 "who has access",
                 "her data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "be sure"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G19# As a developer, I want to have an easy way to manage the pricing modality of my Apps.",
@@ -4380,7 +6596,19 @@
                 "pricing modality",
                 "Apps"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "easy way"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a MedicalCaregiver, I want to have ALFRED to be able to determine the user's breathing frequency.",
@@ -4401,7 +6629,27 @@
             "Secondary Entity": [
                 "user's breathing frequency"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "have"
+            ],
+            [
+                "MedicalCaregiver",
+                "determine"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED"
+            ],
+            [
+                "determine",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a developer, I want to be notified as soon as possible when the state of any of my Apps changes.",
@@ -4422,7 +6670,18 @@
             "Secondary Entity": [
                 "state of any of my Apps"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "developer",
+                "be"
+            ],
+            [
+                "developer",
+                "notified"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G19# As an OlderPerson, I want to decide who has access to my vital data.",
@@ -4442,7 +6701,19 @@
             "Secondary Entity": [
                 "vital data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "decide"
+            ]
+        ],
+        "Targets": [
+            [
+                "decide",
+                "who has access"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a MedicalCaregiver, I want to control if the user does the exercise correct.",
@@ -4461,7 +6732,14 @@
                 "user",
                 "exercise correct"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "control"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G19# As an OlderPerson, I want to have an ALFRED device that helps me to communicate with my friends and family.",
@@ -4485,7 +6763,19 @@
                 "friends",
                 "family"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED device"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a MedicalCaregiver, I want to have videophone.",
@@ -4503,7 +6793,19 @@
                 "videophone"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "videophone"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a SocialCaregiver, I want to have ALFRED to be able to recognize pain and or stress by using skin conduction sensors.",
@@ -4528,7 +6830,35 @@
                 "stress",
                 "skin conduction sensors"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "SocialCaregiver",
+                "have"
+            ],
+            [
+                "SocialCaregiver",
+                "recognize"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED"
+            ],
+            [
+                "recognize",
+                "ALFRED"
+            ],
+            [
+                "have",
+                "pain"
+            ],
+            [
+                "recognize",
+                "pain"
+            ]
+        ]
     },
     {
         "Text": "#G19# As a MedicalCaregiver, I want to use video calls in case of emergency.",
@@ -4548,7 +6878,19 @@
             "Secondary Entity": [
                 "emergency"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "video calls"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to get a personalized invitation to a social event, so that it motivates more to go.",
@@ -4561,8 +6903,7 @@
             ],
             "Secondary Action": [
                 "get",
-                "motivates more to",
-                "go"
+                "motivates more to go"
             ]
         },
         "Entity": {
@@ -4573,7 +6914,19 @@
                 "personalized invitation",
                 "social event"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an InformalCaregiver, I want to have a game that the carer could play together with the user, so that it would enable to monitor the users\u2019 state of health but also have some fun time.",
@@ -4599,7 +6952,23 @@
                 "user",
                 "health"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "InformalCaregiver",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "game"
+            ],
+            [
+                "have",
+                "users\u2019 state"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to have ALFRED ask spontaneous questions but it would be better to programme it during certain times of the day.",
@@ -4622,7 +6991,19 @@
                 "certain times",
                 "day"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED ask spontaneous questions"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to receive support to use the public transport.",
@@ -4644,7 +7025,19 @@
             "Secondary Entity": [
                 "public transport"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "support"
+            ]
+        ]
     },
     {
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to control the heating.",
@@ -4666,7 +7059,19 @@
             "Secondary Entity": [
                 "heating"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a authenticateduser, I want to use a WYSIWYG editor for all long-form content, so that I don't have to know HTML to update my content.",
@@ -4678,9 +7083,7 @@
                 "use"
             ],
             "Secondary Action": [
-                "don't",
-                "have to",
-                "know",
+                "don't have to know",
                 "update"
             ]
         },
@@ -4693,7 +7096,19 @@
                 "HTML",
                 "content"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "authenticateduser",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "WYSIWYG editor"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a anonymoususer, I want to view a list of sponsors, so that I can thank all the awesome sponsors.",
@@ -4716,7 +7131,19 @@
                 "sponsors",
                 "awesome sponsors"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "anonymoususer",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a authenticateduser, I want to Be offered several choices of idividual sponsorship on the second page of registration, so that I can be awesome and financially support the camp.",
@@ -4742,7 +7169,27 @@
                 "registration",
                 "camp"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "authenticateduser",
+                "Be"
+            ],
+            [
+                "authenticateduser",
+                "offered"
+            ]
+        ],
+        "Targets": [
+            [
+                "Be",
+                "several choices"
+            ],
+            [
+                "offered",
+                "several choices"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a anonymoususer, I want to See a list of attendees associated with this company, so that I know who from this sponsor organization is attending.",
@@ -4767,7 +7214,19 @@
                 "who",
                 "sponsor organization"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "anonymoususer",
+                "See"
+            ]
+        ],
+        "Targets": [
+            [
+                "See",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a trainee, I want to see which trainings I have signed up for, so that they can schedule their event experience.",
@@ -4789,7 +7248,19 @@
             "Secondary Entity": [
                 "event experience"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "trainee",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "trainings I have signed up"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a administrator, I want to create and maintain venues, so that I can provide location details to help users find what they're looking for.",
@@ -4814,7 +7285,27 @@
                 "location details",
                 "users"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "administrator",
+                "create"
+            ],
+            [
+                "administrator",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "venues"
+            ],
+            [
+                "maintain",
+                "venues"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a anonymoususer, I want to see a list of the sessions associated with sponsor attendees, so that I know where I can engage with this sponsor and where they are thought leaders.",
@@ -4840,7 +7331,19 @@
                 "sponsor",
                 "leaders"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "anonymoususer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "list"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a administrator, I want to bulk approve sessions as accepted, so that I can save time.",
@@ -4849,8 +7352,7 @@
         ],
         "Action": {
             "Primary Action": [
-                "bulk",
-                "approve"
+                "bulk approve"
             ],
             "Secondary Action": [
                 "save"
@@ -4861,7 +7363,19 @@
                 "sessions"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "administrator",
+                "bulk approve"
+            ]
+        ],
+        "Targets": [
+            [
+                "bulk approve",
+                "sessions"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a trainingcoordinator, I want to email all the trainers at once from the website for info and updates, so that It is easier to use.",
@@ -4884,7 +7398,14 @@
                 "info",
                 "updates"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "trainingcoordinator",
+                "email"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G21# As a authenticateduser, I want to view the job board, so that I can look for an interesting Drupal gig!.",
@@ -4906,7 +7427,19 @@
             "Secondary Entity": [
                 "interesting Drupal gig"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "authenticateduser",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "job board"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a administrator, I want to assign a room to a time slot and a location, so that I can populate the schedule .",
@@ -4930,7 +7463,19 @@
                 "location",
                 "schedule"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "administrator",
+                "assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign",
+                "room"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a anonymoususer, I want to see all events, trainings and summits that a sponsor is sponsoring so that I know where I can engage with this sponsor and where they are thought leaders.",
@@ -4957,7 +7502,19 @@
                 "sponsor",
                 "leaders"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "anonymoususer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "all events"
+            ]
+        ]
     },
     {
         "Text": "#G21# As a anonymoususer, I want to find out where the coding lounge is and what time it is open, so that I can code with my friends.",
@@ -4978,7 +7535,14 @@
                 "coding lounge",
                 "friends"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "anonymoususer",
+                "find"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G22# As a data manager, I want to clarify the necessary rights for re-using the data, so that it is legal to reuse the data.",
@@ -5002,7 +7566,19 @@
                 "data",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "data manager",
+                "clarify"
+            ]
+        ],
+        "Targets": [
+            [
+                "clarify",
+                "necessary rights"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a repository manager, I want to have metadata in additional languages, so that I can allow for multilingual data archive.",
@@ -5025,7 +7601,19 @@
                 "additional languages",
                 "multilingual data archive"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "metadata"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a PI, I want to know who owns the data, so that I know what I am allowed to do with it.",
@@ -5047,7 +7635,14 @@
             "Secondary Entity": [
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "PI",
+                "know"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G22# As a research support officer, I want to ensure compliance to the funders\u2019 rules, so that I can ensure all costs will be accepted.",
@@ -5071,7 +7666,19 @@
                 "funders\u2019 rules",
                 "all costs"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "research support officer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "ensure",
+                "compliance"
+            ]
+        ]
     },
     {
         "Text": "#G22# As an institutional data manager, I want to know about the privacy and security requirements of the data, so that I can plan the right storage system and sharing permissions.",
@@ -5097,7 +7704,19 @@
                 "right storage system",
                 "permissions"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "institutional data manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "security requirements"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.",
@@ -5122,7 +7741,19 @@
                 "data",
                 "data"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "data manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "security requirements"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.",
@@ -5146,7 +7777,19 @@
                 "writing",
                 "data paper"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "extract"
+            ]
+        ],
+        "Targets": [
+            [
+                "extract",
+                "description"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a rector, I want to know how many data will be stored, so that I can plan long term resources.",
@@ -5169,7 +7812,19 @@
             "Secondary Entity": [
                 "long term resources"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "rector",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "how many data"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a Postgraduate Convenor, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.",
@@ -5195,7 +7850,19 @@
                 "staff",
                 "postgraduate students"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Postgraduate Convenor",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "regular summary reports"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a researcher, I want to see the sections on roles submitted by other researchers in my department, so that I can see if we could share data manager posts.",
@@ -5221,7 +7888,19 @@
                 "department",
                 "data manager posts"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "sections"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a PI, I want to plan what kind of data I want to store, so that I can ensure it will be possible to store it.",
@@ -5243,7 +7922,27 @@
                 "kind of data"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "PI",
+                "plan"
+            ],
+            [
+                "PI",
+                "store"
+            ]
+        ],
+        "Targets": [
+            [
+                "plan",
+                "kind of data"
+            ],
+            [
+                "store",
+                "kind of data"
+            ]
+        ]
     },
     {
         "Text": "#G22# As an administrator, I want to know who funded the project and their requirements, so that I can track the funder specific obligations.",
@@ -5266,7 +7965,14 @@
                 "requirements",
                 "funder specific obligations"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "administrator",
+                "know"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G22# As an IT staff member, I want to know how the data is used, so that I can determine what kind of basic services and functionalities are required.",
@@ -5289,7 +7995,14 @@
                 "what kind of basic services",
                 "functionalities"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "IT staff member",
+                "know"
+            ]
+        ],
+        "Targets": []
     },
     {
         "Text": "#G22# As a PI, I want to know how secure data is, so that I can ensure legal compliance.",
@@ -5311,7 +8024,19 @@
             "Secondary Entity": [
                 "legal compliance"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "PI",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "how secure data"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a repository owner, I want to be able to check the planned provenance of the data that will be submitted at the end of a project, so that I can calculate necessary submission fees and check whether it belongs to our target group.",
@@ -5338,7 +8063,19 @@
                 "necessary submission fees",
                 "target group"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "repository owner",
+                "check"
+            ]
+        ],
+        "Targets": [
+            [
+                "check",
+                "planned provenance"
+            ]
+        ]
     },
     {
         "Text": "#G22# As a data manager, I want to know how the data is used, so that I can develop more detailed usage and support scenarios with researchers.",
@@ -5363,7 +8100,19 @@
                 "more detailed usage",
                 "researchers"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "data manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "support scenarios"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Application Administrator, I want to be able to reset a User's password for them.",
@@ -5381,7 +8130,19 @@
                 "User's password"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "Application Administrator",
+                "reset"
+            ]
+        ],
+        "Targets": [
+            [
+                "reset",
+                "User's password"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Archivist, I want to import Agent information from EAC-CPF records.",
@@ -5401,7 +8162,19 @@
             "Secondary Entity": [
                 "EAC-CPF records"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Archivist",
+                "import"
+            ]
+        ],
+        "Targets": [
+            [
+                "import",
+                "Agent information"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Archivist, I want to import EAD data.",
@@ -5419,7 +8192,19 @@
                 "EAD data"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "Archivist",
+                "import"
+            ]
+        ],
+        "Targets": [
+            [
+                "import",
+                "EAD data"
+            ]
+        ]
     },
     {
         "Text": "#G23# As a Repository Manager , I want to create, update and delete archival descriptions in my repository.",
@@ -5441,7 +8226,35 @@
             "Secondary Entity": [
                 "repository"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Repository Manager",
+                "create"
+            ],
+            [
+                "Repository Manager",
+                "delete"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "update"
+            ],
+            [
+                "delete",
+                "update"
+            ],
+            [
+                "create",
+                "archival descriptions"
+            ],
+            [
+                "delete",
+                "archival descriptions"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Archivist, I want to create and edit Rights Management statements.",
@@ -5460,7 +8273,27 @@
                 "Rights Management statements"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "Archivist",
+                "create"
+            ],
+            [
+                "Archivist",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "Rights Management statements"
+            ],
+            [
+                "edit",
+                "Rights Management statements"
+            ]
+        ]
     },
     {
         "Text": "#G23# As a User , I want to authenticate using LDAP.",
@@ -5479,7 +8312,27 @@
                 "LDAP"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "User",
+                "authenticate"
+            ],
+            [
+                "User",
+                "using"
+            ]
+        ],
+        "Targets": [
+            [
+                "authenticate",
+                "LDAP"
+            ],
+            [
+                "using",
+                "LDAP"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Archivist, I want to associate a standard identifier string with a Subject heading.",
@@ -5499,7 +8352,19 @@
             "Secondary Entity": [
                 "Subject heading"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Archivist",
+                "associate"
+            ]
+        ],
+        "Targets": [
+            [
+                "associate",
+                "standard identifier string"
+            ]
+        ]
     },
     {
         "Text": "#G23# As a user, I want to add additional properties for repositories.",
@@ -5519,7 +8384,19 @@
             "Secondary Entity": [
                 "repositories"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "additional properties"
+            ]
+        ]
     },
     {
         "Text": "#G23# As a user, I want backend changes to support loading enum value lists from the database.",
@@ -5542,7 +8419,19 @@
                 "loading enum value lists",
                 "database"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "backend changes"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.",
@@ -5566,7 +8455,19 @@
                 "Advanced Data Entry",
                 "appropriate permissions"
             ]
-        }
+        },
+        "Triggers": [
+            [
+                "Application Administrator",
+                "assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign",
+                "Users"
+            ]
+        ]
     },
     {
         "Text": "#G23# As an Archivist, I want to manage Digital Objects.",
@@ -5584,6 +8485,18 @@
                 "Digital Objects"
             ],
             "Secondary Entity": []
-        }
+        },
+        "Triggers": [
+            [
+                "Archivist",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "Digital Objects"
+            ]
+        ]
     }
 ]
