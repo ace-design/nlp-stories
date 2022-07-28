@@ -17,7 +17,7 @@ from sklearn.model_selection import RandomizedSearchCV
 import sys
 
 def main():
-    train_path, test_path, random_optimize, grid_optimize, model_name, save_name, saving_path = command()
+    train_path, test_path, random_optimize, grid_optimize, model_name, save_name, saving_path, data_type_folder = command()
 
     stanza.download('en') 
     stanza_nlp = stanza.Pipeline('en')
@@ -37,7 +37,7 @@ def main():
         formatted_data = format_results(testing_stories[i], persona, primary_action, secondary_action, primary_entity, secondary_entity)
         output.append(formatted_data)
 
-    save_results(save_name, output)
+    save_results(save_name, output, data_type_folder)
     optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, save_name)
     
 def command():
@@ -48,6 +48,7 @@ def command():
     args.load_training_path (str): path of crf file with the training set input
     args.load_testing_path (str): path of crf file with the testing set input
     args.save_name (str): name to the saving file
+    data_type (str): type of grouping of the data
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -62,12 +63,21 @@ def command():
     parser.add_argument('--grid_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("model_name", type = str, help = "name of the model")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
+    parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     
     args = parser.parse_args()
 
     if  not(args.load_testing_path.endswith(".json")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. input file type is .jsonl")
+
+    if args.data_type == "BKLG":
+        data_type_folder = "individual_backlog"
+    elif args.data_type == "CAT":
+        data_type_folder = "categories"
+    else:
+        data_type_folder = "global"
+
 
     saving_path = "nlp\\nlp_tools\\crf\\crf_models\\"  + args.model_name + "_crf_model.pkl"
 
@@ -90,7 +100,7 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, args.save_name, saving_path
+        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, args.save_name, saving_path, data_type_folder
 
 def get_model(train_path, testing_stories, testing_set, saving_path):
     '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''
@@ -442,16 +452,17 @@ def format_results(story, persona, primary_action, secondary_action, primary_ent
 
     return formatted_data
 
-def save_results(save_name, output):
+def save_results(save_name, output, data_type_folder):
     '''
     save the final results to a json file
 
     Parameters: 
     save_name (str): the name of the file to save
-    output (list): contains the data to save into the file    
+    output (list): contains the data to save into the file 
+    data_type_folder (str): folder name to save in    
     '''   
 
-    saving_path = "nlp\\nlp_outputs\\nlp_outputs_original\\crf\\" + save_name +".json"
+    saving_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_original\\crf\\" + save_name +".json"
 
     with open(saving_path,"w", encoding="utf-8") as file:
         json.dump(output, file, indent = 4)

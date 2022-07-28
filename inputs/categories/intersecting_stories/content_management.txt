@@ -1,0 +1,633 @@
+#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.
+#G14# As a Consumer, I want to browse and find publishers, so that that I can find interesting publishers and their packages.
+#G14# As a Publisher, I want to publish a dataset, so that I can share the dataset publicly with everyone.
+#G14# As a Consumer, I want to download a Data package at a particular version, so that that I know it is compatible with my scripts and system.
+#G14# As a Developer, I want to use data package as a node lib in my project, so that that I can depend on it using my normal dependency framework.
+#G14# As an Owner, I want to edit my profile, so that that it is updated with new information.
+#G14# As a Publisher, I want to sign up for an account, so that that I can publish my data package to the registry and to have a publisher account to publish my data package under.
+#G14# As an Admin, I want to see key metrics about usage such as users, API usage, downloads, so that that I know how things are going.
+#G14# As a Publisher, I want to be warned that a tag exists when I try to overwrite it, so that that I don't accidentally overwrite stable tagged data which is relied on by consumers.
+#G14# As a Publisher, I want to import my data package into the registry, so that my data has a permanent online home to access.
+#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.
+#G14# As a Publisher, I want to publish a data package where its resource data is stored on my servers but the registry caches a copy of that data, so that that if my data is lost or gets broken I still have a copy people can use.
+#G14# As an Admin, I want to set key configuration parameters for my site deployment, so that that I can change key information like the site title.
+#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.
+#G14# As a Data Analyst I want to download a data package, so that that I can study it and wrangle with it to infer new data or generate new insights.
+#G14# As a Consumer, I want to download a DataPackage's data one coherent SQLite database, so that that I can get it easily in one form.
+#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.
+#G14# As a Publisher, I want to be able to overwrite the previously tagged datapackage, so that that I can fix it if I mess up.
+#G14# As a Consumer, I want to see a publisher's profile, so that that I can discover their packages and get a sense of how active and good they are.
+#G14# As a Consumer, I want to view a publisher's profile, so that that I can see who is behind a particular package or to see what other packages they produce.
+#G14# As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.
+#G14# As an owner, I want to view all the people in my organization and what roles they have, so that that I can change these if I want.
+#G14# As an Admin, I want to have a pricing plan and billing system, so that that I can charge users and make my platform sustainable.
+#G14# As a Data Analyst, I want to update previously downloaded data package, so that that I can work with the most recent data.
+#G14# As an Owner, I want to invite an existing user, so that the user can become a member of my publisher.
+#G14# As a Publisher, I want to configure my client, so that I can start publishing data packages.
+#G14# As a Publisher, I want to unpublish a data package, so that it is no longer visible to anyone.
+#G14# As a Publisher, I want to see real examples of published packages so that I can understand how useful and simple the datapackage format and the registry is.
+#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.
+#G14# As a Data Analyst, I want to compare different versions of some datapackage locally, so that that I can see schema changes clearly and adjust my analytics code to the desired schema version.
+#G14# As a Consumer, I want to view a data package online, so that I can get a sense of whether this is the dataset I want.
+#G14# As a Publisher, I want to publish a dataset, so that I can view just the dataset with a few people.
+#G14# As a Consumer, I want to search data packages, so that that I can find the ones I want.
+#G14# As a Publisher, I want to know if this site has a pricing plan and what the prices are, so that that I can work out what this will cost me in the future and have a sense that these guys are sustainable.
+#G14# As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.
+#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.
+#G14# As a Publisher, I want to have private data packages, so that I can share just with my team.
+#G14# As an owner, I want to remove a user as an owner, so that they are just a member and no longer have full control.
+#G14# As a Developer, I want to list all DataPackages requirements for my project in the file and pin the exact versions of any DataPackage that my project depends on, so that that the project can be deterministically deployed locally and won't break because of the DataPackage schema changes.
+#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.
+#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.
+#G14# As a Publisher, I want to tag datapackage to create a snapshot of data on the registry server, so that that consumers can refer to it.
+#G14# As a Publisher, I want to be able to get access to a previous version I tagged, so that that I can return to it and review it.
+#G14# As a Consumer, I want to be notified of changes to a package I care about, so that that I can check out what has changed and take action.
+#G14# As a Consumer, I want to see how active the site is, so that I can decide if I should get involved.
+#G14# As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.
+#G14# As a Publisher, I want to be able to restore the deleted data package via cli, so that that it is back visible and available to view, download.
+#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.
+#G14# As an owner, I want to invite someone using their email to sign up and become a member of my Publisher, so that that they are authorized to publish data packages under my Publisher.
+#G14# As an owner, I want to make a user an owner, so that they have full control.
+#G14# As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.
+#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.
+#G14# As a Consumer, I want to know full details of how the data package schema has changed, so that that I can adjust my scripts to handle it.
+#G14# As a Publisher, I want to be able to preview the views of the current data package using cli prior to publishing, so that that I can refine the json declarations of datapackage view section to achieve a great looking result.
+#G14# As an Admin, I want to invite someone to join the platform, so that that they can start contributing or using data.
+#G14# As a Publisher, I want to use a publish command to update a data package that is already in the registry, so that it appears there.
+#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.
+#G14# As a publisher, I want to show the world how my published data is, so that that it immediately catches consumer's attention.
+#G14# As a Consumer, I want to load a Data Package from R, so that that I can immediately start playing with it.
+#G14# As a Publisher, I want to sign up for a given pricing plan, so that that I am entitled to what it allows.
+#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.
+#G14# As a Consumer, I want to search among all data packages owned by a publisher, so that that I can easily find one data package amongst all the data packages by this publisher.
+#G14# As a Publisher, I want to undelete the deleted data packages, so that that the deleted data packages is now visible again.
+#G14# As a Consumer, I want to see how much the data has been downloaded, so that that I can choose most popular in the case when there are several alternatives for my use case.
+#G14# As a Consumer, I want to be able to get the data for a data package even if the original data has been moved or removed, so that that I can still use is and my app or analysis keeps working.
+#G18# As a researcher, I want to share post-experiment write-ups with other researchers, so that others can more easily replicate my work.
+#G18# As a researcher,  I want to have the ability to store all the inputs for an experiment so that the provenance of the results can be verified.
+#G18# As a user, I want to make uploaded data files to be non-modifiable.
+#G18# As a researcher, I want to access files stored in my Neurohub workspace, using a network drive attached to my workstation.
+#G18# As a user, I want to be sure that existing metadata corresponding to the file is not lost when moving a file to a new location.
+#G18# As a researcher,  I want to have the ability to locate and access data that colleagues want to share.
+#G18# As a user, I want to view the group's shared calendars via the Neurohub Nodes' Web page as well as on my mobile device.
+#G18# As a researcher,  I want to have the ability to restrict the data I share to certain researchers or groups of researchers.
+#G18# As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory
+#G18# As a systems administrator, I want  to install Neurohub dependencies into an Ubuntu 10.04 LTS machine using the normal Ubuntu package management tools.
+#G18# As a user, I want to have files I might accidentally delete to be restorable.
+#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.
+#G18# As lab administrator, I want to have increased access to the system to support regular users.
+#G18# As a user, I want to search for and download human-readable experimental protocols.
+#G18# As a lab administrator, I want to create page templates with bespoke metadata fields.
+#G18# As a researcher, I want to point my Mendeley client at a group-wide shared repository of research papers and get notifications via Mendeley when new content is added.
+#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.
+#G18# As a researcher,  I want to have the ability to interact with a revision control system so that I can keep track of changes to files over time.
+#G18# As a user, I want to make predicated links between files.
+#G18# As a researcher, I want to have the ability to locate experiment files using meta data, regardless of where those files are located.
+#G18# As a researcher,  I want to have the ability to attach standard meta data for drug responses, so that my data can later be searched for and understood.
+#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.
+#G18# As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.
+#G18# As a user, I want to search specifically for files rather than log book pages.
+#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.
+#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.
+#G18# As a user, I want to sync events created in NeuroHub with a web-based Calendar such as Google Calendar.
+#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.
+#G18# As a researcher,  I want to have the ability to bulk upload directories and files with minimal effort.
+#G18# As a user, I want to enter metadata / describe an experiment protocol before a file is even created.
+#G18# As a user, I want to view and update an inventory of of the equipment and consumables that are present in the centre.
+#G18# As a researcher, I want to attach currently non-attached files to a log book page.
+#G18# As a system administrator, I want to run a script that tests to see if a Neurohub installation is functioning correctly.
+#G18# As a user, I want to have the option to tell Neurohub to push posted content to my Twitter feed at the same time.
+#G18# As a user, I want to limit my search to a particular set of log books.
+#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.
+#G18# As a user,  I want to have the ability to change the sharing and ownership of multiple files.
+#G18# As a JuniorResearcher,  I want to have the ability to harvest knowledge from within the group, so that I can learn from more experienced researchers.
+#G18# As a user, I want to have the ability to move multiple files around and rearrange them using the Neurohub file browser while processing data.
+#G18# As a user, I want to have that my Twitter Tweets to appear in Neurohub, so that other researchers in the centre can see what I am up to.
+#G18# As an MRI operator, I want to digitally record the responses that subjects make when completing paper-based forms.
+#G18# As a researcher, I want to create a log book page for an experiment and attach a file to this page.
+#G18# As a user, I want to attach multiple files at once to a log book page.
+#G18# As a user, I want to capture the same metadata for each file created in an experimental run.
+#G18# As a user, I want to manage the references / papers I have investigated.
+#G18# As a researcher, I want to have the ability to search for images of cells using standard meta data.
+#G18# As a researcher, I want to receive an alert of any unattached files that are in my workspace.
+#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.
+#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.
+#G18# As a user, I want to revert to an older version of an uploaded file.
+#G18# As a user, I want to filter the files I get from search results based on their  type.
+#G18# As a user, I want to have a visual way of viewing particular files uploaded over a time period.
+#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.
+#G18# As a researcher, I want to create a log book page.
+#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.
+#G18# As a researcher, I want to indicate within my electronic log book which experimental data is good/bad, hide the bad data, but still keep it in the system just in case it is useful in the future.
+#G18# As a user, I want to store worm behaviour videos with an encoding that can be analysed by the worm analysis software written by Christopher James.
+#G18# As a researcher, I want to have the ability to search for files by file type and format.
+#G18# As a system administrator, I want to have a managed backup protocol for the system.
+#G18# As a user, I want to use the tags that I use are part of a controlled vocabulary.
+#G18# As a user, I want to download files directly from the search results page.
+#G18# As a user, I want to create a protocol and assign metadata to any stag.
+#G18# As a user, I want to prove definitively that I created a page on a certain date.
+#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.
+#G18# As a researcher,  I want to have the ability to attach detailed meta data to the data and entries that I create.
+#G18# As a user,  I want to have the ability to keep my data private on the system, and only share data that I deem should be shared.
+#G18# As a researcher, I want to have the ability to attach standard meta data for behavioural observations (and video), so that my data can later be searched for and understood.
+#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.
+#G18# As a researcher, I want to create a log book page for an experiment and attach a directory that contains multiple files.
+#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.
+#G18# As a researcher, I want to have a group-level repository for sharing papers/reviews/comments with other researchers.
+#G18# As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.
+#G18# As a release engineer, I want to call a script to execute acceptance tests against a Neurohub installation and report back the results.
+#G18# As a lab administrator, I want to theme the Web interface graphics/colours.
+#G18# As a lab member, I want to view events and equipment bookings within the group.
+#G18# As a researcher, I want to have remote access to my data for off-site working , so that I can still work effectively while away from the lab.
+#G18# As a researcher, I want to have services to support the long term curation of data, so that I can be sure that data will not get 'lost' with the passage of time.
+#G18# As a supervisor, I want to view what my researchers were doing on a given date or period of time.
+#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.
+#G18# As a user, I want to restrict what can be entered to a metadata field.
+#G18# As a user, I want to see the provenance of the page as part of the search results.
+#G18# As a researcher, I want to collect data as a library of data, which can then be used by one or multiple experiments that are defined at a later stage.
+#G18# As a user, I want to associate together files involved in a experiment.
+#G18# As a user, I want to view how an experimental protocol has evolved over time.
+#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.
+#G18# As a researcher, I want to download files attached to an experiment using my Web browser.
+#G18# As a user, I want to upload large files of over 1GB in size.
+#G18# As a researcher, I want to upload files prior to having them attached to a log book page.
+#G18# As a user, I want to download multiple files from the search results in one go.
+#G18# As a user, I want to link together experimental runs to build an experiment.
+#G18# As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.
+#G18# As a user, I want to assign bespoke information to a file dependent on its type.
+#G18# As a user, I want to navigate forwards and backwards between log books and log book pages without having to use my browser's back button.
+#G18# As a user, I want to limit my search results to one or more log book sections from one or more log books.
+#G18# As a user, I want to have the details of the workflow execution to be recorded in a neurohub log book while executing a workflow.
+#G18# As a user, I want to assign tags to files that I have uploaded.
+#G18# As a user, I want to have the system to also forward important news items to an external mailing list.
+#G18# As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.
+#G22# As a researcher, I want to see the sections on responsibilities submitted by other researchers in my department, so that I can see if we could share data manager posts.
+#G22# As a researcher, I want to import metadata that I captured with a metadata tool, so that I do not have to capture it again in a DMP.
+#G22# As an IT manager, I want to know about IT resource requirements early in the project lifecycle, so that I can enable resource acquisition planning.
+#G22# As a Research Centre Director, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.
+#G22# As an archivemanager, I want to reuse the information regarding file format, so that I can apply automated checks for the file validation.
+#G22# As a data manager, I want to know what the content of the data is, so that I can decide to which collection or repository the data fits.
+#G22# As an administrator, I want to check that all data has the appropriate security level, so that I can demonstrate compliance.
+#G22# As a faculty data steward, I want to see the sections on costing, so that I can ensure sufficient expertise on data management to support the project.
+#G22# As a researcher, I want to know how many resources are needed during the project, so that I can calculate costs.
+#G22# As a rector, I want to know how many data will be stored, so that I can plan long term resources.
+#G22# As a researcher, I want to record research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.
+#G22# As an IT staff member, I want to know how the data is used, so that I can determine what kind of basic services and functionalities are required.
+#G22# As a data manager, I want to know with which software or technology the data is produced or used, so that I know what technology or background information might be necessary to (re-)use the data.
+#G22# As an IT staff member, I want to have an estimate of the produced data volume, so that I can plan the overall storage consumption.
+#G22# As an IT staff member, I want to know the security requirements of the data, so that I know which kind of security measures to apply.
+#G22# As a stakeholder, I want to know when the data management plan was created or updated, so that I know how up-to-date the plan is or whether it needs to be updated.
+#G22# As a legalofficer, I want to know about data sensitivity, so that I can establish sharing options.
+#G22# As a PI, I want to know how secure data is, so that I can ensure legal compliance.
+#G22# As a data manager, I want to know which kind of data types will be produced or collected, so that I can ensure that the necessary technical resources and technical know-how is available.
+#G22# As a funder, I want to know how secure data is, so that I can ensure legal compliance.
+#G22# As a researcher, I want to know about costs, so that I can plan my research.
+#G22# As a funder, I want to be able to read the costs for data management from the DMP, so that I can check whether our policies work as intended.
+#G22# As a data manager, I want to know the time plan for collecting data, so that I can plan the data management.
+#G22# As an IT officer, I want to know how secure data is, so that I can ensure legal compliance.
+#G22# As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.
+#G22# As a data manager, I want to know which formats are used, so that I know what technology or background information might be necessary to use the data.
+#G22# As a manager, I want to know about all resources and services used for the data, so that I can estimate the true cost of the project.
+#G22# As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.
+#G22# As a researcher, I want to store agreements relating to third party data used in a project, so that the data can be cited, attributed and used correctly.
+#G22# As a data manager, I want to know whether the DMP was approved, so that I can proceed with the required next steps.
+#G22# As an archivemanager, I want to know the legal status of data, so that I can apply the legal requirements accordingly.
+#G22# As an archivemanager, I want to make sure that detailed metadata are associated to data so that it will be understandable by future users.
+#G22# As a repository owner, I want to be able to check the planned provenance of the data that will be submitted at the end of a project, so that I can calculate necessary submission fees and check whether it belongs to our target group.
+#G22# As a data manager, I want to have references to documentation of the data and its creation process, so that the data can be re-used and managed.
+#G22# As a data manager, I want to know whether the collected data depends on other data sets from my own or other institutions, so that I can ensure that these dependencies are maintained.
+#G22# As a data librarian, I want to import administrative information regarding a project into DMP, so that I can prepopulate the DMP.
+#G22# As an administrator, I want to know who funded the project and their requirements, so that I can track the funder specific obligations.
+#G22# As a data manager, I want to have the description of collected data sets that are used or updated throughout the project lifecycle, so that I can ensure the descriptions are current and add detail as the study proceeds.
+#G22# As a metadata manager, I want to have a short description of project, so that I can be informed about the metadata description.
+#G22# As a data manager, I want to clarify the necessary rights for re-using the data, so that it is legal to reuse the data.
+#G22# As a repository manager, I want to have metadata in additional languages, so that I can allow for multilingual data archive.
+#G22# As a data manager, I want to document all rights necessary for managing the data, so that I can curate and preserve the data.
+#G22# As a Postgraduate Convenor, I want to receive regular summary reports of research data, so that I understand trends in data use among staff and postgraduate students.
+#G22# As a research evaluation manager, I want to ensure all data are quoted correctly with our affiliation, so that they are counted towards our citation counts.
+#G22# As a PI, I want to properly record all metadata, so that I can ensure proper running of the project in case of staff changes.
+#G22# As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.
+#G22# As a data manager, I want to know whether the data can be reproduced efficiently, so that I can determine whether and how the data has to be stored.
+#G22# As a faculty data steward, I want to see the sections on roles, so that I can ensure sufficient expertise on data management to support the project.
+#G22# As a data manager, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.
+#G22# As a data manager, I want to know how the data is used, so that I can develop more detailed usage and support scenarios with researchers.
+#G22# As a stakeholder, I want to know who is responsible for the DMP, so that I can ask them about further details.
+#G22# As a repository operator, I want to know about the kind of data, so that I can evaluate the storage size and system.
+#G22# As a researcher, I want to know which topics are mandatory and similar in all DMPs, so that I can save time through quickly writing it.
+#G22# As an archivemanager, I want to know in advance the conservation period of data, so that I can better organize the service by adapting the preservation actions.
+#G22# As a data manager, I want to know which information is necessary to re-use the data, so that it can be checked whether all necessary information is available for researchers interested in re-using the data.
+#G22# As a data manager, I want to know what the content of the data is, so that I can check whether the necessary expertise for maintaining intellectual reusability is available.
+#G22# As a research head, I want to access to the persistent identifiers of datasets provided in the DMP, so that I can check that the DMP has been implemented.
+#G22# As a funder, I want to be able to check all the repositories mentioned in a DMP, so that I can verify whether the project has followed our funding rules.
+#G22# As an IT staff member, I want to know with which software or technology the data is produced or used, so that I can determine what kind of technical services and functionalities are required.
+#G22# As a data librarian, I want to extract pointers from the DMP to metadata held in other systems, so that I can import this metadata into a data catalogue.
+#G22# As a PI, I want to plan what kind of data I want to record/store, so that I can ensure it will possible to store it.
+#G22# As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can ensure that the necessary technical resources and technical know-how is available.
+#G22# As a researcher, I want to record my intention to share data I have collected under terms of a particular licence, so that other researchers who use the data understand the rights of use.
+#G22# As a institutional data steward, I want to be able to extract the data sets that are submitted to external repositories, so that I can add them to an institutional data catalogue.
+#G22# As a data manager, I want to plan the anonymization of data, so that we protect the privacy of the people participating in the research as good as possible and still ensure reusability of data.
+#G22# As a researcher, I want to link research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.
+#G22# As a research support officer, I want to ensure compliance to the funders’ rules, so that I can ensure all costs will be accepted.
+#G22# As a faculty data steward, I want to see the sections on responsibilities, so that I can ensure sufficient expertise on data management to support the project.
+#G22# As a researcher, I want to indicate where my data will be stored during the project and where after the project, so that it remains accessible during all stages of the data lifecycle.
+#G22# As a researcher, I want to see the sections on costing by other researchers in my department, so that I can see if we could share data manager posts.
+#G22# As a stakeholder, I want to have references to the project proposal, so that I can look up further general information.
+#G22# As an IT staff member, I want to know which formats are used, so that I can determine what kind of technical services and functionalities are required.
+#G22# As an ethics manager, I want to be informed about the data, so that I can check for sensitivity of data.
+#G22# As a Director of Research Integrity, I want to access reports containing details of research projects in which data are classified as sensitive or highly sensitive, so that I can confirm security protocols are applied to these data.
+#G22# As an archive, I want to get information about the volume of data to preserve at an early stage, so that I can provide the adequate storage infrastructure.
+#G22# As a PI, I want to record information about my DMP, so that an Ethics Committee can review this for compliance with ethical standards.
+#G22# As an institutional data manager, I want to know about the privacy and security requirements of the data, so that I can plan the right storage system and sharing permissions.
+#G22# As a researcher, I want to see the sections on roles submitted by other researchers in my department, so that I can see if we could share data manager posts.
+#G23# As a user, I want to add additional properties for repositories.
+#G23# As an Archivist, I want to associate an Instance with a Container.
+#G23# As an Archivist, I want to import EAD data.
+#G23# As a developer, I want to use a configuration that is not prepackaged within a built version of application.
+#G23# As an Archivist, I want to import only Agent and Subject information from MARCXML records.
+#G23# As an System Administrator, I want to declare that a user is has the Repository Manager role for a given Repository.
+#G23# As an Archivist, I want to import Resources from MARCXML records.
+#G23# As an Archivist, I want to assign a Level of description to a Resource or Resource Component and optionally specify another value if the Level is not in a predefined list.
+#G23# As an Application Administrator , I want to be able to configure the help center URL and topic mappings.
+#G23# As an Archivist, I want to add Notes to other record types.
+#G23# As an Archivist, I want to associate a Subject record with a Resource description.
+#G23# As an Authenticated User, I want to get access to links to contextual help.
+#G23# As an Archivist, I want to associate a standard identifier string with a Subject heading.
+#G23# As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.
+#G23# As an Archivist, I want to export a description as EAD.
+#G23# As an Archivist, I want to import Accessions data in CSV.
+#G23# As an Archivist, I want to import EAD files that were exported by the Archivists' Toolkit.
+#G23# As an Archivist, I want to create and edit a Resource record.
+#G23# As an archivist, I want to search within a repository for resource and accession and digital object records.
+#G23# As a Developer , I want to develop a custom importer.
+#G23# As an Archivist, I want to create and edit Rights Management statements.
+#G23# As a researcher, I want to be able to view a finding aid for a particular collection/Resource.
+#G23# As a Repository Manager , I want to create, update and delete archival descriptions in my repository.
+#G23# As an Archivist, I want to create and edit Event records.
+#G23# As a User , I want to authenticate using LDAP.
+#G23# As an Application Administrator, I want to be able to reset a User's password for them.
+#G23# As an Archivist, I want to see Dates and Extents displayed in both the read and edit views for Accessions and/or Resources before the list of Subjects.
+#G23# As an Archivist, I want to rearrange the Resource and/or Digital Object hierarchy using keyboard-based navigation.
+#G23# As an Archivist, I want to associate an Instance with a Resource and/or Resource Component.
+#G23# As an Archivist, I want to import EAD files that were exported by Archon.
+#G23# As an Archivist, I want to rearrange the resource description hierarchy by dragging an archival object to a different position in the hierarchy.
+#G23# As a ReadOnly user , I want to view archival descriptions in my repository.
+#G23# As an Archivist, I would like to indicate an Agent is either the creator or source or subject of an Accession or Resource or Resource Component.
+#G23# As a Basic Data Entry user , I want to create and update basic archival description information.
+#G23# As an Archivist, I want to import Agent information from EAC-CPF records.
+#G23# As an Administrator, I want to create a new User account for someone else.
+#G23# As an archivist, I want to create and edit a Collection Management subrecord.
+#G23# As an Archivist, I want to create and edit Agent records.
+#G23# As an Archivist, I want to specify the Source for a Name Form of an Agent and add new Sources and edit existing Sources.
+#G23# As an Archivist, I want to add administrative data about the archival description and finding aid-related data to a top-level Resource.
+#G23# As an Archivist, I want to assign Location information to a Container.
+#G23# As an Archivist, I want to assign a component unique identifier to a Resource Component.
+#G23# As an Archivist, I want to export agent records as EAC-CPF.
+#G23# As an Archivist, I want to upload an EAD for import from within the frontend application.
+#G23# As an Archivist, I want to manage Digital Objects.
+#G23# As a Repository Manager , I want to create, update and delete any records in my repository.
+#G23# As a systems administrator, I want to be able to control the location of the demo database and I want it to be backed up.
+#G23# As an Archivist, I want to be able to understand that an error occurred during import and why it might have occurred.
+#G24# As a data reuser, I want to search the archive through Primo , so that I can search books, articles and data all in one place.
+#G24# As an externalcollaborator, I want to gain privileged access to data for projects in which I am involved, so that I can collaborate effectively.
+#G24# As a depositor, I want to place data under an embargo, so that my right of first use is protected, and I can fulfil my confidentiality responsibilities.
+#G24# As a data reuser, I want to get a persistent URL for a dataset, so that I can get back to the data in future.
+#G24# As a Bath Data Archive administrator, I want to approve scheduled disposal of data, so that data which is still required is not destroyed.
+#G24# As a Bath Data Archive administrator, I want to encourage and promote the use of open standards for deposit, so that data is as reusable as possible.
+#G24# As an UnivITservice, I want to store archived data directly on the HCP object store, so that  features can be made.
+#G24# As a Research Information manager, I want to have datasets linked to metadata about projects, so that I can report on projects depositing datasets in relation to funder requirements.
+#G24# As a depositor, I want to deposit the files that I have, so that I don't have to spend a lot of time finding the right version and converting to the right format.
+#G24# As a data reuser, I want to view an example citation for a dataset, so that I can reference it correctly.
+#G24# As an UnivITservice, I want to store archived data on existing storage systems, so that university data storage is consistent and maintainable and future availability of data can be guaranteed.
+#G24# As a fundingbody, I want to harvest metadata on outputs from research I fund, so that I can analyse effectiveness of funding strategy and I can encourage cross fertilisation of research outputs.
+#G24# As a data reuser, I want to examine and identify deposited files, so that I can make a preliminary assessment of usefulness without downloading the whole dataset.
+#G24# As a depositor, I want to link datasets with the project DMP, so that compliance with DMP can be demonstrated and whole project workflow is linked together.
+#G24# As a depositor, I want to deposit and maintain datasets through Virtual Research Environments and other workflow tools, so that I can continue to work with tools with which I'm familiar.
+#G24# As a data reuser, I want to view a DOI for a dataset, so that I can get back to the data in future and I can import the dataset into my referencemanagement software automatically.
+#G24# As a data reuser, I want to see different versions of a dataset at a glance, so that I can be sure I'm using the right version of the dataset.
+#G24# As a Bath Data Archive administrator, I want to import Bath data from an external data centre wholesale, so that Bath data holdings in external archives are not lost if they close down.
+#G24# As an academicpublisher, I want to make persistent web links between my articles and underlying datasets, so that my journals can be seen to be filled with robust, high quality research.
+#G24# As a depositor, I want to allow my collaborators privileged access to datasets, so that we continue to have a productive relationship.
+#G24# As a fundingbody, I want to be reassured that researchers I fund have robust archival plans for their data, so that I can be sure that funding them is a worthwhile investment.
+#G24# As a Research Information manager, I want to segment the view and download statistics by country and sector so that impact of datasets outside academia can be demonstrated.
+#G24# As a depositor, I want to have guarantees about data integrity, so that I can use my data in the future and I can fulfil funder requirements for archival.
+#G24# As a depositor, I want to have a user interface that is familiar to me, so that I feel like all the University systems are joined up.
+#G24# As a depositor, I want to deposit arbitrarily large files, so that I am not limited in what files I can and cannot deposit.
+#G24# AS an externalcoordinator, I want to access data from Bath collaborators off campus, so that I can collaborate effectively.
+#G24# As a depositor, I want to track downloads of my data, so that I can demonstrate the impact of my work.
+#G24# As a depositor, I want to link to data stored in external repositories, so that I can store my data in an appropriate repository but still register it with the University and I don't have to deposit my data in multiple places.
+#G24# As a data reuser, I want to search the archive through the web, so that I can easily find data relevant to my needs.
+#G24# As a Research Information manager, I want to integrate the archive with CRIS, so that I can analyse impact of research data publication I can link funding to all of the outputs it produces.
+#G24# As a Research Information manager, I want to track citation counts for published datasets, so that impact of datasets within academia can be demonstrated.
+#G24# As a depositor, I want to deposit and maintain datasets through a simple web interface, so that I don't need to install and learn new software to deposit.
+#G24# As an UnivITservice, I want to integrate the archive with existing university systems such as LDAP, so that the cost of administering the system can be kept low.
+#G24# As a developer, I want to deposit and maintain datasets via an API such as SWORD2, so that my service can interact with the archive.
+#G24# As a Bath Data Archive administrator, I want to make some checks on deposited datasets before they are made public, so that consistent quality of metadata is maintained, compliance with policies can be checked and details of licensing can be checked.
+#G24# As a data reuser, I want to access the system in my native language, so that I am not put off reusing University of Bath data by language barriers.
+#G24# As a depositor, I want to link datasets to publications in Opus, so that both my data and publications are more easily discovered.
+#G24# As a depositor, I want to deposit and maintain datasets through Pure, so that I have a single onestop shop for managing my research outputs.
+#G24# As a Bath Data Archive administrator, I want to require a minimum set of metadata, so that consistent quality of metadata is maintained.
+#G24# As a Research Information manager, I want to include records for externally held data complete, so that the university's record of data holdings is complete.
+#G24# As a depositor, I want to allow others to deposit on my behalf, so that I can delegate research data management tasks appropriately.
+#G24# As a depositor, I want to mint DOIs for my data, so that it can be discovered and cited more easily and citations can be tracked so that I can receive credit.
+#G24# As a depositor, I want to track citations of my data, so that I can demonstrate the impact of my work
+#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.
+#G24# As a research facility manager, I want to deposit data from my facility directly into the archive on behalf of researchers, so that I am no longer required to maintain my own archive of facility data and researchers can access their own data as needed.
+#G24# As a depositor, I want to have metadata automatically filled from other University systems and remembered from previous deposits, so that I don't have to waste time reentering the same information.
+#G24# As a depositor, I want to apply licenses to datasets, so that my IP rights are protected appropriately.
+#G24# As a depositor, I want to specify a disposal policy for my data, so that I do not accidentally breach laws or collaboration agreements.
+#G24# As a depositor, I want to attach subject specific discoverability metadata to records, so that researchers in my discipline can find my data more easily.
+#G24# As a Bath Data Archive administrator, I want to query the entire archive , so that I can report on particular aspects of the archive holdings.
+#G24# As an externalcoordinator, I want to have guarantees that my IP rights will not be breached, so that the risk of collaborating with Bath is acceptable to me.
+#G24# As an UnivITservice, I want to be able to export all data to a different system, so that I am not tied into one system which may not be the most appropriate at some point in the future.
+#G25# As a DAMS manager, I want to know if application of a library policy to an object or object component has been modified, either manually or automatically.
+#G25# As a user, I want to be able to contact repositories.
+#G25# As a repository manager, I want to describe each component as necessary, including title, date(s), language(s), and other facets.
+#G25# As a repository manager, I want to associate a content file with either an object or an object component.
+#G25# As a repository manager, I want to indicate any external versions or descriptions of an object that may be of probable importance to an user.
+#G25# As a repository manager, I want to know of any changes made to the origin Info for an object, including its component parts.
+#G25# As a repository manager, I want to know if the checksum for any of my repository's content files that have changed.
+#G25# As a repository manager, I want to indicate any statutes pertinent to an object.
+#G25# As a repository manager, I want to describe an object, including its title, date(s), language(s), and other aspects.
+#G25# As a DAMS manager, I want to know when copyright for an object or object component is likely to expire per jurisdictional copyright statute.
+#G25# As a DAMS manager, I want to know all the statutes pertinent to an object or object component.
+#G25# As a repository manager, I want to indicate any license pertinent to an object.
+#G25# As a DAMS manager, I want to know if an object or object component is subject to a library policy that restricts access in any way.
+#G25# As a repository manager, I want to indicate if a license pertains to the component, apart from the object as a whole.
+#G25# As a repository manager, I want to indicate the copyright status of an object.
+#G25# As a repository manager, I want to indicate any other rights pertinent to an object.
+#G25# As a DAMS manager, I want to know if copyrighted content has an applicable license.
+#G25# As a user, I want to know for an object or its component parts the place of publication, the publisher, etc.
+#G25# As a repository manager, I want to indicate if a statute pertains to the component, apart from the object as a whole.
+#G25# As a DAMS manager, I want to know, via preservation managers, of any object for which integrity or authenticity is in question or that has been updated to a more current file format.
+#G25# As a DAMS manager, I want to know when the pertinence of a statute to a object or object component is scheduled to expire.
+#G25# As a user, I want to be able to limit my search to specified collection(s).
+#G25# As a repository manager, I want to know all the content files in the DAMS for my repository's objects.
+#G25# As a repository manager, I want to indicate any subject that is pertinent to the component.
+#G25# As a repository manager, I want to know all the collections and objects in the DAMS for which I have custodial responsibility.
+#G25# As a DAMS manager, I want to know when the application of a statute to an object or object component has been modified, either manually or automatically.
+#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent.
+#G25# As a repository manager, I want to indicate that a name pertinent to a collection, object, or object component has a specific role, such as illustrator, photographer, etc.
+#G25# As a DAMS manager, I want to know when the event occurred.
+#G25# As a DAMS manager, I want to know what objects or object components are still under copyright and cannot be displayed without either a license or incurring risk.
+#G25# As a repository manager, I want to indicate if other rights pertain to the component, apart from the object as a whole.
+#G25# As a DAMS manager, I want to indicate to preservation managers aspects of a master file useful for monitoring its integrity, and impending obsolescence, including file size, creation date, file format and format version.
+#G25# As a DAMS manager, I want to indicate the source-capture information for a file where it is useful to do so.
+#G25# As a DAMS manager, I want to know the agent(s) responsible for carrying out an event.
+#G25# As a user, I want to know what repository an object belongs to.
+#G25# As a user, I want to know of all other pertinent versions or descriptions of the resource.
+#G25# As a repository manager, I want to provide a title, in all useful forms, for my repository's collections, objects, and object components.
+#G25# As a user, I want to know about other versions of the object or its metadata that might be of use to me.
+#G25# As a repository manager, I want to know all events occurring to a component over its life cycle.
+#G25# As a DAMS manager, I want to know all the uses for an object or object component that are permitted or restricted per the rights status of the object or object component.
+#G25# As a DAMS manager, I want to know when the copyright status for an object or object component is modified, either manually or automatically.
+#G25# As a user, I want to scope my searches for collections, objects, or object components to a specific language.
+#G25# As a repository manager, I want to know any changes occurring to titles for repository's collections, objects, and object components.
+#G25# As a user, I want to be able to see and navigate the component hierarchy of an object.
+#G25# As a repository manager, I want to list all the components, in their appropriate order, for an object.
+#G25# As a repository manager, I want to know of any changes made to language(s) indicated for a collection, object, or object component.
+#G25# As a repository manager, I want to register a name record for each unique identity associated with my repository's collections and objects.
+#G25# As a DAMS manager, I want to know what repository an object belongs to.
+#G25# As a repository manager, I want to link, when appropriate, a component to another component or to a file.
+#G25# As a repository manager, I want to indicate for an object or object component the place of publication, the publisher, edition, etc., when pertinent.
+#G25# As a user, I want to see all the component parts of an object.
+#G25# As a DAMS manager, I want to track all events scheduled for recording in the DAMS.
+#G25# As a repository manager, I want to represent the physical and/or logical structure of an object.
+#G25# As a repository manager, I want to indicate other descriptions of the collection that are outside the DAMS and of probable importance to users.
+#G25# As a repository manager, I want to know all the collections for which I have curatorial responsibility.
+#G25# As a repository manager, I want to know of all modifications made to notes for my repository's collections, objects, or object components.
+#G25# As a repository manager, I want to know all events done to an object over the object's life cycle.
+#G25# As a user, I want to list all the collections and objects in the DAMS that belong to a library unit.
+#G25# As a repository manager, I want to indicate subjects related to the collection.
+#G25# As a DAMS manager, I want to know, via the preservation manager, of all files for which the checksum has changed since last registered.
+#G25# As a DAMS manager, I want to know the outcome of the event, e.g., object NN was deleted.
+#G25# As a repository manager, I want to know any event that occurred to a content file for any of my repository's objects.
+#G25# As a repository manager, I want to indicate if the component has a copyright status different than that of of the object as a whole.
+#G25# As a repository manager, I want to know, where pertinent, the hardware and software used to generate a content file.
+#G25# As a repository manager, I want to say one collection is related to another collection.
+#G25# As a DAMS manager, I want to indicate to preservation managers the checksum and checksum method for each master file for a given object.
+#G25# As a repository manager, I want to be able to update repository information in one place and be assured updates will be propagated to all relevant places.
+#G25# As a repository manager, I want to describe a collection, including its title, it's inclusive / bulk dates, its language(s), and many other aspects.
+#G25# As a user, I want to know about various facets of a collection, object, or object component, such as scope and content, various identifiers, conditions governing use/access, etc.
+#G25# As a DAMS manager, I want to present collections, objects, and object components by title.
+#G25# As a user, I want to scope by searches by name to a specific role such as illustrator, photographer, etc.
+#G25# As a user, I want to have access to the content files for an object.
+#G25# As a repository manager, I want to constrain curatorial access to my units assets to staff members of my unit and to DAMS managers having universal access.
+#G25# As a DAMS manager, I want to present in their assigned order all components comprising an object.
+#G25# As a repository manager, I want to compose collections, limiting the collection to the items sharing the same provenance, limiting the collection to represent a part of a collection have a singular provenance, or assembly a collection from other collections and objects.
+#G25# As a DAMS manager, I want to know when application of a library policy to an object or object component is scheduled to expire.
+#G25# As a user, I want to be able to browse by collections in the DAMS.
+#G25# As a repository manager, I want to describe various facets of a collection, object, or object component that are not addressable via title, date, name, and subject entities.
+#G25# As a repository manager, I want to indicate subjects that are related to an object.
+#G25# As a repository manager, I want to indicate the language(s) for present in a collection, object, or object component.
+#G25# As a user, I want to know if an object or object component is under copyright and, where possible, who the rights holder is.
+#G25# As repository manager, I want to know all the files belonging to an object.
+#G25# As a user, I want to search collections, objects, and object components by title.
+#G26# As a donor representative, I want to see thumbnails of images, so that I can select which one I want.
+#G26# As an archivist, I want to distinguish between images scanned in color or black and white, so that I know whether or not these images meet publication requirements.
+#G26# As an archivist, I want to search individual material types.
+#G26# As an administrator, I want to assign rights to user groups or roles, so that I can control what users can and can't do.
+#G26# As a researcher, I want to receive a notification if something I request in the reading room or for duplication is already digitized, so that I don't have to put in that request.
+#G26# As a researcher, I want to order copies of photos, so that I can use them in a publication.
+#G26# As an archivist, I want to create quality scans of images and documents, so that they can be reused.
+#G26# As an archivist, I want to make information about rights available to researchers and donors, so that they know what they can do with images.
+#G26# As an administrator, I want to allow users to log in using Active Directory credentials, so that I don't have to manage another set of usernames and passwords.
+#G26# As a researcher, I want to have accurate cross-collection citation information, so that I can find materials again.
+#G26# As a researcher, I want to view thumbnails of photos, so that I can make a selection of which one I want to license.
+#G26# As an archivist, I want to redact information in digital files for a period of time, so that I can provide access to non-sensitive portions of a record.
+#G26# As an archivist, I want to access inventories for unprocessed collections, so that I can provide reference services to donors.
+#G26# As an assistant archivist, I want to easily access interdepartmental forms.
+#G26# As an archivist, I want to batch edit metadata about files.
+#G26# As a researcher, I want to be able to search across photo collection images, so that I can prepare presentations.
+#G26# As an archivist, I want to upload scans of images created while answering research requests, so that they can be used again for other research requests.
+#G26# As a researcher, I want to locate photographs and documents that I can share on social media.
+#G26# As an archivist, I want to have an online form for licensing archival material, so that the process is more transparent and some of the back and forth can be eliminated.
+#G26# As a researcher, I want to search OCRed text in all available digitized textual documents, so that I can more efficiently locate digitized documents relevant to my research.
+#G26# As an archivist, I want to set a date on which restrictions will be removed from a file, so that that I don't have to update this by hand.
+#G26# As an administrator, I want to create user roles, so that I can group users by role.
+#G26# As an archivist, I want to find files that cannot be made publicly available, so that I can easily access everything that's been digitized.
+#G26# As a donor representative, I want to access the descriptive information about the images scanned for my institutions needs.
+#G26# As a researcher, I want to search all files by keyword.
+#G26# As an archivist, I want to access the digital files on the X-drive, so that I can use them.
+#G26# As a researcher, I want to search by keyword, so that I can learn what already exists digitally and avoid placing additional duplication requests.
+#G26# As an archivist, I want to apply a license or rights statement, so that I know what I can do with a file.
+#G26# As an archivist, I want to have electronic versions of the collection files available for staff use, so that I increase accessibility and I do not lose the original files.
+#G26# As an archivist, I want to see what a particular user has downloaded, so that I can track use of assets.
+#G26# As an assistant archivist, I want to upload and tag staff generated working papers, so that staff and researchers are able to easily access them.
+#G26# As a researcher, I want to access educational outreach materials, so that I can make connections with institutions.
+#G26# As an archivist, I want to search by tag, so that it makes finding particular photographs easier.
+#G26# As an archivist, I want to access metadata and visual representations of index cards, so that I can use that information to assist researchers.
+#G26# As an researcher, I want to view film clips, so that I can see excerpts of films.
+#G26# As an administrator, I want to have researchers reset their own passwords, so that I don't have to send passwords in cleartext.
+#G26# As a researcher, I want to search using structured data, so that I can find everything relevant to my inquiry across collections.
+#G26# As a researcher, I want to ask a question about a specific file, so that I can find out more information.
+#G26# As an archivist, I want to apply automatic contrast and level operations to a scanned file, so that I can eliminate unnecessary work.
+#G26# As an archivist, I want to search all files by keyword.
+#G26# As a researcher, I want to export descriptive data in a common format, so that I can use text mining tools on it.
+#G26# As a researcher, I want to share reports I've written, so that it is available to staff and researchers.
+#G26# As a researcher, I want to know when only part of a folder has been digitized, so that I know if I am seeing everything or only a portion.
+#G26# As an archivist, I want to automatically create access derivatives of digital objects, so that I don't have to do this manually.
+#G26# As a donor representative, I want to look at images that have been scanned from my collection, so that so that I can use them in my institutions exhibits, reports etc.
+#G26# As an archivist, I want to search images by people represented in them.
+#G26# As an archivist, I want to automatically create access copies of files, so that I don't have to do this manually.
+#G26# As an archivist, I want to upload a single file.
+#G26# As an archivist, I want to ensure that emails sent about specific objects contain accurate citation information, so that I can confirm which object is being referred to.
+#G26# As an archivist, I want to add restriction end date information to files, so that I can share files when they become open.
+#G26# As an archivist, I want to mark groups of files as restricted, so that they don't get shared by mistake.
+#G26# As an archivist, I want to upload groups of files, so that I can save time.
+#G26# As a researcher, I want to stream audio and video files in my web browser.
+#G26# As an archivist, I want to search images by photographer.
+#G26# As an archivist, I want to perform contrast, level and other manipulations manually, so that I can improve on results from automated tools.
+#G26# As an archivist, I want to restrict access to certain files by user, so that I can allow donor representatives to see certain files.
+#G26# As a researcher, I want to see common material across collections, so that so I can prepare a comprehensive analysis.
+#G26# As a donor representative, I want to supply incremental accruals to new and existing collections, so that material can be transferred on an ongoing basis.
+#G26# As an archivist, I want to provide access to digital copies of unprocessed material, so that donors can access things they have given us.
+#G26# As an archivist, I want to select existing rights statuses and statements, so that I can easily create uniform rights statements.
+#G26# As a researcher, I want to request analog versions of digital objects, so that I can view them in the reading room.
+#G26# As an archivist, I want to search images by place the photo was taken.
+#G26# As an archivist, I want to restrict a group of files from view.
+#G26# As an archivist, I want to restrict access to some files by IP address, so that I can give reading room access only to certain digital files.
+#G26# As an archivist, I want to view physical locations for non-archival material, so that I can provide research services to donors.
+#G26# As a researcher, I want to access tagged working papers, so that my research process is better informed.
+#G26# As an archivist, I want to add detailed restrictions to groups of files, so that I know if and how they can be shared.
+#G26# As an archivist, I want to distinguish between digital objects digitized to preservation standards and those created for access purposes only, so that I know whether I should apply preservation actions.
+#G26# As an archivist, I want to restrict a file from view.
+#G26# As a researcher, I want to know the date on which something was digitized, so that I know if it's been digitized since I last looked.
+#G26# As an archivist, I want to search index cards and other non-public finding aids, so that I can provide better research assistance.
+#G26# As an administrator, I want to assign RAC staff to different user groups, so that I can control read/write access.
+#G26# As an archivist, I want to rotate images, so that I can orient them correctly.
+#G26# As an archivist, I want to browse through files in a collection.
+#G26# As an administrator, I want to create user groups, so that I can control user permissions.
+#G26# As a researcher, I want to understand the copyright status of the image, so that I know if I can use it.
+#G26# As a researcher, I want to share a link to a file on social media, so that so I can show other people an interesting thing I found.
+#G26# As an archivist, I want to know if a photo has already been scanned, so that I can license it to a researcher.
+#G26# As an archivist, I want to automatically generate technical metadata, so that I know the file size.
+#G26# As an archivist, I want to use archival content on the RAC website, so that I can integrate our collections into our web presence.
+#G26# As an archivist, I want to make as much archival material as possible available for use, so that I can fulfill the RAC's mission.
+#G26# As an archivist, I want to manage scans of archival material created for educational visits, so that find and refer to them for another visit.
+#G26# As an archivist, I want to search images by uploading an image, so that so I can find images when i don't have any metadata.
+#G26# As a researcher, I want to access digitized archival materials without mediation, so that I can decide what, I want to look at.
+#G26# As a researcher, I want to generate structured citation data, so that so I can cite a file in a publication.
+#G26# As an archivist, I want to automatically embed metadata in file headers, so that I avoid repetitive and easily-forgotten tasks.
+#G26# As an archivist, I want to automatically assign unique identifiers to material I scan, so that I avoid potential errors.
+#G26# As a researcher, I want to download a file, so that I can use it for research without having to come to the reading room.
+#G26# As an archivist, I want to view collection files, so that I can gain background information for processing a collection.
+#G26# As an archivist, I want to link electronic versions of researchers' publications to citations, so that I can share them with other researchers.
+#G26# As a researcher, I want to download reports, so that I can use them in immediate and future in talks and articles.
+#G26# As an archivist, I want to mark individual files as restricted, so that they don't get shared by mistake.
+#G26# As a researcher, I want to browse through files in a collection.
+#G26# As a researcher, I want to keyword search across all of an RF program officer's scanned diaries, rather than having to search each scanned diary segment separately, so that I can more efficiently locate diary entries relevant to my research.
+#G26# As an administrator, I want to limit who can see certain metadata fields, so that I can show or hide things from display based on user groups.
+#G26# As an archivist, I want to upload inventories, so that our donor representatives have an easier time requesting their material.
+#G26# As an archivist, I want to manage loan documentation, including preservation photos, forms and correspondence, so that I can find it easily later.
+#G26# As an archivist, I want to search images by rights.
+#G27# As a DB/IR administrator, I want to upload new version of report/dataset while retaining previous versions for patron use.
+#G27# As a DB/IR administrator, I want to have a personal account with the ability to change passwords to make them more secure or to retrieve forgotten ones.
+#G27# As a faculty member, I want to access a collection within the repository, so that I can obtain research materials.
+#G27# As a researcher, I want to search within a repository or collection in an effective manner, including searching within subsets of a given collection, so that I can facilitate my use of the collection.
+#G27# As a Cornell faculty member, I want to easily assign a CC license to the files I are depositing, so that users know how the materials can be used.
+#G27# As a library staff member, I want to create a collection, sometimes with custom metadata fields, so that I can house digital material for wider distribution.
+#G27# As a faculty member, I want to upload my scholarly work to the repository, so that I can have a persistent URL that can be used for my personal web page and CV.
+#G27# As an asset manager, I want to know what the intellectual value of the asset is to the institution at the time of deposit, so that I obtain guidance in the evaluation of it for current value for the institution.
+#G27# As a patron, I want to create a personal account to request email notification when new version of report/dataset is available.
+#G27# As a library staff member, I want to create metadata for items within the repository that includes document title, description, author, document type, status, file locations, subscribable flag, subject area, release frequency, and keywords for searching.
+#G27# As a library staff member, I want to have customizable metadata fields, so that each project is described in the most accurate way possible.
+#G27# As a library staff member, I want to quickly correct errors in uploaded metadata, and even uploaded documents, while leaving a record of my revisions (and possibly the reasons behind them), so that I can present correct versions of content and to locate points of error.
+#G27# As a patron, I want to download report/dataset release calendar to load into own calendar.
+#G27# As a patron, I want to view/upload content in multiple formats, including old formats such as Lotus Works.
+#G27# As a Cornell faculty member, I want to share on the repository files that are larger than 1GB in a way that still allows users to download them if I want to use them, so that I can meet funder requirements.
+#G27# As a patron, I want to search for report/dataset with keywords or a partial or complete title to locate needed report/dataset.
+#G27# As a library staff member, I want to be able to assign an item to more than one collection.
+#G27# As a patron, I want to know other reports/datasets that are related (e.g. see also) to report/dataset being viewed for the purpose finding other related information.
+#G27# As a library staff member, I want to be able to tell the researchers I'm helping with DMPs that Cornell has a repository system I can use for archiving and sharing results of their research, so that I can easily meet the needs of funder DMP requirements.
+#G27# As a repository support team member, I want to export a set of records and associated files, manipulate this data set, and reload into the system, because I am aware of a uniform error in a collection.
+#G27# As an academicresearcher, I want to the thesis paper of an influential judge or legal thinker to gain insight into how their initial scholarship got started.
+#G27# As a Cornell faculty member, I want to login remotely to the repository using Shibboleth, so that I can get remote access to Cornell campus-only content.
+#G27# As a library staff member, I want to be able to add custom metadata fields for deposits I make on behalf of researchers to allow for better search capabilities.
+#G27# As a DB/IR administrator, I want to manage report/dataset name changes so patrons are able to find historic reports that have a different name from current report.
+#G27# As a Cornell faculty member, I want to search the repository and browse through its contents on my phone, so that I can check things on the go.
+#G27# As a DB/IR administrator, I want to see a list of all administrators for ease of administering accounts.
+#G27# As a repository support team member, I want to alias (or map) an item from one collection to another (so the item will appear to belong to both collections), because the collection owner has asked them to.
+#G27# As a DB/IR administrator, I want to see list of subscribers for specified report in order research missing report complaints.
+#G27# As a patron, I want to browse content by author or subject area to locate needed resources.
+#G27# As a Cornell faculty member, I want to upload data and provide a cut and paste formatted citation for people who use it, so that I receive proper attribution for my work.
+#G27# As a library staff member, I want to upload an item to the repository that will only become visible after a specific embargo period has expired, so that I can comply with author or publisher requirements.
+#G27# As a faculty member, I want to maintain versioning of Extension brochures, FAQs, etc., so that only the most current are used/adapted by other CCE Educators in their work.
+#G27# As a library staff member, I want to upload material to the repository on the author's behalf, so that I can fulfill a service obligation.
+#G27# As an academicresearcher, I want to find the works of a particular author in one easily sortable spot, so that I can see the evolution of their scholarship over time.
+#G27# As a researcher, I want to see descriptive metadata for the item whether I come to the item through the repository or directly to the PDF, so that I can correctly identify the source of the content.
+#G27# As a DB/IR administrator, I want to manage subject classifications for ease of patron browsing and searching.
+#G27# As a library staff member, I want to preserve the scholarship of the law school by using sustainable links that will not succumb to link rot, so that I can create a permanent digital archive for the scholarship of my institution.
+#G27# As a library staff member, I want to preserve both the content and the metadata within the repository in a robust manner, so that I can provide stable, long-term access to this material.
+#G27# As a researcher, I want to receive updates when new works are published in a given collection or by a given author, so that I can discover more of their work.
+#G27# As a researcher, I want to have information that will help me identify other faculty I might partner/collaborate with.
+#G27# As a researcher, I want to stay up to date on research related to a given topic at Cornell, including those in other departments/schools, so that my own research remains relevant and innovative.
+#G27# As a Cornell faculty member, I want to create a collection for my documents, or my organization's documents, and apply some distinctive branding to that collection, so that I can promote my work, or that of my organization.
+#G27# As a library staff member, I want to use content and metadata from the repository in other systems and/or web pages easily, so that I can deliver such content in the manner best fit to the audience or occasion.
+#G27# As a library staff member, I want to make digital items held in trusted external system searchable within our system, so that I can provide seamless access to disparate collections.
+#G27# As a DB/IR administrator, I want to administrate patron accounts for purpose of closing accounts, viewing subscriptions, changing subscriptions, resetting passwords, changing email address, etc.
+#G27# As a teachingfacultymember, I want to identify timely and relevant research suitable for use in my curriculum, and be notified of new research/content.
+#G27# As a faculty member, I want to direct students to an item within the repository, so that I can facilitate my teaching (i.e. desires ability to link to content).
+#G27# As a crossdeptprojteammember, I want to have a better place to collect and share project materials, with a range of organization/tagging and access options, including private (internal group use only), University and public.
+#G27# As a faculty member, I want to recommend a digital collection be built in the repository, so that I can assist in my research.
+#G27# As a library staff member, I want to create collections which highlight rare, archival, or endangered material, so that I can preserve and provide access to this material.
+#G27# As an Extension Educator, I want to have a place to store a variety of documents, presentations and data sets I've created, that doesn't require an extra step in making available on my own County/Region/Project site (i.e. a list or directory of materials there is automatically updated when placed in a central archive/repository).
+#G27# As a Cornell faculty member, I want to upload a data file and put a CC-By or CC0 license on it, so that my licensing desires are clearly stated.
+#G27# As a faculty member, I want to easily collect my publications -- both those within the repository and without -- into a single online access point, so that I can raise the profile of my work.
+#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can find an appropriate advisor, choose which courses to enroll in, and identify work/internship opportunities.
+#G27# As an asset manager, I want to have a mechanism to obtain a listing or understanding of all the assets that have been deposited, and their current status.
+#G27# As a stakeholder, I want to have files adequately described, so that I can successfully render them in my contemporary operating environment.
+#G27# As a library staff member, I want to deliver streaming media from within the repository, so that I can deliver such content in the manner expected and ensure continued access to said content.
+#G27# As an administrator, I want to be able to use systems such as Symplectic Elements and Activity Insight to properly track faculty scholarly output in the repositories, so that I can facilitate personnel decisions.
+#G27# As a repository support team member, I want to move a collection, so that I can fulfill the collection owner's request.
+#G27# As a DB/IR administrator, I want to have the system recognize/categorize document type (e.g. historical report still published, expired historical report, single topic dataset, broad topic dataset, report with subtopic, computer file), so that report/dataset is processed and displayed properly.
+#G27# As an asset manager, I want to be assured that funding and staffing of the IR have a commitment to longevity of the repository through published plans and/or explicit contract clauses.
+#G27# As a Cornell faculty member, I want to upload data to the repository and associate it with a publication, so that I receive attribution for my data as well as my publications.
+#G27# As a Cornell faculty member, I want to have some control over how items within my collection sort in collection contents lists, so that I can control how my work is presented.
+#G27# As an asset manager, I want to be assured that the assets can be taken out of the repository, and that the assets taken out are the same as those that are put in.
+#G27# As a data curator, I want to have a mechanism to allow for records scheduling for items that do not need to be stored indefinitely.
+#G27# As a DB/IR administrator, I want to have robust searching and tracking features for existing and newly created patron accounts.
+#G27# As a library staff member, I want to create custom metadata fields for certain collections, and allow searching of those fields, so that I can best reflect and deliver diverse content.
+#G27# As an asset manager, I want to be assured that the digital copy I deposit is stored redundantly, so that when one copy suffers destruction or unwanted changes, I still have other good copies to restore from.
+#G27# As a student, I want to upload to the repository the data that is associated with my embargoed dissertation to meet requirements of a DMP I submitted with my NSF DDIG.
+#G27# As a DB/IR administrator, I want to login to personal account with access to authorized functions.
+#G27# As a Cornell faculty member, I want to associate a researcherID or ORCID with a submission, so that there is no ambiguity between my work and someone else with the same name.
+#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. – with DOIs for each, as needed – when uploading a given work, so that I can provide a robust image of the work in question.
+#G27# As a patron, I want to view multiple versions of a report/dataset to get both timely and historical information.
+#G27# As a Cornell faculty member, I want to see clearly what reuse rights I have to files discovered in the repository, so that I know how I can reuse them.
+#G27# As a library staff member, I want to upload large batches of items simultaneously, including descriptive metadata, so that I can offer service to authors efficiently.
+#G27# As a faculty member, I want to associate files with my scholarly works such that someone accessing the latter also receives access to the former, so that I can deliver the fullest picture of my research.
+#G27# As a Cornell faculty member, I want to easily find all the items in the repository that I have authored, by searching on my name (author name authority and/or identification issue), because I keeps my publications in the repository up-to-date and points people tithe repository.
+#G27# As an Extension Administrator, I want to have easy, well documented and supported workflows that can be easily passed on to others when she/others retire, so that continuity can be maintained.
+#G27# As an administrator, I want to have a platform that can support a variety of media file and text-based formats, so that the intellectual output of the school can be showcased and preserved in a more comprehensive way.
+#G27# As an administrator, I want to see comprehensive tracking statistics that can be presented to faculty in a digestible way, so that I can increase buy-in for contributing their work.
+#G27# As an administrator, I want to disseminate the aforementioned works in a digital space that is strongly branded, so that I can make sure my school is credited for the work.
+#G27# As a library staff member, I want to apply or remove an access embargo to an item when asked to do this by an item author.
+#G27# As a library staff member, I want to access useful and comprehensive usage statistics and analytics, including altmetrics, at the repository, collection, author, and item level, so that I can assess the results of this service.
+#G27# As a DB/IR administrator, I want to set up or delete accounts for other administrators with various levels of permission.
+#G27# As a researcher, I want to contact the author of a work that interests me, so that I can learn more about my research.
+#G27# As a DB/IR administrator, I want to upload revised report/dataset due to error in report/document.
+#G27# As a repository support team member, I want to rename a collection, so that I can fulfill the collection owner's request.
+#G27# As a patron, I want to know which reports/datasets are coming out when, so that I can access latest report/dataset.
+#G27# As a DB/IR administrator, I want to add future release dates of reports/datasets to calendar for patron FYI.
+#G27# As a DB/IR administrator, I want to mark report/dataset not to be emailed/viewable due to error being discovered.
+#G27# As a data curator, I want to upload a new version of an item that has changed, while still allowing old versions to be accessed.
+#G27# As an Extension Administrator or Staff Content Manager, I want to get periodic IR reminders, including when something needs attention (including next ingestion/approval steps), or something that might need to move from a current knowledge collection to Historical.
+#G27# As a Cornell faculty member, I want to see items I have deposited in the repository appear high up in Google search results, because that's my ticket to stardom.
+#G27# As a patron, I want to select/deselect reports/datasets to be emailed, possibly many at one time, when new versions are available.
+#G27# As a DB/IR administrator, I want to unpublish a report/dataset if requested to do so by USDA agency.
+#G27# As a DB/IR administrator, I want to manage customizable relationship groups in support of patron see also option.
+#G27# As a researcher, I want to promote/share my work through interactive maps, so that I can display the range and extent of my work graphically.
+#G27# As a librarydiscoveryoperator, I want to harvest useful metadata from the repository via OAI, and continue to do so incrementally, so that I can make Cornell publications discoverable in my repository.
+#G27# As an asset manager, I want to be assured that there is a formal plan for the disposition of assets if the IR should cease.
+#G27# As an asset manager, I want to be assured that the redundant copies are continuously monitored for unwanted changes, and that if/when changes do occur, there is a mechanism by which I can determine the original object and restore it to all copies.
+#G27# As a patron, I want to email system provider to report issues and ask questions.
+#G27# As a library staff member, I want to receive a quick response and a reasonable resolution to tech support issues, so that service can proceed with minimal interruption.
+#G27# As an Extension Administrator, I want to make resources that were developed for specific projects and geographic areas available to other faculty and educators across NYS.
+#G27# As an asset manager, I want to be assured that threats to copies in one repository are not automatically incurred by the redundant copies.
+#G27# As a library staff member, I want to trace the list of revisors to determine who uploaded an item to the repository, so that I can confirm that proper procedures were followed.
+#G27# As a faculty member, I want to upload my scholarly work to the repository, so that I can reach a non-academic audience, expand my influence within my academic community, and use it for teaching.
+#G27# As an asset manager, I want to have mechanism to pass ownership/management of the assets to a successor.
+#G27# As an externaluser, I want to easily find and access research and educational materials from Cornell faculty related to a particular topic, which I can use to develop stronger research/evidence based programming, grant proposals, community policy, or business practices.
+#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can decide if I would like to pursue studies/research at Cornell.
+#G27# As a researcher, I want to discover items in the repository through the library's discovery system and Google, so that I can facilitate my easy use of the content.
+#G27# As a Cornell faculty member, I want to search for the dissertations in the repository for which I have been a thesis committee member, to quickly find work by a former student.

@@ -1,0 +1,1073 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/system.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/system.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "System",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canVisualizeBy
+	Domain: :ConsumingUser
+	Range: :Default
+
+ObjectProperty: :canUse1
+	Domain: :AgencyUser
+	Range: :Schema
+
+ObjectProperty: :canUse2
+	Domain: :ConsumingUser
+	Range: :Data
+
+ObjectProperty: :canUse3
+	Domain: :APIUser
+	Range: :Metadata
+
+ObjectProperty: :canUse4
+	Domain: :APIUser
+	Range: :Data
+
+ObjectProperty: :canSee1
+	Domain: :WebsiteUser
+	Range: :File
+
+ObjectProperty: :canSee2
+	Domain: :AgencyUser
+	Range: :Submission
+
+ObjectProperty: :canSee3
+	Domain: :FABSUser
+	Range: :StatusLabel
+
+ObjectProperty: :canSee4
+	Domain: :ConsumingUser
+	Range: :Description
+
+ObjectProperty: :canSubmission
+	Domain: :FABSUser
+	Range: :Error
+
+ObjectProperty: :hasUser1
+	Domain: :Data
+	Range: :DataUser
+
+ObjectProperty: :hasUser2
+	Domain: :Broker
+	Range: :BrokerUser
+
+ObjectProperty: :hasUser3
+	Domain: :Website
+	Range: :WebsiteUser
+
+ObjectProperty: :hasUser4
+	Domain: :Agency
+	Range: :AgencyUser
+
+ObjectProperty: :hasUser5
+	Domain: :FABS
+	Range: :FABSUser
+
+ObjectProperty: :hasUser6
+	Domain: :Consuming
+	Range: :ConsumingUser
+
+ObjectProperty: :hasUser7
+	Domain: :API
+	Range: :APIUser
+
+ObjectProperty: :canLeave
+	Domain: :AgencyUser
+	Range: :Digit
+
+ObjectProperty: :canNormalise
+	Domain: :APIUser
+	Range: :Measure
+
+ObjectProperty: :canEdit
+	Domain: :UIDesigner
+	Range: :2
+
+ObjectProperty: :canHave1
+	Domain: :DataUser
+	Range: :Deletion
+
+ObjectProperty: :canHave2
+	Domain: :User
+	Range: :Data
+
+ObjectProperty: :canHave3
+	Domain: :DataUser
+	Range: :Context
+
+ObjectProperty: :canHave4
+	Domain: :Tester
+	Range: :Access
+
+ObjectProperty: :canHave5
+	Domain: :FABSUser
+	Range: :Amount
+
+ObjectProperty: :canHave6
+	Domain: :PlatformAdministrator
+	Range: :View
+
+ObjectProperty: :canHave7
+	Domain: :ConsumingUser
+	Range: :Use
+
+ObjectProperty: :canHave8
+	Domain: :APIUser
+	Range: :API
+
+ObjectProperty: :canHave9
+	Domain: :CommunityMember
+	Range: :Blog
+
+ObjectProperty: :canHave10
+	Domain: :CommunityMember
+	Range: :App
+
+ObjectProperty: :canUpdate
+	Domain: :BrokerUser
+	Range: :ErrorCode
+
+ObjectProperty: :canFix
+	Domain: :BrokerUser
+	Range: :Submission
+
+ObjectProperty: :canAdd1
+	Domain: :Developer
+	Range: :Update
+
+ObjectProperty: :canAdd2
+	Domain: :TeamMember
+	Range: :00
+
+ObjectProperty: :canStep
+	Domain: :ConsumingUser
+	Range: :MapVisualisation
+
+ObjectProperty: :canEnsure1
+	Domain: :Developer
+	Range: :Data
+
+ObjectProperty: :canEnsure2
+	Domain: :Owner
+	Range: :Access
+
+ObjectProperty: :canEnsure3
+	Domain: :Tester
+	Range: :Field
+
+ObjectProperty: :canClarifyTo
+	Domain: :Developer
+	Range: :ErrorCode
+
+ObjectProperty: :hasFile1
+	Domain: :FABS
+	Range: :FABSFile
+
+ObjectProperty: :hasFile2
+	Domain: :D
+	Range: :DFile
+
+ObjectProperty: :canLog
+	Domain: :Developer
+	Range: :System
+
+ObjectProperty: :canDerive1
+	Domain: :AgencyUser
+	Range: :DataElement
+
+ObjectProperty: :canDerive2
+	Domain: :TeamMember
+	Range: :Fundingagencycode
+
+ObjectProperty: :canInvestigate
+	Domain: :Developer
+	Range: :Issue
+
+ObjectProperty: :canOffer
+	Domain: :APIUser
+	Range: :Functionality
+
+ObjectProperty: :canComplete
+	Domain: :AgencyUser
+	Range: :Submission
+
+ObjectProperty: :hasSummary
+	Domain: :Testing
+	Range: :TestingSummary
+
+ObjectProperty: :canKnowOn
+	Domain: :Owner
+	Range: :UIImprovement
+
+ObjectProperty: :canUpload
+	Domain: :BrokerUser
+	Range: :ErrorMessage
+
+ObjectProperty: :canPerform
+	Domain: :PlatformAdministrator
+	Range: :ManagementAction
+
+ObjectProperty: :canRead
+	Domain: :FABSUser
+	Range: :Access
+
+ObjectProperty: :canSchedule
+	Domain: :UIDesigner
+	Range: :UserTesting
+
+ObjectProperty: :canSet
+	Domain: :User
+	Range: :Username
+
+ObjectProperty: :canDesign1
+	Domain: :Owner
+	Range: :Schedule
+
+ObjectProperty: :canDesign2
+	Domain: :Owner
+	Range: :Audit
+
+ObjectProperty: :canRequest
+	Domain: :APIUser
+	Range: :Polygon
+
+ObjectProperty: :hasVisualisation
+	Domain: :Map
+	Range: :MapVisualisation
+
+ObjectProperty: :canReportToAbout
+	Domain: :UIDesigner
+	Range: :Agencies
+
+ObjectProperty: :hasGroup
+	Domain: :FABS
+	Range: :FABSGroup
+
+ObjectProperty: :canFilter
+	Domain: :ConsumingUser
+	Range: :Sort
+
+ObjectProperty: :hasState1
+	Domain: :View
+	Range: :ViewState
+
+ObjectProperty: :hasState2
+	Domain: :Visualisation
+	Range: :VisualisationState
+
+ObjectProperty: :canFind
+	Domain: :ConsumingUser
+	Range: :Dataset
+
+ObjectProperty: :canReset
+	Domain: :Owner
+	Range: :Environment
+
+ObjectProperty: :canInclude
+	Domain: :AgencyUser
+	Range: :Number
+
+ObjectProperty: :canPrevent1
+	Domain: :Developer
+	Range: :User
+
+ObjectProperty: :canPrevent2
+	Domain: :Developer
+	Range: :Transaction
+
+ObjectProperty: :canMaintain
+	Domain: :PlatformAdministrator
+	Range: :Status
+
+ObjectProperty: :canGet1
+	Domain: :UIDesigner
+	Range: :Approval
+
+ObjectProperty: :canGet2
+	Domain: :AgencyUser
+	Range: :FileF
+
+ObjectProperty: :canGet3
+	Domain: :FABSUser
+	Range: :File
+
+ObjectProperty: :canGet4
+	Domain: :ConsumingUser
+	Range: :View
+
+ObjectProperty: :canGet5
+	Domain: :APIUser
+	Range: :Regions|citie
+
+ObjectProperty: :canGet6
+	Domain: :APIUser
+	Range: :CSVOutput
+
+ObjectProperty: :canGet7
+	Domain: :APIUser
+	Range: :Set
+
+ObjectProperty: :canGet8
+	Domain: :APIUser
+	Range: :Percentage
+
+ObjectProperty: :canKnow1
+	Domain: :Developer
+	Range: :Submission
+
+ObjectProperty: :canKnow2
+	Domain: :UIDesigner
+	Range: :What
+
+ObjectProperty: :canKnow3
+	Domain: :Owner
+	Range: :UIImprovement
+
+ObjectProperty: :canKnow4
+	Domain: :AgencyUser
+	Range: :System
+
+ObjectProperty: :hasElement
+	Domain: :Data
+	Range: :DataElement
+
+ObjectProperty: :canTroubleshoot
+	Domain: :Developer
+	Range: :Issue
+
+ObjectProperty: :canStore
+	Domain: :APIUser
+	Range: :VisualisationState
+
+ObjectProperty: :hasAdministrator
+	Domain: :Platform
+	Range: :PlatformAdministrator
+
+ObjectProperty: :hasError
+	Domain: :Level
+	Range: :LevelError
+
+ObjectProperty: :canProvide1
+	Domain: :Developer
+	Range: :FABSGroup
+
+ObjectProperty: :canProvide2
+	Domain: :ConsumingUser
+	Range: :Context
+
+ObjectProperty: :canProvide3
+	Domain: :APIUser
+	Range: :Map
+
+ObjectProperty: :canChange1
+	Domain: :ConsumingUser
+	Range: :Display
+
+ObjectProperty: :canChange2
+	Domain: :APIUser
+	Range: :Color
+
+ObjectProperty: :canChange3
+	Domain: :APIUser
+	Range: :Platform
+
+ObjectProperty: :canCreate
+	Domain: :Owner
+	Range: :TestingSummary
+
+ObjectProperty: :canHide
+	Domain: :PlatformAdministrator
+	Range: :Dataset
+
+ObjectProperty: :hasUpdate
+	Domain: :Dataset
+	Range: :DatasetUpdate
+
+ObjectProperty: :canAccess1
+	Domain: :WebsiteUser
+	Range: :FABSFile
+
+ObjectProperty: :canAccess2
+	Domain: :User
+	Range: :Agency
+
+ObjectProperty: :canAccess3
+	Domain: :DataUser
+	Range: :Field
+
+ObjectProperty: :hasCode
+	Domain: :Error
+	Range: :ErrorCode
+
+ObjectProperty: :canWorkWithIn
+	Domain: :APIUser
+	Range: :Dataset
+
+ObjectProperty: :canReceive1
+	Domain: :DataUser
+	Range: :Update
+
+ObjectProperty: :canReceive2
+	Domain: :AgencyUser
+	Range: :LevelError
+
+ObjectProperty: :hasSource
+	Domain: :Data
+	Range: :DataSource
+
+ObjectProperty: :hasOutput
+	Domain: :CSV
+	Range: :CSVOutput
+
+ObjectProperty: :canUnderstand1
+	Domain: :AgencyUser
+	Range: :LevelError
+
+ObjectProperty: :canUnderstand2
+	Domain: :ConsumingUser
+	Range: :Amount
+
+ObjectProperty: :canUnderstand3
+	Domain: :ConsumingUser
+	Range: :What
+
+ObjectProperty: :canUnderstand4
+	Domain: :APIUser
+	Range: :System
+
+ObjectProperty: :canMake1
+	Domain: :TeamMember
+	Range: :Update
+
+ObjectProperty: :canMake2
+	Domain: :FABSUser
+	Range: :Column
+
+ObjectProperty: :hasTesting
+	Domain: :User
+	Range: :UserTesting
+
+ObjectProperty: :canBegin
+	Domain: :UIDesigner
+	Range: :UserTesting
+
+ObjectProperty: :canSearch
+	Domain: :ConsumingUser
+	Range: :Dataset
+
+ObjectProperty: :hasMember1
+	Domain: :Team
+	Range: :TeamMember
+
+ObjectProperty: :hasMember2
+	Domain: :Community
+	Range: :CommunityMember
+
+ObjectProperty: :canDelete
+	Domain: :PlatformAdministrator
+	Range: :Dataset
+
+ObjectProperty: :canDetermine1
+	Domain: :Developer
+	Range: :DFile
+
+ObjectProperty: :canDetermine2
+	Domain: :Developer
+	Range: :Way
+
+ObjectProperty: :canDownload1
+	Domain: :FABSUser
+	Range: :FABSFile
+
+ObjectProperty: :canDownload2
+	Domain: :ConsumingUser
+	Range: :CSV
+
+ObjectProperty: :canDownload3
+	Domain: :ConsumingUser
+	Range: :ViewState
+
+ObjectProperty: :canProvider
+	Domain: :APIUser
+	Range: :Context
+
+ObjectProperty: :canBuild1
+	Domain: :APIUser
+	Range: :UserExperience
+
+ObjectProperty: :canBuild2
+	Domain: :APIUser
+	Range: :Display
+
+ObjectProperty: :hasLabel
+	Domain: :Status
+	Range: :StatusLabel
+
+ObjectProperty: :canConfuseWith
+	Domain: :ConsumingUser
+	Range: :Amount
+
+ObjectProperty: :canSubmit1
+	Domain: :BrokerUser
+	Range: :Data
+
+ObjectProperty: :canSubmit2
+	Domain: :BrokerUser
+	Range: :Record
+
+ObjectProperty: :canSubmit3
+	Domain: :FABSUser
+	Range: :Citywide
+
+ObjectProperty: :canSubmit4
+	Domain: :AgencyUser
+	Range: :DataElement
+
+ObjectProperty: :canShare1
+	Domain: :ConsumingUser
+	Range: :ViewState
+
+ObjectProperty: :canShare2
+	Domain: :ConsumingUser
+	Range: :Data
+
+ObjectProperty: :canShare3
+	Domain: :ConsumingUser
+	Range: :Image
+
+ObjectProperty: :hasF
+	Domain: :File
+	Range: :FileF
+
+ObjectProperty: :canTrack
+	Domain: :UIDesigner
+	Range: :Issue
+
+ObjectProperty: :canMap
+	Domain: :AgencyUser
+	Range: :Federalactionobligation
+
+ObjectProperty: :canGenerate
+	Domain: :User
+	Range: :DFile
+
+ObjectProperty: :hasMessage
+	Domain: :Error
+	Range: :ErrorMessage
+
+ObjectProperty: :hasDesigner
+	Domain: :UI
+	Range: :UIDesigner
+
+ObjectProperty: :canCustomize
+	Domain: :APIUser
+	Range: :Visualisation
+
+ObjectProperty: :canBe
+	Domain: :AgencyUser
+	Range: :SAM
+
+ObjectProperty: :canMove1
+	Domain: :UIDesigner
+	Range: :2
+
+ObjectProperty: :canMove2
+	Domain: :UIDesigner
+	Range: :3
+
+# Classes
+Class: :DataUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Data User",
+		rdfs:comment "Functional Role"
+
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Data
+
+
+Class: :Deletion
+
+
+Class: :UIDesigner
+	SubClassOf: :Designer
+	Annotations:
+		rdfs:label "UI Designer",
+		rdfs:comment "Functional Role"
+
+Class: :Designer
+
+
+Class: :UI
+
+
+Class: :Agencies
+
+
+Class: :2
+
+
+Class: :Approval
+
+
+Class: :3
+
+
+Class: :Developer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :System
+
+
+Class: :Issue
+
+
+Class: :Update
+
+
+Class: :Submission
+
+
+Class: :BrokerUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Broker User",
+		rdfs:comment "Functional Role"
+
+Class: :Broker
+
+
+Class: :ErrorMessage
+	SubClassOf: :Message
+	Annotations:
+		rdfs:label "Error Message"
+
+Class: :Message
+
+
+Class: :Error
+
+
+Class: :WebsiteUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Website User",
+		rdfs:comment "Functional Role"
+
+Class: :Website
+
+
+Class: :FABSFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "FABS File"
+
+Class: :File
+
+
+Class: :FABS
+
+
+Class: :Agency
+
+
+Class: :AgencyUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Agency User",
+		rdfs:comment "Functional Role"
+
+Class: :Number
+
+
+Class: :What
+
+
+Class: :TestingSummary
+	SubClassOf: :Summary
+	Annotations:
+		rdfs:label "Testing Summary"
+
+Class: :Summary
+
+
+Class: :Testing
+
+
+Class: :Owner
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :UIImprovement
+	Annotations:
+		rdfs:label "UI Improvement"
+
+Class: :UserTesting
+	SubClassOf: :Testing
+	Annotations:
+		rdfs:label "User Testing"
+
+Class: :Schedule
+
+
+Class: :Audit
+
+
+Class: :Environment
+
+
+Class: :Access
+
+
+Class: :ErrorCode
+	SubClassOf: :Code
+	Annotations:
+		rdfs:label "Error Code"
+
+Class: :Code
+
+
+Class: :SAM
+
+
+Class: :TeamMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Team Member",
+		rdfs:comment "Functional Role"
+
+Class: :Member
+
+
+Class: :Team
+
+
+Class: :DataElement
+	SubClassOf: :Element
+	Annotations:
+		rdfs:label "Data Element"
+
+Class: :Element
+
+
+Class: :00
+
+
+Class: :Context
+
+
+Class: :Fundingagencycode
+
+
+Class: :Schema
+
+
+Class: :Federalactionobligation
+
+
+Class: :FABSUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "FABS User",
+		rdfs:comment "Functional Role"
+
+Class: :DFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "D File"
+
+Class: :D
+
+
+Class: :LevelError
+	SubClassOf: :Error
+	Annotations:
+		rdfs:label "Level Error"
+
+Class: :Level
+
+
+Class: :Tester
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :FileF
+	SubClassOf: :F
+	Annotations:
+		rdfs:label "File F"
+
+Class: :F
+
+
+Class: :FABSGroup
+	SubClassOf: :Group
+	Annotations:
+		rdfs:label "FABS Group"
+
+Class: :Group
+
+
+Class: :Field
+
+
+Class: :Record
+
+
+Class: :Transaction
+
+
+Class: :Citywide
+
+
+Class: :Digit
+
+
+Class: :Column
+
+
+Class: :Way
+
+
+Class: :Amount
+
+
+Class: :StatusLabel
+	SubClassOf: :Label
+	Annotations:
+		rdfs:label "Status Label"
+
+Class: :Label
+
+
+Class: :Status
+
+
+Class: :PlatformAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Platform Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Administrator
+
+
+Class: :Platform
+
+
+Class: :Dataset
+
+
+Class: :View
+
+
+Class: :ManagementAction
+	Annotations:
+		rdfs:label "Management Action"
+
+Class: :DataSource
+	SubClassOf: :Source
+	Annotations:
+		rdfs:label "Data Source"
+
+Class: :Source
+
+
+Class: :ConsumingUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Consuming User",
+		rdfs:comment "Functional Role"
+
+Class: :Consuming
+
+
+Class: :Sort
+
+
+Class: :CSV
+
+
+Class: :Display
+
+
+Class: :Description
+
+
+Class: :ViewState
+	SubClassOf: :State
+	Annotations:
+		rdfs:label "View State"
+
+Class: :State
+
+
+Class: :Image
+
+
+Class: :MapVisualisation
+	SubClassOf: :Visualisation
+	Annotations:
+		rdfs:label "Map Visualisation"
+
+Class: :Visualisation
+
+
+Class: :Map
+
+
+Class: :Use
+
+
+Class: :APIUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "API User",
+		rdfs:comment "Functional Role"
+
+Class: :API
+
+
+Class: :Functionality
+
+
+Class: :Regions|citie
+
+
+Class: :Polygon
+
+
+Class: :CSVOutput
+	SubClassOf: :Output
+	Annotations:
+		rdfs:label "CSV Output"
+
+Class: :Output
+
+
+Class: :Set
+
+
+Class: :Metadata
+
+
+Class: :UserExperience
+	Annotations:
+		rdfs:label "User Experience"
+
+Class: :Measure
+
+
+Class: :Percentage
+
+
+Class: :VisualisationState
+	SubClassOf: :State
+	Annotations:
+		rdfs:label "Visualisation State"
+
+Class: :DatasetUpdate
+	SubClassOf: :Update
+	Annotations:
+		rdfs:label "Dataset Update"
+
+Class: :CommunityMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Community Member",
+		rdfs:comment "Functional Role"
+
+Class: :Community
+
+
+Class: :Blog
+
+
+Class: :Username
+
+
+Class: :App
+
+
+Class: :Default
+
+
+Class: :Color
+
+
+Class: :Page
+
+
+Class: :Validation
+
+
+Class: :Table
+
+
+Class: :Datum
+
+
+Class: :Mockup
+
+
+Class: :Improvement
+
+
+Class: :Name
+
+
+Class: :Format
+
+
+Class: :Publishing
+
+
+Class: :Model
+
+
+Class: :Bug
+
+
+Class: :Management
+
+
+Class: :Action
+
+
+Class: :Constant
+
+
+Class: :Experience
+
+
+Class: :Client
+
+
+Class: :Hierarchy
+
+
+Class: :PublishUser
+	Annotations:
+		rdfs:label "Publish User",
+		rdfs:comment "Functional Role"
+

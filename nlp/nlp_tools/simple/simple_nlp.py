@@ -5,7 +5,7 @@ import json
 import sys
 
 def main():
-    load_path, save_name = command()
+    load_path, save_name, data_type_folder = command()
     stories = extract(load_path)
 
     persona_list = []
@@ -28,7 +28,7 @@ def main():
         story_dictionary =create_dictionary(story, persona, actions, entities)
         final_results.append(story_dictionary)
 
-    save_results(save_name, final_results)
+    save_results(save_name, final_results, data_type_folder)
 
 def command():
     '''
@@ -37,6 +37,7 @@ def command():
     Returns:
         args.load_path (str): Path to the input file to be annotated
         save_folder_path (str): path to the folder to save the annotated results
+        data_type_folder (str): type of dataset grouping
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -47,6 +48,7 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is the most basic nlp tool that identifies entities and action based on a dictionary")
     parser.add_argument("load_path", type = str, help = "path of input dataset file to be annotated")
     parser.add_argument("save_name", type = str, help = "name of the saving file")
+    parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
 
     args = parser.parse_args()
 
@@ -59,7 +61,14 @@ def command():
         raise
 
     else:
-        return args.load_path, args.save_name
+        if args.data_type == "BKLG":
+            data_type_folder = "individual_backlog"
+        elif args.data_type == "CAT":
+            data_type_folder = "categories"
+        else:
+            data_type_folder = "global"
+
+        return args.load_path, args.save_name, data_type_folder
 
 def extract(load_path):
     '''
@@ -202,22 +211,23 @@ def create_dictionary(story, persona, actions, entities):
 
     return story_dictionary
 
-def save_results(save_name, final_results):
+def save_results(save_name, final_results, data_type_folder):
     '''
     Save the results to a json file
 
     Parameters:
     save_name (str): the name of the file to be saved
     final_results (dictionary): contains the annotations of each story from this simple nlp
+    data_type_folder (str): type of folder to save into
     '''
 
-    save_file_name =  "nlp\\nlp_outputs\\nlp_outputs_original\\simple_nlp\\" + save_name + "_simple_nlp.json"
+    save_file_name =  "nlp\\nlp_outputs\\" + data_type_folder+ "\\nlp_outputs_original\\simple_nlp\\" + save_name + "_simple_nlp.json"
 
     json.dumps(final_results)
     with open(save_file_name,"w", encoding="utf-8") as file:
         json.dump(final_results, file, ensure_ascii=False, indent = 4)
 
-    print("\n\n"+save_file_name +  "is saved under outputs -> basic_nlp")
+    print("\n\nFile is saved: " + save_file_name)
 
 if __name__ == "__main__":
     main()

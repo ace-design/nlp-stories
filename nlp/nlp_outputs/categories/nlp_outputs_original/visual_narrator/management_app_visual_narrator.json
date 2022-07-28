@@ -1,0 +1,5802 @@
+[
+    {
+        "Text": "#G03# As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.",
+        "Persona": [
+            "User"
+        ],
+        "Action": [
+            "Search"
+        ],
+        "Entity": [
+            "Information"
+        ],
+        "Triggers": [
+            "User",
+            "Search"
+        ],
+        "Targets": [
+            "Search",
+            "Information"
+        ]
+    },
+    {
+        "Text": "#G03# As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.",
+        "Persona": [
+            "ProspectiveApplicant"
+        ],
+        "Action": [
+            "research"
+        ],
+        "Entity": [
+            "requirements"
+        ],
+        "Triggers": [
+            "ProspectiveApplicant",
+            "research"
+        ],
+        "Targets": [
+            "research",
+            "requirements"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Request"
+        ],
+        "Entity": [
+            "Assistance"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Request"
+        ],
+        "Targets": [
+            "Request",
+            "Assistance"
+        ]
+    },
+    {
+        "Text": "#G03# As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
+        "Persona": [
+            "Customer"
+        ],
+        "Action": [
+            "Create"
+        ],
+        "Entity": [
+            "Account"
+        ],
+        "Triggers": [
+            "Customer",
+            "Create"
+        ],
+        "Targets": [
+            "Create",
+            "Account"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Submit"
+        ],
+        "Entity": [
+            "Application"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Submit"
+        ],
+        "Targets": [
+            "Submit",
+            "Application"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Submit"
+        ],
+        "Entity": [
+            "Documentation"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Submit"
+        ],
+        "Targets": [
+            "Submit",
+            "Documentation"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Pay"
+        ],
+        "Entity": [
+            "Fee"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Pay"
+        ],
+        "Targets": [
+            "Pay",
+            "Fee"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Check the Status of a transaction, so that I can understand where the provisioning of my service is in the process, such as information related to service levels, fees, plan review, permit, or inspection results.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Check"
+        ],
+        "Entity": [
+            "Status"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Check"
+        ],
+        "Targets": [
+            "Check",
+            "Status"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Modify my Application, so that I can successfully change information on an application.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Modify"
+        ],
+        "Entity": [
+            "Application"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Modify"
+        ],
+        "Targets": [
+            "Modify",
+            "Application"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Perform"
+        ],
+        "Entity": [
+            "Review"
+        ],
+        "Triggers": [
+            "member",
+            "Perform"
+        ],
+        "Targets": [
+            "Perform",
+            "Review"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Record"
+        ],
+        "Entity": [
+            "Note"
+        ],
+        "Triggers": [
+            "member",
+            "Record"
+        ],
+        "Targets": [
+            "Record",
+            "Note"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Assign an Application for Detailed Review, so that I can review the for compliance and subsequently approved or denied.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Application"
+        ],
+        "Triggers": [
+            "member",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Application"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Apply a Hold, so that I can prevent progression through the workflow or other actions in the system until the issue is resolved.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Apply"
+        ],
+        "Entity": [
+            "Hold"
+        ],
+        "Triggers": [
+            "member",
+            "Apply"
+        ],
+        "Targets": [
+            "Apply",
+            "Hold"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Remove a Hold, so that I can allow progression through the workflow or other actions in the system now that the issue has been resolved.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Remove"
+        ],
+        "Entity": [
+            "Hold"
+        ],
+        "Triggers": [
+            "member",
+            "Remove"
+        ],
+        "Targets": [
+            "Remove",
+            "Hold"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Send a Formal Response to Applicant, so that I can satisfy communication and records responsibilities.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Send"
+        ],
+        "Entity": [
+            "Response"
+        ],
+        "Triggers": [
+            "member",
+            "Send"
+        ],
+        "Targets": [
+            "Send",
+            "Response"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Track  the Draft Proffers, so that I can preserve the history of draft proffer statements submitted by the Applicant.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Track"
+        ],
+        "Entity": [
+            "Proffers"
+        ],
+        "Triggers": [
+            "member",
+            "Track"
+        ],
+        "Targets": [
+            "Track",
+            "Proffers"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Approved Proffers, so that I can ensure compliance with and satisfaction of the proffer in the future.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Proffers"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Proffers"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Ordinances, so that I can maintain accurate ordinance information in the System.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Ordinances"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Ordinances"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Schedule a Meeting, so that I can bring the required parties together at a specific date/time to address an issue.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Schedule"
+        ],
+        "Entity": [
+            "Meeting"
+        ],
+        "Triggers": [
+            "member",
+            "Schedule"
+        ],
+        "Targets": [
+            "Schedule",
+            "Meeting"
+        ]
+    },
+    {
+        "Text": "#G03# As a staff member, I want to denote an application with a Final Action status. So that I can finish it.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "denote"
+        ],
+        "Entity": [
+            "application"
+        ],
+        "Triggers": [
+            "member",
+            "denote"
+        ],
+        "Targets": [
+            "denote",
+            "application"
+        ]
+    },
+    {
+        "Text": "#G03# As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s).",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Conduct"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "member",
+            "Conduct"
+        ],
+        "Targets": [
+            "Conduct",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G03# As a Planning Staff member, I want to Generate Planning-related Reports, so that I can access, analyze and/or export the needed information in the format I requested.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Generate"
+        ],
+        "Entity": [
+            "Reports"
+        ],
+        "Triggers": [
+            "member",
+            "Generate"
+        ],
+        "Targets": [
+            "Generate",
+            "Reports"
+        ]
+    },
+    {
+        "Text": "#G03# As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Evaluate"
+        ],
+        "Entity": [
+            "Consistency"
+        ],
+        "Triggers": [
+            "member",
+            "Evaluate"
+        ],
+        "Targets": [
+            "Evaluate",
+            "Consistency"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Perform a Staff Review, so that I can validate compliance of an application with the Zoning Ordinance and impact approval/denial of the application accordingly.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Perform"
+        ],
+        "Entity": [
+            "Review"
+        ],
+        "Triggers": [
+            "member",
+            "Perform"
+        ],
+        "Targets": [
+            "Perform",
+            "Review"
+        ]
+    },
+    {
+        "Text": "#G03# As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Process"
+        ],
+        "Entity": [
+            "Requests"
+        ],
+        "Triggers": [
+            "member",
+            "Process"
+        ],
+        "Targets": [
+            "Process",
+            "Requests"
+        ]
+    },
+    {
+        "Text": "#G03# As a Zoning Staff member, I want to Issue the Zoning-Related Permits, so that I can satisfy an Applicant's request for service that has proven to be eligible and in compliance with the Zoning Ordinance.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Issue"
+        ],
+        "Entity": [
+            "Permits"
+        ],
+        "Triggers": [
+            "member",
+            "Issue"
+        ],
+        "Targets": [
+            "Issue",
+            "Permits"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Develop a Staff Report, so that I can publish and distribute the report according to business rules.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Develop"
+        ],
+        "Entity": [
+            "Report"
+        ],
+        "Triggers": [
+            "member",
+            "Develop"
+        ],
+        "Targets": [
+            "Develop",
+            "Report"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Hearing Calendars, so that I can track hearing-related activities and due dates.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Calendars"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Calendars"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Assign a Hearing Date, so that I can present the application to the appropriate governing body within the timelines dictated by the relevant County rules and procedures.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Date"
+        ],
+        "Triggers": [
+            "member",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Date"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Affidavits"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Affidavits"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Satisfy Hearing Requirements, so that I can ensure all pre-hearing requirements are satisfied in time for the hearing.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Satisfy"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Satisfy"
+        ],
+        "Targets": [
+            "Satisfy",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Prepare for and Support Hearing Execution, so that I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Prepare"
+        ],
+        "Entity": [
+            "Execution"
+        ],
+        "Triggers": [
+            "member",
+            "Prepare"
+        ],
+        "Targets": [
+            "Prepare",
+            "Execution"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Capture"
+        ],
+        "Entity": [
+            "Decision"
+        ],
+        "Triggers": [
+            "member",
+            "Capture"
+        ],
+        "Targets": [
+            "Capture",
+            "Decision"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Process the Appeals, so that I can track the outcome and record the impact on the relevant records.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Process"
+        ],
+        "Entity": [
+            "Appeals"
+        ],
+        "Triggers": [
+            "member",
+            "Process"
+        ],
+        "Targets": [
+            "Process",
+            "Appeals"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Plans"
+        ],
+        "Triggers": [
+            "member",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Plans"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Workload"
+        ],
+        "Triggers": [
+            "Supervisor",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Workload"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Request a Plan Review Meeting, so that I can meet with the Plan Review Staff regarding the plan review.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Request"
+        ],
+        "Entity": [
+            "Meeting"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Request"
+        ],
+        "Targets": [
+            "Request",
+            "Meeting"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to successfully Conduct a Plan Review Meeting with the Applicant and record the outcome, so that I can listen to it again.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Conduct"
+        ],
+        "Entity": [
+            "Meeting"
+        ],
+        "Triggers": [
+            "member",
+            "Conduct"
+        ],
+        "Targets": [
+            "Conduct",
+            "Meeting"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Resubmit Plans, so that I can review revised plans. ",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Resubmit"
+        ],
+        "Entity": [
+            "Plans"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Resubmit"
+        ],
+        "Targets": [
+            "Resubmit",
+            "Plans"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff Member, I want to Review the Code Modifications submitted by the Applicant, so that I can review the request and if approved, associate it with the appropriate project.",
+        "Persona": [
+            "Member"
+        ],
+        "Action": [
+            "Review"
+        ],
+        "Entity": [
+            "Modifications"
+        ],
+        "Triggers": [
+            "Member",
+            "Review"
+        ],
+        "Targets": [
+            "Review",
+            "Modifications"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Track"
+        ],
+        "Entity": [
+            "Completion"
+        ],
+        "Triggers": [
+            "member",
+            "Track"
+        ],
+        "Targets": [
+            "Track",
+            "Completion"
+        ]
+    },
+    {
+        "Text": "#G03# As a Development Staff member, I want to Issue a Development-related Permit, so that I can grant the request to the Applicant to begin work",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Issue"
+        ],
+        "Entity": [
+            "Permit"
+        ],
+        "Triggers": [
+            "member",
+            "Issue"
+        ],
+        "Targets": [
+            "Issue",
+            "Permit"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Bonds, so that I can track and manage bonds throughout the lifecycle of the project until release.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Bonds"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Bonds"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Complete"
+        ],
+        "Entity": [
+            "Project"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Complete"
+        ],
+        "Targets": [
+            "Complete",
+            "Project"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Complete"
+        ],
+        "Entity": [
+            "Project"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Complete"
+        ],
+        "Targets": [
+            "Complete",
+            "Project"
+        ]
+    },
+    {
+        "Text": "#G03# As a Customer, I want to Request Inspection, so that a County inspector is assigned to perform an inspection of my project.",
+        "Persona": [
+            "Customer"
+        ],
+        "Action": [
+            "Request"
+        ],
+        "Entity": [
+            "Inspection"
+        ],
+        "Triggers": [
+            "Customer",
+            "Request"
+        ],
+        "Targets": [
+            "Request",
+            "Inspection"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Create"
+        ],
+        "Entity": [
+            "Inspection"
+        ],
+        "Triggers": [
+            "member",
+            "Create"
+        ],
+        "Targets": [
+            "Create",
+            "Inspection"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspection Staff Supervisor, I want to Assign Inspections, so that I can make sure the appropriate Inspector receives the work.",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Inspections"
+        ],
+        "Triggers": [
+            "Supervisor",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Inspections"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Workload"
+        ],
+        "Triggers": [
+            "Supervisor",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Workload"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspector, I want to Conduct Inspections, so that I can validate Customer compliance with code and regulations and provide results of the inspection to the Customer.",
+        "Persona": [
+            "Inspector"
+        ],
+        "Action": [
+            "Conduct"
+        ],
+        "Entity": [
+            "Inspections"
+        ],
+        "Triggers": [
+            "Inspector",
+            "Conduct"
+        ],
+        "Targets": [
+            "Conduct",
+            "Inspections"
+        ]
+    },
+    {
+        "Text": "#G03# As an Enforcement Staff member, I want to Issue a Notice of Violation, so that I can provide formal communication to the responsible party.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Issue"
+        ],
+        "Entity": [
+            "Notice"
+        ],
+        "Triggers": [
+            "member",
+            "Issue"
+        ],
+        "Targets": [
+            "Issue",
+            "Notice"
+        ]
+    },
+    {
+        "Text": "#G03# As a l Staff member, I want to search for Property information, so that I can obtain all associated current and historic owners, permits, and applications.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "member",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G03# As a County Staff Member, I want to create a custom query/report outside of the common querying/reporting functionality, so that I can fulfill a request.",
+        "Persona": [
+            "Member"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "report"
+        ],
+        "Triggers": [
+            "Member",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "report"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "unit"
+        ],
+        "Triggers": [
+            "member",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "unit"
+        ]
+    },
+    {
+        "Text": "#G03# As a Technical Staff member, I want to update the GIS Property Management, so that I can successfully update the transactional Parcel Pin to reference the GIS layer where the Split or Merged Parcel Pin exists.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "Management"
+        ],
+        "Triggers": [
+            "member",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "Management"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Send or Post Citations and Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Send"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "member",
+            "Send"
+        ],
+        "Targets": [
+            "Send",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "click"
+        ],
+        "Entity": [
+            "address"
+        ],
+        "Triggers": [
+            "user",
+            "click"
+        ],
+        "Targets": [
+            "click",
+            "address"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to anonymously view public information, so that I know about recycling centers near me before creating an account.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "enter"
+        ],
+        "Entity": [
+            "code"
+        ],
+        "Triggers": [
+            "user",
+            "enter"
+        ],
+        "Targets": [
+            "enter",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to get the hours of each recycling facility, so that I can arrange drop-offs on my off days or during after-work hours.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "hours"
+        ],
+        "Triggers": [
+            "user",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "hours"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to have a flexible pick up time, so that I can more conveniently use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "pick"
+        ],
+        "Triggers": [
+            "user",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "pick"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "select"
+        ],
+        "Entity": [
+            "types"
+        ],
+        "Triggers": [
+            "user",
+            "select"
+        ],
+        "Targets": [
+            "select",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "centers"
+        ],
+        "Triggers": [
+            "user",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "centers"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "give"
+        ],
+        "Entity": [
+            "ID"
+        ],
+        "Triggers": [
+            "user",
+            "give"
+        ],
+        "Targets": [
+            "give",
+            "ID"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "display"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "display"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view a map display of the special waste drop off sites around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "display"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "display"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to choose a flexible pick up time, so that I can more conveniently use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "choose"
+        ],
+        "Entity": [
+            "pick"
+        ],
+        "Triggers": [
+            "user",
+            "choose"
+        ],
+        "Targets": [
+            "choose",
+            "pick"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to view user documentation for the website, so that I know how to use the web app.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "documentation"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "documentation"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to get feedback when I enter an invalid zip code.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "feedback"
+        ],
+        "Triggers": [
+            "user",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "feedback"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to create an acocunt, so that I can create my own profile.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "acocunt"
+        ],
+        "Triggers": [
+            "user",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "acocunt"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "admin",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "read"
+        ],
+        "Entity": [
+            "feedback"
+        ],
+        "Triggers": [
+            "admin",
+            "read"
+        ],
+        "Targets": [
+            "read",
+            "feedback"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to check transaction history and keep a record of it, so that I can go back when needed.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "check"
+        ],
+        "Entity": [
+            "history"
+        ],
+        "Triggers": [
+            "user",
+            "check"
+        ],
+        "Targets": [
+            "check",
+            "history"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to have a great UI and UX from the sites, so that I have a pleasant experience when navigating through them.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "UI"
+        ],
+        "Triggers": [
+            "user",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "UI"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to access the site and do all the other stuffs on all of my electronic devices.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "site"
+        ],
+        "Triggers": [
+            "user",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "site"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to block specific users based on IP address, so that I can prevent spamming on the websites.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "block"
+        ],
+        "Entity": [
+            "users"
+        ],
+        "Triggers": [
+            "admin",
+            "block"
+        ],
+        "Targets": [
+            "block",
+            "users"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "dashboard"
+        ],
+        "Triggers": [
+            "admin",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "dashboard"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to have all data encrypted, so that important information will not be stolen during a server breach or an attack.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "admin",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G04# As an executive, I want to have full access to data related to my company, so that I can have a sense of my company's performance.",
+        "Persona": [
+            "executive"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "access"
+        ],
+        "Triggers": [
+            "executive",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "access"
+        ]
+    },
+    {
+        "Text": "#G04# As an employee, I want to access the route planning system during work, so that I can be guided through the neighbourhood.",
+        "Persona": [
+            "employee"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "system"
+        ],
+        "Triggers": [
+            "employee",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "system"
+        ]
+    },
+    {
+        "Text": "#G04# As an employee from the HR department, I want to have access to the full information of all employees working for this business.",
+        "Persona": [
+            "department"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "access"
+        ],
+        "Triggers": [
+            "department",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "access"
+        ]
+    },
+    {
+        "Text": "#G04# As a developer, I want to access an API from the website, so that I can integrate it and implement certain features in my own iOS application.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "API"
+        ],
+        "Triggers": [
+            "developer",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "API"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "rewards"
+        ],
+        "Triggers": [
+            "user",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "rewards"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to have my personal information kept securely in the database of the website, so that I will not suffer from identity theft or telephone harassment.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "database"
+        ],
+        "Triggers": [
+            "user",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "database"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to handle all users' activities, so that I can manage more efficiently.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "handle"
+        ],
+        "Entity": [
+            "activities"
+        ],
+        "Triggers": [
+            "admin",
+            "handle"
+        ],
+        "Targets": [
+            "handle",
+            "activities"
+        ]
+    },
+    {
+        "Text": "#G04# As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+        "Persona": [
+            "company"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "website"
+        ],
+        "Triggers": [
+            "company",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "website"
+        ]
+    },
+    {
+        "Text": "#G04# As an employee, I want to get quick notifications, so that I can process cases the first time.",
+        "Persona": [
+            "employee"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "notifications"
+        ],
+        "Triggers": [
+            "employee",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "notifications"
+        ]
+    },
+    {
+        "Text": "#G04# As a company accountant, I want to view all available activity fees online, so that I can easily create a bill statement.",
+        "Persona": [
+            "accountant"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "fees"
+        ],
+        "Triggers": [
+            "accountant",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "fees"
+        ]
+    },
+    {
+        "Text": "#G04# As a developer, I want to use bootstrap in the process of developing, so that I can easily design my website.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "use"
+        ],
+        "Entity": [
+            "bootstrap"
+        ],
+        "Triggers": [
+            "developer",
+            "use"
+        ],
+        "Targets": [
+            "use",
+            "bootstrap"
+        ]
+    },
+    {
+        "Text": "#G04# As a developer, I want to attend some UI/UX lessons, so that I can develop an awesome and beautiful features website.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "attend"
+        ],
+        "Entity": [
+            "lessons"
+        ],
+        "Triggers": [
+            "developer",
+            "attend"
+        ],
+        "Targets": [
+            "attend",
+            "lessons"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to view all locations of recycling centers on a map, so that I can check which routes to take to drop off waste.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "locations"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "locations"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to upload my week's schedule, so that I can get recommendations for recycling centers that best fit my availability.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "upload"
+        ],
+        "Entity": [
+            "schedule"
+        ],
+        "Triggers": [
+            "user",
+            "upload"
+        ],
+        "Targets": [
+            "upload",
+            "schedule"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "link"
+        ],
+        "Entity": [
+            "account"
+        ],
+        "Triggers": [
+            "user",
+            "link"
+        ],
+        "Targets": [
+            "link",
+            "account"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "contact"
+        ],
+        "Entity": [
+            "administrators"
+        ],
+        "Triggers": [
+            "user",
+            "contact"
+        ],
+        "Targets": [
+            "contact",
+            "administrators"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to add recycling center information, so that I can keep the database up-to-date over time.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "admin",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "logs"
+        ],
+        "Triggers": [
+            "admin",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "logs"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to onboard recycling centers on the platform, so that I can increase information accuracy.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "onboard"
+        ],
+        "Entity": [
+            "centers"
+        ],
+        "Triggers": [
+            "admin",
+            "onboard"
+        ],
+        "Targets": [
+            "onboard",
+            "centers"
+        ]
+    },
+    {
+        "Text": "#G04# As a superuser, I want to update the recycling center information, so that I can provide the latest information about the recycling center.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "superuser",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "stats"
+        ],
+        "Triggers": [
+            "superuser",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "stats"
+        ]
+    },
+    {
+        "Text": "#G04# As a superuser, I want to reply to user questions, so that I can answer any questions about my recycling center.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": [
+            "reply"
+        ],
+        "Entity": [
+            "questions"
+        ],
+        "Triggers": [
+            "superuser",
+            "reply"
+        ],
+        "Targets": [
+            "reply",
+            "questions"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to have a dashboard that shows usage stats and locations, so that I can identify the neighbourhoods with the largest number of drop-offs and to try getting more facilities involved.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "dashboard"
+        ],
+        "Triggers": [
+            "admin",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "dashboard"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to communicate directly with facilities, so that I can keep them updated about features we have on our website.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "communicate"
+        ],
+        "Entity": [
+            "facilities"
+        ],
+        "Triggers": [
+            "admin",
+            "communicate"
+        ],
+        "Targets": [
+            "communicate",
+            "facilities"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to browse through the list of facolities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "browse"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "user",
+            "browse"
+        ],
+        "Targets": [
+            "browse",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G04# As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users.",
+        "Persona": [
+            "representative"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "representative",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials.",
+        "Persona": [
+            "representative"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "access"
+        ],
+        "Triggers": [
+            "representative",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "access"
+        ]
+    },
+    {
+        "Text": "#G04# As a recyclingfacility, I want to be able to communicate directly with the site admin and convey any issues or concerns I have, so that they fix them.",
+        "Persona": [
+            "recyclingfacility"
+        ],
+        "Action": [
+            "communicate"
+        ],
+        "Entity": [
+            "issues"
+        ],
+        "Triggers": [
+            "recyclingfacility",
+            "communicate"
+        ],
+        "Targets": [
+            "communicate",
+            "issues"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to add campers, so that I can keep track of each individual camper.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "administrator",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to remove campers if they don't attend the camp anymore, so that I can keep the records organized.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "remove"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "administrator",
+            "remove"
+        ],
+        "Targets": [
+            "remove",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to keep camper records from previous years, so that the amount of work I need to do is lowered. ",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "keep"
+        ],
+        "Entity": [
+            "records"
+        ],
+        "Triggers": [
+            "administrator",
+            "keep"
+        ],
+        "Targets": [
+            "keep",
+            "records"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to upload consent forms, so that campers or their parents can easily access the forms.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "upload"
+        ],
+        "Entity": [
+            "forms"
+        ],
+        "Triggers": [
+            "administrator",
+            "upload"
+        ],
+        "Targets": [
+            "upload",
+            "forms"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to keep track of which camper submitted which forms, so that legal issues are avoided.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "keep"
+        ],
+        "Entity": [
+            "track"
+        ],
+        "Triggers": [
+            "administrator",
+            "keep"
+        ],
+        "Targets": [
+            "keep",
+            "track"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to schedule activities for campers, so that camp workers can easily keep track of who is where at all times.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "schedule"
+        ],
+        "Entity": [
+            "activities"
+        ],
+        "Triggers": [
+            "administrator",
+            "schedule"
+        ],
+        "Targets": [
+            "schedule",
+            "activities"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to automatically create nametags for campers, so that I can lower the amount of work I need to do.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "nametags"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "nametags"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to suspend a camper who had behavioral problems.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "suspend"
+        ],
+        "Entity": [
+            "camper"
+        ],
+        "Triggers": [
+            "administrator",
+            "suspend"
+        ],
+        "Targets": [
+            "suspend",
+            "camper"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to set a reminders related to specific tasks that has to be done.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "set"
+        ],
+        "Entity": [
+            "reminders"
+        ],
+        "Triggers": [
+            "administrator",
+            "set"
+        ],
+        "Targets": [
+            "set",
+            "reminders"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to assign different positions to the staff members, so that it is possible to organize activities in terms of responsibilities.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "assign"
+        ],
+        "Entity": [
+            "positions"
+        ],
+        "Triggers": [
+            "administrator",
+            "assign"
+        ],
+        "Targets": [
+            "assign",
+            "positions"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to warn a camp worker who I think did his/her job inappropriate.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "warn"
+        ],
+        "Entity": [
+            "worker"
+        ],
+        "Triggers": [
+            "administrator",
+            "warn"
+        ],
+        "Targets": [
+            "warn",
+            "worker"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to create, modify rules that campers and camp workers has to follow.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "rules"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "rules"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to keep track of the usage of internal camp facilities, so that I don't create conflicting schedules for the different camp groups.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "keep"
+        ],
+        "Entity": [
+            "track"
+        ],
+        "Triggers": [
+            "administrator",
+            "keep"
+        ],
+        "Targets": [
+            "keep",
+            "track"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to create an avenue so parents can submit feedback and general concerns, so that I can keep improving the services I provide.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "avenue"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "avenue"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to store campers' emergency information in a database, so that I can easily notify the necessary parties in case of an emergency.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "store"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "store"
+        ],
+        "Targets": [
+            "store",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to store camper's immediate parent/guardian's information, so that I can easily call to notify them in case a grossly unacceptable behavior.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "store"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "store"
+        ],
+        "Targets": [
+            "store",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to provide bi-weekly feedback to camper's parents, so that they can be aware of their child's behavior and performance at camp.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "provide"
+        ],
+        "Entity": [
+            "feedback"
+        ],
+        "Triggers": [
+            "administrator",
+            "provide"
+        ],
+        "Targets": [
+            "provide",
+            "feedback"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to make nametags faster, so that I don't have to spend two hours making 200+ nametags",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "make"
+        ],
+        "Entity": [
+            "nametags"
+        ],
+        "Triggers": [
+            "administrator",
+            "make"
+        ],
+        "Targets": [
+            "make",
+            "nametags"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to create a registration form for both staff and kids, so that I can keep organized.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "form"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "form"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to keep my information in one place, so that the admins next year can improve on the previous years.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "keep"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "keep"
+        ],
+        "Targets": [
+            "keep",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to see medical forms, so that we can be prepared for an allergy attack",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "forms"
+        ],
+        "Triggers": [
+            "administrator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "forms"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to notify parents all at once, so that they can be notified of any upcoming events.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "notify"
+        ],
+        "Entity": [
+            "parents"
+        ],
+        "Triggers": [
+            "administrator",
+            "notify"
+        ],
+        "Targets": [
+            "notify",
+            "parents"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be quickly log attendance everyday, so that I can track which kids are coming in.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "log"
+        ],
+        "Entity": [
+            "attendance"
+        ],
+        "Triggers": [
+            "administrator",
+            "log"
+        ],
+        "Targets": [
+            "log",
+            "attendance"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to add parents, so that they can enroll their kids at camp.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "parents"
+        ],
+        "Triggers": [
+            "administrator",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "parents"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to create groups and add campers to the groups, so that I can easily organize the campers.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "groups"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "groups"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to see all my camp groups and the events scheduled for each camp group, so that I can notify counselor of what their group will be doing for the day.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "groups"
+        ],
+        "Triggers": [
+            "administrator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "groups"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to schedule tasks/activities for a specific camp group, so that I can track each groups daily/weekly and monthly activities.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "schedule"
+        ],
+        "Entity": [
+            "activities"
+        ],
+        "Triggers": [
+            "administrator",
+            "schedule"
+        ],
+        "Targets": [
+            "schedule",
+            "activities"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to delete tasks/activities I scheduled, so that I can keep the schedule clean of unneeded activities.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "delete"
+        ],
+        "Entity": [
+            "activities"
+        ],
+        "Triggers": [
+            "administrator",
+            "delete"
+        ],
+        "Targets": [
+            "delete",
+            "activities"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to modify tasks/events I scheduled in case there is a change, so that I can always keep the schedule up to date.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "modify"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "administrator",
+            "modify"
+        ],
+        "Targets": [
+            "modify",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to modify the information of enrolled campers, so that I can keep the campers information up to date.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "modify"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "modify"
+        ],
+        "Targets": [
+            "modify",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to delete campers from the database, so that I can keep my pages free of clutter.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "delete"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "administrator",
+            "delete"
+        ],
+        "Targets": [
+            "delete",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to modify the information of added parents, so that I can keep parent's information up to date.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "modify"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "modify"
+        ],
+        "Targets": [
+            "modify",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to delete parents from the database, so that I can keep my pages free of unneeded clutter.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "delete"
+        ],
+        "Entity": [
+            "parents"
+        ],
+        "Triggers": [
+            "administrator",
+            "delete"
+        ],
+        "Targets": [
+            "delete",
+            "parents"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to modify a group's information, so that I can keep the groups up to date.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "modify"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "modify"
+        ],
+        "Targets": [
+            "modify",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to see only events for a specific group/groups on the event calendar, so that I can easily read the data on the calendar without too much clutter.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "administrator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to see which consent forms I have submitted, so that I can know what I still need to do.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "parent",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to track my child's activity and schedule at camp, so that I can have peace of mind.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "track"
+        ],
+        "Entity": [
+            "activity"
+        ],
+        "Triggers": [
+            "parent",
+            "track"
+        ],
+        "Targets": [
+            "track",
+            "activity"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to submit various type of forms to the camp management.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "submit"
+        ],
+        "Entity": [
+            "type"
+        ],
+        "Triggers": [
+            "parent",
+            "submit"
+        ],
+        "Targets": [
+            "submit",
+            "type"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to create an account, so that I can sign up my kids for camp online.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "account"
+        ],
+        "Triggers": [
+            "parent",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "account"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to see which counselors are assigned to my kids, so that I can have peace of mind.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "which"
+        ],
+        "Triggers": [
+            "parent",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "which"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to message my child's counselors, so that I can voice my concerns or check on my child's progress.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "message"
+        ],
+        "Entity": [
+            "counselors"
+        ],
+        "Triggers": [
+            "parent",
+            "message"
+        ],
+        "Targets": [
+            "message",
+            "counselors"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to sign and submit consent forms online, so that I don't have to deal with my child losing a consent form.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "sign"
+        ],
+        "Entity": [
+            "forms"
+        ],
+        "Triggers": [
+            "parent",
+            "sign"
+        ],
+        "Targets": [
+            "sign",
+            "forms"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to see if I made all the necessary payments.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "payments"
+        ],
+        "Triggers": [
+            "parent",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "payments"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to share any photos the camp has taken of my child.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "share"
+        ],
+        "Entity": [
+            "photos"
+        ],
+        "Triggers": [
+            "parent",
+            "share"
+        ],
+        "Targets": [
+            "share",
+            "photos"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to connect with the staff in case of an emergency.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "connect"
+        ],
+        "Entity": [
+            "staff"
+        ],
+        "Triggers": [
+            "parent",
+            "connect"
+        ],
+        "Targets": [
+            "connect",
+            "staff"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to enroll my children, so that they can be admitted to camp.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "enroll"
+        ],
+        "Entity": [
+            "children"
+        ],
+        "Triggers": [
+            "parent",
+            "enroll"
+        ],
+        "Targets": [
+            "enroll",
+            "children"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to see and edit my enrolled children to the camp year, so that I can know who I already enrolled to camp, who is still pending admission etc.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "children"
+        ],
+        "Triggers": [
+            "parent",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "children"
+        ]
+    },
+    {
+        "Text": "#G12# As a parent, I want to be able to see a schedule of the activities my children are involved in at camp, so that I can be more informed as to what they are doing at camp.",
+        "Persona": [
+            "parent"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "schedule"
+        ],
+        "Triggers": [
+            "parent",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "schedule"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I want to be able to see which campers I am in charge of and where, so that I can make sure I am doing my job properly.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "worker",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I'm able to report a camper to the manager with an inappropriate behavior.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "report"
+        ],
+        "Entity": [
+            "camper"
+        ],
+        "Triggers": [
+            "worker",
+            "report"
+        ],
+        "Targets": [
+            "report",
+            "camper"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I'm able to report a list of supplies to the manager that the camp is short of.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "report"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "worker",
+            "report"
+        ],
+        "Targets": [
+            "report",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I'm able to report necessary repairs to the manager that the camp is needed of.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "report"
+        ],
+        "Entity": [
+            "repairs"
+        ],
+        "Triggers": [
+            "worker",
+            "report"
+        ],
+        "Targets": [
+            "report",
+            "repairs"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp worker, I want to be able to see which campers I am in charge of and where, so that I can make sure I am doing my job properly.",
+        "Persona": [
+            "worker"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "worker",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp counselor, I want to be able to take attendance of my assigned kids, so that I can make ensure everybody is accounted for.",
+        "Persona": [
+            "counselor"
+        ],
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "attendance"
+        ],
+        "Triggers": [
+            "counselor",
+            "take"
+        ],
+        "Targets": [
+            "take",
+            "attendance"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to view a list of sponsors, so that I can thank all the awesome sponsors.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to view a list of user profiles, so that I know who is attending the conference.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainingcoordinator, I want to email all the trainers at once from the website for info and updates, so that It is easier to use.",
+        "Persona": [
+            "trainingcoordinator"
+        ],
+        "Action": [
+            "email"
+        ],
+        "Entity": [
+            "trainers"
+        ],
+        "Triggers": [
+            "trainingcoordinator",
+            "email"
+        ],
+        "Targets": [
+            "email",
+            "trainers"
+        ]
+    },
+    {
+        "Text": "#G21# As a attendee, I want to have a very clear map where the buildings and rooms are, so that I can make it to class on time.",
+        "Persona": [
+            "attendee"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "map"
+        ],
+        "Triggers": [
+            "attendee",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "map"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainer, I want to edit my training node myself, so that the training coordinators don't have to and links to slides.",
+        "Persona": [
+            "trainer"
+        ],
+        "Action": [
+            "edit"
+        ],
+        "Entity": [
+            "node"
+        ],
+        "Triggers": [
+            "trainer",
+            "edit"
+        ],
+        "Targets": [
+            "edit",
+            "node"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainee, I want to limit to one registration per day per authenticated user, so that we don't have duplicate spaces.",
+        "Persona": [
+            "trainee"
+        ],
+        "Action": [
+            "limit"
+        ],
+        "Entity": [
+            "registration"
+        ],
+        "Triggers": [
+            "trainee",
+            "limit"
+        ],
+        "Targets": [
+            "limit",
+            "registration"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainingcoordinator, I want to have an admin view that helps track registration status for each attendee so that, so that we can see if attendend, refunded, no show.",
+        "Persona": [
+            "trainingcoordinator"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "view"
+        ],
+        "Triggers": [
+            "trainingcoordinator",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "view"
+        ]
+    },
+    {
+        "Text": "#G21# As a attendee, I want to be added to a training waitlist, so that so they can be considered for a class.",
+        "Persona": [
+            "attendee"
+        ],
+        "Action": [
+            "added"
+        ],
+        "Entity": [
+            "waitlist"
+        ],
+        "Triggers": [
+            "attendee",
+            "added"
+        ],
+        "Targets": [
+            "added",
+            "waitlist"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainee, I want to must accept the cancellation terms with a checkbox, so that they can be accountable..",
+        "Persona": [
+            "trainee"
+        ],
+        "Action": [
+            "accept"
+        ],
+        "Entity": [
+            "terms"
+        ],
+        "Triggers": [
+            "trainee",
+            "accept"
+        ],
+        "Targets": [
+            "accept",
+            "terms"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainingcoordinator, I want to tie in a cancellation deadline to whatever registration / cancellation workflow exists, so that so we don't loose money or spots.",
+        "Persona": [
+            "trainingcoordinator"
+        ],
+        "Action": [
+            "tie"
+        ],
+        "Entity": [
+            "deadline"
+        ],
+        "Triggers": [
+            "trainingcoordinator",
+            "tie"
+        ],
+        "Targets": [
+            "tie",
+            "deadline"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainee, I want to add to \"my schedule\" if there is a schedule feature on the site, so that they can schedule their event experience.",
+        "Persona": [
+            "trainee"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "schedule"
+        ],
+        "Triggers": [
+            "trainee",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "schedule"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainee, I want to see which trainings I have signed up for, so that they can schedule their event experience.",
+        "Persona": [
+            "trainee"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "trainings"
+        ],
+        "Triggers": [
+            "trainee",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "trainings"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainer, I want to have a view that is attached to their training node that shows all attendee information Trainers can see all class attendance at first because there are so little trainers and they are trusted with privacy, so that the training coordinator doesn't have to do all the work to get login info for environment setup.",
+        "Persona": [
+            "trainer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "view"
+        ],
+        "Triggers": [
+            "trainer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "view"
+        ]
+    },
+    {
+        "Text": "#G21# As a trainingcoordinator, I want to have an admin view where all trainee information is shown and can be filtered to show a single training session, so that I can see WTF is happening.",
+        "Persona": [
+            "trainingcoordinator"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "view"
+        ],
+        "Triggers": [
+            "trainingcoordinator",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "view"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to have a dedicated page for each class to learn more about the offering The following information must be shown: Logo, title, trainers, location, possibly a map view, datetime, skill level, registrations remaining, link to register for class. The URL path should be SEO friendly /training/training-title, so that I can choose the right class, AND the trainer can tweet and promote their class.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to have the training options clearly marked for the following information: day and time of training, title, short summary, trainers, level, number of registrations, remaining registrations, location of training, link to full details of the training, register now link, so that I can shop for training all with one page AND find their class on on one page.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "options"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "options"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to have a training landing page with an intro section and a list of all training offerings and promote call for trainings, so that I can shop for training all with one page and we can have a call for trainings for selection.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to have a link on the home page to a list of training options, so that I can take training.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "link"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "link"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to find out where the coding lounge is and what time it is open, so that I can code with my friends.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to refund sponsorship money that was processed via stripe, so that people get their monies back.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "refund"
+        ],
+        "Entity": [
+            "money"
+        ],
+        "Triggers": [
+            "administrator",
+            "refund"
+        ],
+        "Targets": [
+            "refund",
+            "money"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to find a link on the sponsorships page to become a $350 level sponsor, so that I can pay for and become a sponsor role.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "link"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "link"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to See a list of attendees associated with this company, so that I know who from this sponsor organization is attending.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "See"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "See"
+        ],
+        "Targets": [
+            "See",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to identify myself as and pay for a $350 company sponsorship, so that I can easily become a sponsor at this level without having to interface with badcamp personnel to get a sponsorship.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "myself"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "myself"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to create and maintain venues, so that I can provide location details to help users find what they're looking for.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "venues"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "venues"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to view venue details, so that I can get a sense of the location and see the events happening there.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "details"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "details"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see a list of the sessions associated with sponsor attendees, so that I know where I can engage with this sponsor and where they are thought leaders.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to See a payment page to pay for my individual sponsorships as the third step of the registration process so that pay for my sponsorship.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "See"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "See"
+        ],
+        "Targets": [
+            "See",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to assign sponsors to events, trainings and summits so that They will be featured on the sponsor detail page.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "assign"
+        ],
+        "Entity": [
+            "sponsors"
+        ],
+        "Triggers": [
+            "administrator",
+            "assign"
+        ],
+        "Targets": [
+            "assign",
+            "sponsors"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see all events, trainings and summits that a sponsor is sponsoring so that I know where I can engage with this sponsor and where they are thought leaders.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "trainings"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "trainings"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to Enter payment information and have my card charged for an individual sponsorship, so that I can pay for an individual sponsorship.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "Enter"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "Enter"
+        ],
+        "Targets": [
+            "Enter",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to link BADCamp attendees to my sponsorship page, so that I can show off our level of attendance.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "link"
+        ],
+        "Entity": [
+            "attendees"
+        ],
+        "Triggers": [
+            "sponsor",
+            "link"
+        ],
+        "Targets": [
+            "link",
+            "attendees"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to update my user profile, so that I can connect with other Drupalists at BADCamp.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "profile"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "profile"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to sign up for the BADCamp newsletter, so that I can stay up to date with the latest communications about BADCamp.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "sign"
+        ],
+        "Entity": [
+            "newsletter"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "sign"
+        ],
+        "Targets": [
+            "sign",
+            "newsletter"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to tag my blog posts for consumption by Drupal Planet, so that they will be listed on the Drupal Planet blog.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "tag"
+        ],
+        "Entity": [
+            "posts"
+        ],
+        "Triggers": [
+            "administrator",
+            "tag"
+        ],
+        "Targets": [
+            "tag",
+            "posts"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to create blog posts, so that I can share the latest information about BADCamp with the public.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "posts"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "posts"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to read the blog, so that I can stay informed about all the latest happenings with BADCamp.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "read"
+        ],
+        "Entity": [
+            "blog"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "read"
+        ],
+        "Targets": [
+            "read",
+            "blog"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to sponsor a summit that matches my brand, so that I can get exposure to potential customers and otherwise tout my Drupal credentials.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "sponsor"
+        ],
+        "Entity": [
+            "summit"
+        ],
+        "Triggers": [
+            "sponsor",
+            "sponsor"
+        ],
+        "Targets": [
+            "sponsor",
+            "summit"
+        ]
+    },
+    {
+        "Text": "#G21# As a attendee, I want to register for a summit, so that I can reserve my seat at the summit.",
+        "Persona": [
+            "attendee"
+        ],
+        "Action": [
+            "register"
+        ],
+        "Entity": [
+            "summit"
+        ],
+        "Triggers": [
+            "attendee",
+            "register"
+        ],
+        "Targets": [
+            "register",
+            "summit"
+        ]
+    },
+    {
+        "Text": "#G21# As a attendee, I want to get detailed directions to the summit venue, so that I can get to the summit easily on the day of the event.",
+        "Persona": [
+            "attendee"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "directions"
+        ],
+        "Triggers": [
+            "attendee",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "directions"
+        ]
+    },
+    {
+        "Text": "#G21# As a attendee, I want to see what summits I'm signed up for, so that I can confirm my attendence and prevent myself from accidentally double-booking with a training or another summit.",
+        "Persona": [
+            "attendee"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summits"
+        ],
+        "Triggers": [
+            "attendee",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "summits"
+        ]
+    },
+    {
+        "Text": "#G21# As a summit coordinator, I want to see a list of attendees signed up for my summit, so that I can communicate with my attendees by email prior to the event.",
+        "Persona": [
+            "coordinator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "coordinator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a summit coordinator, I want to list basic information about my summit, so that I can inform potential attendees on why they should attend my summit.",
+        "Persona": [
+            "coordinator"
+        ],
+        "Action": [
+            "list"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "coordinator",
+            "list"
+        ],
+        "Targets": [
+            "list",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G21# As a summit coordinator, I want to list sponsors for my summit, so that I can make sure sponsors feel rewarded and will be interested in sponsoring in future years.",
+        "Persona": [
+            "coordinator"
+        ],
+        "Action": [
+            "list"
+        ],
+        "Entity": [
+            "sponsors"
+        ],
+        "Triggers": [
+            "coordinator",
+            "list"
+        ],
+        "Targets": [
+            "list",
+            "sponsors"
+        ]
+    },
+    {
+        "Text": "#G21# As a summit coordinator, I want to list an agenda for my summit, so that I can entice attendees and give positive feedback to presenters to encourage participation.",
+        "Persona": [
+            "coordinator"
+        ],
+        "Action": [
+            "list"
+        ],
+        "Entity": [
+            "agenda"
+        ],
+        "Triggers": [
+            "coordinator",
+            "list"
+        ],
+        "Targets": [
+            "list",
+            "agenda"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see how many seats are left for the summit, so that I can make sure to register in-time to reserve my spot.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summit"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "summit"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see specific details on summits, so that I can learn more about the summit I'm interested in to see if it matches my interests, register for the event, and get day-of knowledge to help me get to the location.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "details"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "details"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see a list of all the summits, so that I can determine which summit I might be interested and able to attend.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to learn about sponsorship levels, so that I can determine the right level of sponsorship for my organization.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "learn"
+        ],
+        "Entity": [
+            "levels"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "learn"
+        ],
+        "Targets": [
+            "learn",
+            "levels"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to use a WYSIWYG editor for all long-form content, so that I don't have to know HTML to update my content.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "use"
+        ],
+        "Entity": [
+            "editor"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "use"
+        ],
+        "Targets": [
+            "use",
+            "editor"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to Link to my sponsorship profile from my job listings, so that recruits can learn more about my organization.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "Link"
+        ],
+        "Entity": [
+            "profile"
+        ],
+        "Triggers": [
+            "sponsor",
+            "Link"
+        ],
+        "Targets": [
+            "Link",
+            "profile"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to learn about posting jobs as a sponsor and contact the sponsorship person, so that I have the opportunty to post my job listing on the BADCamp site.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "learn"
+        ],
+        "Entity": [
+            "jobs"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "learn"
+        ],
+        "Targets": [
+            "learn",
+            "jobs"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to post a job, so that I can hire top-tier Drupal talent.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "post"
+        ],
+        "Entity": [
+            "job"
+        ],
+        "Triggers": [
+            "sponsor",
+            "post"
+        ],
+        "Targets": [
+            "post",
+            "job"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to view the job board, so that I can look for an interesting Drupal gig!.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "board"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "board"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to assign a room to a time slot and a location, so that I can populate the schedule .",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "assign"
+        ],
+        "Entity": [
+            "room"
+        ],
+        "Triggers": [
+            "administrator",
+            "assign"
+        ],
+        "Targets": [
+            "assign",
+            "room"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see the schedule, so that I can plan my day and figure out where to go!.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "schedule"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "schedule"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see the final list of sessions approved, so that I can see what's going on at BADCamp .",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to bulk approve sessions as accepted, so that I can save time.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "approve"
+        ],
+        "Entity": [
+            "sessions"
+        ],
+        "Triggers": [
+            "administrator",
+            "approve"
+        ],
+        "Targets": [
+            "approve",
+            "sessions"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to mark a session as accepted, so that I can populate the schedule .",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "mark"
+        ],
+        "Entity": [
+            "session"
+        ],
+        "Triggers": [
+            "administrator",
+            "mark"
+        ],
+        "Targets": [
+            "mark",
+            "session"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to receive a notification when sessions have been evaluated, so that I know whether I've been accepted or rejected.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "notification"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "notification"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to receive a notification when I submit a session, so that know that my session went through ok.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "notification"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "notification"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to edit my session, so that if I make a mistake, I can correct it.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "edit"
+        ],
+        "Entity": [
+            "session"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "edit"
+        ],
+        "Targets": [
+            "edit",
+            "session"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to register to speak at BADCamp, so that I submit a session.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "register"
+        ],
+        "Entity": [
+            "BADCamp"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "register"
+        ],
+        "Targets": [
+            "register",
+            "BADCamp"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to submit a session at BADCAMP, so that I can get my session evaluated.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "submit"
+        ],
+        "Entity": [
+            "session"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "submit"
+        ],
+        "Targets": [
+            "submit",
+            "session"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to personalize my sponsorship page, so that I can promote my brand.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "personalize"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "sponsor",
+            "personalize"
+        ],
+        "Targets": [
+            "personalize",
+            "page"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see a list of all the summits that include when they are, so that I can determine which summit I want to attend.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to Be offered several choices of idividual sponsorship on the second page of registration, so that I can be awesome and financially support the camp.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "offered"
+        ],
+        "Entity": [
+            "choices"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "offered"
+        ],
+        "Targets": [
+            "offered",
+            "choices"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to easily find a link in the menu that links to the registration form, so that I can easily register for the camp.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "link"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "link"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to fill out a user registration form, so that I can register for the camp and get an account on the website.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "fill"
+        ],
+        "Entity": [
+            "form"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "fill"
+        ],
+        "Targets": [
+            "fill",
+            "form"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to find session information, so that I can go to a session.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music using content identification or fingerprinting.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "music"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music based on my profile.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "music"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "music"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music or ringback tones similar to a given music video based on content similarity.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "tones"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "tones"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music by exploiting enriched metadata and image tags, so that I find related artists, new genre, or other relevant listening path.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "music"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to upload tagged videos and have tags available for all further processing steps.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "upload"
+        ],
+        "Entity": [
+            "videos"
+        ],
+        "Triggers": [
+            "user",
+            "upload"
+        ],
+        "Targets": [
+            "upload",
+            "videos"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to view thumbnail sequences of video segments.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "sequences"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "sequences"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to get info about similar video items and segments.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "info"
+        ],
+        "Triggers": [
+            "user",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "info"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to get info about perceptually similar video items and segments.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "info"
+        ],
+        "Triggers": [
+            "user",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "info"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to receive content recommendations from similar profiles.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "recommendations"
+        ],
+        "Triggers": [
+            "user",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "recommendations"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to receive content recommendations based on most relevant news events in my area.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "recommendations"
+        ],
+        "Triggers": [
+            "user",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "recommendations"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to identify persons in videos, and receive related information about them.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "persons"
+        ],
+        "Triggers": [
+            "user",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "persons"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to identify products in videos, and receive related information about them.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "products"
+        ],
+        "Triggers": [
+            "user",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "products"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to identify broadcaster logos in videos, and receive related information about them.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "logos"
+        ],
+        "Triggers": [
+            "user",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "logos"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to identify brands in videos, and receive related information about them.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "brands"
+        ],
+        "Triggers": [
+            "user",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "brands"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "picture"
+        ],
+        "Triggers": [
+            "user",
+            "take"
+        ],
+        "Targets": [
+            "take",
+            "picture"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "walk"
+        ],
+        "Entity": [
+            "map"
+        ],
+        "Triggers": [
+            "user",
+            "walk"
+        ],
+        "Targets": [
+            "walk",
+            "map"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search content items using automatic speech recognition.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "items"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "items"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to see, validate and edit segmentation of videos.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "validate"
+        ],
+        "Triggers": [
+            "admin",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "validate"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to annotate news video segments and extract a topic for each segment.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "annotate"
+        ],
+        "Entity": [
+            "segments"
+        ],
+        "Triggers": [
+            "admin",
+            "annotate"
+        ],
+        "Targets": [
+            "annotate",
+            "segments"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "filter"
+        ],
+        "Entity": [
+            "aspects"
+        ],
+        "Triggers": [
+            "admin",
+            "filter"
+        ],
+        "Targets": [
+            "filter",
+            "aspects"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to get a quick assessment of whether audio material has been edited before the upload.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "assessment"
+        ],
+        "Triggers": [
+            "admin",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "assessment"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to prefilter nudity content.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "prefilter"
+        ],
+        "Entity": [
+            "content"
+        ],
+        "Triggers": [
+            "admin",
+            "prefilter"
+        ],
+        "Targets": [
+            "prefilter",
+            "content"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to prefilter content using search based on low-level asset information.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "prefilter"
+        ],
+        "Entity": [
+            "content"
+        ],
+        "Triggers": [
+            "admin",
+            "prefilter"
+        ],
+        "Targets": [
+            "prefilter",
+            "content"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to automatically validated the ingested contents for copyright infringement.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "validated"
+        ],
+        "Entity": [
+            "contents"
+        ],
+        "Triggers": [
+            "admin",
+            "validated"
+        ],
+        "Targets": [
+            "validated",
+            "contents"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to prefilter the content using search on high-level asset information such as metadata and tags either recognized by the system of provided by the user.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "prefilter"
+        ],
+        "Entity": [
+            "content"
+        ],
+        "Triggers": [
+            "admin",
+            "prefilter"
+        ],
+        "Targets": [
+            "prefilter",
+            "content"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to assess how interesting or appealing or complex a picture is based on automated analysis, citizen annotations, and comments on Talk.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "assess"
+        ],
+        "Entity": [
+            "annotations"
+        ],
+        "Triggers": [
+            "admin",
+            "assess"
+        ],
+        "Targets": [
+            "assess",
+            "annotations"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect when a scientist should be prompted to look at a subject, based on annotations and information from Talk comments.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "subject"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "subject"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify volunteer types.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "types"
+        ],
+        "Triggers": [
+            "admin",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to preclassify the Galaxy Zoo images using simple low-level image features.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "preclassify"
+        ],
+        "Entity": [
+            "images"
+        ],
+        "Triggers": [
+            "admin",
+            "preclassify"
+        ],
+        "Targets": [
+            "preclassify",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "images"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic image series detection for the case of timestamping malfunction in Snapshot Serengeti images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "detection"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "detection"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal species preclassification in Snapshot Serengeti.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "preclassification"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "preclassification"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal attribute preclassification in Snapshot Serengeti.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "preclassification"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "preclassification"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "detection"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "detection"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic segmentation or localization of plankton in Plankton Portal.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "segmentation"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "segmentation"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Plankton Portal images with no classifiable plankton in them.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "images"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic detection of plankton size or orientation in Plankton Portal images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "detection"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "detection"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic preclassification of plankton species in Plankton Portal images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "preclassification"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "preclassification"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic worm motion analysis to reduce video duration in Worm Watch Lab.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "analysis"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "analysis"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect the time in a Worm Watch Lab video where the worm lays an egg.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "time"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "time"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "features"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "features"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to assess the probability/weight of a volunteer's classification based on their experience.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "assess"
+        ],
+        "Entity": [
+            "weight"
+        ],
+        "Triggers": [
+            "admin",
+            "assess"
+        ],
+        "Targets": [
+            "assess",
+            "weight"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "prefiltering"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "prefiltering"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect moving and transient objects in the images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "objects"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "objects"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to remove background noise and distracting sounds from the audio files.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "remove"
+        ],
+        "Entity": [
+            "noise"
+        ],
+        "Triggers": [
+            "admin",
+            "remove"
+        ],
+        "Targets": [
+            "remove",
+            "noise"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to group whale calls that are similar.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "group"
+        ],
+        "Entity": [
+            "calls"
+        ],
+        "Triggers": [
+            "admin",
+            "group"
+        ],
+        "Targets": [
+            "group",
+            "calls"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "number"
+        ],
+        "Triggers": [
+            "admin",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "number"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know whether I should interrupt a volunteer with text, an image, or a video.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should educate a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know whether I should educate a volunteer with text, an image, or a video.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "piece"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "piece"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when a volunteer has made an interesting comment on a subject.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "comment"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "comment"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should comment on a subject.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "subject"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "subject"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "explanation"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "explanation"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know what Zoonibot should say to a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to group subjects by similarity.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "group"
+        ],
+        "Entity": [
+            "subjects"
+        ],
+        "Triggers": [
+            "admin",
+            "group"
+        ],
+        "Targets": [
+            "group",
+            "subjects"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to recommend different projects to volunteers based on their previous experiences.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "recommend"
+        ],
+        "Entity": [
+            "projects"
+        ],
+        "Triggers": [
+            "admin",
+            "recommend"
+        ],
+        "Targets": [
+            "recommend",
+            "projects"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summary"
+        ],
+        "Triggers": [
+            "admin",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "summary"
+        ]
+    }
+]

@@ -1,0 +1,5163 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/system.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/system.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "System",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :hasRequirement1
+	Domain: :Resource
+	Range: :ResourceRequirement
+
+ObjectProperty: :hasRequirement2
+	Domain: :Security
+	Range: :SecurityRequirement
+
+ObjectProperty: :canSync
+	Domain: :User
+	Range: :Event
+
+ObjectProperty: :canStream
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :hasStatus1
+	Domain: :Copyright
+	Range: :CopyrightStatus
+
+ObjectProperty: :hasStatus2
+	Domain: :Right
+	Range: :RightStatus
+
+ObjectProperty: :canReturnTo
+	Domain: :Publisher
+	Range: :It
+
+ObjectProperty: :hasInformation1
+	Domain: :Agent
+	Range: :AgentInformation
+
+ObjectProperty: :hasInformation2
+	Domain: :Description
+	Range: :DescriptionInformation
+
+ObjectProperty: :hasInformation3
+	Domain: :Location
+	Range: :LocationInformation
+
+ObjectProperty: :hasInformation4
+	Domain: :Research
+	Range: :ResearchInformation
+
+ObjectProperty: :hasInformation5
+	Domain: :Repository
+	Range: :RepositoryInformation
+
+ObjectProperty: :hasInformation6
+	Domain: :Date
+	Range: :DateInformation
+
+ObjectProperty: :hasInformation7
+	Domain: :Citation
+	Range: :CitationInformation
+
+ObjectProperty: :canScope
+	Domain: :User
+	Range: :Search
+
+ObjectProperty: :canSignVia
+	Domain: :Visitor
+	Range: :Github
+
+ObjectProperty: :canDeposit1
+	Domain: :Depositor
+	Range: :Dataset
+
+ObjectProperty: :canDeposit2
+	Domain: :Depositor
+	Range: :File
+
+ObjectProperty: :canDeposit3
+	Domain: :Developer
+	Range: :Dataset
+
+ObjectProperty: :canDecide1
+	Domain: :Researcher
+	Range: :What
+
+ObjectProperty: :canDecide2
+	Domain: :Student
+	Range: :Research
+
+ObjectProperty: :canDevelop
+	Domain: :DataManager
+	Range: :Usage
+
+ObjectProperty: :hasHead
+	Domain: :Research
+	Range: :ResearchHead
+
+ObjectProperty: :canConfirm
+	Domain: :ResearchIntegrity
+	Range: :SecurityProtocol
+
+ObjectProperty: :canAssistIn
+	Domain: :FacultyMember
+	Range: :Research
+
+ObjectProperty: :hasDeveloper
+	Domain: :Web
+	Range: :WebDeveloper
+
+ObjectProperty: :canDocument
+	Domain: :DataManager
+	Range: :Right
+
+ObjectProperty: :canLoginToWith
+	Domain: :IRAdministrator
+	Range: :Account
+
+ObjectProperty: :canEncourage
+	Domain: :ArchiveAdministrator
+	Range: :Use
+
+ObjectProperty: :hasOwner
+	Domain: :Repository
+	Range: :RepositoryOwner
+
+ObjectProperty: :canChange
+	Domain: :Admin
+	Range: :Information
+
+ObjectProperty: :canConstrain
+	Domain: :RepositoryManager
+	Range: :Access
+
+ObjectProperty: :canRun
+	Domain: :SystemAdministrator
+	Range: :Script
+
+ObjectProperty: :canDeliver
+	Domain: :StaffMember
+	Range: :Content
+
+ObjectProperty: :canRead
+	Domain: :Funder
+	Range: :Cost
+
+ObjectProperty: :canGenerate1
+	Domain: :Researcher
+	Range: :Report
+
+ObjectProperty: :canGenerate2
+	Domain: :Archivist
+	Range: :Metadata
+
+ObjectProperty: :canGenerate3
+	Domain: :Researcher
+	Range: :CitationData
+
+ObjectProperty: :canMint
+	Domain: :Depositor
+	Range: :DOI
+
+ObjectProperty: :canContact1
+	Domain: :User
+	Range: :Repository
+
+ObjectProperty: :canContact2
+	Domain: :Researcher
+	Range: :Author
+
+ObjectProperty: :canScopeByTo
+	Domain: :User
+	Range: :Search
+
+ObjectProperty: :canAssign1
+	Domain: :User
+	Range: :Tag
+
+ObjectProperty: :canAssign2
+	Domain: :User
+	Range: :Information
+
+ObjectProperty: :canAssign3
+	Domain: :Archivist
+	Range: :Identifier
+
+ObjectProperty: :canAssign4
+	Domain: :ApplicationAdministrator
+	Range: :User
+
+ObjectProperty: :canAssign5
+	Domain: :Archivist
+	Range: :Level
+
+ObjectProperty: :canAssign6
+	Domain: :Archivist
+	Range: :LocationInformation
+
+ObjectProperty: :canAssign7
+	Domain: :Administrator
+	Range: :Right
+
+ObjectProperty: :canAssign8
+	Domain: :StaffMember
+	Range: :Item
+
+ObjectProperty: :hasString
+	Domain: :Identifier
+	Range: :IdentifierString
+
+ObjectProperty: :hasTemplate
+	Domain: :Page
+	Range: :PageTemplate
+
+ObjectProperty: :hasRecord1
+	Domain: :Source
+	Range: :SourceRecord
+
+ObjectProperty: :hasRecord2
+	Domain: :Agent
+	Range: :AgentRecord
+
+ObjectProperty: :hasRecord3
+	Domain: :Object
+	Range: :ObjectRecord
+
+ObjectProperty: :hasRecord4
+	Domain: :Resource
+	Range: :ResourceRecord
+
+ObjectProperty: :hasRecord5
+	Domain: :Subject
+	Range: :SubjectRecord
+
+ObjectProperty: :hasRecord6
+	Domain: :Name
+	Range: :NameRecord
+
+ObjectProperty: :canRepresent
+	Domain: :RepositoryManager
+	Range: :Structure
+
+ObjectProperty: :canRotate
+	Domain: :Archivist
+	Range: :Image
+
+ObjectProperty: :canWorkWith
+	Domain: :DataAnalyst
+	Range: :Data
+
+ObjectProperty: :canIntegrate1
+	Domain: :InformationManager
+	Range: :Archive
+
+ObjectProperty: :canIntegrate2
+	Domain: :Univitservice
+	Range: :Archive
+
+ObjectProperty: :canIntegrate3
+	Domain: :Archivist
+	Range: :Collection
+
+ObjectProperty: :canAnalyse
+	Domain: :InformationManager
+	Range: :Impact
+
+ObjectProperty: :canSay
+	Domain: :RepositoryManager
+	Range: :Collection
+
+ObjectProperty: :canDeclare
+	Domain: :SystemAdministrator
+	Range: :ManagerRole
+
+ObjectProperty: :hasIntegrity
+	Domain: :Research
+	Range: :ResearchIntegrity
+
+ObjectProperty: :canEstimate
+	Domain: :Manager
+	Range: :Cost
+
+ObjectProperty: :hasChange
+	Domain: :Name
+	Range: :NameChange
+
+ObjectProperty: :canSee1
+	Domain: :Consumer
+	Range: :Much
+
+ObjectProperty: :canSee2
+	Domain: :Publisher
+	Range: :Example
+
+ObjectProperty: :canSee3
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canSee4
+	Domain: :Consumer
+	Range: :System
+
+ObjectProperty: :canSee5
+	Domain: :Consumer
+	Range: :Profile
+
+ObjectProperty: :canSee6
+	Domain: :Consumer
+	Range: :Package
+
+ObjectProperty: :canSee7
+	Domain: :Admin
+	Range: :Metric
+
+ObjectProperty: :canSee8
+	Domain: :User
+	Range: :Provenance
+
+ObjectProperty: :canSee9
+	Domain: :Researcher
+	Range: :Centre
+
+ObjectProperty: :canSee10
+	Domain: :Researcher
+	Range: :Section
+
+ObjectProperty: :canSee11
+	Domain: :Researcher
+	Range: :ManagerPost
+
+ObjectProperty: :canSee12
+	Domain: :DataSteward
+	Range: :Section
+
+ObjectProperty: :canSee13
+	Domain: :Archivist
+	Range: :View
+
+ObjectProperty: :canSee14
+	Domain: :DataReuser
+	Range: :Version
+
+ObjectProperty: :canSee15
+	Domain: :User
+	Range: :ComponentPart
+
+ObjectProperty: :canSee16
+	Domain: :User
+	Range: :ComponentHierarchy
+
+ObjectProperty: :canSee17
+	Domain: :User
+	Range: :Context
+
+ObjectProperty: :canSee18
+	Domain: :Archivist
+	Range: :What
+
+ObjectProperty: :canSee19
+	Domain: :Researcher
+	Range: :Material
+
+ObjectProperty: :canSee20
+	Domain: :DonorRepresentative
+	Range: :Thumbnail
+
+ObjectProperty: :canSee21
+	Domain: :IRAdministrator
+	Range: :List
+
+ObjectProperty: :canSee22
+	Domain: :FacultyMember
+	Range: :Item
+
+ObjectProperty: :canSee23
+	Domain: :Researcher
+	Range: :Metadata
+
+ObjectProperty: :canMeet
+	Domain: :FacultyMember
+	Range: :FunderRequirement
+
+ObjectProperty: :canObtain
+	Domain: :FacultyMember
+	Range: :ResearchMaterial
+
+ObjectProperty: :canAssociate1
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canAssociate2
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canAssociate3
+	Domain: :Archivist
+	Range: :IdentifierString
+
+ObjectProperty: :canAssociate4
+	Domain: :Archivist
+	Range: :Instance
+
+ObjectProperty: :canAssociate5
+	Domain: :Archivist
+	Range: :SubjectRecord
+
+ObjectProperty: :canAssociate6
+	Domain: :RepositoryManager
+	Range: :ContentFile
+
+ObjectProperty: :canAssociate7
+	Domain: :FacultyMember
+	Range: :Researcherid
+
+ObjectProperty: :canAssociate8
+	Domain: :FacultyMember
+	Range: :File
+
+ObjectProperty: :canMark1
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canMark2
+	Domain: :Archivist
+	Range: :Group
+
+ObjectProperty: :canMark3
+	Domain: :IRAdministrator
+	Range: :Report
+
+ObjectProperty: :hasParameter
+	Domain: :Configuration
+	Range: :ConfigurationParameter
+
+ObjectProperty: :hasPart
+	Domain: :Component
+	Range: :ComponentPart
+
+ObjectProperty: :canRemove1
+	Domain: :Owner
+	Range: :Membership
+
+ObjectProperty: :canRemove2
+	Domain: :Owner
+	Range: :User
+
+ObjectProperty: :canOrder
+	Domain: :Researcher
+	Range: :Copy
+
+ObjectProperty: :hasDependency
+	Domain: :Neurohub
+	Range: :NeurohubDependency
+
+ObjectProperty: :canUpdate1
+	Domain: :DataAnalyst
+	Range: :DataPackage
+
+ObjectProperty: :canUpdate2
+	Domain: :RepositoryManager
+	Range: :RepositoryInformation
+
+ObjectProperty: :canLink1
+	Domain: :User
+	Range: :Run
+
+ObjectProperty: :canLink2
+	Domain: :Researcher
+	Range: :ResearchPublication
+
+ObjectProperty: :canLink3
+	Domain: :Depositor
+	Range: :Dataset
+
+ObjectProperty: :canLink4
+	Domain: :RepositoryManager
+	Range: :Component
+
+ObjectProperty: :canLink5
+	Domain: :Archivist
+	Range: :Version
+
+ObjectProperty: :canBreak
+	Domain: :Publisher
+	Range: :ConsumerSystem
+
+ObjectProperty: :canAdministrate
+	Domain: :IRAdministrator
+	Range: :PatronAccount
+
+ObjectProperty: :hasRepresentative
+	Domain: :Donor
+	Range: :DonorRepresentative
+
+ObjectProperty: :canDisseminate
+	Domain: :Administrator
+	Range: :Work
+
+ObjectProperty: :hasLibrarian
+	Domain: :Data
+	Range: :DataLibrarian
+
+ObjectProperty: :canFollow
+	Domain: :FacultyMember
+	Range: :Usage
+
+ObjectProperty: :hasHierarchy1
+	Domain: :Description
+	Range: :DescriptionHierarchy
+
+ObjectProperty: :hasHierarchy2
+	Domain: :Component
+	Range: :ComponentHierarchy
+
+ObjectProperty: :canProve
+	Domain: :User
+	Range: :Page
+
+ObjectProperty: :hasManager1
+	Domain: :Data
+	Range: :DataManager
+
+ObjectProperty: :hasManager2
+	Domain: :It
+	Range: :ItManager
+
+ObjectProperty: :hasManager3
+	Domain: :Metadata
+	Range: :MetadataManager
+
+ObjectProperty: :hasManager4
+	Domain: :Repository
+	Range: :RepositoryManager
+
+ObjectProperty: :hasManager5
+	Domain: :Information
+	Range: :InformationManager
+
+ObjectProperty: :hasManager6
+	Domain: :DAMS
+	Range: :DAMSManager
+
+ObjectProperty: :hasManager7
+	Domain: :Preservation
+	Range: :PreservationManager
+
+ObjectProperty: :hasManager8
+	Domain: :Content
+	Range: :ContentManager
+
+ObjectProperty: :hasManager9
+	Domain: :Asset
+	Range: :AssetManager
+
+ObjectProperty: :hasOfficer1
+	Domain: :It
+	Range: :ItOfficer
+
+ObjectProperty: :hasOfficer2
+	Domain: :Support
+	Range: :SupportOfficer
+
+ObjectProperty: :canAppear
+	Domain: :TeamMember
+	Range: :They
+
+ObjectProperty: :canRestore
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canResearcher
+	Domain: :Staff
+	Range: :They
+
+ObjectProperty: :canSearchWithinIn
+	Domain: :Researcher
+	Range: :Repository
+
+ObjectProperty: :canProvide1
+	Domain: :RepositoryManager
+	Range: :Title
+
+ObjectProperty: :canProvide2
+	Domain: :Archivist
+	Range: :Access
+
+ObjectProperty: :canProvide3
+	Domain: :Archivist
+	Range: :ReferenceService
+
+ObjectProperty: :canProvide4
+	Domain: :Archivist
+	Range: :ResearchService
+
+ObjectProperty: :canProvide5
+	Domain: :StaffMember
+	Range: :Access
+
+ObjectProperty: :canProvide6
+	Domain: :StaffMember
+	Range: :Image
+
+ObjectProperty: :canProvide7
+	Domain: :StaffMember
+	Range: :TermAccess
+
+ObjectProperty: :canPut
+	Domain: :DataReuser
+	Range: :Data
+
+ObjectProperty: :canSignFor1
+	Domain: :Publisher
+	Range: :Account
+
+ObjectProperty: :canSignFor2
+	Domain: :Publisher
+	Range: :PricingPlan
+
+ObjectProperty: :canInstall1
+	Domain: :WebDeveloper
+	Range: :Version
+
+ObjectProperty: :canInstall2
+	Domain: :SystemAdministrator
+	Range: :NeurohubDependency
+
+ObjectProperty: :canAssure1
+	Domain: :AssetManager
+	Range: :System
+
+ObjectProperty: :canAssure2
+	Domain: :AssetManager
+	Range: :Copy
+
+ObjectProperty: :canAssure3
+	Domain: :AssetManager
+	Range: :Object
+
+ObjectProperty: :canAssure4
+	Domain: :AssetManager
+	Range: :Commitment
+
+ObjectProperty: :canAssure5
+	Domain: :AssetManager
+	Range: :Disposition
+
+ObjectProperty: :canBe1
+	Domain: :It
+	Range: :Download
+
+ObjectProperty: :canBe2
+	Domain: :Fundingbody
+	Range: :They
+
+ObjectProperty: :canAssureIn
+	Domain: :AssetManager
+	Range: :Repository
+
+ObjectProperty: :canBecome
+	Domain: :User
+	Range: :Publisher
+
+ObjectProperty: :canCall
+	Domain: :ReleaseEngineer
+	Range: :Script
+
+ObjectProperty: :canApprove
+	Domain: :ArchiveAdministrator
+	Range: :Disposal
+
+ObjectProperty: :canIndicateFor
+	Domain: :RepositoryManager
+	Range: :Place
+
+ObjectProperty: :canSharedBy
+	Domain: :They
+	Range: :Mistake
+
+ObjectProperty: :canKnow1
+	Domain: :Consumer
+	Range: :Detail
+
+ObjectProperty: :canKnow2
+	Domain: :Consumer
+	Range: :Script
+
+ObjectProperty: :canKnow3
+	Domain: :Publisher
+	Range: :PricingPlan
+
+ObjectProperty: :canKnow4
+	Domain: :DataManager
+	Range: :System
+
+ObjectProperty: :canKnow5
+	Domain: :StaffMember
+	Range: :SecurityRequirement
+
+ObjectProperty: :canKnow6
+	Domain: :Researcher
+	Range: :DMP
+
+ObjectProperty: :canKnow7
+	Domain: :DataManager
+	Range: :Data
+
+ObjectProperty: :canKnow8
+	Domain: :Administrator
+	Range: :Project
+
+ObjectProperty: :canKnow9
+	Domain: :Archivemanager
+	Range: :Status
+
+ObjectProperty: :canKnow10
+	Domain: :DataManager
+	Range: :DataType
+
+ObjectProperty: :canKnow11
+	Domain: :StaffMember
+	Range: :DataType
+
+ObjectProperty: :canKnow12
+	Domain: :Stakeholder
+	Range: :System
+
+ObjectProperty: :canKnow13
+	Domain: :Stakeholder
+	Range: :Date
+
+ObjectProperty: :canKnow14
+	Domain: :Stakeholder
+	Range: :DMP
+
+ObjectProperty: :canKnow15
+	Domain: :Rector
+	Range: :System
+
+ObjectProperty: :canKnow16
+	Domain: :DataManager
+	Range: :TimePlan
+
+ObjectProperty: :canKnow17
+	Domain: :Researcher
+	Range: :Project
+
+ObjectProperty: :canKnow18
+	Domain: :ItOfficer
+	Range: :System
+
+ObjectProperty: :canKnow19
+	Domain: :Funder
+	Range: :System
+
+ObjectProperty: :canKnow20
+	Domain: :PI
+	Range: :System
+
+ObjectProperty: :canKnow21
+	Domain: :Researcher
+	Range: :Archive
+
+ObjectProperty: :canKnow22
+	Domain: :StaffMember
+	Range: :System
+
+ObjectProperty: :canKnow23
+	Domain: :DataManager
+	Range: :DataSet
+
+ObjectProperty: :canKnow24
+	Domain: :StaffMember
+	Range: :Which
+
+ObjectProperty: :canKnow25
+	Domain: :DataManager
+	Range: :Which
+
+ObjectProperty: :canKnow26
+	Domain: :DataManager
+	Range: :SecurityRequirement
+
+ObjectProperty: :canKnow27
+	Domain: :RepositoryManager
+	Range: :Collection
+
+ObjectProperty: :canKnow28
+	Domain: :RepositoryManager
+	Range: :Event
+
+ObjectProperty: :canKnow29
+	Domain: :RepositoryManager
+	Range: :File
+
+ObjectProperty: :canKnow30
+	Domain: :RepositoryManager
+	Range: :Object
+
+ObjectProperty: :canKnow31
+	Domain: :DAMSManager
+	Range: :System
+
+ObjectProperty: :canKnow32
+	Domain: :DAMSManager
+	Range: :Collection(s
+
+ObjectProperty: :canKnow33
+	Domain: :User
+	Range: :System
+
+ObjectProperty: :canKnow34
+	Domain: :User
+	Range: :Collection(s
+
+ObjectProperty: :canKnow35
+	Domain: :User
+	Range: :RightStatus
+
+ObjectProperty: :canKnow36
+	Domain: :RepositoryManager
+	Range: :ContentFile
+
+ObjectProperty: :canKnow37
+	Domain: :RepositoryManager
+	Range: :Change
+
+ObjectProperty: :canKnow38
+	Domain: :RepositoryManager
+	Range: :Any
+
+ObjectProperty: :canKnow39
+	Domain: :DAMSManager
+	Range: :Component
+
+ObjectProperty: :canKnow40
+	Domain: :User
+	Range: :Component
+
+ObjectProperty: :canKnow41
+	Domain: :DAMSManager
+	Range: :Statute
+
+ObjectProperty: :canKnow42
+	Domain: :DAMSManager
+	Range: :License
+
+ObjectProperty: :canKnow43
+	Domain: :DAMSManager
+	Range: :LibraryPolicy
+
+ObjectProperty: :canKnow44
+	Domain: :DAMSManager
+	Range: :Use
+
+ObjectProperty: :canKnow45
+	Domain: :DAMSManager
+	Range: :Act
+
+ObjectProperty: :canKnow46
+	Domain: :DAMSManager
+	Range: :Agent(
+
+ObjectProperty: :canKnow47
+	Domain: :DAMSManager
+	Range: :Outcome
+
+ObjectProperty: :canKnow48
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canKnow49
+	Domain: :Archivist
+	Range: :System
+
+ObjectProperty: :canKnow50
+	Domain: :Archivist
+	Range: :FileSize
+
+ObjectProperty: :canKnow51
+	Domain: :Archivist
+	Range: :PreservationAction
+
+ObjectProperty: :canKnow52
+	Domain: :Researcher
+	Range: :It
+
+ObjectProperty: :canKnow53
+	Domain: :They
+	Range: :Image
+
+ObjectProperty: :canKnow54
+	Domain: :Archivist
+	Range: :PublicationRequirement
+
+ObjectProperty: :canKnow55
+	Domain: :Researcher
+	Range: :Date
+
+ObjectProperty: :canKnow56
+	Domain: :Researcher
+	Range: :Folder
+
+ObjectProperty: :canKnow57
+	Domain: :Researcher
+	Range: :Everything
+
+ObjectProperty: :canKnow58
+	Domain: :Patron
+	Range: :System
+
+ObjectProperty: :canKnow59
+	Domain: :FacultyMember
+	Range: :They
+
+ObjectProperty: :canKnow60
+	Domain: :Patron
+	Range: :Report
+
+ObjectProperty: :canKnow61
+	Domain: :Patron
+	Range: :Name(s
+
+ObjectProperty: :canKnow62
+	Domain: :AssetManager
+	Range: :Asset
+
+ObjectProperty: :canAvoid1
+	Domain: :Archivist
+	Range: :Error
+
+ObjectProperty: :canAvoid2
+	Domain: :Archivist
+	Range: :Task
+
+ObjectProperty: :canValidate
+	Domain: :Publisher
+	Range: :Data
+
+ObjectProperty: :canNavigate
+	Domain: :User
+	Range: :Forward
+
+ObjectProperty: :canReset
+	Domain: :ApplicationAdministrator
+	Range: :Password
+
+ObjectProperty: :canIndicateWithin
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canCalculate
+	Domain: :Researcher
+	Range: :Cost
+
+ObjectProperty: :canKeep
+	Domain: :Cost
+	Range: :System
+
+ObjectProperty: :canImproveOn
+	Domain: :Archivist
+	Range: :Result
+
+ObjectProperty: :hasPolicy1
+	Domain: :Disposal
+	Range: :DisposalPolicy
+
+ObjectProperty: :hasPolicy2
+	Domain: :Library
+	Range: :LibraryPolicy
+
+ObjectProperty: :hasLink
+	Domain: :Web
+	Range: :WebLink
+
+ObjectProperty: :canOrganize
+	Domain: :Archivemanager
+	Range: :Service
+
+ObjectProperty: :canContinue
+	Domain: :Depositor
+	Range: :Tool
+
+ObjectProperty: :canFacilitate
+	Domain: :Researcher
+	Range: :Use
+
+ObjectProperty: :canIncrease1
+	Domain: :LabAdministrator
+	Range: :Access
+
+ObjectProperty: :canIncrease2
+	Domain: :Administrator
+	Range: :Work
+
+ObjectProperty: :canTrace
+	Domain: :StaffMember
+	Range: :List
+
+ObjectProperty: :canControl1
+	Domain: :SystemAdministrator
+	Range: :Location
+
+ObjectProperty: :canControl2
+	Domain: :Administrator
+	Range: :Access
+
+ObjectProperty: :canControl3
+	Domain: :Administrator
+	Range: :What
+
+ObjectProperty: :canCheck1
+	Domain: :Publisher
+	Range: :Result
+
+ObjectProperty: :canCheck2
+	Domain: :Consumer
+	Range: :Action
+
+ObjectProperty: :canCheck3
+	Domain: :RepositoryOwner
+	Range: :Provenance
+
+ObjectProperty: :canCheck4
+	Domain: :Funder
+	Range: :Repository
+
+ObjectProperty: :canCheck5
+	Domain: :It
+	Range: :Data
+
+ObjectProperty: :canCheck6
+	Domain: :Administrator
+	Range: :SecurityLevel
+
+ObjectProperty: :canCheck7
+	Domain: :FacultyMember
+	Range: :Thing
+
+ObjectProperty: :canDescribeIn
+	Domain: :Project
+	Range: :Way
+
+ObjectProperty: :canBrowseBy
+	Domain: :User
+	Range: :Collection
+
+ObjectProperty: :canShow1
+	Domain: :Publisher
+	Range: :World
+
+ObjectProperty: :canShow2
+	Domain: :Researcher
+	Range: :Thing
+
+ObjectProperty: :canShow3
+	Domain: :Administrator
+	Range: :Thing
+
+ObjectProperty: :canAsk1
+	Domain: :Stakeholder
+	Range: :Detail
+
+ObjectProperty: :canAsk2
+	Domain: :Researcher
+	Range: :Question
+
+ObjectProperty: :canCompare1
+	Domain: :DataAnalyst
+	Range: :Version
+
+ObjectProperty: :canCompare2
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :hasDerivative
+	Domain: :Access
+	Range: :AccessDerivative
+
+ObjectProperty: :hasSteward
+	Domain: :Data
+	Range: :DataSteward
+
+ObjectProperty: :canTag
+	Domain: :Publisher
+	Range: :Datapackage
+
+ObjectProperty: :canAdd1
+	Domain: :User
+	Range: :Property
+
+ObjectProperty: :canAdd2
+	Domain: :Archivist
+	Range: :Note
+
+ObjectProperty: :canAdd3
+	Domain: :Archivist
+	Range: :Data
+
+ObjectProperty: :canAdd4
+	Domain: :Archivist
+	Range: :DateInformation
+
+ObjectProperty: :canAdd5
+	Domain: :Archivist
+	Range: :Restriction
+
+ObjectProperty: :canAdd6
+	Domain: :StaffMember
+	Range: :MetadataField
+
+ObjectProperty: :canAdd7
+	Domain: :IRAdministrator
+	Range: :ReleaseDate
+
+ObjectProperty: :canRecommend
+	Domain: :FacultyMember
+	Range: :Collection
+
+ObjectProperty: :hasRole1
+	Domain: :Manager
+	Range: :ManagerRole
+
+ObjectProperty: :hasRole2
+	Domain: :User
+	Range: :UserRole
+
+ObjectProperty: :canMaintain1
+	Domain: :Quality
+	Range: :Metadata
+
+ObjectProperty: :canMaintain2
+	Domain: :FacultyMember
+	Range: :Versioning
+
+ObjectProperty: :hasRepository
+	Domain: :Level
+	Range: :LevelRepository
+
+ObjectProperty: :canLimit1
+	Domain: :User
+	Range: :Search
+
+ObjectProperty: :canLimit2
+	Domain: :User
+	Range: :SearchResult
+
+ObjectProperty: :canLimit3
+	Domain: :Administrator
+	Range: :MetadataField
+
+ObjectProperty: :hasCount
+	Domain: :Citation
+	Range: :CitationCount
+
+ObjectProperty: :canDirect
+	Domain: :FacultyMember
+	Range: :Student
+
+ObjectProperty: :canKnowVia
+	Domain: :DAMSManager
+	Range: :PreservationManager
+
+ObjectProperty: :hasReport
+	Domain: :Summary
+	Range: :SummaryReport
+
+ObjectProperty: :canLinkTo
+	Domain: :Depositor
+	Range: :Data
+
+ObjectProperty: :canDistinguishBetween1
+	Domain: :Archivist
+	Range: :Object
+
+ObjectProperty: :canDistinguishBetween2
+	Domain: :Archivist
+	Range: :Image
+
+ObjectProperty: :canPrepopulate
+	Domain: :DataLibrarian
+	Range: :DMP
+
+ObjectProperty: :canDownload1
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canDownload2
+	Domain: :DataAnalyst
+	Range: :DataPackage
+
+ObjectProperty: :canDownload3
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canDownload4
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canDownload5
+	Domain: :Researcher
+	Range: :Report
+
+ObjectProperty: :canDownload6
+	Domain: :Patron
+	Range: :ReleaseCalendar
+
+ObjectProperty: :canAuthenticate1
+	Domain: :User
+	Range: :LDAP
+
+ObjectProperty: :canAuthenticate2
+	Domain: :User
+	Range: :System
+
+ObjectProperty: :canBrowseThroughIn1
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canBrowseThroughIn2
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canEnsure1
+	Domain: :PI
+	Range: :It
+
+ObjectProperty: :canEnsure2
+	Domain: :DataManager
+	Range: :Detail
+
+ObjectProperty: :canEnsure3
+	Domain: :ItOfficer
+	Range: :Compliance
+
+ObjectProperty: :canEnsure4
+	Domain: :Funder
+	Range: :Compliance
+
+ObjectProperty: :canEnsure5
+	Domain: :SupportOfficer
+	Range: :Compliance
+
+ObjectProperty: :canEnsure6
+	Domain: :PI
+	Range: :Compliance
+
+ObjectProperty: :canEnsure7
+	Domain: :DataSteward
+	Range: :Expertise
+
+ObjectProperty: :canEnsure8
+	Domain: :Archivist
+	Range: :CitationInformation
+
+ObjectProperty: :canLearnFrom
+	Domain: :Juniorresearcher
+	Range: :Researcher
+
+ObjectProperty: :canOrient
+	Domain: :Archivist
+	Range: :They
+
+ObjectProperty: :canIdentify1
+	Domain: :Researcher
+	Range: :Source
+
+ObjectProperty: :canIdentify2
+	Domain: :Teachingfacultymember
+	Range: :Research
+
+ObjectProperty: :canLoad
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :hasScan
+	Domain: :Quality
+	Range: :QualityScan
+
+ObjectProperty: :canDetermine1
+	Domain: :DataManager
+	Range: :What
+
+ObjectProperty: :canDetermine2
+	Domain: :StaffMember
+	Range: :What
+
+ObjectProperty: :canDetermine3
+	Domain: :StaffMember
+	Range: :Service
+
+ObjectProperty: :canStore1
+	Domain: :Researcher
+	Range: :Agreement
+
+ObjectProperty: :canStore2
+	Domain: :Depositor
+	Range: :Data
+
+ObjectProperty: :canStore3
+	Domain: :Univitservice
+	Range: :Data
+
+ObjectProperty: :canOverwrite1
+	Domain: :Publisher
+	Range: :Data
+
+ObjectProperty: :canOverwrite2
+	Domain: :Publisher
+	Range: :Datapackage
+
+ObjectProperty: :canMove
+	Domain: :TeamMember
+	Range: :Collection
+
+ObjectProperty: :canNotifyOf
+	Domain: :Consumer
+	Range: :Change
+
+ObjectProperty: :canLocate
+	Domain: :Researcher
+	Range: :Photograph
+
+ObjectProperty: :canHave1
+	Domain: :Visitor
+	Range: :Lot
+
+ObjectProperty: :canHave2
+	Domain: :Consumer
+	Range: :It
+
+ObjectProperty: :canHave3
+	Domain: :Data
+	Range: :Copy
+
+ObjectProperty: :canHave4
+	Domain: :They
+	Range: :Ability
+
+ObjectProperty: :canHave5
+	Domain: :They
+	Range: :Control
+
+ObjectProperty: :canHave6
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canHave7
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canHave8
+	Domain: :User
+	Range: :Way
+
+ObjectProperty: :canHave9
+	Domain: :SystemAdministrator
+	Range: :Protocol
+
+ObjectProperty: :canHave10
+	Domain: :User
+	Range: :System
+
+ObjectProperty: :canHave11
+	Domain: :User
+	Range: :Spreadsheet
+
+ObjectProperty: :canHave12
+	Domain: :User
+	Range: :Option
+
+ObjectProperty: :canHave13
+	Domain: :User
+	Range: :Detail
+
+ObjectProperty: :canHave14
+	Domain: :User
+	Range: :Neurohub
+
+ObjectProperty: :canHave15
+	Domain: :Researcher
+	Range: :Ability
+
+ObjectProperty: :canHave16
+	Domain: :User
+	Range: :Ability
+
+ObjectProperty: :canHave17
+	Domain: :Researcher
+	Range: :Support
+
+ObjectProperty: :canHave18
+	Domain: :Researcher
+	Range: :Service
+
+ObjectProperty: :canHave19
+	Domain: :Researcher
+	Range: :Display
+
+ObjectProperty: :canHave20
+	Domain: :Researcher
+	Range: :Access
+
+ObjectProperty: :canHave21
+	Domain: :Researcher
+	Range: :System
+
+ObjectProperty: :canHave22
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canHave23
+	Domain: :Researcher
+	Range: :Period
+
+ObjectProperty: :canHave24
+	Domain: :Juniorresearcher
+	Range: :Ability
+
+ObjectProperty: :canHave25
+	Domain: :Researcher
+	Range: :LevelRepository
+
+ObjectProperty: :canHave26
+	Domain: :Researcher
+	Range: :Detail
+
+ObjectProperty: :canHave27
+	Domain: :Researcher
+	Range: :DMP
+
+ObjectProperty: :canHave28
+	Domain: :DataManager
+	Range: :Description
+
+ObjectProperty: :canHave29
+	Domain: :StaffMember
+	Range: :Estimate
+
+ObjectProperty: :canHave30
+	Domain: :Stakeholder
+	Range: :Reference
+
+ObjectProperty: :canHave31
+	Domain: :MetadataManager
+	Range: :Description
+
+ObjectProperty: :canHave32
+	Domain: :DataManager
+	Range: :Reference
+
+ObjectProperty: :canHave33
+	Domain: :RepositoryManager
+	Range: :Metadata
+
+ObjectProperty: :canHave34
+	Domain: :Depositor
+	Range: :UserInterface
+
+ObjectProperty: :canHave35
+	Domain: :Depositor
+	Range: :Lot
+
+ObjectProperty: :canHave36
+	Domain: :Depositor
+	Range: :Metadata
+
+ObjectProperty: :canHave37
+	Domain: :Depositor
+	Range: :Time
+
+ObjectProperty: :canHave38
+	Domain: :Depositor
+	Range: :Guarantee
+
+ObjectProperty: :canHave39
+	Domain: :Externalcoordinator
+	Range: :Guarantee
+
+ObjectProperty: :canHave40
+	Domain: :InformationManager
+	Range: :Dataset
+
+ObjectProperty: :canHave41
+	Domain: :User
+	Range: :Access
+
+ObjectProperty: :canHave42
+	Domain: :Archivist
+	Range: :Form
+
+ObjectProperty: :canHave43
+	Domain: :Archivist
+	Range: :This
+
+ObjectProperty: :canHave44
+	Domain: :Researcher
+	Range: :Request
+
+ObjectProperty: :canHave45
+	Domain: :DonorRepresentative
+	Range: :Time
+
+ObjectProperty: :canHave46
+	Domain: :Archivist
+	Range: :Version
+
+ObjectProperty: :canHave47
+	Domain: :Researcher
+	Range: :CitationInformation
+
+ObjectProperty: :canHave48
+	Domain: :Administrator
+	Range: :Set
+
+ObjectProperty: :canHave49
+	Domain: :Administrator
+	Range: :Password
+
+ObjectProperty: :canHave50
+	Domain: :Crossdeptprojteammember
+	Range: :Place
+
+ObjectProperty: :canHave51
+	Domain: :FacultyMember
+	Range: :Control
+
+ObjectProperty: :canHave52
+	Domain: :FacultyMember
+	Range: :URL
+
+ObjectProperty: :canHave53
+	Domain: :ExtensionAdministrator
+	Range: :Workflow
+
+ObjectProperty: :canHave54
+	Domain: :Researcher
+	Range: :Information
+
+ObjectProperty: :canHave55
+	Domain: :Administrator
+	Range: :Platform
+
+ObjectProperty: :canHave56
+	Domain: :IRAdministrator
+	Range: :Report
+
+ObjectProperty: :canHave57
+	Domain: :StaffMember
+	Range: :MetadataField
+
+ObjectProperty: :canHave58
+	Domain: :ExtensionEducator
+	Range: :Place
+
+ObjectProperty: :canHave59
+	Domain: :IRAdministrator
+	Range: :Account
+
+ObjectProperty: :canHave60
+	Domain: :IRAdministrator
+	Range: :Search
+
+ObjectProperty: :canHave61
+	Domain: :AssetManager
+	Range: :Mechanism
+
+ObjectProperty: :canHave62
+	Domain: :Stakeholder
+	Range: :File
+
+ObjectProperty: :canHave63
+	Domain: :DataCurator
+	Range: :Mechanism
+
+ObjectProperty: :hasResult
+	Domain: :Search
+	Range: :SearchResult
+
+ObjectProperty: :hasAccount1
+	Domain: :User
+	Range: :UserAccount
+
+ObjectProperty: :hasAccount2
+	Domain: :Administrator
+	Range: :AdministratorAccount
+
+ObjectProperty: :hasAccount3
+	Domain: :Patron
+	Range: :PatronAccount
+
+ObjectProperty: :canAttach1
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canAttach2
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :hasGroup1
+	Domain: :User
+	Range: :UserGroup
+
+ObjectProperty: :hasGroup2
+	Domain: :Relationship
+	Range: :RelationshipGroup
+
+ObjectProperty: :canEvaluate
+	Domain: :RepositoryOperator
+	Range: :StorageSize
+
+ObjectProperty: :hasAnalyst
+	Domain: :Data
+	Range: :DataAnalyst
+
+ObjectProperty: :canIndicate1
+	Domain: :Researcher
+	Range: :Project
+
+ObjectProperty: :canIndicate2
+	Domain: :Archivist
+	Range: :Component
+
+ObjectProperty: :canIndicate3
+	Domain: :RepositoryManager
+	Range: :Name
+
+ObjectProperty: :canIndicate4
+	Domain: :RepositoryManager
+	Range: :Subject
+
+ObjectProperty: :canIndicate5
+	Domain: :RepositoryManager
+	Range: :Description
+
+ObjectProperty: :canIndicate6
+	Domain: :RepositoryManager
+	Range: :CopyrightStatus
+
+ObjectProperty: :canIndicate7
+	Domain: :RepositoryManager
+	Range: :Statute
+
+ObjectProperty: :canIndicate8
+	Domain: :RepositoryManager
+	Range: :Object
+
+ObjectProperty: :canIndicate9
+	Domain: :RepositoryManager
+	Range: :Right
+
+ObjectProperty: :canIndicate10
+	Domain: :RepositoryManager
+	Range: :Version
+
+ObjectProperty: :canIndicate11
+	Domain: :RepositoryManager
+	Range: :Component
+
+ObjectProperty: :canIndicate12
+	Domain: :DAMSManager
+	Range: :Aspect
+
+ObjectProperty: :canIndicate13
+	Domain: :DAMSManager
+	Range: :Method
+
+ObjectProperty: :canIndicate14
+	Domain: :RepositoryManager
+	Range: :Language(s
+
+ObjectProperty: :canSearchAcross
+	Domain: :Researcher
+	Range: :CollectionImage
+
+ObjectProperty: :canCorrect
+	Domain: :StaffMember
+	Range: :Error
+
+ObjectProperty: :canExtract1
+	Domain: :DataLibrarian
+	Range: :Pointer
+
+ObjectProperty: :canExtract2
+	Domain: :Researcher
+	Range: :Description
+
+ObjectProperty: :canExtract3
+	Domain: :DataSteward
+	Range: :DataSet
+
+ObjectProperty: :canExamine
+	Domain: :DataReuser
+	Range: :File
+
+ObjectProperty: :canUse1
+	Domain: :Publisher
+	Range: :Command
+
+ObjectProperty: :canUse2
+	Domain: :Developer
+	Range: :DataPackage
+
+ObjectProperty: :canUse3
+	Domain: :User
+	Range: :Tag
+
+ObjectProperty: :canUse4
+	Domain: :Developer
+	Range: :Configuration
+
+ObjectProperty: :canUse5
+	Domain: :Depositor
+	Range: :Data
+
+ObjectProperty: :canUse6
+	Domain: :DataReuser
+	Range: :Version
+
+ObjectProperty: :canUse7
+	Domain: :Researcher
+	Range: :Research
+
+ObjectProperty: :canUse8
+	Domain: :Researcher
+	Range: :They
+
+ObjectProperty: :canUse9
+	Domain: :Researcher
+	Range: :Publication
+
+ObjectProperty: :canUse10
+	Domain: :Archivist
+	Range: :ArchivalContent
+
+ObjectProperty: :canUse11
+	Domain: :Archivist
+	Range: :They
+
+ObjectProperty: :canUse12
+	Domain: :Archivist
+	Range: :Information
+
+ObjectProperty: :canUse13
+	Domain: :Administrator
+	Range: :System
+
+ObjectProperty: :canUse14
+	Domain: :StaffMember
+	Range: :Content
+
+ObjectProperty: :canShareWith
+	Domain: :Publisher
+	Range: :Team
+
+ObjectProperty: :canAllow1
+	Domain: :Depositor
+	Range: :Access
+
+ObjectProperty: :canAllow2
+	Domain: :Depositor
+	Range: :Behalf
+
+ObjectProperty: :canAllow3
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canDescribe1
+	Domain: :RepositoryManager
+	Range: :Collection
+
+ObjectProperty: :canDescribe2
+	Domain: :RepositoryManager
+	Range: :Object
+
+ObjectProperty: :canDescribe3
+	Domain: :RepositoryManager
+	Range: :Component
+
+ObjectProperty: :canDescribe4
+	Domain: :RepositoryManager
+	Range: :Facet
+
+ObjectProperty: :hasContent
+	Domain: :Archival
+	Range: :ArchivalContent
+
+ObjectProperty: :canCreate1
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canCreate2
+	Domain: :Researcher
+	Range: :BookPage
+
+ObjectProperty: :canCreate3
+	Domain: :LabAdministrator
+	Range: :PageTemplate
+
+ObjectProperty: :canCreate4
+	Domain: :User
+	Range: :Protocol
+
+ObjectProperty: :canCreate5
+	Domain: :Administrator
+	Range: :UserAccount
+
+ObjectProperty: :canCreate6
+	Domain: :Archivist
+	Range: :ManagementSubrecord
+
+ObjectProperty: :canCreate7
+	Domain: :Archivist
+	Range: :System
+
+ObjectProperty: :canCreate8
+	Domain: :RepositoryManager
+	Range: :Update
+
+ObjectProperty: :canCreate9
+	Domain: :EntryUser
+	Range: :DescriptionInformation
+
+ObjectProperty: :canCreate10
+	Domain: :Archivist
+	Range: :Agent
+
+ObjectProperty: :canCreate11
+	Domain: :Archivist
+	Range: :ResourceRecord
+
+ObjectProperty: :canCreate12
+	Domain: :Archivist
+	Range: :RightStatement
+
+ObjectProperty: :canCreate13
+	Domain: :Archivist
+	Range: :AccessCopy
+
+ObjectProperty: :canCreate14
+	Domain: :Archivist
+	Range: :QualityScan
+
+ObjectProperty: :canCreate15
+	Domain: :Archivist
+	Range: :AccessDerivative
+
+ObjectProperty: :canCreate16
+	Domain: :Administrator
+	Range: :UserGroup
+
+ObjectProperty: :canCreate17
+	Domain: :Administrator
+	Range: :UserRole
+
+ObjectProperty: :canCreate18
+	Domain: :StaffMember
+	Range: :Collection
+
+ObjectProperty: :canCreate19
+	Domain: :FacultyMember
+	Range: :Collection
+
+ObjectProperty: :canCreate20
+	Domain: :StaffMember
+	Range: :Metadata
+
+ObjectProperty: :canCreate21
+	Domain: :Patron
+	Range: :Account
+
+ObjectProperty: :canCreate22
+	Domain: :StaffMember
+	Range: :MetadataField
+
+ObjectProperty: :canCreate23
+	Domain: :StaffMember
+	Range: :DigitalArchive
+
+ObjectProperty: :canInclude1
+	Domain: :InformationManager
+	Range: :Record
+
+ObjectProperty: :canInclude2
+	Domain: :StaffMember
+	Range: :File
+
+ObjectProperty: :canReassure
+	Domain: :Fundingbody
+	Range: :ArchivalPlan
+
+ObjectProperty: :hasArchivist
+	Domain: :Assistant
+	Range: :AssistantArchivist
+
+ObjectProperty: :canReceive1
+	Domain: :Researcher
+	Range: :Alert
+
+ObjectProperty: :canReceive2
+	Domain: :CentreDirector
+	Range: :SummaryReport
+
+ObjectProperty: :canReceive3
+	Domain: :Researcher
+	Range: :Notification
+
+ObjectProperty: :canReceive4
+	Domain: :FacultyMember
+	Range: :Attribution
+
+ObjectProperty: :canReceive5
+	Domain: :Researcher
+	Range: :Update
+
+ObjectProperty: :canReceive6
+	Domain: :StaffMember
+	Range: :Response
+
+ObjectProperty: :canOffer
+	Domain: :StaffMember
+	Range: :Service
+
+ObjectProperty: :canFulfill1
+	Domain: :StaffMember
+	Range: :ServiceObligation
+
+ObjectProperty: :canFulfill2
+	Domain: :TeamMember
+	Range: :Request
+
+ObjectProperty: :canGroup
+	Domain: :Administrator
+	Range: :User
+
+ObjectProperty: :canKnowOn
+	Domain: :Consumer
+	Range: :System
+
+ObjectProperty: :canSupply
+	Domain: :DonorRepresentative
+	Range: :Accrual
+
+ObjectProperty: :canLose
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canStart1
+	Domain: :They
+	Range: :Data
+
+ObjectProperty: :canStart2
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canStart3
+	Domain: :Consumer
+	Range: :It
+
+ObjectProperty: :canDemonstrate1
+	Domain: :Administrator
+	Range: :Compliance
+
+ObjectProperty: :canDemonstrate2
+	Domain: :Depositor
+	Range: :Impact
+
+ObjectProperty: :canDemonstrate3
+	Domain: :Compliance
+	Range: :DMP
+
+ObjectProperty: :canDemonstrate4
+	Domain: :Impact
+	Range: :Dataset
+
+ObjectProperty: :canGain
+	Domain: :Externalcollaborator
+	Range: :Access
+
+ObjectProperty: :canPresentIn
+	Domain: :DAMSManager
+	Range: :Component
+
+ObjectProperty: :canWarn
+	Domain: :Publisher
+	Range: :It
+
+ObjectProperty: :hasCitation
+	Domain: :Example
+	Range: :ExampleCitation
+
+ObjectProperty: :canConfigure1
+	Domain: :Publisher
+	Range: :Client
+
+ObjectProperty: :canConfigure2
+	Domain: :ReleaseEngineer
+	Range: :Build
+
+ObjectProperty: :hasReminder
+	Domain: :IR
+	Range: :IRReminder
+
+ObjectProperty: :canExport1
+	Domain: :Archivist
+	Range: :AgentRecord
+
+ObjectProperty: :canExport2
+	Domain: :Archivist
+	Range: :Description
+
+ObjectProperty: :canExport3
+	Domain: :Univitservice
+	Range: :Data
+
+ObjectProperty: :canExport4
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canExport5
+	Domain: :TeamMember
+	Range: :Set
+
+ObjectProperty: :canKnowFor
+	Domain: :User
+	Range: :Place
+
+ObjectProperty: :canUndelete
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canProceedWith
+	Domain: :DataManager
+	Range: :Step
+
+ObjectProperty: :canSave1
+	Domain: :Researcher
+	Range: :Time
+
+ObjectProperty: :canSave2
+	Domain: :Archivist
+	Range: :Time
+
+ObjectProperty: :canAvailableTo
+	Domain: :It
+	Range: :Staff
+
+ObjectProperty: :canLogIn
+	Domain: :User
+	Range: :System
+
+ObjectProperty: :canFind1
+	Domain: :Consumer
+	Range: :Package
+
+ObjectProperty: :canFind2
+	Domain: :Consumer
+	Range: :Publisher
+
+ObjectProperty: :canFind3
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canFind4
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canFind5
+	Domain: :DataReuser
+	Range: :Data
+
+ObjectProperty: :canFind6
+	Domain: :Archivist
+	Range: :It
+
+ObjectProperty: :canFind7
+	Domain: :Researcher
+	Range: :Everything
+
+ObjectProperty: :canFind8
+	Domain: :Researcher
+	Range: :Material
+
+ObjectProperty: :canFind9
+	Domain: :Researcher
+	Range: :Information
+
+ObjectProperty: :canFind10
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canFind11
+	Domain: :Archivist
+	Range: :Image
+
+ObjectProperty: :canFind12
+	Domain: :FacultyMember
+	Range: :Item
+
+ObjectProperty: :canFind13
+	Domain: :Academicresearcher
+	Range: :Work
+
+ObjectProperty: :canFind14
+	Domain: :Externaluser
+	Range: :Which
+
+ObjectProperty: :canSearchWithin
+	Domain: :Archivist
+	Range: :ObjectRecord
+
+ObjectProperty: :canLegal
+	Domain: :It
+	Range: :Data
+
+ObjectProperty: :canAssess
+	Domain: :StaffMember
+	Range: :Result
+
+ObjectProperty: :canLearn1
+	Domain: :Researcher
+	Range: :Research
+
+ObjectProperty: :canLearn2
+	Domain: :Student
+	Range: :Cornell
+
+ObjectProperty: :canReuse1
+	Domain: :Archivemanager
+	Range: :Information
+
+ObjectProperty: :canReuse2
+	Domain: :Researcher
+	Range: :DataPaper
+
+ObjectProperty: :canGet1
+	Domain: :Consumer
+	Range: :Data
+
+ObjectProperty: :canGet2
+	Domain: :Consumer
+	Range: :Sense
+
+ObjectProperty: :canGet3
+	Domain: :Consumer
+	Range: :Form
+
+ObjectProperty: :canGet4
+	Domain: :Publisher
+	Range: :Access
+
+ObjectProperty: :canGet5
+	Domain: :Archive
+	Range: :Information
+
+ObjectProperty: :canGet6
+	Domain: :User
+	Range: :Access
+
+ObjectProperty: :canGet7
+	Domain: :DataReuser
+	Range: :Dataset
+
+ObjectProperty: :canGet8
+	Domain: :DataReuser
+	Range: :URL
+
+ObjectProperty: :canGet9
+	Domain: :DataReuser
+	Range: :Data
+
+ObjectProperty: :canGet10
+	Domain: :FacultyMember
+	Range: :Access
+
+ObjectProperty: :canGet11
+	Domain: :ContentManager
+	Range: :IRReminder
+
+ObjectProperty: :canDelete
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canShare1
+	Domain: :Publisher
+	Range: :Dataset
+
+ObjectProperty: :canShare2
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canShare3
+	Domain: :Archivist
+	Range: :Researcher
+
+ObjectProperty: :canShare4
+	Domain: :Researcher
+	Range: :Link
+
+ObjectProperty: :canShare5
+	Domain: :Researcher
+	Range: :Report
+
+ObjectProperty: :hasAdministrator1
+	Domain: :System
+	Range: :SystemAdministrator
+
+ObjectProperty: :hasAdministrator2
+	Domain: :Lab
+	Range: :LabAdministrator
+
+ObjectProperty: :hasAdministrator3
+	Domain: :Application
+	Range: :ApplicationAdministrator
+
+ObjectProperty: :hasAdministrator4
+	Domain: :Archive
+	Range: :ArchiveAdministrator
+
+ObjectProperty: :hasAdministrator5
+	Domain: :IR
+	Range: :IRAdministrator
+
+ObjectProperty: :hasAdministrator6
+	Domain: :Extension
+	Range: :ExtensionAdministrator
+
+ObjectProperty: :canStudy
+	Domain: :DataAnalyst
+	Range: :It
+
+ObjectProperty: :canTheme
+	Domain: :LabAdministrator
+	Range: :Colour
+
+ObjectProperty: :hasSet
+	Domain: :Data
+	Range: :DataSet
+
+ObjectProperty: :canUpload1
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canUpload2
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canUpload3
+	Domain: :Archivist
+	Range: :EAD
+
+ObjectProperty: :canUpload4
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canUpload5
+	Domain: :Archivist
+	Range: :Group
+
+ObjectProperty: :canUpload6
+	Domain: :AssistantArchivist
+	Range: :Paper
+
+ObjectProperty: :canUpload7
+	Domain: :Archivist
+	Range: :Scan
+
+ObjectProperty: :canUpload8
+	Domain: :Archivist
+	Range: :Inventory
+
+ObjectProperty: :canUpload9
+	Domain: :FacultyMember
+	Range: :Data
+
+ObjectProperty: :canUpload10
+	Domain: :FacultyMember
+	Range: :Work
+
+ObjectProperty: :canUpload11
+	Domain: :FacultyMember
+	Range: :DataFile
+
+ObjectProperty: :canUpload12
+	Domain: :StaffMember
+	Range: :Material
+
+ObjectProperty: :canUpload13
+	Domain: :StaffMember
+	Range: :Batch
+
+ObjectProperty: :canUpload14
+	Domain: :StaffMember
+	Range: :Item
+
+ObjectProperty: :canUpload15
+	Domain: :IRAdministrator
+	Range: :Dataset
+
+ObjectProperty: :canUpload16
+	Domain: :IRAdministrator
+	Range: :Version
+
+ObjectProperty: :canUpload17
+	Domain: :DataCurator
+	Range: :Version
+
+ObjectProperty: :canUploadTo
+	Domain: :Student
+	Range: :Requirement
+
+ObjectProperty: :hasPaper
+	Domain: :Work
+	Range: :WorkPaper
+
+ObjectProperty: :canAccessTo
+	Domain: :ResearchHead
+	Range: :Identifier
+
+ObjectProperty: :canUnderstand1
+	Domain: :CentreDirector
+	Range: :Trend
+
+ObjectProperty: :canUnderstand2
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canUnderstand3
+	Domain: :Archivist
+	Range: :Import
+
+ObjectProperty: :canUnderstand4
+	Domain: :Researcher
+	Range: :CopyrightStatus
+
+ObjectProperty: :canNotify
+	Domain: :FacultyMember
+	Range: :Any
+
+ObjectProperty: :canCurate
+	Domain: :DataManager
+	Range: :Data
+
+ObjectProperty: :canCollect1
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canCollect2
+	Domain: :FacultyMember
+	Range: :Publication
+
+ObjectProperty: :canTieInto
+	Domain: :Univitservice
+	Range: :System
+
+ObjectProperty: :canReportOn1
+	Domain: :ArchiveAdministrator
+	Range: :Aspect
+
+ObjectProperty: :canReportOn2
+	Domain: :InformationManager
+	Range: :Dataset
+
+ObjectProperty: :hasCurator
+	Domain: :Data
+	Range: :DataCurator
+
+ObjectProperty: :canFix
+	Domain: :Publisher
+	Range: :It
+
+ObjectProperty: :canBrowse1
+	Domain: :Consumer
+	Range: :Publisher
+
+ObjectProperty: :canBrowse2
+	Domain: :Patron
+	Range: :Content
+
+ObjectProperty: :canKnowAbout1
+	Domain: :ItManager
+	Range: :ResourceRequirement
+
+ObjectProperty: :canKnowAbout2
+	Domain: :Legalofficer
+	Range: :DataSensitivity
+
+ObjectProperty: :canKnowAbout3
+	Domain: :Manager
+	Range: :Resource
+
+ObjectProperty: :canKnowAbout4
+	Domain: :RepositoryOperator
+	Range: :Kind
+
+ObjectProperty: :canKnowAbout5
+	Domain: :Researcher
+	Range: :Cost
+
+ObjectProperty: :canKnowAbout6
+	Domain: :DataManager
+	Range: :Requirement
+
+ObjectProperty: :canKnowAbout7
+	Domain: :User
+	Range: :Version
+
+ObjectProperty: :canKnowAbout8
+	Domain: :User
+	Range: :Component
+
+ObjectProperty: :canQuery
+	Domain: :ArchiveAdministrator
+	Range: :Archive
+
+ObjectProperty: :hasSubrecord
+	Domain: :Management
+	Range: :ManagementSubrecord
+
+ObjectProperty: :canUnpublish1
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canUnpublish2
+	Domain: :IRAdministrator
+	Range: :Dataset
+
+ObjectProperty: :canCite
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :hasStatistic
+	Domain: :Usage
+	Range: :UsageStatistic
+
+ObjectProperty: :canShareOn
+	Domain: :FacultyMember
+	Range: :They
+
+ObjectProperty: :canSelect1
+	Domain: :Archivist
+	Range: :RightStatus
+
+ObjectProperty: :canSelect2
+	Domain: :Patron
+	Range: :Many
+
+ObjectProperty: :canPreview1
+	Domain: :Publisher
+	Range: :View
+
+ObjectProperty: :canPreview2
+	Domain: :Publisher
+	Range: :Datapackage
+
+ObjectProperty: :canTrack1
+	Domain: :Administrator
+	Range: :Obligation
+
+ObjectProperty: :canTrack2
+	Domain: :Depositor
+	Range: :Download
+
+ObjectProperty: :canTrack3
+	Domain: :Depositor
+	Range: :Citation
+
+ObjectProperty: :canTrack4
+	Domain: :InformationManager
+	Range: :CitationCount
+
+ObjectProperty: :canTrack5
+	Domain: :DAMSManager
+	Range: :Event
+
+ObjectProperty: :canTrack6
+	Domain: :Archivist
+	Range: :Use
+
+ObjectProperty: :canKnowOf1
+	Domain: :RepositoryManager
+	Range: :Change
+
+ObjectProperty: :canKnowOf2
+	Domain: :RepositoryManager
+	Range: :Component
+
+ObjectProperty: :canKnowOf3
+	Domain: :User
+	Range: :Version
+
+ObjectProperty: :canFilter
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canSearchBy1
+	Domain: :Data
+	Range: :Type
+
+ObjectProperty: :canSearchBy2
+	Domain: :Researcher
+	Range: :Keyword
+
+ObjectProperty: :canSearchBy3
+	Domain: :Archivist
+	Range: :Tag
+
+ObjectProperty: :hasEducator
+	Domain: :Extension
+	Range: :ExtensionEducator
+
+ObjectProperty: :canEnter
+	Domain: :User
+	Range: :Metadata
+
+ObjectProperty: :hasCalendar
+	Domain: :Release
+	Range: :ReleaseCalendar
+
+ObjectProperty: :canModify
+	Domain: :User
+	Range: :Protocol
+
+ObjectProperty: :canGive
+	Domain: :Archivist
+	Range: :RoomAccess
+
+ObjectProperty: :canRevertTo
+	Domain: :User
+	Range: :Version
+
+ObjectProperty: :canSecure
+	Domain: :Researcher
+	Range: :Access
+
+ObjectProperty: :canSetWith
+	Domain: :IRAdministrator
+	Range: :Administrator
+
+ObjectProperty: :hasObject1
+	Domain: :Digital
+	Range: :DigitalObject
+
+ObjectProperty: :hasObject2
+	Domain: :Collection
+	Range: :CollectionObject
+
+ObjectProperty: :canImport1
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canImport2
+	Domain: :Researcher
+	Range: :Metadata
+
+ObjectProperty: :canImport3
+	Domain: :DataLibrarian
+	Range: :Metadata
+
+ObjectProperty: :canImport4
+	Domain: :DataLibrarian
+	Range: :Information
+
+ObjectProperty: :canImport5
+	Domain: :Archivist
+	Range: :EADFile
+
+ObjectProperty: :canImport6
+	Domain: :Archivist
+	Range: :Resource
+
+ObjectProperty: :canImport7
+	Domain: :Archivist
+	Range: :AgentInformation
+
+ObjectProperty: :canImport8
+	Domain: :Archivist
+	Range: :Information
+
+ObjectProperty: :canImport9
+	Domain: :Archivist
+	Range: :EADData
+
+ObjectProperty: :canImport10
+	Domain: :ArchiveAdministrator
+	Range: :BathData
+
+ObjectProperty: :hasEngineer
+	Domain: :Release
+	Range: :ReleaseEngineer
+
+ObjectProperty: :canRecord1
+	Domain: :PI
+	Range: :Metadata
+
+ObjectProperty: :canRecord2
+	Domain: :PI
+	Range: :Information
+
+ObjectProperty: :canRecord3
+	Domain: :Researcher
+	Range: :ResearchPublication
+
+ObjectProperty: :canRecord4
+	Domain: :Researcher
+	Range: :Intention
+
+ObjectProperty: :canRearrange1
+	Domain: :Archivist
+	Range: :Hierarchy
+
+ObjectProperty: :canRearrange2
+	Domain: :Archivist
+	Range: :DescriptionHierarchy
+
+ObjectProperty: :hasDate1
+	Domain: :Publication
+	Range: :PublicationDate
+
+ObjectProperty: :hasDate2
+	Domain: :Release
+	Range: :ReleaseDate
+
+ObjectProperty: :canSearch1
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canSearch2
+	Domain: :Consumer
+	Range: :Description
+
+ObjectProperty: :canSearch3
+	Domain: :User
+	Range: :Protocol
+
+ObjectProperty: :canSearch4
+	Domain: :DataReuser
+	Range: :Archive
+
+ObjectProperty: :canSearch5
+	Domain: :User
+	Range: :CollectionObject
+
+ObjectProperty: :canSearch6
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canSearch7
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canSearch8
+	Domain: :Researcher
+	Range: :Data
+
+ObjectProperty: :canSearch9
+	Domain: :Archivist
+	Range: :Image
+
+ObjectProperty: :canSearch10
+	Domain: :Archivist
+	Range: :MaterialType
+
+ObjectProperty: :canSearch11
+	Domain: :FacultyMember
+	Range: :Repository
+
+ObjectProperty: :canClarify
+	Domain: :DataManager
+	Range: :Right
+
+ObjectProperty: :canVersion
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canRedact
+	Domain: :Archivist
+	Range: :Information
+
+ObjectProperty: :canCount
+	Domain: :They
+	Range: :Citation
+
+ObjectProperty: :canSegment
+	Domain: :InformationManager
+	Range: :View
+
+ObjectProperty: :canAccess1
+	Domain: :Researcher
+	Range: :File
+
+ObjectProperty: :canAccess2
+	Domain: :ResearchIntegrity
+	Range: :Report
+
+ObjectProperty: :canAccess3
+	Domain: :DataReuser
+	Range: :System
+
+ObjectProperty: :canAccess4
+	Domain: :Externalcoordinator
+	Range: :Data
+
+ObjectProperty: :canAccess5
+	Domain: :Donor
+	Range: :Thing
+
+ObjectProperty: :canAccess6
+	Domain: :DonorRepresentative
+	Range: :Information
+
+ObjectProperty: :canAccess7
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canAccess8
+	Domain: :AssistantArchivist
+	Range: :Form
+
+ObjectProperty: :canAccess9
+	Domain: :Researcher
+	Range: :WorkPaper
+
+ObjectProperty: :canAccess10
+	Domain: :Researcher
+	Range: :ArchivalMaterial
+
+ObjectProperty: :canAccess11
+	Domain: :Archivist
+	Range: :Inventory
+
+ObjectProperty: :canAccess12
+	Domain: :Archivist
+	Range: :Everything
+
+ObjectProperty: :canAccess13
+	Domain: :Archivist
+	Range: :Metadata
+
+ObjectProperty: :canAccess14
+	Domain: :FacultyMember
+	Range: :Collection
+
+ObjectProperty: :canAccess15
+	Domain: :Patron
+	Range: :Dataset
+
+ObjectProperty: :canAccess16
+	Domain: :StaffMember
+	Range: :UsageStatistic
+
+ObjectProperty: :canEmbed
+	Domain: :Archivist
+	Range: :Metadata
+
+ObjectProperty: :hasMaterial
+	Domain: :Archival
+	Range: :ArchivalMaterial
+
+ObjectProperty: :canKnowUp
+	Domain: :Publisher
+	Range: :System
+
+ObjectProperty: :canStayOn
+	Domain: :Researcher
+	Range: :Date
+
+ObjectProperty: :canAllowFor
+	Domain: :RepositoryManager
+	Range: :DataArchive
+
+ObjectProperty: :hasSensitivity
+	Domain: :Data
+	Range: :DataSensitivity
+
+ObjectProperty: :canPlace
+	Domain: :Depositor
+	Range: :Data
+
+ObjectProperty: :hasInterface
+	Domain: :User
+	Range: :UserInterface
+
+ObjectProperty: :canRequest
+	Domain: :Researcher
+	Range: :Version
+
+ObjectProperty: :canAuthorize
+	Domain: :They
+	Range: :DataPackage
+
+ObjectProperty: :canPlan1
+	Domain: :PI
+	Range: :Kind
+
+ObjectProperty: :canPlan2
+	Domain: :Rector
+	Range: :TermResource
+
+ObjectProperty: :canPlan3
+	Domain: :DataManager
+	Range: :DataManagement
+
+ObjectProperty: :canPlan4
+	Domain: :Researcher
+	Range: :Research
+
+ObjectProperty: :canPlan5
+	Domain: :Researcher
+	Range: :Step
+
+ObjectProperty: :canPlan6
+	Domain: :DataManager
+	Range: :StorageSystem
+
+ObjectProperty: :canPlan7
+	Domain: :DataManager
+	Range: :Anonymization
+
+ObjectProperty: :hasFile1
+	Domain: :Data
+	Range: :DataFile
+
+ObjectProperty: :hasFile2
+	Domain: :EAD
+	Range: :EADFile
+
+ObjectProperty: :hasFile3
+	Domain: :Content
+	Range: :ContentFile
+
+ObjectProperty: :hasFile4
+	Domain: :Collection
+	Range: :CollectionFile
+
+ObjectProperty: :hasFile5
+	Domain: :Repository
+	Range: :RepositoryFile
+
+ObjectProperty: :canRequire
+	Domain: :ArchiveAdministrator
+	Range: :Set
+
+ObjectProperty: :hasData1
+	Domain: :Resource
+	Range: :ResourceData
+
+ObjectProperty: :hasData2
+	Domain: :EAD
+	Range: :EADData
+
+ObjectProperty: :hasData3
+	Domain: :Research
+	Range: :ResearchData
+
+ObjectProperty: :hasData4
+	Domain: :Bath
+	Range: :BathData
+
+ObjectProperty: :hasData5
+	Domain: :Citation
+	Range: :CitationData
+
+ObjectProperty: :hasType1
+	Domain: :Data
+	Range: :DataType
+
+ObjectProperty: :hasType2
+	Domain: :Material
+	Range: :MaterialType
+
+ObjectProperty: :canMore
+	Domain: :Researcher
+	Range: :Entry
+
+ObjectProperty: :canInteractWith
+	Domain: :Service
+	Range: :Archive
+
+ObjectProperty: :canDiscover1
+	Domain: :Consumer
+	Range: :Package
+
+ObjectProperty: :canDiscover2
+	Domain: :Researcher
+	Range: :Item
+
+ObjectProperty: :canDiscover3
+	Domain: :Researcher
+	Range: :Work
+
+ObjectProperty: :canRestrict1
+	Domain: :User
+	Range: :MetadataField
+
+ObjectProperty: :canRestrict2
+	Domain: :Archivist
+	Range: :File
+
+ObjectProperty: :canRestrict3
+	Domain: :Archivist
+	Range: :Group
+
+ObjectProperty: :canRestrict4
+	Domain: :Archivist
+	Range: :Access
+
+ObjectProperty: :canEntitle
+	Domain: :Publisher
+	Range: :What
+
+ObjectProperty: :canHarvest1
+	Domain: :Fundingbody
+	Range: :Metadata
+
+ObjectProperty: :canHarvest2
+	Domain: :Librarydiscoveryoperator
+	Range: :Metadata
+
+ObjectProperty: :canDelegate
+	Domain: :Depositor
+	Range: :ManagementTask
+
+ObjectProperty: :canEdit1
+	Domain: :Owner
+	Range: :Profile
+
+ObjectProperty: :canEdit2
+	Domain: :User
+	Range: :Cost
+
+ObjectProperty: :canSearchAmong
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canPublish1
+	Domain: :Publisher
+	Range: :Dataset
+
+ObjectProperty: :canPublish2
+	Domain: :Publisher
+	Range: :DataPackage
+
+ObjectProperty: :canPublish3
+	Domain: :Publisher
+	Range: :Data
+
+ObjectProperty: :canPublish4
+	Domain: :Publisher
+	Range: :It
+
+ObjectProperty: :canManage1
+	Domain: :User
+	Range: :Reference
+
+ObjectProperty: :canManage2
+	Domain: :Archivist
+	Range: :DigitalObject
+
+ObjectProperty: :canManage3
+	Domain: :Depositor
+	Range: :ResearchData
+
+ObjectProperty: :canManage4
+	Domain: :Depositor
+	Range: :Version
+
+ObjectProperty: :canManage5
+	Domain: :Archivist
+	Range: :Scan
+
+ObjectProperty: :canManage6
+	Domain: :IRAdministrator
+	Range: :NameChange
+
+ObjectProperty: :canManage7
+	Domain: :IRAdministrator
+	Range: :Classification
+
+ObjectProperty: :canManage8
+	Domain: :IRAdministrator
+	Range: :RelationshipGroup
+
+ObjectProperty: :hasDescription1
+	Domain: :Archival
+	Range: :ArchivalDescription
+
+ObjectProperty: :hasDescription2
+	Domain: :Title
+	Range: :TitleDescription
+
+ObjectProperty: :canSet1
+	Domain: :Admin
+	Range: :ConfigurationParameter
+
+ObjectProperty: :canSet2
+	Domain: :Archivist
+	Range: :Date
+
+ObjectProperty: :canVerify
+	Domain: :Provenance
+	Range: :Result
+
+ObjectProperty: :canReference
+	Domain: :DataReuser
+	Range: :It
+
+ObjectProperty: :canLicense
+	Domain: :Archivist
+	Range: :Researcher
+
+ObjectProperty: :hasImage
+	Domain: :Collection
+	Range: :CollectionImage
+
+ObjectProperty: :hasProvider
+	Domain: :System
+	Range: :SystemProvider
+
+ObjectProperty: :canRaise
+	Domain: :FacultyMember
+	Range: :Profile
+
+ObjectProperty: :canReflect
+	Domain: :StaffMember
+	Range: :Content
+
+ObjectProperty: :hasEmbargo
+	Domain: :Access
+	Range: :AccessEmbargo
+
+ObjectProperty: :hasPackage
+	Domain: :Data
+	Range: :DataPackage
+
+ObjectProperty: :canPromote1
+	Domain: :FacultyMember
+	Range: :Work
+
+ObjectProperty: :canPromote2
+	Domain: :Researcher
+	Range: :Work
+
+ObjectProperty: :canWaste
+	Domain: :Researcher
+	Range: :Time
+
+ObjectProperty: :canList1
+	Domain: :User
+	Range: :Collection
+
+ObjectProperty: :canList2
+	Domain: :DAMSManager
+	Range: :Collection
+
+ObjectProperty: :canList3
+	Domain: :RepositoryManager
+	Range: :Component
+
+ObjectProperty: :canSearchFor1
+	Domain: :User
+	Range: :File
+
+ObjectProperty: :canSearchFor2
+	Domain: :User
+	Range: :Collection
+
+ObjectProperty: :canSearchFor3
+	Domain: :User
+	Range: :Component
+
+ObjectProperty: :canSearchFor4
+	Domain: :Patron
+	Range: :Dataset
+
+ObjectProperty: :canSearchFor5
+	Domain: :FacultyMember
+	Range: :Work
+
+ObjectProperty: :canSearchFor6
+	Domain: :IRAdministrator
+	Range: :Email
+
+ObjectProperty: :canThe
+	Domain: :Change
+	Range: :ResearchIntegrity
+
+ObjectProperty: :canApply1
+	Domain: :Archivemanager
+	Range: :Requirement
+
+ObjectProperty: :canApply2
+	Domain: :Archivemanager
+	Range: :Check
+
+ObjectProperty: :canApply3
+	Domain: :Depositor
+	Range: :License
+
+ObjectProperty: :canApply4
+	Domain: :Archivist
+	Range: :Statement
+
+ObjectProperty: :canApply5
+	Domain: :Archivist
+	Range: :Operation
+
+ObjectProperty: :canApply6
+	Domain: :StaffMember
+	Range: :AccessEmbargo
+
+ObjectProperty: :canAdjust
+	Domain: :Consumer
+	Range: :Script
+
+ObjectProperty: :hasCopy
+	Domain: :Access
+	Range: :AccessCopy
+
+ObjectProperty: :canEstablish
+	Domain: :Legalofficer
+	Range: :Option
+
+ObjectProperty: :canHaveAt
+	Domain: :Student
+	Range: :Cornell
+
+ObjectProperty: :canCapture
+	Domain: :User
+	Range: :Metadata
+
+ObjectProperty: :canEliminate
+	Domain: :Archivist
+	Range: :Work
+
+ObjectProperty: :canUpdateWith
+	Domain: :It
+	Range: :Information
+
+ObjectProperty: :hasPage
+	Domain: :Book
+	Range: :BookPage
+
+ObjectProperty: :hasPublication
+	Domain: :Research
+	Range: :ResearchPublication
+
+ObjectProperty: :canJust
+	Domain: :They
+	Range: :Control
+
+ObjectProperty: :canWork
+	Domain: :Researcher
+	Range: :Lab
+
+ObjectProperty: :canView1
+	Domain: :Publisher
+	Range: :Dataset
+
+ObjectProperty: :canView2
+	Domain: :Consumer
+	Range: :DataPackage
+
+ObjectProperty: :canView3
+	Domain: :Consumer
+	Range: :Datapackage
+
+ObjectProperty: :canView4
+	Domain: :Consumer
+	Range: :Profile
+
+ObjectProperty: :canView5
+	Domain: :Owner
+	Range: :People
+
+ObjectProperty: :canView6
+	Domain: :Supervisor
+	Range: :Time
+
+ObjectProperty: :canView7
+	Domain: :User
+	Range: :Time
+
+ObjectProperty: :canView8
+	Domain: :LabMember
+	Range: :Event
+
+ObjectProperty: :canView9
+	Domain: :User
+	Range: :Inventory
+
+ObjectProperty: :canView10
+	Domain: :User
+	Range: :Calendar
+
+ObjectProperty: :canView11
+	Domain: :User
+	Range: :ArchivalDescription
+
+ObjectProperty: :canView12
+	Domain: :DataReuser
+	Range: :ExampleCitation
+
+ObjectProperty: :canView13
+	Domain: :DataReuser
+	Range: :DOI
+
+ObjectProperty: :canView14
+	Domain: :Researcher
+	Range: :Thumbnail
+
+ObjectProperty: :canView15
+	Domain: :Archivist
+	Range: :CollectionFile
+
+ObjectProperty: :canView16
+	Domain: :Archivist
+	Range: :Location
+
+ObjectProperty: :canView17
+	Domain: :Patron
+	Range: :Version
+
+ObjectProperty: :canRename
+	Domain: :TeamMember
+	Range: :Collection
+
+ObjectProperty: :canRegister
+	Domain: :RepositoryManager
+	Range: :NameRecord
+
+ObjectProperty: :canDraw
+	Domain: :User
+	Range: :Table
+
+ObjectProperty: :canInformAbout
+	Domain: :MetadataManager
+	Range: :MetadataDescription
+
+ObjectProperty: :hasMember1
+	Domain: :Lab
+	Range: :LabMember
+
+ObjectProperty: :hasMember2
+	Domain: :Staff
+	Range: :StaffMember
+
+ObjectProperty: :hasMember3
+	Domain: :Faculty
+	Range: :FacultyMember
+
+ObjectProperty: :hasMember4
+	Domain: :Team
+	Range: :TeamMember
+
+ObjectProperty: :canReferTo
+	Domain: :Consumer
+	Range: :It
+
+ObjectProperty: :canPresent1
+	Domain: :DAMSManager
+	Range: :CollectionObject
+
+ObjectProperty: :canPresent2
+	Domain: :StaffMember
+	Range: :Version
+
+ObjectProperty: :canMigrate
+	Domain: :SystemAdministrator
+	Range: :Data
+
+ObjectProperty: :canPreserve1
+	Domain: :StaffMember
+	Range: :Access
+
+ObjectProperty: :canPreserve2
+	Domain: :StaffMember
+	Range: :Content
+
+ObjectProperty: :canPreserve3
+	Domain: :StaffMember
+	Range: :Scholarship
+
+ObjectProperty: :canMake1
+	Domain: :Owner
+	Range: :System
+
+ObjectProperty: :canMake2
+	Domain: :User
+	Range: :DataFile
+
+ObjectProperty: :canMake3
+	Domain: :User
+	Range: :Link
+
+ObjectProperty: :canMake4
+	Domain: :Archivemanager
+	Range: :Data
+
+ObjectProperty: :canMake5
+	Domain: :ArchiveAdministrator
+	Range: :Check
+
+ObjectProperty: :canMake6
+	Domain: :Academicpublisher
+	Range: :WebLink
+
+ObjectProperty: :canMake7
+	Domain: :Archivist
+	Range: :Information
+
+ObjectProperty: :canMake8
+	Domain: :Archivist
+	Range: :ArchivalMaterial
+
+ObjectProperty: :canMake9
+	Domain: :It
+	Range: :Photograph
+
+ObjectProperty: :canMake10
+	Domain: :Administrator
+	Range: :Work
+
+ObjectProperty: :canMake11
+	Domain: :StaffMember
+	Range: :Item
+
+ObjectProperty: :canMake12
+	Domain: :ExtensionAdministrator
+	Range: :Resource
+
+ObjectProperty: :canMake13
+	Domain: :Librarydiscoveryoperator
+	Range: :Repository
+
+ObjectProperty: :canEmail
+	Domain: :Patron
+	Range: :SystemProvider
+
+ObjectProperty: :canTell
+	Domain: :StaffMember
+	Range: :Researcher
+
+ObjectProperty: :hasField
+	Domain: :Metadata
+	Range: :MetadataField
+
+ObjectProperty: :hasDirector
+	Domain: :Centre
+	Range: :CentreDirector
+
+ObjectProperty: :canComplyWith
+	Domain: :StaffMember
+	Range: :Author
+
+ObjectProperty: :canLook
+	Domain: :Stakeholder
+	Range: :Information
+
+ObjectProperty: :canLoginTo
+	Domain: :FacultyMember
+	Range: :Shibboleth
+
+ObjectProperty: :canCharge
+	Domain: :Admin
+	Range: :User
+
+ObjectProperty: :hasStaff
+	Domain: :It
+	Range: :ItStaff
+
+ObjectProperty: :canInvite1
+	Domain: :Admin
+	Range: :Someone
+
+ObjectProperty: :canInvite2
+	Domain: :Owner
+	Range: :User
+
+ObjectProperty: :canInvite3
+	Domain: :Owner
+	Range: :Someone
+
+ObjectProperty: :hasOperator
+	Domain: :Repository
+	Range: :RepositoryOperator
+
+ObjectProperty: :hasPlan1
+	Domain: :Pricing
+	Range: :PricingPlan
+
+ObjectProperty: :hasPlan2
+	Domain: :Time
+	Range: :TimePlan
+
+ObjectProperty: :hasPlan3
+	Domain: :Archival
+	Range: :ArchivalPlan
+
+ObjectProperty: :canLookAt
+	Domain: :DonorRepresentative
+	Range: :Image
+
+ObjectProperty: :canUseFor
+	Domain: :They
+	Range: :ResearchRequest
+
+ObjectProperty: :hasLevel1
+	Domain: :Group
+	Range: :GroupLevel
+
+ObjectProperty: :hasLevel2
+	Domain: :Security
+	Range: :SecurityLevel
+
+ObjectProperty: :hasReuser
+	Domain: :Data
+	Range: :DataReuser
+
+ObjectProperty: :canBeBy
+	Domain: :It
+	Range: :User
+
+ObjectProperty: :canCompose
+	Domain: :RepositoryManager
+	Range: :Collection
+
+ObjectProperty: :hasUser
+	Domain: :Entry
+	Range: :EntryUser
+
+ObjectProperty: :canSpecify1
+	Domain: :Archivist
+	Range: :Source
+
+ObjectProperty: :canSpecify2
+	Domain: :Depositor
+	Range: :DisposalPolicy
+
+ObjectProperty: :canHouse
+	Domain: :StaffMember
+	Range: :Material
+
+# Classes
+Class: :Publisher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Dataset
+
+
+Class: :DataPackage
+	SubClassOf: :Package
+	Annotations:
+		rdfs:label "Data Package"
+
+Class: :Package
+
+
+Class: :Data
+
+
+Class: :Account
+
+
+Class: :Visitor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Github
+
+
+Class: :Lot
+
+
+Class: :System
+
+
+Class: :Admin
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Someone
+
+
+Class: :They
+
+
+Class: :Client
+
+
+Class: :Command
+
+
+Class: :It
+
+
+Class: :Consumer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ResourceData
+	SubClassOf: :Data
+	Annotations:
+		rdfs:label "Resource Data"
+
+Class: :Resource
+
+
+Class: :Copy
+
+
+Class: :Download
+
+
+Class: :View
+
+
+Class: :Sense
+
+
+Class: :World
+
+
+Class: :Datapackage
+
+
+Class: :Result
+
+
+Class: :Much
+
+
+Class: :Example
+
+
+Class: :Description
+
+
+Class: :Developer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :DataAnalyst
+	SubClassOf: :Analyst
+	Annotations:
+		rdfs:label "Data Analyst",
+		rdfs:comment "Functional Role"
+
+Class: :Analyst
+
+
+Class: :Form
+
+
+Class: :Version
+
+
+Class: :WebDeveloper
+	SubClassOf: :Developer
+	Annotations:
+		rdfs:label "Web Developer",
+		rdfs:comment "Functional Role"
+
+Class: :Web
+
+
+Class: :ConsumerSystem
+	Annotations:
+		rdfs:label "Consumer System"
+
+Class: :Access
+
+
+Class: :Detail
+
+
+Class: :Script
+
+
+Class: :Change
+
+
+Class: :Action
+
+
+Class: :Profile
+
+
+Class: :Owner
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Information
+
+
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Membership
+
+
+Class: :Ability
+
+
+Class: :People
+
+
+Class: :Control
+
+
+Class: :ConfigurationParameter
+	SubClassOf: :Parameter
+	Annotations:
+		rdfs:label "Configuration Parameter"
+
+Class: :Parameter
+
+
+Class: :Configuration
+
+
+Class: :Metric
+
+
+Class: :PricingPlan
+	SubClassOf: :Plan
+	Annotations:
+		rdfs:label "Pricing Plan"
+
+Class: :Plan
+
+
+Class: :Pricing
+
+
+Class: :What
+
+
+Class: :Team
+
+
+Class: :SystemAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "System Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Administrator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ReleaseEngineer
+	SubClassOf: :Engineer
+	Annotations:
+		rdfs:label "Release Engineer",
+		rdfs:comment "Functional Role"
+
+Class: :Engineer
+
+
+Class: :Release
+
+
+Class: :Forward
+
+
+Class: :LabAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Lab Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Lab
+
+
+Class: :Colour
+
+
+Class: :NeurohubDependency
+	SubClassOf: :Dependency
+	Annotations:
+		rdfs:label "Neurohub Dependency"
+
+Class: :Dependency
+
+
+Class: :Neurohub
+
+
+Class: :BookPage
+	SubClassOf: :Page
+	Annotations:
+		rdfs:label "Book Page"
+
+Class: :Page
+
+
+Class: :Book
+
+
+Class: :Researcher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :File
+
+
+Class: :Alert
+
+
+Class: :Build
+
+
+Class: :Supervisor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Time
+
+
+Class: :Tag
+
+
+Class: :SearchResult
+	SubClassOf: :Result
+	Annotations:
+		rdfs:label "Search Result"
+
+Class: :Search
+
+
+Class: :DataFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "Data File"
+
+Class: :Link
+
+
+Class: :MetadataField
+	SubClassOf: :Field
+	Annotations:
+		rdfs:label "Metadata Field"
+
+Class: :Field
+
+
+Class: :Metadata
+
+
+Class: :Way
+
+
+Class: :Protocol
+
+
+Class: :Run
+
+
+Class: :PageTemplate
+	SubClassOf: :Template
+	Annotations:
+		rdfs:label "Page Template"
+
+Class: :Template
+
+
+Class: :Reference
+
+
+Class: :Provenance
+
+
+Class: :Table
+
+
+Class: :LabMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Lab Member",
+		rdfs:comment "Functional Role"
+
+Class: :Member
+
+
+Class: :Event
+
+
+Class: :Inventory
+
+
+Class: :Spreadsheet
+
+
+Class: :Cost
+
+
+Class: :Option
+
+
+Class: :Centre
+
+
+Class: :Calendar
+
+
+Class: :DataSet
+	SubClassOf: :Set
+	Annotations:
+		rdfs:label "Data Set"
+
+Class: :Set
+
+
+Class: :Support
+
+
+Class: :Service
+
+
+Class: :Display
+
+
+Class: :Type
+
+
+Class: :Period
+
+
+Class: :Juniorresearcher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :LevelRepository
+	SubClassOf: :Repository
+	Annotations:
+		rdfs:label "Level Repository"
+
+Class: :Repository
+
+
+Class: :Level
+
+
+Class: :GroupLevel
+	SubClassOf: :Level
+	Annotations:
+		rdfs:label "Group Level"
+
+Class: :Group
+
+
+Class: :PI
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Project
+
+
+Class: :DMP
+
+
+Class: :DataManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Data Manager",
+		rdfs:comment "Functional Role"
+
+Class: :Manager
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Usage
+
+
+Class: :RepositoryOwner
+	SubClassOf: :Owner
+	Annotations:
+		rdfs:label "Repository Owner",
+		rdfs:comment "Functional Role"
+
+Class: :ItManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "It Manager",
+		rdfs:comment "Functional Role"
+
+Class: :ResourceRequirement
+	SubClassOf: :Requirement
+	Annotations:
+		rdfs:label "Resource Requirement"
+
+Class: :Requirement
+
+
+Class: :Kind
+
+
+Class: :StaffMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Staff Member",
+		rdfs:comment "Functional Role"
+
+Class: :Staff
+
+
+Class: :SecurityRequirement
+	SubClassOf: :Requirement
+	Annotations:
+		rdfs:label "Security Requirement"
+
+Class: :Security
+
+
+Class: :ItStaff
+	SubClassOf: :Staff
+	Annotations:
+		rdfs:label "It Staff"
+
+Class: :DataSensitivity
+	SubClassOf: :Sensitivity
+	Annotations:
+		rdfs:label "Data Sensitivity"
+
+Class: :Sensitivity
+
+
+Class: :Legalofficer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :DataLibrarian
+	SubClassOf: :Librarian
+	Annotations:
+		rdfs:label "Data Librarian",
+		rdfs:comment "Functional Role"
+
+Class: :Librarian
+
+
+Class: :Pointer
+
+
+Class: :Estimate
+
+
+Class: :Obligation
+
+
+Class: :Archivemanager
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Status
+
+
+Class: :DataType
+	SubClassOf: :Type
+	Annotations:
+		rdfs:label "Data Type"
+
+Class: :Right
+
+
+Class: :ResearchHead
+	SubClassOf: :Head
+	Annotations:
+		rdfs:label "Research Head",
+		rdfs:comment "Functional Role"
+
+Class: :Head
+
+
+Class: :Research
+
+
+Class: :Identifier
+
+
+Class: :Funder
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Stakeholder
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Date
+
+
+Class: :MetadataManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Metadata Manager",
+		rdfs:comment "Functional Role"
+
+Class: :MetadataDescription
+	Annotations:
+		rdfs:label "Metadata Description"
+
+Class: :Rector
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :TermResource
+	Annotations:
+		rdfs:label "Term Resource"
+
+Class: :TimePlan
+	SubClassOf: :Plan
+	Annotations:
+		rdfs:label "Time Plan"
+
+Class: :DataManagement
+	Annotations:
+		rdfs:label "Data Management"
+
+Class: :Check
+
+
+Class: :DataPaper
+	Annotations:
+		rdfs:label "Data Paper"
+
+Class: :ResearchPublication
+	SubClassOf: :Publication
+	Annotations:
+		rdfs:label "Research Publication"
+
+Class: :Publication
+
+
+Class: :Report
+
+
+Class: :Agreement
+
+
+Class: :RepositoryOperator
+	SubClassOf: :Operator
+	Annotations:
+		rdfs:label "Repository Operator",
+		rdfs:comment "Functional Role"
+
+Class: :Operator
+
+
+Class: :StorageSize
+	Annotations:
+		rdfs:label "Storage Size"
+
+Class: :ItOfficer
+	SubClassOf: :Officer
+	Annotations:
+		rdfs:label "It Officer",
+		rdfs:comment "Functional Role"
+
+Class: :Officer
+
+
+Class: :Compliance
+
+
+Class: :CentreDirector
+	SubClassOf: :Director
+	Annotations:
+		rdfs:label "Centre Director",
+		rdfs:comment "Functional Role"
+
+Class: :Director
+
+
+Class: :SummaryReport
+	SubClassOf: :Report
+	Annotations:
+		rdfs:label "Summary Report"
+
+Class: :Summary
+
+
+Class: :Trend
+
+
+Class: :SupportOfficer
+	SubClassOf: :Officer
+	Annotations:
+		rdfs:label "Support Officer",
+		rdfs:comment "Functional Role"
+
+Class: :ResearchIntegrity
+	SubClassOf: :Integrity
+	Annotations:
+		rdfs:label "Research Integrity",
+		rdfs:comment "Functional Role"
+
+Class: :Integrity
+
+
+Class: :SecurityProtocol
+	Annotations:
+		rdfs:label "Security Protocol"
+
+Class: :Archive
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Step
+
+
+Class: :Which
+
+
+Class: :Citation
+
+
+Class: :SecurityLevel
+	SubClassOf: :Level
+	Annotations:
+		rdfs:label "Security Level"
+
+Class: :DataSteward
+	SubClassOf: :Steward
+	Annotations:
+		rdfs:label "Data Steward",
+		rdfs:comment "Functional Role"
+
+Class: :Steward
+
+
+Class: :StorageSystem
+	Annotations:
+		rdfs:label "Storage System"
+
+Class: :Section
+
+
+Class: :ManagerPost
+	Annotations:
+		rdfs:label "Manager Post"
+
+Class: :Expertise
+
+
+Class: :Intention
+
+
+Class: :Anonymization
+
+
+Class: :RepositoryManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Repository Manager",
+		rdfs:comment "Functional Role"
+
+Class: :DataArchive
+	Annotations:
+		rdfs:label "Data Archive"
+
+Class: :ApplicationAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Application Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Application
+
+
+Class: :Password
+
+
+Class: :EADFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "EAD File"
+
+Class: :EAD
+
+
+Class: :Archivist
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :LDAP
+
+
+Class: :SourceRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Source Record"
+
+Class: :Record
+
+
+Class: :Source
+
+
+Class: :IdentifierString
+	SubClassOf: :String
+	Annotations:
+		rdfs:label "Identifier String"
+
+Class: :String
+
+
+Class: :Import
+
+
+Class: :AgentInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Agent Information"
+
+Class: :Agent
+
+
+Class: :AgentRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Agent Record"
+
+Class: :Property
+
+
+Class: :Note
+
+
+Class: :UserAccount
+	SubClassOf: :Account
+	Annotations:
+		rdfs:label "User Account"
+
+Class: :Location
+
+
+Class: :ObjectRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Object Record"
+
+Class: :Object
+
+
+Class: :ManagementSubrecord
+	SubClassOf: :Subrecord
+	Annotations:
+		rdfs:label "Management Subrecord"
+
+Class: :Subrecord
+
+
+Class: :Management
+
+
+Class: :Hierarchy
+
+
+Class: :DescriptionHierarchy
+	SubClassOf: :Hierarchy
+	Annotations:
+		rdfs:label "Description Hierarchy"
+
+Class: :Component
+
+
+Class: :DigitalObject
+	SubClassOf: :Object
+	Annotations:
+		rdfs:label "Digital Object"
+
+Class: :Digital
+
+
+Class: :Instance
+
+
+Class: :EADData
+	SubClassOf: :Data
+	Annotations:
+		rdfs:label "EAD Data"
+
+Class: :Update
+
+
+Class: :EntryUser
+	SubClassOf: :User
+	Annotations:
+		rdfs:label "Entry User",
+		rdfs:comment "Functional Role"
+
+Class: :Entry
+
+
+Class: :DescriptionInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Description Information"
+
+Class: :ArchivalDescription
+	SubClassOf: :Description
+	Annotations:
+		rdfs:label "Archival Description"
+
+Class: :Archival
+
+
+Class: :ManagerRole
+	SubClassOf: :Role
+	Annotations:
+		rdfs:label "Manager Role"
+
+Class: :Role
+
+
+Class: :ResourceRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Resource Record"
+
+Class: :SubjectRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Subject Record"
+
+Class: :Subject
+
+
+Class: :LocationInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Location Information"
+
+Class: :Depositor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :UserInterface
+	SubClassOf: :Interface
+	Annotations:
+		rdfs:label "User Interface"
+
+Class: :Interface
+
+
+Class: :Tool
+
+
+Class: :License
+
+
+Class: :DOI
+
+
+Class: :DisposalPolicy
+	SubClassOf: :Policy
+	Annotations:
+		rdfs:label "Disposal Policy"
+
+Class: :Policy
+
+
+Class: :Disposal
+
+
+Class: :Impact
+
+
+Class: :Guarantee
+
+
+Class: :ResearchData
+	SubClassOf: :Data
+	Annotations:
+		rdfs:label "Research Data"
+
+Class: :Behalf
+
+
+Class: :ManagementTask
+	Annotations:
+		rdfs:label "Management Task"
+
+Class: :DataReuser
+	SubClassOf: :Reuser
+	Annotations:
+		rdfs:label "Data Reuser",
+		rdfs:comment "Functional Role"
+
+Class: :Reuser
+
+
+Class: :ExampleCitation
+	SubClassOf: :Citation
+	Annotations:
+		rdfs:label "Example Citation"
+
+Class: :URL
+
+
+Class: :Externalcollaborator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Externalcoordinator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ArchiveAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Archive Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :BathData
+	SubClassOf: :Data
+	Annotations:
+		rdfs:label "Bath Data"
+
+Class: :Bath
+
+
+Class: :Quality
+
+
+Class: :Aspect
+
+
+Class: :Use
+
+
+Class: :InformationManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Information Manager",
+		rdfs:comment "Functional Role"
+
+Class: :ResearchInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Research Information"
+
+Class: :CitationCount
+	SubClassOf: :Count
+	Annotations:
+		rdfs:label "Citation Count"
+
+Class: :Count
+
+
+Class: :Univitservice
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :WebLink
+	SubClassOf: :Link
+	Annotations:
+		rdfs:label "Web Link"
+
+Class: :Academicpublisher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ArchivalPlan
+	SubClassOf: :Plan
+	Annotations:
+		rdfs:label "Archival Plan"
+
+Class: :Fundingbody
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Collection
+
+
+Class: :RepositoryInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Repository Information"
+
+Class: :DAMSManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "DAMS Manager",
+		rdfs:comment "Functional Role"
+
+Class: :DAMS
+
+
+Class: :Name
+
+
+Class: :CopyrightStatus
+	SubClassOf: :Status
+	Annotations:
+		rdfs:label "Copyright Status"
+
+Class: :Copyright
+
+
+Class: :Statute
+
+
+Class: :Collection(s
+
+
+Class: :ComponentPart
+	SubClassOf: :Part
+	Annotations:
+		rdfs:label "Component Part"
+
+Class: :Part
+
+
+Class: :RightStatus
+	SubClassOf: :Status
+	Annotations:
+		rdfs:label "Right Status"
+
+Class: :Structure
+
+
+Class: :ComponentHierarchy
+	SubClassOf: :Hierarchy
+	Annotations:
+		rdfs:label "Component Hierarchy"
+
+Class: :ContentFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "Content File"
+
+Class: :Content
+
+
+Class: :Method
+
+
+Class: :PreservationManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Preservation Manager"
+
+Class: :Preservation
+
+
+Class: :Title
+
+
+Class: :CollectionObject
+	SubClassOf: :Object
+	Annotations:
+		rdfs:label "Collection Object"
+
+Class: :Place
+
+
+Class: :Facet
+
+
+Class: :Language(s
+
+
+Class: :NameRecord
+	SubClassOf: :Record
+	Annotations:
+		rdfs:label "Name Record"
+
+Class: :Context
+
+
+Class: :Any
+
+
+Class: :LibraryPolicy
+	SubClassOf: :Policy
+	Annotations:
+		rdfs:label "Library Policy"
+
+Class: :Library
+
+
+Class: :Act
+
+
+Class: :Agent(
+
+
+Class: :Outcome
+
+
+Class: :Statement
+
+
+Class: :Mistake
+
+
+Class: :DateInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Date Information"
+
+Class: :Restriction
+
+
+Class: :RoomAccess
+	Annotations:
+		rdfs:label "Room Access"
+
+Class: :RightStatement
+	Annotations:
+		rdfs:label "Right Statement"
+
+Class: :AccessCopy
+	SubClassOf: :Copy
+	Annotations:
+		rdfs:label "Access Copy"
+
+Class: :This
+
+
+Class: :FileSize
+	Annotations:
+		rdfs:label "File Size"
+
+Class: :AssistantArchivist
+	SubClassOf: :Archivist
+	Annotations:
+		rdfs:label "Assistant Archivist",
+		rdfs:comment "Functional Role"
+
+Class: :Assistant
+
+
+Class: :Paper
+
+
+Class: :PreservationAction
+	Annotations:
+		rdfs:label "Preservation Action"
+
+Class: :Scan
+
+
+Class: :ResearchRequest
+	Annotations:
+		rdfs:label "Research Request"
+
+Class: :QualityScan
+	SubClassOf: :Scan
+	Annotations:
+		rdfs:label "Quality Scan"
+
+Class: :AccessDerivative
+	SubClassOf: :Derivative
+	Annotations:
+		rdfs:label "Access Derivative"
+
+Class: :Derivative
+
+
+Class: :Error
+
+
+Class: :Task
+
+
+Class: :Image
+
+
+Class: :Operation
+
+
+Class: :Work
+
+
+Class: :DonorRepresentative
+	SubClassOf: :Representative
+	Annotations:
+		rdfs:label "Donor Representative",
+		rdfs:comment "Functional Role"
+
+Class: :Representative
+
+
+Class: :Donor
+
+
+Class: :Accrual
+
+
+Class: :CitationData
+	SubClassOf: :Data
+	Annotations:
+		rdfs:label "Citation Data"
+
+Class: :Thing
+
+
+Class: :Photograph
+
+
+Class: :Notification
+
+
+Class: :Request
+
+
+Class: :CitationInformation
+	SubClassOf: :Information
+	Annotations:
+		rdfs:label "Citation Information"
+
+Class: :ArchivalMaterial
+	SubClassOf: :Material
+	Annotations:
+		rdfs:label "Archival Material"
+
+Class: :Material
+
+
+Class: :ArchivalContent
+	SubClassOf: :Content
+	Annotations:
+		rdfs:label "Archival Content"
+
+Class: :Keyword
+
+
+Class: :CollectionFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "Collection File"
+
+Class: :CollectionImage
+	SubClassOf: :Image
+	Annotations:
+		rdfs:label "Collection Image"
+
+Class: :Everything
+
+
+Class: :WorkPaper
+	SubClassOf: :Paper
+	Annotations:
+		rdfs:label "Work Paper"
+
+Class: :PublicationRequirement
+	Annotations:
+		rdfs:label "Publication Requirement"
+
+Class: :Question
+
+
+Class: :ReferenceService
+	Annotations:
+		rdfs:label "Reference Service"
+
+Class: :Thumbnail
+
+
+Class: :Folder
+
+
+Class: :ResearchService
+	Annotations:
+		rdfs:label "Research Service"
+
+Class: :MaterialType
+	SubClassOf: :Type
+	Annotations:
+		rdfs:label "Material Type"
+
+Class: :UserGroup
+	SubClassOf: :Group
+	Annotations:
+		rdfs:label "User Group"
+
+Class: :UserRole
+	SubClassOf: :Role
+	Annotations:
+		rdfs:label "User Role"
+
+Class: :FacultyMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Faculty Member",
+		rdfs:comment "Functional Role"
+
+Class: :Faculty
+
+
+Class: :ResearchMaterial
+	Annotations:
+		rdfs:label "Research Material"
+
+Class: :Student
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Attribution
+
+
+Class: :Patron
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Many
+
+
+Class: :IRAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "IR Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :IR
+
+
+Class: :NameChange
+	SubClassOf: :Change
+	Annotations:
+		rdfs:label "Name Change"
+
+Class: :AccessEmbargo
+	SubClassOf: :Embargo
+	Annotations:
+		rdfs:label "Access Embargo"
+
+Class: :Embargo
+
+
+Class: :Crossdeptprojteammember
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Shibboleth
+
+
+Class: :UsageStatistic
+	SubClassOf: :Statistic
+	Annotations:
+		rdfs:label "Usage Statistic"
+
+Class: :Statistic
+
+
+Class: :List
+
+
+Class: :ExtensionAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Extension Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Extension
+
+
+Class: :Workflow
+
+
+Class: :Versioning
+
+
+Class: :Item
+
+
+Class: :TeamMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Team Member",
+		rdfs:comment "Functional Role"
+
+Class: :Author
+
+
+Class: :Academicresearcher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Classification
+
+
+Class: :RelationshipGroup
+	SubClassOf: :Group
+	Annotations:
+		rdfs:label "Relationship Group"
+
+Class: :Relationship
+
+
+Class: :Externaluser
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Cornell
+
+
+Class: :Teachingfacultymember
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ServiceObligation
+	Annotations:
+		rdfs:label "Service Obligation"
+
+Class: :TitleDescription
+	SubClassOf: :Description
+	Annotations:
+		rdfs:label "Title Description"
+
+Class: :Batch
+
+
+Class: :Platform
+
+
+Class: :Researcherid
+
+
+Class: :ContentManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Content Manager",
+		rdfs:comment "Functional Role"
+
+Class: :IRReminder
+	SubClassOf: :Reminder
+	Annotations:
+		rdfs:label "IR Reminder"
+
+Class: :Reminder
+
+
+Class: :ExtensionEducator
+	SubClassOf: :Educator
+	Annotations:
+		rdfs:label "Extension Educator",
+		rdfs:comment "Functional Role"
+
+Class: :Educator
+
+
+Class: :PublicationDate
+	SubClassOf: :Date
+	Annotations:
+		rdfs:label "Publication Date"
+
+Class: :Name(s
+
+
+Class: :ReleaseCalendar
+	SubClassOf: :Calendar
+	Annotations:
+		rdfs:label "Release Calendar"
+
+Class: :Librarydiscoveryoperator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Response
+
+
+Class: :RepositoryFile
+	SubClassOf: :File
+	Annotations:
+		rdfs:label "Repository File"
+
+Class: :FunderRequirement
+	Annotations:
+		rdfs:label "Funder Requirement"
+
+Class: :ReleaseDate
+	SubClassOf: :Date
+	Annotations:
+		rdfs:label "Release Date"
+
+Class: :AdministratorAccount
+	SubClassOf: :Account
+	Annotations:
+		rdfs:label "Administrator Account"
+
+Class: :Email
+
+
+Class: :PatronAccount
+	SubClassOf: :Account
+	Annotations:
+		rdfs:label "Patron Account"
+
+Class: :AssetManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Asset Manager",
+		rdfs:comment "Functional Role"
+
+Class: :Asset
+
+
+Class: :Mechanism
+
+
+Class: :Commitment
+
+
+Class: :TermAccess
+	Annotations:
+		rdfs:label "Term Access"
+
+Class: :DataCurator
+	SubClassOf: :Curator
+	Annotations:
+		rdfs:label "Data Curator",
+		rdfs:comment "Functional Role"
+
+Class: :Curator
+
+
+Class: :Scholarship
+
+
+Class: :DigitalArchive
+	Annotations:
+		rdfs:label "Digital Archive"
+
+Class: :Disposition
+
+
+Class: :SystemProvider
+	SubClassOf: :Provider
+	Annotations:
+		rdfs:label "System Provider"
+
+Class: :Provider
+
+
+Class: :Up
+
+
+Class: :Datum
+
+
+Class: :Storage
+
+
+Class: :Database
+
+
+Class: :Investigator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Size
+
+
+Class: :Video
+
+
+Class: :Post
+
+
+Class: :Term
+
+
+Class: :Convenor
+
+
+Class: :Documentation
+
+
+Class: :Affiliation
+
+
+Class: :Aid
+
+
+Class: :Specialist
+
+
+Class: :Id
+
+
+Class: :Users
+
+
+Class: :Importer
+
+
+Class: :Segment
+
+
+Class: :Coordinate
+
+
+Class: :Room
+
+
+Class: :Medium
+
+
+Class: :Text
+
+
+Class: :Clip
+
+
+Class: :Card
+
+
+Class: :Credential
+
+
+Class: :Searching
+
+
+Class: :MRIOperator
+	Annotations:
+		rdfs:label "MRI Operator",
+		rdfs:comment "Functional Role"
+
+Class: :EthicsManager
+	Annotations:
+		rdfs:label "Ethics Manager",
+		rdfs:comment "Functional Role"
+
+Class: :PostgraduateConvenor
+	Annotations:
+		rdfs:label "Postgraduate Convenor",
+		rdfs:comment "Functional Role"
+
+Class: :EvaluationManager
+	Annotations:
+		rdfs:label "Evaluation Manager",
+		rdfs:comment "Functional Role"
+
+Class: :MigrationSpecialist
+	Annotations:
+		rdfs:label "Migration Specialist",
+		rdfs:comment "Functional Role"
+
+Class: :FacilityManager
+	Annotations:
+		rdfs:label "Facility Manager",
+		rdfs:comment "Functional Role"
+

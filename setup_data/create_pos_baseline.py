@@ -31,6 +31,7 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to get POS tags of the elements of the annotations")
     parser.add_argument("load_baseline_path", type = str, help = "path of file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
+    parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     
     args = parser.parse_args()
 
@@ -46,7 +47,14 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        save_folder_path = "nlp\\nlp_outputs\\nlp_outputs_original\\pos_baseline\\" + args.save_name + "_baseline_pos.json"
+        if args.data_type == "BKLG":
+            data_type_folder = "individual_backlog"
+        elif args.data_type == "CAT":
+            data_type_folder = "categories"
+        else:
+            data_type_folder = "global"
+
+        save_folder_path = "nlp\\nlp_outputs\\"  + data_type_folder + "nlp_outputs_original\\pos_baseline\\" + args.save_name + "_baseline_pos.json"
         return args.load_baseline_path, save_folder_path
 
 def load_data(load_path):

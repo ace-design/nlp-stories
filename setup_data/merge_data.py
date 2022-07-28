@@ -6,12 +6,24 @@ import sys
 
 def main():
     all_path, merge_path = command()
-    all_data = extract_data(all_path)
-    merge_data = extract_data(merge_path)
 
-    all_data = all_data + merge_data
+    if ".json" in all_path and ".json" in merge_path:
+        all_data = extract_data_json(all_path)
+        merge_data = extract_data_json(merge_path)
 
-    save_file(all_path, all_data)
+        all_data = all_data + merge_data
+
+        save_file_json(all_path, all_data)
+    elif ".txt" in all_path and ".txt" in merge_path:
+        all_data = extract_data_txt(all_path)
+        merge_data = extract_data_txt(merge_path)
+
+        all_data = all_data + merge_data
+
+        save_file_txt(all_path, all_data)
+    else:
+        sys.tracebacklimit = 0
+        raise Exception ("incompatible files. Both file must either be json files or txt files.")
 
 def command():
     '''
@@ -31,10 +43,6 @@ def command():
     
     args = parser.parse_args()
 
-    if not(args.load_all_path.endswith(".json")) and not(args.load_merge_path.endswith(".json")):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. input file type is .jsonl")
-
     try:
         load_file = open(args.load_all_path)
         load_file.close()
@@ -47,9 +55,9 @@ def command():
     else:
         return args.load_all_path, args.load_merge_path
 
-def extract_data(path):
+def extract_data_json(path):
     '''
-    extracts the data from the file
+    extracts the data from the json file
     
     Parameters:
     path (str): path of file
@@ -63,7 +71,7 @@ def extract_data(path):
 
     return data
 
-def save_file(path, data):
+def save_file_json(path, data):
     '''
     save the results into json file
 
@@ -73,6 +81,34 @@ def save_file(path, data):
     '''
     with open(path,"w", encoding="utf-8") as file:
         json.dump(data, file, indent = 4)
+    print("File is saved")
+
+def extract_data_txt(path):
+    '''
+    extracts the data from the txt file
+    
+    Parameters:
+    path (str): path of file
+
+    Returns:
+    data (list): the data of each story in the file
+    '''
+
+    file = open(path, encoding= "utf-8")
+    data = file.readlines()
+
+    return data
+
+def save_file_txt(path, data):
+    '''
+    save the results into txt file
+
+    Parameters:
+        path (str): path of file to be saved
+        data (list): info to be saved onto file
+    '''
+    with open(path,"w", encoding="utf-8") as file:
+        file.writelines(data)
     print("File is saved")
 
 if __name__ == "__main__":

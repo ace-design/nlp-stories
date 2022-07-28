@@ -30,6 +30,7 @@ def extract_visual_Narrator():
     data (str) : output from the command window
     args.save_name (str) : path of file to save restults
     stories (list) : story text
+    data_type (str): type of grouping of the data
 
     Raises:
     FileNotFoundError: raises excpetion
@@ -39,6 +40,8 @@ def extract_visual_Narrator():
     parser = argparse.ArgumentParser(description = "This script is to run visual narrator on the given input datset")
     parser.add_argument("load_path", type = str, help = "path to file of evaluation")
     parser.add_argument("save_name", type = str, help = "name of file to save")
+    parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
+
     args = parser.parse_args()
 
     try:
@@ -58,17 +61,24 @@ def extract_visual_Narrator():
             text.append(story)
         read_file.close()
         
-        write_file = open("visual_narrator_extraction\\strip_text_visual_narrator.txt", "w")
+        write_file = open("nlp\\nlp_tools\\visual_narrator\\visual_narrator_extraction\\strip_text_visual_narrator.txt", "w")
         for story in text:
             write_file.write(story + "\n")
         write_file.close()
         
         #runs visual narrator of stripped off PID
-        command = subprocess.run("python run.py visual_narrator_extraction\\strip_text_visual_narrator.txt -u", capture_output = True)
+        command = subprocess.run("python nlp\\nlp_tools\\visual_narrator\\run.py nlp\\nlp_tools\\visual_narrator\\visual_narrator_extraction\\strip_text_visual_narrator.txt -u", capture_output = True)
         #data = command.stdout.decode()
         data = command.stdout.decode('latin-1')
 
-        save_path = "nlp\\nlp_outputs\\nlp_outputs_original\\visual_narrator\\" + args.save_name + "_visual_narrator.json"
+        if args.data_type == "BKLG":
+            data_type_folder = "individual_backlog"
+        elif args.data_type == "CAT":
+            data_type_folder = "categories"
+        else:
+            data_type_folder = "global"
+
+        save_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_original\\visual_narrator\\" + args.save_name + "_visual_narrator.json"
 
         return data, save_path, stories
 

@@ -1,0 +1,1213 @@
+[
+    {
+        "Text": "#G16# As Metadata Architect, I want to be able to use batch tools to ingest, update, and export descriptive and administrative metadata in lieu of METS ingest.",
+        "Persona": [
+            "Metadata Architect"
+        ],
+        "Entity": [
+            "Met",
+            "Export",
+            "Tool",
+            "Administrative",
+            "Batch Tools",
+            "Descriptive , Update , Ingest Metadata"
+        ],
+        "Action": [
+            "Use Tools Export",
+            "Use Batch Tools To Descriptive, Update, Ingest Metadata In Lieu Of Mets",
+            "Use Tools Administrative"
+        ]
+    },
+    {
+        "Text": "#G16# As a metadata editor, I would like to be able to add and edit metadata without assistance.",
+        "Persona": [
+            "Metadata Editor"
+        ],
+        "Entity": [
+            "Metadata",
+            "Assistance"
+        ],
+        "Action": [
+            "Add Metadata Without Assistance",
+            "Edit Metadata Without Assistance"
+        ]
+    },
+    {
+        "Text": "#G16# As Metadata Architect, I want metadata export to contain both item- and component-level metadata.",
+        "Persona": [
+            "Metadata Architect"
+        ],
+        "Entity": [
+            "Component Level Metadata"
+        ],
+        "Action": [
+            "Contain Component Level Metadata"
+        ]
+    },
+    {
+        "Text": "#G16# As repository developer, I want to find opportunities to merge functionality in batch tools.",
+        "Persona": [
+            "Repository Developer"
+        ],
+        "Entity": [
+            "Batch Tools",
+            "Functionality"
+        ],
+        "Action": [
+            "Find",
+            "Merge Functionality In Batch Tools"
+        ]
+    },
+    {
+        "Text": "#G16# As a metadata batch editor, I'd like to be able to export and import descriptive and administrative metadata for multiple collections together.",
+        "Persona": [
+            "Metadata , Batch Editor"
+        ],
+        "Entity": [
+            "Administrative",
+            "Descriptive Metadata",
+            "Multiple Collection"
+        ],
+        "Action": [
+            "Export Descriptive Metadata For Multiple Collections",
+            "Export Administrative",
+            "Import Administrative",
+            "Import Descriptive Metadata For Multiple Collections"
+        ]
+    },
+    {
+        "Text": "#G16# As a data depositor, I'd like to use the Simple Ingest Format to update existing items and components creating new versions where they already exist and creating new ones where the don't.",
+        "Persona": [
+            "Datum Depositor"
+        ],
+        "Entity": [
+            "Ingest , Simple Format",
+            "Component",
+            "New Version",
+            "Exist Item"
+        ],
+        "Action": [
+            "Create New Versions",
+            "Update Existing Items",
+            "Create New Versions Where Already Exist",
+            "Update Component",
+            "Use The Ingest, Simple Format",
+            "Create New Ones Where Then'T Do"
+        ]
+    },
+    {
+        "Text": "#G16# As a metadata batch editor, I'd like to be able to mark any search results as an export set for metadata remediation.",
+        "Persona": [
+            "Metadata , Batch Editor"
+        ],
+        "Entity": [
+            "Search Results",
+            "Export",
+            "Metadata Remediation"
+        ],
+        "Action": [
+            "Mark Any Search Results As An Export For Metadata Remediation"
+        ]
+    },
+    {
+        "Text": "#G16# As a metadata batch editor, I want to export the CSV, remove the fields I'm not editing, edit the remaining fields, and upload the remediated file to overwrite values",
+        "Persona": [
+            "Datum Depositor"
+        ],
+        "Entity": [
+            "Ingest , Simple Format",
+            "Item",
+            "Exist Collection"
+        ],
+        "Action": [
+            "Add Items To An Existing Collection",
+            "Use The Ingest, Simple Format"
+        ]
+    },
+    {
+        "Text": "#G16# As a data depositor, I'd like to use the Simple Ingest Format to add items to an existing collection.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Object",
+            "Item",
+            "Repository",
+            "Archivesspace"
+        ],
+        "Action": [
+            "Deposit Items Into The Repository Within Archivesspace",
+            "View The Status Of Those Objects In Archivesspace"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to deposit items into the repository from within ArchivesSpace and to view the status of those objects in ArchivesSpace.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Datum",
+            "Date"
+        ],
+        "Action": [
+            "Hide",
+            "Set A Date",
+            "Delete",
+            "Set A Date After Which Data Expire"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to be able to set a date after which data will expire and be deleted or hidden then deleted. I would like the scheduled records deletion date to be displayed on the item and and component pages.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Item",
+            "Repository"
+        ],
+        "Action": [
+            "Track"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I'd like a way to track who is financially responsible for each item in the repository. That should probably be a person contact including name, phone, email, maybe title and address. I should be able to run a report periodically showing the storage consumed by each financial contact.",
+        "Persona": [
+            "Collection Manager"
+        ],
+        "Entity": [
+            "Item",
+            "Collection"
+        ],
+        "Action": [
+            "Map An Item From Collection To Another",
+            "Map Item"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection manager, I would like to map an item or items from one collection to another so that an item may administratively belong to one collection but could appear in other collections.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Date Delimiter",
+            "Search String"
+        ],
+        "Action": [
+            "Add A Date Delimiter To A Search String"
+        ]
+    },
+    {
+        "Text": "#G16# As a developer, determine if we can use the in-built Fedora 4 event audit services.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Collection",
+            "Replication Policy"
+        ],
+        "Action": [
+            "Specify The Remote Replication Policy For Each Collection"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I want to specify the remote replication policy for each collection. I want to be able to elect to either replicate remotely or not and possibly to replicate beyond the primary remote site. E.g., some collections may not leave Duke, some may be replicated to DuraCloud, and some may be replicated to both DuraCloud and Glacier.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Ingest",
+            "Staff Interface",
+            "Replication",
+            "Repository",
+            "Item Page",
+            "Collection",
+            "Remote Status",
+            "Component",
+            "Storage Site"
+        ],
+        "Action": [
+            "Display The Remote Status In Component",
+            "Display The Remote Replication Status In Each Item Page In The Staff Interface"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want the repository to queue my collection for replication upon ingest to our remote storage site and to display the remote replication status in each item and component page in the staff interface. I would also like to see a summary of this at the collection level on my dashboard.",
+        "Persona": [
+            "Protected , Data Network",
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Encrypt File",
+            "Server",
+            "Key",
+            "Storage Site"
+        ],
+        "Action": [
+            "Encrypted With A Key On That Server"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator housed in the Protected Data Network, I want my collection to be encrypted with a key maintained on that server, a checksum made and stored of the encrypted file, and the encrypted file replicated to our remote storage site.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Repository",
+            "Object",
+            "Change",
+            "Doi",
+            "Metadata"
+        ],
+        "Action": [
+            "The Repository Assigned A Doi To That Object"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, when I update the metadata for an object, that change should be propagated to the DOI system if the repository has assigned a DOI to that object.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Person",
+            "Name Authority Control",
+            "System",
+            "Duid",
+            "Symplectic Element",
+            "Creator",
+            "Interoperability"
+        ],
+        "Action": [
+            "Allow For Interoperability With Other Systems Like Symplectic Elements",
+            "Store The Duid Of The Person",
+            "Creator Store",
+            "Allow For Name Authority Control"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want author/creator to store the DUID of the person to allow for name authority control and interoperability with other systems like Symplectic Elements.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Object",
+            "Embargo"
+        ],
+        "Action": [
+            "Lift An Embargo For An Object"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I would like a simple way to lift an embargo for an object.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Ddr"
+        ],
+        "Action": [
+            "Integrate With Ddr"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want Symplectic Elements to integrate with DDR. They provide a Fedora Connector and Emory is using a hidden Fedora instance that Hydra collects objects for. Note that there is bidirectional communication with Elements.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Permission"
+        ],
+        "Action": [
+            "Made Under The Permissions Configured"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want items to be made available under the permissions they were configured once the embargo date has been reached.",
+        "Persona": [
+            "Web Deposit",
+            "Collection Curator",
+            "Collection"
+        ],
+        "Entity": [
+            "Collection",
+            "Deposit Forms"
+        ],
+        "Action": [
+            "Create Specific Deposit Forms To The Collection"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator for collections that allow web deposit, I would like to be able to create deposit forms specific to the collection.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Collection",
+            "Option",
+            "Deposit",
+            "Embargo Date"
+        ],
+        "Action": [
+            "Allow Some Collections The Option Setting E.G. Deposit",
+            "Allow Some Collections The Option Setting An Embargo Date"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to allow some collections the option of setting an embargo date (e.g. 2017-01-01)at deposit. Item metadata should be discoverable until that date. Once the embargo date is reached, the embargo should be lifted and access to the item should be allowed under the access permissions set on the object.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "License",
+            "Submitter",
+            "Collection",
+            "Deposit",
+            "Specific License"
+        ],
+        "Action": [
+            "The Submitter Not Accept The License",
+            "Presented With A Specific License To The Collection To Denied",
+            "Presented With A Specific License To Deposit",
+            "Presented With A Selection Of Licenses"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want users to be presented with a license or a selection of licenses, specific to the collection, and deposit to be denied if the submitter does not accept the license. The license should be recorded in metadata and displayed alongside the item.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Ingest Etds",
+            "Proquest"
+        ],
+        "Action": [
+            "Batch Ingest Etds"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I need a method to batch ingest ETDs we receive from ProQuest. A script might work, but a GUI would be nice.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Embargo"
+        ],
+        "Action": [
+            "Recognize Embargoes",
+            "Set Embargoes"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I need the batch ingest tool to recognize and set embargoes. Permissions for embargoed items should be allow everyone to view metadata and collection curator and repository administrators to be able to download the files.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Embargo",
+            "Access Controls",
+            "Item",
+            "Configuration",
+            "Date",
+            "Release"
+        ],
+        "Action": [
+            "Lift Embargoes On The Release Date",
+            "Set The Access Controls To The Configuration On Item On That Date"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want the repository to lift embargoes on the release date and set the access controls to the configuration set on item on that date.",
+        "Persona": [
+            "Visitor"
+        ],
+        "Entity": [
+            "Embargo Status",
+            "Way",
+            "Date"
+        ],
+        "Action": [
+            "See The Embargo Status",
+            "Release Clearly Date",
+            "Release",
+            "Highlight In Some Way"
+        ]
+    },
+    {
+        "Text": "#G16# As a visitor, I want to see the embargo status and release date clearly displayed and perhaps highlighted in some way.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Group",
+            "Multiple People",
+            "Specific Collection"
+        ],
+        "Action": [
+            "Deposit Groups In Specific Collections",
+            "Add Multiple People",
+            "Remove Multiple People"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want a method to add and remove multiple people to deposit groups in specific collections. Ideally, I'd be able to set a date that the deposit window closes. The permissions conferred on these depositors should pick up on the collection's default permission.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Embargo"
+        ],
+        "Action": [
+            "Edit The Length Of Embargoes"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want to be able to edit the length of embargoes.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Embargo"
+        ],
+        "Action": [
+            "Remove Embargoes",
+            "Instate Embargoes"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want to be able to remove and instate embargoes.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Descriptive Record",
+            "Fedora",
+            "Etd Item",
+            "Use External"
+        ],
+        "Action": [
+            "Expose The Descriptive Record For Each Etd Item For Use External To Fedora"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want to expose the descriptive record for each ETD item for re-use external to Fedora.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Embargo Privileges",
+            "Repository , Administrator"
+        ],
+        "Action": [
+            "Grant Embargo Privileges To Repository, Other Administrators"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want to be able to grant embargo privileges to other repository administrators.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Deposit Groups",
+            "Individual People"
+        ],
+        "Action": [
+            "Add Individual People From Deposit Groups",
+            "Remove Individual People From Deposit Groups"
+        ]
+    },
+    {
+        "Text": "#G16# As the Digital Records Archivist, I want a method to add and remove individual people from deposit groups.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Author Authority Control"
+        ],
+        "Action": [
+            "Perform Author Authority Control"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to a tool to perform author authority control.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Item",
+            "Collection"
+        ],
+        "Action": [
+            "Move Items From Collection To Another"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to be able to move items from one collection to another.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Repository Content",
+            "Oai Pmh"
+        ],
+        "Action": [
+            "Expose Repository Contents Via Oai Pmh"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want to be able to expose repository contents via OAI-PMH.",
+        "Persona": [
+            "Digital , Records Archivist"
+        ],
+        "Entity": [
+            "Etds",
+            "Repository",
+            "Embargo Metadata"
+        ],
+        "Action": [
+            "View Summary Embargo Metadata For All Etds In The Repository",
+            "Download Summary Embargo Metadata For All Etds In The Repository"
+        ]
+    },
+    {
+        "Text": "#G16# as the Digital Records archivist, I want to view and download summary embargo metadata for all ETDs in the repository",
+        "Persona": [
+            "Batch Submitter"
+        ],
+        "Entity": [
+            "Ingest",
+            "Repository Staff",
+            "Metadata",
+            "Datum",
+            "Document , Simple Format"
+        ],
+        "Action": [
+            "Provide Data In A Documented, Simple Format To The Repository Staff For Ingest",
+            "Provide Metadata"
+        ]
+    },
+    {
+        "Text": "#G16# As a batch submitter, I'd like to be able to provide my data and metadata in a simple, documented format to the repository staff for ingest.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Anonymous User",
+            "Active , Authenticated User"
+        ],
+        "Action": [
+            "View Active, Authenticated Users",
+            "View Anonymous User"
+        ]
+    },
+    {
+        "Text": "#G16# As repository manager, I'd like to be able to view authenticated, active users and anonymous users.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Notification",
+            "User",
+            "Page",
+            "Select Times",
+            "Thing",
+            "Repository",
+            "Message",
+            "Downtime"
+        ],
+        "Action": [
+            "Schedule A Message To Users To Displayed On Each Page On The Repository Between Select Times For Things Like Notification Upcoming Downtime"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I want to be able to schedule a message to users to be displayed on each page on the repository between select times for things like notification of upcoming downtime.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Easy Comprehension",
+            "Recent Error"
+        ],
+        "Action": [
+            "See A Display Of Recent Errors For Easy Comprehension"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I would like to see a display of recent errors deduplicated for easy comprehension like Symplectic Elements provides.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Item",
+            "Deposit Activity",
+            "Component",
+            "Dashboard Statistics",
+            "Total Storage",
+            "Collections Size",
+            "Visualization",
+            "E.g. Sparkline",
+            "Collection"
+        ],
+        "Action": [
+            "View A Dashboard Statistics About Collections Size Including A List Of Collections"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I'd like to be able to view a dashboard statistics about collections size including a list of collections, the number of items and components in each, total storage consumed by each collection, visualization of deposit activity (e.g. sparkline).",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Collection",
+            "Recent Submission"
+        ],
+        "Action": [
+            "See",
+            "Show A Summary Of Recent Submissions To Collection"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I'd like to see a dashboard widget showing a summary of recent submissions to my collection.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Event",
+            "Access",
+            "Repository",
+            "Server"
+        ],
+        "Action": [
+            "Provide Access To The Repository In The Event That The Server Fails",
+            "Continue"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I would like to be able to continue to provide access to the repository in the event that the server fails.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Sla",
+            "Server"
+        ],
+        "Action": [
+            "Provide Sla",
+            "Provide The Server"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I would like to be able to provide the server SLA to data contributors.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Repository Index",
+            "Public Interface",
+            "Access"
+        ],
+        "Action": [
+            "Update The Repository Index Disrupting Access To The Public Interface"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want to be able to update the repository index without disrupting access to the public interface. (See dul-hydra wiki)",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Repository",
+            "Data Interface"
+        ],
+        "Action": [
+            "Provide A Linked Data Interface To The Repository"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want to provide a Linked Data interface to the repository.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Repository",
+            "Symplectic Element",
+            "Bidirectionally"
+        ],
+        "Action": [
+            "Communicate Bidirectionally With The Repository",
+            "Be"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I would like Symplectic Elements to be able to communicate bidirectionally with the repository.",
+        "Persona": [
+            "Repository Developer"
+        ],
+        "Entity": [
+            "Fedora",
+            "Application",
+            "Datum"
+        ],
+        "Action": [
+            "Upgrade To Fedora",
+            "Migrate Datum",
+            "Migrate Applications"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I would like metadata changes made to items with repository-assigned DOIs to be propagated to the EZID.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Etc",
+            "Unique Identifier",
+            "Author",
+            "Work",
+            "Netid",
+            "Duid",
+            "Item",
+            "Creator",
+            "Person"
+        ],
+        "Action": [
+            "Make",
+            "View All Of The Works By That Person",
+            "Identify Authors Of Items By Unique Identifier",
+            "Identify Authors Of Items By Etc",
+            "Identify Authors Of Items By Netid",
+            "Identify Authors Of Items By Duid",
+            "Identify Creator"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to be able to canonically identify authors and creators of my items by unique identifier (DUID, NetID, etc) to make it easier to view all of the works by that person together.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Visitor",
+            "Referer",
+            "Resolver , Abstract Link",
+            "Item"
+        ],
+        "Action": [
+            "Reach Items",
+            "See The Referers For Visitors Use Resolver, Abstracted Links"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to see the referers for visitors who use resolver-abstracted links to reach my items.",
+        "Persona": [
+            "Datum Contributor"
+        ],
+        "Entity": [
+            "Grant Proposals",
+            "Plan",
+            "Data Management",
+            "Disaster Recovery"
+        ],
+        "Action": [
+            "Refer To The Plan In Data Management Plan",
+            "Refer To The Disaster Recovery Plan In Grant Proposals"
+        ]
+    },
+    {
+        "Text": "#G16# As data contributor, I want to be able to refer to the Disaster Recovery Plan in grant proposals and Data Management Plans.",
+        "Persona": [
+            "Batch Submitter"
+        ],
+        "Entity": [
+            "Ingest , Folder Process"
+        ],
+        "Action": [
+            "Provided With",
+            "Describe The Ingest, Folder Process"
+        ]
+    },
+    {
+        "Text": "#G16# As a depositor, I'd like feedback post-ingest (after save if content changed) alerting me if files I submitted do not conform to their format specifications, if they are not valid, or if they are not well-formed. Notification should also go to the repository manager, possibly via an email list.",
+        "Persona": [
+            "Depositor",
+            "-pron-"
+        ],
+        "Entity": [
+            "Language",
+            "Institutional Commitment",
+            "Preservation Infrastructure",
+            "Presrvation Policy"
+        ],
+        "Action": [
+            "Describe Institutional Commitment",
+            "Describe",
+            "Describe Presrvation Policy",
+            "Grant",
+            "Describe The Preservation Infrastructure"
+        ]
+    },
+    {
+        "Text": "#G16# As a batch submitter, I want documentation describing the folder ingest process.",
+        "Persona": [
+            "Potential Depositor"
+        ],
+        "Entity": [
+            "Format",
+            "Thing"
+        ],
+        "Action": [
+            "Recommended, Accepted, Repository See What Kinds Of Things What Formats"
+        ]
+    },
+    {
+        "Text": "#G16# As a depositor, I'd like language I can easily add to grant proposals describing the preservation infrastructure, presrvation policy, and institutional commitment",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Information",
+            "Datum",
+            "Doi",
+            "Metadata"
+        ],
+        "Action": [
+            "What Metadata Require",
+            "Find Information Which Data Assigned A Doi",
+            "Get One"
+        ]
+    },
+    {
+        "Text": "#G16# As a potential depositor, I want to see what kinds of things the repository accepts and what formats are accepted and recommended.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "User",
+            "Permission",
+            "Repository"
+        ],
+        "Action": [
+            "Manage Permissions In The Repository",
+            "Create Groups Of Users"
+        ]
+    },
+    {
+        "Text": "#G16# As a depositor, I'd like to be able to easily find information about which data can be assigned a DOI, how to get one, and what metadata are required.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Item",
+            "Access",
+            "Ip Addresses",
+            "Collection"
+        ],
+        "Action": [
+            "Duke Ip Addresses",
+            "Restrict Access To Collection",
+            "Restrict Access To Item"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I would like an easy way to create groups of users to manage permissions in the repository.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Access",
+            "User",
+            "Restrict Object"
+        ],
+        "Action": [
+            "Contact From",
+            "Request Access To Restricted Objects"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to restrict access to my collection or items to Duke IP addresses.",
+        "Persona": [
+            "Collection Owner"
+        ],
+        "Entity": [
+            "Collection",
+            "Submitter",
+            "Exist Item"
+        ],
+        "Action": [
+            "Be",
+            "Modify Existing Items In That Collection"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want users to be able to contact me directly from the repository to request access to restricted objects.",
+        "Persona": [
+            "Superuser"
+        ],
+        "Entity": [
+            "Superuser Scope"
+        ],
+        "Action": [
+            "Enter The Superuser Scope",
+            "Exit The Superuser Scope"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection owner, I would like submitters to my collection to be unable to modify existing items in that collection.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Item",
+            "Permission"
+        ],
+        "Action": [
+            "Change Permissions On More",
+            "Change Permissions On Items"
+        ]
+    },
+    {
+        "Text": "#G16# As a superuser, I should be able to enter and exit the superuser scope.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Request",
+            "Address",
+            "Room",
+            "Authentication",
+            "Access Objects",
+            "Range",
+            "Ip"
+        ],
+        "Action": [
+            "Reading Range",
+            "Require Authentication To Access Objects",
+            "Reading Room"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator I want to be able to change permissions on one or more items simultaneously.",
+        "Persona": [
+            "Repository Administrator"
+        ],
+        "Entity": [
+            "Object",
+            "Staff Interface",
+            "Version"
+        ],
+        "Action": [
+            "View Available Versions Of An Object",
+            "Restore A Version From The Staff Interface"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to be able require authentication to access objects unless the request is coming from a whitelisted IP address, list of addresses (like the Special Collections Reading Room, or range.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Permission",
+            "Object"
+        ],
+        "Action": [
+            "View The Permission On Objects"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository administrator, I want to view available versions of an object and be able to restore a version from the staff interface.",
+        "Persona": [
+            "Duke Researcher"
+        ],
+        "Entity": [
+            "Repository",
+            "Object"
+        ],
+        "Action": [
+            "Describe Objects In The Repository"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I would like to be able to view the permission on my objects all together.",
+        "Persona": [
+            "Faculty Member"
+        ],
+        "Entity": [
+            "Class",
+            "Repository Dashboard"
+        ],
+        "Action": [
+            "Go To Repository Dashboard",
+            "Manage Members Of Classes"
+        ]
+    },
+    {
+        "Text": "#G16# As a non-Duke researcher, I and my team need to describe our objects in the repository after they've been deposited if we've been assigned permission to edit metadata.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Repository , Specific Object",
+            "Target"
+        ],
+        "Action": [
+            "Associate Targets With Repository, Specific Object"
+        ]
+    },
+    {
+        "Text": "#G16# As a faculty member, I want to go to my repository dashboard to manage members of my classes. I want to be able to grant submit permissions by pasting in a list of NetIDs, see confirmation that DDR recognizes the NetIDs, ability to manually remove permissions, ability to set begin and end dates for a submission window, and a have a status screen to clearly illustrate who has and hasn't submitted.",
+        "Persona": [
+            "Datum Submitter"
+        ],
+        "Entity": [
+            "Item",
+            "Component"
+        ],
+        "Action": [
+            "Order Components Within An Item"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to associate targets with specific repository object.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Technical Metadata",
+            "Component",
+            "Component Page"
+        ],
+        "Action": [
+            "View The Technical Metadata For Each Component On The Component Page"
+        ]
+    },
+    {
+        "Text": "#G16# As a data submitter, I would like to be able to order components within an item.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Collection",
+            "Technical Metadata",
+            "Spreadsheet",
+            "Item",
+            "Repository Level"
+        ],
+        "Action": [
+            "Export A Spreadsheet Of Technical Metadata At Collection",
+            "Export A Spreadsheet Of Technical Metadata At The Repository Level",
+            "Export A Spreadsheet Of Technical Metadata At Item"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I'd like to be able to view the technical metadata for each component on the component page. I would not expect to see technical metadata at the item or collection level.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Repository",
+            "Form",
+            "File",
+            "Collection",
+            "Metadata Fields",
+            "Web Submission"
+        ],
+        "Action": [
+            "Upload File",
+            "Upload File To The Repository",
+            "Describe Those Files In Specific Metadata Fields To The Collection",
+            "To Which Depositing"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I'd like to be able to export a spreadsheet of technical metadata at the repository, collection, or item level.",
+        "Persona": [
+            "Collection Curator"
+        ],
+        "Entity": [
+            "Descriptive , Exist Element",
+            "Collection",
+            "Metadata Element"
+        ],
+        "Action": [
+            "Select Any Descriptive, Existing Element",
+            "Be Optional",
+            "Require For That Collection",
+            "Select Any Descriptive, Existing Metadata Element"
+        ]
+    },
+    {
+        "Text": "#G16# As a depositor, I want a web submission form that allows me to upload my file or files to the repository and describe those files in metadata fields specific to the collection to which I'm depositing.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "New Collection",
+            "Submission Templates"
+        ],
+        "Action": [
+            "Choose Among Existing Submission Templates When Creating A New Collection"
+        ]
+    },
+    {
+        "Text": "#G16# As a collection curator, I want to be able to select any existing descriptive metadata element to be optional or required for that collection.",
+        "Persona": [
+            "Developer"
+        ],
+        "Entity": [
+            "Ddr Models",
+            "Fedora"
+        ],
+        "Action": [
+            "Test Ddr Models On Fedora"
+        ]
+    },
+    {
+        "Text": "#G16# As a repository manager, I'd like to be able to choose from among existing submission templates when creating a new collection.",
+        "Persona": [
+            "Developer"
+        ],
+        "Entity": [
+            "Test",
+            "Version",
+            "Fedora",
+            "Gem",
+            "Active Fedora",
+            "Ddr Models"
+        ],
+        "Action": [
+            "Pass All Tests On Fedora",
+            "Provided With A Version Of The Gem",
+            "Provided With A Version Of The Ddr Models Gem Uses Active Fedora"
+        ]
+    },
+    {
+        "Text": "#G16# As a developer, I want a dummy app to test DDR models on Fedora 4.",
+        "Persona": [
+            "Developer"
+        ],
+        "Entity": [
+            "Gem",
+            "Test",
+            "Version",
+            "Active Fedora",
+            "Fedora",
+            "Ddr Batch"
+        ],
+        "Action": [
+            "Provided With A Version Of The Ddr Batch Gem Works With Active Fedora",
+            "Provided With A Version Of The Gem",
+            "Pass All Tests On Fedora"
+        ]
+    },
+    {
+        "Text": "#G16# As a developer, I want a version of the DDR models gem that uses Active Fedora 9 and passes all tests on Fedora 4.",
+        "Persona": [
+            "Developer"
+        ],
+        "Entity": [
+            "Dul Hydra",
+            "Test",
+            "Active Fedora"
+        ],
+        "Action": [
+            "Provided With A Version Of Dul Hydra Works With Active Fedora"
+        ]
+    }
+]

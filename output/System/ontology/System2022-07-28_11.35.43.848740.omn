@@ -1,0 +1,2092 @@
+# Generated with Visual Narrator
+Prefix: : <http://fakesite.org/system.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: onto: <http://fakesite.org/system.owl#>
+
+Ontology: <:>
+
+Annotations:
+	dc:title "System",
+	dc:creator "Visual Narrator",
+	rdfs:comment "Generated with Visual Narrator"
+
+AnnotationProperty: dc:creator
+
+AnnotationProperty: dc:title
+
+
+# Relationships
+ObjectProperty: :canUse1
+	Domain: :Participant
+	Range: :Information
+
+ObjectProperty: :canUse2
+	Domain: :People
+	Range: :Application
+
+ObjectProperty: :canUse3
+	Domain: :User
+	Range: :Unicode
+
+ObjectProperty: :canShadow
+	Domain: :NSFAdministrator
+	Range: :CMSImplementation
+
+ObjectProperty: :canDisplay
+	Domain: :Corporatesponsor
+	Range: :Logo
+
+ObjectProperty: :hasScript
+	Domain: :Task
+	Range: :TaskScript
+
+ObjectProperty: :canWant
+	Domain: :SiteAdmin
+	Range: :It
+
+ObjectProperty: :canGet1
+	Domain: :SiteVisitor
+	Range: :Answer
+
+ObjectProperty: :canGet2
+	Domain: :Support
+	Range: :Question
+
+ObjectProperty: :canGet3
+	Domain: :SiteVisitor
+	Range: :HomePage
+
+ObjectProperty: :canGet4
+	Domain: :Moderator
+	Range: :PasswordReminder
+
+ObjectProperty: :canGet5
+	Domain: :Moderator
+	Range: :Application
+
+ObjectProperty: :canTurn
+	Domain: :Trainer
+	Range: :Course
+
+ObjectProperty: :canFinish1
+	Domain: :SiteMember
+	Range: :Article
+
+ObjectProperty: :canFinish2
+	Domain: :SiteVisitor
+	Range: :Article
+
+ObjectProperty: :canRegister
+	Domain: :They
+	Range: :Membership
+
+ObjectProperty: :canChange1
+	Domain: :Moderator
+	Range: :AccountDetail
+
+ObjectProperty: :canChange2
+	Domain: :Participant
+	Range: :Estimate
+
+ObjectProperty: :canChange3
+	Domain: :Participant
+	Range: :Mind
+
+ObjectProperty: :hasItem
+	Domain: :News
+	Range: :NewsItem
+
+ObjectProperty: :canNotifyAbout
+	Domain: :Trainer
+	Range: :Result
+
+ObjectProperty: :canInclude1
+	Domain: :Practitioner
+	Range: :Detail
+
+ObjectProperty: :canInclude2
+	Domain: :Trainer
+	Range: :Detail
+
+ObjectProperty: :canInclude3
+	Domain: :SiteEditor
+	Range: :Teaser
+
+ObjectProperty: :hasDetail
+	Domain: :Account
+	Range: :AccountDetail
+
+ObjectProperty: :canTeach
+	Domain: :SiteMember
+	Range: :CSM
+
+ObjectProperty: :canAssure
+	Domain: :Trainer
+	Range: :Answer
+
+ObjectProperty: :canFix
+	Domain: :SiteEditor
+	Range: :Thing
+
+ObjectProperty: :canMost
+	Domain: :SiteVisitor
+	Range: :Content
+
+ObjectProperty: :canEasy
+	Domain: :It
+	Range: :Estimate
+
+ObjectProperty: :canCorrect1
+	Domain: :SiteAdministrator
+	Range: :Problem
+
+ObjectProperty: :canCorrect2
+	Domain: :SiteAdmin
+	Range: :Problem
+
+ObjectProperty: :canList1
+	Domain: :Trainer
+	Range: :Class
+
+ObjectProperty: :canList2
+	Domain: :Job
+	Range: :Ad
+
+ObjectProperty: :canReflect
+	Domain: :It
+	Range: :Information
+
+ObjectProperty: :hasStrategy
+	Domain: :Prototype
+	Range: :PrototypeStrategy
+
+ObjectProperty: :canComplete
+	Domain: :ResearchParticipant
+	Range: :UserInterview
+
+ObjectProperty: :hasOption
+	Domain: :Search
+	Range: :SearchOption
+
+ObjectProperty: :canSave
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canDeploy1
+	Domain: :Developer
+	Range: :BetaSite
+
+ObjectProperty: :canDeploy2
+	Domain: :RecruiterManager
+	Range: :Page
+
+ObjectProperty: :canMove
+	Domain: :SiteAdmin
+	Range: :People
+
+ObjectProperty: :canView1
+	Domain: :SiteMember
+	Range: :Profile
+
+ObjectProperty: :canView2
+	Domain: :SiteVisitor
+	Range: :Course
+
+ObjectProperty: :canView3
+	Domain: :SiteVisitor
+	Range: :Section
+
+ObjectProperty: :canView4
+	Domain: :SiteVisitor
+	Range: :List
+
+ObjectProperty: :canView5
+	Domain: :SiteAdmin
+	Range: :Class
+
+ObjectProperty: :canView6
+	Domain: :Moderator
+	Range: :Transcript
+
+ObjectProperty: :canClick
+	Domain: :SiteVisitor
+	Range: :Link
+
+ObjectProperty: :canBrowseThrough
+	Domain: :Moderator
+	Range: :Game
+
+ObjectProperty: :canObserve
+	Domain: :They
+	Range: :Interview
+
+ObjectProperty: :canMark1
+	Domain: :SiteMember
+	Range: :Profile
+
+ObjectProperty: :canMark2
+	Domain: :SiteMember
+	Range: :EmailAddress
+
+ObjectProperty: :canExtend
+	Domain: :Recruiter
+	Range: :Ad
+
+ObjectProperty: :canSchedule
+	Domain: :NSFEmployee
+	Range: :Person
+
+ObjectProperty: :canScrollThrough1
+	Domain: :SiteMember
+	Range: :Listing
+
+ObjectProperty: :canScrollThrough2
+	Domain: :Participant
+	Range: :Story
+
+ObjectProperty: :hasProfile
+	Domain: :Member
+	Range: :MemberProfile
+
+ObjectProperty: :canParticipateIn
+	Domain: :NSFEmployee
+	Range: :Issue
+
+ObjectProperty: :hasConcept
+	Domain: :Design
+	Range: :DesignConcept
+
+ObjectProperty: :hasVisitor
+	Domain: :Site
+	Range: :SiteVisitor
+
+ObjectProperty: :hasFeed
+	Domain: :RSS
+	Range: :RSSFeed
+
+ObjectProperty: :canConcept
+	Domain: :Visualdesigner
+	Range: :Style
+
+ObjectProperty: :canLearnAbout
+	Domain: :Other
+	Range: :I
+
+ObjectProperty: :hasFee
+	Domain: :Listing
+	Range: :ListingFee
+
+ObjectProperty: :canEdit1
+	Domain: :SiteAdministrator
+	Range: :MemberProfile
+
+ObjectProperty: :canEdit2
+	Domain: :SiteAdmin
+	Range: :Ad
+
+ObjectProperty: :canEdit3
+	Domain: :SiteEditor
+	Range: :Content
+
+ObjectProperty: :canEdit4
+	Domain: :ContentEditor
+	Range: :It
+
+ObjectProperty: :canEdit5
+	Domain: :Moderator
+	Range: :Item
+
+ObjectProperty: :canContact
+	Domain: :One
+	Range: :I
+
+ObjectProperty: :canDetermine1
+	Domain: :Stakeholder
+	Range: :I
+
+ObjectProperty: :canDetermine2
+	Domain: :TeamMember
+	Range: :DesignDirection
+
+ObjectProperty: :hasSME
+	Domain: :CMS
+	Range: :CMSSME
+
+ObjectProperty: :canSelect1
+	Domain: :Moderator
+	Range: :Item
+
+ObjectProperty: :canSelect2
+	Domain: :Moderator
+	Range: :1/2
+
+ObjectProperty: :canMake1
+	Domain: :Corporatesponsor
+	Range: :HomePage
+
+ObjectProperty: :canMake2
+	Domain: :UserResearcher
+	Range: :Information
+
+ObjectProperty: :canMake3
+	Domain: :ResearchParticipant
+	Range: :Prototype
+
+ObjectProperty: :canMake4
+	Domain: :UserResearcher
+	Range: :PriorityArea
+
+ObjectProperty: :canMake5
+	Domain: :NSFEmployee
+	Range: :DesignDecision
+
+ObjectProperty: :canMake6
+	Domain: :ContentDesigner
+	Range: :Recommendation
+
+ObjectProperty: :canMake7
+	Domain: :UserResearcher
+	Range: :UserInterview
+
+ObjectProperty: :canMake8
+	Domain: :SiteAdministrator
+	Range: :Decision
+
+ObjectProperty: :hasNumber
+	Domain: :Priority
+	Range: :PriorityNumber
+
+ObjectProperty: :canAccess1
+	Domain: :SiteVisitor
+	Range: :News
+
+ObjectProperty: :canAccess2
+	Domain: :SiteVisitor
+	Range: :Thing
+
+ObjectProperty: :canAccess3
+	Domain: :People
+	Range: :Site
+
+ObjectProperty: :canMaintain
+	Domain: :SiteEditor
+	Range: :FAQSection
+
+ObjectProperty: :canAdd1
+	Domain: :SiteEditor
+	Range: :Article
+
+ObjectProperty: :canAdd2
+	Domain: :User
+	Range: :Video
+
+ObjectProperty: :canAdd3
+	Domain: :ContentEditor
+	Range: :Video
+
+ObjectProperty: :canAdd4
+	Domain: :Moderator
+	Range: :Item
+
+ObjectProperty: :hasRespond
+	Domain: :Application
+	Range: :ApplicationRespond
+
+ObjectProperty: :canPublish
+	Domain: :Article
+	Range: :Date
+
+ObjectProperty: :canAccept1
+	Domain: :Moderator
+	Range: :Average
+
+ObjectProperty: :canAccept2
+	Domain: :Moderator
+	Range: :It
+
+ObjectProperty: :canBegin1
+	Domain: :Designer
+	Range: :Design
+
+ObjectProperty: :canBegin2
+	Domain: :UserResearcher
+	Range: :User
+
+ObjectProperty: :canBegin3
+	Domain: :UserResearcher
+	Range: :ResearchPlan
+
+ObjectProperty: :canNarrow
+	Domain: :NSFEmployee
+	Range: :Universe
+
+ObjectProperty: :hasSearch
+	Domain: :Text
+	Range: :TextSearch
+
+ObjectProperty: :hasMember1
+	Domain: :Site
+	Range: :SiteMember
+
+ObjectProperty: :hasMember2
+	Domain: :Team
+	Range: :TeamMember
+
+ObjectProperty: :hasMember3
+	Domain: :NSF
+	Range: :NSFMember
+
+ObjectProperty: :hasResearcher
+	Domain: :User
+	Range: :UserResearcher
+
+ObjectProperty: :canDemonstrate1
+	Domain: :ContentDesigner
+	Range: :Value
+
+ObjectProperty: :canDemonstrate2
+	Domain: :Visualdesigner
+	Range: :Value
+
+ObjectProperty: :hasProtocol
+	Domain: :Research
+	Range: :ResearchProtocol
+
+ObjectProperty: :hasParticipant
+	Domain: :Research
+	Range: :ResearchParticipant
+
+ObjectProperty: :hasAttendee
+	Domain: :Workshop
+	Range: :WorkshopAttendee
+
+ObjectProperty: :canDelete1
+	Domain: :Trainer
+	Range: :One
+
+ObjectProperty: :canDelete2
+	Domain: :SiteAdmin
+	Range: :Course
+
+ObjectProperty: :canDelete3
+	Domain: :Moderator
+	Range: :Item
+
+ObjectProperty: :canDelete4
+	Domain: :Moderator
+	Range: :Game
+
+ObjectProperty: :canDelete5
+	Domain: :Moderator
+	Range: :Account
+
+ObjectProperty: :canDescribe
+	Domain: :SiteMember
+	Range: :Way
+
+ObjectProperty: :canKeep
+	Domain: :Moderator
+	Range: :AccountDetail
+
+ObjectProperty: :canHaveUp
+	Domain: :Developer
+	Range: :System
+
+ObjectProperty: :canFill
+	Domain: :SiteMember
+	Range: :Application
+
+ObjectProperty: :canUpTo
+	Domain: :SiteVisitor
+	Range: :Site
+
+ObjectProperty: :canPrepare
+	Domain: :UserResearcher
+	Range: :They
+
+ObjectProperty: :canFinalize
+	Domain: :UserResearcher
+	Range: :TaskScript
+
+ObjectProperty: :canKnow1
+	Domain: :Other
+	Range: :Certification
+
+ObjectProperty: :canKnow2
+	Domain: :SiteVisitor
+	Range: :Alliance
+
+ObjectProperty: :canKnow3
+	Domain: :SiteVisitor
+	Range: :HomePage
+
+ObjectProperty: :canKnow4
+	Domain: :NSFEmployee
+	Range: :System
+
+ObjectProperty: :canKnow5
+	Domain: :TeamMember
+	Range: :System
+
+ObjectProperty: :canKnow6
+	Domain: :UserResearcher
+	Range: :List
+
+ObjectProperty: :canKnow7
+	Domain: :Developer
+	Range: :System
+
+ObjectProperty: :canKnow8
+	Domain: :Designer
+	Range: :Hypothesis
+
+ObjectProperty: :canKnow9
+	Domain: :UserInterview
+	Range: :User
+
+ObjectProperty: :canKnow10
+	Domain: :TeamMember
+	Range: :Sprint
+
+ObjectProperty: :canKnow11
+	Domain: :NSFEmployee
+	Range: :Person
+
+ObjectProperty: :canKnow12
+	Domain: :Estimator
+	Range: :What
+
+ObjectProperty: :canKnow13
+	Domain: :Participant
+	Range: :Estimate
+
+ObjectProperty: :canReferToIn
+	Domain: :NSFMember
+	Range: :It
+
+ObjectProperty: :hasManager
+	Domain: :Recruiter
+	Range: :RecruiterManager
+
+ObjectProperty: :canRead1
+	Domain: :SiteAdministrator
+	Range: :Application
+
+ObjectProperty: :canRead2
+	Domain: :SiteVisitor
+	Range: :News
+
+ObjectProperty: :canRead3
+	Domain: :SiteVisitor
+	Range: :More
+
+ObjectProperty: :canRead4
+	Domain: :SiteVisitor
+	Range: :FAQ
+
+ObjectProperty: :canRead5
+	Domain: :SiteMember
+	Range: :They
+
+ObjectProperty: :canRead6
+	Domain: :SiteVisitor
+	Range: :Article
+
+ObjectProperty: :canRead7
+	Domain: :SiteMember
+	Range: :Article
+
+ObjectProperty: :canRead8
+	Domain: :SiteVisitor
+	Range: :Some
+
+ObjectProperty: :canRead9
+	Domain: :SiteVisitor
+	Range: :They
+
+ObjectProperty: :canRead10
+	Domain: :Other
+	Range: :They
+
+ObjectProperty: :canRead11
+	Domain: :Trainer
+	Range: :They
+
+ObjectProperty: :canRead12
+	Domain: :Trainer
+	Range: :Information
+
+ObjectProperty: :canReceive
+	Domain: :Member
+	Range: :Reminder
+
+ObjectProperty: :canAssign1
+	Domain: :SiteEditor
+	Range: :PriorityNumber
+
+ObjectProperty: :canAssign2
+	Domain: :TeamMember
+	Range: :Task
+
+ObjectProperty: :hasName
+	Domain: :Account
+	Range: :AccountName
+
+ObjectProperty: :canFind1
+	Domain: :Attendee
+	Range: :Course
+
+ObjectProperty: :canFind2
+	Domain: :SiteMember
+	Range: :Other
+
+ObjectProperty: :canFind3
+	Domain: :SiteVisitor
+	Range: :What
+
+ObjectProperty: :canFind4
+	Domain: :SiteVisitor
+	Range: :Answer
+
+ObjectProperty: :canFind5
+	Domain: :ContentEditor
+	Range: :Content
+
+ObjectProperty: :canFind6
+	Domain: :Moderator
+	Range: :Game
+
+ObjectProperty: :canComeToFor
+	Domain: :SiteVisitor
+	Range: :Site
+
+ObjectProperty: :hasPage1
+	Domain: :Profile
+	Range: :ProfilePage
+
+ObjectProperty: :hasPage2
+	Domain: :Home
+	Range: :HomePage
+
+ObjectProperty: :hasDesigner
+	Domain: :Content
+	Range: :ContentDesigner
+
+ObjectProperty: :canLearnFrom
+	Domain: :Visitor
+	Range: :They
+
+ObjectProperty: :hasReport
+	Domain: :Workflow
+	Range: :WorkflowReport
+
+ObjectProperty: :canConfirm1
+	Domain: :RecruiterManager
+	Range: :Science360gov
+
+ObjectProperty: :canConfirm2
+	Domain: :RecruiterManager
+	Range: :System
+
+ObjectProperty: :hasReminder
+	Domain: :Password
+	Range: :PasswordReminder
+
+ObjectProperty: :canStop
+	Domain: :SiteAdmin
+	Range: :Job
+
+ObjectProperty: :canEnter
+	Domain: :Moderator
+	Range: :Estimate
+
+ObjectProperty: :canTest
+	Domain: :UserResearcher
+	Range: :ResearchPlan
+
+ObjectProperty: :canExport
+	Domain: :Moderator
+	Range: :Transcript
+
+ObjectProperty: :hasFunction
+	Domain: :Application
+	Range: :ApplicationFunction
+
+ObjectProperty: :canInvite
+	Domain: :Moderator
+	Range: :Estimator
+
+ObjectProperty: :canBounceOﬀ
+	Domain: :SiteVisitor
+	Range: :Page
+
+ObjectProperty: :canThere
+	Domain: :It
+	Range: :Visitor
+
+ObjectProperty: :canDo
+	Domain: :SiteVisitor
+	Range: :TextSearch
+
+ObjectProperty: :hasPlan
+	Domain: :Research
+	Range: :ResearchPlan
+
+ObjectProperty: :canEstimate
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canImport
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canSubscribeTo1
+	Domain: :SiteMember
+	Range: :RSSFeed
+
+ObjectProperty: :canSubscribeTo2
+	Domain: :SiteVisitor
+	Range: :RSSFeed
+
+ObjectProperty: :hasEditor1
+	Domain: :Site
+	Range: :SiteEditor
+
+ObjectProperty: :hasEditor2
+	Domain: :Content
+	Range: :ContentEditor
+
+ObjectProperty: :canSee1
+	Domain: :SiteVisitor
+	Range: :List
+
+ObjectProperty: :canSee2
+	Domain: :SiteVisitor
+	Range: :It
+
+ObjectProperty: :canSee3
+	Domain: :Trainer
+	Range: :What
+
+ObjectProperty: :canSee4
+	Domain: :SiteVisitor
+	Range: :Content
+
+ObjectProperty: :canSee5
+	Domain: :SiteAdmin
+	Range: :Result
+
+ObjectProperty: :canSee6
+	Domain: :SiteVisitor
+	Range: :Rating
+
+ObjectProperty: :canSee7
+	Domain: :Other
+	Range: :Support
+
+ObjectProperty: :canSee8
+	Domain: :TeamMember
+	Range: :Iteration
+
+ObjectProperty: :canSee9
+	Domain: :Stakeholder
+	Range: :Result
+
+ObjectProperty: :canSee10
+	Domain: :CMSSME
+	Range: :WorkflowReport
+
+ObjectProperty: :canSee11
+	Domain: :UserResearcher
+	Range: :User
+
+ObjectProperty: :canSee12
+	Domain: :WorkshopAttendee
+	Range: :Summary
+
+ObjectProperty: :canSee13
+	Domain: :Moderator
+	Range: :Item
+
+ObjectProperty: :canSee14
+	Domain: :Team
+	Range: :Item
+
+ObjectProperty: :canSee15
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canSee16
+	Domain: :Moderator
+	Range: :Date
+
+ObjectProperty: :canSee17
+	Domain: :Estimator
+	Range: :Item
+
+ObjectProperty: :canSee18
+	Domain: :Participant
+	Range: :Estimator
+
+ObjectProperty: :canSee19
+	Domain: :Participant
+	Range: :Estimate
+
+ObjectProperty: :canSee20
+	Domain: :Participant
+	Range: :Question
+
+ObjectProperty: :canSee21
+	Domain: :User
+	Range: :URL
+
+ObjectProperty: :canSee22
+	Domain: :Mike
+	Range: :Metric
+
+ObjectProperty: :hasRecommendation
+	Domain: :Strategy
+	Range: :StrategyRecommendation
+
+ObjectProperty: :canWrite1
+	Domain: :Practitioner
+	Range: :Article
+
+ObjectProperty: :canWrite2
+	Domain: :Developer
+	Range: :Site
+
+ObjectProperty: :canChoose
+	Domain: :SiteVisitor
+	Range: :Course
+
+ObjectProperty: :canRecruitFor
+	Domain: :Researcher
+	Range: :Round
+
+ObjectProperty: :canRenew
+	Domain: :Member
+	Range: :Membership
+
+ObjectProperty: :canIndicate1
+	Domain: :SiteEditor
+	Range: :Site
+
+ObjectProperty: :canIndicate2
+	Domain: :SiteEditor
+	Range: :Member
+
+ObjectProperty: :hasDocument
+	Domain: :Roadmap
+	Range: :RoadmapDocument
+
+ObjectProperty: :canStore
+	Domain: :Story
+	Range: :Game
+
+ObjectProperty: :canDesignate
+	Domain: :SiteEditor
+	Range: :HomePage
+
+ObjectProperty: :canMeetWith
+	Domain: :TeamMember
+	Range: :Cloudgov
+
+ObjectProperty: :hasAdmin
+	Domain: :Site
+	Range: :SiteAdmin
+
+ObjectProperty: :canTrust
+	Domain: :User
+	Range: :System
+
+ObjectProperty: :hasInterview
+	Domain: :User
+	Range: :UserInterview
+
+ObjectProperty: :canStayOn
+	Domain: :SiteVisitor
+	Range: :News
+
+ObjectProperty: :canDevelop
+	Domain: :Researcher
+	Range: :ResearchProtocol
+
+ObjectProperty: :canSet1
+	Domain: :SiteEditor
+	Range: :Date
+
+ObjectProperty: :canSet2
+	Domain: :SiteAdministrator
+	Range: :ListingFee
+
+ObjectProperty: :canSet3
+	Domain: :SiteEditor
+	Range: :Start
+
+ObjectProperty: :canSet4
+	Domain: :SiteAdministrator
+	Range: :Fee
+
+ObjectProperty: :canSet5
+	Domain: :Fee
+	Range: :Programmer
+
+ObjectProperty: :canDownload1
+	Domain: :SiteMember
+	Range: :PDF
+
+ObjectProperty: :canDownload2
+	Domain: :Visitor
+	Range: :PDF
+
+ObjectProperty: :canPlan
+	Domain: :TeamMember
+	Range: :Work
+
+ObjectProperty: :canCopy
+	Domain: :Trainer
+	Range: :One
+
+ObjectProperty: :hasEmployee
+	Domain: :NSF
+	Range: :NSFEmployee
+
+ObjectProperty: :canUnderstand1
+	Domain: :NSFEmployee
+	Range: :Process
+
+ObjectProperty: :canUnderstand2
+	Domain: :TeamMember
+	Range: :What
+
+ObjectProperty: :canUnderstand3
+	Domain: :TeamMember
+	Range: :Plan
+
+ObjectProperty: :canUnderstand4
+	Domain: :CMSSME
+	Range: :Direction
+
+ObjectProperty: :canUnderstand5
+	Domain: :NSFEmployee
+	Range: :Work
+
+ObjectProperty: :canUnderstand6
+	Domain: :NSFEmployee
+	Range: :What
+
+ObjectProperty: :canUnderstand7
+	Domain: :TeamMember
+	Range: :Understanding
+
+ObjectProperty: :canUnderstand8
+	Domain: :SiteAdministrator
+	Range: :Design
+
+ObjectProperty: :canUnderstand9
+	Domain: :SiteAdministrator
+	Range: :Content
+
+ObjectProperty: :canShow1
+	Domain: :Trainer
+	Range: :Rating
+
+ObjectProperty: :canShow2
+	Domain: :Company
+	Range: :Support
+
+ObjectProperty: :canShow3
+	Domain: :Moderator
+	Range: :Estimate
+
+ObjectProperty: :canShow4
+	Domain: :Participant
+	Range: :Estimate
+
+ObjectProperty: :canLog
+	Domain: :Moderator
+	Range: :AccountName
+
+ObjectProperty: :canLearn1
+	Domain: :One
+	Range: :Thing
+
+ObjectProperty: :canLearn2
+	Domain: :SiteVisitor
+	Range: :Site
+
+ObjectProperty: :canLearn3
+	Domain: :NSFEmployee
+	Range: :System
+
+ObjectProperty: :canBe1
+	Domain: :UserResearcher
+	Range: :Prototype
+
+ObjectProperty: :canBe2
+	Domain: :Estimate
+	Range: :Estimate
+
+ObjectProperty: :canCharge
+	Domain: :CSM
+	Range: :Fee
+
+ObjectProperty: :canEmail1
+	Domain: :SiteVisitor
+	Range: :NewsItem
+
+ObjectProperty: :canEmail2
+	Domain: :SiteAdmin
+	Range: :System
+
+ObjectProperty: :canEmail3
+	Domain: :Advertiser
+	Range: :Reminder
+
+ObjectProperty: :canUpdate1
+	Domain: :Trainer
+	Range: :One
+
+ObjectProperty: :canUpdate2
+	Domain: :SiteEditor
+	Range: :Course
+
+ObjectProperty: :canPost1
+	Domain: :Recruiter
+	Range: :Help
+
+ObjectProperty: :canPost2
+	Domain: :SiteVisitor
+	Range: :Comment
+
+ObjectProperty: :canPost3
+	Domain: :SiteEditor
+	Range: :Information
+
+ObjectProperty: :canAnswer
+	Domain: :Moderator
+	Range: :Question
+
+ObjectProperty: :canApprove1
+	Domain: :SiteAdmin
+	Range: :Help
+
+ObjectProperty: :canApprove2
+	Domain: :SiteAdmin
+	Range: :Any
+
+ObjectProperty: :canCreate1
+	Domain: :Trainer
+	Range: :Course
+
+ObjectProperty: :canCreate2
+	Domain: :SiteAdministrator
+	Range: :Course
+
+ObjectProperty: :canCreate3
+	Domain: :Trainer
+	Range: :One
+
+ObjectProperty: :canCreate4
+	Domain: :SiteEditor
+	Range: :Content
+
+ObjectProperty: :canCreate5
+	Domain: :Visualdesigner
+	Range: :Moodboard
+
+ObjectProperty: :canCreate6
+	Domain: :Moderator
+	Range: :Game
+
+ObjectProperty: :canCreate7
+	Domain: :Moderator
+	Range: :Account
+
+ObjectProperty: :hasDirection
+	Domain: :Design
+	Range: :DesignDirection
+
+ObjectProperty: :hasAddress
+	Domain: :Email
+	Range: :EmailAddress
+
+ObjectProperty: :hasSection
+	Domain: :FAQ
+	Range: :FAQSection
+
+ObjectProperty: :canRemove
+	Domain: :SiteAdmin
+	Range: :Thing
+
+ObjectProperty: :canSend1
+	Domain: :SiteMember
+	Range: :Email
+
+ObjectProperty: :canSend2
+	Domain: :CSM
+	Range: :Email
+
+ObjectProperty: :canNeed
+	Domain: :SiteEditor
+	Range: :Programmer
+
+ObjectProperty: :canDecide1
+	Domain: :SiteVisitor
+	Range: :Any
+
+ObjectProperty: :canDecide2
+	Domain: :Moderator
+	Range: :Estimate
+
+ObjectProperty: :canSearchFor
+	Domain: :SiteMember
+	Range: :Profile
+
+ObjectProperty: :canGo
+	Domain: :Advertiser
+	Range: :Ad
+
+ObjectProperty: :canHave1
+	Domain: :SiteVisitor
+	Range: :SearchOption
+
+ObjectProperty: :canHave2
+	Domain: :SiteMember
+	Range: :They
+
+ObjectProperty: :canHave3
+	Domain: :SiteEditor
+	Range: :Control
+
+ObjectProperty: :canHave4
+	Domain: :SiteMember
+	Range: :Access
+
+ObjectProperty: :canHave5
+	Domain: :SiteEditor
+	Range: :Area
+
+ObjectProperty: :canHave6
+	Domain: :SiteEditor
+	Range: :Flexibility
+
+ObjectProperty: :canHave7
+	Domain: :SiteVisitor
+	Range: :Article
+
+ObjectProperty: :canHave8
+	Domain: :CSM
+	Range: :Name
+
+ObjectProperty: :canHave9
+	Domain: :Member
+	Range: :Password
+
+ObjectProperty: :canHave10
+	Domain: :Stakeholder
+	Range: :Decision
+
+ObjectProperty: :canHave11
+	Domain: :TeamMember
+	Range: :List
+
+ObjectProperty: :canHave12
+	Domain: :UserResearcher
+	Range: :TaskScript
+
+ObjectProperty: :canHave13
+	Domain: :UserResearcher
+	Range: :List
+
+ObjectProperty: :canHave14
+	Domain: :NSFEmployee
+	Range: :RoadmapDocument
+
+ObjectProperty: :canHave15
+	Domain: :NSFEmployee
+	Range: :Workshop
+
+ObjectProperty: :canHave16
+	Domain: :NSFEmployee
+	Range: :StrategyRecommendation
+
+ObjectProperty: :canHave17
+	Domain: :TeamMember
+	Range: :PrototypeStrategy
+
+ObjectProperty: :canHave18
+	Domain: :WorkshopAttendee
+	Range: :Summary
+
+ObjectProperty: :canHave19
+	Domain: :TeamMember
+	Range: :Schedule
+
+ObjectProperty: :canHave20
+	Domain: :NSFMember
+	Range: :Place
+
+ObjectProperty: :canHave21
+	Domain: :TeamMember
+	Range: :System
+
+ObjectProperty: :canHave22
+	Domain: :TeamMember
+	Range: :Platform
+
+ObjectProperty: :canHave23
+	Domain: :Designer
+	Range: :ContentGuide
+
+ObjectProperty: :canHave24
+	Domain: :Moderator
+	Range: :Field
+
+ObjectProperty: :canHave25
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canHave26
+	Domain: :Participant
+	Range: :Itself
+
+ObjectProperty: :canHave27
+	Domain: :Participant
+	Range: :Card
+
+ObjectProperty: :canHave28
+	Domain: :Developer
+	Range: :List
+
+ObjectProperty: :canHave29
+	Domain: :Developer
+	Range: :ApplicationFunction
+
+ObjectProperty: :canHave30
+	Domain: :User
+	Range: :Respond
+
+ObjectProperty: :canStart1
+	Domain: :TeamMember
+	Range: :Prototype
+
+ObjectProperty: :canStart2
+	Domain: :Designer
+	Range: :Prototype
+
+ObjectProperty: :canStart3
+	Domain: :Moderator
+	Range: :Estimator
+
+ObjectProperty: :canStart4
+	Domain: :Moderator
+	Range: :Round
+
+ObjectProperty: :canStart5
+	Domain: :Moderator
+	Range: :Application
+
+ObjectProperty: :hasImplementation
+	Domain: :CMS
+	Range: :CMSImplementation
+
+ObjectProperty: :hasAdministrator1
+	Domain: :Site
+	Range: :SiteAdministrator
+
+ObjectProperty: :hasAdministrator2
+	Domain: :NSF
+	Range: :NSFAdministrator
+
+ObjectProperty: :canPay
+	Domain: :CST
+	Range: :Fee
+
+ObjectProperty: :hasGuide
+	Domain: :Content
+	Range: :ContentGuide
+
+ObjectProperty: :canProcess
+	Domain: :Moderator
+	Range: :Story
+
+ObjectProperty: :canJoin1
+	Domain: :NSFEmployee
+	Range: :Github
+
+ObjectProperty: :canJoin2
+	Domain: :Estimator
+	Range: :Game
+
+# Classes
+Class: :SiteMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Site Member",
+		rdfs:comment "Functional Role"
+
+Class: :Member
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Site
+
+
+Class: :Way
+
+
+Class: :Other
+
+
+Class: :I
+
+
+Class: :Application
+
+
+Class: :Practitioner
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Detail
+
+
+Class: :CSM
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ProfilePage
+	SubClassOf: :Page
+	Annotations:
+		rdfs:label "Profile Page"
+
+Class: :Page
+
+
+Class: :Profile
+
+
+Class: :Trainer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Article
+
+
+Class: :Certification
+
+
+Class: :Class
+
+
+Class: :Attendee
+
+
+Class: :Course
+
+
+Class: :One
+
+
+Class: :Thing
+
+
+Class: :EmailAddress
+	SubClassOf: :Address
+	Annotations:
+		rdfs:label "Email Address"
+
+Class: :Address
+
+
+Class: :Email
+
+
+Class: :SiteAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "Site Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :Administrator
+
+
+Class: :MemberProfile
+	SubClassOf: :Profile
+	Annotations:
+		rdfs:label "Member Profile"
+
+Class: :Problem
+
+
+Class: :SiteVisitor
+	SubClassOf: :Visitor
+	Annotations:
+		rdfs:label "Site Visitor",
+		rdfs:comment "Functional Role"
+
+Class: :Visitor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :News
+
+
+Class: :NewsItem
+	SubClassOf: :Item
+	Annotations:
+		rdfs:label "News Item"
+
+Class: :Item
+
+
+Class: :SiteEditor
+	SubClassOf: :Editor
+	Annotations:
+		rdfs:label "Site Editor",
+		rdfs:comment "Functional Role"
+
+Class: :Editor
+
+
+Class: :Date
+
+
+Class: :RSSFeed
+	SubClassOf: :Feed
+	Annotations:
+		rdfs:label "RSS Feed"
+
+Class: :Feed
+
+
+Class: :RSS
+
+
+Class: :PriorityNumber
+	SubClassOf: :Number
+	Annotations:
+		rdfs:label "Priority Number"
+
+Class: :Number
+
+
+Class: :Priority
+
+
+Class: :List
+
+
+Class: :Any
+
+
+Class: :It
+
+
+Class: :ListingFee
+	SubClassOf: :Fee
+	Annotations:
+		rdfs:label "Listing Fee"
+
+Class: :Fee
+
+
+Class: :Listing
+
+
+Class: :Information
+
+
+Class: :SiteAdmin
+	SubClassOf: :Admin
+	Annotations:
+		rdfs:label "Site Admin",
+		rdfs:comment "Functional Role"
+
+Class: :Admin
+
+
+Class: :SearchOption
+	SubClassOf: :Option
+	Annotations:
+		rdfs:label "Search Option"
+
+Class: :Option
+
+
+Class: :Search
+
+
+Class: :What
+
+
+Class: :More
+
+
+Class: :FAQ
+
+
+Class: :Answer
+
+
+Class: :FAQSection
+	SubClassOf: :Section
+	Annotations:
+		rdfs:label "FAQ Section"
+
+Class: :Section
+
+
+Class: :Support
+
+
+Class: :Question
+
+
+Class: :TextSearch
+	SubClassOf: :Search
+	Annotations:
+		rdfs:label "Text Search"
+
+Class: :Text
+
+
+Class: :PDF
+
+
+Class: :They
+
+
+Class: :Recruiter
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Help
+
+
+Class: :System
+
+
+Class: :Ad
+
+
+Class: :Job
+
+
+Class: :Advertiser
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Reminder
+
+
+Class: :Teaser
+
+
+Class: :Start
+
+
+Class: :HomePage
+	SubClassOf: :Page
+	Annotations:
+		rdfs:label "Home Page"
+
+Class: :Home
+
+
+Class: :Control
+
+
+Class: :Link
+
+
+Class: :Some
+
+
+Class: :Access
+
+
+Class: :Comment
+
+
+Class: :Area
+
+
+Class: :Flexibility
+
+
+Class: :Membership
+
+
+Class: :Content
+
+
+Class: :Alliance
+
+
+Class: :Result
+
+
+Class: :Rating
+
+
+Class: :Name
+
+
+Class: :People
+
+
+Class: :Programmer
+
+
+Class: :Company
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Corporatesponsor
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Logo
+
+
+Class: :CST
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Password
+
+
+Class: :TeamMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "Team Member",
+		rdfs:comment "Functional Role"
+
+Class: :Team
+
+
+Class: :Iteration
+
+
+Class: :Developer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :BetaSite
+	Annotations:
+		rdfs:label "Beta Site"
+
+Class: :Stakeholder
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Decision
+
+
+Class: :NSFEmployee
+	SubClassOf: :Employee
+	Annotations:
+		rdfs:label "NSF Employee",
+		rdfs:comment "Functional Role"
+
+Class: :Employee
+
+
+Class: :NSF
+
+
+Class: :Process
+
+
+Class: :Designer
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Design
+
+
+Class: :DesignDirection
+	SubClassOf: :Direction
+	Annotations:
+		rdfs:label "Design Direction"
+
+Class: :Direction
+
+
+Class: :UserResearcher
+	SubClassOf: :Researcher
+	Annotations:
+		rdfs:label "User Researcher",
+		rdfs:comment "Functional Role"
+
+Class: :Researcher
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :User
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :ResearchPlan
+	SubClassOf: :Plan
+	Annotations:
+		rdfs:label "Research Plan"
+
+Class: :Plan
+
+
+Class: :Research
+
+
+Class: :TaskScript
+	SubClassOf: :Script
+	Annotations:
+		rdfs:label "Task Script"
+
+Class: :Script
+
+
+Class: :Task
+
+
+Class: :ContentEditor
+	SubClassOf: :Editor
+	Annotations:
+		rdfs:label "Content Editor",
+		rdfs:comment "Functional Role"
+
+Class: :ResearchParticipant
+	SubClassOf: :Participant
+	Annotations:
+		rdfs:label "Research Participant",
+		rdfs:comment "Functional Role"
+
+Class: :Participant
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Prototype
+
+
+Class: :Video
+
+
+Class: :Cloudgov
+
+
+Class: :PriorityArea
+	Annotations:
+		rdfs:label "Priority Area"
+
+Class: :NSFAdministrator
+	SubClassOf: :Administrator
+	Annotations:
+		rdfs:label "NSF Administrator",
+		rdfs:comment "Functional Role"
+
+Class: :CMSImplementation
+	SubClassOf: :Implementation
+	Annotations:
+		rdfs:label "CMS Implementation"
+
+Class: :Implementation
+
+
+Class: :CMS
+
+
+Class: :RoadmapDocument
+	SubClassOf: :Document
+	Annotations:
+		rdfs:label "Roadmap Document"
+
+Class: :Document
+
+
+Class: :Roadmap
+
+
+Class: :ResearchProtocol
+	SubClassOf: :Protocol
+	Annotations:
+		rdfs:label "Research Protocol"
+
+Class: :Protocol
+
+
+Class: :Universe
+
+
+Class: :Workshop
+
+
+Class: :CMSSME
+	SubClassOf: :SME
+	Annotations:
+		rdfs:label "CMS SME",
+		rdfs:comment "Functional Role"
+
+Class: :SME
+
+
+Class: :WorkflowReport
+	SubClassOf: :Report
+	Annotations:
+		rdfs:label "Workflow Report"
+
+Class: :Report
+
+
+Class: :Workflow
+
+
+Class: :Work
+
+
+Class: :Round
+
+
+Class: :StrategyRecommendation
+	SubClassOf: :Recommendation
+	Annotations:
+		rdfs:label "Strategy Recommendation"
+
+Class: :Recommendation
+
+
+Class: :Strategy
+
+
+Class: :RecruiterManager
+	SubClassOf: :Manager
+	Annotations:
+		rdfs:label "Recruiter Manager",
+		rdfs:comment "Functional Role"
+
+Class: :Manager
+
+
+Class: :Science360gov
+
+
+Class: :DesignDecision
+	Annotations:
+		rdfs:label "Design Decision"
+
+Class: :ContentDesigner
+	SubClassOf: :Designer
+	Annotations:
+		rdfs:label "Content Designer",
+		rdfs:comment "Functional Role"
+
+Class: :PrototypeStrategy
+	SubClassOf: :Strategy
+	Annotations:
+		rdfs:label "Prototype Strategy"
+
+Class: :Understanding
+
+
+Class: :Value
+
+
+Class: :Person
+
+
+Class: :WorkshopAttendee
+	SubClassOf: :Attendee
+	Annotations:
+		rdfs:label "Workshop Attendee",
+		rdfs:comment "Functional Role"
+
+Class: :Summary
+
+
+Class: :Hypothesis
+
+
+Class: :Schedule
+
+
+Class: :UserInterview
+	SubClassOf: :Interview
+	Annotations:
+		rdfs:label "User Interview",
+		rdfs:comment "Functional Role"
+
+Class: :Interview
+
+
+Class: :NSFMember
+	SubClassOf: :Member
+	Annotations:
+		rdfs:label "NSF Member",
+		rdfs:comment "Functional Role"
+
+Class: :Place
+
+
+Class: :Github
+
+
+Class: :Issue
+
+
+Class: :Visualdesigner
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Style
+
+
+Class: :DesignConcept
+	SubClassOf: :Concept
+	Annotations:
+		rdfs:label "Design Concept"
+
+Class: :Concept
+
+
+Class: :Moodboard
+
+
+Class: :Sprint
+
+
+Class: :Platform
+
+
+Class: :ContentGuide
+	SubClassOf: :Guide
+	Annotations:
+		rdfs:label "Content Guide"
+
+Class: :Guide
+
+
+Class: :Moderator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Game
+
+
+Class: :Estimator
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Estimate
+
+
+Class: :Average
+
+
+Class: :Field
+
+
+Class: :Story
+
+
+Class: :Transcript
+
+
+Class: :Account
+
+
+Class: :AccountName
+	SubClassOf: :Name
+	Annotations:
+		rdfs:label "Account Name"
+
+Class: :AccountDetail
+	SubClassOf: :Detail
+	Annotations:
+		rdfs:label "Account Detail"
+
+Class: :PasswordReminder
+	SubClassOf: :Reminder
+	Annotations:
+		rdfs:label "Password Reminder"
+
+Class: :1/2
+
+
+Class: :Mind
+
+
+Class: :Itself
+
+
+Class: :Card
+
+
+Class: :ApplicationFunction
+	SubClassOf: :Function
+	Annotations:
+		rdfs:label "Application Function"
+
+Class: :Function
+
+
+Class: :ApplicationRespond
+	SubClassOf: :Respond
+	Annotations:
+		rdfs:label "Application Respond"
+
+Class: :Respond
+
+
+Class: :Unicode
+
+
+Class: :URL
+
+
+Class: :Mike
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Metric
+
+
+Class: :Author
+	Annotations:
+		rdfs:comment "Functional Role"
+
+Class: :Guideline
+
+
+Class: :File
+
+
+Class: :Beta
+
+
+Class: :Wireframe
+
+
+Class: :Test
+
+
+Class: :Sense
+
+
+Class: :Dev
+
+
+Class: :Timer
+
+
+Class: :Photo
+
+
+Class: :Index
+
+
