@@ -17,11 +17,11 @@ def command():
     This will take the inputs from the command line
 
     args.load_path (str): Path to the file to be loaded
-        args.save_name (str): name of the file to save results
+    args.save_name (str): name of the file to save results
 
     Raises:
-        FileNotFoundError: raises excpetion
-        wrong file type: raises exception
+    FileNotFoundError: raises excpetion
+    wrong file type: raises exception
     '''
 
     parser = argparse.ArgumentParser(description = "This program is to convert nlp outputs to only contain results from the intersecting stories")
