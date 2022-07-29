@@ -53,6 +53,7 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to convert jsonl files to human readiable files")
     parser.add_argument("load_path", type = str, help = "path of file")
     parser.add_argument("save_name", type = str, help = "name of file to save")
+    parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     
     args = parser.parse_args()
 
@@ -64,7 +65,14 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        save_folder_path = "nlp\\nlp_outputs\\nlp_outputs_original\\baseline\\" + args.save_name + "_baseline.json"
+        if args.data_type == "BKLG":
+            data_type_folder = "individual_backlog"
+        elif args.data_type == "CAT":
+            data_type_folder = "categories"
+        else:
+            data_type_folder = "global"
+
+        save_folder_path = "nlp\\nlp_outputs\\"+ data_type_folder + "\\nlp_outputs_original\\baseline\\" + args.save_name + "_baseline.json"
         return args.load_path, save_folder_path
 
 def extract(path):
@@ -140,7 +148,7 @@ def identify_labels(text, entities):
 
     return label_list, label_id_list, element_list
 
-def identify_relations(relations,label_id_list,element_list):
+def identify_relations(relations, label_id_list, element_list):
     '''
     Identify and sort relations within story
 
@@ -179,9 +187,11 @@ def identify_relations(relations,label_id_list,element_list):
         if relation_type == "triggers":
             triggers += start_element + " --> " + end_element + ", "
             triggers_list.append([start_element, end_element])
-            primary_actions += end_element + ", "
-            primary_action_id_list.append(end_id)
-            primary_action_list.append(end_element)
+            
+            if not(end_id in primary_action_id_list):
+                primary_actions += end_element + ", "
+                primary_action_list.append(end_element)
+                primary_action_id_list.append(end_id)
             
         elif relation_type == "targets":
             targets += start_element + " --> " + end_element + ", "
@@ -313,7 +323,7 @@ def convert_json_format(text, label_list, relation_list):
     data = {
             "PID": pid.strip(", "),
             "Text": text,
-            "Persona": [persona.strip(", ")],
+            "Persona": persona.strip(", ").split(", "),
             "Action":{"Primary Action": primary_action.strip(", ").split(", "),\
                         "Secondary Action": secondary_action.strip(", ").split(", ")},
             "Entity":{"Primary Entity": primary_entity.strip(", ").split(", "),\
