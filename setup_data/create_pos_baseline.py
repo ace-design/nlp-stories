@@ -54,7 +54,7 @@ def command():
         else:
             data_type_folder = "global"
 
-        save_folder_path = "nlp\\nlp_outputs\\"  + data_type_folder + "nlp_outputs_original\\pos_baseline\\" + args.save_name + "_baseline_pos.json"
+        save_folder_path = "nlp\\nlp_outputs\\"  + data_type_folder + "\\nlp_outputs_original\\pos_baseline\\" + args.save_name + "_baseline_pos.json"
         return args.load_baseline_path, save_folder_path
 
 def load_data(load_path):

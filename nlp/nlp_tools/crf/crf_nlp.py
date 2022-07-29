@@ -532,7 +532,7 @@ def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, sa
     crf_grid = train_model(config_grid, X_train, y_train, "nlp\\nlp_tools\\crf\\crf_models\\"+ model_name + "_" + save_name +  "_crf_model_grid.pkl")
 
     plot_hp(crf_grid, 'mean_test_score')
-    plt.savefig("nlp\\nlp_tools\\crf\crf_graphs\\" + model_name + "_" + save_name + "_grid_parameter_space.png")
+    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name + "_" + save_name + "_grid_parameter_space.png")
     print("\ngraph is saved")
 
     return crf_grid.best_params_, crf_grid.best_score_

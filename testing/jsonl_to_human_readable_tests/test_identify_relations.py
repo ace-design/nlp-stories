@@ -89,8 +89,6 @@ def test_two_triggers(relations, label_id_list, element_list, expected):
     
     expected = (relation_string_list, relation_list, primary_element_data)
     
-
-        
     assert identify_relations(relations, label_id_list, element_list) == expected
 
 @pytest.mark.identify_relations
@@ -188,3 +186,25 @@ def test_same_trigger_words(relations, label_id_list, element_list, expected):
     expected = (relation_string_list, relation_list, primary_element_data)
 
     assert identify_relations(relations, label_id_list, element_list) == expected
+
+@pytest.mark.identify_relations
+def test_two_persona(relations, label_id_list, element_list, expected):
+    relations.append({"id": 108,"from_id": 12,"to_id": 3,"type":"triggers"})
+    label_id_list.append(12)
+    element_list.append("Person")
+
+    relation_string_list, relation_list, primary_element_data = expected
+
+    triggers, targets, contains= relation_string_list
+    triggers += "Person --> click, "
+    relation_string_list = [triggers, targets, contains]
+
+    triggers_list, targets_list, contains_list = relation_list
+    triggers_list.append(["Person", "click"])
+    relation_list = [triggers_list, targets_list, contains_list]
+
+    expected = (relation_string_list, relation_list, primary_element_data)
+
+    assert identify_relations(relations, label_id_list, element_list) == expected
+
+
