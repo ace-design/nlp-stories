@@ -30,6 +30,7 @@ def command():
     parser.add_argument("save_name", type = str, help = "name of file to save")
     parser.add_argument('nlp_type', type = str, choices=["VN", "BASE", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, BASE - baseline, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
+    parser.add_argument('--crf_intersecting_set', default = False, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
 
@@ -50,16 +51,21 @@ def command():
         else:
             data_type_folder = "global"
 
-        if args.nlp_type == "VN":
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\visual_narrator\\" + args.save_name + "_visual_narrator_intersecting.json"
-        elif args.nlp_type == "BASE":
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_baseline_intersecting_pos.json"
-        elif args.nlp_type == "SIMPLE":
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\simple\\" + args.save_name + "_simple_intersecting.json"
-        elif args.nlp_type == "ECMFA":
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\ecmfa_vn\\" + args.save_name + "_ecmfa_vn_intersecting.json"
+        if args.crf_intersecting_set:
+            intersecting_type_folder = "\\nlp_outputs_intersecting_crf"
         else:
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\crf\\" + args.save_name + "_crf_intersecting.json"
+            intersecting_type_folder = "\\nlp_outputs_intersecting"
+
+        if args.nlp_type == "VN":
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\visual_narrator\\" + args.save_name + "_visual_narrator_intersecting.json"
+        elif args.nlp_type == "BASE":
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\pos_baseline\\" + args.save_name + "_baseline_intersecting_pos.json"
+        elif args.nlp_type == "SIMPLE":
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\simple\\" + args.save_name + "_simple_intersecting.json"
+        elif args.nlp_type == "ECMFA":
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\ecmfa_vn\\" + args.save_name + "_ecmfa_vn_intersecting.json"
+        else:
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\crf\\" + args.save_name + "_crf_intersecting.json"
         
         return args.load_nlp_results_path, args.load_intersecting_path, save_file_path
 
