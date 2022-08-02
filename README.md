@@ -80,8 +80,8 @@ We compare the nlp's annotation with the manual baseline annotations to evaluate
    > python jsonl_to_human_readable.py `path to jsonl file from doccano`  `name of file to save`
      - outputs: `json file of annotated info for each story`
 
-4. fabian_restructed_output.py: convert fabian's nlp results to a compatible json file to easily work with
-   > python fabian_restructed_output.py `path to json file of fabian's results`  `name of file to save`
+4. ecmfa_vn_restructed_output.py: convert ecmfa_vn's nlp results to a compatible json file to easily work with
+   > python ecmfa_vn_restructed_output.py `path to json file of ecmfa_vn's results`  `name of file to save`
      - outputs: `json file of annotated info for each story`
 
 5. find_stories_break_visual_narrator.py: indicate and saves the stories that crashes visual narrator
@@ -89,7 +89,7 @@ We compare the nlp's annotation with the manual baseline annotations to evaluate
      - outputs: `txt file of valid visual narrator stories` `txt file of invalid visual narrator stories`
 
 6. find_intersecting_stories.py: indicates and saves the stories that are compatible with all nlp tools
-   > python find_intersecting_stories.py `path to txt file with stories` `path to json file of fabian's results` `path to txt file with valid visual narrator stories` `name of file to save`
+   > python find_intersecting_stories.py `path to txt file with stories` `path to json file of ecmfa_vn's results` `path to txt file with valid visual narrator stories` `name of file to save`
      - outputs: `txt file of intersecting stories` `txt file of stories not included from each nlp`
 
 7. create_pos_baseline.py: include POS info of all the annotations into the json file (for baseline annotations only)
@@ -97,7 +97,7 @@ We compare the nlp's annotation with the manual baseline annotations to evaluate
      - outputs: `json file of annotated info with POS for each story`
 
 8. convert_to_intersecting_stories.py: creates json file that only includes the nlp results of intersecting stories 
-   > python convert_to_intersecting_stories.py `path to json file of nlp results` `path to txt file of intersecting stories` `name of file to save` `["VN", "BASE", "FABIAN", "SIMPLE"]`
+   > python convert_to_intersecting_stories.py `path to json file of nlp results` `path to txt file of intersecting stories` `name of file to save` `["VN", "BASE", "ecmfa_vn", "SIMPLE"]`
      - outputs: `json file of annotated info for only the intersecting stories`
 
 9. comparison.py: compare the nlp tools annotations with the baseline annotations
@@ -109,11 +109,11 @@ We compare the nlp's annotation with the manual baseline annotations to evaluate
       - outputs: `png bargraphs for persona, entity, action for all and primary comparison of all datasets` `png scatterplot graphs for persona, entity, action for all and primary comparison of all datasets` `copy of csv files`
 
 11. compare_all_nlp_results.py: compare the final results for each dataset among all the different nlp tools
-    > python compare_all_nlp_results.py `path to simple final result's csv file` `path to fabian final result's csv file` `path to visual narrator final result's csv file` `name of file to save` `number of datasets`
+    > python compare_all_nlp_results.py `path to simple final result's csv file` `path to ecmfa_vn final result's csv file` `path to visual narrator final result's csv file` `name of file to save` `number of datasets`
       - outputs: `png bargraph for each persona, action and entity`
       - 
 12. compare_all_nlp_average.py: compare all average final results among all the different nlp tools
-    > python compare_all_nlp_average.py `path to simple average result's csv file` `path to fabian average result's csv file` `path to visual narrator average result's csv file` `name of file to save`
+    > python compare_all_nlp_average.py `path to simple average result's csv file` `path to ecmfa_vn average result's csv file` `path to visual narrator average result's csv file` `name of file to save`
       - outputs: `png bargraphs for each precision, recall and f-measure`
 
 13. create_crf_input.py: creates the input required for crf nlp tool

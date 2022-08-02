@@ -28,7 +28,7 @@ def command():
     parser.add_argument("load_nlp_results_path", type = str, help = "path of file that contains the nlp outputs results")
     parser.add_argument("load_intersecting_path", type = str, help = "path of file that contains the intersecting stories")
     parser.add_argument("save_name", type = str, help = "name of file to save")
-    parser.add_argument('nlp_type', type = str, choices=["VN", "BASE", "FABIAN", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, BASE - baseline, FABIAN - fabian, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
+    parser.add_argument('nlp_type', type = str, choices=["VN", "BASE", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, BASE - baseline, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
 
     args = parser.parse_args()
@@ -56,8 +56,8 @@ def command():
             save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\pos_baseline\\" + args.save_name + "_baseline_intersecting_pos.json"
         elif args.nlp_type == "SIMPLE":
             save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\simple\\" + args.save_name + "_simple_intersecting.json"
-        elif args.nlp_type == "FABIAN":
-            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\fabian\\" + args.save_name + "_fabian_intersecting.json"
+        elif args.nlp_type == "ECMFA":
+            save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\ecmfa_vn\\" + args.save_name + "_ecmfa_vn_intersecting.json"
         else:
             save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + "\\nlp_outputs_intersecting\\crf\\" + args.save_name + "_crf_intersecting.json"
         

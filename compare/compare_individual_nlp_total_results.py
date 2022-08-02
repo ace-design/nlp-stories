@@ -75,7 +75,7 @@ def command():
     parser.add_argument("load_primary_path", type = str, help = "path of primary csv file")
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
     parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
-    parser.add_argument('nlp_type', type = str, choices=["VN", "FABIAN", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, FABIAN - fabian, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
+    parser.add_argument('nlp_type', type = str, choices=["VN", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     
     args = parser.parse_args()
@@ -121,8 +121,8 @@ def command():
             nlp_type = "visual_narrator"
         elif args.nlp_type == "SIMPLE":
             nlp_type = "simple"
-        elif args.nlp_type == "FABIAN":
-            nlp_type = "fabian"
+        elif args.nlp_type == "ECMFA":
+            nlp_type = "ecmfa_vn"
         else:
             nlp_type = "crf"
 
