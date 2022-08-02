@@ -84,7 +84,6 @@
                 "Julia",
                 "analysis",
                 "visualizations",
-                "in seconds",
                 "data"
             ]
         },
@@ -419,7 +418,6 @@
             "Secondary Entity": [
                 "analysis",
                 "visualizations",
-                "in seconds",
                 "R",
                 "data"
             ]
@@ -482,7 +480,6 @@
             "Secondary Entity": [
                 "Excel",
                 "data",
-                "in seconds",
                 "analysis",
                 "visualizations"
             ]
@@ -546,7 +543,6 @@
                 "SPSS",
                 "data",
                 "visualizations",
-                "in seconds",
                 "analysis"
             ]
         },
@@ -606,7 +602,6 @@
                 "Data Package"
             ],
             "Secondary Entity": [
-                "in seconds",
                 "data",
                 "STATA",
                 "analysis",
@@ -721,8 +716,7 @@
                 "OpenOffice",
                 "data",
                 "analysis",
-                "visualizations",
-                "in seconds"
+                "visualizations"
             ]
         },
         "Benefit": "I can start using the data for doing analysis and visualizations",
@@ -786,7 +780,6 @@
             ],
             "Secondary Entity": [
                 "Python",
-                "in seconds",
                 "data",
                 "analysis",
                 "visualizations"
@@ -1027,7 +1020,6 @@
             "Secondary Entity": [
                 "Clojure",
                 "analysis",
-                "in seconds",
                 "data",
                 "visualizations"
             ]
@@ -1090,7 +1082,6 @@
             "Secondary Entity": [
                 "analysis",
                 "Julia",
-                "in seconds",
                 "data",
                 "visualizations"
             ]
@@ -1152,7 +1143,6 @@
             ],
             "Secondary Entity": [
                 "C++",
-                "in seconds",
                 "data",
                 "analysis",
                 "visualizations"
@@ -2088,7 +2078,8 @@
                 "MS-SQL",
                 "Data Packages",
                 "MS-SQL",
-                "workflows"
+                "workflows",
+                "ability"
             ]
         },
         "Benefit": "I can use Data Packages in workflows that involve MS-SQL",
@@ -2846,8 +2837,8 @@
             ],
             "Secondary Action": [
                 "know",
-                "have previewed",
-                "relates"
+                "relates",
+                "previewed"
             ]
         },
         "Entity": {
@@ -2875,16 +2866,16 @@
                 "how many users"
             ],
             [
-                "have previewed",
-                "dataset"
-            ],
-            [
                 "relates",
                 "actual download numbers"
             ],
             [
                 "know",
                 "how"
+            ],
+            [
+                "previewed",
+                "dataset"
             ]
         ],
         "Contains": [
@@ -2955,7 +2946,7 @@
         "Action": {
             "Primary Action": [
                 "add",
-                "add in"
+                "add"
             ],
             "Secondary Action": [
                 ""
@@ -2967,7 +2958,7 @@
                 "new data columns"
             ],
             "Secondary Entity": [
-                "dataset more useful"
+                "dataset"
             ]
         },
         "Benefit": "",
@@ -2978,26 +2969,26 @@
             ],
             [
                 "Publisher",
-                "add in"
+                "add"
             ]
         ],
         "Targets": [
             [
-                "add in",
-                "new data columns"
+                "add",
+                "useful metadata"
             ],
             [
                 "add",
-                "useful metadata"
+                "new data columns"
             ]
         ],
         "Contains": [
             [
-                "dataset more useful",
+                "dataset",
                 "new data columns"
             ],
             [
-                "dataset more useful",
+                "dataset",
                 "useful metadata"
             ]
         ]
@@ -3067,7 +3058,8 @@
             ],
             "Secondary Action": [
                 "get",
-                "automatically stored"
+                "automatically stored",
+                "listed"
             ]
         },
         "Entity": {
@@ -3101,6 +3093,10 @@
             [
                 "get",
                 "data API"
+            ],
+            [
+                "listed",
+                "dataset"
             ]
         ],
         "Contains": [
@@ -3222,6 +3218,10 @@
             [
                 "sites",
                 "data summaries"
+            ],
+            [
+                "iframe",
+                "embeddable data summary"
             ]
         ]
     },

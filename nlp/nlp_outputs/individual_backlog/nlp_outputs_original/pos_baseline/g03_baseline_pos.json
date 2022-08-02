@@ -229,7 +229,16 @@
                 "relevant service"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "online portal",
+                "relevant service"
+            ],
+            [
+                "online portal",
+                "application type"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -7525,29 +7534,31 @@
         ],
         "Action": {
             "Primary Action": [
-                "need to be notified"
+                "be notified"
             ],
             "Secondary Action": [
                 "reviewing",
-                "ensure"
+                "ensure",
+                "change"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "Geospatial attributes"
+                "when"
             ],
             "Secondary Entity": [
                 "most current data",
                 "permit",
                 "application",
-                "appropriate standards"
+                "appropriate standards",
+                "Geospatial attributes"
             ]
         },
         "Benefit": "I can ensure that I am reviewing the permit/application to the most current data and appropriate standards",
         "Triggers": [
             [
                 "Staff member",
-                "need to be notified"
+                "be notified"
             ]
         ],
         "Targets": [
@@ -7560,8 +7571,8 @@
                 "application"
             ],
             [
-                "need to be notified",
-                "Geospatial attributes"
+                "be notified",
+                "when"
             ]
         ],
         "Contains": [
@@ -7600,16 +7611,12 @@
             "Primary Action POS": {
                 "Primary Action POS tag": [
                     [
-                        "VERB",
-                        "PART",
                         "AUX",
                         "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
-                        "need",
-                        "to",
                         "be",
                         "notified"
                     ]
@@ -7617,6 +7624,9 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
                     [
                         "VERB"
                     ],
@@ -7630,6 +7640,9 @@
                     ],
                     [
                         "ensure"
+                    ],
+                    [
+                        "change"
                     ]
                 ]
             }
@@ -7638,14 +7651,12 @@
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
                     [
-                        "ADJ",
-                        "NOUN"
+                        "SCONJ"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "Geospatial",
-                        "attributes"
+                        "when"
                     ]
                 ]
             },
@@ -7660,6 +7671,10 @@
                         "VERB"
                     ],
                     [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
                         "NOUN"
                     ],
                     [
@@ -7682,6 +7697,10 @@
                     [
                         "appropriate",
                         "standards"
+                    ],
+                    [
+                        "Geospatial",
+                        "attributes"
                     ]
                 ]
             }

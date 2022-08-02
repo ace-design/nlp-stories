@@ -5395,8 +5395,7 @@
             ],
             "Secondary Action": [
                 "accurately represent",
-                "know",
-                "didn't work"
+                "know"
             ]
         },
         "Entity": {
@@ -5424,10 +5423,6 @@
             [
                 "accurately represent",
                 "FABS errors"
-            ],
-            [
-                "didn't work",
-                "submission"
             ],
             [
                 "know",
@@ -5470,11 +5465,6 @@
                     ],
                     [
                         "VERB"
-                    ],
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -5484,11 +5474,6 @@
                     ],
                     [
                         "know"
-                    ],
-                    [
-                        "did",
-                        "n't",
-                        "work"
                     ]
                 ]
             }
@@ -5548,8 +5533,7 @@
             ],
             "Secondary Action": [
                 "created",
-                "last updated",
-                "not confused"
+                "last updated"
             ]
         },
         "Entity": {
@@ -5579,15 +5563,16 @@
                 "submission"
             ],
             [
-                "not confused",
-                "who"
-            ],
-            [
                 "last updated",
                 "submission"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "who",
+                "submission"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -5625,10 +5610,6 @@
                     [
                         "ADV",
                         "VERB"
-                    ],
-                    [
-                        "PART",
-                        "ADJ"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -5638,10 +5619,6 @@
                     [
                         "last",
                         "updated"
-                    ],
-                    [
-                        "not",
-                        "confused"
                     ]
                 ]
             }
@@ -7573,7 +7550,7 @@
                 "submit"
             ],
             "Secondary Action": [
-                "won't strip off"
+                ""
             ]
         },
         "Entity": {
@@ -7593,10 +7570,6 @@
             ]
         ],
         "Targets": [
-            [
-                "won't strip off",
-                "leading and trailing zeroes"
-            ],
             [
                 "submit",
                 "data elements surrounded by quotation marks"
@@ -7637,20 +7610,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB",
-                        "ADP"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "wo",
-                        "n't",
-                        "strip",
-                        "off"
-                    ]
+                    []
                 ]
             }
         },

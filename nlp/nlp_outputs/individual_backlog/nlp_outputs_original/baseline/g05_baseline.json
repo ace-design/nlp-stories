@@ -171,7 +171,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "any dataset"
+                "any dataset already added"
             ],
             "Secondary Entity": [
                 "Public/Hidden status",
@@ -187,12 +187,12 @@
         ],
         "Targets": [
             [
-                "Hide",
-                "any dataset"
-            ],
-            [
                 "maintain",
                 "Public/Hidden status"
+            ],
+            [
+                "Hide",
+                "any dataset already added"
             ]
         ],
         "Contains": [
@@ -423,7 +423,7 @@
                 "import"
             ],
             "Secondary Action": [
-                "do not have to convert"
+                "use"
             ]
         },
         "Entity": {
@@ -445,12 +445,12 @@
         ],
         "Targets": [
             [
-                "do not have to convert",
-                "data formats"
-            ],
-            [
                 "import",
                 "data"
+            ],
+            [
+                "use",
+                "data packager"
             ]
         ],
         "Contains": [
@@ -532,7 +532,7 @@
                 "import"
             ],
             "Secondary Action": [
-                "do not have to convert"
+                "use"
             ]
         },
         "Entity": {
@@ -558,8 +558,8 @@
                 "data"
             ],
             [
-                "do not have to convert",
-                "data formats"
+                "use",
+                "data packager"
             ]
         ],
         "Contains": [
@@ -584,7 +584,7 @@
                 "import"
             ],
             "Secondary Action": [
-                "do not have to convert"
+                "use"
             ]
         },
         "Entity": {
@@ -610,8 +610,8 @@
                 "data"
             ],
             [
-                "do not have to convert",
-                "data formats"
+                "use",
+                "data packager"
             ]
         ],
         "Contains": [
@@ -636,7 +636,7 @@
                 "import"
             ],
             "Secondary Action": [
-                "do not have to convert"
+                "use"
             ]
         },
         "Entity": {
@@ -662,8 +662,8 @@
                 "data"
             ],
             [
-                "do not have to convert",
-                "data formats"
+                "use",
+                "data packager"
             ]
         ],
         "Contains": [
@@ -826,7 +826,7 @@
                 "data",
                 "data",
                 "other tools",
-                "any visualisation"
+                "any visualisation I am viewing"
             ]
         },
         "Benefit": "I can use the data in other tools",
@@ -852,11 +852,11 @@
                 "data"
             ],
             [
-                "any visualisation",
+                "CSV",
                 "data"
             ],
             [
-                "CSV",
+                "any visualisation I am viewing",
                 "data"
             ]
         ]
@@ -1074,7 +1074,6 @@
                 "share"
             ],
             "Secondary Action": [
-                "sharing",
                 "provide",
                 "support"
             ]
@@ -1085,10 +1084,10 @@
             ],
             "Secondary Entity": [
                 "richer context",
-                "data",
                 "particular view state",
                 "social networks",
-                "communication channels"
+                "communication channels",
+                "data I am sharing"
             ]
         },
         "Benefit": "I can provide richer context in those communication channels for data I am sharing",
@@ -1108,10 +1107,6 @@
                 "richer context"
             ],
             [
-                "sharing",
-                "data"
-            ],
-            [
                 "support",
                 "image"
             ]
@@ -1127,6 +1122,10 @@
             ],
             [
                 "communication channels",
+                "richer context"
+            ],
+            [
+                "data I am sharing",
                 "richer context"
             ]
         ]
@@ -1995,16 +1994,16 @@
         ],
         "Contains": [
             [
-                "measures",
-                "related socioeconomic indexes"
-            ],
-            [
                 "datasets",
                 "contextual constraints"
             ],
             [
-                "measures",
-                "GINI"
+                "GINI",
+                "measures"
+            ],
+            [
+                "related socioeconomic indexes",
+                "measures"
             ]
         ]
     },
@@ -2024,12 +2023,13 @@
         },
         "Entity": {
             "Primary Entity": [
-                "relative percentage of a measure"
+                "relative percentage"
             ],
             "Secondary Entity": [
                 "total of the dataset",
                 "alternative displays",
-                "data"
+                "data",
+                "measure"
             ]
         },
         "Benefit": "I can build alternative displays of the data",
@@ -2046,7 +2046,7 @@
             ],
             [
                 "get",
-                "relative percentage of a measure"
+                "relative percentage"
             ]
         ],
         "Contains": [
@@ -2055,8 +2055,12 @@
                 "alternative displays"
             ],
             [
+                "measure",
+                "relative percentage"
+            ],
+            [
                 "total of the dataset",
-                "relative percentage of a measure"
+                "measure"
             ]
         ]
     },
@@ -2657,7 +2661,7 @@
                 "visualize by default"
             ],
             "Secondary Action": [
-                "not confused"
+                ""
             ]
         },
         "Entity": {
@@ -2697,10 +2701,6 @@
             [
                 "visualize by default",
                 "pivot table"
-            ],
-            [
-                "not confused",
-                "amounts"
             ]
         ],
         "Contains": [

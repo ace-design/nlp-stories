@@ -6903,7 +6903,8 @@
                 "customizable relationship groups"
             ],
             "Secondary Entity": [
-                "patron"
+                "patron",
+                "see also option"
             ]
         },
         "Benefit": "",
@@ -6981,11 +6982,21 @@
                 "Secondary Entity POS tag": [
                     [
                         "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "ADV",
+                        "NOUN"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
                         "patron"
+                    ],
+                    [
+                        "see",
+                        "also",
+                        "option"
                     ]
                 ]
             }
@@ -9226,7 +9237,7 @@
     },
     {
         "PID": "#G27#",
-        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. â€“ with DOIs for each, as needed â€“ when uploading a given work, so that I can provide a robust image of the work in question.",
+        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. – with DOIs for each, as needed – when uploading a given work, so that I can provide a robust image of the work in question.",
         "Persona": [
             "library staff member"
         ],
@@ -11885,7 +11896,6 @@
         ],
         "Action": {
             "Primary Action": [
-                "get",
                 "get"
             ],
             "Secondary Action": [
@@ -11977,15 +11987,9 @@
                 "Primary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
-                    [
-                        "get"
-                    ],
                     [
                         "get"
                     ]

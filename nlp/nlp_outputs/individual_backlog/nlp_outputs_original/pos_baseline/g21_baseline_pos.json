@@ -1707,7 +1707,8 @@
             "Secondary Action": [
                 "filtered",
                 "show",
-                "see"
+                "see",
+                "happening"
             ]
         },
         "Entity": {
@@ -1717,7 +1718,7 @@
             "Secondary Entity": [
                 "all trainee information",
                 "single training session",
-                "WTF is happening"
+                "WTF"
             ]
         },
         "Benefit": "I can see WTF is happening",
@@ -1742,7 +1743,7 @@
             ],
             [
                 "see",
-                "WTF is happening"
+                "WTF"
             ]
         ],
         "Contains": [
@@ -1786,6 +1787,9 @@
                     ],
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -1797,6 +1801,9 @@
                     ],
                     [
                         "see"
+                    ],
+                    [
+                        "happening"
                     ]
                 ]
             }
@@ -1829,9 +1836,7 @@
                         "NOUN"
                     ],
                     [
-                        "NOUN",
-                        "AUX",
-                        "VERB"
+                        "INTJ"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -1846,9 +1851,7 @@
                         "session"
                     ],
                     [
-                        "WTF",
-                        "is",
-                        "happening"
+                        "WTF"
                     ]
                 ]
             }
@@ -3066,6 +3069,10 @@
             [
                 "people",
                 "monies"
+            ],
+            [
+                "stripe",
+                "sponsorship money"
             ]
         ],
         "Persona POS": {
@@ -3761,7 +3768,8 @@
             ],
             "Secondary Action": [
                 "get",
-                "see"
+                "see",
+                "happening"
             ]
         },
         "Entity": {
@@ -3828,6 +3836,9 @@
                     ],
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -3836,6 +3847,9 @@
                     ],
                     [
                         "see"
+                    ],
+                    [
+                        "happening"
                     ]
                 ]
             }
@@ -8508,7 +8522,9 @@
             ],
             "Secondary Action": [
                 "evaluated",
-                "know"
+                "know",
+                "accepted",
+                "rejected"
             ]
         },
         "Entity": {
@@ -8516,8 +8532,7 @@
                 "notification"
             ],
             "Secondary Entity": [
-                "sessions",
-                "whether"
+                "sessions"
             ]
         },
         "Benefit": "I know whether I've been accepted or rejected",
@@ -8535,10 +8550,6 @@
             [
                 "evaluated",
                 "sessions"
-            ],
-            [
-                "know",
-                "whether"
             ]
         ],
         "Contains": [],
@@ -8574,6 +8585,12 @@
                     ],
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -8582,6 +8599,12 @@
                     ],
                     [
                         "know"
+                    ],
+                    [
+                        "accepted"
+                    ],
+                    [
+                        "rejected"
                     ]
                 ]
             }
@@ -8603,17 +8626,11 @@
                 "Secondary Entity POS tag": [
                     [
                         "NOUN"
-                    ],
-                    [
-                        "SCONJ"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
                         "sessions"
-                    ],
-                    [
-                        "whether"
                     ]
                 ]
             }

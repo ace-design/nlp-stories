@@ -1290,17 +1290,16 @@
                 "mark"
             ],
             "Secondary Action": [
-                "appear",
-                "don't want shared"
+                "appear"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "profile as private"
+                "profile"
             ],
             "Secondary Entity": [
                 "name",
-                "things"
+                "things about me I don't want shared"
             ]
         },
         "Benefit": "no one can learn things about me I don't want shared",
@@ -1312,19 +1311,20 @@
         ],
         "Targets": [
             [
-                "mark",
-                "profile as private"
-            ],
-            [
                 "appear",
                 "name"
             ],
             [
-                "don't want shared",
-                "things"
+                "mark",
+                "profile"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "profile",
+                "name"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -1356,23 +1356,11 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "AUX",
-                        "PART",
-                        "AUX",
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "appear"
-                    ],
-                    [
-                        "do",
-                        "n't",
-                        "want",
-                        "shared"
                     ]
                 ]
             }
@@ -1381,16 +1369,12 @@
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
                     [
-                        "NOUN",
-                        "ADV",
-                        "ADJ"
+                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "profile",
-                        "as",
-                        "private"
+                        "profile"
                     ]
                 ]
             },
@@ -1400,7 +1384,14 @@
                         "NOUN"
                     ],
                     [
-                        "NOUN"
+                        "NOUN",
+                        "ADP",
+                        "PRON",
+                        "PRON",
+                        "AUX",
+                        "PART",
+                        "AUX",
+                        "VERB"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -1408,7 +1399,14 @@
                         "name"
                     ],
                     [
-                        "things"
+                        "things",
+                        "about",
+                        "me",
+                        "I",
+                        "do",
+                        "n't",
+                        "want",
+                        "shared"
                     ]
                 ]
             }
@@ -1578,6 +1576,10 @@
         "Contains": [
             [
                 "any member",
+                "email"
+            ],
+            [
+                "form",
                 "email"
             ]
         ],
@@ -2214,7 +2216,7 @@
                 "email"
             ],
             "Secondary Action": [
-                "be considered"
+                ""
             ]
         },
         "Entity": {
@@ -2237,15 +2239,15 @@
             [
                 "email",
                 "news items"
-            ],
-            [
-                "be considered",
-                "publication"
             ]
         ],
         "Contains": [
             [
                 "publication",
+                "news items"
+            ],
+            [
+                "editor",
                 "news items"
             ]
         ],
@@ -2278,16 +2280,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "be",
-                        "considered"
-                    ]
+                    []
                 ]
             }
         },
@@ -3448,7 +3444,7 @@
                 "create"
             ],
             "Secondary Action": [
-                "doesn't charge"
+                ""
             ]
         },
         "Entity": {
@@ -3477,10 +3473,6 @@
             [
                 "create",
                 "Event"
-            ],
-            [
-                "doesn't charge",
-                "Scrum Alliance"
             ]
         ],
         "Contains": [
@@ -3518,18 +3510,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "does",
-                        "n't",
-                        "charge"
-                    ]
+                    []
                 ]
             }
         },
@@ -3872,7 +3856,6 @@
                 "delete"
             ],
             "Secondary Action": [
-                "no longer listed",
                 "cancel"
             ]
         },
@@ -3882,7 +3865,7 @@
                 "events"
             ],
             "Secondary Entity": [
-                "some reason"
+                ""
             ]
         },
         "Benefit": "it's no longer listed if I cancel for some reason",
@@ -3900,14 +3883,6 @@
             [
                 "delete",
                 "events"
-            ],
-            [
-                "no longer listed",
-                "events"
-            ],
-            [
-                "no longer listed",
-                "one of my courses"
             ],
             [
                 "cancel",
@@ -3947,20 +3922,10 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "ADV",
-                        "ADV",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "no",
-                        "longer",
-                        "listed"
-                    ],
                     [
                         "cancel"
                     ]
@@ -3994,16 +3959,10 @@
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
-                    [
-                        "DET",
-                        "NOUN"
-                    ]
+                    []
                 ],
                 "Secondary Entity POS text": [
-                    [
-                        "some",
-                        "reason"
-                    ]
+                    []
                 ]
             }
         }
@@ -6664,7 +6623,7 @@
             "Secondary Entity": [
                 "front page",
                 "once a week",
-                "all the latest happenings"
+                "latest happenings"
             ]
         },
         "Benefit": "I am up on all the latest happenings",
@@ -6681,7 +6640,7 @@
             ],
             [
                 "am up",
-                "all the latest happenings"
+                "latest happenings"
             ]
         ],
         "Contains": [
@@ -6691,7 +6650,7 @@
             ],
             [
                 "new article",
-                "all the latest happenings"
+                "latest happenings"
             ]
         ],
         "Persona POS": {
@@ -6763,8 +6722,6 @@
                         "NOUN"
                     ],
                     [
-                        "DET",
-                        "DET",
                         "ADJ",
                         "NOUN"
                     ]
@@ -6780,8 +6737,6 @@
                         "week"
                     ],
                     [
-                        "all",
-                        "the",
                         "latest",
                         "happenings"
                     ]
@@ -7216,7 +7171,7 @@
                 "appropriate periods"
             ]
         },
-        "Benefit": "",
+        "Benefit": "articles appear only during appropriate periods",
         "Triggers": [
             [
                 "site editor",
@@ -7652,12 +7607,12 @@
         },
         "Entity": {
             "Primary Entity": [
-                "members only",
-                "article"
+                "members only"
             ],
             "Secondary Entity": [
                 "visitors",
-                "members"
+                "members",
+                "article"
             ]
         },
         "Benefit": "visitors are incentivized to become members",
@@ -7671,13 +7626,14 @@
             [
                 "indicate",
                 "members only"
-            ],
+            ]
+        ],
+        "Contains": [
             [
-                "indicate",
+                "members only",
                 "article"
             ]
         ],
-        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -7720,23 +7676,20 @@
                     [
                         "NOUN",
                         "ADV"
-                    ],
-                    [
-                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
                         "members",
                         "only"
-                    ],
-                    [
-                        "article"
                     ]
                 ]
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
                     [
                         "NOUN"
                     ],
@@ -7750,6 +7703,9 @@
                     ],
                     [
                         "members"
+                    ],
+                    [
+                        "article"
                     ]
                 ]
             }
@@ -8176,8 +8132,7 @@
                 "subscribe"
             ],
             "Secondary Action": [
-                "read",
-                "without visiting"
+                "read"
             ]
         },
         "Entity": {
@@ -8203,11 +8158,7 @@
             ],
             [
                 "read",
-                "RSS feed"
-            ],
-            [
-                "without visiting",
-                "site"
+                "articles"
             ]
         ],
         "Contains": [
@@ -8217,7 +8168,7 @@
             ],
             [
                 "site",
-                "RSS feed"
+                "articles"
             ]
         ],
         "Persona POS": {
@@ -8251,19 +8202,11 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
-                    ],
-                    [
-                        "SCONJ",
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
                         "read"
-                    ],
-                    [
-                        "without",
-                        "visiting"
                     ]
                 ]
             }
@@ -8443,8 +8386,10 @@
             ],
             "Secondary Entity": [
                 "home page",
-                "special announcements not necessarily news or articles",
-                "additional exposure"
+                "additional exposure",
+                "special announcements",
+                "news",
+                "articles"
             ]
         },
         "Benefit": "I can give them additional exposure",
@@ -8461,25 +8406,17 @@
             ],
             [
                 "put",
-                "special announcements not necessarily news or articles"
+                "special announcements"
             ],
             [
                 "give",
-                "special announcements not necessarily news or articles"
+                "additional exposure"
             ]
         ],
         "Contains": [
             [
                 "home page",
                 "prominent area"
-            ],
-            [
-                "prominent area",
-                "special announcements not necessarily news or articles"
-            ],
-            [
-                "special announcements not necessarily news or articles",
-                "additional exposure"
             ]
         ],
         "Persona POS": {
@@ -8551,15 +8488,16 @@
                     ],
                     [
                         "ADJ",
-                        "NOUN",
-                        "PART",
-                        "ADV",
-                        "NOUN",
-                        "CCONJ",
                         "NOUN"
                     ],
                     [
                         "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
                         "NOUN"
                     ]
                 ],
@@ -8569,17 +8507,18 @@
                         "page"
                     ],
                     [
-                        "special",
-                        "announcements",
-                        "not",
-                        "necessarily",
-                        "news",
-                        "or",
-                        "articles"
-                    ],
-                    [
                         "additional",
                         "exposure"
+                    ],
+                    [
+                        "special",
+                        "announcements"
+                    ],
+                    [
+                        "news"
+                    ],
+                    [
+                        "articles"
                     ]
                 ]
             }
@@ -9133,7 +9072,7 @@
                 "get back"
             ],
             "Secondary Action": [
-                "don't get lost navigating"
+                "navigating"
             ]
         },
         "Entity": {
@@ -9190,19 +9129,11 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "AUX",
-                        "VERB",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "do",
-                        "n't",
-                        "get",
-                        "lost",
                         "navigating"
                     ]
                 ]
@@ -9244,7 +9175,7 @@
                 "see"
             ],
             "Secondary Action": [
-                "most likely to read"
+                "read"
             ]
         },
         "Entity": {
@@ -9270,7 +9201,7 @@
                 "list"
             ],
             [
-                "most likely to read",
+                "read",
                 "most important or best content"
             ]
         ],
@@ -9314,17 +9245,11 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "ADV",
-                        "ADJ",
-                        "PART",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "most",
-                        "likely",
-                        "to",
                         "read"
                     ]
                 ]
@@ -10646,7 +10571,7 @@
                 "load"
             ],
             "Secondary Action": [
-                "are added"
+                "added"
             ]
         },
         "Entity": {
@@ -10672,7 +10597,7 @@
                 "Excel file"
             ],
             [
-                "are added",
+                "added",
                 "course participants"
             ]
         ],
@@ -10714,13 +10639,11 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "are",
                         "added"
                     ]
                 ]
@@ -10944,6 +10867,10 @@
             [
                 "people",
                 "pending state"
+            ],
+            [
+                "registry",
+                "people"
             ]
         ],
         "Persona POS": {
@@ -11055,23 +10982,24 @@
         ],
         "Action": {
             "Primary Action": [
-                "be sent",
-                "activate"
+                "be sent"
             ],
             "Secondary Action": [
-                "loaded"
+                "activate",
+                "loaded",
+                "register"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "email",
-                "membership"
+                "email"
             ],
             "Secondary Entity": [
                 "Scrum Alliance",
-                "instructions to register",
+                "membership",
                 "name",
-                "registry"
+                "registry",
+                "instructions"
             ]
         },
         "Benefit": "",
@@ -11079,10 +11007,6 @@
             [
                 "CSM",
                 "be sent"
-            ],
-            [
-                "CSM",
-                "activate"
             ]
         ],
         "Targets": [
@@ -11097,13 +11021,13 @@
             [
                 "loaded",
                 "name"
+            ],
+            [
+                "register",
+                "membership"
             ]
         ],
         "Contains": [
-            [
-                "email",
-                "instructions to register"
-            ],
             [
                 "registry",
                 "name"
@@ -11111,6 +11035,10 @@
             [
                 "Scrum Alliance",
                 "membership"
+            ],
+            [
+                "email",
+                "instructions"
             ]
         ],
         "Persona POS": {
@@ -11131,18 +11059,12 @@
                     [
                         "AUX",
                         "VERB"
-                    ],
-                    [
-                        "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
                         "be",
                         "sent"
-                    ],
-                    [
-                        "activate"
                     ]
                 ]
             },
@@ -11150,11 +11072,23 @@
                 "Secondary Action POS tag": [
                     [
                         "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
+                        "activate"
+                    ],
+                    [
                         "loaded"
+                    ],
+                    [
+                        "register"
                     ]
                 ]
             }
@@ -11164,17 +11098,11 @@
                 "Primary Entity POS tag": [
                     [
                         "NOUN"
-                    ],
-                    [
-                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
                         "email"
-                    ],
-                    [
-                        "membership"
                     ]
                 ]
             },
@@ -11185,9 +11113,10 @@
                         "PROPN"
                     ],
                     [
-                        "NOUN",
-                        "PART",
-                        "VERB"
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
                     ],
                     [
                         "NOUN"
@@ -11202,15 +11131,16 @@
                         "Alliance"
                     ],
                     [
-                        "instructions",
-                        "to",
-                        "register"
+                        "membership"
                     ],
                     [
                         "name"
                     ],
                     [
                         "registry"
+                    ],
+                    [
+                        "instructions"
                     ]
                 ]
             }
@@ -11227,7 +11157,7 @@
                 "edit"
             ],
             "Secondary Action": [
-                "don't need to involve"
+                ""
             ]
         },
         "Entity": {
@@ -11253,10 +11183,6 @@
             [
                 "edit",
                 "content"
-            ],
-            [
-                "don't need to involve",
-                "programmer"
             ]
         ],
         "Contains": [
@@ -11271,6 +11197,10 @@
             [
                 "email automatically sent",
                 "content"
+            ],
+            [
+                "content",
+                "simple email edits"
             ]
         ],
         "Persona POS": {
@@ -11302,22 +11232,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB",
-                        "PART",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "do",
-                        "n't",
-                        "need",
-                        "to",
-                        "involve"
-                    ]
+                    []
                 ]
             }
         },
@@ -11688,9 +11606,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "randomly appear"
+                "make"
             ],
             "Secondary Action": [
+                "randomly appear",
                 "see"
             ]
         },
@@ -11709,17 +11628,17 @@
         "Triggers": [
             [
                 "corporatesponsor",
-                "randomly appear"
+                "make"
             ]
         ],
         "Targets": [
             [
-                "randomly appear",
-                "logo"
-            ],
-            [
                 "see",
                 "company's support"
+            ],
+            [
+                "make",
+                "logo"
             ]
         ],
         "Contains": [
@@ -11748,24 +11667,30 @@
             "Primary Action POS": {
                 "Primary Action POS tag": [
                     [
-                        "ADV",
                         "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
                     [
-                        "randomly",
-                        "appear"
+                        "make"
                     ]
                 ]
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
+                    [
+                        "randomly",
+                        "appear"
+                    ],
                     [
                         "see"
                     ]
@@ -11835,7 +11760,7 @@
             ],
             "Secondary Action": [
                 "approved",
-                "be activated"
+                "activated"
             ]
         },
         "Entity": {
@@ -11864,7 +11789,7 @@
                 "Practitioner status"
             ],
             [
-                "be activated",
+                "activated",
                 "certification status"
             ]
         ],
@@ -11907,7 +11832,6 @@
                         "VERB"
                     ],
                     [
-                        "AUX",
                         "VERB"
                     ]
                 ],
@@ -11916,7 +11840,6 @@
                         "approved"
                     ],
                     [
-                        "be",
                         "activated"
                     ]
                 ]
@@ -12076,7 +11999,7 @@
                 "set"
             ],
             "Secondary Action": [
-                "set without involving"
+                "set"
             ]
         },
         "Entity": {
@@ -12100,26 +12023,26 @@
         ],
         "Targets": [
             [
-                "set without involving",
-                "programmer"
+                "set",
+                "annual fees"
             ],
             [
                 "set",
-                "annual fees"
+                "fees"
             ]
         ],
         "Contains": [
             [
-                "annual fees",
-                "members"
+                "members",
+                "annual fees"
             ],
             [
-                "annual fees",
-                "Practitioners"
+                "Practitioners",
+                "annual fees"
             ],
             [
-                "annual fees",
-                "Trainers"
+                "Trainers",
+                "annual fees"
             ]
         ],
         "Persona POS": {
@@ -12152,16 +12075,12 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "VERB",
-                        "SCONJ",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "set",
-                        "without",
-                        "involving"
+                        "set"
                     ]
                 ]
             }

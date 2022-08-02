@@ -951,7 +951,12 @@
                 "deleted data package"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "cli",
+                "deleted data package"
+            ]
+        ]
     },
     {
         "PID": "#G14#",
@@ -2433,9 +2438,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "changes to a package"
+                "changes"
             ],
             "Secondary Entity": [
+                "package I care about",
                 "what has changed"
             ]
         },
@@ -2448,15 +2454,20 @@
         ],
         "Targets": [
             [
-                "check out",
-                "what has changed"
+                "be notified",
+                "changes"
             ],
             [
-                "be notified",
-                "changes to a package"
+                "check out",
+                "what has changed"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "package I care about",
+                "changes"
+            ]
+        ]
     },
     {
         "PID": "#G14#",
@@ -3234,10 +3245,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "site",
                 "prices"
             ],
             "Secondary Entity": [
+                "site",
                 "pricing plan",
                 "cost",
                 "sense",
@@ -3252,10 +3263,6 @@
             ]
         ],
         "Targets": [
-            [
-                "know",
-                "site"
-            ],
             [
                 "know",
                 "prices"

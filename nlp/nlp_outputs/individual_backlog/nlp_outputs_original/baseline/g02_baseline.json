@@ -552,8 +552,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "don't have to regenerate",
-                "be synced"
+                "synced"
             ]
         },
         "Entity": {
@@ -575,19 +574,15 @@
         ],
         "Targets": [
             [
-                "be synced",
-                "FPDS data load"
-            ],
-            [
-                "be synced",
+                "want",
                 "D1 file generation"
             ],
             [
-                "don't have to regenerate",
-                "file"
+                "synced",
+                "FPDS data load"
             ],
             [
-                "want",
+                "synced",
                 "D1 file generation"
             ]
         ],
@@ -790,7 +785,6 @@
                 "want"
             ],
             "Secondary Action": [
-                "do not cause",
                 "managed",
                 "cached"
             ]
@@ -813,10 +807,6 @@
         ],
         "Targets": [
             [
-                "do not cause",
-                "performance issues"
-            ],
-            [
                 "managed",
                 "D Files generation requests"
             ],
@@ -829,12 +819,7 @@
                 "D Files generation requests"
             ]
         ],
-        "Contains": [
-            [
-                "duplicate requests",
-                "performance issues"
-            ]
-        ]
+        "Contains": []
     },
     {
         "PID": "#G02#",
@@ -1422,7 +1407,6 @@
             "Secondary Action": [
                 "deactivate",
                 "click",
-                "cannot click",
                 "happening"
             ]
         },
@@ -1453,16 +1437,8 @@
                 "publish button"
             ],
             [
-                "cannot click",
-                "publish button"
-            ],
-            [
                 "want",
                 "publish button"
-            ],
-            [
-                "happening",
-                "derivations"
             ]
         ],
         "Contains": [
@@ -2338,7 +2314,7 @@
             ],
             [
                 "displayed",
-                "contracts"
+                "NASA grants"
             ]
         ],
         "Contains": []
@@ -3122,8 +3098,7 @@
             ],
             "Secondary Action": [
                 "accurately represent",
-                "know",
-                "didn't work"
+                "know"
             ]
         },
         "Entity": {
@@ -3153,10 +3128,6 @@
                 "FABS errors"
             ],
             [
-                "didn't work",
-                "submission"
-            ],
-            [
                 "know",
                 "why"
             ]
@@ -3174,8 +3145,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "more accurately reflect",
-                "not confused"
+                "more accurately reflect"
             ]
         },
         "Entity": {
@@ -3183,7 +3153,7 @@
                 "frontend URLs"
             ],
             "Secondary Entity": [
-                "page"
+                "page I'm accessing"
             ]
         },
         "Benefit": "I'm not confused",
@@ -3200,16 +3170,12 @@
             ],
             [
                 "more accurately reflect",
-                "page"
-            ],
-            [
-                "not confused",
-                "frontend URLs"
+                "page I'm accessing"
             ]
         ],
         "Contains": [
             [
-                "page",
+                "page I'm accessing",
                 "frontend URLs"
             ]
         ]
@@ -3318,10 +3284,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "loaded"
+                "want"
             ],
             "Secondary Action": [
-                ""
+                "loaded"
             ]
         },
         "Entity": {
@@ -3336,12 +3302,16 @@
         "Triggers": [
             [
                 "Agency user",
-                "loaded"
+                "want"
             ]
         ],
         "Targets": [
             [
                 "loaded",
+                "historical FPDS data"
+            ],
+            [
+                "want",
                 "historical FPDS data"
             ]
         ],
@@ -3359,8 +3329,7 @@
             ],
             "Secondary Action": [
                 "created",
-                "last updated",
-                "not confused"
+                "last updated"
             ]
         },
         "Entity": {
@@ -3390,15 +3359,16 @@
                 "submission"
             ],
             [
-                "not confused",
-                "who"
-            ],
-            [
                 "last updated",
                 "submission"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "who",
+                "submission"
+            ]
+        ]
     },
     {
         "PID": "#G02#",
@@ -3656,7 +3626,8 @@
             ],
             "Secondary Action": [
                 "deciding",
-                "published prior"
+                "published prior",
+                "publish"
             ]
         },
         "Entity": {
@@ -3664,8 +3635,7 @@
                 "more information"
             ],
             "Secondary Entity": [
-                "how many rows",
-                "whether to publish"
+                "how many rows"
             ]
         },
         "Benefit": "",
@@ -3683,10 +3653,6 @@
             [
                 "published prior",
                 "how many rows"
-            ],
-            [
-                "deciding",
-                "whether to publish"
             ]
         ],
         "Contains": [
@@ -4202,7 +4168,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "not confused"
+                ""
             ]
         },
         "Entity": {
@@ -4224,10 +4190,6 @@
             [
                 "want",
                 "language"
-            ],
-            [
-                "not confused",
-                "language"
             ]
         ],
         "Contains": [
@@ -4245,7 +4207,6 @@
         ],
         "Action": {
             "Primary Action": [
-                "do not want",
                 "want"
             ],
             "Secondary Action": [
@@ -4265,20 +4226,12 @@
         "Triggers": [
             [
                 "FABS user",
-                "do not want"
-            ],
-            [
-                "FABS user",
                 "want"
             ]
         ],
         "Targets": [
             [
                 "want",
-                "DABS banner messages"
-            ],
-            [
-                "do not want",
                 "DABS banner messages"
             ],
             [
@@ -4547,7 +4500,7 @@
                 "submit"
             ],
             "Secondary Action": [
-                "won't strip off"
+                ""
             ]
         },
         "Entity": {
@@ -4567,10 +4520,6 @@
             ]
         ],
         "Targets": [
-            [
-                "won't strip off",
-                "leading and trailing zeroes"
-            ],
             [
                 "submit",
                 "data elements surrounded by quotation marks"

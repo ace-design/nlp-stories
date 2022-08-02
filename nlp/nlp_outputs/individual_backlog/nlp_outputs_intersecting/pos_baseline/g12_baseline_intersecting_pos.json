@@ -1447,7 +1447,7 @@
                 "keep track"
             ],
             "Secondary Action": [
-                "don't create"
+                ""
             ]
         },
         "Entity": {
@@ -1467,10 +1467,6 @@
             ]
         ],
         "Targets": [
-            [
-                "don't create",
-                "conflicting schedules"
-            ],
             [
                 "keep track",
                 "usage of internal camp facilities"
@@ -1508,18 +1504,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "do",
-                        "n't",
-                        "create"
-                    ]
+                    []
                 ]
             }
         },
@@ -4298,7 +4286,7 @@
             ],
             "Secondary Action": [
                 "know",
-                "still need to do"
+                "do"
             ]
         },
         "Entity": {
@@ -4323,6 +4311,10 @@
             ],
             [
                 "know",
+                "what"
+            ],
+            [
+                "do",
                 "what"
             ]
         ],
@@ -4358,9 +4350,6 @@
                         "VERB"
                     ],
                     [
-                        "ADV",
-                        "VERB",
-                        "PART",
                         "VERB"
                     ]
                 ],
@@ -4369,9 +4358,6 @@
                         "know"
                     ],
                     [
-                        "still",
-                        "need",
-                        "to",
                         "do"
                     ]
                 ]
@@ -5031,7 +5017,6 @@
                 "submit"
             ],
             "Secondary Action": [
-                "don't have to deal",
                 "losing"
             ]
         },
@@ -5067,13 +5052,14 @@
             [
                 "losing",
                 "consent form"
-            ],
-            [
-                "don't have to deal",
-                "child"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "child",
+                "consent form"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -5108,24 +5094,10 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "do",
-                        "n't",
-                        "have",
-                        "to",
-                        "deal"
-                    ],
                     [
                         "losing"
                     ]

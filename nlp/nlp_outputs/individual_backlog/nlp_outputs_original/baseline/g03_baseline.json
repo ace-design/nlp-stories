@@ -129,7 +129,16 @@
                 "relevant service"
             ]
         ],
-        "Contains": []
+        "Contains": [
+            [
+                "online portal",
+                "relevant service"
+            ],
+            [
+                "online portal",
+                "application type"
+            ]
+        ]
     },
     {
         "PID": "#G03#",
@@ -2855,29 +2864,31 @@
         ],
         "Action": {
             "Primary Action": [
-                "need to be notified"
+                "be notified"
             ],
             "Secondary Action": [
                 "reviewing",
-                "ensure"
+                "ensure",
+                "change"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "Geospatial attributes"
+                "when"
             ],
             "Secondary Entity": [
                 "most current data",
                 "permit",
                 "application",
-                "appropriate standards"
+                "appropriate standards",
+                "Geospatial attributes"
             ]
         },
         "Benefit": "I can ensure that I am reviewing the permit/application to the most current data and appropriate standards",
         "Triggers": [
             [
                 "Staff member",
-                "need to be notified"
+                "be notified"
             ]
         ],
         "Targets": [
@@ -2890,8 +2901,8 @@
                 "application"
             ],
             [
-                "need to be notified",
-                "Geospatial attributes"
+                "be notified",
+                "when"
             ]
         ],
         "Contains": [

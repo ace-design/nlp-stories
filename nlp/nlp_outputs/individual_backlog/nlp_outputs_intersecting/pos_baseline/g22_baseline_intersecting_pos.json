@@ -576,7 +576,6 @@
                 "check"
             ],
             "Secondary Action": [
-                "submitted",
                 "calculate",
                 "check"
             ]
@@ -589,7 +588,6 @@
                 "data",
                 "project",
                 "necessary submission fees",
-                "whether",
                 "target group"
             ]
         },
@@ -606,16 +604,8 @@
                 "planned provenance"
             ],
             [
-                "submitted",
-                "planned provenance"
-            ],
-            [
                 "calculate",
                 "necessary submission fees"
-            ],
-            [
-                "check",
-                "whether"
             ]
         ],
         "Contains": [
@@ -625,6 +615,10 @@
             ],
             [
                 "project",
+                "data"
+            ],
+            [
+                "target group",
                 "data"
             ]
         ],
@@ -662,15 +656,9 @@
                     ],
                     [
                         "VERB"
-                    ],
-                    [
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "submitted"
-                    ],
                     [
                         "calculate"
                     ],
@@ -709,9 +697,6 @@
                         "NOUN"
                     ],
                     [
-                        "SCONJ"
-                    ],
-                    [
                         "NOUN",
                         "NOUN"
                     ]
@@ -727,9 +712,6 @@
                         "necessary",
                         "submission",
                         "fees"
-                    ],
-                    [
-                        "whether"
                     ],
                     [
                         "target",
@@ -3380,8 +3362,7 @@
             "Secondary Entity": [
                 "data management plan",
                 "how up-to-date",
-                "plan",
-                "whether"
+                "plan"
             ]
         },
         "Benefit": "I know how up-to-date the plan is or whether it needs to be updated",
@@ -3407,10 +3388,6 @@
             [
                 "know",
                 "how up-to-date"
-            ],
-            [
-                "know",
-                "whether"
             ],
             [
                 "updated",
@@ -3504,9 +3481,6 @@
                     ],
                     [
                         "VERB"
-                    ],
-                    [
-                        "SCONJ"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -3525,9 +3499,6 @@
                     ],
                     [
                         "plan"
-                    ],
-                    [
-                        "whether"
                     ]
                 ]
             }
@@ -6217,6 +6188,133 @@
     },
     {
         "PID": "#G22#",
+        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders’ rules, so that I can ensure all costs will be accepted.",
+        "Persona": [
+            "research support officer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "ensure",
+                "accepted"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "compliance"
+            ],
+            "Secondary Entity": [
+                "fundersâ€™ rules",
+                "all costs"
+            ]
+        },
+        "Benefit": "I can ensure all costs will be accepted",
+        "Triggers": [
+            [
+                "research support officer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "ensure",
+                "compliance "
+            ],
+            [
+                "accepted",
+                "all costs"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "research",
+                    "support",
+                    "officer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "ensure"
+                    ],
+                    [
+                        "accepted"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "compliance"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "fundersâ€™",
+                        "rules"
+                    ],
+                    [
+                        "all",
+                        "costs"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G22#",
         "Text": "#G22# As a funder, I want to be able to check all the repositories mentioned in a DMP, so that I can verify whether the project has followed our funding rules.",
         "Persona": [
             "funder"
@@ -6237,8 +6335,7 @@
             "Secondary Entity": [
                 "DMP",
                 "project",
-                "funding rules",
-                "whether"
+                "funding rules"
             ]
         },
         "Benefit": "I can verify whether the project has followed our funding rules",
@@ -6254,18 +6351,22 @@
                 "repositories mentioned"
             ],
             [
-                "verify",
-                "whether"
-            ],
-            [
                 "followed",
                 "funding rules"
+            ],
+            [
+                "verify",
+                "project"
             ]
         ],
         "Contains": [
             [
                 "DMP",
                 "repositories mentioned"
+            ],
+            [
+                "project",
+                "funding rules"
             ]
         ],
         "Persona POS": {
@@ -6338,9 +6439,6 @@
                     [
                         "NOUN",
                         "NOUN"
-                    ],
-                    [
-                        "SCONJ"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -6353,9 +6451,6 @@
                     [
                         "funding",
                         "rules"
-                    ],
-                    [
-                        "whether"
                     ]
                 ]
             }
@@ -7539,7 +7634,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "whether"
+                ""
             ],
             "Secondary Entity": [
                 "collected data",
@@ -7556,10 +7651,6 @@
             ]
         ],
         "Targets": [
-            [
-                "know",
-                "whether"
-            ],
             [
                 "maintained",
                 "dependencies"
@@ -7620,14 +7711,10 @@
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    [
-                        "SCONJ"
-                    ]
+                    []
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "whether"
-                    ]
+                    []
                 ]
             },
             "Secondary Entity POS": {
@@ -8312,11 +8399,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "whether"
+                ""
             ],
             "Secondary Entity": [
                 "data",
-                "whether",
                 "how",
                 "data"
             ]
@@ -8330,16 +8416,8 @@
         ],
         "Targets": [
             [
-                "know",
-                "whether"
-            ],
-            [
                 "reproduced efficiently",
                 "data"
-            ],
-            [
-                "determine",
-                "whether"
             ],
             [
                 "determine",
@@ -8408,23 +8486,16 @@
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    [
-                        "SCONJ"
-                    ]
+                    []
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "whether"
-                    ]
+                    []
                 ]
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
                     [
                         "NOUN"
-                    ],
-                    [
-                        "SCONJ"
                     ],
                     [
                         "ADV"
@@ -8436,9 +8507,6 @@
                 "Secondary Entity POS text": [
                     [
                         "data"
-                    ],
-                    [
-                        "whether"
                     ],
                     [
                         "how"
@@ -8909,8 +8977,7 @@
             ],
             "Secondary Entity": [
                 "data",
-                "data",
-                "whether"
+                "data"
             ]
         },
         "Benefit": "I can check whether the data can be kept secure",
@@ -8928,10 +8995,6 @@
             [
                 "kept secure",
                 "data"
-            ],
-            [
-                "check",
-                "whether"
             ]
         ],
         "Contains": [
@@ -9010,9 +9073,6 @@
                     ],
                     [
                         "NOUN"
-                    ],
-                    [
-                        "SCONJ"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -9021,9 +9081,6 @@
                     ],
                     [
                         "data"
-                    ],
-                    [
-                        "whether"
                     ]
                 ]
             }
@@ -10893,7 +10950,7 @@
         },
         "Entity": {
             "Primary Entity": [
-                "whether"
+                ""
             ],
             "Secondary Entity": [
                 "DMP",
@@ -10908,10 +10965,6 @@
             ]
         ],
         "Targets": [
-            [
-                "know",
-                "whether"
-            ],
             [
                 "approved",
                 "DMP"
@@ -10971,14 +11024,10 @@
         "Entity POS": {
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
-                    [
-                        "SCONJ"
-                    ]
+                    []
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "whether"
-                    ]
+                    []
                 ]
             },
             "Secondary Entity POS": {

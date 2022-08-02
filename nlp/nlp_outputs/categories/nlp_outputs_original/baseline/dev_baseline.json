@@ -1,0 +1,6697 @@
+[
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Node, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "data",
+                "analysis",
+                "visualizations",
+                "Node"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "start using",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "Node",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into Julia in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Julia",
+                "analysis",
+                "visualizations",
+                "data"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Julia",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I want to add type information to my data, so that it is more useful to others and can be used better with tools like visualization programs.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                "used better"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "type information"
+            ],
+            "Secondary Entity": [
+                "data",
+                "others",
+                "visualization programs",
+                "tools"
+            ]
+        },
+        "Benefit": "it is more useful to others and can be used better with tools like visualization programs",
+        "Triggers": [
+            [
+                "Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "used better",
+                "tools"
+            ],
+            [
+                "add",
+                "type information"
+            ]
+        ],
+        "Contains": [
+            [
+                "tools",
+                "visualization programs"
+            ],
+            [
+                "data",
+                "type information"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I want to be able to provide a visualization of data in the Data Package, so that I can provide my analysis and show my work to users of the data.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "provide"
+            ],
+            "Secondary Action": [
+                "provide",
+                "show"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "visualization"
+            ],
+            "Secondary Entity": [
+                "users of the data",
+                "Data Package",
+                "data",
+                "analysis",
+                "work"
+            ]
+        },
+        "Benefit": "I can provide my analysis and show my work to users of the data",
+        "Triggers": [
+            [
+                "Publisher",
+                "provide"
+            ]
+        ],
+        "Targets": [
+            [
+                "provide",
+                "visualization"
+            ],
+            [
+                "provide",
+                "analysis"
+            ],
+            [
+                "show",
+                "work"
+            ]
+        ],
+        "Contains": [
+            [
+                "visualization",
+                "data"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to be able to save new visualizations, so that I can share them with others or include them in the Data Package.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "save"
+            ],
+            "Secondary Action": [
+                "share",
+                "include"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new visualizations"
+            ],
+            "Secondary Entity": [
+                "others",
+                "Data Package"
+            ]
+        },
+        "Benefit": "I can share them with others or include them in the Data Package",
+        "Triggers": [
+            [
+                "Researcher",
+                "save"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "new visualizations"
+            ],
+            [
+                "save",
+                "new visualizations"
+            ],
+            [
+                "share",
+                "new visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "new visualizations"
+            ],
+            [
+                "others",
+                "new visualizations"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to know that my data conforms to its Data Package profile, so that I can feel trust in the validity and usefulness of the data.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "feel"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "trust",
+                "usefulness",
+                "data.",
+                "Data Package profile",
+                "validity"
+            ]
+        },
+        "Benefit": "I can feel trust in the validity and usefulness of the data",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "feel",
+                "usefulness"
+            ],
+            [
+                "know",
+                "data"
+            ],
+            [
+                "feel",
+                "trust"
+            ]
+        ],
+        "Contains": [
+            [
+                "data.",
+                "usefulness"
+            ],
+            [
+                "validity",
+                "trust"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to understand the ways in which my data is invalid, so that I can know how to fix it.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "understand"
+            ],
+            "Secondary Action": [
+                "fix",
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ways"
+            ],
+            "Secondary Entity": [
+                "how",
+                "data"
+            ]
+        },
+        "Benefit": "I can know how to fix it",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "understand",
+                "ways"
+            ],
+            [
+                "know",
+                "how"
+            ],
+            [
+                "fix",
+                "data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into R in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "doing",
+                "start using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "analysis",
+                "visualizations",
+                "R",
+                "data"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "R",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into Excel in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "doing",
+                "start using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Excel",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "Excel",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into SPSS in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "SPSS",
+                "data",
+                "visualizations",
+                "analysis"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "doing",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "data"
+            ],
+            [
+                "SPSS",
+                "Data Package"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into STATA in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "data",
+                "STATA",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "get",
+                "Data Package"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "data"
+            ],
+            [
+                "STATA",
+                "Data Package"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to be able to translate my EML dataset to a Data Package, so that I can benefit from the wide array of tools available for Data Packages.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "translate"
+            ],
+            "Secondary Action": [
+                "benefit"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "EML dataset"
+            ],
+            "Secondary Entity": [
+                "wide array of tools available",
+                "Data Packages",
+                "Data Package"
+            ]
+        },
+        "Benefit": "I can benefit from the wide array of tools available for Data Packages",
+        "Triggers": [
+            [
+                "Researcher",
+                "translate"
+            ]
+        ],
+        "Targets": [
+            [
+                "benefit",
+                "wide array of tools available"
+            ],
+            [
+                "translate",
+                "EML dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Packages",
+                "wide array of tools available"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into LibreOffice/OpenOffice in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "LibreOffice",
+                "OpenOffice",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "LibreOffice",
+                "Data Package"
+            ],
+            [
+                "OpenOffice",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Python in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "doing",
+                "start using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Python",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Python",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want a jQuery plugin for Core Data Packages, so that I can use it to apply to form control that uses a core dataset for autocompletion.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "form",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "jQuery plugin"
+            ],
+            "Secondary Entity": [
+                "Core Data Packages",
+                "control",
+                "core dataset",
+                "autocompletion"
+            ]
+        },
+        "Benefit": "I can use it to apply to form control that uses a core dataset for autocompletion",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "jQuery plugin"
+            ],
+            [
+                "form",
+                "control"
+            ],
+            [
+                "use",
+                "jQuery plugin"
+            ]
+        ],
+        "Contains": [
+            [
+                "Core Data Packages",
+                "jQuery plugin"
+            ],
+            [
+                "autocompletion",
+                "core dataset"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get my Excel spreadsheet into a Data Package, so that I can benefit from better tooling and standardization.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "benefit from"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Excel spreadsheet"
+            ],
+            "Secondary Entity": [
+                "Data Package",
+                "better tooling",
+                "standardization"
+            ]
+        },
+        "Benefit": "I can benefit from better tooling and standardization",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Excel spreadsheet"
+            ],
+            [
+                "benefit from",
+                "better tooling"
+            ],
+            [
+                "benefit from",
+                "standardization"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "Excel spreadsheet"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to do exploratory data analysis in R and operationalize that analysis in Python, so that I can use the best tool for the job.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "operationalize",
+                "do"
+            ],
+            "Secondary Action": [
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "analysis",
+                "exploratory data analysis"
+            ],
+            "Secondary Entity": [
+                "Python",
+                "best tool",
+                "R",
+                "job"
+            ]
+        },
+        "Benefit": "I can use the best tool for the job",
+        "Triggers": [
+            [
+                "Developer",
+                "operationalize"
+            ],
+            [
+                "Developer",
+                "do"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "best tool"
+            ],
+            [
+                "do",
+                "exploratory data analysis"
+            ],
+            [
+                "operationalize",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "R",
+                "exploratory data analysis"
+            ],
+            [
+                "Python",
+                "analysis"
+            ],
+            [
+                "job",
+                "best tool"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Clojure in seconds, so that I can start using the data in doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Clojure",
+                "analysis",
+                "data",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "doing",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "Clojure",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Julia in seconds, so that I can start using the data in doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "analysis",
+                "Julia",
+                "data",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "data"
+            ],
+            [
+                "Julia",
+                "Data Package"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into C++ in seconds, so that I can start using the data in doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "C++",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "doing",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "C++",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Machine Learning expert, I would like to package ML datasets as data packages, so that I can easily import them into my ML platform, so that I can start using the data in doing analysis.",
+        "Persona": [
+            "Machine Learning expert"
+        ],
+        "Action": {
+            "Primary Action": [
+                "package"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing",
+                "easily import"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ML datasets"
+            ],
+            "Secondary Entity": [
+                "data",
+                "analysis",
+                "data packages",
+                "ML platform"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis, I can easily import them into my ML platform",
+        "Triggers": [
+            [
+                "Machine Learning expert",
+                "package"
+            ]
+        ],
+        "Targets": [
+            [
+                "package",
+                "ML datasets"
+            ],
+            [
+                "easily import",
+                "ML datasets"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "data packages",
+                "ML datasets"
+            ],
+            [
+                "ML datasets",
+                "data"
+            ],
+            [
+                "ML platform",
+                "data packages"
+            ],
+            [
+                "data",
+                "analysis"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want an Elasticsearch integration, so that I can integrate data-packaged data with pipelines that use Elasticsearch.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Elasticsearch integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "Elasticsearch"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use Elasticsearch",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "integrate",
+                "data-packaged data"
+            ],
+            [
+                "want",
+                "Elasticsearch integration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want an SPSS integration, so that I can integrate data-packaged data with pipelines that use SPSS.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "SPSS integration"
+            ],
+            "Secondary Entity": [
+                "pipelines",
+                "SPSS",
+                "data-packaged data"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use SPSS",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "integrate",
+                "data-packaged data"
+            ],
+            [
+                "want",
+                "SPSS integration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want an EPrints integration, so that I can integrate data-packaged data with pipelines that use EPrints.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "EPrints integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "EPrints"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use EPrints",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "integrate",
+                "data-packaged data"
+            ],
+            [
+                "want",
+                "EPrints integration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want a Mongo integration, so that I can integrate data-packaged data with pipelines that use Mongo.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Mongo integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "Mongo"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use Mongo",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "Mongo integration"
+            ],
+            [
+                "integrate",
+                "data-packaged data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want a DAT integration, so that I can integrate data-packaged data with pipelines that use DAT.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "DAT integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "DAT"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use DAT",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "DAT integration"
+            ],
+            [
+                "integrate",
+                "data-packaged data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to add general reference data to my narrow dataset, so that my dataset is more useful.",
+        "Persona": [
+            "ResearcherGovernment Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "general reference data"
+            ],
+            "Secondary Entity": [
+                "narrow dataset",
+                "dataset"
+            ]
+        },
+        "Benefit": "my dataset is more useful",
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "general reference data"
+            ]
+        ],
+        "Contains": [
+            [
+                "narrow dataset",
+                "general reference data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to add general country names to my dataset that only contains country codes, so that my dataset is more readable.",
+        "Persona": [
+            "ResearcherGovernment Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "general country names"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "country codes",
+                "dataset"
+            ]
+        },
+        "Benefit": "my dataset is more readable",
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "general country names"
+            ]
+        ],
+        "Contains": [
+            [
+                "general country names",
+                "country codes"
+            ],
+            [
+                "dataset",
+                "general country names"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to add reference data on inflation to my spending dataset, so that the spending lines in my dataset is more understandable.",
+        "Persona": [
+            "ResearcherGovernment Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reference data on inflation"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "spending dataset",
+                "spending lines"
+            ]
+        },
+        "Benefit": "the spending lines in my dataset is more understandable",
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "reference data on inflation"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "spending lines"
+            ],
+            [
+                "spending dataset",
+                "reference data on inflation"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to map lines in my dataset using geographic data in my dataset, so that my dataset is more engaging for non-technical users.",
+        "Persona": [
+            "ResearcherGovernment Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "map"
+            ],
+            "Secondary Action": [
+                "using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "lines"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "geographic data",
+                "dataset",
+                "dataset",
+                "non-technical users"
+            ]
+        },
+        "Benefit": "my dataset is more engaging for non-technical users",
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "map"
+            ]
+        ],
+        "Targets": [
+            [
+                "map",
+                "lines"
+            ],
+            [
+                "using",
+                "geographic data"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "lines"
+            ],
+            [
+                "dataset",
+                "geographic data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to be able to reference a remote-controlled vocabulary for my dataset, so that I can be sure that column of my dataset are valid against a single shard list of terms.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "reference"
+            ],
+            "Secondary Action": [
+                "be sure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "remote-controlled vocabulary"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "single shard list of terms",
+                "column",
+                "dataset"
+            ]
+        },
+        "Benefit": "I can be sure that column of my dataset are valid against a single shard list of terms",
+        "Triggers": [
+            [
+                "Researcher",
+                "reference"
+            ]
+        ],
+        "Targets": [
+            [
+                "reference",
+                "remote-controlled vocabulary"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "remote-controlled vocabulary"
+            ],
+            [
+                "dataset",
+                "column"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a developer, I want an DSpace integration, so that I can integrate data-packaged data with pipelines that use Dspace.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "DSpace integration"
+            ],
+            "Secondary Entity": [
+                "Dspace",
+                "data-packaged data",
+                "pipelines"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use Dspace",
+        "Triggers": [
+            [
+                "developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "integrate",
+                "data-packaged data"
+            ],
+            [
+                "want",
+                "DSpace integration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want Feather integration, so that I can integrate data-packaged data with pipelines that use Feather.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Feather integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "Feather"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use Feather",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "Feather integration"
+            ],
+            [
+                "integrate",
+                "data-packaged data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want HDF5 integration, so that I can integrate data-packaged data with pipelines that use HDF5.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "integrate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "HDF5 integration"
+            ],
+            "Secondary Entity": [
+                "data-packaged data",
+                "pipelines",
+                "HDF5"
+            ]
+        },
+        "Benefit": "I can integrate data-packaged data with pipelines that use HDF5",
+        "Triggers": [
+            [
+                "Developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "HDF5 integration"
+            ],
+            [
+                "integrate",
+                "data-packaged data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, working with data, I want an Microsoft Power BI integration, so that I can import datasets without downloading them locally.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "working with",
+                "import",
+                "without downloading"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Microsoft Power BI integration"
+            ],
+            "Secondary Entity": [
+                "data",
+                "datasets"
+            ]
+        },
+        "Benefit": "I can import datasets without downloading them locally",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "working with",
+                "data"
+            ],
+            [
+                "import",
+                "datasets"
+            ],
+            [
+                "without downloading",
+                "datasets"
+            ],
+            [
+                "want",
+                "Microsoft Power BI integration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want an integration with Zenodo, so that when I store my dataset in GitHub, I don\u2019t have to retype descriptive information about my dataset.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "store",
+                "don\u2019t have to retype"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "integration"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "GitHub",
+                "descriptive information",
+                "Zenodo",
+                "dataset"
+            ]
+        },
+        "Benefit": "when I store my dataset in GitHub, I don\u2019t have to retype descriptive information about my dataset",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "don\u2019t have to retype",
+                "descriptive information"
+            ],
+            [
+                "store",
+                "dataset"
+            ],
+            [
+                "want",
+                "integration"
+            ]
+        ],
+        "Contains": [
+            [
+                "GitHub",
+                "dataset"
+            ],
+            [
+                "dataset",
+                "descriptive information"
+            ],
+            [
+                "Zenodo",
+                "integration"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I would like an integration with Open Refine, so that I can output cleaned Data Packages.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "would like"
+            ],
+            "Secondary Action": [
+                "output"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "integration"
+            ],
+            "Secondary Entity": [
+                "cleaned Data Packages",
+                "Open Refine"
+            ]
+        },
+        "Benefit": "I can output cleaned Data Packages",
+        "Triggers": [
+            [
+                "Publisher",
+                "would like"
+            ]
+        ],
+        "Targets": [
+            [
+                "would like",
+                "integration"
+            ],
+            [
+                "output",
+                "cleaned Data Packages"
+            ]
+        ],
+        "Contains": [
+            [
+                "Open Refine",
+                "integration"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to publish Data Packages to CKAN, so that my data is findable, and I can have a data API.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish"
+            ],
+            "Secondary Action": [
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Packages"
+            ],
+            "Secondary Entity": [
+                "data",
+                "data API",
+                "CKAN"
+            ]
+        },
+        "Benefit": "my data is findable, and I can have a data API",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "Data Packages"
+            ],
+            [
+                "have",
+                "data API"
+            ]
+        ],
+        "Contains": [
+            [
+                "CKAN",
+                "Data Packages"
+            ],
+            [
+                "Data Packages",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherDeveloper, would like the ability import/export from MS-SQL, so that I can use Data Packages in workflows that involve MS-SQL.",
+        "Persona": [
+            "ResearcherDeveloper"
+        ],
+        "Action": {
+            "Primary Action": [
+                "import",
+                "export"
+            ],
+            "Secondary Action": [
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "MS-SQL",
+                "Data Packages",
+                "MS-SQL",
+                "workflows",
+                "ability"
+            ]
+        },
+        "Benefit": "I can use Data Packages in workflows that involve MS-SQL",
+        "Triggers": [
+            [
+                "ResearcherDeveloper",
+                "import"
+            ],
+            [
+                "ResearcherDeveloper",
+                "export"
+            ]
+        ],
+        "Targets": [
+            [
+                "use ",
+                "Data Packages"
+            ]
+        ],
+        "Contains": [
+            [
+                "workflows",
+                "Data Packages"
+            ],
+            [
+                "workflows",
+                "MS-SQL"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, working with data in NetCDF, I want NetCDF integration, so that I can store my data in plaintext while still retaining its metadata.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "store",
+                "still retaining"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "NetCDF integration"
+            ],
+            "Secondary Entity": [
+                "NetCDF",
+                "data",
+                "data",
+                "plaintext",
+                "metadata"
+            ]
+        },
+        "Benefit": "I can store my data in plaintext while still retaining its metadata",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "still retaining",
+                "metadata"
+            ],
+            [
+                "want",
+                "NetCDF integration"
+            ],
+            [
+                "store",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "plaintext",
+                "data"
+            ],
+            [
+                "NetCDF",
+                "data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want an integration with https://data.mendeley.com/, so that I can validate my data upon ingest to the service.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "validate",
+                "ingest"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "integration"
+            ],
+            "Secondary Entity": [
+                "data",
+                "https://data.mendeley.com/",
+                "service"
+            ]
+        },
+        "Benefit": "I can validate my data upon ingest to the service",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "integration "
+            ],
+            [
+                "ingest",
+                "service"
+            ],
+            [
+                "validate",
+                " data"
+            ]
+        ],
+        "Contains": [
+            [
+                "https://data.mendeley.com/",
+                "integration "
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I would like an integration with Excel, so that I can output cleaned Data Packages.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "would like"
+            ],
+            "Secondary Action": [
+                "output"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "integration"
+            ],
+            "Secondary Entity": [
+                "Excel",
+                "cleaned Data Packages"
+            ]
+        },
+        "Benefit": "I can output cleaned Data Packages",
+        "Triggers": [
+            [
+                "Publisher",
+                "would like"
+            ]
+        ],
+        "Targets": [
+            [
+                "would like",
+                "integration"
+            ],
+            [
+                "output",
+                "cleaned Data Packages"
+            ]
+        ],
+        "Contains": [
+            [
+                "Excel",
+                "integration"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I want to store my data quickly and easily online.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "store"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Publisher",
+                "store"
+            ]
+        ],
+        "Targets": [
+            [
+                "store",
+                "data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Repository Manager, I want a tool that makes it easy for researchers/ users to add basic metadata to their research data, so that it is more findable and therefore useful.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "add"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tool"
+            ],
+            "Secondary Entity": [
+                "users",
+                "researchers",
+                "basic metadata ",
+                "research data"
+            ]
+        },
+        "Benefit": "it is more findable and therefore useful",
+        "Triggers": [
+            [
+                "Repository Manager",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "tool"
+            ],
+            [
+                "add",
+                "basic metadata "
+            ]
+        ],
+        "Contains": [
+            [
+                "research data",
+                "basic metadata "
+            ],
+            [
+                "users",
+                "research data"
+            ],
+            [
+                "researchers",
+                "research data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want validate my data with a minimum of clicks, so that I can feel trust in the validity and usefulness of the data.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "validate"
+            ],
+            "Secondary Action": [
+                "feel"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "minimum of clicks",
+                "validity",
+                "trust",
+                "data",
+                "usefulness"
+            ]
+        },
+        "Benefit": "I can feel trust in the validity and usefulness of the data",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "validate"
+            ]
+        ],
+        "Targets": [
+            [
+                "validate",
+                "data"
+            ],
+            [
+                "feel",
+                "usefulness"
+            ],
+            [
+                "feel",
+                "trust"
+            ]
+        ],
+        "Contains": [
+            [
+                "data",
+                "usefulness"
+            ],
+            [
+                "validity",
+                "trust"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to be able to check that every time I update my data it is still good, so that I can catch errors early and store reliable data.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "check"
+            ],
+            "Secondary Action": [
+                "update",
+                "catch",
+                "store"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "errors",
+                "reliable data"
+            ]
+        },
+        "Benefit": "I can catch errors early and store reliable data",
+        "Triggers": [
+            [
+                "publisher",
+                "check"
+            ]
+        ],
+        "Targets": [
+            [
+                "check",
+                "data"
+            ],
+            [
+                "update",
+                "data"
+            ],
+            [
+                "catch",
+                "errors"
+            ],
+            [
+                "store",
+                "reliable data"
+            ]
+        ],
+        "Contains": [
+            [
+                "data",
+                "errors"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a DeveloperWrangler, I want to use a command line tool that allows met to validate data, so that I can feel trust in the validity and usefulness of the data quickly and in the context of my command line workflow.",
+        "Persona": [
+            "DeveloperWrangler"
+        ],
+        "Action": {
+            "Primary Action": [
+                "use"
+            ],
+            "Secondary Action": [
+                "validate",
+                "feel"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "command line tool"
+            ],
+            "Secondary Entity": [
+                "data",
+                "trust",
+                "validity",
+                "usefulness",
+                "data",
+                "command line workflow"
+            ]
+        },
+        "Benefit": "I can feel trust in the validity and usefulness of the data quickly and in the context of my command line workflow",
+        "Triggers": [
+            [
+                "DeveloperWrangler",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "validate",
+                "data"
+            ],
+            [
+                "use",
+                "command line tool"
+            ],
+            [
+                "feel",
+                "trust"
+            ],
+            [
+                "feel",
+                "usefulness"
+            ]
+        ],
+        "Contains": [
+            [
+                "validity",
+                "trust"
+            ],
+            [
+                "command line workflow",
+                "usefulness"
+            ],
+            [
+                "data",
+                "usefulness"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a developer, I want an online service that is connected to my data repository that validates data on update, so that I can delegate data validation to a third party.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "validates",
+                "delegate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "online service"
+            ],
+            "Secondary Entity": [
+                "update",
+                "data repository",
+                "data",
+                "data validation",
+                "third party"
+            ]
+        },
+        "Benefit": "I can delegate data validation to a third party",
+        "Triggers": [
+            [
+                "developer",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "online service"
+            ],
+            [
+                "validates",
+                "data"
+            ],
+            [
+                "delegate",
+                "data validation"
+            ]
+        ],
+        "Contains": [
+            [
+                "third party",
+                "data validation"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a government Publisher, I want to make it easy to prove that our published data is valid, so that I can claim that we are living up to our transparency commitments.",
+        "Persona": [
+            "government Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make it easy"
+            ],
+            "Secondary Action": [
+                "claim",
+                "living up to",
+                "prove"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "transparency commitments",
+                "published data"
+            ]
+        },
+        "Benefit": "I can claim that we are living up to our transparency commitments",
+        "Triggers": [
+            [
+                "government Publisher",
+                "make it easy"
+            ]
+        ],
+        "Targets": [
+            [
+                "claim",
+                "transparency commitments"
+            ],
+            [
+                "living up to",
+                "transparency commitments"
+            ],
+            [
+                "prove",
+                "published data"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Civic Tech Activist, I want to make it easy to assess the quality of data stored by the government, so that I can make sure that government is living up to its transparency commitments.",
+        "Persona": [
+            "Civic Tech Activist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make it easy to assess"
+            ],
+            "Secondary Action": [
+                "make sure",
+                "living up to"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "quality of data"
+            ],
+            "Secondary Entity": [
+                "government",
+                "government",
+                "transparency commitments"
+            ]
+        },
+        "Benefit": "I can make sure that government is living up to its transparency commitments",
+        "Triggers": [
+            [
+                "Civic Tech Activist",
+                "make it easy to assess"
+            ]
+        ],
+        "Targets": [
+            [
+                "make it easy to assess",
+                "quality of data"
+            ],
+            [
+                "living up to",
+                "transparency commitments"
+            ]
+        ],
+        "Contains": [
+            [
+                "government",
+                "quality of data"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to embed an interactive preview of my data on my site, so that users can be encouraged that this is the correct data for them.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "embed"
+            ],
+            "Secondary Action": [
+                "encouraged"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interactive preview"
+            ],
+            "Secondary Entity": [
+                "users",
+                "correct data",
+                "data",
+                "site"
+            ]
+        },
+        "Benefit": "users can be encouraged that this is the correct data for them",
+        "Triggers": [
+            [
+                "publisher",
+                "embed"
+            ]
+        ],
+        "Targets": [
+            [
+                "embed",
+                "interactive preview"
+            ],
+            [
+                "encouraged",
+                "correct data"
+            ]
+        ],
+        "Contains": [
+            [
+                "site",
+                "users"
+            ],
+            [
+                "data",
+                "correct data"
+            ],
+            [
+                "interactive preview",
+                "data"
+            ],
+            [
+                "site",
+                "interactive preview"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to embed a preview button on my site, so that users can preview the data and be encouraged that this is the correct data for them.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "embed"
+            ],
+            "Secondary Action": [
+                "preview",
+                "encouraged"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "preview button"
+            ],
+            "Secondary Entity": [
+                "site",
+                "users",
+                "data",
+                "correct data"
+            ]
+        },
+        "Benefit": "users can preview the data and be encouraged that this is the correct data for them",
+        "Triggers": [
+            [
+                "publisher",
+                "embed"
+            ]
+        ],
+        "Targets": [
+            [
+                "embed",
+                "preview button"
+            ],
+            [
+                "preview",
+                "data"
+            ],
+            [
+                "encouraged",
+                "correct data"
+            ]
+        ],
+        "Contains": [
+            [
+                "site",
+                "preview button"
+            ],
+            [
+                "data",
+                "correct data"
+            ],
+            [
+                "preview button",
+                "data"
+            ],
+            [
+                "site",
+                "users"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I want to know how many users have previewed a dataset, so that I know how interest in a dataset relates to its actual download numbers.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "know",
+                "relates",
+                "previewed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how many users"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "actual download numbers",
+                "interest",
+                "dataset",
+                "how"
+            ]
+        },
+        "Benefit": "I know how interest in a dataset relates to its actual download numbers",
+        "Triggers": [
+            [
+                "Publisher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "how many users"
+            ],
+            [
+                "relates",
+                "actual download numbers"
+            ],
+            [
+                "know",
+                "how"
+            ],
+            [
+                "previewed",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "interest"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to customize an existing wizard for my specific type of data, so that I can give my users a great user experience.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "customize"
+            ],
+            "Secondary Action": [
+                "give"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "existing wizard"
+            ],
+            "Secondary Entity": [
+                "specific type of data",
+                "users",
+                "great user experience"
+            ]
+        },
+        "Benefit": "I can give my users a great user experience",
+        "Triggers": [
+            [
+                "Developer",
+                "customize"
+            ]
+        ],
+        "Targets": [
+            [
+                "customize",
+                "existing wizard"
+            ],
+            [
+                "give",
+                "users"
+            ]
+        ],
+        "Contains": [
+            [
+                "users",
+                "great user experience"
+            ],
+            [
+                "specific type of data",
+                "existing wizard"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I want to add useful metadata or add in new data columns to make the dataset more useful.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add",
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "useful metadata",
+                "new data columns"
+            ],
+            "Secondary Entity": [
+                "dataset"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Publisher",
+                "add"
+            ],
+            [
+                "Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "useful metadata"
+            ],
+            [
+                "add",
+                "new data columns"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "new data columns"
+            ],
+            [
+                "dataset",
+                "useful metadata"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to package reproducible steps to get a certain data state, so my methodology is transparent and can be rerun by others.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "package"
+            ],
+            "Secondary Action": [
+                "get",
+                "rerun"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reproducible steps"
+            ],
+            "Secondary Entity": [
+                "certain data state",
+                "methodology",
+                "others"
+            ]
+        },
+        "Benefit": "my methodology is transparent and can be rerun by others",
+        "Triggers": [
+            [
+                "publisher",
+                "package"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "certain data state"
+            ],
+            [
+                "package",
+                "reproducible steps"
+            ],
+            [
+                "rerun",
+                "methodology"
+            ]
+        ],
+        "Contains": [
+            [
+                "reproducible steps",
+                "certain data state"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a DeveloperDataWrangler, I want to store my Data Package in GitHub and have it automatically stored into CKAN, so that I get a data API and my dataset is listed in a relevant catalog.",
+        "Persona": [
+            "DeveloperDataWrangler"
+        ],
+        "Action": {
+            "Primary Action": [
+                "store"
+            ],
+            "Secondary Action": [
+                "get",
+                "automatically stored",
+                "listed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "relevant catalog",
+                "GitHub",
+                "CKAN",
+                "data API",
+                "dataset"
+            ]
+        },
+        "Benefit": "I get a data API and my dataset is listed in a relevant catalog",
+        "Triggers": [
+            [
+                "DeveloperDataWrangler",
+                "store"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically stored",
+                "CKAN"
+            ],
+            [
+                "store",
+                "Data Package"
+            ],
+            [
+                "get",
+                "data API"
+            ],
+            [
+                "listed",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "GitHub",
+                "Data Package"
+            ],
+            [
+                "CKAN",
+                "Data Package"
+            ],
+            [
+                "relevant catalog",
+                "dataset"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want a tool that can generate basic statistics about a dataset, so that I can get a quick preview of the data.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "get"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tool"
+            ],
+            "Secondary Entity": [
+                "data",
+                "basic statistics",
+                "dataset",
+                "quick preview"
+            ]
+        },
+        "Benefit": "I can get a quick preview of the data",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "tool"
+            ],
+            [
+                "get",
+                "quick preview"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "basic statistics"
+            ],
+            [
+                "data",
+                "quick preview"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a DeveloperPublisher, I want a tool to create an embeddable data summary via iframe, so that I can embed data summaries across sites.",
+        "Persona": [
+            "DeveloperPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "create",
+                "embed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tool"
+            ],
+            "Secondary Entity": [
+                "embeddable data summary",
+                "iframe",
+                "data summaries",
+                "sites"
+            ]
+        },
+        "Benefit": "I can embed data summaries across sites",
+        "Triggers": [
+            [
+                "DeveloperPublisher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "tool"
+            ],
+            [
+                "create",
+                "embeddable data summary"
+            ],
+            [
+                "embed",
+                "data summaries"
+            ]
+        ],
+        "Contains": [
+            [
+                "sites",
+                "data summaries"
+            ],
+            [
+                "iframe",
+                "embeddable data summary"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want an app that generates an OpenRefine reconciliation API endpoint from a Tabular Data Package, so that I can use it to clean messy data.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "use",
+                "clean",
+                "generates"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "app"
+            ],
+            "Secondary Entity": [
+                "OpenRefine reconciliation API endpoint",
+                "messy data",
+                "Tabular Data Package"
+            ]
+        },
+        "Benefit": "I can use it to clean messy data",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "app"
+            ],
+            [
+                "use",
+                "app"
+            ],
+            [
+                "clean",
+                "messy data"
+            ],
+            [
+                "generates",
+                "OpenRefine reconciliation API endpoint"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want an app that create proxy Data Packages for well know and reliable data, sources, so that I can load high quality data using Data Package tooling.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "load",
+                "create",
+                "using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "app"
+            ],
+            "Secondary Entity": [
+                "proxy Data Packages",
+                "well know and reliable data",
+                "sources",
+                "high quality data",
+                "Data Package tooling"
+            ]
+        },
+        "Benefit": "I can load high quality data using Data Package tooling",
+        "Triggers": [
+            [
+                "Researcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "app"
+            ],
+            [
+                "load",
+                "high quality data"
+            ],
+            [
+                "create",
+                "proxy Data Packages"
+            ],
+            [
+                "using",
+                "Data Package tooling"
+            ]
+        ],
+        "Contains": [
+            [
+                "sources",
+                "proxy Data Packages"
+            ],
+            [
+                "app",
+                "proxy Data Packages"
+            ],
+            [
+                "well know and reliable data",
+                "proxy Data Packages"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a RepositoryManagerResearcher, I want an app that acts as a match-making service for packaging data, so that owners are paired with data packagers.",
+        "Persona": [
+            "RepositoryManagerResearcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "paired",
+                "acts as"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "app"
+            ],
+            "Secondary Entity": [
+                "owners",
+                "match-making service",
+                "packaging data",
+                "data packagers"
+            ]
+        },
+        "Benefit": "owners are paired with data packagers",
+        "Triggers": [
+            [
+                "RepositoryManagerResearcher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "app"
+            ],
+            [
+                "paired",
+                "data packagers"
+            ],
+            [
+                "paired",
+                "owners"
+            ],
+            [
+                "acts as",
+                "match-making service"
+            ]
+        ],
+        "Contains": [
+            [
+                "packaging data",
+                "match-making service"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a developer, I would like to create a web socket protocol for Frictionless data tools, so that I can easily use data packages with additional data analysis tools.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "easily use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "web socket protocol"
+            ],
+            "Secondary Entity": [
+                "Frictionless data tools",
+                "data packages",
+                "additional data analysis tools"
+            ]
+        },
+        "Benefit": "I can easily use data packages with additional data analysis tools",
+        "Triggers": [
+            [
+                "developer",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "web socket protocol"
+            ],
+            [
+                "easily use",
+                "data packages"
+            ]
+        ],
+        "Contains": [
+            [
+                "Frictionless data tools",
+                "additional data analysis tools"
+            ],
+            [
+                "Frictionless data tools",
+                "web socket protocol"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Publisher, I would like a tool to check data availability persistence after publication.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "would like"
+            ],
+            "Secondary Action": [
+                "check"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tool"
+            ],
+            "Secondary Entity": [
+                "publication",
+                "data availability persistence"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Publisher",
+                "would like "
+            ]
+        ],
+        "Targets": [
+            [
+                "would like ",
+                "tool"
+            ],
+            [
+                "check",
+                "data availability persistence"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to specify the funding that contributed to the creation of a given dataset, so that funding agencies can identify the funding, source for a given dataset.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                "identify"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "funding"
+            ],
+            "Secondary Entity": [
+                "creation of a given dataset",
+                "funding agencies",
+                "funding",
+                "given dataset",
+                "source"
+            ]
+        },
+        "Benefit": "funding agencies can identify the funding, source for a given dataset",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "identify",
+                "funding"
+            ],
+            [
+                "identify",
+                "source"
+            ],
+            [
+                "specify",
+                "funding"
+            ]
+        ],
+        "Contains": [
+            [
+                "given dataset",
+                "source"
+            ],
+            [
+                "creation of a given dataset",
+                "funding"
+            ],
+            [
+                "given dataset",
+                "funding"
+            ]
+        ]
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to add a DOI to a dataset, so that I can cite it in papers stored  with the data.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                "cite"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "DOI"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "papers",
+                "data"
+            ]
+        },
+        "Benefit": "I can cite it in papers stored  with the data",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "DOI"
+            ],
+            [
+                "cite",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "DOI"
+            ],
+            [
+                "data",
+                "papers"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to include the code of a dataset type in my app artifact and create a dataset of that type when deploying the app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "include",
+                "create"
+            ],
+            "Secondary Action": [
+                "deploying"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "code",
+                "dataset of that type"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "app artifact",
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "include"
+            ],
+            [
+                "app developer",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "code"
+            ],
+            [
+                "deploying",
+                "app"
+            ],
+            [
+                "create",
+                "dataset of that type"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "code"
+            ],
+            [
+                "app artifact",
+                "code"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deploy"
+            ],
+            "Secondary Action": [
+                "deploying",
+                "includes",
+                "start using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new version"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "new version",
+                "app",
+                "app deployment",
+                "new code",
+                "all dataset instances of that type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "deploying",
+                "new version"
+            ],
+            [
+                "start using",
+                "new code"
+            ],
+            [
+                "includes",
+                "dataset type"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "new version"
+            ],
+            [
+                "app",
+                "new version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of an app artifact, without affecting other datasets of this type.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deploy"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new version"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "app artifact",
+                "other datasets of this type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "new version"
+            ],
+            [
+                "app artifact",
+                "dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "explore"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance of a type"
+            ],
+            "Secondary Entity": [
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "explore"
+            ]
+        ],
+        "Targets": [
+            [
+                "explore",
+                "dataset instance of a type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "dataset instance of a type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy an artifact without creating an app this will not create any dataset types or instances.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "artifact",
+                "app",
+                "dataset types",
+                "instances"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "artifact"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to share a dataset type across multiple applications that include the dataset type's code in their artifacts.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset type"
+            ],
+            "Secondary Entity": [
+                "multiple applications",
+                "dataset type's code",
+                "artifacts"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "dataset type"
+            ]
+        ],
+        "Contains": [
+            [
+                "artifacts",
+                "dataset type's code"
+            ],
+            [
+                "multiple applications",
+                "artifacts"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a shared dataset type that all dataset instances created by this app start using the new code but all dataset instances created by other apps remain unchanged.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "start using",
+                "remain unchanged"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "new version",
+                "app",
+                "shared dataset type",
+                "dataset instances",
+                "app",
+                "new code",
+                "all dataset instances",
+                "other apps"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "start using",
+                "new code"
+            ],
+            [
+                "remain unchanged",
+                "all dataset instances"
+            ],
+            [
+                "deploy",
+                "new version"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "new version"
+            ],
+            [
+                "new version",
+                "shared dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "new version",
+                "app",
+                "older version",
+                "dataset type",
+                "another app",
+                "dataset instances",
+                "app",
+                "dataset type code",
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "use",
+                "dataset type code"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "new version"
+            ],
+            [
+                "dataset type",
+                "older version"
+            ],
+            [
+                "app",
+                "dataset type code"
+            ],
+            [
+                "new version",
+                "dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "shares",
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "new version",
+                "app",
+                "different version",
+                "dataset type",
+                "another app",
+                "app",
+                "other app",
+                "deployment",
+                "version conflict error",
+                "dataset instance of this type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "shares",
+                "dataset instance of this type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "new version"
+            ],
+            [
+                "dataset type",
+                "different version"
+            ],
+            [
+                "deployment",
+                "version conflict error"
+            ],
+            [
+                "new version",
+                "dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to share a dataset type that I had previously deployed as part of an app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset type"
+            ],
+            "Secondary Entity": [
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "dataset type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to deploy a dataset type independent from any app and allow apps to create and use dataset instances of that type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deploy",
+                "allow"
+            ],
+            "Secondary Action": [
+                "create",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset type independent",
+                "apps"
+            ],
+            "Secondary Entity": [
+                "dataset instances of that type",
+                "any app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "deploy"
+            ],
+            [
+                "dataset developer",
+                "allow"
+            ]
+        ],
+        "Targets": [
+            [
+                "allow",
+                "apps"
+            ],
+            [
+                "create",
+                "dataset instances of that type"
+            ],
+            [
+                "use",
+                "dataset instances of that type"
+            ],
+            [
+                "deploy",
+                "dataset type independent"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have the option of forcing applications to have the dataset code injected at runtime.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "forcing",
+                "have",
+                "injected"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "option"
+            ],
+            "Secondary Entity": [
+                "applications",
+                "dataset code"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "option"
+            ],
+            [
+                "forcing",
+                "applications"
+            ],
+            [
+                "have",
+                "dataset code"
+            ],
+            [
+                "injected",
+                "dataset code"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "package",
+                "helps"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "archetype"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "me"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "archetype"
+            ],
+            [
+                "package",
+                "dataset type"
+            ],
+            [
+                "helps",
+                "me"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to separate the interface from the implementation of a dataset type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "separate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interface",
+                "implementation"
+            ],
+            "Secondary Entity": [
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "separate"
+            ]
+        ],
+        "Targets": [
+            [
+                "separate",
+                "interface"
+            ],
+            [
+                "separate",
+                "implementation"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "implementation"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "only depend",
+                "have"
+            ],
+            "Secondary Action": [
+                "inject"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interface",
+                "system"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "app",
+                "implementation"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "only depend"
+            ],
+            [
+                "app developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "only depend",
+                "interface"
+            ],
+            [
+                "have",
+                "system"
+            ],
+            [
+                "inject",
+                "implementation"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "interface"
+            ],
+            [
+                "app",
+                "interface"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to write unit tests for an app that depends on the interface of a dataset type.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "write"
+            ],
+            "Secondary Action": [
+                "depends"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "unit tests"
+            ],
+            "Secondary Entity": [
+                "app",
+                "interface",
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "write"
+            ]
+        ],
+        "Targets": [
+            [
+                "write",
+                "unit tests"
+            ],
+            [
+                "depends",
+                "interface"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "unit tests"
+            ],
+            [
+                "dataset type",
+                "interface"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to assign explicit versions to the code of a dataset type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "assign"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explicit versions"
+            ],
+            "Secondary Entity": [
+                "code",
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign",
+                "explicit versions"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "code"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to deploy a new version of a dataset type without affecting the dataset instances of that type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deploy"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new version"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "dataset instances of that type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "new version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to create a dataset instance with a specific version of a dataset type.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "specific version",
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "dataset instance"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "specific version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to explore a dataset instance created from a dataset type that was deployed by itself.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "explore"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "explore"
+            ]
+        ],
+        "Targets": [
+            [
+                "explore",
+                "dataset instance"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to delete outdated versions of a dataset type and I expect this to fail if there are any dataset instances with that version of the type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "delete"
+            ],
+            "Secondary Action": [
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "outdated versions"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "any dataset instances",
+                "version of the type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "delete"
+            ]
+        ],
+        "Targets": [
+            [
+                "delete",
+                "outdated versions"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "outdated versions"
+            ],
+            [
+                "any dataset instances",
+                "version of the type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to list all dataset instances that use a dataset type or a specific version of a type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "list"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all dataset instances"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "specific version",
+                "type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "list"
+            ]
+        ],
+        "Targets": [
+            [
+                "list",
+                "all dataset instances"
+            ],
+            [
+                "type",
+                "specific version"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.",
+        "Persona": [
+            "data scientist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "existing dataset type",
+                "code"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "data scientist",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "dataset instance"
+            ]
+        ],
+        "Contains": [
+            [
+                "existing dataset type",
+                "dataset instance"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a data scientist, I want to be able to upgrade a dataset instance to a new version of its code.",
+        "Persona": [
+            "data scientist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upgrade"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "new version",
+                "code"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "data scientist",
+                "upgrade"
+            ]
+        ],
+        "Targets": [
+            [
+                "upgrade",
+                "dataset instance"
+            ]
+        ],
+        "Contains": [
+            [
+                "code",
+                "new version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes an existing dataset instance.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "reads",
+                "writes"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "pipeline"
+            ],
+            "Secondary Entity": [
+                "existing dataset instance"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "pipeline"
+            ],
+            [
+                "reads",
+                "existing dataset instance"
+            ],
+            [
+                "writes",
+                "existing dataset instance"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes a new dataset instance and I want to create that dataset instance as part of pipeline creation.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create",
+                "create"
+            ],
+            "Secondary Action": [
+                "reads",
+                "writes"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "pipeline",
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "new dataset instance",
+                "pipeline creation"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "create"
+            ],
+            [
+                "hydrator user",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "pipeline"
+            ],
+            [
+                "reads",
+                "new dataset instance"
+            ],
+            [
+                "writes",
+                "new dataset instance"
+            ],
+            [
+                "create",
+                "dataset instance"
+            ]
+        ],
+        "Contains": [
+            [
+                "pipeline creation",
+                "dataset instance"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explicit version"
+            ],
+            "Secondary Entity": [
+                "dataset types",
+                "dataset instances",
+                "pipeline",
+                "pipeline creation",
+                "incompatible upgrade",
+                "existing dataset instance",
+                "other apps",
+                "pipelines"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "explicit version"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset types",
+                "explicit version"
+            ],
+            [
+                "dataset instances",
+                "dataset types"
+            ],
+            [
+                "existing dataset instance",
+                "incompatible upgrade"
+            ],
+            [
+                "other apps",
+                "existing dataset instance"
+            ],
+            [
+                "pipelines",
+                "existing dataset instance"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to explore the datasets created by my pipeline.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "explore"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "pipeline"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "explore"
+            ]
+        ],
+        "Targets": [
+            [
+                "explore",
+                "datasets"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "all dataset instances",
+                "sinks",
+                "sources",
+                "pipelines"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "all dataset instances",
+                "sinks"
+            ],
+            [
+                "all dataset instances",
+                "sources"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that all dataset instances created by Hydrator pipelines are accessible to the app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "all dataset instances",
+                "Hydrator pipelines",
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "app",
+                "all dataset instances"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            "plugin developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "include"
+            ],
+            "Secondary Action": [
+                "using",
+                "created",
+                "created"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "code"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "plugin artifact",
+                "pipeline",
+                "plugin",
+                "apps",
+                "dataset instance of that type"
+            ]
+        },
+        "Benefit": "when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps",
+        "Triggers": [
+            [
+                "plugin developer",
+                "include"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "code"
+            ],
+            [
+                "using",
+                "plugin"
+            ],
+            [
+                "created",
+                "pipeline"
+            ],
+            [
+                "created",
+                "dataset instance of that type"
+            ]
+        ],
+        "Contains": [
+            [
+                "plugin artifact",
+                "code"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin.",
+        "Persona": [
+            "plugin developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "use"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "custom dataset type"
+            ],
+            "Secondary Entity": [
+                "app",
+                "plugin"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "plugin developer",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "custom dataset type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "custom dataset type"
+            ],
+            [
+                "plugin",
+                "custom dataset type"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a plugin developer, I want to upgrade the code of a dataset type used by a dataset instance created by that plugin when I deploy a new version of the plugin and update the pipeline to use that version.",
+        "Persona": [
+            "plugin developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upgrade"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "update",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "code"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "dataset instance",
+                "plugin",
+                "new version",
+                "plugin",
+                "pipeline",
+                "version"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "plugin developer",
+                "upgrade"
+            ]
+        ],
+        "Targets": [
+            [
+                "upgrade",
+                "code"
+            ],
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "update",
+                "pipeline"
+            ],
+            [
+                "use",
+                "version"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "code"
+            ],
+            [
+                "plugin",
+                "new version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.",
+        "Persona": [
+            "pipeline developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upgrade"
+            ],
+            "Secondary Action": [
+                "created"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance"
+            ],
+            "Secondary Entity": [
+                "newer version",
+                "code",
+                "pipeline"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "pipeline developer",
+                "upgrade"
+            ]
+        ],
+        "Targets": [
+            [
+                "upgrade",
+                "dataset instance"
+            ],
+            [
+                "created",
+                "pipeline"
+            ]
+        ],
+        "Contains": [
+            [
+                "code",
+                "newer version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have the option of implementing an upgrade step for when a dataset instance is upgraded to a new version of the dataset type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "implementing",
+                "upgraded"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "option"
+            ],
+            "Secondary Entity": [
+                "upgrade step",
+                "dataset instance",
+                "new version",
+                "dataset type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "option"
+            ],
+            [
+                "implementing",
+                "upgrade step"
+            ],
+            [
+                "upgraded",
+                "dataset instance"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "new version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have a way to reject an upgrade of a dataset instance to a newer version of it type if the upgrade is not compatible.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "reject"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "way"
+            ],
+            "Secondary Entity": [
+                "upgrade",
+                "dataset instance",
+                "newer version",
+                "type",
+                "upgrade"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "way"
+            ],
+            [
+                "reject",
+                "upgrade"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "upgrade"
+            ],
+            [
+                "type",
+                "newer version"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have the option of implementing a migration procedure that can be run after an upgrade of a dataset instance to a new version of it type.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "implementing",
+                "run"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "option"
+            ],
+            "Secondary Entity": [
+                "migration procedure",
+                "dataset instance",
+                "upgrade",
+                "new version of it type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "option"
+            ],
+            [
+                "implementing",
+                "migration procedure"
+            ],
+            [
+                "run",
+                "migration procedure"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "upgrade"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a developer, I want to take a dataset offline, so that I can perform a long-running maintenance or migration procedure.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "take"
+            ],
+            "Secondary Action": [
+                "perform"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset"
+            ],
+            "Secondary Entity": [
+                "long-running maintenance",
+                "migration procedure"
+            ]
+        },
+        "Benefit": "I can perform a long-running maintenance or migration procedure",
+        "Triggers": [
+            [
+                "developer",
+                "take"
+            ]
+        ],
+        "Targets": [
+            [
+                "take",
+                "dataset"
+            ],
+            [
+                "perform",
+                "long-running maintenance"
+            ],
+            [
+                "perform",
+                "migration procedure"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to implement custom administrative operations such as \"compaction\" or \"rebalance\" that are no common to all dataset types.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "implement"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "custom administrative operations"
+            ],
+            "Secondary Entity": [
+                "\"compaction\"",
+                "\"rebalance\"",
+                "all dataset types"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "implement"
+            ]
+        ],
+        "Targets": [
+            [
+                "implement",
+                "custom administrative operations"
+            ]
+        ],
+        "Contains": [
+            [
+                "custom administrative operations",
+                "\"compaction\""
+            ],
+            [
+                "custom administrative operations",
+                "\"rebalance\""
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to perform custom administrative operations on dataset instances from my app and the CLI and REST or the UI.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "perform"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "custom administrative operations"
+            ],
+            "Secondary Entity": [
+                "dataset instances",
+                "app",
+                "CLI ",
+                "REST",
+                "UI"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "perform"
+            ]
+        ],
+        "Targets": [
+            [
+                "perform",
+                "custom administrative operations"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "custom administrative operations"
+            ],
+            [
+                "CLI ",
+                "custom administrative operations"
+            ],
+            [
+                "REST",
+                "custom administrative operations"
+            ],
+            [
+                "UI",
+                "custom administrative operations"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to find out what properties are supported by the dataset type what values are allowed and what the defaults are when creating a dataset instance.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "find out"
+            ],
+            "Secondary Action": [
+                "creating"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "properties",
+                "values",
+                "defaults"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "dataset instance"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "find out"
+            ]
+        ],
+        "Targets": [
+            [
+                "find out",
+                "properties"
+            ],
+            [
+                "find out",
+                "values"
+            ],
+            [
+                "find out",
+                "defaults"
+            ],
+            [
+                "creating",
+                "dataset instance"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify the schema of a dataset in a uniform way across all dataset types.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "schema"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "uniform way",
+                "all dataset types"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "schema"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "schema"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify schema as a JSON string.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "schema"
+            ],
+            "Secondary Entity": [
+                "JSON string"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "schema"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "schema"
+            ],
+            "Secondary Entity": [
+                "SQL schema string"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "schema"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "configure"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "time-to-live"
+            ],
+            "Secondary Entity": [
+                "all dataset types"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "configure"
+            ]
+        ],
+        "Targets": [
+            [
+                "configure",
+                "time-to-live"
+            ]
+        ],
+        "Contains": [
+            [
+                "all dataset types",
+                "time-to-live"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to see the properties that were used to configure a dataset instance.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "configure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "properties"
+            ],
+            "Secondary Entity": [
+                "dataset instance"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "properties"
+            ],
+            [
+                "configure",
+                "dataset instance"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to find out what properties of a dataset can be updated.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "find out"
+            ],
+            "Secondary Action": [
+                "updated"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "properties"
+            ],
+            "Secondary Entity": [
+                "dataset"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "find out"
+            ]
+        ],
+        "Targets": [
+            [
+                "find out",
+                "properties"
+            ],
+            [
+                "updated",
+                "properties"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "update"
+            ],
+            "Secondary Action": [
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "properties"
+            ],
+            "Secondary Entity": [
+                "dataset instance",
+                "new properties",
+                "meaningful error message"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "update"
+            ]
+        ],
+        "Targets": [
+            [
+                "update",
+                "properties"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to update a single property of a dataset instance without knowing all other properties.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "update"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "single property"
+            ],
+            "Secondary Entity": [
+                "dataset instance",
+                "all other properties"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "update"
+            ]
+        ],
+        "Targets": [
+            [
+                "update",
+                "single property"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "single property"
+            ],
+            [
+                "dataset instance",
+                "all other properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remove"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "single property"
+            ],
+            "Secondary Entity": [
+                "dataset instance",
+                "all other properties"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "remove",
+                "single property"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "single property"
+            ],
+            [
+                "dataset instance",
+                "all other properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to trigger a migration process for a dataset if updating its properties requires that.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "trigger"
+            ],
+            "Secondary Action": [
+                "updating",
+                "requires"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "migration process"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "properties"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "trigger"
+            ]
+        ],
+        "Targets": [
+            [
+                "trigger",
+                "migration process"
+            ],
+            [
+                "requires",
+                "migration process"
+            ],
+            [
+                "updating",
+                "properties"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "migration process"
+            ],
+            [
+                "dataset",
+                "properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that if reconfiguration of a dataset fails then no changes have taken effect, so that all steps required to reconfigure a dataset must be done as a single atomic action.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails",
+                "reconfigure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "reconfiguration",
+                "dataset",
+                "dataset",
+                "single atomic action",
+                "all steps required"
+            ]
+        },
+        "Benefit": "all steps required to reconfigure a dataset must be done as a single atomic action",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "reconfigure",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "reconfiguration"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that application creation fails if any of its datasets cannot be created.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "application creation",
+                "datasets"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "application creation",
+                "datasets"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "application redeployment",
+                "datasets"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "application redeployment",
+                "datasets"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to tolerate existing datasets if their properties are different but compatible when creating a dataset as part of app deployment.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "tolerate"
+            ],
+            "Secondary Action": [
+                "creating"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "existing datasets"
+            ],
+            "Secondary Entity": [
+                "properties",
+                "dataset",
+                "app deployment"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "tolerate"
+            ]
+        ],
+        "Targets": [
+            [
+                "tolerate",
+                "existing datasets"
+            ],
+            [
+                "creating",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "existing datasets",
+                "properties"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a pipeline designer, I want to get a meaningful error message when pipeline creation fails when I use an existing dataset as a sink or source, so that I know that the schema or any other property of the dataset is incompatible with what the pipeline requires.",
+        "Persona": [
+            "pipeline designer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "fails",
+                "use",
+                "know",
+                "requires"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "meaningful error message"
+            ],
+            "Secondary Entity": [
+                "pipeline creation",
+                "existing dataset",
+                "sink",
+                "source",
+                "schema",
+                "any other property",
+                "dataset",
+                "pipeline",
+                "what"
+            ]
+        },
+        "Benefit": "I know that the schema or any other property of the dataset is incompatible with what the pipeline requires",
+        "Triggers": [
+            [
+                "pipeline designer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "meaningful error message"
+            ],
+            [
+                "use",
+                "existing dataset"
+            ],
+            [
+                "know",
+                "schema"
+            ],
+            [
+                "know",
+                "any other property"
+            ],
+            [
+                "requires",
+                "what"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "any other property"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify as part of dataset configuration whether it is explorable.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset configuration"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "dataset configuration"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify the explore schema separately.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explore schema"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "explore schema"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that dataset creation fails if the dataset cannot be enabled for explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset creation",
+                "dataset",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that dataset reconfiguration fails if the corresponding update of the explore table fails.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails",
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset reconfiguration",
+                "corresponding update",
+                "explore table"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "explore table",
+                "corresponding update"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that a dataset operation fails if it fails to make its required changes to explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails",
+                "fails to make"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset operation",
+                "required changes",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "fails to make",
+                "required changes"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "never leads to silent loss"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "update",
+                "explore",
+                "data available",
+                "explore",
+                "data"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "never leads to silent loss",
+                "data"
+            ],
+            [
+                "never leads to silent loss",
+                "data available"
+            ]
+        ],
+        "Contains": [
+            [
+                "explore",
+                "update"
+            ]
+        ]
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to enable explore for a dataset that was not configured for explore initially.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "enable"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explore"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "enable"
+            ]
+        ],
+        "Targets": [
+            [
+                "enable",
+                "explore"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to disable explore for a dataset that was configured for explore initially.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "disable"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explore"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "disable"
+            ]
+        ],
+        "Targets": [
+            [
+                "disable",
+                "explore"
+            ]
+        ],
+        "Contains": []
+    }
+]

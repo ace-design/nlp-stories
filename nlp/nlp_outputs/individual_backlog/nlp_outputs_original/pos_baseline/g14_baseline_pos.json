@@ -2443,7 +2443,12 @@
                 "deleted data package"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "cli",
+                "deleted data package"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -6499,9 +6504,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "changes to a package"
+                "changes"
             ],
             "Secondary Entity": [
+                "package I care about",
                 "what has changed"
             ]
         },
@@ -6514,15 +6520,20 @@
         ],
         "Targets": [
             [
-                "check out",
-                "what has changed"
+                "be notified",
+                "changes"
             ],
             [
-                "be notified",
-                "changes to a package"
+                "check out",
+                "what has changed"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "package I care about",
+                "changes"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -6577,23 +6588,23 @@
             "Primary Entity POS": {
                 "Primary Entity POS tag": [
                     [
-                        "VERB",
-                        "ADP",
-                        "DET",
                         "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
                     [
-                        "changes",
-                        "to",
-                        "a",
-                        "package"
+                        "changes"
                     ]
                 ]
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "VERB",
+                        "ADP"
+                    ],
                     [
                         "PRON",
                         "AUX",
@@ -6601,6 +6612,12 @@
                     ]
                 ],
                 "Secondary Entity POS text": [
+                    [
+                        "package",
+                        "I",
+                        "care",
+                        "about"
+                    ],
                     [
                         "what",
                         "has",
@@ -8638,10 +8655,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "site",
                 "prices"
             ],
             "Secondary Entity": [
+                "site",
                 "pricing plan",
                 "cost",
                 "sense",
@@ -8656,10 +8673,6 @@
             ]
         ],
         "Targets": [
-            [
-                "know",
-                "site"
-            ],
             [
                 "know",
                 "prices"
@@ -8730,15 +8743,9 @@
                 "Primary Entity POS tag": [
                     [
                         "NOUN"
-                    ],
-                    [
-                        "NOUN"
                     ]
                 ],
                 "Primary Entity POS text": [
-                    [
-                        "site"
-                    ],
                     [
                         "prices"
                     ]
@@ -8746,6 +8753,9 @@
             },
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
                     [
                         "NOUN",
                         "NOUN"
@@ -8761,6 +8771,9 @@
                     ]
                 ],
                 "Secondary Entity POS text": [
+                    [
+                        "site"
+                    ],
                     [
                         "pricing",
                         "plan"

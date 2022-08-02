@@ -350,7 +350,8 @@
                 "edit"
             ],
             "Secondary Action": [
-                "make it better reflect"
+                "make",
+                "better reflect"
             ]
         },
         "Entity": {
@@ -377,8 +378,12 @@
                 "item"
             ],
             [
-                "make it better reflect",
+                "better reflect",
                 "team's understanding"
+            ],
+            [
+                "make",
+                "item"
             ]
         ],
         "Contains": [
@@ -403,8 +408,7 @@
                 "delete"
             ],
             "Secondary Action": [
-                "remove",
-                "not estimate"
+                "remove"
             ]
         },
         "Entity": {
@@ -430,10 +434,6 @@
             ],
             [
                 "remove",
-                "item"
-            ],
-            [
-                "not estimate",
                 "item"
             ]
         ],
@@ -709,7 +709,7 @@
                 "import"
             ],
             "Secondary Action": [
-                "don't have to copy and paste"
+                ""
             ]
         },
         "Entity": {
@@ -1274,7 +1274,7 @@
                 "see"
             ],
             "Secondary Action": [
-                "don't have to do"
+                ""
             ]
         },
         "Entity": {
@@ -1302,10 +1302,6 @@
             [
                 "see",
                 "times"
-            ],
-            [
-                "don't have to do",
-                "timezone conversion"
             ]
         ],
         "Contains": [
@@ -2184,7 +2180,6 @@
                 "change"
             ],
             "Secondary Action": [
-                "not been completed",
                 "change"
             ]
         },
@@ -2208,10 +2203,6 @@
             [
                 "change",
                 "estimate"
-            ],
-            [
-                "not been completed",
-                "draw"
             ],
             [
                 "change",
@@ -2539,8 +2530,7 @@
                 "have"
             ],
             "Secondary Action": [
-                "respond quickly",
-                "don't get bored"
+                "respond quickly"
             ]
         },
         "Entity": {
@@ -2717,9 +2707,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "stored"
+                "want"
             ],
             "Secondary Action": [
+                "stored",
                 "study",
                 "converged around",
                 "see"
@@ -2727,10 +2718,10 @@
         },
         "Entity": {
             "Primary Entity": [
-                "non-identifiable way",
                 "results"
             ],
             "Secondary Entity": [
+                "non-identifiable way",
                 "data",
                 "things",
                 "estimates",
@@ -2742,14 +2733,10 @@
         "Triggers": [
             [
                 "Researcher",
-                "stored"
+                "want"
             ]
         ],
         "Targets": [
-            [
-                "stored",
-                "non-identifiable way"
-            ],
             [
                 "study",
                 "data"
@@ -2765,6 +2752,14 @@
             [
                 "stored",
                 "results"
+            ],
+            [
+                "want",
+                "results"
+            ],
+            [
+                "stored",
+                "non-identifiable way"
             ]
         ],
         "Contains": [

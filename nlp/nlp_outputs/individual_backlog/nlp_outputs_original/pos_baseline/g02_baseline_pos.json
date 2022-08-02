@@ -1456,8 +1456,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "don't have to regenerate",
-                "be synced"
+                "synced"
             ]
         },
         "Entity": {
@@ -1479,19 +1478,15 @@
         ],
         "Targets": [
             [
-                "be synced",
-                "FPDS data load"
-            ],
-            [
-                "be synced",
+                "want",
                 "D1 file generation"
             ],
             [
-                "don't have to regenerate",
-                "file"
+                "synced",
+                "FPDS data load"
             ],
             [
-                "want",
+                "synced",
                 "D1 file generation"
             ]
         ],
@@ -1531,27 +1526,11 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
-                        "AUX",
                         "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
                     [
-                        "do",
-                        "n't",
-                        "have",
-                        "to",
-                        "regenerate"
-                    ],
-                    [
-                        "be",
                         "synced"
                     ]
                 ]
@@ -2118,7 +2097,6 @@
                 "want"
             ],
             "Secondary Action": [
-                "do not cause",
                 "managed",
                 "cached"
             ]
@@ -2141,10 +2119,6 @@
         ],
         "Targets": [
             [
-                "do not cause",
-                "performance issues"
-            ],
-            [
                 "managed",
                 "D Files generation requests"
             ],
@@ -2157,12 +2131,7 @@
                 "D Files generation requests"
             ]
         ],
-        "Contains": [
-            [
-                "duplicate requests",
-                "performance issues"
-            ]
-        ],
+        "Contains": [],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -2191,11 +2160,6 @@
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ],
                     [
@@ -2203,11 +2167,6 @@
                     ]
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "do",
-                        "not",
-                        "cause"
-                    ],
                     [
                         "managed"
                     ],
@@ -3846,7 +3805,6 @@
             "Secondary Action": [
                 "deactivate",
                 "click",
-                "cannot click",
                 "happening"
             ]
         },
@@ -3877,16 +3835,8 @@
                 "publish button"
             ],
             [
-                "cannot click",
-                "publish button"
-            ],
-            [
                 "want",
                 "publish button"
-            ],
-            [
-                "happening",
-                "derivations"
             ]
         ],
         "Contains": [
@@ -3929,10 +3879,6 @@
                         "VERB"
                     ],
                     [
-                        "AUX",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ]
                 ],
@@ -3941,10 +3887,6 @@
                         "deactivate"
                     ],
                     [
-                        "click"
-                    ],
-                    [
-                        "cannot",
                         "click"
                     ],
                     [
@@ -6282,7 +6224,7 @@
             ],
             [
                 "displayed",
-                "contracts"
+                "NASA grants"
             ]
         ],
         "Contains": [],
@@ -8408,8 +8350,7 @@
             ],
             "Secondary Action": [
                 "accurately represent",
-                "know",
-                "didn't work"
+                "know"
             ]
         },
         "Entity": {
@@ -8437,10 +8378,6 @@
             [
                 "accurately represent",
                 "FABS errors"
-            ],
-            [
-                "didn't work",
-                "submission"
             ],
             [
                 "know",
@@ -8483,11 +8420,6 @@
                     ],
                     [
                         "VERB"
-                    ],
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -8497,11 +8429,6 @@
                     ],
                     [
                         "know"
-                    ],
-                    [
-                        "did",
-                        "n't",
-                        "work"
                     ]
                 ]
             }
@@ -8560,8 +8487,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "more accurately reflect",
-                "not confused"
+                "more accurately reflect"
             ]
         },
         "Entity": {
@@ -8569,7 +8495,7 @@
                 "frontend URLs"
             ],
             "Secondary Entity": [
-                "page"
+                "page I'm accessing"
             ]
         },
         "Benefit": "I'm not confused",
@@ -8586,16 +8512,12 @@
             ],
             [
                 "more accurately reflect",
-                "page"
-            ],
-            [
-                "not confused",
-                "frontend URLs"
+                "page I'm accessing"
             ]
         ],
         "Contains": [
             [
-                "page",
+                "page I'm accessing",
                 "frontend URLs"
             ]
         ],
@@ -8632,10 +8554,6 @@
                         "ADV",
                         "ADV",
                         "VERB"
-                    ],
-                    [
-                        "PART",
-                        "ADJ"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -8643,10 +8561,6 @@
                         "more",
                         "accurately",
                         "reflect"
-                    ],
-                    [
-                        "not",
-                        "confused"
                     ]
                 ]
             }
@@ -8669,12 +8583,18 @@
             "Secondary Entity POS": {
                 "Secondary Entity POS tag": [
                     [
-                        "NOUN"
+                        "NOUN",
+                        "PRON",
+                        "AUX",
+                        "VERB"
                     ]
                 ],
                 "Secondary Entity POS text": [
                     [
-                        "page"
+                        "page",
+                        "I",
+                        "'m",
+                        "accessing"
                     ]
                 ]
             }
@@ -8944,10 +8864,10 @@
         ],
         "Action": {
             "Primary Action": [
-                "loaded"
+                "want"
             ],
             "Secondary Action": [
-                ""
+                "loaded"
             ]
         },
         "Entity": {
@@ -8962,12 +8882,16 @@
         "Triggers": [
             [
                 "Agency user",
-                "loaded"
+                "want"
             ]
         ],
         "Targets": [
             [
                 "loaded",
+                "historical FPDS data"
+            ],
+            [
+                "want",
                 "historical FPDS data"
             ]
         ],
@@ -8995,16 +8919,20 @@
                 ],
                 "Primary Action POS text": [
                     [
-                        "loaded"
+                        "want"
                     ]
                 ]
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    []
+                    [
+                        "VERB"
+                    ]
                 ],
                 "Secondary Action POS text": [
-                    []
+                    [
+                        "loaded"
+                    ]
                 ]
             }
         },
@@ -9047,8 +8975,7 @@
             ],
             "Secondary Action": [
                 "created",
-                "last updated",
-                "not confused"
+                "last updated"
             ]
         },
         "Entity": {
@@ -9078,15 +9005,16 @@
                 "submission"
             ],
             [
-                "not confused",
-                "who"
-            ],
-            [
                 "last updated",
                 "submission"
             ]
         ],
-        "Contains": [],
+        "Contains": [
+            [
+                "who",
+                "submission"
+            ]
+        ],
         "Persona POS": {
             "Persona POS tag": [
                 [
@@ -9124,10 +9052,6 @@
                     [
                         "ADV",
                         "VERB"
-                    ],
-                    [
-                        "PART",
-                        "ADJ"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -9137,10 +9061,6 @@
                     [
                         "last",
                         "updated"
-                    ],
-                    [
-                        "not",
-                        "confused"
                     ]
                 ]
             }
@@ -9872,7 +9792,8 @@
             ],
             "Secondary Action": [
                 "deciding",
-                "published prior"
+                "published prior",
+                "publish"
             ]
         },
         "Entity": {
@@ -9880,8 +9801,7 @@
                 "more information"
             ],
             "Secondary Entity": [
-                "how many rows",
-                "whether to publish"
+                "how many rows"
             ]
         },
         "Benefit": "",
@@ -9899,10 +9819,6 @@
             [
                 "published prior",
                 "how many rows"
-            ],
-            [
-                "deciding",
-                "whether to publish"
             ]
         ],
         "Contains": [
@@ -9944,6 +9860,9 @@
                     [
                         "VERB",
                         "ADV"
+                    ],
+                    [
+                        "VERB"
                     ]
                 ],
                 "Secondary Action POS text": [
@@ -9953,6 +9872,9 @@
                     [
                         "published",
                         "prior"
+                    ],
+                    [
+                        "publish"
                     ]
                 ]
             }
@@ -9978,11 +9900,6 @@
                         "ADV",
                         "ADJ",
                         "NOUN"
-                    ],
-                    [
-                        "SCONJ",
-                        "PART",
-                        "VERB"
                     ]
                 ],
                 "Secondary Entity POS text": [
@@ -9990,11 +9907,6 @@
                         "how",
                         "many",
                         "rows"
-                    ],
-                    [
-                        "whether",
-                        "to",
-                        "publish"
                     ]
                 ]
             }
@@ -11318,7 +11230,7 @@
                 "want"
             ],
             "Secondary Action": [
-                "not confused"
+                ""
             ]
         },
         "Entity": {
@@ -11339,10 +11251,6 @@
         "Targets": [
             [
                 "want",
-                "language"
-            ],
-            [
-                "not confused",
                 "language"
             ]
         ],
@@ -11381,16 +11289,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "PART",
-                        "ADJ"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "not",
-                        "confused"
-                    ]
+                    []
                 ]
             }
         },
@@ -11431,7 +11333,6 @@
         ],
         "Action": {
             "Primary Action": [
-                "do not want",
                 "want"
             ],
             "Secondary Action": [
@@ -11451,20 +11352,12 @@
         "Triggers": [
             [
                 "FABS user",
-                "do not want"
-            ],
-            [
-                "FABS user",
                 "want"
             ]
         ],
         "Targets": [
             [
                 "want",
-                "DABS banner messages"
-            ],
-            [
-                "do not want",
                 "DABS banner messages"
             ],
             [
@@ -11496,20 +11389,10 @@
             "Primary Action POS": {
                 "Primary Action POS tag": [
                     [
-                        "AUX",
-                        "PART",
-                        "VERB"
-                    ],
-                    [
                         "VERB"
                     ]
                 ],
                 "Primary Action POS text": [
-                    [
-                        "do",
-                        "not",
-                        "want"
-                    ],
                     [
                         "want"
                     ]
@@ -12251,7 +12134,7 @@
                 "submit"
             ],
             "Secondary Action": [
-                "won't strip off"
+                ""
             ]
         },
         "Entity": {
@@ -12271,10 +12154,6 @@
             ]
         ],
         "Targets": [
-            [
-                "won't strip off",
-                "leading and trailing zeroes"
-            ],
             [
                 "submit",
                 "data elements surrounded by quotation marks"
@@ -12315,20 +12194,10 @@
             },
             "Secondary Action POS": {
                 "Secondary Action POS tag": [
-                    [
-                        "AUX",
-                        "PART",
-                        "VERB",
-                        "ADP"
-                    ]
+                    []
                 ],
                 "Secondary Action POS text": [
-                    [
-                        "wo",
-                        "n't",
-                        "strip",
-                        "off"
-                    ]
+                    []
                 ]
             }
         },
