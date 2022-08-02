@@ -22,9 +22,11 @@ def main():
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
 
     if "crf" in nlp_tool_path:
+        primary_nlp_tool_data = extract_primary_crf_info(nlp_tool_path)
         nlp_tool_data = extract_crf_info(nlp_tool_path)
     else:
         nlp_tool_data = extract_nlp_tool_info(nlp_tool_path)
+        primary_nlp_tool_data = nlp_tool_data
     
     primary_save_path = save_folder_path + "\\primary"
     all_save_path = save_folder_path + "\\all"
@@ -37,7 +39,7 @@ def main():
     stanza.download('en') 
     stanza_pos_nlp = stanza.Pipeline('en')
  
-    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, nlp_tool_data, comparison_mode, primary_pos_data, stanza_pos_nlp)
+    primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, primary_nlp_tool_data, comparison_mode, primary_pos_data, stanza_pos_nlp)
     output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_folder_path, comparison_mode)
 
     all_story_results, all_count_list, all_comparison_collection, all_missing_stories, all_baseline_text = compare_and_get_results(all_baseline_data, nlp_tool_data, comparison_mode, all_pos_data, stanza_pos_nlp)
@@ -438,6 +440,35 @@ def extract_all_baseline_info(path):
 
     return baseline_data, pos_data
 
+def extract_primary_crf_info(path):
+    '''
+    Extracts the primary info from the crf results 
+
+    Parameters:
+    path (str): path to the file
+
+    Returns:
+    baseline_data (2D list): contains text, persona, primary entities, and primary actions identified by the baseline data
+    '''
+    text = []
+    persona = []
+    primary_entity = []
+    primary_action = []
+
+    file = open(path, encoding= "utf-8")
+    data = json.load(file)
+
+    for story in data:
+        text.append(story["Text"])
+        persona.append(story["Persona"])
+        primary_entity.append(story["Entity"]["Primary Entity"])
+        primary_action.append(story["Action"]["Primary Action"])
+    file.close()
+
+    baseline_data = [text, persona, primary_entity, primary_action]
+
+    return baseline_data
+
 def extract_crf_info(path):
     '''
     Extracts the info from crf resutls 
@@ -483,7 +514,6 @@ def extract_crf_info(path):
     nlp_tool_data = [text, persona, entity, action]
 
     return nlp_tool_data
-
 
 def extract_nlp_tool_info(path):
     '''

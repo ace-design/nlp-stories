@@ -3,6 +3,7 @@
 from ace_sklearn_crfsuite import CRF, metrics
 import argparse
 import bz2
+from collections import Counter
 import matplotlib.pyplot as plt
 import json
 import numpy as np
@@ -27,7 +28,7 @@ def main():
     X_test = [sent2features(s) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
-    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path)
+    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, save_name)
     
     y_pred, available_labels = get_results(crf, X_test, y_test)
     
@@ -102,9 +103,9 @@ def command():
     else:
         return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, args.save_name, saving_path, data_type_folder
 
-def get_model(train_path, testing_stories, testing_set, saving_path):
+def get_model(train_path, testing_stories, testing_set, saving_path, save_name):
     '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''
-    if train_path != None:
+    if  not(os.path.exists(saving_path)):
         training_set, training_stories = extract_info(train_path)
 
         ensure_no_intersection(training_stories, testing_stories)
@@ -113,9 +114,30 @@ def get_model(train_path, testing_stories, testing_set, saving_path):
         X_train = [sent2features(s) for s in training_set] # Features for the training set
         y_train = [sent2labels(s) for s in training_set]   # expected labels
 
-        config = CRF( algorithm = 'lbfgs', c1 = 2.0435192749302566, c2 = 0.01421712968053971, max_iterations = 100, all_possible_transitions = True)
+        config = CRF(algorithm = 'lbfgs', c1 = 0.1, c2 = 0.1, max_iterations = 100, all_possible_transitions = True)
 
         crf = train_model(config, X_train, y_train, saving_path)
+
+
+        common_transition = print_transitions(Counter(crf.transition_features_).most_common(10))
+        least_common_transition = print_transitions(Counter(crf.transition_features_).most_common()[-10:])
+        common_features = print_state_features(Counter(crf.state_features_).most_common(10))
+        least_common_features = print_state_features(Counter(crf.state_features_).most_common()[-10:])
+
+        path = "nlp\\nlp_tools\\crf\\crf_learned_info\\" + save_name + "_learned_info.txt"
+
+        with open(path, "a", encoding = "utf-8") as file:
+            file.write("Top likely transitions:\n")
+            file.writelines("\n".join(common_transition))
+            file.write("\n\nTop unlikely transitions:\n")
+            file.writelines("\n".join(least_common_transition))
+            file.write("\n\nTop feature factors:\n")
+            file.writelines("\n".join(common_features))
+            file.write("\n\nLeast feature factors:\n")
+            file.writelines("\n".join(least_common_features))
+        
+        print("Learned information by the model has bee saved in: " + path)
+
     else:
         print("\nLoading from memory")
         with bz2.BZ2File(saving_path, 'r') as infile:
@@ -125,6 +147,22 @@ def get_model(train_path, testing_stories, testing_set, saving_path):
         y_train = None
 
     return crf, X_train, y_train
+
+def print_transitions(trans_features):
+    '''gets the transitions learned by the model'''
+    transition = []
+    for (label_from, label_to), weight in trans_features:
+        transition.append("%-6s -> %-7s %0.6f" % (label_from, label_to, weight))
+
+    return transition
+
+def print_state_features(state_features):
+    '''gets the prominent features learned by the model'''
+    features = []
+    for (attr, label), weight in state_features:
+        features.append("%0.6f %-8s %s" % (weight, label, attr))
+
+    return features
 
 def extract_info(path):
     '''
