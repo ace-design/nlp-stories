@@ -1,0 +1,93 @@
+Top likely transitions:
+S-ENT  -> S-ENT   2.585135
+P-ENT  -> P-ENT   2.207005
+P-ACT  -> P-ACT   1.655284
+PER    -> PER     1.638863
+P-ACT  -> P-ENT   1.454239
+O      -> O       1.286770
+S-ACT  -> S-ACT   0.635035
+S-ENT  -> O       0.502351
+P-ENT  -> S-ACT   0.205573
+P-ENT  -> O       0.167801
+
+Top unlikely transitions:
+P-ENT  -> PER     -0.395265
+O      -> P-ENT   -0.397331
+P-ACT  -> O       -0.397590
+PER    -> P-ENT   -0.410151
+S-ENT  -> S-ACT   -0.450038
+P-ENT  -> P-ACT   -0.453551
+P-ACT  -> S-ENT   -0.623572
+S-ACT  -> P-ENT   -1.030491
+S-ENT  -> P-ENT   -1.203692
+P-ENT  -> S-ENT   -1.859104
+
+Top feature factors:
+2.709128 O        postag:DET
+1.884763 P-ACT    postag:VERB
+1.767681 O        bias
+1.738550 P-ENT    postag:NOUN
+1.640194 O        postag:CCONJ
+1.607654 S-ENT    postag:PROPN
+1.550845 O        postag:ADP
+1.512663 S-ENT    postag:NOUN
+1.480780 P-ENT    postag:ADJ
+1.370312 S-ACT    postag:VERB
+
+Least feature factors:
+-0.785075 P-ENT    -2:postag:ADP
+-0.820698 O        -1:postag:CCONJ
+-0.832026 O        +1:postag:ADP
+-0.882903 S-ENT    -3:postag:PART
+-0.983819 S-ENT    -4:word.isupper()
+-1.175924 O        postag:ADJ
+-1.191667 O        postag:PROPN
+-1.469506 O        -1:postag:DET
+-1.576912 O        postag:VERB
+-3.424117 O        postag:NOUNTop likely transitions:
+S-ENT  -> S-ENT   2.585135
+P-ENT  -> P-ENT   2.207005
+P-ACT  -> P-ACT   1.655284
+PER    -> PER     1.638863
+P-ACT  -> P-ENT   1.454239
+O      -> O       1.286770
+S-ACT  -> S-ACT   0.635035
+S-ENT  -> O       0.502351
+P-ENT  -> S-ACT   0.205573
+P-ENT  -> O       0.167801
+
+Top unlikely transitions:
+P-ENT  -> PER     -0.395265
+O      -> P-ENT   -0.397331
+P-ACT  -> O       -0.397590
+PER    -> P-ENT   -0.410151
+S-ENT  -> S-ACT   -0.450038
+P-ENT  -> P-ACT   -0.453551
+P-ACT  -> S-ENT   -0.623572
+S-ACT  -> P-ENT   -1.030491
+S-ENT  -> P-ENT   -1.203692
+P-ENT  -> S-ENT   -1.859104
+
+Top feature factors:
+2.709128 O        postag:DET
+1.884763 P-ACT    postag:VERB
+1.767681 O        bias
+1.738550 P-ENT    postag:NOUN
+1.640194 O        postag:CCONJ
+1.607654 S-ENT    postag:PROPN
+1.550845 O        postag:ADP
+1.512663 S-ENT    postag:NOUN
+1.480780 P-ENT    postag:ADJ
+1.370312 S-ACT    postag:VERB
+
+Least feature factors:
+-0.785075 P-ENT    -2:postag:ADP
+-0.820698 O        -1:postag:CCONJ
+-0.832026 O        +1:postag:ADP
+-0.882903 S-ENT    -3:postag:PART
+-0.983819 S-ENT    -4:word.isupper()
+-1.175924 O        postag:ADJ
+-1.191667 O        postag:PROPN
+-1.469506 O        -1:postag:DET
+-1.576912 O        postag:VERB
+-3.424117 O        postag:NOUN

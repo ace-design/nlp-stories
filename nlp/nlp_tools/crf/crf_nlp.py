@@ -39,7 +39,7 @@ def main():
         output.append(formatted_data)
 
     save_results(save_name, output, data_type_folder)
-    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, save_name)
+    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name)
     
 def command():
     '''
@@ -507,20 +507,20 @@ def save_results(save_name, output, data_type_folder):
 
     print("File is saved")
 
-def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, save_name):
+def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name):
     '''optimize the c1 and c2 parameters'''
 
     f1_scorer = make_scorer(metrics.flat_f1_score, average='weighted', labels=available_labels)
 
     if random_optimize:
-        hp_best_param, hp_best_score = random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, save_name)
+        hp_best_param, hp_best_score = random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name)
         
         print("\n")
         print('best hp params:', hp_best_param)
         print('best hp CV score:', hp_best_score)
     
     if grid_optimize:
-        grid_best_param, grid_best_score =grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, save_name)
+        grid_best_param, grid_best_score =grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name)
         
         print("\n")
         print('best grid params:', grid_best_param)
@@ -534,7 +534,7 @@ def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, availa
         print('best hp params:', grid_best_param)
         print('best hp CV score:', grid_best_score)
 
-def random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, save_name):
+def random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name):
     '''hyperparameter optimization for finding c1 and c2 randomly'''
 
     crf_hp = CRF(algorithm='lbfgs', max_iterations=100, all_possible_transitions=True)
@@ -544,19 +544,19 @@ def random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, 
     
     config_rs = RandomizedSearchCV(crf_hp, params_space, cv=5, verbose=100, n_jobs=-1, n_iter=50, scoring= f1_scorer, return_train_score=True, refit=False)
 
-    crf_hp = train_model(config_rs, X_train, y_train, "crf_models\\"+ model_name + "_" + save_name + "_crf_model_hp.pkl")
+    crf_hp = train_model(config_rs, X_train, y_train, "crf_models\\"+ model_name + "_crf_model_hp.pkl")
 
     plt.style.use('ggplot')
     
     plot_hp(crf_hp, 'mean_train_score') # How it behave on the training sets
-    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name + "_" + save_name +  "_training_random_parameter_space.png")
+    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name +  "_training_random_parameter_space.png")
     plot_hp(crf_hp, 'mean_test_score') # How it behave on the validation sets
-    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name + "_" + save_name +  "_testing_random_parameter_space.png")
+    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name  +  "_testing_random_parameter_space.png")
     print("\ngraphs are saved")
 
     return crf_hp.best_params_, crf_hp.best_score_
 
-def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, save_name):
+def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name):
 
     crf_grid = CRF(algorithm='lbfgs',max_iterations=100,all_possible_transitions=True,)
 
@@ -567,10 +567,10 @@ def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name, sa
 
     config_grid = GridSearchCV(crf_grid, params_space_grid, cv=5, verbose=100, n_jobs=-1, scoring= f1_scorer, return_train_score=True, refit=False)
 
-    crf_grid = train_model(config_grid, X_train, y_train, "nlp\\nlp_tools\\crf\\crf_models\\"+ model_name + "_" + save_name +  "_crf_model_grid.pkl")
+    crf_grid = train_model(config_grid, X_train, y_train, "nlp\\nlp_tools\\crf\\crf_models\\"+ model_name + "_crf_model_grid.pkl")
 
     plot_hp(crf_grid, 'mean_test_score')
-    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name + "_" + save_name + "_grid_parameter_space.png")
+    plt.savefig("nlp\\nlp_tools\\crf\\crf_graphs\\" + model_name + "_grid_parameter_space.png")
     print("\ngraph is saved")
 
     return crf_grid.best_params_, crf_grid.best_score_
