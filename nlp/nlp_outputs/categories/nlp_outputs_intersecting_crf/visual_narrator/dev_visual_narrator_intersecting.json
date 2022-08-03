@@ -1,0 +1,502 @@
+[
+    {
+        "Text": "#G08# As a Developer, I want to get a Data Package into Node, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "Package"
+        ],
+        "Triggers": [
+            "Developer",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "Package"
+        ]
+    },
+    {
+        "Text": "#G08# As a Researcher, I want to get a Data Package into Julia in seconds, so that I can start using the data for doing analysis and visualizations. ",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "Package"
+        ],
+        "Triggers": [
+            "Researcher",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "Package"
+        ]
+    },
+    {
+        "Text": "#G08# As a Researcher, I want to be able to save new visualizations, so that I can share them with others or include them in the Data Package. ",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": [
+            "save"
+        ],
+        "Entity": [
+            "visualizations"
+        ],
+        "Triggers": [
+            "Researcher",
+            "save"
+        ],
+        "Targets": [
+            "save",
+            "visualizations"
+        ]
+    },
+    {
+        "Text": "#G08# As a ResearcherPublisher, I want to know that my data conforms to its Data Package profile, so that I can feel trust in the validity and usefulness of the data. ",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "profile"
+        ],
+        "Triggers": [
+            "ResearcherPublisher",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "profile"
+        ]
+    },
+    {
+        "Text": "#G08# As a Developer, I want to get a Data Package into Python in seconds, so that I can start using the data for doing analysis and visualizations. ",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "Package"
+        ],
+        "Triggers": [
+            "Developer",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "Package"
+        ]
+    },
+    {
+        "Text": "#G08# As a Researcher, I want to get my Excel spreadsheet into a Data Package, so that I can benefit from better tooling and standardization. ",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "spreadsheet"
+        ],
+        "Triggers": [
+            "Researcher",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "spreadsheet"
+        ]
+    },
+    {
+        "Text": "#G08# As a Developer, I want to do exploratory data analysis in R and operationalize that analysis in Python, so that I can use the best tool for the job.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "do"
+        ],
+        "Entity": [
+            "analysis"
+        ],
+        "Triggers": [
+            "Developer",
+            "do"
+        ],
+        "Targets": [
+            "do",
+            "analysis"
+        ]
+    },
+    {
+        "Text": "#G08# As a Developer, I want to get a Data Package into Julia in seconds, so that I can start using the data in doing analysis and visualizations. ",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "Package"
+        ],
+        "Triggers": [
+            "Developer",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "Package"
+        ]
+    },
+    {
+        "Text": "#G08# As a Developer, I want to get a Data Package into C++ in seconds, so that I can start using the data in doing analysis and visualizations. ",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "Package"
+        ],
+        "Triggers": [
+            "Developer",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "Package"
+        ]
+    },
+    {
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to add general country names to my dataset that only contains country codes, so that my dataset is more readable. ",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "names"
+        ],
+        "Triggers": [
+            "Publisher",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "names"
+        ]
+    },
+    {
+        "Text": "#G08# As a government Publisher, I want to make it easy to prove that our published data is valid, so that I can claim that we are living up to our transparency commitments. ",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "make"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "Publisher",
+            "make"
+        ],
+        "Targets": [
+            "make",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G08# As a publisher, I want to embed an interactive preview of my data on my site, so that users can be encouraged that this is the correct data for them. ",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": [
+            "embed"
+        ],
+        "Entity": [
+            "preview"
+        ],
+        "Triggers": [
+            "publisher",
+            "embed"
+        ],
+        "Targets": [
+            "embed",
+            "preview"
+        ]
+    },
+    {
+        "Text": "#G08# As a publisher, I want to package reproducible steps to get a certain data state, so my methodology is transparent and can be rerun by others. ",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": [
+            "package"
+        ],
+        "Entity": [
+            "steps"
+        ],
+        "Triggers": [
+            "publisher",
+            "package"
+        ],
+        "Targets": [
+            "package",
+            "steps"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "explore"
+        ],
+        "Entity": [
+            "instance"
+        ],
+        "Triggers": [
+            "developer",
+            "explore"
+        ],
+        "Targets": [
+            "explore",
+            "instance"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "version"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error. ",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "version"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "archetype"
+        ],
+        "Triggers": [
+            "developer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "archetype"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "depend"
+        ],
+        "Entity": [
+            "implementation"
+        ],
+        "Triggers": [
+            "developer",
+            "depend"
+        ],
+        "Targets": [
+            "depend",
+            "implementation"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "apps"
+        ],
+        "Triggers": [
+            "user",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "apps"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "include"
+        ],
+        "Entity": [
+            "code"
+        ],
+        "Triggers": [
+            "developer",
+            "include"
+        ],
+        "Targets": [
+            "include",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "specify"
+        ],
+        "Entity": [
+            "schema"
+        ],
+        "Triggers": [
+            "user",
+            "specify"
+        ],
+        "Targets": [
+            "specify",
+            "schema"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "configure"
+        ],
+        "Entity": [
+            "way"
+        ],
+        "Triggers": [
+            "user",
+            "configure"
+        ],
+        "Targets": [
+            "configure",
+            "way"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "properties"
+        ],
+        "Triggers": [
+            "user",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "remove"
+        ],
+        "Entity": [
+            "property"
+        ],
+        "Triggers": [
+            "user",
+            "remove"
+        ],
+        "Targets": [
+            "remove",
+            "property"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "datasets"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "datasets"
+        ]
+    }
+]

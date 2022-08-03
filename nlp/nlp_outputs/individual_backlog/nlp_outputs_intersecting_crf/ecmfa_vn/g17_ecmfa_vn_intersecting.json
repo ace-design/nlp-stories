@@ -1,0 +1,177 @@
+[
+    {
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            "App Developer"
+        ],
+        "Entity": [
+            "Type",
+            "App",
+            "Dataset Instance"
+        ],
+        "Action": [
+            "Explore A Dataset Instance Of A Type Deployed As Part Of An App"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            "App Developer"
+        ],
+        "Entity": [
+            "Dataset Type",
+            "App"
+        ],
+        "Action": [
+            "Deploy A New Version Of An App Includes An Older Version Of A Dataset Type Another App",
+            "Expect",
+            "Ensure That"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error. ",
+        "Persona": [
+            "App Developer"
+        ],
+        "Entity": [
+            "App",
+            "Version Conflict Error",
+            "Type",
+            "App",
+            "Dataset Instance",
+            "Dataset"
+        ],
+        "Action": [
+            "Ensure",
+            "Deploy A New Version Of An App Includes A Different Version Of A Dataset Type Another App Shares A Dataset Instance Of This Type With The Other App The Deployment Fail With A Version Conflict Error",
+            "Deploy A New Version Of An App Includes A Different Version Of A Type This App Shares"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            "Dataset Developer"
+        ],
+        "Entity": [
+            "Dataset Type",
+            "Archetype"
+        ],
+        "Action": [
+            "Have An Archetype Helps Properly Package Dataset Type"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            "App Developer"
+        ],
+        "Entity": [
+            "App",
+            "Dataset Type",
+            "Runtime",
+            "System",
+            "Implementation"
+        ],
+        "Action": [
+            "Depend On The Interface Of A Dataset Type In App",
+            "Have"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            "Hydrator User"
+        ],
+        "Entity": [
+            "App",
+            "Sink",
+            "Source",
+            "Instance",
+            "Dataset Instances",
+            "Pipeline"
+        ],
+        "Action": [
+            "Ensure All Dataset Instances Apps Available As Sinks For Pipelines",
+            "Ensure All Instances Apps Available As Source"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            "Plugin Developer"
+        ],
+        "Entity": [
+            "Code",
+            "Plugin Artifact",
+            "Dataset Type"
+        ],
+        "Action": [
+            "Include The Code For A Dataset Type In The Plugin Artifact"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Schema",
+            "Sql"
+        ],
+        "Action": [
+            "Specify Schema As A Sql Schema String"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Uniform Way",
+            "Dataset Types",
+            "Time"
+        ],
+        "Action": [
+            "Live",
+            "Configure Time In A Uniform Way Across All Dataset Types"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Dataset Instance"
+        ],
+        "Action": [
+            "Update The Properties Of A Dataset Instance"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties. ",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Dataset Instance",
+            "Property"
+        ],
+        "Action": [
+            "Remove A Single Property Of A Dataset Instance Knowing All Other Properties"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            "App Developer"
+        ],
+        "Entity": [
+            "Dataset"
+        ],
+        "Action": [
+            "Ensure"
+        ]
+    }
+]

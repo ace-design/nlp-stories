@@ -18,7 +18,7 @@ from sklearn.model_selection import RandomizedSearchCV
 import sys
 
 def main():
-    train_path, test_path, random_optimize, grid_optimize, model_name, save_name, saving_path, data_type_folder = command()
+    train_path, test_path, random_optimize, grid_optimize, model_name, saving_path, data_type_folder = command()
 
     stanza.download('en') 
     stanza_nlp = stanza.Pipeline('en')
@@ -28,7 +28,7 @@ def main():
     X_test = [sent2features(s) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
-    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, save_name)
+    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, model_name)
     
     y_pred, available_labels = get_results(crf, X_test, y_test)
     
@@ -38,7 +38,7 @@ def main():
         formatted_data = format_results(testing_stories[i], persona, primary_action, secondary_action, primary_entity, secondary_entity)
         output.append(formatted_data)
 
-    save_results(save_name, output, data_type_folder)
+    save_results(model_name, output, data_type_folder)
     optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name)
     
 def command():
@@ -63,7 +63,6 @@ def command():
     parser.add_argument('--random_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument('--grid_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("model_name", type = str, help = "name of the model")
-    parser.add_argument("save_name", type = str, help = "name of the file save the results")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     
     args = parser.parse_args()
@@ -101,7 +100,7 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, args.save_name, saving_path, data_type_folder
+        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, saving_path, data_type_folder
 
 def get_model(train_path, testing_stories, testing_set, saving_path, save_name):
     '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''

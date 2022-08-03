@@ -1,0 +1,1919 @@
+[
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Node, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "data",
+                "analysis",
+                "visualizations",
+                "Node"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "start using",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "Node",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "start",
+                        "using"
+                    ],
+                    [
+                        "doing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ],
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "visualizations"
+                    ],
+                    [
+                        "Node"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get a Data Package into Julia in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Julia",
+                "analysis",
+                "visualizations",
+                "data"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Julia",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "start",
+                        "using"
+                    ],
+                    [
+                        "doing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Julia"
+                    ],
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "visualizations"
+                    ],
+                    [
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to be able to save new visualizations, so that I can share them with others or include them in the Data Package.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "save"
+            ],
+            "Secondary Action": [
+                "share",
+                "include"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new visualizations"
+            ],
+            "Secondary Entity": [
+                "others",
+                "Data Package"
+            ]
+        },
+        "Benefit": "I can share them with others or include them in the Data Package",
+        "Triggers": [
+            [
+                "Researcher",
+                "save"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "new visualizations"
+            ],
+            [
+                "save",
+                "new visualizations"
+            ],
+            [
+                "share",
+                "new visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "new visualizations"
+            ],
+            [
+                "others",
+                "new visualizations"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "save"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "share"
+                    ],
+                    [
+                        "include"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "new",
+                        "visualizations"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "others"
+                    ],
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to know that my data conforms to its Data Package profile, so that I can feel trust in the validity and usefulness of the data.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "feel"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "trust",
+                "usefulness",
+                "data.",
+                "Data Package profile",
+                "validity"
+            ]
+        },
+        "Benefit": "I can feel trust in the validity and usefulness of the data",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "feel",
+                "usefulness"
+            ],
+            [
+                "know",
+                "data"
+            ],
+            [
+                "feel",
+                "trust"
+            ]
+        ],
+        "Contains": [
+            [
+                "data.",
+                "usefulness"
+            ],
+            [
+                "validity",
+                "trust"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "ResearcherPublisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "feel"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "PUNCT"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "trust"
+                    ],
+                    [
+                        "usefulness"
+                    ],
+                    [
+                        "data",
+                        "."
+                    ],
+                    [
+                        "Data",
+                        "Package",
+                        "profile"
+                    ],
+                    [
+                        "validity"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Python in seconds, so that I can start using the data for doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "doing",
+                "start using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "Python",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data for doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Python",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "doing"
+                    ],
+                    [
+                        "start",
+                        "using"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Python"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "visualizations"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to get my Excel spreadsheet into a Data Package, so that I can benefit from better tooling and standardization.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "benefit from"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Excel spreadsheet"
+            ],
+            "Secondary Entity": [
+                "Data Package",
+                "better tooling",
+                "standardization"
+            ]
+        },
+        "Benefit": "I can benefit from better tooling and standardization",
+        "Triggers": [
+            [
+                "Researcher",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Excel spreadsheet"
+            ],
+            [
+                "benefit from",
+                "better tooling"
+            ],
+            [
+                "benefit from",
+                "standardization"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "Excel spreadsheet"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "benefit",
+                        "from"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Excel",
+                        "spreadsheet"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ],
+                    [
+                        "better",
+                        "tooling"
+                    ],
+                    [
+                        "standardization"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to do exploratory data analysis in R and operationalize that analysis in Python, so that I can use the best tool for the job.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "operationalize",
+                "do"
+            ],
+            "Secondary Action": [
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "analysis",
+                "exploratory data analysis"
+            ],
+            "Secondary Entity": [
+                "Python",
+                "best tool",
+                "R",
+                "job"
+            ]
+        },
+        "Benefit": "I can use the best tool for the job",
+        "Triggers": [
+            [
+                "Developer",
+                "operationalize"
+            ],
+            [
+                "Developer",
+                "do"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "best tool"
+            ],
+            [
+                "do",
+                "exploratory data analysis"
+            ],
+            [
+                "operationalize",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "R",
+                "exploratory data analysis"
+            ],
+            [
+                "Python",
+                "analysis"
+            ],
+            [
+                "job",
+                "best tool"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "operationalize"
+                    ],
+                    [
+                        "do"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "use"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "exploratory",
+                        "data",
+                        "analysis"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Python"
+                    ],
+                    [
+                        "best",
+                        "tool"
+                    ],
+                    [
+                        "R"
+                    ],
+                    [
+                        "job"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into Julia in seconds, so that I can start using the data in doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "analysis",
+                "Julia",
+                "data",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "analysis"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ]
+        ],
+        "Contains": [
+            [
+                "Data Package",
+                "data"
+            ],
+            [
+                "Julia",
+                "Data Package"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "start",
+                        "using"
+                    ],
+                    [
+                        "doing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "Julia"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "visualizations"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a Developer, I want to get a Data Package into C++ in seconds, so that I can start using the data in doing analysis and visualizations.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "start using",
+                "doing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "C++",
+                "data",
+                "analysis",
+                "visualizations"
+            ]
+        },
+        "Benefit": "I can start using the data in doing analysis and visualizations",
+        "Triggers": [
+            [
+                "Developer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "Data Package"
+            ],
+            [
+                "start using",
+                "data"
+            ],
+            [
+                "doing",
+                "visualizations"
+            ],
+            [
+                "doing",
+                "analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "C++",
+                "Data Package"
+            ],
+            [
+                "Data Package",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "start",
+                        "using"
+                    ],
+                    [
+                        "doing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "C++"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "visualizations"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherGovernment Publisher, I want to add general country names to my dataset that only contains country codes, so that my dataset is more readable.",
+        "Persona": [
+            "ResearcherGovernment Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "general country names"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "country codes",
+                "dataset"
+            ]
+        },
+        "Benefit": "my dataset is more readable",
+        "Triggers": [
+            [
+                "ResearcherGovernment Publisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "general country names"
+            ]
+        ],
+        "Contains": [
+            [
+                "general country names",
+                "country codes"
+            ],
+            [
+                "dataset",
+                "general country names"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "ResearcherGovernment",
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "add"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "general",
+                        "country",
+                        "names"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "country",
+                        "codes"
+                    ],
+                    [
+                        "dataset"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a government Publisher, I want to make it easy to prove that our published data is valid, so that I can claim that we are living up to our transparency commitments.",
+        "Persona": [
+            "government Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make it easy"
+            ],
+            "Secondary Action": [
+                "claim",
+                "living up to",
+                "prove"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "transparency commitments",
+                "published data"
+            ]
+        },
+        "Benefit": "I can claim that we are living up to our transparency commitments",
+        "Triggers": [
+            [
+                "government Publisher",
+                "make it easy"
+            ]
+        ],
+        "Targets": [
+            [
+                "claim",
+                "transparency commitments"
+            ],
+            [
+                "living up to",
+                "transparency commitments"
+            ],
+            [
+                "prove",
+                "published data"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "government",
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "PRON",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make",
+                        "it",
+                        "easy"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "ADP",
+                        "ADP"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "claim"
+                    ],
+                    [
+                        "living",
+                        "up",
+                        "to"
+                    ],
+                    [
+                        "prove"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "transparency",
+                        "commitments"
+                    ],
+                    [
+                        "published",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to embed an interactive preview of my data on my site, so that users can be encouraged that this is the correct data for them.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "embed"
+            ],
+            "Secondary Action": [
+                "encouraged"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interactive preview"
+            ],
+            "Secondary Entity": [
+                "users",
+                "correct data",
+                "data",
+                "site"
+            ]
+        },
+        "Benefit": "users can be encouraged that this is the correct data for them",
+        "Triggers": [
+            [
+                "publisher",
+                "embed"
+            ]
+        ],
+        "Targets": [
+            [
+                "embed",
+                "interactive preview"
+            ],
+            [
+                "encouraged",
+                "correct data"
+            ]
+        ],
+        "Contains": [
+            [
+                "site",
+                "users"
+            ],
+            [
+                "data",
+                "correct data"
+            ],
+            [
+                "interactive preview",
+                "data"
+            ],
+            [
+                "site",
+                "interactive preview"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "embed"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "encouraged"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "interactive",
+                        "preview"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "users"
+                    ],
+                    [
+                        "correct",
+                        "data"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "site"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to package reproducible steps to get a certain data state, so my methodology is transparent and can be rerun by others.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "package"
+            ],
+            "Secondary Action": [
+                "get",
+                "rerun"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reproducible steps"
+            ],
+            "Secondary Entity": [
+                "certain data state",
+                "methodology",
+                "others"
+            ]
+        },
+        "Benefit": "my methodology is transparent and can be rerun by others",
+        "Triggers": [
+            [
+                "publisher",
+                "package"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "certain data state"
+            ],
+            [
+                "package",
+                "reproducible steps"
+            ],
+            [
+                "rerun",
+                "methodology"
+            ]
+        ],
+        "Contains": [
+            [
+                "reproducible steps",
+                "certain data state"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ],
+                    [
+                        "rerun"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "reproducible",
+                        "steps"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "certain",
+                        "data",
+                        "state"
+                    ],
+                    [
+                        "methodology"
+                    ],
+                    [
+                        "others"
+                    ]
+                ]
+            }
+        }
+    }
+]

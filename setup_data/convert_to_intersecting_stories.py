@@ -5,9 +5,12 @@ import sys
 
 
 def main():
-    nlp_results_path, intersecting_path, save_file_path = command()
+    nlp_results_path, intersecting_path, save_file_path, crf = command()
 
-    intersecting_data = get_intersecting_data(nlp_results_path, intersecting_path)
+    if crf:
+        intersecting_data = get_crf_intersecting_data(nlp_results_path, intersecting_path)
+    else:
+        intersecting_data = get_intersecting_data(nlp_results_path, intersecting_path)
 
     save_results(intersecting_data, save_file_path)
 
@@ -67,7 +70,50 @@ def command():
         else:
             save_file_path = "nlp\\nlp_outputs\\" + data_type_folder + intersecting_type_folder + "\\crf\\" + args.save_name + "_crf_intersecting.json"
         
-        return args.load_nlp_results_path, args.load_intersecting_path, save_file_path
+        return args.load_nlp_results_path, args.load_intersecting_path, save_file_path, args.crf_intersecting_set
+
+def get_crf_intersecting_data(nlp_results_path, intersecting_path):
+    '''
+    will get the results of the stories that were indentifies as intersecting. 
+
+    Parameters:
+    nlp_results_path (str): path to the file that contains the nlp annotated results
+    intersecting_path (str): path to the file that contains the stories that are intersecting
+
+    Returns:
+    intersecting_data (list): the annotations results of only the intersecting stories
+    '''
+
+    intersecting_text = []
+    crf_info = []
+    intersecting_data = []
+    passed_text = []
+
+    
+    nlp_file = open(nlp_results_path, encoding= "UTF-8")
+    nlp_data = json.load(nlp_file) 
+    nlp_file.close()
+
+    intersecting_file = open(intersecting_path, encoding= "UTF-8")
+    crf_info = json.load(intersecting_file) 
+    intersecting_file.close()
+
+    for story_data in crf_info:
+        intersecting_text.append(story_data["Text"].strip(" \n\t"))
+
+    for i in range(len(nlp_data)):
+        nlp_text = nlp_data[i]["Text"].strip(" \n\t") 
+        if nlp_text in intersecting_text and not(nlp_text in passed_text):
+                intersecting_data.append(nlp_data[i])
+                passed_text.append(nlp_text)
+
+    if len(intersecting_text) != len(intersecting_data):
+        print("ERROR: THERE ARE MISSING DATA IN THE FILE.\n")
+        difference = list(set(intersecting_text) - set(passed_text))
+        print(difference)
+
+    return intersecting_data
+
 
 def get_intersecting_data(nlp_results_path, intersecting_path):
     '''

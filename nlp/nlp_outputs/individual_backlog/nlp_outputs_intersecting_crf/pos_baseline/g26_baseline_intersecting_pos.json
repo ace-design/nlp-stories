@@ -1,0 +1,2615 @@
+[
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to set a date on which restrictions will be removed from a file, so that that I don't have to update this by hand.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "set"
+            ],
+            "Secondary Action": [
+                "removed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "date"
+            ],
+            "Secondary Entity": [
+                "restrictions",
+                "file"
+            ]
+        },
+        "Benefit": "I don't have to update this by hand",
+        "Triggers": [
+            [
+                "archivist",
+                "set"
+            ]
+        ],
+        "Targets": [
+            [
+                "set",
+                "date"
+            ],
+            [
+                "removed",
+                "restrictions"
+            ]
+        ],
+        "Contains": [
+            [
+                "file",
+                "restrictions"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "set"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "removed"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "date"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "restrictions"
+                    ],
+                    [
+                        "file"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to automatically generate technical metadata, so that I know the file size.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "automatically generate"
+            ],
+            "Secondary Action": [
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "technical metadata"
+            ],
+            "Secondary Entity": [
+                "file size"
+            ]
+        },
+        "Benefit": "I know the file size",
+        "Triggers": [
+            [
+                "archivist",
+                "automatically generate"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically generate",
+                "technical metadata"
+            ],
+            [
+                "know",
+                "file size"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "automatically",
+                        "generate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "technical",
+                        "metadata"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "file",
+                        "size"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to link electronic versions of researchers' publications to citations, so that I can share them with other researchers.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "electronic versions"
+            ],
+            "Secondary Entity": [
+                "researchers' publications",
+                "citations",
+                "other researchers"
+            ]
+        },
+        "Benefit": "I can share them with other researchers",
+        "Triggers": [
+            [
+                "archivist",
+                "link"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "electronic versions"
+            ],
+            [
+                "share",
+                "electronic versions"
+            ]
+        ],
+        "Contains": [
+            [
+                "researchers' publications",
+                "electronic versions"
+            ],
+            [
+                "citations",
+                "electronic versions"
+            ],
+            [
+                "other researchers",
+                "electronic versions"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "link"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "share"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "electronic",
+                        "versions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PART",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "researchers",
+                        "'",
+                        "publications"
+                    ],
+                    [
+                        "citations"
+                    ],
+                    [
+                        "other",
+                        "researchers"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to automatically assign unique identifiers to material I scan, so that I avoid potential errors.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "automatically assign"
+            ],
+            "Secondary Action": [
+                "avoid"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "unique identifiers"
+            ],
+            "Secondary Entity": [
+                "material I scan",
+                "potential errors"
+            ]
+        },
+        "Benefit": "I avoid potential errors",
+        "Triggers": [
+            [
+                "archivist",
+                "automatically assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically assign",
+                "unique identifiers"
+            ],
+            [
+                "avoid",
+                "potential errors"
+            ]
+        ],
+        "Contains": [
+            [
+                "material I scan",
+                "unique identifiers"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "automatically",
+                        "assign"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "avoid"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "unique",
+                        "identifiers"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "VERB"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "material",
+                        "I",
+                        "scan"
+                    ],
+                    [
+                        "potential",
+                        "errors"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a donor representative, I want to supply incremental accruals to new and existing collections, so that material can be transferred on an ongoing basis.",
+        "Persona": [
+            "donor representative"
+        ],
+        "Action": {
+            "Primary Action": [
+                "supply"
+            ],
+            "Secondary Action": [
+                "transferred"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "incremental accruals"
+            ],
+            "Secondary Entity": [
+                "new and existing collections",
+                "material"
+            ]
+        },
+        "Benefit": "material can be transferred on an ongoing basis",
+        "Triggers": [
+            [
+                "donor representative",
+                "supply"
+            ]
+        ],
+        "Targets": [
+            [
+                "supply",
+                "incremental accruals"
+            ],
+            [
+                "transferred",
+                "material"
+            ]
+        ],
+        "Contains": [
+            [
+                "new and existing collections",
+                "incremental accruals"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "donor",
+                    "representative"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "supply"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "transferred"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "incremental",
+                        "accruals"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "CCONJ",
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "and",
+                        "existing",
+                        "collections"
+                    ],
+                    [
+                        "material"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to manage loan documentation, including preservation photos, forms and correspondence, so that I can find it easily later.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "loan documentation"
+            ],
+            "Secondary Entity": [
+                "preservation photos",
+                "forms",
+                "correspondence"
+            ]
+        },
+        "Benefit": "I can find it easily later",
+        "Triggers": [
+            [
+                "archivist",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "loan documentation"
+            ],
+            [
+                "find",
+                "loan documentation"
+            ]
+        ],
+        "Contains": [
+            [
+                "loan documentation",
+                "preservation photos"
+            ],
+            [
+                "loan documentation",
+                "forms"
+            ],
+            [
+                "loan documentation",
+                "correspondence"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "manage"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "find"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "loan",
+                        "documentation"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "preservation",
+                        "photos"
+                    ],
+                    [
+                        "forms"
+                    ],
+                    [
+                        "correspondence"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a researcher, I want to generate structured citation data, so that so I can cite a file in a publication.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "generate"
+            ],
+            "Secondary Action": [
+                "cite"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "structured citation data"
+            ],
+            "Secondary Entity": [
+                "file",
+                "publication"
+            ]
+        },
+        "Benefit": "so I can cite a file in a publication",
+        "Triggers": [
+            [
+                "researcher",
+                "generate"
+            ]
+        ],
+        "Targets": [
+            [
+                "generate",
+                "structured citation data"
+            ],
+            [
+                "cite",
+                "file"
+            ]
+        ],
+        "Contains": [
+            [
+                "publication",
+                "file"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "generate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "cite"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "structured",
+                        "citation",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "file"
+                    ],
+                    [
+                        "publication"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a researcher, I want to share a link to a file on social media, so that so I can show other people an interesting thing I found.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": [
+                "show"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "link"
+            ],
+            "Secondary Entity": [
+                "file",
+                "social media",
+                "other people",
+                "interesting thing I found"
+            ]
+        },
+        "Benefit": "so I can show other people an interesting thing I found",
+        "Triggers": [
+            [
+                "researcher",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "link"
+            ],
+            [
+                "show",
+                "interesting thing I found"
+            ]
+        ],
+        "Contains": [
+            [
+                "file",
+                "link"
+            ],
+            [
+                "social media",
+                "link"
+            ],
+            [
+                "other people",
+                "interesting thing I found"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "share"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "show"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "link"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "PRON",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "file"
+                    ],
+                    [
+                        "social",
+                        "media"
+                    ],
+                    [
+                        "other",
+                        "people"
+                    ],
+                    [
+                        "interesting",
+                        "thing",
+                        "I",
+                        "found"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a researcher, I want to locate photographs and documents that I can share on social media.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "locate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "photographs",
+                "documents"
+            ],
+            "Secondary Entity": [
+                "social media"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "researcher",
+                "locate"
+            ]
+        ],
+        "Targets": [
+            [
+                "locate",
+                "photographs"
+            ],
+            [
+                "locate",
+                "documents"
+            ]
+        ],
+        "Contains": [
+            [
+                "social media",
+                "documents"
+            ],
+            [
+                "social media",
+                "photographs"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "locate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "photographs"
+                    ],
+                    [
+                        "documents"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "social",
+                        "media"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to see what a particular user has downloaded, so that I can track use of assets.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "downloaded",
+                "track"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "what"
+            ],
+            "Secondary Entity": [
+                "particular user",
+                "use",
+                "assets"
+            ]
+        },
+        "Benefit": "I can track use of assets",
+        "Triggers": [
+            [
+                "archivist",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "what"
+            ],
+            [
+                "downloaded",
+                "what"
+            ],
+            [
+                "track",
+                "use"
+            ]
+        ],
+        "Contains": [
+            [
+                "particular user",
+                "what"
+            ],
+            [
+                "assets",
+                "use"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "downloaded"
+                    ],
+                    [
+                        "track"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "what"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "particular",
+                        "user"
+                    ],
+                    [
+                        "use"
+                    ],
+                    [
+                        "assets"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to make as much archival material as possible available for use, so that I can fulfill the RAC's mission.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make"
+            ],
+            "Secondary Action": [
+                "fulfill"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "as much archival material as possible"
+            ],
+            "Secondary Entity": [
+                "use",
+                "RAC's mission"
+            ]
+        },
+        "Benefit": "I can fulfill the RAC's mission",
+        "Triggers": [
+            [
+                "archivist",
+                "make"
+            ]
+        ],
+        "Targets": [
+            [
+                "fulfill",
+                "RAC's mission"
+            ],
+            [
+                "make",
+                "as much archival material as possible"
+            ]
+        ],
+        "Contains": [
+            [
+                "as much archival material as possible",
+                "use"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fulfill"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV",
+                        "ADJ",
+                        "ADJ",
+                        "NOUN",
+                        "SCONJ",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "as",
+                        "much",
+                        "archival",
+                        "material",
+                        "as",
+                        "possible"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "PROPN",
+                        "PART",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "use"
+                    ],
+                    [
+                        "RAC",
+                        "'s",
+                        "mission"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a researcher, I want to see common material across collections, so that so I can prepare a comprehensive analysis.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "prepare"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "common material"
+            ],
+            "Secondary Entity": [
+                "collections",
+                "comprehensive analysis"
+            ]
+        },
+        "Benefit": "so I can prepare a comprehensive analysis",
+        "Triggers": [
+            [
+                "researcher",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "common material"
+            ],
+            [
+                "prepare",
+                "comprehensive analysis"
+            ]
+        ],
+        "Contains": [
+            [
+                "collections",
+                "common material"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "prepare"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "common",
+                        "material"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "collections"
+                    ],
+                    [
+                        "comprehensive",
+                        "analysis"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to search all files by keyword.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all files"
+            ],
+            "Secondary Entity": [
+                "keyword"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "archivist",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "all files"
+            ]
+        ],
+        "Contains": [
+            [
+                "all files",
+                "keyword"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "all",
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "keyword"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to upload inventories, so that our donor representatives have an easier time requesting their material.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload"
+            ],
+            "Secondary Action": [
+                "requesting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "inventories"
+            ],
+            "Secondary Entity": [
+                "donor representatives",
+                "material"
+            ]
+        },
+        "Benefit": "our donor representatives have an easier time requesting their material",
+        "Triggers": [
+            [
+                "archivist",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "inventories"
+            ],
+            [
+                "requesting",
+                "material"
+            ]
+        ],
+        "Contains": [
+            [
+                "donor representatives",
+                "material"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "upload"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "requesting"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "inventories"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "donor",
+                        "representatives"
+                    ],
+                    [
+                        "material"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As a researcher, I want to know the date on which something was digitized, so that I know if it's been digitized since I last looked.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "digitized",
+                "know",
+                "last looked",
+                "digitized"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "date"
+            ],
+            "Secondary Entity": [
+                "something"
+            ]
+        },
+        "Benefit": "I know if it's been digitized since I last looked",
+        "Triggers": [
+            [
+                "researcher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "date"
+            ],
+            [
+                "digitized",
+                "something"
+            ],
+            [
+                "digitized",
+                "something"
+            ],
+            [
+                "last looked",
+                "something"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "digitized"
+                    ],
+                    [
+                        "know"
+                    ],
+                    [
+                        "last",
+                        "looked"
+                    ],
+                    [
+                        "digitized"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "date"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "something"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to search index cards and other non-public finding aids, so that I can provide better research assistance.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                "provide"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "index cards",
+                "other non-public finding aids"
+            ],
+            "Secondary Entity": [
+                "better research assistance"
+            ]
+        },
+        "Benefit": "I can provide better research assistance",
+        "Triggers": [
+            [
+                "archivist",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "index cards"
+            ],
+            [
+                "search",
+                "other non-public finding aids"
+            ],
+            [
+                "provide",
+                "better research assistance"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "provide"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "index",
+                        "cards"
+                    ],
+                    [
+                        "other",
+                        "non-public",
+                        "finding",
+                        "aids"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "better",
+                        "research",
+                        "assistance"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an archivist, I want to access metadata and visual representations of index cards, so that I can use that information to assist researchers.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": [
+                "use",
+                "assist"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "metadata",
+                "visual representations"
+            ],
+            "Secondary Entity": [
+                "index cards",
+                "information",
+                "researchers"
+            ]
+        },
+        "Benefit": "I can use that information to assist researchers",
+        "Triggers": [
+            [
+                "archivist",
+                "access"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "metadata"
+            ],
+            [
+                "access",
+                "visual representations"
+            ],
+            [
+                "use",
+                "information"
+            ],
+            [
+                "assist",
+                "researchers"
+            ]
+        ],
+        "Contains": [
+            [
+                "index cards",
+                "visual representations"
+            ],
+            [
+                "index cards",
+                "metadata"
+            ],
+            [
+                "metadata",
+                "information"
+            ],
+            [
+                "visual representations",
+                "information"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "archivist"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "use"
+                    ],
+                    [
+                        "assist"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "metadata"
+                    ],
+                    [
+                        "visual",
+                        "representations"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "index",
+                        "cards"
+                    ],
+                    [
+                        "information"
+                    ],
+                    [
+                        "researchers"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an administrator, I want to assign rights to user groups or roles, so that I can control what users can and can't do.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "assign"
+            ],
+            "Secondary Action": [
+                "control"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "rights"
+            ],
+            "Secondary Entity": [
+                "user groups",
+                "roles",
+                "what",
+                "users"
+            ]
+        },
+        "Benefit": "I can control what users can and can't do",
+        "Triggers": [
+            [
+                "administrator",
+                "assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign",
+                "rights"
+            ],
+            [
+                "control",
+                "what"
+            ]
+        ],
+        "Contains": [
+            [
+                "user groups",
+                "rights"
+            ],
+            [
+                "roles",
+                "rights"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "assign"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "control"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "rights"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "user",
+                        "groups"
+                    ],
+                    [
+                        "roles"
+                    ],
+                    [
+                        "what"
+                    ],
+                    [
+                        "users"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an administrator, I want to have researchers reset their own passwords, so that I don't have to send passwords in cleartext.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "reset"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "researchers"
+            ],
+            "Secondary Entity": [
+                "passwords",
+                "cleartext",
+                "passwords"
+            ]
+        },
+        "Benefit": "I don't have to send passwords in cleartext",
+        "Triggers": [
+            [
+                "administrator",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "researchers"
+            ],
+            [
+                "reset",
+                "passwords"
+            ]
+        ],
+        "Contains": [
+            [
+                "cleartext",
+                "passwords"
+            ],
+            [
+                "researchers",
+                "passwords"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "reset"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "researchers"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "passwords"
+                    ],
+                    [
+                        "cleartext"
+                    ],
+                    [
+                        "passwords"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G26#",
+        "Text": "#G26# As an administrator, I want to limit who can see certain metadata fields, so that I can show or hide things from display based on user groups.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "limit"
+            ],
+            "Secondary Action": [
+                "see",
+                "show",
+                "hide"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "who"
+            ],
+            "Secondary Entity": [
+                "certain metadata fields",
+                "things",
+                "display",
+                "user groups"
+            ]
+        },
+        "Benefit": "I can show or hide things from display based on user groups",
+        "Triggers": [
+            [
+                "administrator",
+                "limit"
+            ]
+        ],
+        "Targets": [
+            [
+                "limit",
+                "who"
+            ],
+            [
+                "see",
+                "certain metadata fields"
+            ],
+            [
+                "show",
+                "things"
+            ],
+            [
+                "hide",
+                "things"
+            ]
+        ],
+        "Contains": [
+            [
+                "display",
+                "things"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "limit"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "see"
+                    ],
+                    [
+                        "show"
+                    ],
+                    [
+                        "hide"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "who"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "certain",
+                        "metadata",
+                        "fields"
+                    ],
+                    [
+                        "things"
+                    ],
+                    [
+                        "display"
+                    ],
+                    [
+                        "user",
+                        "groups"
+                    ]
+                ]
+            }
+        }
+    }
+]

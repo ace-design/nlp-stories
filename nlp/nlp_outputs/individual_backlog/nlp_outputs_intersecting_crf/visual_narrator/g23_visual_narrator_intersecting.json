@@ -1,0 +1,222 @@
+[
+    {
+        "Text": "#G23# As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Action": [
+            "assign"
+        ],
+        "Entity": [
+            "Users"
+        ],
+        "Triggers": [
+            "Administrator",
+            "assign"
+        ],
+        "Targets": [
+            "assign",
+            "Users"
+        ]
+    },
+    {
+        "Text": "#G23# As a user, I want to add additional properties for repositories.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "properties"
+        ],
+        "Triggers": [
+            "user",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to add Notes to other record types.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "Notes"
+        ],
+        "Triggers": [
+            "Archivist",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "Notes"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to assign a Level of description to a Resource or Resource Component and optionally specify another value if the Level is not in a predefined list.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "assign"
+        ],
+        "Entity": [
+            "Level"
+        ],
+        "Triggers": [
+            "Archivist",
+            "assign"
+        ],
+        "Targets": [
+            "assign",
+            "Level"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to import EAD files that were exported by the Archivists' Toolkit.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "import"
+        ],
+        "Entity": [
+            "files"
+        ],
+        "Triggers": [
+            "Archivist",
+            "import"
+        ],
+        "Targets": [
+            "import",
+            "files"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to create and edit Event records.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "Archivist",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to upload an EAD for import from within the frontend application.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "upload"
+        ],
+        "Entity": [
+            "EAD"
+        ],
+        "Triggers": [
+            "Archivist",
+            "upload"
+        ],
+        "Targets": [
+            "upload",
+            "EAD"
+        ]
+    },
+    {
+        "Text": "#G23# As a Developer , I want to develop a custom importer.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "develop"
+        ],
+        "Entity": [
+            "importer"
+        ],
+        "Triggers": [
+            "Developer",
+            "develop"
+        ],
+        "Targets": [
+            "develop",
+            "importer"
+        ]
+    },
+    {
+        "Text": "#G23# As a Repository Manager , I want to create, update and delete any records in my repository.",
+        "Persona": [
+            "Manager"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "update"
+        ],
+        "Triggers": [
+            "Manager",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "update"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to create and edit Agent records.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "Agent"
+        ],
+        "Triggers": [
+            "Archivist",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "Agent"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to associate a Subject record with a Resource description.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Action": [
+            "associate"
+        ],
+        "Entity": [
+            "record"
+        ],
+        "Triggers": [
+            "Archivist",
+            "associate"
+        ],
+        "Targets": [
+            "associate",
+            "record"
+        ]
+    }
+]

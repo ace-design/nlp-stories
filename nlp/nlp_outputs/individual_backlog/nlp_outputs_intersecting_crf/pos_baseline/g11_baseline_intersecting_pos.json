@@ -1,0 +1,1830 @@
+[
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a developer, I want to have the subdomain beta.nsf.gov be set up, so that I can deploy a beta site to it.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "set up",
+                "deploy"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "subdomain beta.nsf.gov"
+            ],
+            "Secondary Entity": [
+                "beta site"
+            ]
+        },
+        "Benefit": "I can deploy a beta site to it",
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "beta site"
+            ],
+            [
+                "have",
+                "subdomain beta.nsf.gov"
+            ],
+            [
+                "set up",
+                "subdomain beta.nsf.gov"
+            ]
+        ],
+        "Contains": [
+            [
+                "subdomain beta.nsf.gov",
+                "beta site"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "set",
+                        "up"
+                    ],
+                    [
+                        "deploy"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "subdomain",
+                        "beta.nsf.gov"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "beta",
+                        "site"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a team member, I want to have a prioritized list of features and elements of a future social element page, so that I can work with the engineers to determine feasibility.",
+        "Persona": [
+            "team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "work with",
+                "determine"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "prioritized list",
+                "elements"
+            ],
+            "Secondary Entity": [
+                "engineers",
+                "features",
+                "future social element page",
+                "feasibility"
+            ]
+        },
+        "Benefit": "I can work with the engineers to determine feasibility",
+        "Triggers": [
+            [
+                "team member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "prioritized list"
+            ],
+            [
+                "have",
+                "elements"
+            ],
+            [
+                "work with",
+                "engineers"
+            ],
+            [
+                "determine",
+                "feasibility"
+            ],
+            [
+                "future social element page",
+                "elements"
+            ]
+        ],
+        "Contains": [
+            [
+                "prioritized list",
+                "features"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "work",
+                        "with"
+                    ],
+                    [
+                        "determine"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "prioritized",
+                        "list"
+                    ],
+                    [
+                        "elements"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "engineers"
+                    ],
+                    [
+                        "features"
+                    ],
+                    [
+                        "future",
+                        "social",
+                        "element",
+                        "page"
+                    ],
+                    [
+                        "feasibility"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a team member, I want to determine a design direction for the beta social page, so that we can implement a beta site quickly without established brand guidelines.",
+        "Persona": [
+            "team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "determine"
+            ],
+            "Secondary Action": [
+                "implement"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "design direction"
+            ],
+            "Secondary Entity": [
+                "beta social page",
+                "beta site",
+                "established brand guidelines"
+            ]
+        },
+        "Benefit": "we can implement a beta site quickly without established brand guidelines",
+        "Triggers": [
+            [
+                "team member",
+                "determine"
+            ]
+        ],
+        "Targets": [
+            [
+                "determine",
+                "design direction"
+            ],
+            [
+                "implement",
+                "beta site"
+            ]
+        ],
+        "Contains": [
+            [
+                "beta social page",
+                "design direction"
+            ],
+            [
+                "beta social page",
+                "beta site"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "determine"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "implement"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "design",
+                        "direction"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "beta",
+                        "social",
+                        "page"
+                    ],
+                    [
+                        "beta",
+                        "site"
+                    ],
+                    [
+                        "established",
+                        "brand",
+                        "guidelines"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a content editor, I want to be able to easily find content, so that I can edit it.",
+        "Persona": [
+            "content editor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "easily find"
+            ],
+            "Secondary Action": [
+                "edit"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I can edit it",
+        "Triggers": [
+            [
+                "content editor",
+                "easily find"
+            ]
+        ],
+        "Targets": [
+            [
+                "easily find",
+                "content"
+            ],
+            [
+                "edit",
+                "content"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "content",
+                    "editor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "easily",
+                        "find"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "edit"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "content"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a user, I want to add a video to my article.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "video"
+            ],
+            "Secondary Entity": [
+                "article"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "video"
+            ]
+        ],
+        "Contains": [
+            [
+                "article",
+                "video"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "add"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "video"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "article"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As an NSF employee, I want to have an updated roadmap document, so that I can see prioritized areas to focus on for the next few months and beyond.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "see",
+                "focus"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "updated roadmap document"
+            ],
+            "Secondary Entity": [
+                "prioritized areas",
+                "next few months"
+            ]
+        },
+        "Benefit": "I can see prioritized areas to focus on for the next few months and beyond",
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "updated roadmap document"
+            ],
+            [
+                "see",
+                "prioritized areas"
+            ],
+            [
+                "focus",
+                "prioritized areas"
+            ]
+        ],
+        "Contains": [
+            [
+                "updated roadmap document",
+                "prioritized areas"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "NSF",
+                    "employee"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "see"
+                    ],
+                    [
+                        "focus"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "updated",
+                        "roadmap",
+                        "document"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "prioritized",
+                        "areas"
+                    ],
+                    [
+                        "next",
+                        "few",
+                        "months"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a researcher, I want to develop the user research protocol for internal workflows, so that we can begin testing against a CMS prototype.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "develop"
+            ],
+            "Secondary Action": [
+                "begin testing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user research protocol"
+            ],
+            "Secondary Entity": [
+                "internal workflows",
+                "CMS prototype"
+            ]
+        },
+        "Benefit": "we can begin testing against a CMS prototype",
+        "Triggers": [
+            [
+                "researcher",
+                "develop"
+            ]
+        ],
+        "Targets": [
+            [
+                "develop",
+                "user research protocol"
+            ],
+            [
+                "begin testing",
+                "CMS prototype"
+            ]
+        ],
+        "Contains": [
+            [
+                "internal workflows",
+                "user research protocol"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "develop"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "begin",
+                        "testing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "user",
+                        "research",
+                        "protocol"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "internal",
+                        "workflows"
+                    ],
+                    [
+                        "CMS",
+                        "prototype"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As an NSF employee, I want to have high-level strategy recommendations to implement in conjunction with the new CMS.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "implement in conjunction"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "high-level strategy recommendations"
+            ],
+            "Secondary Entity": [
+                "new CMS"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "high-level strategy recommendations"
+            ],
+            [
+                "implement in conjunction",
+                "new CMS"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "NSF",
+                    "employee"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "implement",
+                        "in",
+                        "conjunction"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "PUNCT",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "high",
+                        "-",
+                        "level",
+                        "strategy",
+                        "recommendations"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "CMS"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a content designer, I want to demonstrate the value of user-centered content design to ensure it's an integral part of our recommendations.",
+        "Persona": [
+            "content designer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "demonstrate"
+            ],
+            "Secondary Action": [
+                "ensure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "value"
+            ],
+            "Secondary Entity": [
+                "user-centered content design",
+                "integral part",
+                "recommendations"
+            ]
+        },
+        "Benefit": "to ensure it's an integral part of our recommendations",
+        "Triggers": [
+            [
+                "content designer",
+                "demonstrate"
+            ]
+        ],
+        "Targets": [
+            [
+                "demonstrate",
+                "value"
+            ]
+        ],
+        "Contains": [
+            [
+                "user-centered content design",
+                "value"
+            ],
+            [
+                "recommendations",
+                "integral part"
+            ],
+            [
+                "recommendations",
+                "user-centered content design"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "content",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "demonstrate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "value"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PUNCT",
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "user",
+                        "-",
+                        "centered",
+                        "content",
+                        "design"
+                    ],
+                    [
+                        "integral",
+                        "part"
+                    ],
+                    [
+                        "recommendations"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a VisualDesigner, I want to create a moodboard to aid with visual design concepts for the nsf.gov website, so that we can discuss different design concepts with stakeholders.",
+        "Persona": [
+            "VisualDesigner"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "aid",
+                "discuss"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "moodboard"
+            ],
+            "Secondary Entity": [
+                "visual design concepts",
+                "nsf.gov website",
+                "different design concepts",
+                "stakeholders"
+            ]
+        },
+        "Benefit": "we can discuss different design concepts with stakeholders",
+        "Triggers": [
+            [
+                "VisualDesigner",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "moodboard"
+            ],
+            [
+                "aid",
+                "visual design concepts"
+            ],
+            [
+                "discuss",
+                "different design concepts"
+            ]
+        ],
+        "Contains": [
+            [
+                "nsf.gov website",
+                "visual design concepts"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "VisualDesigner"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "aid"
+                    ],
+                    [
+                        "discuss"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "moodboard"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "visual",
+                        "design",
+                        "concepts"
+                    ],
+                    [
+                        "nsf.gov",
+                        "website"
+                    ],
+                    [
+                        "different",
+                        "design",
+                        "concepts"
+                    ],
+                    [
+                        "stakeholders"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a team member, I want to know what visual design related tasks we might need to plan for this sprint, so that I can assign tasks as necessary.",
+        "Persona": [
+            "team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "plan",
+                "assign",
+                "need"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "visual design related tasks"
+            ],
+            "Secondary Entity": [
+                "sprint",
+                "tasks"
+            ]
+        },
+        "Benefit": "I can assign tasks as necessary",
+        "Triggers": [
+            [
+                "team member",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "plan",
+                "sprint"
+            ],
+            [
+                "assign",
+                "tasks"
+            ],
+            [
+                "know",
+                "visual design related tasks"
+            ],
+            [
+                "need",
+                "visual design related tasks"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "plan"
+                    ],
+                    [
+                        "assign"
+                    ],
+                    [
+                        "need"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "visual",
+                        "design",
+                        "related",
+                        "tasks"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "sprint"
+                    ],
+                    [
+                        "tasks"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As an NSF employee, I want to see how the user recruitment form looks and behaves on a sample page, so that I can understand the impact the recruitment will have on the NSF page.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "understand"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user recruitment form"
+            ],
+            "Secondary Entity": [
+                "sample page",
+                "impact",
+                "recruitment",
+                "NSF page"
+            ]
+        },
+        "Benefit": "I can understand the impact the recruitment will have on the NSF page",
+        "Triggers": [
+            [
+                "NSF employee",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "understand",
+                "impact"
+            ],
+            [
+                "see",
+                " user recruitment form"
+            ]
+        ],
+        "Contains": [
+            [
+                "NSF page",
+                "impact"
+            ],
+            [
+                "sample page",
+                " user recruitment form"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "NSF",
+                    "employee"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "understand"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "user",
+                        "recruitment",
+                        "form"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "sample",
+                        "page"
+                    ],
+                    [
+                        "impact"
+                    ],
+                    [
+                        "recruitment"
+                    ],
+                    [
+                        "NSF",
+                        "page"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As an NSF employee, I want to know where the initial in-person meeting will be, so that I can plan on attending.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "plan on attending"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "initial in-person meeting"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I can plan on attending",
+        "Triggers": [
+            [
+                "NSF employee",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "initial in-person meeting"
+            ],
+            [
+                "plan on attending",
+                "initial in-person meeting"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "NSF",
+                    "employee"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "SCONJ",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "plan",
+                        "on",
+                        "attending"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "ADP",
+                        "PUNCT",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "initial",
+                        "in",
+                        "-",
+                        "person",
+                        "meeting"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a team member, I want to know when meetings are, so that I can plan accordingly.",
+        "Persona": [
+            "team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "plan accordingly"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "meetings"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I can plan accordingly",
+        "Triggers": [
+            [
+                "team member",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "meetings"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "plan",
+                        "accordingly"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "meetings"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    }
+]

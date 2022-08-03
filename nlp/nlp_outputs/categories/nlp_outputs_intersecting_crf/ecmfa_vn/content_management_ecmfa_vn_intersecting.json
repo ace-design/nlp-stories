@@ -1,0 +1,1898 @@
+[
+    {
+        "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Data Package"
+        ],
+        "Action": [
+            "Delete A Data Package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Registry",
+            "Datum"
+        ],
+        "Action": [
+            "Validate The Data",
+            "Publish To The Registry",
+            "Am"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Data Package",
+            "Ui"
+        ],
+        "Action": [
+            "Publish A Data Package In The Ui"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Ui",
+            "Data Package"
+        ],
+        "Action": [
+            "Create A Data Package In The Ui"
+        ]
+    },
+    {
+        "Text": "#G14# As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "Data Package"
+        ],
+        "Action": [
+            "View The Data Package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Datapackage"
+        ],
+        "Action": [
+            "Preview A Datapackage",
+            "Prepared"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "Example Data Packages"
+        ],
+        "Action": [
+            "See Some Example Data Packages"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "Data Package"
+        ],
+        "Action": [
+            "Search On Description Of Data Package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "File",
+            "Data Package"
+        ],
+        "Action": [
+            "Download The Data Package In File"
+        ]
+    },
+    {
+        "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
+        "Persona": [
+            "Web Developer"
+        ],
+        "Entity": [
+            "Datapackage"
+        ],
+        "Action": [
+            "Install Multiple Versions Of The Same Datapackage"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "Datapackage"
+        ],
+        "Action": [
+            "Get A Sense Of The Age Of The Datapackage",
+            "That Downloaded"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Entity": [
+            "Datapackage",
+            "Particular Version"
+        ],
+        "Action": [
+            "View A Datapackage At A Online Particular Version"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to have private data packages, so that I can share just with my team.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Entity": [
+            "Data Packages"
+        ],
+        "Action": [
+            "Have Private Data Packages"
+        ]
+    },
+    {
+        "Text": "#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
+        "Persona": [
+            "Investigator"
+        ],
+        "Entity": [
+            "Acceptance Test Results"
+        ],
+        "Action": [
+            "View The Acceptance Test Results"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "File",
+            "Network Drive"
+        ],
+        "Action": [
+            "Upload Files Having Files To",
+            "Use A Mapped Network Drive"
+        ]
+    },
+    {
+        "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
+        "Persona": [
+            "Release Engineer"
+        ],
+        "Entity": [
+            "Build",
+            "Test",
+            "Result",
+            "Installation",
+            "Manual Input",
+            "Virgin System",
+            "Interaction",
+            "Operating System",
+            "Neurohub"
+        ],
+        "Action": [
+            "Configure Nightly Builds Automatically Perform A Neurohub Installation On A Virgin Operating System",
+            "Report Results",
+            "Configure",
+            "Configure Nightly Builds Automatically Perform A Installation On A Virgin System Requiring Interaction",
+            "Configure Nightly Builds Automatically Perform A Neurohub Installation On A Virgin Operating System Requiring Any Manual Input"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to revert to an older version of an uploaded file.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Upload File"
+        ],
+        "Action": [
+            "Revert To An Older Version Of An Uploaded File"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have a visual way of viewing particular files uploaded over a time period.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Visual Way",
+            "Time Period",
+            "Particular File"
+        ],
+        "Action": [
+            "Have A Visual Way Viewing Particular Files Over A Time Period"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to associate together files involved in a experiment.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Experiment",
+            "File"
+        ],
+        "Action": [
+            "Associate Files In A Experiment"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Time",
+            "Experimental Protocol"
+        ],
+        "Action": [
+            "View"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
+        "Persona": [
+            "Lab Member"
+        ],
+        "Entity": [
+            "Group",
+            "Equipment Booking",
+            "Event"
+        ],
+        "Action": [
+            "View Equipment Booking",
+            "View Events Within The Group"
+        ]
+    },
+    {
+        "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "News Items",
+            "Mailing List"
+        ],
+        "Action": [
+            "Forward Important News Items To An External Mailing List",
+            "Have"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Entity": [
+            "Neurohub",
+            "Student",
+            "Feedback",
+            "Form",
+            "Course"
+        ],
+        "Action": [
+            "Create Feedback Forms Within Neurohub",
+            "Forms Provide With Feedback About The Course That Attended"
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Workflow Execution",
+            "Neurohub Log Book",
+            "Workflow"
+        ],
+        "Action": [
+            "Have",
+            "Recorded In A Neurohub Log Book Executing A Workflow"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Multiple File",
+            "Neurohub File Browser"
+        ],
+        "Action": [
+            "Move Multiple Files",
+            "Have",
+            "Rearrange",
+            "Use The Neurohub File Browser"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Note",
+            "Mechanism",
+            "Paper",
+            "Researcher"
+        ],
+        "Action": [
+            "Provided With A Mechanism Electronically Sharing Papers",
+            "Provided With A Mechanism Note With Other Researchers"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Remote Access",
+            "Working",
+            "Datum",
+            "Site"
+        ],
+        "Action": [
+            "Have Remote Access To Data For Site Off Working"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Meta Data"
+        ],
+        "Action": [
+            "Annotated With Standard Meta Data",
+            "Have"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Standard Datum",
+            "Video",
+            "Behavioural Observation",
+            "Meta Data"
+        ],
+        "Action": [
+            "Attach Standard Data For Video",
+            "Attach Standard Meta Data For Behavioural Observations",
+            "Have",
+            "Attach Standard Data For"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Entry",
+            "Detailed Datum",
+            "Datum",
+            "Meta Data"
+        ],
+        "Action": [
+            "Attach Detailed Data To",
+            "Attach Detailed Data To Entry",
+            "Attach Detailed Meta Data To The Data",
+            "Have",
+            "That Create"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "File",
+            "Meta Data"
+        ],
+        "Action": [
+            "Locate",
+            "Use Meta Data",
+            "Have Those Files Where Located"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Datum",
+            "System",
+            "Share"
+        ],
+        "Action": [
+            "Have",
+            "Keep Data On The System",
+            "Have Only Share Datum",
+            "That Deem"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Ownership",
+            "Multiple File"
+        ],
+        "Action": [
+            "Change The Sharing Of Multiple Files",
+            "Have",
+            "Change Ownership",
+            "Change"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to properly record all metadata, so that I can ensure proper running of the project in case of staff changes.",
+        "Persona": [
+            "Pi"
+        ],
+        "Entity": [
+            "Metadata"
+        ],
+        "Action": [
+            "Record All Metadata"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to plan what kind of data I want to record/store, so that I can ensure it will possible to store it.",
+        "Persona": [
+            "Pi"
+        ],
+        "Entity": [
+            "Datum"
+        ],
+        "Action": [
+            "What Kind Of Data Record",
+            "Plan",
+            "What Kind Of Data Store"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to record information about my DMP, so that an Ethics Committee can review this for compliance with ethical standards.",
+        "Persona": [
+            "Pi"
+        ],
+        "Entity": [
+            "Information",
+            "Dmp"
+        ],
+        "Action": [
+            "Record Information About Dmp"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+        "Persona": [
+            "Data Manager"
+        ],
+        "Entity": [
+            "Kind",
+            "Data Types",
+            "Type"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G22# As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+        "Persona": [
+            ", Staff Member"
+        ],
+        "Entity": [
+            "Data Types",
+            "Kind",
+            "Type"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G22# As a research head, I want to access to the persistent identifiers of datasets provided in the DMP, so that I can check that the DMP has been implemented.",
+        "Persona": [
+            "Research Head"
+        ],
+        "Entity": [
+            "Dataset",
+            "Dmp"
+        ],
+        "Action": [
+            "Access To The Persistent Identifiers Of Datasets In The Dmp"
+        ]
+    },
+    {
+        "Text": "#G22# As a metadata manager, I want to have a short description of project, so that I can be informed about the metadata description.",
+        "Persona": [
+            "Metadata Manager"
+        ],
+        "Entity": [
+            "Project"
+        ],
+        "Action": [
+            "Have A Short Description Of Project"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know the time plan for collecting data, so that I can plan the data management.",
+        "Persona": [
+            "Data Manager"
+        ],
+        "Entity": [
+            "Datum",
+            "Time Plan"
+        ],
+        "Action": [
+            "Know The Time Plan Collecting Data"
+        ]
+    },
+    {
+        "Text": "#G22# As an archivemanager, I want to reuse the information regarding file format, so that I can apply automated checks for the file validation.",
+        "Persona": [
+            "Archivemanager"
+        ],
+        "Entity": [
+            "File Format",
+            "Information"
+        ],
+        "Action": [
+            "Reuse The Information Regarding File Format"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Datum"
+        ],
+        "Action": [
+            "Extract The Description Of The Data"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to link research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Institutional Repository",
+            "Publication",
+            "Dmp Records",
+            "Research Publications",
+            "Cris"
+        ],
+        "Action": [
+            "Link Publications In Cris",
+            "Link Research Publications In The Institutional Repository With Dmp Records"
+        ]
+    },
+    {
+        "Text": "#G22# As a repository operator, I want to know about the kind of data, so that I can evaluate the storage size and system.",
+        "Persona": [
+            "Repository Operator"
+        ],
+        "Entity": [
+            "Datum"
+        ],
+        "Action": [
+            "Know About The Kind Of Data"
+        ]
+    },
+    {
+        "Text": "#G22# As an IT staff member, I want to know with which software or technology the data is produced or used, so that I can determine what kind of technical services and functionalities are required.",
+        "Persona": [
+            ", Staff Member"
+        ],
+        "Entity": [
+            "Datum",
+            "Software",
+            "Technology"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know whether the data can be reproduced efficiently, so that I can determine whether and how the data has to be stored.",
+        "Persona": [
+            "Data Manager"
+        ],
+        "Entity": [
+            "Datum"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.",
+        "Persona": [
+            "Data Manager"
+        ],
+        "Entity": [
+            "Datum",
+            "Security Requirements"
+        ],
+        "Action": [
+            "Know The Security Requirements Of The Data"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to record my intention to share data I have collected under terms of a particular licence, so that other researchers who use the data understand the rights of use.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Particular Licence",
+            "Datum"
+        ],
+        "Action": [
+            "Record",
+            "Share Data",
+            "Collected Under Terms Of A Particular Licence"
+        ]
+    },
+    {
+        "Text": "#G23# As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.",
+        "Persona": [
+            "Application Administrator"
+        ],
+        "Entity": [
+            "User",
+            "Appropriate Permission",
+            "Data Entry"
+        ],
+        "Action": [
+            "Assign Users To An Advanced Data Entry",
+            "Ensure"
+        ]
+    },
+    {
+        "Text": "#G23# As a user, I want to add additional properties for repositories.",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Repository",
+            "Additional Property"
+        ],
+        "Action": [
+            "Add Additional Properties For Repositories"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to add Notes to other record types.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Note",
+            "Record Types"
+        ],
+        "Action": [
+            "Add Notes To Other Record Types"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to assign a Level of description to a Resource or Resource Component and optionally specify another value if the Level is not in a predefined list.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Resource",
+            "Value",
+            "Level",
+            "Description"
+        ],
+        "Action": [
+            "Specify Another Value",
+            "Assign A Level Of Description To Resource Component",
+            "Assign A Level Of Description To A Resource"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to import EAD files that were exported by the Archivists' Toolkit.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Ead Files",
+            "Toolkit",
+            "Archivist"
+        ],
+        "Action": [
+            "Import Ead Files Exported The Archivists' Toolkit"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to create and edit Event records.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Event Records"
+        ],
+        "Action": [
+            "Create Event Records",
+            "Edit Event Records"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to upload an EAD for import from within the frontend application.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Ead",
+            "Import",
+            "Frontend Application"
+        ],
+        "Action": [
+            "Upload An Ead For Import Within The Frontend Application"
+        ]
+    },
+    {
+        "Text": "#G23# As a Developer , I want to develop a custom importer.",
+        "Persona": [
+            "Developer"
+        ],
+        "Entity": [
+            "Custom Importer"
+        ],
+        "Action": [
+            "Develop A Custom Importer"
+        ]
+    },
+    {
+        "Text": "#G23# As a Repository Manager , I want to create, update and delete any records in my repository.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Record",
+            "Repository"
+        ],
+        "Action": [
+            "Create Any Records In Repository",
+            "Update Any Records In Repository",
+            "Delete Any Records In Repository"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to create and edit Agent records.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Agent Records"
+        ],
+        "Action": [
+            "Create Agent Records",
+            "Edit Agent Records"
+        ]
+    },
+    {
+        "Text": "#G23# As an Archivist, I want to associate a Subject record with a Resource description.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Resource Description",
+            "Subject Record"
+        ],
+        "Action": [
+            "Associate A Subject Record With A Resource Description"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Pure, so that I have a single onestop shop for managing my research outputs.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Pure",
+            "Dataset"
+        ],
+        "Action": [
+            "Deposit Datasets Through Pure",
+            "Maintain Datasets Through Pure"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Virtual Research Environments and other workflow tools, so that I can continue to work with tools with which I'm familiar.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Dataset",
+            "Workflow , Tool",
+            "Research Environments"
+        ],
+        "Action": [
+            "Deposit Datasets Through Workflow, Other Tool",
+            "Deposit Datasets Through Virtual Research Environments",
+            "Maintain Datasets Through Virtual Research Environments",
+            "Maintain Datasets Through Workflow, Other Tool"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit the files that I have, so that I don't have to spend a lot of time finding the right version and converting to the right format.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "File"
+        ],
+        "Action": [
+            "Deposit The Files"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to place data under an embargo, so that my right of first use is protected, and I can fulfil my confidentiality responsibilities.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Datum",
+            "Embargo"
+        ],
+        "Action": [
+            "Place Data Under An Embargo"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to allow my collaborators privileged access to datasets, so that we continue to have a productive relationship.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Dataset",
+            "Collaborator",
+            "Access"
+        ],
+        "Action": [
+            "Allow"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to attach subject specific discoverability metadata to records, so that researchers in my discipline can find my data more easily.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Discoverability Metadata"
+        ],
+        "Action": [
+            "Attach Specific, Subject Discoverability Metadata"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to link datasets with the project DMP, so that compliance with DMP can be demonstrated and whole project workflow is linked together.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Dataset",
+            "Project Dmp"
+        ],
+        "Action": [
+            "Link Datasets With The Project Dmp"
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
+        "Persona": [
+            "Depositor"
+        ],
+        "Entity": [
+            "Dataset"
+        ],
+        "Action": [
+            "Manage Multiple Versions Of The Same Dataset"
+        ]
+    },
+    {
+        "Text": "#G24# As a data reuser, I want to access the system in my native language, so that I am not put off reusing University of Bath data by language barriers.",
+        "Persona": [
+            "Datum Reuser"
+        ],
+        "Entity": [
+            "Native Language",
+            "System"
+        ],
+        "Action": [
+            "Access The System In Native Language"
+        ]
+    },
+    {
+        "Text": "#G24# As a Research Information manager, I want to have datasets linked to metadata about projects, so that I can report on projects depositing datasets in relation to funder requirements.",
+        "Persona": [
+            "Research , Information Manager"
+        ],
+        "Entity": [
+            "Project",
+            "Metadata",
+            "Dataset"
+        ],
+        "Action": [
+            "Have Datasets To Metadata About Projects"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all the collections and objects in the DAMS for which I have custodial responsibility.  ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Collection",
+            "Custodial Responsibility",
+            "Object",
+            "Dam"
+        ],
+        "Action": [
+            "For Which Have Custodial Responsibility",
+            "Know The Collections In The Dams",
+            "Know Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to say one collection is related to another collection. ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Collection"
+        ],
+        "Action": [
+            "Related To Another Collection",
+            "Say"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe a collection, including its title, it's inclusive / bulk dates, its language(s), and many other aspects.  ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            ", Aspect",
+            "Inclusive Date",
+            "Collection",
+            "Bulk",
+            "Title"
+        ],
+        "Action": [
+            "Describe A Collection Including Inclusive Date",
+            "Describe A Collection Including Title",
+            "Describe Other, Many Aspect",
+            "Describe A Collection Including Bulk"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate other descriptions of the collection that are outside the DAMS and of probable importance to users.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Collection",
+            "Dam",
+            "Probable Importance",
+            "User"
+        ],
+        "Action": [
+            "Indicate Other Descriptions Of The Collection Are Of Probable Importance To Users",
+            "Indicate Other Descriptions Of The Collection Are Outside The Dams"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate subjects that are related to an object.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Object",
+            "Subject"
+        ],
+        "Action": [
+            "Indicate Subjects Related To An Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to know about other versions of the object or its metadata that might be of use to me. ",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Use",
+            "Metadata",
+            "Object"
+        ],
+        "Action": [
+            "Know About Other Versions Of The Object Be Of Use To",
+            "Know About Other Versions Of Metadata"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to list all the components, in their appropriate order, for an object.",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Appropriate Order",
+            "Object",
+            "Component"
+        ],
+        "Action": [
+            "List The Components In Appropriate Order For An Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe each component as necessary, including title, date(s), language(s), and other facets. ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Title",
+            "Component"
+        ],
+        "Action": [
+            "Necessary Describe Each Component Including Title"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all events occurring to a component over its life cycle.  ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Life Cycle",
+            "Component",
+            "Event"
+        ],
+        "Action": [
+            "Know All Events To A Component Over Life Cycle"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to be able to see and navigate the component hierarchy of an object.  ",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Object"
+        ],
+        "Action": [
+            "See The Component Hierarchy Of An Object",
+            "Navigate The Component Hierarchy Of An Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to indicate to preservation managers the checksum and checksum method for each master file for a given object. ",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Preservation Managers",
+            "Checksum",
+            "Checksum Method",
+            "Object",
+            "Master File",
+            "Manager"
+        ],
+        "Action": [
+            "Indicate To Managers Checksum",
+            "Indicate To Preservation Managers The Checksum Method For Each Master File For A Given Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to provide a title, in all useful forms, for my repository's collections, objects, and object components.  ",
+        "Persona": [
+            "Repository Manager"
+        ],
+        "Entity": [
+            "Title",
+            "Useful Form",
+            "Object",
+            "Collection",
+            "Repository"
+        ],
+        "Action": [
+            "Provide A Title In All Useful Forms For Object",
+            "Provide A Title In All Useful Forms For Repository's Collections",
+            "Provide A Title In All Useful Forms For Object Component"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to present collections, objects, and object components by title.",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Object",
+            "Title",
+            "Collection"
+        ],
+        "Action": [
+            "Present Object Component",
+            "Present Collections By Title",
+            "Present Object"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to scope my searches for collections, objects, or object components to a specific language. ",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Component",
+            "Collection",
+            "Specific Language",
+            "Object",
+            "Search"
+        ],
+        "Action": [
+            "Scope Searches For Collections",
+            "Scope Object",
+            "Object Components To A Specific Language",
+            "Scope"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent.  ",
+        "Persona": [
+            "User"
+        ],
+        "Entity": [
+            "Collection",
+            "Pertinent",
+            "Object"
+        ],
+        "Action": [
+            "See The Geographical Context Of Object",
+            "See The Geographical Context Of Object Component",
+            "See The Geographical Context Of A Collection",
+            "See Where Pertinent"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know all the statutes pertinent to an object or object component.  ",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Pertinent Statute",
+            "Object"
+        ],
+        "Action": [
+            "Know The Pertinent Statutes To An Object",
+            "Know The Pertinent Statutes To Object Component"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know when the application of a statute to an object or object component has been modified, either manually or automatically. ",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Application",
+            "Object",
+            "Statute"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if an object or object component is subject to a library policy that restricts access in any way.",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Object",
+            "Way",
+            "Access",
+            "Library Policy"
+        ],
+        "Action": [
+            "Know An Object Subject To A Library Policy Restricts Access In Any Way",
+            "Know Object Component"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if application of a library policy to an object or object component has been modified, either manually or automatically.  ",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Object",
+            "Policy",
+            "Application",
+            "Library"
+        ],
+        "Action": [
+            "Know"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to track all events scheduled for recording in the DAMS.  ",
+        "Persona": [
+            "Dams Manager"
+        ],
+        "Entity": [
+            "Dam",
+            "Record",
+            "Event"
+        ],
+        "Action": [
+            "Track All Events For Recording In The Dams"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to set a date on which restrictions will be removed from a file, so that that I don't have to update this by hand.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Date",
+            "File",
+            "Restriction"
+        ],
+        "Action": [
+            "Set A Date On Which Restrictions Removed From A File"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to automatically generate technical metadata, so that I know the file size.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Technical Metadata"
+        ],
+        "Action": [
+            "Generate Technical Metadata"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to link electronic versions of researchers' publications to citations, so that I can share them with other researchers.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Publication",
+            "Researcher",
+            "Citation"
+        ],
+        "Action": [
+            "Link Electronic Versions Of Researchers' Publications To Citations"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to automatically assign unique identifiers to material I scan, so that I avoid potential errors.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Unique Identifier",
+            "Material"
+        ],
+        "Action": [
+            "Assign Unique Identifiers To Material",
+            "Scan"
+        ]
+    },
+    {
+        "Text": "#G26# As a donor representative, I want to supply incremental accruals to new and existing collections, so that material can be transferred on an ongoing basis.",
+        "Persona": [
+            "Donor Representative"
+        ],
+        "Entity": [
+            "New Collection",
+            "Incremental Accrual"
+        ],
+        "Action": [
+            "Exist",
+            "Supply Incremental Accruals To",
+            "Supply Incremental Accruals To New Collections"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to manage loan documentation, including preservation photos, forms and correspondence, so that I can find it easily later.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Form",
+            "Preservation Photos",
+            "Documentation",
+            "Correspondence",
+            "Loan"
+        ],
+        "Action": [
+            "Manage Documentation Including Form",
+            "Manage Loan Documentation Including Preservation Photos",
+            "Manage Documentation Including Correspondence"
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to generate structured citation data, so that so I can cite a file in a publication.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Citation Data"
+        ],
+        "Action": [
+            "Generate Structured Citation Data"
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to share a link to a file on social media, so that so I can show other people an interesting thing I found.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Social Medium",
+            "File",
+            "Link"
+        ],
+        "Action": [
+            "Share A Link To A File On Social Media"
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to locate photographs and documents that I can share on social media.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Photograph",
+            "Social Medium",
+            "Document"
+        ],
+        "Action": [
+            "That Share On Social Media",
+            "Locate Photographs",
+            "Locate Document"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to see what a particular user has downloaded, so that I can track use of assets.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Particular User"
+        ],
+        "Action": [
+            "See"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to make as much archival material as possible available for use, so that I can fulfill the RAC's mission.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Archival Material"
+        ],
+        "Action": [
+            "Possible Make As Much Archival Material"
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to see common material across collections, so that so I can prepare a comprehensive analysis.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Common Material",
+            "Collection"
+        ],
+        "Action": [
+            "See Common Material Across Collections"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to search all files by keyword.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Keyword",
+            "File"
+        ],
+        "Action": [
+            "Search All Files By Keyword"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to upload inventories, so that our donor representatives have an easier time requesting their material.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Inventory"
+        ],
+        "Action": [
+            "Upload Inventories"
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to know the date on which something was digitized, so that I know if it's been digitized since I last looked.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Date"
+        ],
+        "Action": [
+            "Know The Date On Which Something Digitized"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to search index cards and other non-public finding aids, so that I can provide better research assistance.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Index Cards",
+            "Finding Aid"
+        ],
+        "Action": [
+            "Search Public, Other Finding Aid",
+            "Search Index Cards"
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to access metadata and visual representations of index cards, so that I can use that information to assist researchers.",
+        "Persona": [
+            "Archivist"
+        ],
+        "Entity": [
+            "Index Cards",
+            "Visual Representation"
+        ],
+        "Action": [
+            "Access Metadata Of Index Cards",
+            "Access Visual Representation"
+        ]
+    },
+    {
+        "Text": "#G26# As an administrator, I want to assign rights to user groups or roles, so that I can control what users can and can't do.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "User Groups",
+            "Right",
+            "Role"
+        ],
+        "Action": [
+            "Assign Rights To Role",
+            "Assign Rights To User Groups"
+        ]
+    },
+    {
+        "Text": "#G26# As an administrator, I want to have researchers reset their own passwords, so that I don't have to send passwords in cleartext.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Researcher",
+            "Password"
+        ],
+        "Action": [
+            "Have"
+        ]
+    },
+    {
+        "Text": "#G26# As an administrator, I want to limit who can see certain metadata fields, so that I can show or hide things from display based on user groups.",
+        "Persona": [
+            "Administrator"
+        ],
+        "Entity": [
+            "Metadata Fields"
+        ],
+        "Action": [
+            "Limit"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to upload data to the repository and associate it with a publication, so that I receive attribution for my data as well as my publications.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Datum",
+            "Repository",
+            "Publication"
+        ],
+        "Action": [
+            "Upload Data To The Repository",
+            "Associate The Repository With A Publication"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage report/dataset name changes so patrons are able to find historic reports that have a different name from current report.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Report",
+            "Dataset Name Change"
+        ],
+        "Action": [
+            "Manage Report",
+            "Manage Dataset Name Change"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to login remotely to the repository using Shibboleth, so that I can get remote access to Cornell campus-only content.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Use , Repository Shibboleth"
+        ],
+        "Action": [
+            "Login To The Using, Repository Shibboleth"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to be able to tell the researchers I'm helping with DMPs that Cornell has a repository system I can use for archiving and sharing results of their research, so that I can easily meet the needs of funder DMP requirements.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Repository System",
+            "Dmp",
+            "Sharing",
+            "Research",
+            "Researcher",
+            "Cornell"
+        ],
+        "Action": [
+            "Tell The Researchers",
+            "Helping With Dmps"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to create a collection for my documents, or my organization's documents, and apply some distinctive branding to that collection, so that I can promote my work, or that of my organization.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Document",
+            "Collection",
+            "Organization",
+            "Distinctive Branding"
+        ],
+        "Action": [
+            "Create A Collection For Documents",
+            "Create A Collection For Organization's Document",
+            "Apply Some Distinctive Branding To That Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to easily find all the items in the repository that I have authored, by searching on my name (author name authority and/or identification issue), because I keeps my publications in the repository up-to-date and points people tithe repository.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Repository",
+            "Item",
+            "Identification",
+            "Issue"
+        ],
+        "Action": [
+            "Find The Items In The Repository Searching On Name Identification",
+            "That Authored",
+            "Find The Items In The Repository Searching On Name Or",
+            "Find The Items In The Repository Searching On Name Issue",
+            "Find The Items In The Repository Searching On Name Author Name Authority",
+            "Find The Items In The Repository Searching On Name"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to discover items in the repository through the library's discovery system and Google, so that I can facilitate my easy use of the content.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Item",
+            "Discovery System",
+            "Library",
+            "Google",
+            "Repository"
+        ],
+        "Action": [
+            "Discover Items In The Repository Through The Library's Discovery System",
+            "Discover Items In The Repository Through Google"
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to receive updates when new works are published in a given collection or by a given author, so that I can discover more of their work.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Entity": [
+            "Update"
+        ],
+        "Action": [
+            "Receive Updates"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage customizable relationship groups in support of patron see also option.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Option",
+            "Patron",
+            "Relationship Groups"
+        ],
+        "Action": [
+            "Manage Customizable Relationship Groups In Support Of Patron Option"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to make digital items held in trusted external system searchable within our system, so that I can provide seamless access to disparate collections.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Digital Item",
+            "Searchable , External , Trusted System",
+            "System"
+        ],
+        "Action": [
+            "Make Digital Items In Searchable, External, Trusted System Within System"
+        ]
+    },
+    {
+        "Text": "#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can find an appropriate advisor, choose which courses to enroll in, and identify work/internship opportunities.",
+        "Persona": [
+            "Student"
+        ],
+        "Entity": [
+            "Research",
+            "Particular Topic",
+            "Cornell"
+        ],
+        "Action": [
+            "Learn"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to upload material to the repository on the author's behalf, so that I can fulfill a service obligation.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Author",
+            "Material",
+            "Behalf",
+            "Repository"
+        ],
+        "Action": [
+            "Upload Material To The Repository On The Author's Behalf"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to upload new version of report/dataset while retaining previous versions for patron use.",
+        "Persona": [
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Report",
+            "Patron Use",
+            "Previous Version",
+            "Dataset"
+        ],
+        "Action": [
+            "Upload New Version Of Report Retaining Previous Versions For Patron Use",
+            "Upload New Version Of Dataset"
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to associate a researcherID or ORCID with a submission, so that there is no ambiguity between my work and someone else with the same name.",
+        "Persona": [
+            "Cornell , Faculty Member"
+        ],
+        "Entity": [
+            "Orcid",
+            "Submission",
+            "Researcherid"
+        ],
+        "Action": [
+            "Associate Orcid",
+            "Associate A Researcherid With A Submission"
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to have customizable metadata fields, so that each project is described in the most accurate way possible.",
+        "Persona": [
+            "Library , Staff Member"
+        ],
+        "Entity": [
+            "Metadata Fields"
+        ],
+        "Action": [
+            "Have Customizable Metadata Fields"
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Educator, I want to have a place to store a variety of documents, presentations and data sets I've created, that doesn't require an extra step in making available on my own County/Region/Project site (i.e. a list or directory of materials there is automatically updated when placed in a central archive/repository).",
+        "Persona": [
+            "Extension Educator"
+        ],
+        "Entity": [
+            "Project Site",
+            "Variety",
+            "Place",
+            "Material",
+            "Extra Step",
+            "Directory",
+            "County",
+            "Region",
+            "Presentation",
+            "Document",
+            "Data Set"
+        ],
+        "Action": [
+            "Have A Place",
+            "Store A Variety Of Data Set",
+            "Store A Variety Of Documents",
+            "Store A Variety Of Presentation",
+            "Created"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to have a personal account with the ability to change passwords to make them more secure or to retrieve forgotten ones.",
+        "Persona": [
+            "Ir",
+            "Db Administrator"
+        ],
+        "Entity": [
+            "Password",
+            "Personal Account"
+        ],
+        "Action": [
+            "Retrieve Forgotten Ones",
+            "Change Passwords",
+            "Make",
+            "Have A Personal Account With"
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to move a collection, so that I can fulfill the collection owner's request.",
+        "Persona": [
+            "Support , Repository , Team Member"
+        ],
+        "Entity": [
+            "Collection"
+        ],
+        "Action": [
+            "Move A Collection"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that the redundant copies are continuously monitored for unwanted changes, and that if/when changes do occur, there is a mechanism by which I can determine the original object and restore it to all copies.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Redundant Copy",
+            "Unwanted Change",
+            "Change",
+            "Original Object",
+            "Copy"
+        ],
+        "Action": [
+            "Assured",
+            "Changes Occur",
+            "By Which Restore The Original Object To All Copies"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that there is a formal plan for the disposition of assets if the IR should cease.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Ir",
+            "Asset"
+        ],
+        "Action": [
+            "The Ir Cease",
+            "Assured"
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to have mechanism to pass ownership/management of the assets to a successor.",
+        "Persona": [
+            "Asset Manager"
+        ],
+        "Entity": [
+            "Asset",
+            "Mechanism",
+            "Successor",
+            "Management"
+        ],
+        "Action": [
+            "Have Mechanism",
+            "Pass Management",
+            "Pass Ownership Of The Assets To A Successor"
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to email system provider to report issues and ask questions.",
+        "Persona": [
+            "Patron"
+        ],
+        "Entity": [
+            "System Provider",
+            "Issue",
+            "Question"
+        ],
+        "Action": [
+            "Report Issues",
+            "Email System Provider",
+            "Ask Questions"
+        ]
+    }
+]

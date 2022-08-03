@@ -1,0 +1,322 @@
+[
+    {
+        "Text": "#G22# As a PI, I want to properly record all metadata, so that I can ensure proper running of the project in case of staff changes.",
+        "Persona": [
+            "PI"
+        ],
+        "Action": [
+            "record"
+        ],
+        "Entity": [
+            "metadata"
+        ],
+        "Triggers": [
+            "PI",
+            "record"
+        ],
+        "Targets": [
+            "record",
+            "metadata"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to plan what kind of data I want to record/store, so that I can ensure it will possible to store it.",
+        "Persona": [
+            "PI"
+        ],
+        "Action": [
+            "plan"
+        ],
+        "Entity": [
+            "kind"
+        ],
+        "Triggers": [
+            "PI",
+            "plan"
+        ],
+        "Targets": [
+            "plan",
+            "kind"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to record information about my DMP, so that an Ethics Committee can review this for compliance with ethical standards.",
+        "Persona": [
+            "PI"
+        ],
+        "Action": [
+            "record"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "PI",
+            "record"
+        ],
+        "Targets": [
+            "record",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "types"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G22# As an IT staff member, I want to know which kind of data types will be produced or collected, so that I can determine what basic support services and functionalities are required.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "types"
+        ],
+        "Triggers": [
+            "member",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G22# As a research head, I want to access to the persistent identifiers of datasets provided in the DMP, so that I can check that the DMP has been implemented.",
+        "Persona": [
+            "head"
+        ],
+        "Action": [
+            "access"
+        ],
+        "Entity": [
+            "identifiers"
+        ],
+        "Triggers": [
+            "head",
+            "access"
+        ],
+        "Targets": [
+            "access",
+            "identifiers"
+        ]
+    },
+    {
+        "Text": "#G22# As a metadata manager, I want to have a short description of project, so that I can be informed about the metadata description.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "description"
+        ],
+        "Triggers": [
+            "manager",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "description"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know the time plan for collecting data, so that I can plan the data management.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "plan"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "plan"
+        ]
+    },
+    {
+        "Text": "#G22# As an archivemanager, I want to reuse the information regarding file format, so that I can apply automated checks for the file validation.",
+        "Persona": [
+            "archivemanager"
+        ],
+        "Action": [
+            "reuse"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "archivemanager",
+            "reuse"
+        ],
+        "Targets": [
+            "reuse",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to extract the description of the data collected, so that I can reuse it for the writing of a data paper.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "extract"
+        ],
+        "Entity": [
+            "description"
+        ],
+        "Triggers": [
+            "researcher",
+            "extract"
+        ],
+        "Targets": [
+            "extract",
+            "description"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to link research publications in the institutional repository or CRIS with DMP records, so that I can generate reports of research output resulting from a project.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "link"
+        ],
+        "Entity": [
+            "publications"
+        ],
+        "Triggers": [
+            "researcher",
+            "link"
+        ],
+        "Targets": [
+            "link",
+            "publications"
+        ]
+    },
+    {
+        "Text": "#G22# As a repository operator, I want to know about the kind of data, so that I can evaluate the storage size and system.",
+        "Persona": [
+            "operator"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "kind"
+        ],
+        "Triggers": [
+            "operator",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "kind"
+        ]
+    },
+    {
+        "Text": "#G22# As an IT staff member, I want to know with which software or technology the data is produced or used, so that I can determine what kind of technical services and functionalities are required.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "which"
+        ],
+        "Triggers": [
+            "member",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "which"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know whether the data can be reproduced efficiently, so that I can determine whether and how the data has to be stored.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G22# As a data manager, I want to know the security requirements of the data, so that I can check whether the data can be kept secure.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "requirements"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "requirements"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to record my intention to share data I have collected under terms of a particular licence, so that other researchers who use the data understand the rights of use.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "record"
+        ],
+        "Entity": [
+            "intention"
+        ],
+        "Triggers": [
+            "researcher",
+            "record"
+        ],
+        "Targets": [
+            "record",
+            "intention"
+        ]
+    }
+]

@@ -1,0 +1,1688 @@
+[
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "explore"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset instance of a type"
+            ],
+            "Secondary Entity": [
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "explore"
+            ]
+        ],
+        "Targets": [
+            [
+                "explore",
+                "dataset instance of a type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "dataset instance of a type"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "explore"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "dataset",
+                        "instance",
+                        "of",
+                        "a",
+                        "type"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "app"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "new version",
+                "app",
+                "older version",
+                "dataset type",
+                "another app",
+                "dataset instances",
+                "app",
+                "dataset type code",
+                "app"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "use",
+                "dataset type code"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "new version"
+            ],
+            [
+                "dataset type",
+                "older version"
+            ],
+            [
+                "app",
+                "dataset type code"
+            ],
+            [
+                "new version",
+                "dataset type"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "deploy"
+                    ],
+                    [
+                        "use"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "version"
+                    ],
+                    [
+                        "app"
+                    ],
+                    [
+                        "older",
+                        "version"
+                    ],
+                    [
+                        "dataset",
+                        "type"
+                    ],
+                    [
+                        "another",
+                        "app"
+                    ],
+                    [
+                        "dataset",
+                        "instances"
+                    ],
+                    [
+                        "app"
+                    ],
+                    [
+                        "dataset",
+                        "type",
+                        "code"
+                    ],
+                    [
+                        "app"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "deploy",
+                "shares",
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "new version",
+                "app",
+                "different version",
+                "dataset type",
+                "another app",
+                "app",
+                "other app",
+                "deployment",
+                "version conflict error",
+                "dataset instance of this type"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "deploy",
+                "new version"
+            ],
+            [
+                "shares",
+                "dataset instance of this type"
+            ]
+        ],
+        "Contains": [
+            [
+                "app",
+                "new version"
+            ],
+            [
+                "dataset type",
+                "different version"
+            ],
+            [
+                "deployment",
+                "version conflict error"
+            ],
+            [
+                "new version",
+                "dataset type"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "deploy"
+                    ],
+                    [
+                        "shares"
+                    ],
+                    [
+                        "fail"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "version"
+                    ],
+                    [
+                        "app"
+                    ],
+                    [
+                        "different",
+                        "version"
+                    ],
+                    [
+                        "dataset",
+                        "type"
+                    ],
+                    [
+                        "another",
+                        "app"
+                    ],
+                    [
+                        "app"
+                    ],
+                    [
+                        "other",
+                        "app"
+                    ],
+                    [
+                        "deployment"
+                    ],
+                    [
+                        "version",
+                        "conflict",
+                        "error"
+                    ],
+                    [
+                        "dataset",
+                        "instance",
+                        "of",
+                        "this",
+                        "type"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            "dataset developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "package",
+                "helps"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "archetype"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "me"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "dataset developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "archetype"
+            ],
+            [
+                "package",
+                "dataset type"
+            ],
+            [
+                "helps",
+                "me"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "dataset",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "package"
+                    ],
+                    [
+                        "helps"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "archetype"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "type"
+                    ],
+                    [
+                        "me"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "only depend",
+                "have"
+            ],
+            "Secondary Action": [
+                "inject"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interface",
+                "system"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "app",
+                "implementation"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "only depend"
+            ],
+            [
+                "app developer",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "only depend",
+                "interface"
+            ],
+            [
+                "have",
+                "system"
+            ],
+            [
+                "inject",
+                "implementation"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset type",
+                "interface"
+            ],
+            [
+                "app",
+                "interface"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "only",
+                        "depend"
+                    ],
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "inject"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "interface"
+                    ],
+                    [
+                        "system"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "type"
+                    ],
+                    [
+                        "app"
+                    ],
+                    [
+                        "implementation"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            "hydrator user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "all dataset instances",
+                "sinks",
+                "sources",
+                "pipelines"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "hydrator user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "all dataset instances",
+                "sinks"
+            ],
+            [
+                "all dataset instances",
+                "sources"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "hydrator",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "all",
+                        "dataset",
+                        "instances"
+                    ],
+                    [
+                        "sinks"
+                    ],
+                    [
+                        "sources"
+                    ],
+                    [
+                        "pipelines"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            "plugin developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "include"
+            ],
+            "Secondary Action": [
+                "using",
+                "created",
+                "created"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "code"
+            ],
+            "Secondary Entity": [
+                "dataset type",
+                "plugin artifact",
+                "pipeline",
+                "plugin",
+                "apps",
+                "dataset instance of that type"
+            ]
+        },
+        "Benefit": "when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps",
+        "Triggers": [
+            [
+                "plugin developer",
+                "include"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "code"
+            ],
+            [
+                "using",
+                "plugin"
+            ],
+            [
+                "created",
+                "pipeline"
+            ],
+            [
+                "created",
+                "dataset instance of that type"
+            ]
+        ],
+        "Contains": [
+            [
+                "plugin artifact",
+                "code"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "plugin",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "include"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "using"
+                    ],
+                    [
+                        "created"
+                    ],
+                    [
+                        "created"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "code"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "type"
+                    ],
+                    [
+                        "plugin",
+                        "artifact"
+                    ],
+                    [
+                        "pipeline"
+                    ],
+                    [
+                        "plugin"
+                    ],
+                    [
+                        "apps"
+                    ],
+                    [
+                        "dataset",
+                        "instance",
+                        "of",
+                        "that",
+                        "type"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "schema"
+            ],
+            "Secondary Entity": [
+                "SQL schema string"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "specify",
+                "schema"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "specify"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "schema"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "SQL",
+                        "schema",
+                        "string"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "configure"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "time-to-live"
+            ],
+            "Secondary Entity": [
+                "all dataset types"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "configure"
+            ]
+        ],
+        "Targets": [
+            [
+                "configure",
+                "time-to-live"
+            ]
+        ],
+        "Contains": [
+            [
+                "all dataset types",
+                "time-to-live"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "configure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PUNCT",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "time",
+                        "-",
+                        "to-",
+                        "live"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "all",
+                        "dataset",
+                        "types"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "update"
+            ],
+            "Secondary Action": [
+                "fail"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "properties"
+            ],
+            "Secondary Entity": [
+                "dataset instance",
+                "new properties",
+                "meaningful error message"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "update"
+            ]
+        ],
+        "Targets": [
+            [
+                "update",
+                "properties"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "properties"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "update"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fail"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "properties"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "instance"
+                    ],
+                    [
+                        "new",
+                        "properties"
+                    ],
+                    [
+                        "meaningful",
+                        "error",
+                        "message"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remove"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "single property"
+            ],
+            "Secondary Entity": [
+                "dataset instance",
+                "all other properties"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "remove",
+                "single property"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset instance",
+                "single property"
+            ],
+            [
+                "dataset instance",
+                "all other properties"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "remove"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "single",
+                        "property"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "instance"
+                    ],
+                    [
+                        "all",
+                        "other",
+                        "properties"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "application redeployment",
+                "datasets"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "application redeployment",
+                "datasets"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fails"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "application",
+                        "redeployment"
+                    ],
+                    [
+                        "datasets"
+                    ]
+                ]
+            }
+        }
+    }
+]
