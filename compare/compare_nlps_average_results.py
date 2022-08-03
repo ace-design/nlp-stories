@@ -1,10 +1,8 @@
 #This script will compare the average of the final results of each nlp tool 
 
 import argparse
-from turtle import color
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 import sys
 
 def main():
@@ -79,9 +77,9 @@ def command():
         if args.load_crf_path != None:
             load_file = open(args.load_crf_path)
             load_file.close()
-            crf_path = "crf\\"
+            crf_path = "benchmark_with_crf\\"
         else:
-            crf_path = "without_crf\\"
+            crf_path = "benchmark_without_crf\\"
 
         if args.data_type == "BKLG":
             data_type_folder = "individual_backlog"
@@ -147,9 +145,9 @@ def format_data(simple_data, ecmfa_vn_data, visual_narrator_data, crf_path):
         for i in range(9):
             row_data.append([simple_average[i], ecmfa_vn_average[i], visual_narrator_average[i], simple_sd[i], ecmfa_vn_sd[i], visual_narrator_sd[i]])
 
-        persona_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple Average", "ecmfa-vn Average","VN Average", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        entity_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple Average", "ecmfa-vn Average","VN Average", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        action_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple Average", "ecmfa-vn Average","VN Average", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple nlp", "ecmfa-vn","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple nlp", "ecmfa-vn","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple nlp", "ecmfa-vn ","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
     else:
         crf_data = extract_data(crf_path)
         crf_average, crf_sd = crf_data
@@ -157,20 +155,20 @@ def format_data(simple_data, ecmfa_vn_data, visual_narrator_data, crf_path):
         for i in range(9):
             row_data.append([simple_average[i], ecmfa_vn_average[i], visual_narrator_average[i], crf_average[i], simple_sd[i], ecmfa_vn_sd[i], visual_narrator_sd[i], crf_sd[i]])
 
-        persona_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple Average", "ecmfa-vn Average", "VN Average", "CRF Average", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        entity_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple Average", "ecmfa-vn Average", "VN Average", "CRF Average", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        action_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple Average", "ecmfa-vn Average", "VN Average", "CRF Average", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple nlp", "ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple nlp", "ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple nlp", "ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ecmfa-vn SD","VN SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
 
-    return persona_data, entity_data, action_data
+    return precision_data, recall_data, f_measure_data
 
 def create_final_bargraph(data, title, saving_path, crf_path):
 
     if crf_path == None:
         yerr = data[["Simple SD","ecmfa-vn SD","VN SD"]].to_numpy().T
-        data[["Simple Average", "ecmfa-vn Average","VN Average"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+        data[["Simple nlp", "ECMFA-VN","Visual Narrator"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     else:
         yerr = data[["Simple SD","ecmfa-vn SD","VN SD", "CRF SD"]].to_numpy().T
-        data[["Simple Average", "ecmfa-vn Average","VN Average", "CRF Average"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200","#3c0000"])
+        data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200","#4c0000"])
     
     plt.title(title,fontsize= 20)
     plt.ylabel("Average Score",fontsize=14)

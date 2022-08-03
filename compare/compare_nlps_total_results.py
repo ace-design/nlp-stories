@@ -82,9 +82,9 @@ def command():
         if args.load_crf_path != None:
             load_file = open(args.load_crf_path)
             load_file.close()
-            crf_path = "crf\\"
+            crf_path = "benchmark_with_crf\\"
         else:
-            crf_path = "without_crf\\"
+            crf_path = "benchmark_without_crf\\"
 
         if args.data_type == "BKLG":
             data_type_folder = "individual_backlog"
@@ -234,7 +234,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     if crf_path == None:
         palette ={"simple": "#f29e8e", "ecmfa-vn": "indianred", "visual narrator": "#9a0200"}
     else:
-        palette ={"simple": "#f29e8e", "ecmfa-vn": "indianred", "visual narrator": "#9a0200", "crf": "#3c0010"}
+        palette ={"simple": "#f29e8e", "ecmfa-vn": "indianred", "visual narrator": "#9a0200", "crf": "#4c0000"}
 
     precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None, alpha = 0.85)
     precision.set(xlabel=None)
@@ -262,7 +262,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     recall_plot.set(ylim=(0, 1.2))
     f_measure_plot.set(ylim=(0, 1.2)) 
     
-    graph.suptitle(title, fontsize = 16)
+    graph.suptitle(title, fontsize = 20)
 
     precision.legend([],[], frameon=False)
     recall.legend([],[], frameon=False)

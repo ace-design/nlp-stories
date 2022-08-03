@@ -10,7 +10,7 @@ import sys
 
 
 def main():
-    primary_path, all_path, dataset_name_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path = command()
+    primary_path, all_path, dataset_name_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type = command()
     primary_data = extract_data(primary_path, number_dataset)
     all_data = extract_data(all_path, number_dataset)
 
@@ -43,8 +43,8 @@ def main():
 
     output_terminal(primary_average, primary_standard_deviation, all_average, all_standard_deviation)
 
-    save_results(primary_average, primary_standard_deviation, primary_save_path + "\\primary_results.csv")
-    save_results(all_average, all_standard_deviation, all_save_path + "\\all_results.csv")
+    save_results(primary_average, primary_standard_deviation, comparison_type, nlp_type, primary_save_path + "\\primary_results.csv")
+    save_results(all_average, all_standard_deviation, comparison_type, nlp_type, all_save_path + "\\all_results.csv")
 
     primary_csv_copy_saving_path = csv_save_folder_path + "\\primary_csv_results\\" + comparison_type.lower().replace(" ", "_") + "_dataset_results.csv"
     all_csv_copy_saving_path = csv_save_folder_path + "\\all_csv_results\\" + comparison_type.lower().replace(" ", "_") + "_dataset_results.csv"
@@ -144,7 +144,7 @@ def command():
             data = file.readlines()
             number_dataset = len(data)
 
-        return args.load_primary_path, args.load_all_path, dataset_names_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path
+        return args.load_primary_path, args.load_all_path, dataset_names_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type
 def extract_data (path, number_dataset):
     '''
     extract the data from the csv file 
@@ -306,13 +306,15 @@ def output_terminal(primary_average, primary_standard_deviation, all_average, al
         print("Action F-Measure", data[i][8])
         print("_______________________________________________________\n")
     
-def save_results(average, standard_deviation, saving_path):
+def save_results(average, standard_deviation, comparison_type, nlp_type, saving_path):
     '''
     save the results of the average and standard deviation to a csv file 
 
     Parameters:
     average (list): the average of each category in the data
     standard_deviation (list): the standard deviation of each category in the data 
+    comparison_type (str): type of comparison mode
+    nlp_type (str): name of the nlp
     saving_path (str): the path of the file to save results
     '''
 
@@ -321,11 +323,18 @@ def save_results(average, standard_deviation, saving_path):
 
     average.insert(0, "Average")
     standard_deviation.insert(0, "Standard Deviation")
+    comparison_list = []
+    nlp_list = []
+    comparison_list.append("Comparison Mode")
+    nlp_list.append("nlp")
+    for i in range(9):
+        comparison_list.append(comparison_type)
+        nlp_list.append(nlp_type)
 
     with open (saving_path, "a", newline = "") as file:
         writer = csv.writer(file)
         for i in range (10):
-            row = label[i], average[i], standard_deviation[i]
+            row = label[i], average[i], standard_deviation[i], comparison_list[i], nlp_list[i]
             writer.writerow(row)
 
 def copy_and_clear(clear_path, saving_path):
