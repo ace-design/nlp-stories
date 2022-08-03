@@ -142,7 +142,12 @@ def randomize_stories(stories, annotated_stories, intersecting_stories):
     testing_stories = []
     testing_annotated = []
 
-    num_test = int(len(training_stories) * 0.2)
+    if len(intersecting_stories) < (len(training_stories) * 0.2):
+        max_random = len(intersecting_stories)
+    else:
+        max_random = len(training_stories) * 0.2
+
+    num_test = int(max_random)
 
     for i in range(num_test):
         length = len(training_stories)
@@ -367,8 +372,8 @@ def save_results(final_results_training, final_results_testing, save_name):
     save_name (str): name of the file to save
     '''
 
-    training_saving_path = "inputs\\crf_input\\training_input\\" + save_name + ".json"
-    testing_saving_path = "inputs\\crf_input\\testing_input\\" + save_name + ".json"
+    training_saving_path = "inputs\\individual_backlog\\crf_input\\training_input\\" + save_name + ".json"
+    testing_saving_path = "inputs\\individual_backlog\\crf_input\\testing_input\\" + save_name + ".json"
 
     with open(training_saving_path,"w", encoding="utf-8") as file:
         json.dump(final_results_training, file, indent = 4)

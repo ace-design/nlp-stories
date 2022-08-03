@@ -1345,7 +1345,7 @@
         ]
     },
     {
-        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.",
+        "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using the web interface.",
         "Word Data": [
             [
                 "#",
@@ -1463,22 +1463,242 @@
                 "S-ACT"
             ],
             [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "web",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "interface",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to attach currently non-attached files to a log book page.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
                 "a",
                 "DET",
                 "O"
             ],
             [
-                "mapped",
-                "VERB",
-                "S-ENT"
+                "researcher",
+                "NOUN",
+                "PER"
             ],
             [
-                "network",
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "attach",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "currently",
+                "ADV",
+                "P-ENT"
+            ],
+            [
+                "non-attached",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "files",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "log",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "drive",
+                "book",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "page",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to receive an alert of any unattached files that are in my workspace.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "researcher",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "receive",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "alert",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "any",
+                "DET",
+                "S-ENT"
+            ],
+            [
+                "unattached",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "files",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "that",
+                "PRON",
+                "O"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "workspace",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1740,7 +1960,7 @@
         ]
     },
     {
-        "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
+        "Text": "#G18# As a researcher, I want to create a log book page.",
         "Word Data": [
             [
                 "#",
@@ -1768,12 +1988,7 @@
                 "O"
             ],
             [
-                "release",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "engineer",
+                "researcher",
                 "NOUN",
                 "PER"
             ],
@@ -1798,34 +2013,9 @@
                 "O"
             ],
             [
-                "configure",
+                "create",
                 "VERB",
                 "P-ACT"
-            ],
-            [
-                "nightly",
-                "ADV",
-                "P-ENT"
-            ],
-            [
-                "builds",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "automatically",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "perform",
-                "VERB",
-                "S-ACT"
             ],
             [
                 "a",
@@ -1833,14 +2023,109 @@
                 "O"
             ],
             [
-                "Neurohub",
+                "log",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "book",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "page",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a supervisor, I want to view what my researchers were doing on a given date or period of time.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
                 "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "supervisor",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "view",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "what",
+                "PRON",
+                "P-ENT"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "researchers",
+                "NOUN",
                 "S-ENT"
             ],
             [
-                "installation",
-                "NOUN",
-                "S-ENT"
+                "were",
+                "AUX",
+                "O"
+            ],
+            [
+                "doing",
+                "VERB",
+                "O"
             ],
             [
                 "on",
@@ -1853,94 +2138,34 @@
                 "O"
             ],
             [
-                "virgin",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "operating",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "system",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "execute",
+                "given",
                 "VERB",
-                "S-ACT"
+                "S-ENT"
             ],
             [
-                "tests",
+                "date",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "and",
+                "or",
                 "CCONJ",
                 "O"
             ],
             [
-                "report",
-                "VERB",
-                "S-ACT"
+                "period",
+                "NOUN",
+                "O"
             ],
             [
-                "back",
+                "of",
                 "ADP",
                 "O"
             ],
             [
-                "results",
+                "time",
                 "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
                 "O"
-            ],
-            [
-                "without",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "requiring",
-                "VERB",
-                "O"
-            ],
-            [
-                "any",
-                "DET",
-                "O"
-            ],
-            [
-                "manual",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "input",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "/",
-                "SYM",
-                "O"
-            ],
-            [
-                "interaction",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -2380,6 +2605,126 @@
         ]
     },
     {
+        "Text": "#G18# As a user, I want to use the tags that I use are part of a controlled vocabulary.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "use",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "tags",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "that",
+                "PRON",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "use",
+                "VERB",
+                "O"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "part",
+                "NOUN",
+                "O"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "controlled",
+                "VERB",
+                "S-ENT"
+            ],
+            [
+                "vocabulary",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
         "Text": "#G18# As a user, I want to make uploaded data files to be non-modifiable.",
         "Word Data": [
             [
@@ -2466,6 +2811,91 @@
                 "non-modifiable",
                 "ADJ",
                 "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to make predicated links between files.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "make",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "predicated",
+                "VERB",
+                "P-ENT"
+            ],
+            [
+                "links",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "between",
+                "ADP",
+                "O"
+            ],
+            [
+                "files",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 ".",
@@ -2676,206 +3106,6 @@
                 "restorable",
                 "ADJ",
                 "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to revert to an older version of an uploaded file.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "NOUN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "revert",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "to",
-                "ADP",
-                "P-ACT"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "older",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "version",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "uploaded",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "file",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to associate together files involved in a experiment.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "NOUN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "associate",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "together",
-                "ADP",
-                "P-ACT"
-            ],
-            [
-                "files",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "involved",
-                "VERB",
-                "O"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "experiment",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -3106,6 +3336,116 @@
                 "created",
                 "VERB",
                 "S-ACT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As lab administrator, I want to have increased access to the system to support regular users.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "lab",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "administrator",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "have",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "increased",
+                "VERB",
+                "P-ENT"
+            ],
+            [
+                "access",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "system",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "support",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "regular",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "users",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 ".",
@@ -3660,7 +4000,7 @@
         ]
     },
     {
-        "Text": "#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+        "Text": "#G18# As a user, I want to view how an experimental protocol has evolved over time.",
         "Word Data": [
             [
                 "#",
@@ -3713,19 +4053,14 @@
                 "O"
             ],
             [
-                "modify",
+                "view",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "branch",
-                "VERB",
-                "P-ACT"
+                "how",
+                "SCONJ",
+                "P-ENT"
             ],
             [
                 "an",
@@ -3735,37 +4070,32 @@
             [
                 "experimental",
                 "ADJ",
-                "P-ENT"
+                "S-ENT"
             ],
             [
                 "protocol",
                 "NOUN",
-                "P-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "whilst",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "retaining",
-                "VERB",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "original",
-                "NOUN",
                 "S-ENT"
+            ],
+            [
+                "has",
+                "AUX",
+                "O"
+            ],
+            [
+                "evolved",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "over",
+                "ADP",
+                "O"
+            ],
+            [
+                "time",
+                "NOUN",
+                "O"
             ],
             [
                 ".",
@@ -3869,6 +4199,121 @@
             ],
             [
                 "stag",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a user, I want to prove definitively that I created a page on a certain date.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "prove",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "definitively",
+                "ADV",
+                "P-ACT"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "created",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "page",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "on",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "certain",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "date",
                 "NOUN",
                 "S-ENT"
             ],
@@ -4780,141 +5225,6 @@
         ]
     },
     {
-        "Text": "#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "draw",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "tables",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "using",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "HTML",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "tags",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "content",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "log",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "book",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "page",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G18# As a lab member, I want to view events and equipment bookings within the group.",
         "Word Data": [
             [
@@ -5170,131 +5480,6 @@
             [
                 "James",
                 "PROPN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "system",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "administrator",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "migrate",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "from",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "older",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "version",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "NeuroHub",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "current",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "version",
-                "NOUN",
                 "S-ENT"
             ],
             [
@@ -5580,7 +5765,7 @@
         ]
     },
     {
-        "Text": "#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
+        "Text": "#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
         "Word Data": [
             [
                 "#",
@@ -5608,7 +5793,7 @@
                 "O"
             ],
             [
-                "user",
+                "supervisor",
                 "NOUN",
                 "PER"
             ],
@@ -5633,33 +5818,23 @@
                 "O"
             ],
             [
-                "have",
+                "create",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "spreadsheet",
+                "feedback",
                 "NOUN",
                 "P-ENT"
             ],
             [
-                "hosted",
-                "VERB",
-                "O"
+                "forms",
+                "NOUN",
+                "P-ENT"
             ],
             [
                 "within",
                 "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
                 "O"
             ],
             [
@@ -5668,23 +5843,8 @@
                 "S-ENT"
             ],
             [
-                "Web",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "page",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
                 ",",
                 "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
                 "O"
             ],
             [
@@ -5693,9 +5853,14 @@
                 "O"
             ],
             [
-                "I",
+                "my",
                 "PRON",
                 "O"
+            ],
+            [
+                "students",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 "can",
@@ -5703,9 +5868,14 @@
                 "O"
             ],
             [
-                "edit",
+                "fill",
                 "VERB",
                 "S-ACT"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
             ],
             [
                 "and",
@@ -5713,18 +5883,38 @@
                 "O"
             ],
             [
-                "calculate",
+                "submit",
                 "VERB",
                 "S-ACT"
             ],
             [
-                "costs",
-                "NOUN",
-                "S-ENT"
+                ",",
+                "PUNCT",
+                "O"
             ],
             [
-                "collaboratively",
-                "ADV",
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "order",
+                "NOUN",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "provide",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "me",
+                "PRON",
                 "O"
             ],
             [
@@ -5733,22 +5923,12 @@
                 "O"
             ],
             [
-                "others",
+                "feedback",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "while",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "working",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "on",
+                "about",
                 "ADP",
                 "O"
             ],
@@ -5758,9 +5938,24 @@
                 "O"
             ],
             [
-                "proposal",
+                "course",
                 "NOUN",
                 "S-ENT"
+            ],
+            [
+                "that",
+                "PRON",
+                "O"
+            ],
+            [
+                "they",
+                "PRON",
+                "O"
+            ],
+            [
+                "attended",
+                "VERB",
+                "O"
             ],
             [
                 ".",
@@ -5911,136 +6106,6 @@
                 "time",
                 "NOUN",
                 "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "either",
-                "CCONJ",
-                "P-ACT"
-            ],
-            [
-                "keep",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "logbook",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "entry",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "private",
-                "ADJ",
-                "O"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "share",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "it",
-                "PRON",
-                "O"
-            ],
-            [
-                "with",
-                "ADP",
-                "O"
-            ],
-            [
-                "individuals",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "rather",
-                "ADV",
-                "O"
-            ],
-            [
-                "than",
-                "ADP",
-                "O"
-            ],
-            [
-                "groups",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -6680,121 +6745,6 @@
         ]
     },
     {
-        "Text": "#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "researcher",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "ability",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "insert",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "Greek",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "symbols",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "into",
-                "ADP",
-                "O"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "logbook",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "entries",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G18# As a user, I want to have the ability to move multiple files around and rearrange them using the Neurohub file browser while processing data.",
         "Word Data": [
             [
@@ -7121,176 +7071,6 @@
                 "added",
                 "VERB",
                 "S-ACT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "researcher",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "electronic",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "support",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "for",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "keeping",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "track",
-                "NOUN",
-                "S-ACT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "which",
-                "DET",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "sets",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "were",
-                "AUX",
-                "O"
-            ],
-            [
-                "used",
-                "VERB",
-                "O"
-            ],
-            [
-                "/",
-                "SYM",
-                "O"
-            ],
-            [
-                "output",
-                "NOUN",
-                "O"
-            ],
-            [
-                "/",
-                "SYM",
-                "O"
-            ],
-            [
-                "modified",
-                "VERB",
-                "O"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "particular",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "experiment",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -7646,196 +7426,6 @@
                 "time",
                 "NOUN",
                 "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "researcher",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "timeline",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "display",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "multiple",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "files",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "their",
-                "PRON",
-                "O"
-            ],
-            [
-                "associated",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "images",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "compare",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "taken",
-                "VERB",
-                "O"
-            ],
-            [
-                "from",
-                "ADP",
-                "O"
-            ],
-            [
-                "experiments",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "on",
-                "ADP",
-                "O"
-            ],
-            [
-                "particular",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "dates",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -8605,176 +8195,6 @@
         ]
     },
     {
-        "Text": "#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "researcher",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "physiology",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "images",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "annotated",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "with",
-                "ADP",
-                "O"
-            ],
-            [
-                "standard",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "meta",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "later",
-                "ADV",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "searched",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "understood",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G18# As a researcher, I want to have the ability to attach standard meta data for behavioural observations (and video), so that my data can later be searched for and understood.",
         "Word Data": [
             [
@@ -8970,7 +8390,7 @@
         ]
     },
     {
-        "Text": "#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
+        "Text": "#G18# As a researcher,  I want to have the ability to attach standard meta data for drug responses, so that my data can later be searched for and understood.",
         "Word Data": [
             [
                 "#",
@@ -9028,27 +8448,12 @@
                 "P-ACT"
             ],
             [
-                "at",
-                "ADP",
-                "O"
-            ],
-            [
-                "least",
-                "ADJ",
-                "O"
-            ],
-            [
-                "some",
+                "the",
                 "DET",
-                "P-ENT"
+                "O"
             ],
             [
-                "meta",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "data",
+                "ability",
                 "NOUN",
                 "P-ENT"
             ],
@@ -9058,28 +8463,18 @@
                 "O"
             ],
             [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "automatically",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "inserted",
+                "attach",
                 "VERB",
                 "S-ACT"
             ],
             [
-                "when",
-                "SCONJ",
-                "O"
+                "standard",
+                "ADJ",
+                "S-ENT"
             ],
             [
-                "new",
-                "ADJ",
+                "meta",
+                "NOUN",
                 "S-ENT"
             ],
             [
@@ -9088,19 +8483,144 @@
                 "S-ENT"
             ],
             [
-                "is",
+                "for",
+                "ADP",
+                "O"
+            ],
+            [
+                "drug",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "responses",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "so",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "can",
                 "AUX",
                 "O"
             ],
             [
-                "added",
+                "later",
+                "ADV",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "searched",
                 "VERB",
                 "S-ACT"
             ],
             [
-                "to",
+                "for",
                 "ADP",
                 "O"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "understood",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the ability to search for images of cells using standard meta data.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "researcher",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "have",
+                "VERB",
+                "P-ACT"
             ],
             [
                 "the",
@@ -9108,7 +8628,57 @@
                 "O"
             ],
             [
-                "system",
+                "ability",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "search",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "for",
+                "ADP",
+                "O"
+            ],
+            [
+                "images",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "cells",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "using",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "standard",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "meta",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "data",
                 "NOUN",
                 "S-ENT"
             ],
@@ -9725,7 +9295,7 @@
         ]
     },
     {
-        "Text": "#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+        "Text": "#G18# As a researcher, I want to have the ability to locate experiment files using meta data, regardless of where those files are located.",
         "Word Data": [
             [
                 "#",
@@ -9783,14 +9353,229 @@
                 "P-ACT"
             ],
             [
-                "any",
+                "the",
                 "DET",
+                "O"
+            ],
+            [
+                "ability",
+                "NOUN",
                 "P-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "locate",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "experiment",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "files",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "using",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "meta",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 "data",
                 "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "regardless",
+                "ADV",
+                "O"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "where",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "those",
+                "DET",
+                "O"
+            ],
+            [
+                "files",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "located",
+                "VERB",
+                "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a user,  I want to have the ability to keep my data private on the system, and only share data that I deem should be shared.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "have",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "ability",
+                "NOUN",
                 "P-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "keep",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "private",
+                "ADJ",
+                "O"
+            ],
+            [
+                "on",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "system",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "only",
+                "ADV",
+                "S-ACT"
+            ],
+            [
+                "share",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 "that",
@@ -9803,33 +9588,13 @@
                 "O"
             ],
             [
-                "have",
-                "AUX",
-                "O"
-            ],
-            [
-                "written",
+                "deem",
                 "VERB",
                 "O"
             ],
             [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "VRE",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "PART",
+                "should",
+                "AUX",
                 "O"
             ],
             [
@@ -9838,118 +9603,8 @@
                 "O"
             ],
             [
-                "protected",
+                "shared",
                 "VERB",
-                "S-ACT"
-            ],
-            [
-                "from",
-                "ADP",
-                "O"
-            ],
-            [
-                "modification",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "deletion",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "original",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "can",
-                "AUX",
-                "O"
-            ],
-            [
-                "always",
-                "ADV",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "traced",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "back",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "experiment",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "point",
-                "NOUN",
-                "O"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "time",
-                "NOUN",
                 "O"
             ],
             [
@@ -10356,256 +10011,6 @@
                 "effort",
                 "NOUN",
                 "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G18",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "researcher",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "associate",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "meta",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "group",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "whole",
-                "NOUN",
-                "O"
-            ],
-            [
-                "at",
-                "ADP",
-                "O"
-            ],
-            [
-                "some",
-                "DET",
-                "O"
-            ],
-            [
-                "point",
-                "NOUN",
-                "O"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "time",
-                "NOUN",
-                "O"
-            ],
-            [
-                "after",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "bulk",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "upload",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "has",
-                "AUX",
-                "O"
-            ],
-            [
-                "completed",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "so",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "have",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "period",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "S-ENT"
-            ],
-            [
-                "time",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "reflect",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "on",
-                "ADP",
-                "O"
-            ],
-            [
-                "suitable",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "values",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "meta",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -11326,6 +10731,126 @@
                 ".",
                 "PUNCT",
                 "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to secure remote access to the Neurohub node when working away from the laboratory",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G18",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "researcher",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "secure",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "remote",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "access",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "Neurohub",
+                "PROPN",
+                "S-ENT"
+            ],
+            [
+                "node",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "when",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "working",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "away",
+                "ADV",
+                "S-ACT"
+            ],
+            [
+                "from",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "laboratory",
+                "NOUN",
+                "S-ENT"
             ]
         ]
     },

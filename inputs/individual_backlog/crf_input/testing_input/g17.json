@@ -1,6 +1,6 @@
 [
     {
-        "Text": "#G17# As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.",
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
         "Word Data": [
             [
                 "#",
@@ -28,9 +28,329 @@
                 "O"
             ],
             [
-                "hydrator",
+                "user",
                 "NOUN",
                 "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "update",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "properties",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "instance",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "expect",
+                "VERB",
+                "O"
+            ],
+            [
+                "this",
+                "PRON",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "fail",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "if",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "new",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "properties",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "not",
+                "PART",
+                "O"
+            ],
+            [
+                "compatible",
+                "ADJ",
+                "O"
+            ],
+            [
+                "with",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "meaningful",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "error",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "message",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G17",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "developer",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "explore",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "instance",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "P-ENT"
+            ],
+            [
+                "a",
+                "DET",
+                "P-ENT"
+            ],
+            [
+                "type",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "that",
+                "PRON",
+                "O"
+            ],
+            [
+                "was",
+                "AUX",
+                "O"
+            ],
+            [
+                "deployed",
+                "VERB",
+                "O"
+            ],
+            [
+                "as",
+                "ADP",
+                "O"
+            ],
+            [
+                "part",
+                "NOUN",
+                "O"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G17",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
             ],
             [
                 "user",
@@ -63,207 +383,32 @@
                 "P-ACT"
             ],
             [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "explicit",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "version",
+                "schema",
                 "NOUN",
                 "P-ENT"
             ],
             [
-                "of",
+                "as",
                 "ADP",
                 "O"
             ],
             [
-                "the",
+                "a",
                 "DET",
                 "O"
             ],
             [
-                "dataset",
+                "SQL",
+                "PROPN",
+                "S-ENT"
+            ],
+            [
+                "schema",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "types",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "dataset",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "instances",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "created",
-                "VERB",
-                "O"
-            ],
-            [
-                "by",
-                "ADP",
-                "O"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "pipeline",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "expect",
-                "VERB",
-                "O"
-            ],
-            [
-                "pipeline",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "creation",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "fail",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "if",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "results",
-                "VERB",
-                "O"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "incompatible",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "upgrade",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "existing",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "dataset",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "instance",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "is",
-                "AUX",
-                "O"
-            ],
-            [
-                "shared",
-                "VERB",
-                "O"
-            ],
-            [
-                "with",
-                "ADP",
-                "O"
-            ],
-            [
-                "other",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "apps",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "pipelines",
+                "string",
                 "NOUN",
                 "S-ENT"
             ],
@@ -275,7 +420,7 @@
         ]
     },
     {
-        "Text": "#G17# As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.",
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
         "Word Data": [
             [
                 "#",
@@ -298,12 +443,12 @@
                 "O"
             ],
             [
-                "a",
+                "an",
                 "DET",
                 "O"
             ],
             [
-                "pipeline",
+                "app",
                 "NOUN",
                 "PER"
             ],
@@ -333,9 +478,164 @@
                 "O"
             ],
             [
-                "upgrade",
+                "ensure",
                 "VERB",
                 "P-ACT"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "application",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "redeployment",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "fails",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "if",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "any",
+                "DET",
+                "O"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "its",
+                "PRON",
+                "O"
+            ],
+            [
+                "datasets",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "cannot",
+                "AUX",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "reconfigured",
+                "VERB",
+                "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G17",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "developer",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "only",
+                "ADV",
+                "P-ACT"
+            ],
+            [
+                "depend",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "on",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "interface",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
             ],
             [
                 "a",
@@ -345,37 +645,37 @@
             [
                 "dataset",
                 "NOUN",
-                "P-ENT"
-            ],
-            [
-                "instance",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "newer",
-                "ADJ",
                 "S-ENT"
             ],
             [
-                "version",
+                "type",
                 "NOUN",
                 "S-ENT"
             ],
             [
-                "of",
+                "in",
                 "ADP",
                 "O"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "have",
+                "VERB",
+                "P-ACT"
             ],
             [
                 "the",
@@ -383,34 +683,34 @@
                 "O"
             ],
             [
-                "code",
+                "system",
                 "NOUN",
-                "S-ENT"
+                "P-ENT"
             ],
             [
-                "after",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "pipeline",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "was",
-                "AUX",
-                "O"
-            ],
-            [
-                "created",
+                "inject",
                 "VERB",
                 "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "implementation",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "at",
+                "ADP",
+                "O"
+            ],
+            [
+                "runtime",
+                "NOUN",
+                "O"
             ],
             [
                 ".",
@@ -540,7 +840,7 @@
         ]
     },
     {
-        "Text": "#G17# As a user, I want to specify the explore schema separately.",
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties.",
         "Word Data": [
             [
                 "#",
@@ -593,59 +893,9 @@
                 "O"
             ],
             [
-                "specify",
+                "remove",
                 "VERB",
                 "P-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "explore",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "schema",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "separately",
-                "ADV",
-                "O"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G17# As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G17",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
             ],
             [
                 "a",
@@ -653,67 +903,12 @@
                 "O"
             ],
             [
-                "data",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "scientist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "be",
-                "AUX",
-                "O"
-            ],
-            [
-                "able",
+                "single",
                 "ADJ",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "create",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "dataset",
-                "NOUN",
                 "P-ENT"
             ],
             [
-                "instance",
+                "property",
                 "NOUN",
                 "P-ENT"
             ],
@@ -723,14 +918,9 @@
                 "O"
             ],
             [
-                "an",
+                "a",
                 "DET",
                 "O"
-            ],
-            [
-                "existing",
-                "VERB",
-                "S-ENT"
             ],
             [
                 "dataset",
@@ -738,213 +928,18 @@
                 "S-ENT"
             ],
             [
-                "type",
+                "instance",
                 "NOUN",
                 "S-ENT"
             ],
             [
                 "without",
-                "ADP",
-                "O"
-            ],
-            [
-                "writing",
-                "NOUN",
-                "O"
-            ],
-            [
-                "code",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G17",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "developer",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "deploy",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "new",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "version",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "dataset",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "type",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
                 "SCONJ",
                 "O"
             ],
             [
-                "deploying",
+                "knowing",
                 "VERB",
-                "S-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "new",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "version",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "includes",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "it",
-                "PRON",
-                "O"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "expect",
-                "VERB",
-                "O"
-            ],
-            [
-                "that",
-                "SCONJ",
                 "O"
             ],
             [
@@ -953,97 +948,12 @@
                 "S-ENT"
             ],
             [
-                "dataset",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "instances",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "S-ENT"
-            ],
-            [
-                "that",
-                "DET",
-                "S-ENT"
-            ],
-            [
-                "type",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "were",
-                "AUX",
-                "O"
-            ],
-            [
-                "created",
-                "VERB",
-                "O"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "deployment",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "start",
-                "NOUN",
-                "S-ACT"
-            ],
-            [
-                "using",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "new",
+                "other",
                 "ADJ",
                 "S-ENT"
             ],
             [
-                "code",
+                "properties",
                 "NOUN",
                 "S-ENT"
             ],
@@ -1310,451 +1220,6 @@
         ]
     },
     {
-        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G17",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "developer",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "explore",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "dataset",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "instance",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "P-ENT"
-            ],
-            [
-                "a",
-                "DET",
-                "P-ENT"
-            ],
-            [
-                "type",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "was",
-                "AUX",
-                "O"
-            ],
-            [
-                "deployed",
-                "VERB",
-                "O"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G17# As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G17",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "plugin",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "developer",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "use",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "custom",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "dataset",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "type",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "was",
-                "AUX",
-                "O"
-            ],
-            [
-                "deployed",
-                "VERB",
-                "O"
-            ],
-            [
-                "independently",
-                "ADV",
-                "O"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "as",
-                "ADP",
-                "O"
-            ],
-            [
-                "part",
-                "NOUN",
-                "O"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "app",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "inside",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "plugin",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G17",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "user",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "ensure",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "that",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "update",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "explore",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "never",
-                "ADV",
-                "S-ACT"
-            ],
-            [
-                "leads",
-                "VERB",
-                "S-ACT"
-            ],
-            [
-                "to",
-                "ADP",
-                "S-ACT"
-            ],
-            [
-                "silent",
-                "ADJ",
-                "S-ACT"
-            ],
-            [
-                "loss",
-                "NOUN",
-                "S-ACT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "data",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "available",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "explore",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
         "Word Data": [
             [
@@ -1885,7 +1350,7 @@
         ]
     },
     {
-        "Text": "#G17# As a dataset developer, I want to implement custom administrative operations such as \"compaction\" or \"rebalance\" that are no common to all dataset types.",
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error.",
         "Word Data": [
             [
                 "#",
@@ -1908,12 +1373,12 @@
                 "O"
             ],
             [
-                "a",
+                "an",
                 "DET",
                 "O"
             ],
             [
-                "dataset",
+                "app",
                 "NOUN",
                 "PER"
             ],
@@ -1943,68 +1408,58 @@
                 "O"
             ],
             [
-                "implement",
+                "ensure",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "custom",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "administrative",
-                "ADJ",
-                "P-ENT"
-            ],
-            [
-                "operations",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "such",
-                "ADJ",
+                "that",
+                "SCONJ",
                 "O"
             ],
             [
-                "as",
+                "when",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "deploy",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "new",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "version",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
                 "ADP",
                 "O"
             ],
             [
-                "\"",
-                "PUNCT",
-                "S-ENT"
-            ],
-            [
-                "compaction",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "\"",
-                "PUNCT",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
+                "an",
+                "DET",
                 "O"
             ],
             [
-                "\"",
-                "PUNCT",
-                "S-ENT"
-            ],
-            [
-                "rebalance",
+                "app",
                 "NOUN",
-                "S-ENT"
-            ],
-            [
-                "\"",
-                "PUNCT",
                 "S-ENT"
             ],
             [
@@ -2013,23 +1468,253 @@
                 "O"
             ],
             [
-                "are",
-                "AUX",
+                "includes",
+                "VERB",
                 "O"
             ],
             [
-                "no",
+                "a",
                 "DET",
                 "O"
             ],
             [
-                "common",
+                "different",
                 "ADJ",
+                "S-ENT"
+            ],
+            [
+                "version",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "type",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "deployed",
+                "VERB",
+                "O"
+            ],
+            [
+                "by",
+                "ADP",
+                "O"
+            ],
+            [
+                "another",
+                "DET",
+                "S-ENT"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "this",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "shares",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "instance",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "S-ENT"
+            ],
+            [
+                "this",
+                "DET",
+                "S-ENT"
+            ],
+            [
+                "type",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "with",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "other",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "deployment",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "will",
+                "AUX",
+                "O"
+            ],
+            [
+                "fail",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "with",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "version",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "conflict",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "error",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G17",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "hydrator",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
                 "O"
             ],
             [
                 "to",
-                "ADP",
+                "PART",
+                "O"
+            ],
+            [
+                "ensure",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "that",
+                "SCONJ",
                 "O"
             ],
             [
@@ -2043,7 +1728,347 @@
                 "S-ENT"
             ],
             [
-                "types",
+                "instances",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "created",
+                "VERB",
+                "O"
+            ],
+            [
+                "by",
+                "ADP",
+                "O"
+            ],
+            [
+                "apps",
+                "NOUN",
+                "O"
+            ],
+            [
+                "are",
+                "AUX",
+                "O"
+            ],
+            [
+                "available",
+                "ADJ",
+                "O"
+            ],
+            [
+                "as",
+                "ADP",
+                "O"
+            ],
+            [
+                "sinks",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "sources",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "for",
+                "ADP",
+                "O"
+            ],
+            [
+                "pipelines",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G17",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "developer",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "ensure",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "when",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "deploy",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "new",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "version",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "that",
+                "PRON",
+                "O"
+            ],
+            [
+                "includes",
+                "VERB",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "older",
+                "ADJ",
+                "S-ENT"
+            ],
+            [
+                "version",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "of",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "type",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "deployed",
+                "VERB",
+                "O"
+            ],
+            [
+                "by",
+                "ADP",
+                "O"
+            ],
+            [
+                "another",
+                "DET",
+                "S-ENT"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "expect",
+                "VERB",
+                "O"
+            ],
+            [
+                "that",
+                "SCONJ",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "instances",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "created",
+                "VERB",
+                "O"
+            ],
+            [
+                "by",
+                "ADP",
+                "O"
+            ],
+            [
+                "this",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "use",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "dataset",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "type",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "code",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "included",
+                "VERB",
+                "O"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "this",
+                "DET",
+                "O"
+            ],
+            [
+                "app",
                 "NOUN",
                 "S-ENT"
             ],

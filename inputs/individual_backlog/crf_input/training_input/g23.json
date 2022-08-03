@@ -125,6 +125,121 @@
         ]
     },
     {
+        "Text": "#G23# As an Application Administrator, I want to be able to reset a User's password for them.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "Application",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "Administrator",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "be",
+                "AUX",
+                "O"
+            ],
+            [
+                "able",
+                "ADJ",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "reset",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "User",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "'s",
+                "PART",
+                "P-ENT"
+            ],
+            [
+                "password",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "for",
+                "ADP",
+                "O"
+            ],
+            [
+                "them",
+                "PRON",
+                "O"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
         "Text": "#G23# As a user, I want backend changes for managing enum lists.",
         "Word Data": [
             [
@@ -415,6 +530,81 @@
         ]
     },
     {
+        "Text": "#G23# As a User , I want to authenticate using LDAP.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "User",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "authenticate",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "using",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "LDAP",
+                "PROPN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
         "Text": "#G23# As a migration specialist, I want to store the AT or Archon source record ids in each ASpace record",
         "Word Data": [
             [
@@ -535,6 +725,111 @@
         ]
     },
     {
+        "Text": "#G23# As an Archivist, I want to associate a standard identifier string with a Subject heading.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "Archivist",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "associate",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "standard",
+                "ADJ",
+                "P-ENT"
+            ],
+            [
+                "identifier",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "string",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "with",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "Subject",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "heading",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
         "Text": "#G23# As an Archivist, I want to be able to understand that an error occurred during import and why it might have occurred.",
         "Word Data": [
             [
@@ -625,7 +920,7 @@
             [
                 "occurred",
                 "VERB",
-                "O"
+                "S-ACT"
             ],
             [
                 "during",
@@ -665,7 +960,7 @@
             [
                 "occurred",
                 "VERB",
-                "O"
+                "S-ACT"
             ],
             [
                 ".",
@@ -1205,6 +1500,216 @@
         ]
     },
     {
+        "Text": "#G23# As an Archivist, I want to import Agent information from EAC-CPF records.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "PROPN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "an",
+                "DET",
+                "O"
+            ],
+            [
+                "Archivist",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "import",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "Agent",
+                "PROPN",
+                "P-ENT"
+            ],
+            [
+                "information",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "from",
+                "ADP",
+                "O"
+            ],
+            [
+                "EAC",
+                "PROPN",
+                "S-ENT"
+            ],
+            [
+                "-",
+                "PUNCT",
+                "S-ENT"
+            ],
+            [
+                "CPF",
+                "PROPN",
+                "S-ENT"
+            ],
+            [
+                "records",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G23# As a user, I want backend changes to support loading enum value lists from the database.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
+            ],
+            [
+                "a",
+                "DET",
+                "O"
+            ],
+            [
+                "user",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "backend",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "changes",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "support",
+                "VERB",
+                "S-ACT"
+            ],
+            [
+                "loading",
+                "NOUN",
+                "S-ACT"
+            ],
+            [
+                "enum",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "value",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "lists",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                "from",
+                "ADP",
+                "O"
+            ],
+            [
+                "the",
+                "DET",
+                "O"
+            ],
+            [
+                "database",
+                "NOUN",
+                "S-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
         "Text": "#G23# As a user, I want backend changes for bulk updating one enum value to another.",
         "Word Data": [
             [
@@ -1630,96 +2135,6 @@
         ]
     },
     {
-        "Text": "#G23# As an Archivist, I want to add Notes to other record types.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "add",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "Notes",
-                "PROPN",
-                "P-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "other",
-                "ADJ",
-                "S-ENT"
-            ],
-            [
-                "record",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "types",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G23# As an Administrator, I want to create a new User account for someone else.",
         "Word Data": [
             [
@@ -1975,191 +2390,6 @@
         ]
     },
     {
-        "Text": "#G23# As an Archivist, I want to assign a Level of description to a Resource or Resource Component and optionally specify another value if the Level is not in a predefined list.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "NOUN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "assign",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Level",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "of",
-                "ADP",
-                "O"
-            ],
-            [
-                "description",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "to",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Resource",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "or",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "Resource",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "Component",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "optionally",
-                "ADV",
-                "P-ACT"
-            ],
-            [
-                "specify",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "another",
-                "DET",
-                "P-ENT"
-            ],
-            [
-                "value",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "if",
-                "SCONJ",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "Level",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "is",
-                "AUX",
-                "O"
-            ],
-            [
-                "not",
-                "PART",
-                "O"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "predefined",
-                "VERB",
-                "S-ENT"
-            ],
-            [
-                "list",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G23# As a developer, I want to use a configuration that is not prepackaged within a built version of application.",
         "Word Data": [
             [
@@ -2275,121 +2505,6 @@
             [
                 "application",
                 "NOUN",
-                "S-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G23# As an Archivist, I want to import EAD files that were exported by the Archivists' Toolkit.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "import",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "EAD",
-                "PROPN",
-                "P-ENT"
-            ],
-            [
-                "files",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "that",
-                "PRON",
-                "O"
-            ],
-            [
-                "were",
-                "AUX",
-                "O"
-            ],
-            [
-                "exported",
-                "VERB",
-                "O"
-            ],
-            [
-                "by",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivists",
-                "PROPN",
-                "S-ENT"
-            ],
-            [
-                "'",
-                "PART",
-                "S-ENT"
-            ],
-            [
-                "Toolkit",
-                "PROPN",
                 "S-ENT"
             ],
             [
@@ -3290,7 +3405,7 @@
         ]
     },
     {
-        "Text": "#G23# As an Archivist, I want to create and edit Event records.",
+        "Text": "#G23# As an Archivist, I want to manage Digital Objects.",
         "Word Data": [
             [
                 "#",
@@ -3343,27 +3458,17 @@
                 "O"
             ],
             [
-                "create",
+                "manage",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "edit",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "Event",
-                "NOUN",
+                "Digital",
+                "ADJ",
                 "P-ENT"
             ],
             [
-                "records",
+                "Objects",
                 "NOUN",
                 "P-ENT"
             ],
@@ -3625,7 +3730,7 @@
         ]
     },
     {
-        "Text": "#G23# As an Archivist, I want to upload an EAD for import from within the frontend application.",
+        "Text": "#G23# As an Archivist, I want to create and edit Rights Management statements.",
         "Word Data": [
             [
                 "#",
@@ -3634,7 +3739,7 @@
             ],
             [
                 "G23",
-                "PROPN",
+                "NOUN",
                 "O"
             ],
             [
@@ -3678,54 +3783,34 @@
                 "O"
             ],
             [
-                "upload",
+                "create",
                 "VERB",
                 "P-ACT"
             ],
             [
-                "an",
-                "DET",
+                "and",
+                "CCONJ",
                 "O"
             ],
             [
-                "EAD",
+                "edit",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "Rights",
                 "NOUN",
                 "P-ENT"
             ],
             [
-                "for",
-                "ADP",
-                "O"
-            ],
-            [
-                "import",
+                "Management",
                 "NOUN",
-                "S-ACT"
+                "P-ENT"
             ],
             [
-                "from",
-                "ADP",
-                "O"
-            ],
-            [
-                "within",
-                "ADP",
-                "O"
-            ],
-            [
-                "the",
-                "DET",
-                "O"
-            ],
-            [
-                "frontend",
+                "statements",
                 "NOUN",
-                "S-ENT"
-            ],
-            [
-                "application",
-                "NOUN",
-                "S-ENT"
+                "P-ENT"
             ],
             [
                 ".",
@@ -3735,7 +3820,7 @@
         ]
     },
     {
-        "Text": "#G23# As a Developer , I want to develop a custom importer.",
+        "Text": "#G23# As an Archivist, I want to import EAD data.",
         "Word Data": [
             [
                 "#",
@@ -3744,7 +3829,7 @@
             ],
             [
                 "G23",
-                "PROPN",
+                "NOUN",
                 "O"
             ],
             [
@@ -3758,13 +3843,13 @@
                 "O"
             ],
             [
-                "a",
+                "an",
                 "DET",
                 "O"
             ],
             [
-                "Developer",
-                "PROPN",
+                "Archivist",
+                "NOUN",
                 "PER"
             ],
             [
@@ -3788,9 +3873,49 @@
                 "O"
             ],
             [
-                "develop",
+                "import",
                 "VERB",
                 "P-ACT"
+            ],
+            [
+                "EAD",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                "data",
+                "NOUN",
+                "P-ENT"
+            ],
+            [
+                ".",
+                "PUNCT",
+                "O"
+            ]
+        ]
+    },
+    {
+        "Text": "#G23# As a Repository Manager , I want to create, update and delete archival descriptions in my repository.",
+        "Word Data": [
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "G23",
+                "NOUN",
+                "O"
+            ],
+            [
+                "#",
+                "SYM",
+                "O"
+            ],
+            [
+                "As",
+                "ADP",
+                "O"
             ],
             [
                 "a",
@@ -3798,14 +3923,84 @@
                 "O"
             ],
             [
-                "custom",
+                "Repository",
+                "NOUN",
+                "PER"
+            ],
+            [
+                "Manager",
+                "NOUN",
+                "PER"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "I",
+                "PRON",
+                "O"
+            ],
+            [
+                "want",
+                "VERB",
+                "O"
+            ],
+            [
+                "to",
+                "PART",
+                "O"
+            ],
+            [
+                "create",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                ",",
+                "PUNCT",
+                "O"
+            ],
+            [
+                "update",
+                "NOUN",
+                "P-ACT"
+            ],
+            [
+                "and",
+                "CCONJ",
+                "O"
+            ],
+            [
+                "delete",
+                "VERB",
+                "P-ACT"
+            ],
+            [
+                "archival",
                 "ADJ",
                 "P-ENT"
             ],
             [
-                "importer",
+                "descriptions",
                 "NOUN",
                 "P-ENT"
+            ],
+            [
+                "in",
+                "ADP",
+                "O"
+            ],
+            [
+                "my",
+                "PRON",
+                "O"
+            ],
+            [
+                "repository",
+                "NOUN",
+                "S-ENT"
             ],
             [
                 ".",
@@ -3916,121 +4111,6 @@
                 "information",
                 "NOUN",
                 "P-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G23# As a Repository Manager , I want to create, update and delete any records in my repository.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Repository",
-                "NOUN",
-                "PER"
-            ],
-            [
-                "Manager",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "create",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "update",
-                "NOUN",
-                "P-ACT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "delete",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "any",
-                "DET",
-                "P-ENT"
-            ],
-            [
-                "records",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "in",
-                "ADP",
-                "O"
-            ],
-            [
-                "my",
-                "PRON",
-                "O"
-            ],
-            [
-                "repository",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
@@ -4420,91 +4500,6 @@
         ]
     },
     {
-        "Text": "#G23# As an Archivist, I want to create and edit Agent records.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "create",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "and",
-                "CCONJ",
-                "O"
-            ],
-            [
-                "edit",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "Agent",
-                "PROPN",
-                "P-ENT"
-            ],
-            [
-                "records",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
         "Text": "#G23# As an Archivist, I want to create and edit a Resource record.",
         "Word Data": [
             [
@@ -4586,106 +4581,6 @@
                 "record",
                 "NOUN",
                 "P-ENT"
-            ],
-            [
-                ".",
-                "PUNCT",
-                "O"
-            ]
-        ]
-    },
-    {
-        "Text": "#G23# As an Archivist, I want to associate a Subject record with a Resource description.",
-        "Word Data": [
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "G23",
-                "PROPN",
-                "O"
-            ],
-            [
-                "#",
-                "SYM",
-                "O"
-            ],
-            [
-                "As",
-                "ADP",
-                "O"
-            ],
-            [
-                "an",
-                "DET",
-                "O"
-            ],
-            [
-                "Archivist",
-                "NOUN",
-                "PER"
-            ],
-            [
-                ",",
-                "PUNCT",
-                "O"
-            ],
-            [
-                "I",
-                "PRON",
-                "O"
-            ],
-            [
-                "want",
-                "VERB",
-                "O"
-            ],
-            [
-                "to",
-                "PART",
-                "O"
-            ],
-            [
-                "associate",
-                "VERB",
-                "P-ACT"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Subject",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "record",
-                "NOUN",
-                "P-ENT"
-            ],
-            [
-                "with",
-                "ADP",
-                "O"
-            ],
-            [
-                "a",
-                "DET",
-                "O"
-            ],
-            [
-                "Resource",
-                "NOUN",
-                "S-ENT"
-            ],
-            [
-                "description",
-                "NOUN",
-                "S-ENT"
             ],
             [
                 ".",
