@@ -17,9 +17,9 @@ def main():
 
     persona_precision, persona_recall, persona_f_measure,entity_precision, entity_recall, entity_f_measure, action_precision, action_recall, action_f_measure = formatted_data
 
-    create_final_bargraph(persona_precision,persona_recall, persona_f_measure, "Persona " + title_name + " " + comparison_type, saving_path + "_persona_nlp_compare.png", crf_path)
-    create_final_bargraph(entity_precision,entity_recall, entity_f_measure, "Entity " + title_name + " " + comparison_type, saving_path + "_entity_nlp_compare.png", crf_path)
-    create_final_bargraph(action_precision,action_recall, action_f_measure, "Action " + title_name + " " +  comparison_type, saving_path + "_action_nlp_compare.png", crf_path)
+    create_final_bargraph(persona_precision,persona_recall, persona_f_measure, "Persona" + title_name + " " + comparison_type, saving_path + "_persona_nlp_compare.png", crf_path)
+    create_final_bargraph(entity_precision,entity_recall, entity_f_measure, "Entity" + title_name + " " + comparison_type, saving_path + "_entity_nlp_compare.png", crf_path)
+    create_final_bargraph(action_precision,action_recall, action_f_measure, "Action" + title_name + " " +  comparison_type, saving_path + "_action_nlp_compare.png", crf_path)
 
     print("Graphs are saved")
 
@@ -99,7 +99,7 @@ def command():
         if args.save_file_name != "primary":
             title = ""
         else:
-            title = "Primary Results"
+            title = " Primary Results"
 
     except FileNotFoundError:
         sys.tracebacklimit = 0
@@ -194,7 +194,7 @@ def format_data(datasets_label, number_dataset, simple_data, ecmfa_vn_data, visu
 
             formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 3,
                                 "Data": rounded_simple + rounded_ecmfa_vn + rounded_visual_narrator,
-                                "nlp": ["simple"]*number_dataset + ["ecmfa_vn"]*number_dataset + ["visual narrator"]*number_dataset}))
+                                "nlp": ["Simple"]*number_dataset + ["ECMFA-VN"]*number_dataset + ["Visual Narrator"]*number_dataset}))
     else:
         crf_data = extract_data(crf_path, number_dataset)
 
@@ -206,7 +206,7 @@ def format_data(datasets_label, number_dataset, simple_data, ecmfa_vn_data, visu
 
             formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 4,
                                 "Data": rounded_simple + rounded_ecmfa_vn + rounded_visual_narrator + rounded_crf,
-                                "nlp": ["simple"]*number_dataset + ["ecmfa-vn"]*number_dataset + ["visual narrator"]*number_dataset + ["crf"] * number_dataset}))
+                                "nlp": ["Simple"]*number_dataset + ["ECMFA-VN"]*number_dataset + ["Visual Narrator"]*number_dataset + ["CRF"] * number_dataset}))
 
     return formatted_data
 
@@ -229,33 +229,33 @@ def round_data(data):
 
 def create_final_bargraph(precision_results,recall_results, f_measure_results, title, save_path, crf_path):
     
-    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(25, 5), sharex=True)
+    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
     if crf_path == None:
-        palette ={"simple": "#f29e8e", "ecmfa-vn": "indianred", "visual narrator": "#9a0200"}
+        palette ={"Simple": "#f29e8e", "ECMFA-VN": "indianred", "Visual Narrator": "#9a0200"}
     else:
-        palette ={"simple": "#f29e8e", "ecmfa-vn": "indianred", "visual narrator": "#9a0200", "crf": "#4c0000"}
+        palette ={"Simple": "#f29e8e", "ECMFA-VN": "indianred", "Visual Narrator": "#9a0200", "CRF": "#4c0000"}
 
     precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None, alpha = 0.85)
     precision.set(xlabel=None)
-    precision.set(ylabel= "Precision")
+    precision.set_ylabel("Precision", fontsize = 14)
 
     for i in precision.containers:
-        precision.bar_label(i)
+        precision.bar_label(i, fontsize = 6)
 
     recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette, ci = None, alpha = 0.85)
     recall.set(xlabel=None)
-    recall.set(ylabel= "Recall")
+    recall.set_ylabel("Recall", fontsize = 14)
 
     for i in recall.containers:
-        recall.bar_label(i)
+        recall.bar_label(i, fontsize = 6)
 
     f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette, ci = None, alpha = 0.85)
-    f_measure_plot.set_xlabel("Dataset")
-    f_measure.set(ylabel= "F-Measure")
+    f_measure_plot.set_xlabel("Dataset", fontsize = 14)
+    f_measure.set_ylabel("F-Measure", fontsize = 14)
 
     for i in f_measure.containers:
-        f_measure.bar_label(i)
+        f_measure.bar_label(i, fontsize = 6)
 
 
     precision_plot.set(ylim=(0, 1.2))
@@ -269,7 +269,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     f_measure.legend([],[], frameon=False)
 
     handles, labels = precision_plot.get_legend_handles_labels()
-    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(0.97, 0.5))
+    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(0.99, 0.5))
 
     graph.savefig(save_path)
 

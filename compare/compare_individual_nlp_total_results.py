@@ -22,16 +22,16 @@ def main():
     with open(dataset_name_path) as file:
         dataset_names = file.readlines()
 
-    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "maroon", primary_save_path + "\\primary_persona_scatter.png")
-    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "indianred", primary_save_path + "\\primary_entity_scatter.png")
-    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "#f29e8e", primary_save_path + "\\primary_action_scatter.png")
+    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Primary Recall Vs. Precision Persona " + comparison_type, "maroon", primary_save_path + "\\primary_persona_scatter.png")
+    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Primary Recall Vs. Precision Entity " + comparison_type, "indianred", primary_save_path + "\\primary_entity_scatter.png")
+    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Primary Recall Vs. Precision Action " + comparison_type, "#f29e8e", primary_save_path + "\\primary_action_scatter.png")
     create_final_scatterplot(all_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "maroon", all_save_path + "\\all_persona_scatter.png")
     create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "indianred", all_save_path + "\\all_entity_scatter.png")
     create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "#f29e8e", all_save_path + "\\all_action_scatter.png")
 
     create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, primary_save_path + "\\primary_persona_bargraph.png", dataset_names)
-    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png", dataset_names)
-    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, primary_save_path + "\\primary_action_bargraph.png", dataset_names)
+    create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Primary Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png", dataset_names)
+    create_final_bargraph(primary_path,"Action Precision", "Action Recall", "Action F-Measure", "Primary Action " + comparison_type, primary_save_path + "\\primary_action_bargraph.png", dataset_names)
     create_final_bargraph(all_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, all_save_path + "\\all_persona_bargraph.png", dataset_names)
     create_final_bargraph(all_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Entity " + comparison_type, all_save_path + "\\all_entity_bargraph.png", dataset_names)
     create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png", dataset_names)
@@ -77,7 +77,8 @@ def command():
     parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
     parser.add_argument('nlp_type', type = str, choices=["VN", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
-    
+    parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
+
     args = parser.parse_args()
 
     if not(args.load_primary_path.endswith(".csv")) or not(args.load_all_path.endswith(".csv")):
@@ -126,7 +127,12 @@ def command():
         else:
             nlp_type = "crf"
 
-        main_saving_folder_path = "final_results\\individual_nlp_results\\total_results\\" + data_type_folder + "\\" + nlp_type
+        if args.with_crf:
+            crf_path = "with_crf\\"
+        else:
+            crf_path= "without_crf\\"
+
+        main_saving_folder_path = "final_results\\individual_nlp_results\\total_results\\" + crf_path + data_type_folder + "\\" + nlp_type
         graphs_save_folder_path = main_saving_folder_path + saving_name
         csv_save_folder_path = main_saving_folder_path + "\\dataset_csv_input_" + nlp_type
 

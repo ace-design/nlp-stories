@@ -257,6 +257,7 @@ def command():
     parser.add_argument("comparison_mode", type = str, choices=["STRICT", "INCLU", "RELAX"], help = "Comparision mode for comparing. Following are options: (STRICT-strict, INCLU-inclusive, RELAX-relaxed)")
     parser.add_argument('nlp_type', type = str, choices=["VN", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
+    parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
 
@@ -286,15 +287,20 @@ def command():
         else:
             nlp_type = "crf"
 
+        if args.with_crf:
+            crf_path = "with_crf\\"
+        else:
+            crf_path= "without_crf\\"
+
 
         if args.comparison_mode == "STRICT":
-            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_strict_comparison"
+            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + crf_path + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_strict_comparison"
             comparison_mode = 1
         elif args.comparison_mode == "INCLU":
-            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_inclusive_comparison"
+            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + crf_path + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_inclusive_comparison"
             comparison_mode = 2
         else:
-            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_relaxed_comparison"
+            save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + crf_path + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_relaxed_comparison"
             comparison_mode = 3
         
         os.mkdir(save_folder_path)

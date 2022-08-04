@@ -13,9 +13,9 @@ def main():
 
     precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(simple_data, ecmfa_vn_data, visual_narrator_data, crf_path)
 
-    create_final_bargraph(precision_formatted_data, "Precision Average " + title_name + " " + comparison_type, saving_path + "_precison_compare_average.png", crf_path)
-    create_final_bargraph(recall_formatted_data, "Recall Average " + title_name + " " + comparison_type, saving_path + "_recall_compare_average.png", crf_path)
-    create_final_bargraph(f_measure_formatted_data, "F-Measure Average " + title_name + " " + comparison_type, saving_path + "_f_measure_compare_average.png", crf_path)
+    create_final_bargraph(precision_formatted_data, "Precision Average" + title_name + " " + comparison_type, saving_path + "_precison_compare_average.png", crf_path)
+    create_final_bargraph(recall_formatted_data, "Recall Average" + title_name + " " + comparison_type, saving_path + "_recall_compare_average.png", crf_path)
+    create_final_bargraph(f_measure_formatted_data, "F-Measure Average" + title_name + " " + comparison_type, saving_path + "_f_measure_compare_average.png", crf_path)
 
     print("Graphs are saved")
 
@@ -93,7 +93,7 @@ def command():
         if args.save_file_name != "primary":
             title = ""
         else:
-            title = "Primary Results"
+            title = " Primary Results"
 
     except FileNotFoundError:
         sys.tracebacklimit = 0
@@ -145,9 +145,9 @@ def format_data(simple_data, ecmfa_vn_data, visual_narrator_data, crf_path):
         for i in range(9):
             row_data.append([simple_average[i], ecmfa_vn_average[i], visual_narrator_average[i], simple_sd[i], ecmfa_vn_sd[i], visual_narrator_sd[i]])
 
-        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple nlp", "ecmfa-vn","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple nlp", "ecmfa-vn","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple nlp", "ecmfa-vn ","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Simple nlp", "ECMFA-VN","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Simple nlp", "ECMFA-VN","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Simple nlp", "ECMFA-VN","Visual Narrator", "Simple SD","ecmfa-vn SD","VN SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
     else:
         crf_data = extract_data(crf_path)
         crf_average, crf_sd = crf_data
