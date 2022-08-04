@@ -37,9 +37,11 @@ def main():
     create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png", dataset_names)
 
     primary_average = calculate_average(primary_data)
-    primary_standard_deviation = calculate_standard_deviation(primary_data)
+    #primary_standard_deviation = calculate_standard_deviation(primary_data)
+    primary_standard_deviation = [0,0,0,0,0,0,0,0,0]
     all_average = calculate_average(all_data)
-    all_standard_deviation = calculate_standard_deviation(all_data)
+    #all_standard_deviation = calculate_standard_deviation(all_data)
+    all_standard_deviation = [0,0,0,0,0,0,0,0,0]
 
     output_terminal(primary_average, primary_standard_deviation, all_average, all_standard_deviation)
 
@@ -221,7 +223,7 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     dataset_names (list): the x label names for the datasets that corresponds to the data in the csv file
     '''
     
-    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
+    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(5, 5), sharex=True)
 
     csv_data = pd.read_csv(read_file)
     x_label = dataset_names

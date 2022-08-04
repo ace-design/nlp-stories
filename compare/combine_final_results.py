@@ -64,22 +64,27 @@ def identify_files(with_crf, primary):
     else:
         data_type = "all"
 
-    ecmfa_vn_bklg = "final_results\\individual_nlp_results\\total_results\\individual_backlog\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_individual_backlog_average.csv"
-    simple_bklg = "final_results\\individual_nlp_results\\total_results\\individual_backlog\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_individual_backlog_average.csv"
-    vn_bklg = "final_results\\individual_nlp_results\\total_results\\individual_backlog\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_individual_backlog_average.csv"
-    ecmfa_vn_cat = "final_results\\individual_nlp_results\\total_results\\categories\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_categories_average.csv"
-    simple_cat = "final_results\\individual_nlp_results\\total_results\\categories\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_categories_average.csv"
-    vn_cat = "final_results\\individual_nlp_results\\total_results\\categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
-    ecmfa_vn_glo = "final_results\\individual_nlp_results\\total_results\\global\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_global_average.csv"
-    simple_glo = "final_results\\individual_nlp_results\\total_results\\global\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_global_average.csv"
-    vn_glo = "final_results\\individual_nlp_results\\total_results\\global\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_global_average.csv"
+    if with_crf:
+        crf_path = "with_crf\\"
+    else:
+        crf_path = "without_crf\\"
+
+    ecmfa_vn_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_individual_backlog_average.csv"
+    simple_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_individual_backlog_average.csv"
+    vn_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_individual_backlog_average.csv"
+    ecmfa_vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_categories_average.csv"
+    simple_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_categories_average.csv"
+    vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
+    ecmfa_vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_global_average.csv"
+    simple_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_global_average.csv"
+    vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_global_average.csv"
 
     file_list = [ecmfa_vn_bklg, simple_bklg, vn_bklg, ecmfa_vn_cat, simple_cat, vn_cat, ecmfa_vn_glo, simple_glo, vn_glo]
 
     if with_crf:
-        crf_bklg = "final_results\\individual_nlp_results\\total_results\\individual_backlog\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_individual_backlog_average.csv"
-        crf_cat = "final_results\\individual_nlp_results\\total_results\\categories\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_categories_average.csv"
-        crf_glo = "final_results\\individual_nlp_results\\total_results\\global\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_global_average.csv"
+        crf_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_individual_backlog_average.csv"
+        crf_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_categories_average.csv"
+        crf_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_global_average.csv"
         file_list.append(crf_bklg)
         file_list.append(crf_cat)
         file_list.append(crf_glo)
@@ -203,79 +208,79 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #Top Left
     yerr = strict_bklg_data[standard_deviation].to_numpy().T
-    strict_bklg_data[y_data].plot(ax = position[0,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    strict_bklg_data[y_data].plot(ax = position[0,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,0].set_title("Strict Comparison", fontsize = 14)
     position[0,0].set_ylabel("Individual Backlog", fontsize = 14)
     position[0,0].tick_params(labelrotation = 0)
     position[0,0].get_legend().remove()
-    position[0,0].set_ylim([0, 1.1])
+    position[0,0].set_ylim([0, 1.25])
     position[0,0].set_xticks([])
 
     #Middle Left
     yerr = strict_cat_data[standard_deviation].to_numpy().T
-    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,0].set_ylabel("Categories", fontsize = 14)
     position[1,0].tick_params(labelrotation = 0)
     position[1,0].get_legend().remove()
-    position[1,0].set_ylim([0, 1.1])
+    position[1,0].set_ylim([0, 1.25])
     position[1,0].set_xticks([])
 
     #bottom Left
     yerr = strict_glo_data[standard_deviation].to_numpy().T
-    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,0].set_ylabel("Global", fontsize = 14)
     position[2,0].tick_params(labelrotation = 0)
     position[2,0].get_legend().remove()
-    position[2,0].set_ylim([0, 1.1])
+    position[2,0].set_ylim([0, 1.25])
 
     #Top center
     yerr = inclusion_bklg_data[standard_deviation].to_numpy().T
-    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,1].set_title("Inclusion Comparison", fontsize = 14)
     position[0,1].tick_params(labelrotation = 0)
     position[0,1].get_legend().remove()
-    position[0,1].set_ylim([0, 1.1])
+    position[0,1].set_ylim([0, 1.25])
     position[0,1].set_xticks([])
 
     #Center
     yerr = inclusion_cat_data[standard_deviation].to_numpy().T
-    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,1].tick_params(labelrotation = 0)
     position[1,1].get_legend().remove()
-    position[1,1].set_ylim([0, 1.1])
+    position[1,1].set_ylim([0, 1.25])
     position[1,1].set_xticks([])
 
     #bottom center
     yerr = inclusion_glo_data[standard_deviation].to_numpy().T
-    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,1].tick_params(labelrotation = 0)
     position[2,1].get_legend().remove()
-    position[2,1].set_ylim([0, 1.1])
+    position[2,1].set_ylim([0, 1.25])
 
     #Top right
     yerr = relaxed_bklg_data[standard_deviation].to_numpy().T
-    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,2].set_title("Relaxed Comparison", fontsize = 14)
     position[0,2].tick_params(labelrotation = 0)
     position[0,2].get_legend().remove()
-    position[0,2].set_ylim([0, 1.1])
+    position[0,2].set_ylim([0, 1.25])
     position[0,2].set_xticks([])
 
     #middle right
     yerr = relaxed_cat_data[standard_deviation].to_numpy().T
-    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,2].tick_params(labelrotation = 0)
     position[1,2].get_legend().remove()
-    position[1,2].set_ylim([0, 1.1])
+    position[1,2].set_ylim([0, 1.25])
     position[1,2].set_xticks([])
     position[1,2].legend(loc=(1.025,0.25))
 
     #bottom right
     yerr = relaxed_glo_data[standard_deviation].to_numpy().T
-    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,2].tick_params(labelrotation = 0)
     position[2,2].get_legend().remove()
-    position[2,2].set_ylim([0, 1.1])
+    position[2,2].set_ylim([0, 1.25])
     
 
 
