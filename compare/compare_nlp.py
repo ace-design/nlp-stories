@@ -14,14 +14,14 @@ import subprocess
 import sys
 
 def main():
-    base_path, nlp_tool_path, save_folder_path, comparison_mode, save_name, data_type_folder = command()
+    base_path, nlp_tool_path, save_folder_path, comparison_mode, save_name, data_type_folder, nlp_type = command()
 
     base_path = check_pos_file(base_path, save_name, data_type_folder)
 
     primary_baseline_data, primary_pos_data = extract_primary_baseline_info(base_path)
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
 
-    if "crf" in nlp_tool_path:
+    if nlp_type == "CRF":
         primary_nlp_tool_data = extract_primary_crf_info(nlp_tool_path)
         nlp_tool_data = extract_crf_info(nlp_tool_path)
     else:
@@ -36,8 +36,11 @@ def main():
     primary_csv_folder_path = "compare\\nlp_dataset_csv_results\\primary_csv_results\\"
     all_csv_folder_path = "compare\\nlp_dataset_csv_results\\all_csv_results\\"
 
-    stanza.download('en') 
-    stanza_pos_nlp = stanza.Pipeline('en')
+    if comparison_mode == 3:
+        stanza.download('en') 
+        stanza_pos_nlp = stanza.Pipeline('en')
+    else:
+        stanza_pos_nlp = None
  
     primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text = compare_and_get_results(primary_baseline_data, primary_nlp_tool_data, comparison_mode, primary_pos_data, stanza_pos_nlp)
     output_results(primary_story_results, primary_count_list, primary_comparison_collection, primary_missing_stories, primary_baseline_text, primary_save_path, primary_csv_folder_path, comparison_mode)
@@ -313,7 +316,7 @@ def command():
         print("Saving path already exists")
         raise
     else:
-        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, comparison_mode, args.save_folder_name, data_type_folder
+        return args.load_baseline_path, args.load_nlp_tool_path, save_folder_path, comparison_mode, args.save_folder_name, data_type_folder, args.nlp_type
 
 def check_pos_file(load_path, save_name, data_type_folder):
     '''

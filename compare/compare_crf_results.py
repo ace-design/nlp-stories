@@ -122,29 +122,29 @@ def format_data(backlog_data, category_data, global_data):
 
 def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save_name):
     
-    graph, (left, middle, right) = plt.subplots(1, 3)
+    graph, (left, middle, right) = plt.subplots(1, 3, figsize=(10, 5))
 
-    strict_yerr = strict_data[["individual backlog SD","categories SD","global SD"]].to_numpy().T
-    strict_data[["Individual Backlog", "Categories","Global"]].plot(ax = left, kind='bar', alpha = 0.85, yerr = strict_yerr, error_kw=dict(lw = 1, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    strict_yerr = find_max_y_error(strict_data[["individual backlog SD","categories SD","global SD"]], strict_data[["Individual Backlog", "Categories","Global"]])
+    strict_data[["Individual Backlog", "Categories","Global"]].plot(ax = left, kind='bar', alpha = 0.85, yerr = strict_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     left.set_title("Strict Comparison", fontsize = 14)
     left.set_ylabel("Average Score", fontsize = 14)
     left.tick_params(labelrotation = 0)
     left.get_legend().remove()
-    left.set_ylim([0, 1.1])
+    left.set_ylim([0, 1])
 
-    inclusion_yerr = inclusion_data[["individual backlog SD","categories SD","global SD"]].to_numpy().T
-    inclusion_data[["Individual Backlog", "Categories","Global"]].plot(ax = middle, kind='bar', alpha = 0.85, yerr = inclusion_yerr, error_kw=dict(lw = 1, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    inclusion_yerr = find_max_y_error(inclusion_data[["individual backlog SD","categories SD","global SD"]], inclusion_data[["Individual Backlog", "Categories","Global"]])
+    inclusion_data[["Individual Backlog", "Categories","Global"]].plot(ax = middle, kind='bar', alpha = 0.85, yerr = inclusion_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     middle.set_title("Inclusion Comparison", fontsize = 14)
     middle.tick_params(labelrotation = 0)
     middle.get_legend().remove() 
-    middle.set_ylim([0, 1.1])
+    middle.set_ylim([0, 1])
 
-    relaxed_yerr = relaxed_data[["individual backlog SD","categories SD","global SD"]].to_numpy().T
-    relaxed_data[["Individual Backlog", "Categories","Global"]].plot(ax = right, kind='bar', alpha = 0.85, yerr = relaxed_yerr, error_kw=dict(lw = 1, capthick = 1, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    relaxed_yerr = find_max_y_error(relaxed_data[["individual backlog SD","categories SD","global SD"]], relaxed_data[["Individual Backlog", "Categories","Global"]])
+    relaxed_data[["Individual Backlog", "Categories","Global"]].plot(ax = right, kind='bar', alpha = 0.85, yerr = relaxed_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     right.set_title("Relaxed Comparison", fontsize = 14)
     right.tick_params(labelrotation = 0)
     right.get_legend().remove()
-    right.set_ylim([0, 1.1])
+    right.set_ylim([0, 1])
     
 
     graph.suptitle(title, fontsize = 20)
@@ -153,9 +153,28 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
 
     plt.tight_layout()
 
-    saving_path = "final_results\\comparing_nlps_results\\average_results\\comparing_crf\\graphs\\" + save_name + ".png"
+    saving_path = "final_results\\comparing_nlps_results\\average_results\\comparing_crf\\" + save_name + ".png"
 
     plt.savefig(saving_path)
+
+def find_max_y_error(standard_deviation, y_data):
+    '''
+    will check if the yerror will go above 1 and if yes, it will make the limit as 1 
+
+    Parameters:
+    standard_deviation: standard deviation of the data for the graph
+    y_data: the y_data for the graph to plot
+    '''
+
+    standard_deviation_list = standard_deviation.to_numpy().T
+    y_data_list = y_data.to_numpy().T
+
+    for i in range(3):
+        for j in range(len(y_data_list[i])):
+            if standard_deviation_list[i][j] + y_data_list[i][j] > 1:
+                standard_deviation_list[i][j] = 1 - y_data_list[i][j]
+
+    return standard_deviation_list
 
 if __name__ == "__main__":
     main()

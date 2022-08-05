@@ -2,8 +2,11 @@
 
 import argparse
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import sys
+
+from sklearn.metrics import max_error
 
 def main():
     with_crf, primary, save_name, title= command()
@@ -153,15 +156,15 @@ def organize_data_with_crf(ecmfa, simple, bklg, crf):
     row_data = []
 
     for i in range(27):
-        row_data.append([ecmfa_vn_average[i], simple_average[i], vn_average[i], crf_average[i], ecmfa_vn_sd[i], simple_sd[i], vn_sd[i], crf_sd[i]])
+        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], crf_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i], crf_sd[i]])
 
     for i in range (0,27,9):
         if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison" and crf_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison"and crf_label[i] == "Inclusion Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison"and crf_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -176,15 +179,15 @@ def organize_data_without_crf(ecmfa, simple, bklg):
     row_data = []
 
     for i in range(27):
-        row_data.append([ecmfa_vn_average[i], simple_average[i], vn_average[i],ecmfa_vn_sd[i], simple_sd[i], vn_sd[i]])
+        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i]])
 
     for i in range (0,27,9):
         if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
         elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
         elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -200,101 +203,115 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
         y_data = ["Simple","ECMFA-VN", "Visual Narrator", "CRF"]
         palette = ["#f29e8e", "indianred", "#9a0200","#4c0000"]
     else:
-        standard_deviation = ["ECMFA-VN SD","Simple SD","Visual Narrator SD"]
+        standard_deviation = ["Simple SD","ECMFA-VN SD","Visual Narrator SD"]
         y_data = ["Simple","ECMFA-VN", "Visual Narrator"]
         palette = ["#f29e8e", "indianred", "#9a0200"]
 
     graph, position = plt.subplots(3, 3, figsize=(10, 5))
 
     #Top Left
-    yerr = strict_bklg_data[standard_deviation].to_numpy().T
-    strict_bklg_data[y_data].plot(ax = position[0,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(strict_bklg_data[standard_deviation], strict_bklg_data[y_data])
+    strict_bklg_data[y_data].plot(ax = position[0,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,0].set_title("Strict Comparison", fontsize = 14)
     position[0,0].set_ylabel("Individual Backlog", fontsize = 14)
     position[0,0].tick_params(labelrotation = 0)
     position[0,0].get_legend().remove()
-    position[0,0].set_ylim([0, 1.25])
+    position[0,0].set_ylim([0, 1])
     position[0,0].set_xticks([])
 
     #Middle Left
-    yerr = strict_cat_data[standard_deviation].to_numpy().T
-    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
+    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,0].set_ylabel("Categories", fontsize = 14)
     position[1,0].tick_params(labelrotation = 0)
     position[1,0].get_legend().remove()
-    position[1,0].set_ylim([0, 1.25])
+    position[1,0].set_ylim([0, 1])
     position[1,0].set_xticks([])
 
     #bottom Left
-    yerr = strict_glo_data[standard_deviation].to_numpy().T
-    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(strict_glo_data[standard_deviation], strict_glo_data[y_data])
+    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,0].set_ylabel("Global", fontsize = 14)
     position[2,0].tick_params(labelrotation = 0)
     position[2,0].get_legend().remove()
-    position[2,0].set_ylim([0, 1.25])
+    position[2,0].set_ylim([0, 1])
 
     #Top center
-    yerr = inclusion_bklg_data[standard_deviation].to_numpy().T
-    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(inclusion_bklg_data[standard_deviation], inclusion_bklg_data[y_data])
+    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,1].set_title("Inclusion Comparison", fontsize = 14)
     position[0,1].tick_params(labelrotation = 0)
     position[0,1].get_legend().remove()
-    position[0,1].set_ylim([0, 1.25])
+    position[0,1].set_ylim([0, 1])
     position[0,1].set_xticks([])
 
     #Center
-    yerr = inclusion_cat_data[standard_deviation].to_numpy().T
-    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
+    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,1].tick_params(labelrotation = 0)
     position[1,1].get_legend().remove()
-    position[1,1].set_ylim([0, 1.25])
+    position[1,1].set_ylim([0, 1])
     position[1,1].set_xticks([])
 
     #bottom center
-    yerr = inclusion_glo_data[standard_deviation].to_numpy().T
-    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(inclusion_glo_data[standard_deviation], inclusion_glo_data[y_data])
+    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,1].tick_params(labelrotation = 0)
     position[2,1].get_legend().remove()
-    position[2,1].set_ylim([0, 1.25])
+    position[2,1].set_ylim([0, 1])
 
     #Top right
-    yerr = relaxed_bklg_data[standard_deviation].to_numpy().T
-    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(relaxed_bklg_data[standard_deviation], relaxed_bklg_data[y_data])
+    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,2].set_title("Relaxed Comparison", fontsize = 14)
     position[0,2].tick_params(labelrotation = 0)
     position[0,2].get_legend().remove()
-    position[0,2].set_ylim([0, 1.25])
+    position[0,2].set_ylim([0, 1])
     position[0,2].set_xticks([])
 
     #middle right
-    yerr = relaxed_cat_data[standard_deviation].to_numpy().T
-    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
+    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,2].tick_params(labelrotation = 0)
     position[1,2].get_legend().remove()
-    position[1,2].set_ylim([0, 1.25])
+    position[1,2].set_ylim([0, 1])
     position[1,2].set_xticks([])
     position[1,2].legend(loc=(1.025,0.25))
 
     #bottom right
-    yerr = relaxed_glo_data[standard_deviation].to_numpy().T
-    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 1, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    yerr = find_max_y_error(relaxed_glo_data[standard_deviation], relaxed_glo_data[y_data])
+    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,2].tick_params(labelrotation = 0)
     position[2,2].get_legend().remove()
-    position[2,2].set_ylim([0, 1.25])
-    
-
-
- 
+    position[2,2].set_ylim([0, 1])
 
     graph.suptitle(title, fontsize = 20)
-    graph.supxlabel("Measurement Type", fontsize=14)
+    graph.supxlabel("F-Measure", fontsize=14)
     
-
     plt.tight_layout()
 
     saving_path = "final_results\\comparing_nlps_results\\average_results\\combined_results\\" + save_name + ".png"
 
     plt.savefig(saving_path)
+
+def find_max_y_error(standard_deviation, y_data):
+    '''
+    will check if the yerror will go above 1 and if yes, it will make the limit as 1 
+
+    Parameters:
+    standard_deviation: standard deviation of the data for the graph
+    y_data: the y_data for the graph to plot
+    '''
+
+    standard_deviation_list = standard_deviation.to_numpy().T
+    y_data_list = y_data.to_numpy().T
+
+    for i in range(3):
+        for j in range(len(y_data_list[i])):
+            if standard_deviation_list[i][j] + y_data_list[i][j] > 1:
+                standard_deviation_list[i][j] = 1 - y_data_list[i][j]
+
+    return standard_deviation_list
 
 if __name__ == "__main__":
     main()

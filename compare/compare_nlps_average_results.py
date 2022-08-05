@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import sys
 
+from compare.combine_final_results import find_max_y_error
+
 def main():
     simple_path, ecmfa_vn_path, visual_narrator_path, crf_path, saving_path, comparison_type, title_name = command()
     simple_data = extract_data(simple_path)
@@ -164,20 +166,39 @@ def format_data(simple_data, ecmfa_vn_data, visual_narrator_data, crf_path):
 def create_final_bargraph(data, title, saving_path, crf_path):
 
     if crf_path == None:
-        yerr = data[["Simple SD","ecmfa-vn SD","VN SD"]].to_numpy().T
+        yerr = find_max_y_error(data[["Simple SD","ecmfa-vn SD","VN SD"]], data[["Simple nlp", "ECMFA-VN","Visual Narrator"]])
         data[["Simple nlp", "ECMFA-VN","Visual Narrator"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     else:
-        yerr = data[["Simple SD","ecmfa-vn SD","VN SD", "CRF SD"]].to_numpy().T
+        yerr = find_max_y_error(data[["Simple SD","ecmfa-vn SD","VN SD", "CRF SD"]], data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]])
         data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200","#4c0000"])
     
     plt.title(title,fontsize= 20)
     plt.ylabel("Average Score",fontsize=14)
     plt.xlabel("Measurement Type", fontsize=14)
-    plt.ylim([0, 1.1])
+    plt.ylim([0, 1])
     plt.legend(loc=(1.005,0.5))
     plt.xticks(rotation = 0)
     plt.tight_layout()
     plt.savefig(saving_path)
+
+def fix_max_y_error(standard_deviation, y_data):
+    '''
+    will check if the yerror will go above 1 and if yes, it will make the limit as 1 
+
+    Parameters:
+    standard_deviation: standard deviation of the data for the graph
+    y_data: the y_data for the graph to plot
+    '''
+
+    standard_deviation_list = standard_deviation.to_numpy().T
+    y_data_list = y_data.to_numpy().T
+
+    for i in range(3):
+        for j in range(len(y_data_list[i])):
+            if standard_deviation_list[i][j] + y_data_list[i][j] > 1:
+                standard_deviation_list[i][j] = 1 - y_data_list[i][j]
+
+    return standard_deviation_list
 
 if __name__ == "__main__":
     main()

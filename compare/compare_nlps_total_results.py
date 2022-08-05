@@ -229,7 +229,7 @@ def round_data(data):
 
 def create_final_bargraph(precision_results,recall_results, f_measure_results, title, save_path, crf_path):
     
-    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(17, 6), sharex=True)
+    graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
     if crf_path == None:
         palette ={"Simple": "#f29e8e", "ECMFA-VN": "indianred", "Visual Narrator": "#9a0200"}
@@ -240,22 +240,22 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     precision.set(xlabel=None)
     precision.set_ylabel("Precision", fontsize = 14)
 
-    for i in precision.containers:
-        precision.bar_label(i, fontsize = 6)
+    # for i in precision.containers:
+    #     precision.bar_label(i, fontsize = 6)
 
     recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette, ci = None, alpha = 0.85)
     recall.set(xlabel=None)
     recall.set_ylabel("Recall", fontsize = 14)
 
-    for i in recall.containers:
-        recall.bar_label(i, fontsize = 6)
+    # for i in recall.containers:
+    #     recall.bar_label(i, fontsize = 6)
 
     f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette, ci = None, alpha = 0.85)
     f_measure_plot.set_xlabel("Dataset Grouping", fontsize = 14)
     f_measure.set_ylabel("F-Measure", fontsize = 14)
 
-    for i in f_measure.containers:
-        f_measure.bar_label(i, fontsize = 6)
+    # for i in f_measure.containers:
+    #     f_measure.bar_label(i, fontsize = 6)
 
 
     precision_plot.set(ylim=(0, 1.2))
@@ -269,7 +269,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     f_measure.legend([],[], frameon=False)
 
     handles, labels = precision_plot.get_legend_handles_labels()
-    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(1, 0.5))
+    graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(0.99, 0.5))
 
     graph.savefig(save_path)
 
