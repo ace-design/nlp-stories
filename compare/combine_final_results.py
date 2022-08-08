@@ -18,6 +18,7 @@ def main():
 
     formatted_data  = format_data(data, with_crf)
 
+    save_csv_file(formatted_data, save_name)
     create_final_bargraph(formatted_data, title, save_name, with_crf)
     
     print("Graph is saved")
@@ -127,7 +128,7 @@ def format_data(data, with_crf):
     with_crf (bool): use crf results in graphs
 
     Returns:
-    formatted_data (3D-list): contains the formatted data to graph
+    formatted_data (list): contains the formatted data to graph
     '''
     if with_crf:
         ecmfa_vn_bklg, simple_bklg, vn_bklg, ecmfa_vn_cat, simple_cat, vn_cat, ecmfa_vn_glo, simple_glo, vn_glo, crf_bklg, crf_cat, crf_glo = data
@@ -193,6 +194,25 @@ def organize_data_without_crf(ecmfa, simple, bklg):
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
 
     return strict_data, inclusion_data, relaxed_data
+
+def save_csv_file(formatted_data, save_name):
+    '''
+    will save all the final results into one csv file
+
+    Parameters:
+    formatted_data (list): contains all the final information
+    save_name (str): name of the saving file
+    ''' 
+    final_data = pd.concat(formatted_data)
+    comparison_mode = (["Strict"] * 3 + ["Inclusion"] * 3 + ["Relaxed"] * 3) * 3
+    data_groupings = ["Individual Backlog"] * 9 + ["Categories"] * 9 + ["Global"] * 9
+
+    final_data["Comparison Mode"] = comparison_mode
+    final_data["Data Groupings"] = data_groupings
+
+    saving_path = "final_results\\comparing_nlps_results\\average_results\\combined_results\\final_data\\" + save_name + ".csv"
+
+    final_data.to_csv(saving_path)
 
 def create_final_bargraph(formatted_data, title, save_name, with_crf):
     
@@ -286,11 +306,12 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[2,2].set_ylim([0, 1])
 
     graph.suptitle(title, fontsize = 20)
-    graph.supxlabel("F-Measure", fontsize=14)
+    graph.supxlabel("Label Type", fontsize=14)
+    graph.supylabel("F-Measure", x = 0.01, y = 0.5, fontsize = 14)
     
     plt.tight_layout()
 
-    saving_path = "final_results\\comparing_nlps_results\\average_results\\combined_results\\" + save_name + ".png"
+    saving_path = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".png"
 
     plt.savefig(saving_path)
 
