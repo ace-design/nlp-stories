@@ -38,7 +38,9 @@ def main():
 
     primary_average = calculate_average(primary_data)
     primary_standard_deviation = calculate_standard_deviation(primary_data)
+    #primary_standard_deviation = [0,0,0,0,0,0,0,0,0]
     all_average = calculate_average(all_data)
+    #all_standard_deviation = [0,0,0,0,0,0,0,0,0]
     all_standard_deviation = calculate_standard_deviation(all_data)
 
     output_terminal(primary_average, primary_standard_deviation, all_average, all_standard_deviation)

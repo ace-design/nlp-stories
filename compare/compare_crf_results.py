@@ -124,7 +124,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     
     graph, (left, middle, right) = plt.subplots(1, 3, figsize=(10, 5))
 
-    strict_yerr = find_max_y_error(strict_data[["individual backlog SD","categories SD","global SD"]], strict_data[["Individual Backlog", "Categories","Global"]])
+    strict_yerr = fix_max_y_error(strict_data[["individual backlog SD","categories SD","global SD"]], strict_data[["Individual Backlog", "Categories","Global"]])
     strict_data[["Individual Backlog", "Categories","Global"]].plot(ax = left, kind='bar', alpha = 0.85, yerr = strict_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     left.set_title("Strict Comparison", fontsize = 20)
     left.set_ylabel("F-Measure", fontsize = 25)
@@ -133,7 +133,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     left.get_legend().remove()
     left.set_ylim([0, 1])
 
-    inclusion_yerr = find_max_y_error(inclusion_data[["individual backlog SD","categories SD","global SD"]], inclusion_data[["Individual Backlog", "Categories","Global"]])
+    inclusion_yerr = fix_max_y_error(inclusion_data[["individual backlog SD","categories SD","global SD"]], inclusion_data[["Individual Backlog", "Categories","Global"]])
     inclusion_data[["Individual Backlog", "Categories","Global"]].plot(ax = middle, kind='bar', alpha = 0.85, yerr = inclusion_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     middle.set_title("Inclusion Comparison", fontsize = 20)
     middle.tick_params(labelrotation = 0)
@@ -141,7 +141,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     middle.get_legend().remove() 
     middle.set_ylim([0, 1])
 
-    relaxed_yerr = find_max_y_error(relaxed_data[["individual backlog SD","categories SD","global SD"]], relaxed_data[["Individual Backlog", "Categories","Global"]])
+    relaxed_yerr = fix_max_y_error(relaxed_data[["individual backlog SD","categories SD","global SD"]], relaxed_data[["Individual Backlog", "Categories","Global"]])
     relaxed_data[["Individual Backlog", "Categories","Global"]].plot(ax = right, kind='bar', alpha = 0.85, yerr = relaxed_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
     right.set_title("Relaxed Comparison", fontsize = 20)
     right.tick_params(labelrotation = 0)
@@ -160,7 +160,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
 
     plt.savefig(saving_path)
 
-def find_max_y_error(standard_deviation, y_data):
+def fix_max_y_error(standard_deviation, y_data):
     '''
     will check if the yerror will go above 1 and if yes, it will make the limit as 1 
 

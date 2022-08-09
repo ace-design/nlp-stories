@@ -1,0 +1,47 @@
+Top likely transitions:
+S-ENT  -> S-ENT   1.993929
+P-ENT  -> P-ENT   1.877471
+PER    -> PER     1.574702
+S-ACT  -> S-ACT   1.178324
+O      -> O       1.101185
+S-ENT  -> O       0.612564
+P-ACT  -> P-ENT   0.542002
+P-ACT  -> P-ACT   0.340349
+O      -> P-ACT   0.174429
+S-ACT  -> S-ENT   0.159394
+
+Top unlikely transitions:
+O      -> PER     -0.449187
+PER    -> P-ENT   -0.472178
+P-ENT  -> S-ENT   -0.492146
+PER    -> O       -0.518335
+S-ACT  -> P-ENT   -0.526915
+S-ACT  -> P-ACT   -0.548157
+P-ENT  -> S-ACT   -0.615045
+PER    -> S-ENT   -0.617225
+P-ACT  -> S-ENT   -0.964677
+S-ENT  -> P-ENT   -1.071534
+
+Top feature factors:
+1.705161 S-ACT    postag:VERB
+1.553793 O        bias
+1.536707 S-ENT    postag:NOUN
+1.420459 O        postag:DET
+1.261330 O        postag:PRON
+1.234948 O        postag:AUX
+1.228029 P-ENT    postag:NOUN
+1.160435 S-ENT    postag:ADJ
+1.067865 P-ACT    postag:VERB
+1.042080 S-ACT    -1:postag:AUX
+
+Least feature factors:
+-0.644422 P-ENT    -1:postag:SCONJ
+-0.648799 O        -1:word.lower():and
+-0.652848 O        -1:word.lower():of
+-0.660658 S-ENT    postag:ADP
+-0.716152 P-ACT    bias
+-0.727356 O        postag:PROPN
+-0.794115 O        -1:postag:DET
+-1.173556 O        postag:VERB
+-1.376979 O        postag:ADJ
+-2.666099 O        postag:NOUN

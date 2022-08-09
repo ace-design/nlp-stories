@@ -230,7 +230,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     graph, position = plt.subplots(3, 3, figsize=(10, 5))
 
     #Top Left
-    yerr = find_max_y_error(strict_bklg_data[standard_deviation], strict_bklg_data[y_data])
+    yerr = fix_max_y_error(strict_bklg_data[standard_deviation], strict_bklg_data[y_data])
     strict_bklg_data[y_data].plot(ax = position[0,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,0].set_title("Strict Comparison", fontsize = 14)
     position[0,0].set_ylabel("Individual Backlog", fontsize = 14)
@@ -240,7 +240,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,0].set_xticks([])
 
     #Middle Left
-    yerr = find_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
+    yerr = fix_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
     strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,0].set_ylabel("Categories", fontsize = 14)
     position[1,0].tick_params(labelrotation = 0)
@@ -249,7 +249,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[1,0].set_xticks([])
 
     #bottom Left
-    yerr = find_max_y_error(strict_glo_data[standard_deviation], strict_glo_data[y_data])
+    yerr = fix_max_y_error(strict_glo_data[standard_deviation], strict_glo_data[y_data])
     strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,0].set_ylabel("Global", fontsize = 14)
     position[2,0].tick_params(labelrotation = 0)
@@ -257,7 +257,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[2,0].set_ylim([0, 1])
 
     #Top center
-    yerr = find_max_y_error(inclusion_bklg_data[standard_deviation], inclusion_bklg_data[y_data])
+    yerr = fix_max_y_error(inclusion_bklg_data[standard_deviation], inclusion_bklg_data[y_data])
     inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,1].set_title("Inclusion Comparison", fontsize = 14)
     position[0,1].tick_params(labelrotation = 0)
@@ -266,7 +266,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,1].set_xticks([])
 
     #Center
-    yerr = find_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
+    yerr = fix_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
     inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,1].tick_params(labelrotation = 0)
     position[1,1].get_legend().remove()
@@ -274,14 +274,14 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[1,1].set_xticks([])
 
     #bottom center
-    yerr = find_max_y_error(inclusion_glo_data[standard_deviation], inclusion_glo_data[y_data])
+    yerr = fix_max_y_error(inclusion_glo_data[standard_deviation], inclusion_glo_data[y_data])
     inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,1].tick_params(labelrotation = 0)
     position[2,1].get_legend().remove()
     position[2,1].set_ylim([0, 1])
 
     #Top right
-    yerr = find_max_y_error(relaxed_bklg_data[standard_deviation], relaxed_bklg_data[y_data])
+    yerr = fix_max_y_error(relaxed_bklg_data[standard_deviation], relaxed_bklg_data[y_data])
     relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[0,2].set_title("Relaxed Comparison", fontsize = 14)
     position[0,2].tick_params(labelrotation = 0)
@@ -290,7 +290,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,2].set_xticks([])
 
     #middle right
-    yerr = find_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
+    yerr = fix_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
     relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[1,2].tick_params(labelrotation = 0)
     position[1,2].get_legend().remove()
@@ -299,7 +299,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[1,2].legend(loc=(1.025,0.25))
 
     #bottom right
-    yerr = find_max_y_error(relaxed_glo_data[standard_deviation], relaxed_glo_data[y_data])
+    yerr = fix_max_y_error(relaxed_glo_data[standard_deviation], relaxed_glo_data[y_data])
     relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', alpha = 0.85, yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
     position[2,2].tick_params(labelrotation = 0)
     position[2,2].get_legend().remove()
@@ -315,7 +315,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     plt.savefig(saving_path)
 
-def find_max_y_error(standard_deviation, y_data):
+def fix_max_y_error(standard_deviation, y_data):
     '''
     will check if the yerror will go above 1 and if yes, it will make the limit as 1 
 

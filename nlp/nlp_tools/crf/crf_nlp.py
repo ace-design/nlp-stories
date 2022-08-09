@@ -18,17 +18,17 @@ from sklearn.model_selection import RandomizedSearchCV
 import sys
 
 def main():
-    train_path, test_path, random_optimize, grid_optimize, model_name, saving_path, data_type_folder = command()
+    train_path, test_path, random_optimize, grid_optimize, model_name, saving_path, data_type_folder, c1, c2 = command()
 
     stanza.download('en') 
     stanza_nlp = stanza.Pipeline('en')
     
     testing_set, testing_stories = extract_info(test_path)
 
-    X_test = [sent2features(s) for s in testing_set]   # Features for the test set
+    X_test = [sent2features(s, data_type_folder) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
-    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, model_name)
+    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, model_name, data_type_folder, c1, c2)
     
     y_pred, available_labels = get_results(crf, X_test, y_test)
     
@@ -39,7 +39,7 @@ def main():
         output.append(formatted_data)
 
     save_results(model_name, output, data_type_folder)
-    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name)
+    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, data_type_folder)
     
 def command():
     '''
@@ -60,6 +60,8 @@ def command():
     parser = argparse.ArgumentParser(description = "This program will create the input files for crf")
     parser.add_argument("load_testing_path", type = str, help = "path of crf file with the testing set input")
     parser.add_argument("--load_training_path", nargs="?", type = str, help = "path of crf file with the training set input")
+    parser.add_argument("--c1", nargs="?", type = float, help = "c1 model parameter")
+    parser.add_argument("--c2", nargs="?", type = float, help = "c2 model parameter")
     parser.add_argument('--random_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument('--grid_optimize', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("model_name", type = str, help = "name of the model")
@@ -71,13 +73,22 @@ def command():
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. input file type is .jsonl")
 
+    if args.c1 == None:
+        c1 = 0.1
+    else:
+        c1 = args.c1
+
+    if args.c2 == None:
+        c2 = 0.1
+    else:
+        c2 = args.c2
+
     if args.data_type == "BKLG":
         data_type_folder = "individual_backlog"
     elif args.data_type == "CAT":
         data_type_folder = "categories"
     else:
         data_type_folder = "global"
-
 
     saving_path = "nlp\\nlp_tools\\crf\\crf_models\\"  + args.model_name + "_crf_model.pkl"
 
@@ -100,9 +111,9 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, saving_path, data_type_folder
+        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, saving_path, data_type_folder, c1, c2
 
-def get_model(train_path, testing_stories, testing_set, saving_path, save_name):
+def get_model(train_path, testing_stories, testing_set, saving_path, save_name, data_type_folder, c1, c2):
     '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''
     if  not(os.path.exists(saving_path)):
         training_set, training_stories = extract_info(train_path)
@@ -110,10 +121,10 @@ def get_model(train_path, testing_stories, testing_set, saving_path, save_name):
         ensure_no_intersection(training_stories, testing_stories)
         ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
 
-        X_train = [sent2features(s) for s in training_set] # Features for the training set
+        X_train = [sent2features(s, data_type_folder) for s in training_set] # Features for the training set
         y_train = [sent2labels(s) for s in training_set]   # expected labels
 
-        config = CRF(algorithm = 'lbfgs', c1 = 0.1, c2 = 0.1, max_iterations = 100, all_possible_transitions = True)
+        config = CRF(algorithm = 'lbfgs', c1 = c1, c2 = c2, max_iterations = 100, all_possible_transitions = True)
 
         crf = train_model(config, X_train, y_train, saving_path)
 
@@ -289,9 +300,92 @@ def word2features(sent, i):
 
     return features # return the feature vector for this very sentence
 
-def sent2features(sent):
+def word2features_big_set(sent, i):
+    """ transform the i-st word in a sentence into a usable feature vector (here a dict)"""
+    word = sent[i][0]
+    postag = sent[i][1]
+    
+
+    features = { # Features for each and every word in the dataset
+        'bias': 1.0,
+        'word.isupper()': word.isupper(), # all letter upopercase -> bool
+        'word.istitle()': word.istitle(), # first letter uppercase -> bool
+        'postag':         postag,         # Part-of-speech tag
+        "len(word)":     len(word),
+        "isalpha()":      word.isalpha(), # all characters from alphabet -> bool
+        "position": i,
+    }
+
+    ## Update for words that are not the current word we are looking at
+
+    if i > 0: 
+        word1 = sent[i-1][0]      # previous word
+        postag1 = sent[i-1][1]    # previous POS tag
+
+        features.update({
+            '-1:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-1:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-1:postag':         postag1,          # POS tag           
+            "-1:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+            "-1:len(word1)":     len(word1),
+        })
+    else:
+        features['BOS'] = True # If the first one, Beginning Of Sentence is True
+
+    if i > 1: 
+        word1 = sent[i-2][0]      # two words before
+        postag1 = sent[i-2][1]    # two POS tags before
+        features.update({
+            '-2:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-2:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-2:postag':         postag1,          # POS tag 
+            "-2:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+        })
+
+    if i > 2: 
+        word1 = sent[i-3][0]      # three word before
+        postag1 = sent[i-3][1]    # three POS tag before
+        features.update({
+            '-3:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-3:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-3:postag':         postag1,          # POS tag 
+            "-3:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+        })
+
+    if i > 3: 
+        word1 = sent[i-4][0]      # four word before
+        postag1 = sent[i-4][1]    # four POS tag before
+        features.update({
+            '-4:word.istitle()': word1.istitle(),  # first letter uppercase -> bool
+            '-4:word.isupper()': word1.isupper(),  # all letter upopercase -> bool
+            '-4:postag':         postag1,          # POS tag
+            "-4:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+        })
+
+
+    if i < len(sent)-1:
+        word1 = sent[i+1][0]   # Next word
+        postag1 = sent[i+1][1] # next POS tag
+        features.update({
+            '+1:word.istitle()': word1.istitle(), # first letter uppercase -> bool
+            '+1:word.isupper()': word1.isupper(), # all letter upopercase -> bool
+            '+1:postag':         postag1,         # POS tag
+            "+1:isalpha()":      word1.isalpha(), # all characters from alphabet -> bool
+        })
+    else:
+        features['EOS'] = True # If the last one, then End Of Sentence is True.
+
+    return features # return the feature vector for this very sentence
+
+
+
+
+def sent2features(sent, data_type_folder):
     """Transform a sentences into features"""
-    return [word2features(sent, i) for i in range(len(sent))]
+    if data_type_folder == "individual_backlog":
+        return [word2features(sent, i) for i in range(len(sent))]
+    else:
+        return [word2features_big_set(sent, i) for i in range(len(sent))]
 
 def train_model(model, x_features, y_labels, file):
     """Train model so that X fits Y, used file to store the model and avoid unnecessary training"""
@@ -506,8 +600,16 @@ def save_results(save_name, output, data_type_folder):
 
     print("File is saved")
 
-def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name):
+def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, data_type_folder):
     '''optimize the c1 and c2 parameters'''
+    training_set, training_stories = extract_info(train_path)
+
+    ensure_no_intersection(training_stories, testing_stories)
+    ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
+
+    X_train = [sent2features(s,data_type_folder) for s in training_set] # Features for the training set
+    y_train = [sent2labels(s) for s in training_set]   # expected labels
+
 
     f1_scorer = make_scorer(metrics.flat_f1_score, average='weighted', labels=available_labels)
 
@@ -539,11 +641,11 @@ def random_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name):
     crf_hp = CRF(algorithm='lbfgs', max_iterations=100, all_possible_transitions=True)
 
     # Isntead of fixing c1 and c2 to 0.1, we let the system explore the space to find the "best" value
-    params_space = { 'c1': scipy.stats.expon(scale=0.5), 'c2': scipy.stats.expon(scale=0.05)}
+    params_space = { 'c1': scipy.stats.expon(scale=0.5), 'c2': scipy.stats.expon(scale=0.5)}
     
     config_rs = RandomizedSearchCV(crf_hp, params_space, cv=5, verbose=100, n_jobs=-1, n_iter=50, scoring= f1_scorer, return_train_score=True, refit=False)
 
-    crf_hp = train_model(config_rs, X_train, y_train, "crf_models\\"+ model_name + "_crf_model_hp.pkl")
+    crf_hp = train_model(config_rs, X_train, y_train, "nlp\\nlp_tools\\crf\\crf_models\\"+ model_name + "_crf_model_random_hp.pkl")
 
     plt.style.use('ggplot')
     
@@ -559,10 +661,7 @@ def grid_hyperparameter_optimization(X_train, y_train, f1_scorer, model_name):
 
     crf_grid = CRF(algorithm='lbfgs',max_iterations=100,all_possible_transitions=True,)
 
-    params_space_grid = {"c1": np.linspace(0.0, 0.5, 11),"c2": np.linspace(0.0, 0.1, 11)}
-
-    print()
-    print(params_space_grid)
+    params_space_grid = {"c1": np.linspace(0.0, 1, 21),"c2": np.linspace(0.0, 1, 21)}
 
     config_grid = GridSearchCV(crf_grid, params_space_grid, cv=5, verbose=100, n_jobs=-1, scoring= f1_scorer, return_train_score=True, refit=False)
 
