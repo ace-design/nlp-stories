@@ -10,7 +10,7 @@ import sys
 
 
 def main():
-    primary_path, all_path, dataset_name_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type = command()
+    primary_path, all_path, dataset_name_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type, data_type = command()
     primary_data = extract_data(primary_path, number_dataset)
     all_data = extract_data(all_path, number_dataset)
 
@@ -37,11 +37,14 @@ def main():
     create_final_bargraph(all_path,"Action Precision", "Action Recall", "Action F-Measure", "Action " + comparison_type, all_save_path + "\\all_action_bargraph.png", dataset_names)
 
     primary_average = calculate_average(primary_data)
-    primary_standard_deviation = calculate_standard_deviation(primary_data)
-    #primary_standard_deviation = [0,0,0,0,0,0,0,0,0]
     all_average = calculate_average(all_data)
-    #all_standard_deviation = [0,0,0,0,0,0,0,0,0]
-    all_standard_deviation = calculate_standard_deviation(all_data)
+
+    if data_type == "GLO":
+        primary_standard_deviation = [0,0,0,0,0,0,0,0,0]
+        all_standard_deviation = [0,0,0,0,0,0,0,0,0]
+    else:
+        primary_standard_deviation = calculate_standard_deviation(primary_data)
+        all_standard_deviation = calculate_standard_deviation(all_data)
 
     output_terminal(primary_average, primary_standard_deviation, all_average, all_standard_deviation)
 
@@ -152,7 +155,7 @@ def command():
             data = file.readlines()
             number_dataset = len(data)
 
-        return args.load_primary_path, args.load_all_path, dataset_names_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type
+        return args.load_primary_path, args.load_all_path, dataset_names_path, graphs_save_folder_path, comparison_type, number_dataset, csv_save_folder_path, nlp_type, args.data_type
 def extract_data (path, number_dataset):
     '''
     extract the data from the csv file 

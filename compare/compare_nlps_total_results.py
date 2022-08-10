@@ -53,7 +53,7 @@ def command():
 
     if not(args.load_simple_path.endswith(".csv")) or not(args.load_ecmfa_vn_path.endswith(".csv")) or not(args.load_visual_narrator_path.endswith(".csv")) or (args.load_crf_path != None and not(args.load_crf_path.endswith(".csv"))):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. Save file type is .csv")
+        raise Exception ("Incorrect input file type. File type is .csv")
 
     if "strict" in args.load_simple_path and "strict" in args.load_ecmfa_vn_path and "strict" in args.load_visual_narrator_path:
         comparison_type = "Strict Comparison"
