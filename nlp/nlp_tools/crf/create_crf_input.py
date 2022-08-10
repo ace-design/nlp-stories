@@ -12,14 +12,16 @@ import jsonl_to_human_readable
 
 
 def main():
-    load_path, intersecting_path, save_name = command()
+    load_path, intersecting_path, save_name, previous_testing_path, amount = command()
     stories, annotated_stories = extract_stories(load_path)
     intersecting_stories = extract_intersecting_stories(intersecting_path)
+    previous_testing_set = extract_previous_testing_set(previous_testing_path)
+
 
     stanza.download('en') 
     stanza_nlp = stanza.Pipeline('en')
 
-    training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories, intersecting_stories)
+    training_stories, training_annotated, testing_stories, testing_annotated = randomize_stories(stories, annotated_stories, intersecting_stories, previous_testing_set, amount)
     ensure_no_intersection(training_stories, testing_stories)
 
     final_results_training = []
@@ -43,7 +45,10 @@ def command():
 
     Returns:
     args.load_baseline_path (str): Path to the dataset file to be loaded
+    args_intersecting_path (str): path of intersecting file
     args.save_name (str): name to the saving file
+    args.append_testing_set (str): testing set to append to
+    amount (float): percent in decimal (/100) of amount of stories in testing set
 
     Raises:
         FileNotFoundError: raises excpetion
@@ -53,6 +58,9 @@ def command():
     parser.add_argument("load_baseline_path", type = str, help = "path of baseline file from doccano (jsonl)")
     parser.add_argument("load_intersecting_path", type = str, help = "path of intersecting file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
+    parser.add_argument("--append_testing_set", nargs="?", type = str, help = "testing set to append to")
+    parser.add_argument("--amount", nargs="?", type = float, help = "percent in decimal (/100) of amount of stories in testing set")
+
     
     args = parser.parse_args()
 
@@ -74,7 +82,12 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_baseline_path, args.load_intersecting_path, args.save_name
+        if args.amount == None:
+            amount = 0.2
+        else:
+            amount = args.amount
+
+        return args.load_baseline_path, args.load_intersecting_path, args.save_name, args.append_testing_set, amount
 
 def extract_stories(path):
     '''
@@ -121,7 +134,26 @@ def extract_intersecting_stories(path):
 
     return intersecting_stories
 
-def randomize_stories(stories, annotated_stories, intersecting_stories):
+def extract_previous_testing_set(path):
+    '''
+    extract info from previous testing set if given
+
+    Parameters:
+    path (str): path to testing set if exists
+    
+    '''
+    previous_testing_set = []
+
+    if path != None:
+        file = open(path, encoding= "utf-8")
+        data = json.load(file)
+        
+        for story in data:
+            previous_testing_set.append(story["Text"].strip(" \t"))
+
+    return previous_testing_set
+
+def randomize_stories(stories, annotated_stories, intersecting_stories, previous_testing_set, amount):
     '''
     randomize the stories to have 20% of set for testing and 80% of set for training
 
@@ -129,6 +161,7 @@ def randomize_stories(stories, annotated_stories, intersecting_stories):
     stories (list): contains the text of every story in the dataset
     annotated_stories (list): contains the annotated information corresponding to the stories list
     intersecting_stories (list): all the stories in the intersecting set of the dataset
+    previous_testing_set (list): text that must be in the testing set 
 
     Returns:
     training_stories (list): stories for the training set
@@ -142,25 +175,31 @@ def randomize_stories(stories, annotated_stories, intersecting_stories):
     testing_stories = []
     testing_annotated = []
 
-    if len(intersecting_stories) < (len(training_stories) * 0.2):
+    if len(intersecting_stories) < (len(training_stories) * amount):
         max_random = len(intersecting_stories)
     else:
-        max_random = len(training_stories) * 0.2
+        max_random = len(training_stories) * amount
 
-    num_test = int(max_random)
+    num_test = round(max_random)
 
     for i in range(num_test):
         length = len(training_stories)
 
         while True:
             index = random.randint(0, length -1)
+
+            story = training_stories[index].strip(" \t")
             
-            if training_stories[index].strip(" \t") in intersecting_stories:
+            if (story in intersecting_stories) and (story in previous_testing_set or previous_testing_set == []):
             
                 testing_stories.append(training_stories[index])
                 testing_annotated.append(training_annotated[index])
                 training_stories.pop(index)
                 training_annotated.pop(index)
+
+                if story in previous_testing_set:
+                    previous_testing_set.remove(story)
+
                 break
 
     return training_stories, training_annotated, testing_stories, testing_annotated
