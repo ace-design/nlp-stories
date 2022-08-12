@@ -79,7 +79,6 @@ def command():
     parser = argparse.ArgumentParser(description = "This program is to visualize the final results of the nlp")
     parser.add_argument("load_primary_path", type = str, help = "path of primary csv file")
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
-    parser.add_argument("save_folder_name", type = str, help = "name of folder to save")
     parser.add_argument('nlp_type', type = str, choices=["VN", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
     parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
@@ -94,17 +93,26 @@ def command():
         sys.tracebacklimit = 0
         raise Exception ("Incorrect file order. First file must be primary data and the second file must be all data")
 
+    if args.nlp_type == "VN":
+        nlp_type = "visual_narrator"
+    elif args.nlp_type == "SIMPLE":
+        nlp_type = "simple"
+    elif args.nlp_type == "ECMFA":
+        nlp_type = "ecmfa_vn"
+    else:
+        nlp_type = "crf"
+
     if "strict" in args.load_primary_path and "strict" in args.load_all_path:
         comparison_type = "Strict Comparison"
-        saving_name = "\\strict_" + args.save_folder_name
+        saving_name = "\\strict_" + nlp_type
         dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_strict.txt"
     elif "inclusion" in args.load_primary_path and "inclusion" in args.load_all_path:
         comparison_type = 'Inclusion Comparison'
-        saving_name = "\\inclusion_" + args.save_folder_name
+        saving_name = "\\inclusion_" + nlp_type
         dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_inclusion.txt"
     elif "relaxed" in args.load_primary_path and "relaxed" in args.load_all_path:
         comparison_type = "Relaxed Comparison"
-        saving_name = "\\relaxed_" + args.save_folder_name
+        saving_name = "\\relaxed_" + nlp_type
         dataset_names_path = "compare\\nlp_dataset_names_list\\dataset_list_relaxed.txt"
     else:
         sys.tracebacklimit = 0 
@@ -122,16 +130,7 @@ def command():
             data_type_folder = "categories"
         else:
             data_type_folder = "global"
-
-        if args.nlp_type == "VN":
-            nlp_type = "visual_narrator"
-        elif args.nlp_type == "SIMPLE":
-            nlp_type = "simple"
-        elif args.nlp_type == "ECMFA":
-            nlp_type = "ecmfa_vn"
-        else:
-            nlp_type = "crf"
-
+        
         if args.with_crf:
             crf_path = "with_crf\\"
         else:

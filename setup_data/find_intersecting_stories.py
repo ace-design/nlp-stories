@@ -186,13 +186,13 @@ def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmf
     save_name (str): name of the saving file
     '''
 
-    intersect_stories_path = "inputs\\intersecting_stories\\" + save_name + ".txt"
+    intersect_stories_path = "inputs\\individual_backlog\\intersecting_stories\\" + save_name + ".txt"
 
     with open(intersect_stories_path, "w", encoding="utf-8") as file:
         for i in range(len(intersect_stories)):
             file.write(intersect_stories[i] + "\n")
 
-    duplicates_path = "logs\\repeated_stories\\" + save_name + "_duplicated_stories.txt"
+    duplicates_path = "logs\\repeated_stories\\" + save_name + "_repeated_stories.txt"
 
     with open(duplicates_path, "w", encoding="utf-8") as file:
         for i in range(len(duplicates)):

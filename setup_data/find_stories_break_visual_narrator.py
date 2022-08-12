@@ -7,7 +7,7 @@ def main():
     load_path, save_name = command()
     valid_stories, invalid_stories = find_invalid(load_path)
 
-    valid_save_path = "inputs\\valid_visual_narrator_stories\\" + save_name + ".txt"
+    valid_save_path = "inputs\\individual_backlog\\valid_visual_narrator_stories\\" + save_name + ".txt"
     invalid_save_path = "logs\\invalid_visual_narrator_stories\\" + save_name + ".txt"
 
     save_results(valid_save_path, valid_stories)
