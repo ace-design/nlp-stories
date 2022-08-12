@@ -1,392 +1,42 @@
 [
     {
-        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "perform"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "prefiltering"
-            ],
-            "Secondary Entity": [
-                "images",
-                "remove artefacts",
-                "bright stars",
-                "camera",
-                "errors"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "perform"
-            ]
-        ],
-        "Targets": [
-            [
-                "perform",
-                "prefiltering"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "filter",
-                "rank"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "videos"
-            ],
-            "Secondary Entity": [
-                "A/V quality aspects"
-            ]
-        },
-        "Triggers": [
-            [
-                "admin",
-                "filter"
-            ],
-            [
-                "admin",
-                "rank"
-            ]
-        ],
-        "Targets": [
-            [
-                "filter",
-                "videos"
-            ],
-            [
-                "rank",
-                "videos"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.",
+        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.\t",
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "search",
-                "discover"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "music"
-            ],
-            "Secondary Entity": [
-                "other users"
-            ]
-        },
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
         "Triggers": [
-            [
-                "user",
-                "search"
-            ],
-            [
-                "user",
-                "discover"
-            ]
+            "user",
+            "search"
         ],
         "Targets": [
-            [
-                "search",
-                "music"
-            ],
-            [
-                "discover",
-                "music"
-            ]
+            "search",
+            "music"
         ]
     },
     {
-        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "give"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "which piece"
-            ],
-            "Secondary Entity": [
-                "education",
-                "volunteer"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": [
-            [
-                "know",
-                "which piece"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "identify"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "number"
-            ],
-            "Secondary Entity": [
-                "whales",
-                "single audio file"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "identify"
-            ]
-        ],
-        "Targets": [
-            [
-                "identify",
-                "number"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "reuse"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "summary"
-            ],
-            "Secondary Entity": [
-                "articles"
-            ]
-        },
-        "Triggers": [
-            [
-                "admin",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "summary"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "interrupt"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "when"
-            ],
-            "Secondary Entity": [
-                "volunteer"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": [
-            [
-                "know",
-                "when"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "give"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "when"
-            ],
-            "Secondary Entity": [
-                "Zoonibot",
-                "explanation"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": [
-            [
-                "know",
-                "when"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.",
+        "Text": "#G28# As a user, I want to upload tagged videos and have tags available for all further processing steps.\t",
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "take"
-            ],
-            "Secondary Action": [
-                "upload",
-                "recommended"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "picture",
-                "image",
-                "videos related",
-                "picture",
-                "image"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "take"
-            ]
+        "Action": [
+            "upload"
         ],
-        "Targets": []
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
-        "Persona": [
-            "Zooniverse admin"
+        "Entity": [
+            "videos"
         ],
-        "Action": {
-            "Primary Action": [
-                "automatically detect"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Snapshot Serengeti images"
-            ],
-            "Secondary Entity": [
-                "no classifiable animals"
-            ]
-        },
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "automatically detect"
-            ]
+            "user",
+            "upload"
         ],
         "Targets": [
-            [
-                "automatically detect",
-                "Snapshot Serengeti images"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "detect"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "important features such"
-            ],
-            "Secondary Entity": [
-                "areas",
-                "flooding",
-                "damage",
-                "temporary shelters",
-                "roads",
-                "satellite images"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "detect"
-            ]
-        ],
-        "Targets": [
-            [
-                "detect",
-                "important features such"
-            ]
+            "upload",
+            "videos"
         ]
     },
     {
@@ -394,283 +44,319 @@
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "receive"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "content recommendations"
-            ],
-            "Secondary Entity": [
-                "similar profiles"
-            ]
-        },
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "recommendations"
+        ],
         "Triggers": [
-            [
-                "user",
-                "receive"
-            ]
+            "user",
+            "receive"
         ],
         "Targets": [
-            [
-                "receive",
-                "content recommendations"
-            ]
+            "receive",
+            "recommendations"
         ]
     },
     {
-        "Text": "#G28# As an admin, I want to annotate news video segments and extract a topic for each segment.",
+        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "picture"
+        ],
+        "Triggers": [
+            "user",
+            "take"
+        ],
+        "Targets": [
+            "take",
+            "picture"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "walk"
+        ],
+        "Entity": [
+            "map"
+        ],
+        "Triggers": [
+            "user",
+            "walk"
+        ],
+        "Targets": [
+            "walk",
+            "map"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search content items using automatic speech recognition.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "items"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "items"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to annotate news video segments and extract a topic for each segment.\t",
         "Persona": [
             "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "annotate",
-                "extract"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "news video segments"
-            ],
-            "Secondary Entity": [
-                "topic",
-                "segment"
-            ]
-        },
+        "Action": [
+            "annotate"
+        ],
+        "Entity": [
+            "segments"
+        ],
         "Triggers": [
-            [
-                "admin",
-                "annotate"
-            ],
-            [
-                "admin",
-                "extract"
-            ]
+            "admin",
+            "annotate"
         ],
         "Targets": [
-            [
-                "annotate",
-                "news video segments"
-            ],
-            [
-                "extract",
-                "news video segments"
-            ]
+            "annotate",
+            "segments"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to upload tagged videos and have tags available for all further processing steps.",
+        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.\t",
         "Persona": [
-            "user"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "upload",
-                "have"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "tagged videos",
-                "tags"
-            ],
-            "Secondary Entity": [
-                "further processing steps"
-            ]
-        },
+        "Action": [
+            "filter"
+        ],
+        "Entity": [
+            "aspects"
+        ],
         "Triggers": [
-            [
-                "user",
-                "upload"
-            ],
-            [
-                "user",
-                "have"
-            ]
+            "admin",
+            "filter"
         ],
         "Targets": [
-            [
-                "upload",
-                "tagged videos"
-            ],
-            [
-                "have",
-                "tagged videos"
-            ],
-            [
-                "upload",
-                "tags"
-            ],
-            [
-                "have",
-                "tags"
-            ]
+            "filter",
+            "aspects"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.",
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
         "Persona": [
-            "user"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "walk",
-                "access"
-            ],
-            "Secondary Action": [
-                "using",
-                "informed",
-                "covering"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "around",
-                "content"
-            ],
-            "Secondary Entity": [
-                "geographical map",
-                "are videos",
-                "area",
-                "monuments",
-                "other relevant point",
-                "interest"
-            ]
-        },
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "images"
+        ],
         "Triggers": [
-            [
-                "user",
-                "walk"
-            ],
-            [
-                "user",
-                "access"
-            ]
+            "admin",
+            "detect"
         ],
         "Targets": [
-            [
-                "walk",
-                "around"
-            ],
-            [
-                "access",
-                "around"
-            ],
-            [
-                "walk",
-                "content"
-            ],
-            [
-                "access",
-                "content"
-            ]
+            "detect",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "detection"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "detection"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "features"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "features"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "prefiltering"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "prefiltering"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "number"
+        ],
+        "Triggers": [
+            "admin",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "number"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "piece"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "piece"
         ]
     },
     {
         "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should comment on a subject.",
         "Persona": [
-            "Zooniverse admin"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "comment"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "when"
-            ],
-            "Secondary Entity": [
-                "Zoonibot",
-                "subject"
-            ]
-        },
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "subject"
+        ],
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
+            "admin",
+            "know"
         ],
         "Targets": [
-            [
-                "know",
-                "when"
-            ]
+            "know",
+            "subject"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to search content items using automatic speech recognition.",
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.\t",
         "Persona": [
-            "user"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "search"
-            ],
-            "Secondary Action": [
-                "using"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "content items"
-            ],
-            "Secondary Entity": [
-                "automatic speech recognition"
-            ]
-        },
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "explanation"
+        ],
         "Triggers": [
-            [
-                "user",
-                "search"
-            ]
+            "admin",
+            "know"
         ],
         "Targets": [
-            [
-                "search",
-                "content items"
-            ]
+            "know",
+            "explanation"
         ]
     },
     {
-        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.",
+        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.\t",
         "Persona": [
-            "Zooniverse admin"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "perform"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "automatic animal number detection"
-            ],
-            "Secondary Entity": [
-                "Snapshot Serengeti"
-            ]
-        },
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summary"
+        ],
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "perform"
-            ]
+            "admin",
+            "see"
         ],
         "Targets": [
-            [
-                "perform",
-                "automatic animal number detection"
-            ]
+            "see",
+            "summary"
         ]
     }
 ]

@@ -1,38 +1,22 @@
 [
     {
-        "Text": "#G03# As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
+        "Text": "#G03# As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
         "Persona": [
-            "Staff member"
+            "Customer"
         ],
-        "Action": {
-            "Primary Action": [
-                "Manage"
-            ],
-            "Secondary Action": [
-                "ensure"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Affidavits"
-            ],
-            "Secondary Entity": [
-                "compliance",
-                "requirements",
-                "hearing"
-            ]
-        },
+        "Action": [
+            "Create"
+        ],
+        "Entity": [
+            "Account"
+        ],
         "Triggers": [
-            [
-                "Staff member",
-                "Manage"
-            ]
+            "Customer",
+            "Create"
         ],
         "Targets": [
-            [
-                "Manage",
-                "Affidavits"
-            ]
+            "Create",
+            "Account"
         ]
     },
     {
@@ -40,375 +24,139 @@
         "Persona": [
             "Applicant"
         ],
-        "Action": {
-            "Primary Action": [
-                "Pay"
-            ],
-            "Secondary Action": [
-                "satisfy",
-                "received"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Fee"
-            ],
-            "Secondary Entity": [
-                "outstanding charge",
-                "service requested",
-                "County"
-            ]
-        },
+        "Action": [
+            "Pay"
+        ],
+        "Entity": [
+            "Fee"
+        ],
         "Triggers": [
-            [
-                "Applicant",
-                "Pay"
-            ]
+            "Applicant",
+            "Pay"
         ],
         "Targets": [
-            [
-                "Pay",
-                "Fee"
-            ]
+            "Pay",
+            "Fee"
         ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.",
         "Persona": [
-            "Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Perform"
-            ],
-            "Secondary Action": [
-                "validate"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Completeness Review"
-            ],
-            "Secondary Entity": [
-                "application",
-                "eligible for further technical review"
-            ]
-        },
+        "Action": [
+            "Perform"
+        ],
+        "Entity": [
+            "Review"
+        ],
         "Triggers": [
-            [
-                "Staff member",
-                "Perform"
-            ]
+            "member",
+            "Perform"
         ],
         "Targets": [
-            [
-                "Perform",
-                "Completeness Review"
-            ]
+            "Perform",
+            "Review"
         ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.",
         "Persona": [
-            "Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Record"
-            ],
-            "Secondary Action": [
-                "share"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Internal Note"
-            ],
-            "Secondary Entity": [
-                "information",
-                "other Staff collaborating",
-                "record"
-            ]
-        },
+        "Action": [
+            "Record"
+        ],
+        "Entity": [
+            "Note"
+        ],
         "Triggers": [
-            [
-                "Staff member",
-                "Record"
-            ]
+            "member",
+            "Record"
         ],
         "Targets": [
-            [
-                "Record",
-                "Internal Note"
-            ]
+            "Record",
+            "Note"
         ]
     },
     {
-        "Text": "#G03# As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
+        "Text": "#G03# As a staff member, I want to denote an application with a Final Action status. So that I can finish it.",
         "Persona": [
-            "Zoning Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Process"
-            ],
-            "Secondary Action": [
-                "capture",
-                "send"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Requests"
-            ],
-            "Secondary Entity": [
-                "Zoning Information",
-                "response",
-                "request",
-                "system",
-                "communication",
-                "system",
-                "Applicant"
-            ]
-        },
+        "Action": [
+            "denote"
+        ],
+        "Entity": [
+            "application"
+        ],
         "Triggers": [
-            [
-                "Zoning Staff member",
-                "Process"
-            ]
+            "member",
+            "denote"
         ],
         "Targets": [
-            [
-                "Process",
-                "Requests"
-            ]
-        ]
-    },
-    {
-        "Text": "#G03# As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
-        "Persona": [
-            "Inspection Supervisor"
-        ],
-        "Action": {
-            "Primary Action": [
-                "Manage"
-            ],
-            "Secondary Action": [
-                "meet"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Inspector Workload"
-            ],
-            "Secondary Entity": [
-                "service level",
-                "quality requirements"
-            ]
-        },
-        "Triggers": [
-            [
-                "Inspection Supervisor",
-                "Manage"
-            ]
-        ],
-        "Targets": [
-            [
-                "Manage",
-                "Inspector Workload"
-            ]
-        ]
-    },
-    {
-        "Text": "#G03# As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
-        "Persona": [
-            "Applicant"
-        ],
-        "Action": {
-            "Primary Action": [
-                "Complete"
-            ],
-            "Secondary Action": [
-                "receive",
-                "posted",
-                "obtain"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Building Development Project"
-            ],
-            "Secondary Entity": [
-                "bond",
-                "occupancy"
-            ]
-        },
-        "Triggers": [
-            [
-                "Applicant",
-                "Complete"
-            ]
-        ],
-        "Targets": [
-            [
-                "Complete",
-                "Building Development Project"
-            ]
-        ]
-    },
-    {
-        "Text": "#G03# As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
-        "Persona": [
-            "Customer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "Create"
-            ],
-            "Secondary Action": [
-                "log",
-                "perform",
-                "require"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Customer Portal User Account"
-            ],
-            "Secondary Entity": [
-                "Customer Portal",
-                "transactions",
-                "user authentication"
-            ]
-        },
-        "Triggers": [
-            [
-                "Customer",
-                "Create"
-            ]
-        ],
-        "Targets": [
-            [
-                "Create",
-                "Customer Portal User Account"
-            ]
+            "denote",
+            "application"
         ]
     },
     {
         "Text": "#G03# As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.",
         "Persona": [
-            "Planning Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Evaluate"
-            ],
-            "Secondary Action": [
-                "complete",
-                "required"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Consistency"
-            ],
-            "Secondary Entity": [
-                "Comprehensive Plan",
-                "review",
-                "plan set",
-                "application"
-            ]
-        },
+        "Action": [
+            "Evaluate"
+        ],
+        "Entity": [
+            "Consistency"
+        ],
         "Triggers": [
-            [
-                "Planning Staff member",
-                "Evaluate"
-            ]
+            "member",
+            "Evaluate"
         ],
         "Targets": [
-            [
-                "Evaluate",
-                "Consistency"
-            ]
+            "Evaluate",
+            "Consistency"
         ]
     },
     {
-        "Text": "#G03# As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+        "Text": "#G03# As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
         "Persona": [
-            "Plan Review Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Assign"
-            ],
-            "Secondary Action": [
-                "ensure",
-                "assigned"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Plans"
-            ],
-            "Secondary Entity": [
-                "Review",
-                "plans",
-                "appropriate Plan Reviewer"
-            ]
-        },
+        "Action": [
+            "Process"
+        ],
+        "Entity": [
+            "Requests"
+        ],
         "Triggers": [
-            [
-                "Plan Review Staff member",
-                "Assign"
-            ]
+            "member",
+            "Process"
         ],
         "Targets": [
-            [
-                "Assign",
-                "Plans"
-            ]
+            "Process",
+            "Requests"
         ]
     },
     {
-        "Text": "#G03# As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+        "Text": "#G03# As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
         "Persona": [
-            "Plan Review Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Track"
-            ],
-            "Secondary Action": [
-                "ensure",
-                "completed",
-                "initiated such has"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Completion"
-            ],
-            "Secondary Entity": [
-                "Required Plan Reviews",
-                "plan review tasks",
-                "results",
-                "Applicant",
-                "downstream steps",
-                "final review",
-                "payment for permit issuance"
-            ]
-        },
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Affidavits"
+        ],
         "Triggers": [
-            [
-                "Plan Review Staff member",
-                "Track"
-            ]
+            "member",
+            "Manage"
         ],
         "Targets": [
-            [
-                "Track",
-                "Completion"
-            ]
+            "Manage",
+            "Affidavits"
         ]
     },
     {
@@ -416,126 +164,139 @@
         "Persona": [
             "Applicant"
         ],
-        "Action": {
-            "Primary Action": [
-                "Satisfy"
-            ],
-            "Secondary Action": [
-                "ensure"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Hearing Requirements"
-            ],
-            "Secondary Entity": [
-                "pre-hearing requirements",
-                "time",
-                "hearing"
-            ]
-        },
+        "Action": [
+            "Satisfy"
+        ],
+        "Entity": [
+            "System"
+        ],
         "Triggers": [
-            [
-                "Applicant",
-                "Satisfy"
-            ]
+            "Applicant",
+            "Satisfy"
         ],
         "Targets": [
-            [
-                "Satisfy",
-                "Hearing Requirements"
-            ]
+            "Satisfy",
+            "System"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Capture"
+        ],
+        "Entity": [
+            "Decision"
+        ],
+        "Triggers": [
+            "member",
+            "Capture"
+        ],
+        "Targets": [
+            "Capture",
+            "Decision"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Plans"
+        ],
+        "Triggers": [
+            "member",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Plans"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Track"
+        ],
+        "Entity": [
+            "Completion"
+        ],
+        "Triggers": [
+            "member",
+            "Track"
+        ],
+        "Targets": [
+            "Track",
+            "Completion"
         ]
     },
     {
         "Text": "#G03# As a Staff member, I want to Manage Bonds, so that I can track and manage bonds throughout the lifecycle of the project until release.",
         "Persona": [
-            "Staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "Manage",
-                "manage"
-            ],
-            "Secondary Action": [
-                "track"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Bonds",
-                "bonds"
-            ],
-            "Secondary Entity": [
-                "lifecycle",
-                "project until release"
-            ]
-        },
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Bonds"
+        ],
         "Triggers": [
-            [
-                "Staff member",
-                "Manage"
-            ],
-            [
-                "Staff member",
-                "manage"
-            ]
+            "member",
+            "Manage"
         ],
         "Targets": [
-            [
-                "Manage",
-                "Bonds"
-            ],
-            [
-                "manage",
-                "Bonds"
-            ],
-            [
-                "Manage",
-                "bonds"
-            ],
-            [
-                "manage",
-                "bonds"
-            ]
+            "Manage",
+            "Bonds"
         ]
     },
     {
-        "Text": "#G03# As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.",
+        "Text": "#G03# As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
         "Persona": [
-            "Staff member"
+            "Applicant"
         ],
-        "Action": {
-            "Primary Action": [
-                "create"
-            ],
-            "Secondary Action": [
-                "associate",
-                "address",
-                "recorded"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "condo unit"
-            ],
-            "Secondary Entity": [
-                "child parcel",
-                "condominiums",
-                "system"
-            ]
-        },
+        "Action": [
+            "Complete"
+        ],
+        "Entity": [
+            "Project"
+        ],
         "Triggers": [
-            [
-                "Staff member",
-                "create"
-            ]
+            "Applicant",
+            "Complete"
         ],
         "Targets": [
-            [
-                "create",
-                "condo unit"
-            ]
+            "Complete",
+            "Project"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Workload"
+        ],
+        "Triggers": [
+            "Supervisor",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Workload"
         ]
     },
     {
@@ -543,404 +304,39 @@
         "Persona": [
             "Inspector"
         ],
-        "Action": {
-            "Primary Action": [
-                "Conduct"
-            ],
-            "Secondary Action": [
-                "validate",
-                "provide"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Inspections"
-            ],
-            "Secondary Entity": [
-                "Customer compliance",
-                "code",
-                "regulations",
-                "results",
-                "inspection",
-                "Customer"
-            ]
-        },
+        "Action": [
+            "Conduct"
+        ],
+        "Entity": [
+            "Inspections"
+        ],
         "Triggers": [
-            [
-                "Inspector",
-                "Conduct"
-            ]
+            "Inspector",
+            "Conduct"
         ],
         "Targets": [
-            [
-                "Conduct",
-                "Inspections"
-            ]
+            "Conduct",
+            "Inspections"
         ]
     },
     {
-        "Text": "#G03# As a staff member, I want to denote an application with a Final Action status. So that I can finish it.",
+        "Text": "#G03# As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.",
         "Persona": [
-            "staff member"
+            "member"
         ],
-        "Action": {
-            "Primary Action": [
-                "denote"
-            ],
-            "Secondary Action": [
-                "finish"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "application"
-            ],
-            "Secondary Entity": [
-                "Final Action status"
-            ]
-        },
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "unit"
+        ],
         "Triggers": [
-            [
-                "staff member",
-                "denote"
-            ]
+            "member",
+            "create"
         ],
         "Targets": [
-            [
-                "denote",
-                "application"
-            ]
-        ]
-    },
-    {
-        "Text": "#G03# As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.",
-        "Persona": [
-            "Staff member"
-        ],
-        "Action": {
-            "Primary Action": [
-                "Capture"
-            ],
-            "Secondary Action": [
-                "enforce"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Hearing Decision"
-            ],
-            "Secondary Entity": [
-                "system"
-            ]
-        },
-        "Triggers": [
-            [
-                "Staff member",
-                "Capture"
-            ]
-        ],
-        "Targets": [
-            [
-                "Capture",
-                "Hearing Decision"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "map display"
-            ],
-            "Secondary Entity": [
-                "public recycling bins",
-                "area"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "map display"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "link"
-            ],
-            "Secondary Action": [
-                "get",
-                "forget"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "email account"
-            ],
-            "Secondary Entity": [
-                "profile",
-                "temporary password",
-                "case",
-                "own one"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "link"
-            ]
-        ],
-        "Targets": [
-            [
-                "link",
-                "email account"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "give"
-            ],
-            "Secondary Action": [
-                "receive",
-                "posted"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "email ID"
-            ],
-            "Secondary Entity": [
-                "notifications",
-                "new events"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "give"
-            ]
-        ],
-        "Targets": [
-            [
-                "give",
-                "email ID"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to be able to view the safe disposal events currently being organised around my area.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "safe disposal events"
-            ],
-            "Secondary Entity": [
-                "area"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "safe disposal events"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
-        "Persona": [
-            "company"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have",
-                "use"
-            ],
-            "Secondary Action": [
-                "upload",
-                "delete"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "website"
-            ],
-            "Secondary Entity": [
-                "stuff step",
-                "step"
-            ]
-        },
-        "Triggers": [
-            [
-                "company",
-                "have"
-            ],
-            [
-                "company",
-                "use"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "website"
-            ],
-            [
-                "use",
-                "website"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "add"
-            ],
-            "Secondary Action": [
-                "view"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "donation centers"
-            ],
-            "Secondary Entity": [
-                "favorites",
-                "profile"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "add"
-            ]
-        ],
-        "Targets": [
-            [
-                "add",
-                "donation centers"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "add",
-                "remove"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "recycling facilities"
-            ],
-            "Secondary Entity": [
-                "information",
-                "most recent information"
-            ]
-        },
-        "Triggers": [
-            [
-                "admin",
-                "add"
-            ],
-            [
-                "admin",
-                "remove"
-            ]
-        ],
-        "Targets": [
-            [
-                "add",
-                "recycling facilities"
-            ],
-            [
-                "remove",
-                "recycling facilities"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "contact"
-            ],
-            "Secondary Action": [
-                "give",
-                "ask"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "administrators"
-            ],
-            "Secondary Entity": [
-                "feedback",
-                "for help"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "contact"
-            ]
-        ],
-        "Targets": [
-            [
-                "contact",
-                "administrators"
-            ]
+            "create",
+            "unit"
         ]
     },
     {
@@ -948,183 +344,19 @@
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "click"
-            ],
-            "Secondary Action": [
-                "takes"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "address",
-                "new tab",
-                "Google Maps"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "click"
-            ]
+        "Action": [
+            "click"
         ],
-        "Targets": []
-    },
-    {
-        "Text": "#G04# As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
-        "Persona": [
-            "admin"
+        "Entity": [
+            "address"
         ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "fix",
-                "review"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "user error logs"
-            ],
-            "Secondary Entity": [
-                "issues",
-                "users",
-                "system"
-            ]
-        },
         "Triggers": [
-            [
-                "admin",
-                "view"
-            ]
+            "user",
+            "click"
         ],
         "Targets": [
-            [
-                "view",
-                "user error logs"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "monitors",
-                "have",
-                "know"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "dashboard",
-                "sites' statuses"
-            ],
-            "Secondary Entity": [
-                "sense",
-                "people",
-                "sites",
-                "service status"
-            ]
-        },
-        "Triggers": [
-            [
-                "admin",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "dashboard"
-            ],
-            [
-                "view",
-                "sites' statuses"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
-        "Persona": [
-            "superuser"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "view",
-                "visited"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "users' stats"
-            ],
-            "Secondary Entity": [
-                "real-time",
-                "users",
-                "recycling center information",
-                "their recyclable waste"
-            ]
-        },
-        "Triggers": [
-            [
-                "superuser",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "users' stats"
-            ]
-        ]
-    },
-    {
-        "Text": "#G04# As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "receive"
-            ],
-            "Secondary Action": [
-                "have",
-                "use"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "tempting rewards"
-            ],
-            "Secondary Entity": [
-                "reason",
-                "website"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "receive"
-            ]
-        ],
-        "Targets": [
-            [
-                "receive",
-                "tempting rewards"
-            ]
+            "click",
+            "address"
         ]
     },
     {
@@ -1132,49 +364,239 @@
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "select",
-                "get"
-            ],
-            "Secondary Action": [
-                "accept",
-                "find"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "different types"
-            ],
-            "Secondary Entity": [
-                "recyclable waste",
-                "list",
-                "facilities",
-                "type",
-                "opening hours",
-                "optimal route",
-                "schedule"
-            ]
-        },
+        "Action": [
+            "select"
+        ],
+        "Entity": [
+            "types"
+        ],
         "Triggers": [
-            [
-                "user",
-                "select"
-            ],
-            [
-                "user",
-                "get"
-            ]
+            "user",
+            "select"
         ],
         "Targets": [
-            [
-                "select",
-                "different types"
-            ],
-            [
-                "get",
-                "different types"
-            ]
+            "select",
+            "types"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "centers"
+        ],
+        "Triggers": [
+            "user",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "centers"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "give"
+        ],
+        "Entity": [
+            "ID"
+        ],
+        "Triggers": [
+            "user",
+            "give"
+        ],
+        "Targets": [
+            "give",
+            "ID"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "display"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "display"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "admin",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "dashboard"
+        ],
+        "Triggers": [
+            "admin",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "dashboard"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "rewards"
+        ],
+        "Triggers": [
+            "user",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "rewards"
+        ]
+    },
+    {
+        "Text": "#G04# As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+        "Persona": [
+            "company"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "website"
+        ],
+        "Triggers": [
+            "company",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "website"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "link"
+        ],
+        "Entity": [
+            "account"
+        ],
+        "Triggers": [
+            "user",
+            "link"
+        ],
+        "Targets": [
+            "link",
+            "account"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "contact"
+        ],
+        "Entity": [
+            "administrators"
+        ],
+        "Triggers": [
+            "user",
+            "contact"
+        ],
+        "Targets": [
+            "contact",
+            "administrators"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "logs"
+        ],
+        "Triggers": [
+            "admin",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "logs"
         ]
     },
     {
@@ -1182,34 +604,259 @@
         "Persona": [
             "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "onboard"
-            ],
-            "Secondary Action": [
-                "increase"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "recycling centers"
-            ],
-            "Secondary Entity": [
-                "platform",
-                "information accuracy"
-            ]
-        },
+        "Action": [
+            "onboard"
+        ],
+        "Entity": [
+            "centers"
+        ],
         "Triggers": [
-            [
-                "admin",
-                "onboard"
-            ]
+            "admin",
+            "onboard"
         ],
         "Targets": [
-            [
-                "onboard",
-                "recycling centers"
-            ]
+            "onboard",
+            "centers"
+        ]
+    },
+    {
+        "Text": "#G04# As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "stats"
+        ],
+        "Triggers": [
+            "superuser",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "stats"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to add campers, so that I can keep track of each individual camper.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "administrator",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to remove campers if they don't attend the camp anymore, so that I can keep the records organized.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "remove"
+        ],
+        "Entity": [
+            "campers"
+        ],
+        "Triggers": [
+            "administrator",
+            "remove"
+        ],
+        "Targets": [
+            "remove",
+            "campers"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to keep camper records from previous years, so that the amount of work I need to do is lowered. ",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "keep"
+        ],
+        "Entity": [
+            "records"
+        ],
+        "Triggers": [
+            "administrator",
+            "keep"
+        ],
+        "Targets": [
+            "keep",
+            "records"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to suspend a camper who had behavioral problems.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "suspend"
+        ],
+        "Entity": [
+            "camper"
+        ],
+        "Triggers": [
+            "administrator",
+            "suspend"
+        ],
+        "Targets": [
+            "suspend",
+            "camper"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to set a reminders related to specific tasks that has to be done.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "set"
+        ],
+        "Entity": [
+            "reminders"
+        ],
+        "Triggers": [
+            "administrator",
+            "set"
+        ],
+        "Targets": [
+            "set",
+            "reminders"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to create, modify rules that campers and camp workers has to follow.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "rules"
+        ],
+        "Triggers": [
+            "administrator",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "rules"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to store campers' emergency information in a database, so that I can easily notify the necessary parties in case of an emergency.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "store"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "store"
+        ],
+        "Targets": [
+            "store",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to store camper's immediate parent/guardian's information, so that I can easily call to notify them in case a grossly unacceptable behavior.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "store"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "store"
+        ],
+        "Targets": [
+            "store",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to delete tasks/activities I scheduled, so that I can keep the schedule clean of unneeded activities.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "delete"
+        ],
+        "Entity": [
+            "activities"
+        ],
+        "Triggers": [
+            "administrator",
+            "delete"
+        ],
+        "Targets": [
+            "delete",
+            "activities"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to modify a group's information, so that I can keep the groups up to date.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "modify"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "administrator",
+            "modify"
+        ],
+        "Targets": [
+            "modify",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be able to see only events for a specific group/groups on the event calendar, so that I can easily read the data on the calendar without too much clutter.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "administrator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "events"
         ]
     },
     {
@@ -1217,68 +864,19 @@
         "Persona": [
             "parent"
         ],
-        "Action": {
-            "Primary Action": [
-                "message"
-            ],
-            "Secondary Action": [
-                "voice",
-                "check"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "child's counselors"
-            ],
-            "Secondary Entity": [
-                "concerns",
-                "child's progress"
-            ]
-        },
+        "Action": [
+            "message"
+        ],
+        "Entity": [
+            "counselors"
+        ],
         "Triggers": [
-            [
-                "parent",
-                "message"
-            ]
+            "parent",
+            "message"
         ],
         "Targets": [
-            [
-                "message",
-                "child's counselors"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp worker, I'm able to report a camper to the manager with an inappropriate behavior.",
-        "Persona": [
-            "camp worker"
-        ],
-        "Action": {
-            "Primary Action": [
-                "report"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "camper"
-            ],
-            "Secondary Entity": [
-                "manager",
-                "inappropriate behavior"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp worker",
-                "report"
-            ]
-        ],
-        "Targets": [
-            [
-                "report",
-                "camper"
-            ]
+            "message",
+            "counselors"
         ]
     },
     {
@@ -1286,1232 +884,99 @@
         "Persona": [
             "parent"
         ],
-        "Action": {
-            "Primary Action": [
-                "share"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "photos"
-            ],
-            "Secondary Entity": [
-                "camp",
-                "child"
-            ]
-        },
+        "Action": [
+            "share"
+        ],
+        "Entity": [
+            "photos"
+        ],
         "Triggers": [
-            [
-                "parent",
-                "share"
-            ]
+            "parent",
+            "share"
         ],
         "Targets": [
-            [
-                "share",
-                "photos"
-            ]
+            "share",
+            "photos"
         ]
     },
     {
-        "Text": "#G12# As a camp administrator, I want to store campers' emergency information in a database, so that I can easily notify the necessary parties in case of an emergency.",
+        "Text": "#G12# As a camp worker, I'm able to report a camper to the manager with an inappropriate behavior.",
         "Persona": [
-            "camp administrator"
+            "worker"
         ],
-        "Action": {
-            "Primary Action": [
-                "store"
-            ],
-            "Secondary Action": [
-                "easily notify"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "campers' emergency information"
-            ],
-            "Secondary Entity": [
-                "database",
-                "necessary parties",
-                "case",
-                "emergency"
-            ]
-        },
+        "Action": [
+            "report"
+        ],
+        "Entity": [
+            "camper"
+        ],
         "Triggers": [
-            [
-                "camp administrator",
-                "store"
-            ]
+            "worker",
+            "report"
         ],
         "Targets": [
-            [
-                "store",
-                "campers' emergency information"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to create, modify rules that campers and camp workers has to follow.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "create"
-            ],
-            "Secondary Action": [
-                "follow"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "campers",
-                "camp workers"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "create"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to delete tasks/activities I scheduled, so that I can keep the schedule clean of unneeded activities.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "delete"
-            ],
-            "Secondary Action": [
-                "keep"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "tasks/activities"
-            ],
-            "Secondary Entity": [
-                "schedule clean of unneeded activities"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "delete"
-            ]
-        ],
-        "Targets": [
-            [
-                "delete",
-                "tasks/activities"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to store camper's immediate parent/guardian's information, so that I can easily call to notify them in case a grossly unacceptable behavior.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "store"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "camper's immediate parent"
-            ],
-            "Secondary Entity": [
-                "guardian",
-                "information",
-                "case",
-                "grossly unacceptable behavior"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "store"
-            ]
-        ],
-        "Targets": [
-            [
-                "store",
-                "camper's immediate parent"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to keep camper records from previous years, so that the amount of work I need to do is lowered.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "keep"
-            ],
-            "Secondary Action": [
-                "lowered"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "camper records"
-            ],
-            "Secondary Entity": [
-                "previous years",
-                "amount",
-                "work"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "keep"
-            ]
-        ],
-        "Targets": [
-            [
-                "keep",
-                "camper records"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to see only events for a specific group/groups on the event calendar, so that I can easily read the data on the calendar without too much clutter.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "easily read"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "only events"
-            ],
-            "Secondary Entity": [
-                "specific group/groups",
-                "event calendar",
-                "data",
-                "calendar without too much clutter"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "only events"
-            ]
+            "report",
+            "camper"
         ]
     },
     {
         "Text": "#G12# As a camp worker, I'm able to report a list of supplies to the manager that the camp is short of.",
         "Persona": [
-            "camp worker"
+            "worker"
         ],
-        "Action": {
-            "Primary Action": [
-                "report"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "list of supplies"
-            ],
-            "Secondary Entity": [
-                "manager",
-                "camp"
-            ]
-        },
+        "Action": [
+            "report"
+        ],
+        "Entity": [
+            "list"
+        ],
         "Triggers": [
-            [
-                "camp worker",
-                "report"
-            ]
+            "worker",
+            "report"
         ],
         "Targets": [
-            [
-                "report",
-                "list of supplies"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to set a reminders related to specific tasks that has to be done.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "set"
-            ],
-            "Secondary Action": [
-                "done"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "reminders related"
-            ],
-            "Secondary Entity": [
-                "specific tasks"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "set"
-            ]
-        ],
-        "Targets": [
-            [
-                "set",
-                "reminders related"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to suspend a camper who had behavioral problems.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "suspend"
-            ],
-            "Secondary Action": [
-                "had"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "camper"
-            ],
-            "Secondary Entity": [
-                "behavioral problems"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "suspend"
-            ]
-        ],
-        "Targets": [
-            [
-                "suspend",
-                "camper"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to modify a group's information, so that I can keep the groups up to date.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "modify"
-            ],
-            "Secondary Action": [
-                "keep"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "group's information"
-            ],
-            "Secondary Entity": [
-                "groups",
-                "date"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "modify"
-            ]
-        ],
-        "Targets": [
-            [
-                "modify",
-                "group's information"
-            ]
+            "report",
+            "list"
         ]
     },
     {
         "Text": "#G12# As a camp counselor, I want to be able to take attendance of my assigned kids, so that I can make ensure everybody is accounted for.",
         "Persona": [
-            "camp counselor"
+            "counselor"
         ],
-        "Action": {
-            "Primary Action": [
-                "take"
-            ],
-            "Secondary Action": [
-                "make",
-                "ensure",
-                "accounted"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "attendance"
-            ],
-            "Secondary Entity": [
-                "assigned kids"
-            ]
-        },
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "attendance"
+        ],
         "Triggers": [
-            [
-                "camp counselor",
-                "take"
-            ]
+            "counselor",
+            "take"
         ],
         "Targets": [
-            [
-                "take",
-                "attendance"
-            ]
+            "take",
+            "attendance"
         ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to add campers, so that I can keep track of each individual camper.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "add"
-            ],
-            "Secondary Action": [
-                "keep"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "campers"
-            ],
-            "Secondary Entity": [
-                "track",
-                "individual camper"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "add"
-            ]
-        ],
-        "Targets": [
-            [
-                "add",
-                "campers"
-            ]
-        ]
-    },
-    {
-        "Text": "#G12# As a camp administrator, I want to be able to remove campers if they don't attend the camp anymore, so that I can keep the records organized.",
-        "Persona": [
-            "camp administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "remove"
-            ],
-            "Secondary Action": [
-                "attend",
-                "keep"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "campers"
-            ],
-            "Secondary Entity": [
-                "records organized"
-            ]
-        },
-        "Triggers": [
-            [
-                "camp administrator",
-                "remove"
-            ]
-        ],
-        "Targets": [
-            [
-                "remove",
-                "campers"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a authenticateduser, I want to identify myself as and pay for a $350 company sponsorship, so that I can easily become a sponsor at this level without having to interface with badcamp personnel to get a sponsorship.",
-        "Persona": [
-            "authenticateduser"
-        ],
-        "Action": {
-            "Primary Action": [
-                "identify",
-                "pay"
-            ],
-            "Secondary Action": [
-                "easily become",
-                "interface",
-                "get"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "$350 company sponsorship",
-                "sponsor",
-                "level",
-                "badcamp personnel",
-                "sponsorship"
-            ]
-        },
-        "Triggers": [
-            [
-                "authenticateduser",
-                "identify"
-            ],
-            [
-                "authenticateduser",
-                "pay"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G21# As a administrator, I want to bulk approve sessions as accepted, so that I can save time.",
-        "Persona": [
-            "administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "bulk approve"
-            ],
-            "Secondary Action": [
-                "accepted",
-                "save"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "sessions"
-            ],
-            "Secondary Entity": [
-                "time"
-            ]
-        },
-        "Triggers": [
-            [
-                "administrator",
-                "bulk approve"
-            ]
-        ],
-        "Targets": [
-            [
-                "bulk approve",
-                "sessions"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a authenticateduser, I want to view the job board, so that I can look for an interesting Drupal gig!.",
-        "Persona": [
-            "authenticateduser"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "look"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "job board"
-            ],
-            "Secondary Entity": [
-                "interesting Drupal gig"
-            ]
-        },
-        "Triggers": [
-            [
-                "authenticateduser",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "job board"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a trainingcoordinator, I want to have an admin view where all trainee information is shown and can be filtered to show a single training session, so that I can see WTF is happening.",
-        "Persona": [
-            "trainingcoordinator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "shown",
-                "show",
-                "see",
-                "happening"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "admin view"
-            ],
-            "Secondary Entity": [
-                "trainee information",
-                "single training session",
-                "WTF"
-            ]
-        },
-        "Triggers": [
-            [
-                "trainingcoordinator",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "admin view"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to have a link on the home page to a list of training options, so that I can take training.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "take"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "link"
-            ],
-            "Secondary Entity": [
-                "home page",
-                "list of training options",
-                "training"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "link"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to see specific details on summits, so that I can learn more about the summit I'm interested in to see if it matches my interests, register for the event, and get day-of knowledge to help me get to the location.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "learn",
-                "matches",
-                "get",
-                "help"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "specific details"
-            ],
-            "Secondary Entity": [
-                "summits",
-                "summit",
-                "interests",
-                "event",
-                "day",
-                "knowledge",
-                "location"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "specific details"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a summit coordinator, I want to see a list of attendees signed up for my summit, so that I can communicate with my attendees by email prior to the event.",
-        "Persona": [
-            "summit coordinator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "communicate"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "list"
-            ],
-            "Secondary Entity": [
-                "attendees",
-                "summit",
-                "attendees",
-                "email",
-                "event"
-            ]
-        },
-        "Triggers": [
-            [
-                "summit coordinator",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "list"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to learn about posting jobs as a sponsor and contact the sponsorship person, so that I have the opportunty to post my job listing on the BADCamp site.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "learn",
-                "contact"
-            ],
-            "Secondary Action": [
-                "have",
-                "post",
-                "listing"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "about posting jobs",
-                "sponsorship person"
-            ],
-            "Secondary Entity": [
-                "sponsor",
-                "opportunty",
-                "job",
-                "BADCamp site"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "learn"
-            ],
-            [
-                "anonymoususer",
-                "contact"
-            ]
-        ],
-        "Targets": [
-            [
-                "learn",
-                "about posting jobs"
-            ],
-            [
-                "contact",
-                "about posting jobs"
-            ],
-            [
-                "learn",
-                "sponsorship person"
-            ],
-            [
-                "contact",
-                "sponsorship person"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to see a list of the sessions associated with sponsor attendees, so that I know where I can engage with this sponsor and where they are thought leaders.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "engage",
-                "thought"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "list"
-            ],
-            "Secondary Entity": [
-                "sessions associated with sponsor attendees",
-                "sponsor",
-                "leaders"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "list"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to receive a notification when sessions have been evaluated, so that I know whether I've been accepted or rejected.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "receive"
-            ],
-            "Secondary Action": [
-                "evaluated",
-                "accepted",
-                "rejected"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "notification when sessions"
-            ],
-            "Secondary Entity": []
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "receive"
-            ]
-        ],
-        "Targets": [
-            [
-                "receive",
-                "notification when sessions"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a sponsor, I want to post a job, so that I can hire top-tier Drupal talent.",
-        "Persona": [
-            "sponsor"
-        ],
-        "Action": {
-            "Primary Action": [
-                "post"
-            ],
-            "Secondary Action": [
-                "hire"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "job"
-            ],
-            "Secondary Entity": [
-                "top-tier Drupal talent"
-            ]
-        },
-        "Triggers": [
-            [
-                "sponsor",
-                "post"
-            ]
-        ],
-        "Targets": [
-            [
-                "post",
-                "job"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to sign up for the BADCamp newsletter, so that I can stay up to date with the latest communications about BADCamp.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "sign"
-            ],
-            "Secondary Action": [
-                "stay"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "BADCamp newsletter",
-                "date",
-                "latest communications",
-                "BADCamp"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "sign"
-            ]
-        ],
-        "Targets": []
     },
     {
         "Text": "#G21# As a trainee, I want to limit to one registration per day per authenticated user, so that we don't have duplicate spaces.",
         "Persona": [
             "trainee"
         ],
-        "Action": {
-            "Primary Action": [
-                "limit"
-            ],
-            "Secondary Action": [
-                "have"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "to one registration"
-            ],
-            "Secondary Entity": [
-                "day per authenticated user",
-                "duplicate spaces"
-            ]
-        },
+        "Action": [
+            "limit"
+        ],
+        "Entity": [
+            "registration"
+        ],
         "Triggers": [
-            [
-                "trainee",
-                "limit"
-            ]
+            "trainee",
+            "limit"
         ],
         "Targets": [
-            [
-                "limit",
-                "to one registration"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to have the training options clearly marked for the following information: day and time of training, title, short summary, trainers, level, number of registrations, remaining registrations, location of training, link to full details of the training, register now link, so that I can shop for training all with one page AND find their class on on one page.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "shop",
-                "training",
-                "find"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "training options"
-            ],
-            "Secondary Entity": [
-                "following information",
-                "day",
-                "time",
-                "training",
-                "title",
-                "short summary",
-                "trainers",
-                "level",
-                "number",
-                "registrations",
-                "remaining registrations",
-                "location",
-                "training",
-                "link",
-                "full details",
-                "training, register",
-                "link",
-                "with one page",
-                "their class on on one page"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "training options"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to find session information, so that I can go to a session.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "find"
-            ],
-            "Secondary Action": [
-                "go"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "session information"
-            ],
-            "Secondary Entity": [
-                "session"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "find"
-            ]
-        ],
-        "Targets": [
-            [
-                "find",
-                "session information"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a authenticateduser, I want to Be offered several choices of idividual sponsorship on the second page of registration, so that I can be awesome and financially support the camp.",
-        "Persona": [
-            "authenticateduser"
-        ],
-        "Action": {
-            "Primary Action": [
-                "Be"
-            ],
-            "Secondary Action": [
-                "financially support"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "offered several choices"
-            ],
-            "Secondary Entity": [
-                "idividual sponsorship",
-                "second page",
-                "registration",
-                "camp"
-            ]
-        },
-        "Triggers": [
-            [
-                "authenticateduser",
-                "Be"
-            ]
-        ],
-        "Targets": [
-            [
-                "Be",
-                "offered several choices"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to see the final list of sessions approved, so that I can see what's going on at BADCamp .",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "see"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "final list"
-            ],
-            "Secondary Entity": [
-                "sessions",
-                "BADCamp"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "final list"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a trainee, I want to add to \"my schedule\" if there is a schedule feature on the site, so that they can schedule their event experience.",
-        "Persona": [
-            "trainee"
-        ],
-        "Action": {
-            "Primary Action": [
-                "add"
-            ],
-            "Secondary Action": [
-                "schedule"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "schedule",
-                "schedule feature",
-                "site",
-                "event experience"
-            ]
-        },
-        "Triggers": [
-            [
-                "trainee",
-                "add"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G21# As a anonymoususer, I want to easily find a link in the menu that links to the registration form, so that I can easily register for the camp.",
-        "Persona": [
-            "anonymoususer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "easily find"
-            ],
-            "Secondary Action": [
-                "easily register"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "link"
-            ],
-            "Secondary Entity": [
-                "menu",
-                "registration form",
-                "camp"
-            ]
-        },
-        "Triggers": [
-            [
-                "anonymoususer",
-                "easily find"
-            ]
-        ],
-        "Targets": [
-            [
-                "easily find",
-                "link"
-            ]
-        ]
-    },
-    {
-        "Text": "#G21# As a administrator, I want to refund sponsorship money that was processed via stripe, so that people get their monies back.",
-        "Persona": [
-            "administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "refund"
-            ],
-            "Secondary Action": [
-                "processed"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "sponsorship money"
-            ],
-            "Secondary Entity": [
-                "stripe",
-                "monies"
-            ]
-        },
-        "Triggers": [
-            [
-                "administrator",
-                "refund"
-            ]
-        ],
-        "Targets": [
-            [
-                "refund",
-                "sponsorship money"
-            ]
+            "limit",
+            "registration"
         ]
     },
     {
@@ -2519,446 +984,439 @@
         "Persona": [
             "trainingcoordinator"
         ],
-        "Action": {
-            "Primary Action": [
-                "tie"
-            ],
-            "Secondary Action": [
-                "loose"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "cancellation deadline"
-            ],
-            "Secondary Entity": [
-                "registration",
-                "cancellation workflow",
-                "money",
-                "spots"
-            ]
-        },
+        "Action": [
+            "tie"
+        ],
+        "Entity": [
+            "deadline"
+        ],
         "Triggers": [
-            [
-                "trainingcoordinator",
-                "tie"
-            ]
+            "trainingcoordinator",
+            "tie"
         ],
         "Targets": [
-            [
-                "tie",
-                "cancellation deadline"
-            ]
+            "tie",
+            "deadline"
         ]
     },
     {
-        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.",
+        "Text": "#G21# As a trainee, I want to add to \"my schedule\" if there is a schedule feature on the site, so that they can schedule their event experience.",
         "Persona": [
-            "Zooniverse admin"
+            "trainee"
         ],
-        "Action": {
-            "Primary Action": [
-                "perform",
-                "remove"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "prefiltering",
-                "artefacts"
-            ],
-            "Secondary Entity": [
-                "images",
-                "bright stars",
-                "camera read errors"
-            ]
-        },
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "schedule"
+        ],
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "perform"
-            ],
-            [
-                "Zooniverse admin",
-                "remove"
-            ]
+            "trainee",
+            "add"
         ],
         "Targets": [
-            [
-                "perform",
-                "prefiltering"
-            ],
-            [
-                "remove",
-                "prefiltering"
-            ],
-            [
-                "perform",
-                "artefacts"
-            ],
-            [
-                "remove",
-                "artefacts"
-            ]
+            "add",
+            "schedule"
         ]
     },
     {
-        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.",
+        "Text": "#G21# As a trainingcoordinator, I want to have an admin view where all trainee information is shown and can be filtered to show a single training session, so that I can see WTF is happening.",
         "Persona": [
-            "admin"
+            "trainingcoordinator"
         ],
-        "Action": {
-            "Primary Action": [
-                "filter",
-                "rank"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "videos"
-            ],
-            "Secondary Entity": [
-                "A/V quality aspects"
-            ]
-        },
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "view"
+        ],
         "Triggers": [
-            [
-                "admin",
-                "filter"
-            ],
-            [
-                "admin",
-                "rank"
-            ]
+            "trainingcoordinator",
+            "have"
         ],
         "Targets": [
-            [
-                "filter",
-                "videos"
-            ],
-            [
-                "rank",
-                "videos"
-            ]
+            "have",
+            "view"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.",
+        "Text": "#G21# As a anonymoususer, I want to have the training options clearly marked for the following information: day and time of training, title, short summary, trainers, level, number of registrations, remaining registrations, location of training, link to full details of the training, register now link, so that I can shop for training all with one page AND find their class on on one page.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "options"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "options"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to have a link on the home page to a list of training options, so that I can take training.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "link"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "link"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to refund sponsorship money that was processed via stripe, so that people get their monies back.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "refund"
+        ],
+        "Entity": [
+            "money"
+        ],
+        "Triggers": [
+            "administrator",
+            "refund"
+        ],
+        "Targets": [
+            "refund",
+            "money"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to identify myself as and pay for a $350 company sponsorship, so that I can easily become a sponsor at this level without having to interface with badcamp personnel to get a sponsorship.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "myself"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "myself"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see a list of the sessions associated with sponsor attendees, so that I know where I can engage with this sponsor and where they are thought leaders.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to sign up for the BADCamp newsletter, so that I can stay up to date with the latest communications about BADCamp.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "sign"
+        ],
+        "Entity": [
+            "newsletter"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "sign"
+        ],
+        "Targets": [
+            "sign",
+            "newsletter"
+        ]
+    },
+    {
+        "Text": "#G21# As a summit coordinator, I want to see a list of attendees signed up for my summit, so that I can communicate with my attendees by email prior to the event.",
+        "Persona": [
+            "coordinator"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "coordinator",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see specific details on summits, so that I can learn more about the summit I'm interested in to see if it matches my interests, register for the event, and get day-of knowledge to help me get to the location.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "details"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "details"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to learn about posting jobs as a sponsor and contact the sponsorship person, so that I have the opportunty to post my job listing on the BADCamp site.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "learn"
+        ],
+        "Entity": [
+            "jobs"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "learn"
+        ],
+        "Targets": [
+            "learn",
+            "jobs"
+        ]
+    },
+    {
+        "Text": "#G21# As a sponsor, I want to post a job, so that I can hire top-tier Drupal talent.",
+        "Persona": [
+            "sponsor"
+        ],
+        "Action": [
+            "post"
+        ],
+        "Entity": [
+            "job"
+        ],
+        "Triggers": [
+            "sponsor",
+            "post"
+        ],
+        "Targets": [
+            "post",
+            "job"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to view the job board, so that I can look for an interesting Drupal gig!.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "board"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "board"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to see the final list of sessions approved, so that I can see what's going on at BADCamp .",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "list"
+        ]
+    },
+    {
+        "Text": "#G21# As a administrator, I want to bulk approve sessions as accepted, so that I can save time.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": [
+            "approve"
+        ],
+        "Entity": [
+            "sessions"
+        ],
+        "Triggers": [
+            "administrator",
+            "approve"
+        ],
+        "Targets": [
+            "approve",
+            "sessions"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to receive a notification when sessions have been evaluated, so that I know whether I've been accepted or rejected.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "notification"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "notification"
+        ]
+    },
+    {
+        "Text": "#G21# As a authenticateduser, I want to Be offered several choices of idividual sponsorship on the second page of registration, so that I can be awesome and financially support the camp.",
+        "Persona": [
+            "authenticateduser"
+        ],
+        "Action": [
+            "offered"
+        ],
+        "Entity": [
+            "choices"
+        ],
+        "Triggers": [
+            "authenticateduser",
+            "offered"
+        ],
+        "Targets": [
+            "offered",
+            "choices"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to easily find a link in the menu that links to the registration form, so that I can easily register for the camp.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "link"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "link"
+        ]
+    },
+    {
+        "Text": "#G21# As a anonymoususer, I want to find session information, so that I can go to a session.",
+        "Persona": [
+            "anonymoususer"
+        ],
+        "Action": [
+            "find"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "anonymoususer",
+            "find"
+        ],
+        "Targets": [
+            "find",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.\t",
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "search",
-                "discover"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "music"
-            ],
-            "Secondary Entity": [
-                "other users"
-            ]
-        },
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
         "Triggers": [
-            [
-                "user",
-                "search"
-            ],
-            [
-                "user",
-                "discover"
-            ]
+            "user",
+            "search"
         ],
         "Targets": [
-            [
-                "search",
-                "music"
-            ],
-            [
-                "discover",
-                "music"
-            ]
+            "search",
+            "music"
         ]
     },
     {
-        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "piece of education"
-            ],
-            "Secondary Entity": [
-                "volunteer"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": [
-            [
-                "know",
-                "piece of education"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "identify"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "number"
-            ],
-            "Secondary Entity": [
-                "whales",
-                "single audio file"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "identify"
-            ]
-        ],
-        "Targets": [
-            [
-                "identify",
-                "number"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "reuse"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "summary"
-            ],
-            "Secondary Entity": [
-                "articles"
-            ]
-        },
-        "Triggers": [
-            [
-                "admin",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "summary"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "interrupt"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "volunteer"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "give"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "Zoonibot",
-                "explanation"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.",
+        "Text": "#G28# As a user, I want to upload tagged videos and have tags available for all further processing steps.\t",
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "take",
-                "upload"
-            ],
-            "Secondary Action": [
-                "recommended"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "picture",
-                "image"
-            ],
-            "Secondary Entity": [
-                "videos",
-                "picture",
-                "image"
-            ]
-        },
+        "Action": [
+            "upload"
+        ],
+        "Entity": [
+            "videos"
+        ],
         "Triggers": [
-            [
-                "user",
-                "take"
-            ],
-            [
-                "user",
-                "upload"
-            ]
+            "user",
+            "upload"
         ],
         "Targets": [
-            [
-                "take",
-                "picture"
-            ],
-            [
-                "upload",
-                "picture"
-            ],
-            [
-                "take",
-                "image"
-            ],
-            [
-                "upload",
-                "image"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "automatically detect"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Snapshot Serengeti images"
-            ],
-            "Secondary Entity": [
-                "classifiable animals"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "automatically detect"
-            ]
-        ],
-        "Targets": [
-            [
-                "automatically detect",
-                "Snapshot Serengeti images"
-            ]
-        ]
-    },
-    {
-        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.",
-        "Persona": [
-            "Zooniverse admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "detect"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "important features"
-            ],
-            "Secondary Entity": [
-                "areas",
-                "flooding",
-                "damage",
-                "temporary shelters",
-                "satellite images"
-            ]
-        },
-        "Triggers": [
-            [
-                "Zooniverse admin",
-                "detect"
-            ]
-        ],
-        "Targets": [
-            [
-                "detect",
-                "important features"
-            ]
+            "upload",
+            "videos"
         ]
     },
     {
@@ -2966,271 +1424,319 @@
         "Persona": [
             "user"
         ],
-        "Action": {
-            "Primary Action": [
-                "receive"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "content recommendations"
-            ],
-            "Secondary Entity": [
-                "similar profiles"
-            ]
-        },
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "recommendations"
+        ],
         "Triggers": [
-            [
-                "user",
-                "receive"
-            ]
+            "user",
+            "receive"
         ],
         "Targets": [
-            [
-                "receive",
-                "content recommendations"
-            ]
+            "receive",
+            "recommendations"
         ]
     },
     {
-        "Text": "#G28# As an admin, I want to annotate news video segments and extract a topic for each segment.",
+        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "picture"
+        ],
+        "Triggers": [
+            "user",
+            "take"
+        ],
+        "Targets": [
+            "take",
+            "picture"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "walk"
+        ],
+        "Entity": [
+            "map"
+        ],
+        "Triggers": [
+            "user",
+            "walk"
+        ],
+        "Targets": [
+            "walk",
+            "map"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search content items using automatic speech recognition.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "items"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "items"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to annotate news video segments and extract a topic for each segment.\t",
         "Persona": [
             "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "annotate",
-                "extract"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "news video segments",
-                "topic"
-            ],
-            "Secondary Entity": [
-                "segment"
-            ]
-        },
+        "Action": [
+            "annotate"
+        ],
+        "Entity": [
+            "segments"
+        ],
         "Triggers": [
-            [
-                "admin",
-                "annotate"
-            ],
-            [
-                "admin",
-                "extract"
-            ]
+            "admin",
+            "annotate"
         ],
         "Targets": [
-            [
-                "annotate",
-                "news video segments"
-            ],
-            [
-                "extract",
-                "news video segments"
-            ],
-            [
-                "annotate",
-                "topic"
-            ],
-            [
-                "extract",
-                "topic"
-            ]
+            "annotate",
+            "segments"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to upload tagged videos and have tags available for all further processing steps.",
+        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.\t",
         "Persona": [
-            "user"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "upload",
-                "tagged",
-                "have"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "videos",
-                "tags available"
-            ],
-            "Secondary Entity": [
-                "further processing steps"
-            ]
-        },
+        "Action": [
+            "filter"
+        ],
+        "Entity": [
+            "aspects"
+        ],
         "Triggers": [
-            [
-                "user",
-                "upload"
-            ],
-            [
-                "user",
-                "tagged"
-            ],
-            [
-                "user",
-                "have"
-            ]
+            "admin",
+            "filter"
         ],
         "Targets": [
-            [
-                "upload",
-                "videos"
-            ],
-            [
-                "tagged",
-                "videos"
-            ],
-            [
-                "have",
-                "videos"
-            ],
-            [
-                "upload",
-                "tags available"
-            ],
-            [
-                "tagged",
-                "tags available"
-            ],
-            [
-                "have",
-                "tags available"
-            ]
+            "filter",
+            "aspects"
         ]
     },
     {
-        "Text": "#G28# As a user, I want to walk around, access content using a geographical map and be informed if there are videos covering the area, monuments or any other relevant point of interest.",
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
         "Persona": [
-            "user"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "walk around"
-            ],
-            "Secondary Action": [
-                "informed",
-                "are",
-                "covering"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "geographical map",
-                "videos",
-                "area, monuments",
-                "other relevant point",
-                "interest"
-            ]
-        },
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "images"
+        ],
         "Triggers": [
-            [
-                "user",
-                "walk around"
-            ]
+            "admin",
+            "detect"
         ],
-        "Targets": []
+        "Targets": [
+            "detect",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "detection"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "detection"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "features"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "features"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "prefiltering"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "prefiltering"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "number"
+        ],
+        "Triggers": [
+            "admin",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "number"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "piece"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "piece"
+        ]
     },
     {
         "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should comment on a subject.",
         "Persona": [
-            "Zooniverse admin"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "comment"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "Zoonibot",
-                "subject"
-            ]
-        },
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "subject"
+        ],
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "know"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G28# As a user, I want to search content items using automatic speech recognition.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "search"
-            ],
-            "Secondary Action": [
-                "using"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "content items"
-            ],
-            "Secondary Entity": [
-                "automatic speech recognition"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "search"
-            ]
+            "admin",
+            "know"
         ],
         "Targets": [
-            [
-                "search",
-                "content items"
-            ]
+            "know",
+            "subject"
         ]
     },
     {
-        "Text": "#G28# As a Zooniverse admin, I want to perform automatic animal number detection in Snapshot Serengeti.",
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.\t",
         "Persona": [
-            "Zooniverse admin"
+            "admin"
         ],
-        "Action": {
-            "Primary Action": [
-                "perform"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "automatic animal number detection"
-            ],
-            "Secondary Entity": [
-                "Snapshot Serengeti"
-            ]
-        },
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "explanation"
+        ],
         "Triggers": [
-            [
-                "Zooniverse admin",
-                "perform"
-            ]
+            "admin",
+            "know"
         ],
         "Targets": [
-            [
-                "perform",
-                "automatic animal number detection"
-            ]
+            "know",
+            "explanation"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summary"
+        ],
+        "Triggers": [
+            "admin",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "summary"
         ]
     }
 ]

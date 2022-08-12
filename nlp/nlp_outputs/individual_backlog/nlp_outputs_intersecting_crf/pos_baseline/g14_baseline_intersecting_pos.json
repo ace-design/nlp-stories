@@ -1,5 +1,825 @@
 [
     {
+        "PID": "#G14#",
+        "Text": "#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.",
+        "Persona": [
+            "Visitor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "sign up via"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "github",
+                "google"
+            ],
+            "Secondary Entity": [
+                "lots of information",
+                "password",
+                "another website"
+            ]
+        },
+        "Benefit": "I don't have to enter lots of information and remember my password for yet another website",
+        "Triggers": [
+            [
+                "Visitor",
+                "sign up via"
+            ]
+        ],
+        "Targets": [
+            [
+                "sign up via",
+                "github"
+            ],
+            [
+                "sign up via",
+                "google"
+            ]
+        ],
+        "Contains": [
+            [
+                "another website",
+                "password"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Visitor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP",
+                        "ADP"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "sign",
+                        "up",
+                        "via"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "github"
+                    ],
+                    [
+                        "google"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "lots",
+                        "of",
+                        "information"
+                    ],
+                    [
+                        "password"
+                    ],
+                    [
+                        "another",
+                        "website"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "permanently delete"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "storage space"
+            ]
+        },
+        "Benefit": "it no longer takes up storage space",
+        "Triggers": [
+            [
+                "Publisher",
+                "permanently delete"
+            ]
+        ],
+        "Targets": [
+            [
+                "permanently delete",
+                "data package"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "permanently",
+                        "delete"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "storage",
+                        "space"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "validate"
+            ],
+            "Secondary Action": [
+                "publish",
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data I am about to publish"
+            ],
+            "Secondary Entity": [
+                "registry",
+                "good data"
+            ]
+        },
+        "Benefit": "I publish good data and know that I am doing",
+        "Triggers": [
+            [
+                "Publisher",
+                "validate"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "good data"
+            ],
+            [
+                "validate",
+                "data I am about to publish"
+            ]
+        ],
+        "Contains": [
+            [
+                "registry",
+                "data I am about to publish"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "validate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "publish"
+                    ],
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "AUX",
+                        "ADJ",
+                        "PART",
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "I",
+                        "am",
+                        "about",
+                        "to",
+                        "publish"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "registry"
+                    ],
+                    [
+                        "good",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data I am downloading"
+            ],
+            "Secondary Entity": [
+                "annoying bugs"
+            ]
+        },
+        "Benefit": "I don't have to check it myself or run into annoying bugs later on",
+        "Triggers": [
+            [
+                "Consumer",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "data I am downloading"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "I",
+                        "am",
+                        "downloading"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "annoying",
+                        "bugs"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to publish a data package where its resource data is stored on my servers but the registry caches a copy of that data, so that that if my data is lost or gets broken I still have a copy people can use.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish"
+            ],
+            "Secondary Action": [
+                "stored",
+                "caches",
+                "lost",
+                "gets broken",
+                "still have",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "resource data",
+                "servers",
+                "registry",
+                "copy",
+                "data",
+                "data",
+                "copy",
+                "people"
+            ]
+        },
+        "Benefit": "if my data is lost or gets broken I still have a copy people can use",
+        "Triggers": [
+            [
+                "Publisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "data package"
+            ],
+            [
+                "caches",
+                "copy"
+            ],
+            [
+                "gets broken",
+                "data"
+            ],
+            [
+                "still have",
+                "copy"
+            ],
+            [
+                "use",
+                "copy"
+            ],
+            [
+                "stored",
+                "resource data"
+            ],
+            [
+                "lost",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "servers",
+                "resource data"
+            ],
+            [
+                "data package",
+                "resource data"
+            ],
+            [
+                "registry",
+                "copy"
+            ],
+            [
+                "copy",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "publish"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "AUX",
+                        "VERB"
+                    ],
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "stored"
+                    ],
+                    [
+                        "caches"
+                    ],
+                    [
+                        "lost"
+                    ],
+                    [
+                        "gets",
+                        "broken"
+                    ],
+                    [
+                        "still",
+                        "have"
+                    ],
+                    [
+                        "use"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "resource",
+                        "data"
+                    ],
+                    [
+                        "servers"
+                    ],
+                    [
+                        "registry"
+                    ],
+                    [
+                        "copy"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "copy"
+                    ],
+                    [
+                        "people"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "UI"
+            ]
+        },
+        "Benefit": "it is available and published",
+        "Triggers": [
+            [
+                "Publisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "data package"
+            ]
+        ],
+        "Contains": [
+            [
+                "UI",
+                "data package"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "publish"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "UI"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
         "Text": "#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.",
         "Persona": [
             "Publisher"
@@ -16,8 +836,11 @@
             "Primary Entity": [
                 "data package"
             ],
-            "Secondary Entity": []
+            "Secondary Entity": [
+                "UI"
+            ]
         },
+        "Benefit": "it is available and published",
         "Triggers": [
             [
                 "Publisher",
@@ -28,48 +851,87 @@
             [
                 "create",
                 "data package"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "validate"
             ],
-            "Secondary Action": [
-                "publish",
-                "publish good",
-                "know",
-                "doing"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data"
-            ],
-            "Secondary Entity": [
-                "registry",
-                "data"
-            ]
-        },
-        "Triggers": [
             [
-                "Publisher",
-                "validate"
+                "published",
+                "data package"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "validate",
-                "data"
+                "UI",
+                "data package"
             ]
-        ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "published"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "UI"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G14#",
         "Text": "#G14# As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.",
         "Persona": [
             "consumer"
@@ -79,7 +941,8 @@
                 "view"
             ],
             "Secondary Action": [
-                "get"
+                "get",
+                "want"
             ]
         },
         "Entity": {
@@ -91,6 +954,7 @@
                 "dataset"
             ]
         },
+        "Benefit": "I can get a sense of whether I want this dataset or not",
         "Triggers": [
             [
                 "consumer",
@@ -101,10 +965,1613 @@
             [
                 "view",
                 "data package"
+            ],
+            [
+                "get",
+                "sense"
+            ],
+            [
+                "want",
+                "dataset"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "view"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ],
+                    [
+                        "want"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "sense"
+                    ],
+                    [
+                        "dataset"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "preview"
+            ],
+            "Secondary Action": [
+                "check",
+                "works",
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datapackage I have prepared"
+            ],
+            "Secondary Entity": [
+                "results"
+            ]
+        },
+        "Benefit": "I can check it works and share the results",
+        "Triggers": [
+            [
+                "Publisher",
+                "preview"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "results"
+            ],
+            [
+                "preview",
+                "datapackage I have prepared"
+            ],
+            [
+                "check",
+                "datapackage I have prepared"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "preview"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "check"
+                    ],
+                    [
+                        "works"
+                    ],
+                    [
+                        "share"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "datapackage",
+                        "I",
+                        "have",
+                        "prepared"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "results"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "get",
+                "look further"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "some example data packages"
+            ],
+            "Secondary Entity": [
+                "site",
+                "sense",
+                "what"
+            ]
+        },
+        "Benefit": "I get a sense of what is on this site and if it is useful to look further",
+        "Triggers": [
+            [
+                "Consumer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "some example data packages"
+            ],
+            [
+                "get",
+                "sense"
+            ],
+            [
+                "look further",
+                "site"
+            ]
+        ],
+        "Contains": [
+            [
+                "site",
+                "what"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ],
+                    [
+                        "look",
+                        "further"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "some",
+                        "example",
+                        "data",
+                        "packages"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "site"
+                    ],
+                    [
+                        "sense"
+                    ],
+                    [
+                        "what"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "description"
+            ],
+            "Secondary Entity": [
+                "data package",
+                "package",
+                "some key words"
+            ]
+        },
+        "Benefit": "I can find package which related to some key words",
+        "Triggers": [
+            [
+                "Consumer",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "description"
+            ],
+            [
+                "find",
+                "package"
+            ]
+        ],
+        "Contains": [
+            [
+                "data package",
+                "description"
+            ],
+            [
+                "package",
+                "some key words"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "find"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "description"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ],
+                    [
+                        "package"
+                    ],
+                    [
+                        "some",
+                        "key",
+                        "words"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "download"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "one file",
+                "descriptor",
+                "each resource"
+            ]
+        },
+        "Benefit": "I don't have to download descriptor and each resource by hand",
+        "Triggers": [
+            [
+                "Consumer",
+                "download"
+            ]
+        ],
+        "Targets": [
+            [
+                "download",
+                "data package"
+            ]
+        ],
+        "Contains": [
+            [
+                "one file",
+                "data package"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "download"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NUM",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "one",
+                        "file"
+                    ],
+                    [
+                        "descriptor"
+                    ],
+                    [
+                        "each",
+                        "resource"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
+        "Persona": [
+            "Web Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "install"
+            ],
+            "Secondary Action": [
+                "developed independently",
+                "deployed locally"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "multiple versions"
+            ],
+            "Secondary Entity": [
+                "same datapackage",
+                "projects"
+            ]
+        },
+        "Benefit": "all my projects could be developed independently and deployed locally",
+        "Triggers": [
+            [
+                "Web Developer",
+                "install"
+            ]
+        ],
+        "Targets": [
+            [
+                "install",
+                "multiple versions"
+            ],
+            [
+                "deployed locally",
+                "projects"
+            ],
+            [
+                "developed independently",
+                "projects"
+            ]
+        ],
+        "Contains": [
+            [
+                "same datapackage",
+                "multiple versions"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Web",
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "install"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "developed",
+                        "independently"
+                    ],
+                    [
+                        "deployed",
+                        "locally"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "multiple",
+                        "versions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "same",
+                        "datapackage"
+                    ],
+                    [
+                        "projects"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "version"
+            ],
+            "Secondary Action": [
+                "keep",
+                "change"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "multiple versions",
+                "older versions",
+                "consumer systems",
+                "datapackage"
+            ]
+        },
+        "Benefit": "I do not break consumer systems when I change my datapackage",
+        "Triggers": [
+            [
+                "Publisher",
+                "version"
+            ]
+        ],
+        "Targets": [
+            [
+                "version",
+                "Data Package"
+            ],
+            [
+                "keep",
+                "multiple versions"
+            ],
+            [
+                "change",
+                "datapackage"
+            ]
+        ],
+        "Contains": [
+            [
+                "multiple versions",
+                "older versions"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "version"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "keep"
+                    ],
+                    [
+                        "change"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Package"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "multiple",
+                        "versions"
+                    ],
+                    [
+                        "older",
+                        "versions"
+                    ],
+                    [
+                        "consumer",
+                        "systems"
+                    ],
+                    [
+                        "datapackage"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                "decide",
+                "update"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "sense"
+            ],
+            "Secondary Entity": [
+                "age",
+                "datapackage"
+            ]
+        },
+        "Benefit": "I can decide if I should update or not",
+        "Triggers": [
+            [
+                "Consumer",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "sense"
+            ],
+            [
+                "update",
+                "datapackage"
+            ]
+        ],
+        "Contains": [
+            [
+                "datapackage",
+                "age"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "decide"
+                    ],
+                    [
+                        "update"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "sense"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "age"
+                    ],
+                    [
+                        "datapackage"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": [
+                "present",
+                "discuss"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Datapackage"
+            ],
+            "Secondary Entity": [
+                "particular version",
+                "particular data timeslice of interest",
+                "other people"
+            ]
+        },
+        "Benefit": "I can present/discuss the particular data timeslice of interest with other people",
+        "Triggers": [
+            [
+                "Consumer",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "Datapackage"
+            ],
+            [
+                "present",
+                "particular data timeslice of interest"
+            ],
+            [
+                "discuss",
+                "particular data timeslice of interest"
+            ]
+        ],
+        "Contains": [
+            [
+                "Datapackage",
+                "particular version"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "view"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "present"
+                    ],
+                    [
+                        "discuss"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Datapackage"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "particular",
+                        "version"
+                    ],
+                    [
+                        "particular",
+                        "data",
+                        "timeslice",
+                        "of",
+                        "interest"
+                    ],
+                    [
+                        "other",
+                        "people"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to be notified of changes to a package I care about, so that that I can check out what has changed and take action.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be notified"
+            ],
+            "Secondary Action": [
+                "check out",
+                "take action"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "changes"
+            ],
+            "Secondary Entity": [
+                "package I care about",
+                "what has changed"
+            ]
+        },
+        "Benefit": "I can check out what has changed and take action",
+        "Triggers": [
+            [
+                "Consumer",
+                "be notified"
+            ]
+        ],
+        "Targets": [
+            [
+                "be notified",
+                "changes"
+            ],
+            [
+                "check out",
+                "what has changed"
+            ]
+        ],
+        "Contains": [
+            [
+                "package I care about",
+                "changes"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "notified"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "check",
+                        "out"
+                    ],
+                    [
+                        "take",
+                        "action"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "changes"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PRON",
+                        "VERB",
+                        "ADP"
+                    ],
+                    [
+                        "PRON",
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "package",
+                        "I",
+                        "care",
+                        "about"
+                    ],
+                    [
+                        "what",
+                        "has",
+                        "changed"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Consumer, I want to see a publisher's profile, so that that I can discover their packages and get a sense of how active and good they are.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "discover",
+                "get"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "publisher's profile"
+            ],
+            "Secondary Entity": [
+                "packages",
+                "sense",
+                "how active and good"
+            ]
+        },
+        "Benefit": "I can discover their packages and get a sense of how active and good they are",
+        "Triggers": [
+            [
+                "Consumer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "publisher's profile"
+            ],
+            [
+                "discover",
+                "packages"
+            ],
+            [
+                "get",
+                "sense"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Consumer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "discover"
+                    ],
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PART",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "publisher",
+                        "'s",
+                        "profile"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "ADJ",
+                        "CCONJ",
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "packages"
+                    ],
+                    [
+                        "sense"
+                    ],
+                    [
+                        "how",
+                        "active",
+                        "and",
+                        "good"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.",
+        "Persona": [
+            "owner"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remove"
+            ],
+            "Secondary Action": [
+                "publish",
+                "modify"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "someone"
+            ],
+            "Secondary Entity": [
+                "membership",
+                "publisher",
+                "ability",
+                "data packages"
+            ]
+        },
+        "Benefit": "they no longer have ability to publish or modify my data packages",
+        "Triggers": [
+            [
+                "owner",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "remove",
+                "someone"
+            ],
+            [
+                "publish",
+                "data packages"
+            ],
+            [
+                "modify",
+                "data packages"
+            ]
+        ],
+        "Contains": [
+            [
+                "publisher",
+                "membership"
+            ],
+            [
+                "someone",
+                "membership"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "owner"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "remove"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "publish"
+                    ],
+                    [
+                        "modify"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "someone"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "membership"
+                    ],
+                    [
+                        "publisher"
+                    ],
+                    [
+                        "ability"
+                    ],
+                    [
+                        "data",
+                        "packages"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
         "Text": "#G14# As a Publisher, I want to have private data packages, so that I can share just with my team.",
         "Persona": [
             "Publisher"
@@ -125,6 +2592,7 @@
                 "team"
             ]
         },
+        "Benefit": "I can share just with my team",
         "Triggers": [
             [
                 "Publisher",
@@ -135,587 +2603,85 @@
             [
                 "have",
                 "private data packages"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
-        "Persona": [
-            "Web Developer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "install"
             ],
-            "Secondary Action": [
-                "developed",
-                "deployed locally"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "multiple versions"
-            ],
-            "Secondary Entity": [
-                "same datapackage",
-                "projects"
-            ]
-        },
-        "Triggers": [
             [
-                "Web Developer",
-                "install"
+                "share",
+                "private data packages"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "install",
-                "multiple versions"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "download"
-            ],
-            "Secondary Action": [
-                "download"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data package",
-                "resource"
-            ],
-            "Secondary Entity": [
-                "one file",
-                "descriptor",
-                "hand"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "download"
+                "team",
+                "private data packages"
             ]
         ],
-        "Targets": [
-            [
-                "download",
-                "data package"
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
             ],
-            [
-                "download",
-                "resource"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "permanently delete"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "data package",
-                "storage space"
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
             ]
         },
-        "Triggers": [
-            [
-                "Publisher",
-                "permanently delete"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "get"
-            ],
-            "Secondary Action": [
-                "downloaded",
-                "decide",
-                "update"
-            ]
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "share"
+                    ]
+                ]
+            }
         },
-        "Entity": {
-            "Primary Entity": [
-                "sense"
-            ],
-            "Secondary Entity": [
-                "age",
-                "datapackage"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "get"
-            ]
-        ],
-        "Targets": [
-            [
-                "get",
-                "sense"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "publish"
-            ],
-            "Secondary Action": [
-                "published"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data package"
-            ],
-            "Secondary Entity": [
-                "UI"
-            ]
-        },
-        "Triggers": [
-            [
-                "Publisher",
-                "publish"
-            ]
-        ],
-        "Targets": [
-            [
-                "publish",
-                "data package"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "present"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Datapackage"
-            ],
-            "Secondary Entity": [
-                "particular version",
-                "particular data timeslice",
-                "interest",
-                "other people"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "Datapackage"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "preview"
-            ],
-            "Secondary Action": [
-                "prepared",
-                "check"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "datapackage"
-            ],
-            "Secondary Entity": [
-                "results"
-            ]
-        },
-        "Triggers": [
-            [
-                "Publisher",
-                "preview"
-            ]
-        ],
-        "Targets": [
-            [
-                "preview",
-                "datapackage"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "search"
-            ],
-            "Secondary Action": [
-                "find"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "based on description"
-            ],
-            "Secondary Entity": [
-                "data package",
-                "package",
-                "key words"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "search"
-            ]
-        ],
-        "Targets": [
-            [
-                "search",
-                "based on description"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "look further"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "some example data"
-            ],
-            "Secondary Entity": [
-                "sense",
-                "site"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "some example data"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "version"
-            ],
-            "Secondary Action": [
-                "keep",
-                "including",
-                "change"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Data Package"
-            ],
-            "Secondary Entity": [
-                "older versions",
-                "consumer systems",
-                "datapackage"
-            ]
-        },
-        "Triggers": [
-            [
-                "Publisher",
-                "version"
-            ]
-        ],
-        "Targets": [
-            [
-                "version",
-                "Data Package"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to see a publisher's profile, so that that I can discover their packages and get a sense of how active and good they are.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "discover",
-                "get"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "publisher's profile"
-            ],
-            "Secondary Entity": [
-                "packages",
-                "sense"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "publisher's profile"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.",
-        "Persona": [
-            "Visitor"
-        ],
-        "Action": {
-            "Primary Action": [
-                "sign",
-                "enter"
-            ],
-            "Secondary Action": [
-                "remember"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "lots"
-            ],
-            "Secondary Entity": [
-                "information",
-                "password",
-                "website"
-            ]
-        },
-        "Triggers": [
-            [
-                "Visitor",
-                "sign"
-            ],
-            [
-                "Visitor",
-                "enter"
-            ]
-        ],
-        "Targets": [
-            [
-                "sign",
-                "lots"
-            ],
-            [
-                "enter",
-                "lots"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to publish a data package where its resource data is stored on my servers but the registry caches a copy of that data, so that that if my data is lost or gets broken I still have a copy people can use.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "publish"
-            ],
-            "Secondary Action": [
-                "broken",
-                "have",
-                "use"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data package"
-            ],
-            "Secondary Entity": [
-                "resource data",
-                "servers",
-                "registry",
-                "copy",
-                "data",
-                "data",
-                "copy people"
-            ]
-        },
-        "Triggers": [
-            [
-                "Publisher",
-                "publish"
-            ]
-        ],
-        "Targets": [
-            [
-                "publish",
-                "data package"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to be notified of changes to a package I care about, so that that I can check out what has changed and take action.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "be",
-                "notified"
-            ],
-            "Secondary Action": [
-                "check out",
-                "changed"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "changes",
-                "package",
-                "take action"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "be"
-            ],
-            [
-                "Consumer",
-                "notified"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G14# As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.",
-        "Persona": [
-            "owner"
-        ],
-        "Action": {
-            "Primary Action": [
-                "remove"
-            ],
-            "Secondary Action": [
-                "publish",
-                "modify"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "someone from membership"
-            ],
-            "Secondary Entity": [
-                "publisher",
-                "ability",
-                "data packages"
-            ]
-        },
-        "Triggers": [
-            [
-                "owner",
-                "remove"
-            ]
-        ],
-        "Targets": [
-            [
-                "remove",
-                "someone from membership"
-            ]
-        ]
-    },
-    {
-        "Text": "#G14# As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.",
-        "Persona": [
-            "Consumer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "know"
-            ],
-            "Secondary Action": [
-                "downloading",
-                "check",
-                "run"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "data",
-                "bugs"
-            ]
-        },
-        "Triggers": [
-            [
-                "Consumer",
-                "know"
-            ]
-        ],
-        "Targets": []
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "private",
+                        "data",
+                        "packages"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "team"
+                    ]
+                ]
+            }
+        }
     }
 ]

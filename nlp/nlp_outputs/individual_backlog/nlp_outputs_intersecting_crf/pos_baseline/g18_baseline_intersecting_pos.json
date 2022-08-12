@@ -1,424 +1,541 @@
 [
     {
-        "Text": "#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+        "PID": "#G18#",
+        "Text": "#G18# As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.",
+        "Persona": [
+            "system administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "run"
+            ],
+            "Secondary Action": [
+                "installs"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "script"
+            ],
+            "Secondary Entity": [
+                "Neurohub node",
+                "virgin Ubuntu operating system"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "system administrator,",
+                "run"
+            ]
+        ],
+        "Targets": [
+            [
+                "run",
+                "script"
+            ],
+            [
+                "installs",
+                "Neurohub node"
+            ]
+        ],
+        "Contains": [
+            [
+                "virgin Ubuntu operating system",
+                "Neurohub node"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "system",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "run"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "installs"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "script"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "PROPN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub",
+                        "node"
+                    ],
+                    [
+                        "virgin",
+                        "Ubuntu",
+                        "operating",
+                        "system"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
+        "Persona": [
+            "investigator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": [
+                "understand"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "acceptance test results"
+            ],
+            "Secondary Entity": [
+                "Neurohub node",
+                "how feature-complete"
+            ]
+        },
+        "Benefit": "I can understand how feature-complete the Neurohub node currently is",
+        "Triggers": [
+            [
+                "investigator",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "acceptance test results"
+            ],
+            [
+                "understand",
+                "how feature-complete"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "investigator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "view"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "understand"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "acceptance",
+                        "test",
+                        "results"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "NOUN",
+                        "PUNCT",
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub",
+                        "node"
+                    ],
+                    [
+                        "how",
+                        "feature",
+                        "-",
+                        "complete"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a file to this page.",
         "Persona": [
             "researcher"
         ],
         "Action": {
             "Primary Action": [
-                "have"
+                "create",
+                "attach"
             ],
             "Secondary Action": [
-                "protected",
-                "traced"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "data",
-                "point"
+                "log book page",
+                "file"
             ],
             "Secondary Entity": [
-                "modification",
-                "deletion",
-                "original data",
-                "experiment"
+                "experiment",
+                "page"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "researcher",
-                "have"
+                "create"
+            ],
+            [
+                "researcher",
+                "attach"
             ]
         ],
         "Targets": [
             [
-                "have",
-                "data"
-            ],
-            [
-                "have",
-                "point"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "draw"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "tables using HTML tags"
-            ],
-            "Secondary Entity": [
-                "part",
-                "content",
+                "create",
                 "log book page"
-            ]
-        },
-        "Triggers": [
+            ],
             [
-                "user",
-                "draw"
+                "attach",
+                "file"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "draw",
-                "tables using HTML tags"
+                "experiment",
+                "log book page"
+            ],
+            [
+                "page",
+                "file"
             ]
-        ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ],
+                    [
+                        "attach"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "log",
+                        "book",
+                        "page"
+                    ],
+                    [
+                        "file"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "experiment"
+                    ],
+                    [
+                        "page"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a directory that contains multiple files.",
         "Persona": [
             "researcher"
         ],
         "Action": {
             "Primary Action": [
-                "have"
+                "create",
+                "attach"
             ],
             "Secondary Action": [
-                "provide",
-                "better understand"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "system"
+                "log book page",
+                "directory"
             ],
             "Secondary Entity": [
-                "standard metadata",
-                "researchers",
-                "centre",
-                "each others",
-                "data"
+                "experiment",
+                "multiple files"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "researcher",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "system"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have",
-                "calculate"
-            ],
-            "Secondary Action": [
-                "edit"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "spreadsheet hosted",
-                "costs"
-            ],
-            "Secondary Entity": [
-                "Neurohub Web page",
-                "others",
-                "proposal"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "have"
-            ],
-            [
-                "user",
-                "calculate"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "spreadsheet hosted"
-            ],
-            [
-                "calculate",
-                "spreadsheet hosted"
-            ],
-            [
-                "have",
-                "costs"
-            ],
-            [
-                "calculate",
-                "costs"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "added"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "at least"
-            ],
-            "Secondary Entity": [
-                "meta data",
-                "automatically inserted when new data",
-                "system"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "at least"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to revert to an older version of an uploaded file.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "revert"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "older version",
-                "uploaded file"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "revert"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "associate",
-                "have"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "meta data",
-                "period"
-            ],
-            "Secondary Entity": [
-                "group",
-                "whole",
-                "point",
-                "bulk upload",
-                "suitable values",
-                "meta data"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "associate"
+                "create"
             ],
             [
                 "researcher",
-                "have"
+                "attach"
             ]
         ],
         "Targets": [
             [
-                "associate",
-                "meta data"
+                "create",
+                "log book page"
             ],
             [
-                "have",
-                "meta data"
-            ],
-            [
-                "associate",
-                "period"
-            ],
-            [
-                "have",
-                "period"
+                "attach",
+                "directory"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "experiment",
+                "log book page"
+            ],
+            [
+                "directory",
+                "multiple files"
+            ],
+            [
+                "log book page",
+                "directory"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ],
+                    [
+                        "attach"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "log",
+                        "book",
+                        "page"
+                    ],
+                    [
+                        "directory"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "experiment"
+                    ],
+                    [
+                        "multiple",
+                        "files"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "insert"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "ability"
-            ],
-            "Secondary Entity": [
-                "Greek symbols",
-                "logbook entries"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "ability"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "keeping",
-                "modified"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "electronic support"
-            ],
-            "Secondary Entity": [
-                "track",
-                "data sets",
-                "output",
-                "part",
-                "particular experiment"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "electronic support"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
-        "Persona": [
-            "release engineer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "configure",
-                "report"
-            ],
-            "Secondary Action": [
-                "automatically perform",
-                "execute",
-                "requiring"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "nightly builds",
-                "results"
-            ],
-            "Secondary Entity": [
-                "Neurohub installation",
-                "virgin operating system",
-                "tests",
-                "any manual input",
-                "interaction"
-            ]
-        },
-        "Triggers": [
-            [
-                "release engineer",
-                "configure"
-            ],
-            [
-                "release engineer",
-                "report"
-            ]
-        ],
-        "Targets": [
-            [
-                "configure",
-                "nightly builds"
-            ],
-            [
-                "report",
-                "nightly builds"
-            ],
-            [
-                "configure",
-                "results"
-            ],
-            [
-                "report",
-                "results"
-            ]
-        ]
-    },
-    {
+        "PID": "#G18#",
         "Text": "#G18# As a researcher, I want to upload files prior to having them attached to a log book page using a mapped network drive.",
         "Persona": [
             "researcher"
@@ -441,6 +558,7 @@
                 "mapped network drive"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "researcher",
@@ -451,249 +569,617 @@
             [
                 "upload",
                 "files"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
-            ],
-            "Secondary Action": [
-                "searched",
-                "understood"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "physiology images"
-            ],
-            "Secondary Entity": [
-                "standard meta data",
-                "data"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "physiology images"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As an investigator, I want to view the acceptance test results, so that I can understand how feature-complete the Neurohub node currently is.",
-        "Persona": [
-            "investigator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "view"
-            ],
-            "Secondary Action": [
-                "understand",
-                "currently is"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "acceptance test results",
-                "feature-complete"
-            ],
-            "Secondary Entity": [
-                "Neurohub node"
-            ]
-        },
-        "Triggers": [
-            [
-                "investigator",
-                "view"
-            ]
-        ],
-        "Targets": [
-            [
-                "view",
-                "acceptance test results"
             ],
             [
-                "view",
-                "feature-complete"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to associate together files involved in a experiment.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "associate"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
+                "attached",
                 "files"
             ],
-            "Secondary Entity": [
-                "experiment"
-            ]
-        },
-        "Triggers": [
             [
-                "user",
-                "associate"
+                "using",
+                "mapped network drive"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "associate",
+                "log book page",
                 "files"
             ]
-        ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "upload"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "attached"
+                    ],
+                    [
+                        "using"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "log",
+                        "book",
+                        "page"
+                    ],
+                    [
+                        "mapped",
+                        "network",
+                        "drive"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
+        "PID": "#G18#",
+        "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
+        "Persona": [
+            "release engineer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "configure"
+            ],
+            "Secondary Action": [
+                "automatically perform",
+                "execute",
+                "report"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "nightly builds"
+            ],
+            "Secondary Entity": [
+                "Neurohub installation",
+                "virgin operating system",
+                "tests",
+                "results",
+                "manual input",
+                "interaction"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "release engineer",
+                "configure"
+            ]
+        ],
+        "Targets": [
+            [
+                "configure",
+                "nightly builds"
+            ],
+            [
+                "automatically perform",
+                "Neurohub installation"
+            ]
+        ],
+        "Contains": [
+            [
+                "virgin operating system",
+                "Neurohub installation"
+            ],
+            [
+                "execute",
+                "tests"
+            ],
+            [
+                "report",
+                "results"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "VERB",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "release",
+                    "engineer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "configure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "automatically",
+                        "perform"
+                    ],
+                    [
+                        "execute"
+                    ],
+                    [
+                        "report"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "nightly",
+                        "builds"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub",
+                        "installation"
+                    ],
+                    [
+                        "virgin",
+                        "operating",
+                        "system"
+                    ],
+                    [
+                        "tests"
+                    ],
+                    [
+                        "results"
+                    ],
+                    [
+                        "manual",
+                        "input"
+                    ],
+                    [
+                        "interaction"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to assign bespoke information to a file dependent on its type.",
         "Persona": [
             "user"
         ],
         "Action": {
             "Primary Action": [
-                "either keep"
+                "assign"
             ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "logbook entry private",
-                "individuals",
-                "groups"
+            "Secondary Action": [
+                ""
             ]
         },
+        "Entity": {
+            "Primary Entity": [
+                "bespoke information"
+            ],
+            "Secondary Entity": [
+                "file",
+                "type"
+            ]
+        },
+        "Benefit": "",
         "Triggers": [
             [
                 "user",
-                "either keep"
+                "assign"
             ]
         ],
-        "Targets": []
+        "Targets": [
+            [
+                "assign",
+                "bespoke information"
+            ]
+        ],
+        "Contains": [
+            [
+                "file",
+                "bespoke information"
+            ],
+            [
+                "bespoke information",
+                "type"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "assign"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "bespoke",
+                        "information"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "file"
+                    ],
+                    [
+                        "type"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to make predicated links between files.",
         "Persona": [
             "user"
         ],
         "Action": {
             "Primary Action": [
-                "modify or branch"
+                "make"
             ],
             "Secondary Action": [
-                "retaining"
+                ""
             ]
         },
         "Entity": {
-            "Primary Entity": [],
+            "Primary Entity": [
+                "predicated links"
+            ],
             "Secondary Entity": [
-                "experimental protocol",
-                "original"
+                "files"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "user",
-                "modify or branch"
+                "make"
             ]
         ],
-        "Targets": []
+        "Targets": [
+            [
+                "make",
+                "predicated links"
+            ]
+        ],
+        "Contains": [
+            [
+                "files",
+                "predicated links"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "predicated",
+                        "links"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "files"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to revert to an older version of an uploaded file.",
         "Persona": [
-            "researcher"
+            "user"
         ],
         "Action": {
             "Primary Action": [
-                "have"
+                "revert to"
             ],
             "Secondary Action": [
-                "form",
-                "searched"
+                ""
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "ability"
+                "older version"
             ],
             "Secondary Entity": [
-                "links",
-                "objects",
-                "example File A",
-                "analysis",
-                "File B",
-                "data",
-                "type",
-                "association"
+                "uploaded file"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
-                "researcher",
-                "have"
+                "user",
+                "revert to"
             ]
         ],
         "Targets": [
             [
-                "have",
-                "ability"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
-        "Persona": [
-            "system administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "migrate"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data"
-            ],
-            "Secondary Entity": [
-                "older version",
-                "NeuroHub",
-                "current version"
-            ]
-        },
-        "Triggers": [
-            [
-                "system administrator",
-                "migrate"
+                "revert to",
+                "older version"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "migrate",
-                "data"
+                "uploaded file",
+                "older version"
             ]
-        ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "revert",
+                        "to"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "older",
+                        "version"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "uploaded",
+                        "file"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G18#",
         "Text": "#G18# As a user, I want to have a visual way of viewing particular files uploaded over a time period.",
         "Persona": [
             "user"
@@ -714,6 +1200,7 @@
                 "particular files"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "user",
@@ -724,10 +1211,1660 @@
             [
                 "have",
                 "visual way"
+            ],
+            [
+                "viewing",
+                "particular files"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "viewing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "visual",
+                        "way"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "particular",
+                        "files"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to associate together files involved in a experiment.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "associate together"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "files"
+            ],
+            "Secondary Entity": [
+                "experiment"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "associate together"
+            ]
+        ],
+        "Targets": [
+            [
+                "associate together",
+                "files"
+            ]
+        ],
+        "Contains": [
+            [
+                "experiment",
+                "files"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "associate",
+                        "together"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "experiment"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to modify or branch an experimental protocol, whilst retaining the original.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "modify",
+                "branch"
+            ],
+            "Secondary Action": [
+                "retaining"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "experimental protocol"
+            ],
+            "Secondary Entity": [
+                "original"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "modify"
+            ],
+            [
+                "user",
+                "branch"
+            ]
+        ],
+        "Targets": [
+            [
+                "branch",
+                "experimental protocol"
+            ],
+            [
+                "modify",
+                "experimental protocol"
+            ],
+            [
+                "retaining",
+                "original"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "modify"
+                    ],
+                    [
+                        "branch"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "retaining"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "experimental",
+                        "protocol"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "original"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to see the provenance of the page as part of the search results.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "provenance"
+            ],
+            "Secondary Entity": [
+                "search results",
+                "page"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "provenance"
+            ]
+        ],
+        "Contains": [
+            [
+                "page",
+                "provenance"
+            ],
+            [
+                "search results",
+                "provenance"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "provenance"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "search",
+                        "results"
+                    ],
+                    [
+                        "page"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to draw tables using HTML tags as part of the content of a log book page.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "draw"
+            ],
+            "Secondary Action": [
+                "using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tables"
+            ],
+            "Secondary Entity": [
+                "HTML tags",
+                "content",
+                "log book page"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "draw"
+            ]
+        ],
+        "Targets": [
+            [
+                "draw",
+                "tables"
+            ],
+            [
+                "using",
+                "HTML tags"
+            ]
+        ],
+        "Contains": [
+            [
+                "log book page",
+                "content"
+            ],
+            [
+                "content",
+                "tables"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "draw"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "using"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "tables"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "HTML",
+                        "tags"
+                    ],
+                    [
+                        "content"
+                    ],
+                    [
+                        "log",
+                        "book",
+                        "page"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
+        "Persona": [
+            "system administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "migrate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "older version",
+                "NeuroHub",
+                "current version"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "system administrator",
+                "migrate"
+            ]
+        ],
+        "Targets": [
+            [
+                "migrate",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "NeuroHub",
+                "older version"
+            ],
+            [
+                "older version",
+                "data"
+            ],
+            [
+                "NeuroHub",
+                "current version"
+            ],
+            [
+                "current version",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "system",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "migrate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "older",
+                        "version"
+                    ],
+                    [
+                        "NeuroHub"
+                    ],
+                    [
+                        "current",
+                        "version"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to have a spreadsheet hosted within the Neurohub Web page, so that I can edit and calculate costs collaboratively with others while working on the proposal.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "edit",
+                "calculate",
+                "working"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "spreadsheet"
+            ],
+            "Secondary Entity": [
+                "Neurohub Web page",
+                "costs",
+                "others",
+                "proposal"
+            ]
+        },
+        "Benefit": "I can edit and calculate costs collaboratively with others while working on the proposal",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "spreadsheet"
+            ],
+            [
+                "edit",
+                "costs"
+            ],
+            [
+                "calculate",
+                "costs"
+            ],
+            [
+                "working",
+                "proposal"
+            ]
+        ],
+        "Contains": [
+            [
+                "Neurohub Web page",
+                "spreadsheet"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "edit"
+                    ],
+                    [
+                        "calculate"
+                    ],
+                    [
+                        "working"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "spreadsheet"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub",
+                        "Web",
+                        "page"
+                    ],
+                    [
+                        "costs"
+                    ],
+                    [
+                        "others"
+                    ],
+                    [
+                        "proposal"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
+        "Persona": [
+            "supervisor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "fill",
+                "submit",
+                "provide"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "feedback forms"
+            ],
+            "Secondary Entity": [
+                "Neurohub",
+                "students",
+                "feedback",
+                "course"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "supervisor",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "feedback forms"
+            ],
+            [
+                "fill",
+                "feedback forms"
+            ],
+            [
+                "submit",
+                "feedback forms"
+            ],
+            [
+                "provide",
+                "feedback"
+            ]
+        ],
+        "Contains": [
+            [
+                "Neurohub",
+                "feedback forms"
+            ],
+            [
+                "course",
+                "feedback"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "supervisor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fill"
+                    ],
+                    [
+                        "submit"
+                    ],
+                    [
+                        "provide"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "feedback",
+                        "forms"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub"
+                    ],
+                    [
+                        "students"
+                    ],
+                    [
+                        "feedback"
+                    ],
+                    [
+                        "course"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to have the option to tell Neurohub to push posted content to my Twitter feed at the same time.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "tell",
+                "push"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "option"
+            ],
+            "Secondary Entity": [
+                "Neurohub",
+                "posted content",
+                "Twitter feed"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "option"
+            ],
+            [
+                "tell",
+                "Neurohub"
+            ],
+            [
+                "push",
+                "posted content"
+            ]
+        ],
+        "Contains": [
+            [
+                "Twitter feed",
+                "posted content"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "tell"
+                    ],
+                    [
+                        "push"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "option"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Neurohub"
+                    ],
+                    [
+                        "posted",
+                        "content"
+                    ],
+                    [
+                        "Twitter",
+                        "feed"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to either keep a logbook entry private or share it with individuals rather than groups.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "either keep"
+            ],
+            "Secondary Action": [
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "logbook entry"
+            ],
+            "Secondary Entity": [
+                "individuals",
+                "groups"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "either keep"
+            ]
+        ],
+        "Targets": [
+            [
+                "either keep",
+                "logbook entry"
+            ],
+            [
+                "share",
+                "logbook entry"
+            ]
+        ],
+        "Contains": [
+            [
+                "individuals",
+                "logbook entry"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "DET",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "either",
+                        "keep"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "share"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "logbook",
+                        "entry"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "individuals"
+                    ],
+                    [
+                        "groups"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a user, I want to have the details of the workflow execution to be recorded in a neurohub log book while executing a workflow.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "recorded",
+                "executing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "details"
+            ],
+            "Secondary Entity": [
+                "workflow execution",
+                "neurohub log book",
+                "workflow"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "details"
+            ],
+            [
+                "recorded",
+                "details"
+            ],
+            [
+                "executing",
+                "workflow"
+            ]
+        ],
+        "Contains": [
+            [
+                "workflow execution",
+                "details"
+            ],
+            [
+                "neurohub log book",
+                "details"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "recorded"
+                    ],
+                    [
+                        "executing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "details"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "workflow",
+                        "execution"
+                    ],
+                    [
+                        "neurohub",
+                        "log",
+                        "book"
+                    ],
+                    [
+                        "workflow"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have the ability to insert Greek symbols into my logbook entries.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "insert"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ability"
+            ],
+            "Secondary Entity": [
+                "Greek symbols",
+                "logbook entries"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ],
+            [
+                "insert",
+                "Greek symbols"
+            ]
+        ],
+        "Contains": [
+            [
+                "logbook entries",
+                "Greek symbols"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "insert"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ability"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Greek",
+                        "symbols"
+                    ],
+                    [
+                        "logbook",
+                        "entries"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have electronic support for keeping track of which data sets were used/output/modified as part of a particular experiment.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "keeping track"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "electronic support"
+            ],
+            "Secondary Entity": [
+                "data sets",
+                "particular experiment"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "electronic support"
+            ],
+            [
+                "keeping track",
+                "data sets"
+            ]
+        ],
+        "Contains": [
+            [
+                "particular experiment",
+                "data sets"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "keeping",
+                        "track"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "electronic",
+                        "support"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data",
+                        "sets"
+                    ],
+                    [
+                        "particular",
+                        "experiment"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
         "Text": "#G18# As a researcher, I want to have a timeline display of multiple data files and their associated images, so that I can compare the data taken from experiments on particular dates.",
         "Persona": [
             "researcher"
@@ -742,16 +2879,17 @@
         },
         "Entity": {
             "Primary Entity": [
-                "timeline display",
-                "associated images"
+                "timeline display"
             ],
             "Secondary Entity": [
                 "multiple data files",
+                "associated images",
                 "data",
                 "experiments",
                 "particular dates"
             ]
         },
+        "Benefit": "I can compare the data taken from experiments on particular dates",
         "Triggers": [
             [
                 "researcher",
@@ -764,228 +2902,1121 @@
                 "timeline display"
             ],
             [
-                "have",
+                "compare",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "multiple data files",
+                "timeline display"
+            ],
+            [
+                "multiple data files",
                 "associated images"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to assign bespoke information to a file dependent on its type.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "assign"
             ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "bespoke information"
-            ],
-            "Secondary Entity": [
-                "file",
-                "type"
-            ]
-        },
-        "Triggers": [
             [
-                "user",
-                "assign"
+                "experiments",
+                "data"
+            ],
+            [
+                "associated images",
+                "timeline display"
             ]
         ],
-        "Targets": [
-            [
-                "assign",
-                "bespoke information"
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
             ]
-        ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "compare"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "timeline",
+                        "display"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "multiple",
+                        "data",
+                        "files"
+                    ],
+                    [
+                        "associated",
+                        "images"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "experiments"
+                    ],
+                    [
+                        "particular",
+                        "dates"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a file to this page.",
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have the system to provide standard metadata, that all researchers in the centre (and beyond) can use, so that we can better understand each others' data.",
         "Persona": [
             "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "create"
-            ],
-            "Secondary Action": [
-                "attach"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "log book page",
-                "file"
-            ],
-            "Secondary Entity": [
-                "experiment",
-                "page"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "create"
-            ]
-        ],
-        "Targets": [
-            [
-                "create",
-                "log book page"
-            ],
-            [
-                "create",
-                "file"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to see the provenance of the page as part of the search results.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "provenance"
-            ],
-            "Secondary Entity": [
-                "page",
-                "part",
-                "search results"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "provenance"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a researcher, I want to create a log book page for an experiment and attach a directory that contains multiple files.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "create"
-            ],
-            "Secondary Action": [
-                "attach",
-                "contains"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "log book page",
-                "directory"
-            ],
-            "Secondary Entity": [
-                "experiment",
-                "multiple files"
-            ]
-        },
-        "Triggers": [
-            [
-                "researcher",
-                "create"
-            ]
-        ],
-        "Targets": [
-            [
-                "create",
-                "log book page"
-            ],
-            [
-                "create",
-                "directory"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to have the option to tell Neurohub to push posted content to my Twitter feed at the same time.",
-        "Persona": [
-            "user"
         ],
         "Action": {
             "Primary Action": [
                 "have"
             ],
             "Secondary Action": [
-                "tell",
-                "push",
-                "posted"
+                "provide",
+                "use",
+                "better understand"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "option"
+                "system"
             ],
             "Secondary Entity": [
-                "Neurohub",
-                "content",
-                "Twitter feed"
+                "standard metadata",
+                "all researchers",
+                "centre",
+                "others' data"
             ]
         },
+        "Benefit": "we can better understand each others' data",
         "Triggers": [
             [
-                "user",
+                "researcher",
                 "have"
             ]
         ],
         "Targets": [
             [
                 "have",
-                "option"
+                "system"
+            ],
+            [
+                "provide",
+                "standard metadata"
+            ],
+            [
+                "use",
+                "standard metadata"
+            ],
+            [
+                "better understand",
+                "others' data"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "centre",
+                "all researchers"
+            ],
+            [
+                "system",
+                "standard metadata"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "provide"
+                    ],
+                    [
+                        "use"
+                    ],
+                    [
+                        "better",
+                        "understand"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "system"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "PART",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "standard",
+                        "metadata"
+                    ],
+                    [
+                        "all",
+                        "researchers"
+                    ],
+                    [
+                        "centre"
+                    ],
+                    [
+                        "others",
+                        "'",
+                        "data"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have physiology images to be annotated with standard meta data, so that my data can later be searched for and understood.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "annotated",
+                "searched",
+                "understood"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "physiology images"
+            ],
+            "Secondary Entity": [
+                "standard meta data",
+                "data"
+            ]
+        },
+        "Benefit": "my data can later be searched for and understood",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "physiology images"
+            ],
+            [
+                "annotated",
+                "physiology images"
+            ],
+            [
+                "searched",
+                "data"
+            ],
+            [
+                "understood",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "physiology images",
+                "standard meta data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "annotated"
+                    ],
+                    [
+                        "searched"
+                    ],
+                    [
+                        "understood"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "physiology",
+                        "images"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "standard",
+                        "meta",
+                        "data"
+                    ],
+                    [
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have at least some meta data to be automatically inserted when new data is added to the system.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "automatically inserted",
+                "added"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "some meta data"
+            ],
+            "Secondary Entity": [
+                "new data",
+                "system"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "some meta data"
+            ],
+            [
+                "automatically inserted",
+                "some meta data"
+            ],
+            [
+                "added",
+                "new data"
+            ]
+        ],
+        "Contains": [
+            [
+                "system",
+                "new data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "automatically",
+                        "inserted"
+                    ],
+                    [
+                        "added"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "some",
+                        "meta",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "data"
+                    ],
+                    [
+                        "system"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have the ability to form links between objects, for example File A is an analysis of File B, so that data can be searched by type and by association.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "form",
+                "searched"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ability"
+            ],
+            "Secondary Entity": [
+                "links",
+                "objects",
+                "File A",
+                "analysis",
+                "File B",
+                "data",
+                "type",
+                "association"
+            ]
+        },
+        "Benefit": "data can be searched by type and by association",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ],
+            [
+                "form",
+                "links"
+            ],
+            [
+                "searched",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "objects",
+                "links"
+            ],
+            [
+                "data",
+                "type"
+            ],
+            [
+                "data",
+                "association"
+            ],
+            [
+                "File B",
+                "analysis"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "form"
+                    ],
+                    [
+                        "searched"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ability"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "links"
+                    ],
+                    [
+                        "objects"
+                    ],
+                    [
+                        "File",
+                        "A"
+                    ],
+                    [
+                        "analysis"
+                    ],
+                    [
+                        "File",
+                        "B"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "type"
+                    ],
+                    [
+                        "association"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have any data that I have written to the VRE to be protected from modification or deletion, so that original data can always be traced back to an experiment and a point in time.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "protected",
+                "traced back"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "any data"
+            ],
+            "Secondary Entity": [
+                "VRE",
+                "modification",
+                "deletion",
+                "original data",
+                "experiment"
+            ]
+        },
+        "Benefit": "original data can always be traced back to an experiment and a point in time",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "any data"
+            ],
+            [
+                "protected",
+                "any data"
+            ],
+            [
+                "traced back",
+                "original data"
+            ]
+        ],
+        "Contains": [
+            [
+                "VRE",
+                "any data"
+            ],
+            [
+                "experiment",
+                "original data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "protected"
+                    ],
+                    [
+                        "traced",
+                        "back"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "any",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "VRE"
+                    ],
+                    [
+                        "modification"
+                    ],
+                    [
+                        "deletion"
+                    ],
+                    [
+                        "original",
+                        "data"
+                    ],
+                    [
+                        "experiment"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to associate meta data to the group as a whole at some point in time after the bulk upload has completed, so that I have a period of time to reflect on suitable values for the meta data.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "associate"
+            ],
+            "Secondary Action": [
+                "completed",
+                "have",
+                "reflect"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "meta data"
+            ],
+            "Secondary Entity": [
+                "group",
+                "bulk upload",
+                "period of time",
+                "suitable values",
+                "meta data"
+            ]
+        },
+        "Benefit": "I have a period of time to reflect on suitable values for the meta data",
+        "Triggers": [
+            [
+                "researcher",
+                "associate"
+            ]
+        ],
+        "Targets": [
+            [
+                "associate",
+                "meta data"
+            ],
+            [
+                "completed",
+                "bulk upload"
+            ],
+            [
+                "have",
+                "period of time"
+            ],
+            [
+                "reflect",
+                "suitable values"
+            ]
+        ],
+        "Contains": [
+            [
+                "meta data",
+                "suitable values"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "associate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "completed"
+                    ],
+                    [
+                        "have"
+                    ],
+                    [
+                        "reflect"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "meta",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "VERB"
+                    ],
+                    [
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "group"
+                    ],
+                    [
+                        "bulk",
+                        "upload"
+                    ],
+                    [
+                        "period",
+                        "of",
+                        "time"
+                    ],
+                    [
+                        "suitable",
+                        "values"
+                    ],
+                    [
+                        "meta",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
         "Text": "#G18# As a researcher,  I want to have the ability to locate and access data that colleagues want to share.",
         "Persona": [
             "researcher"
         ],
         "Action": {
             "Primary Action": [
-                "have",
-                "access"
+                "have"
             ],
             "Secondary Action": [
-                "locate"
+                "locate",
+                "access"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "ability",
-                "data"
+                "ability"
             ],
             "Secondary Entity": [
+                "data",
                 "colleagues"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
                 "researcher",
                 "have"
-            ],
-            [
-                "researcher",
-                "access"
             ]
         ],
         "Targets": [
@@ -994,20 +4025,99 @@
                 "ability"
             ],
             [
-                "access",
-                "ability"
-            ],
-            [
-                "have",
+                "locate",
                 "data"
             ],
             [
                 "access",
                 "data"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "colleagues",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "locate"
+                    ],
+                    [
+                        "access"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ability"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ],
+                    [
+                        "colleagues"
+                    ]
+                ]
+            }
+        }
     },
     {
+        "PID": "#G18#",
         "Text": "#G18# As a JuniorResearcher,  I want to have the ability to harvest knowledge from within the group, so that I can learn from more experienced researchers.",
         "Persona": [
             "JuniorResearcher"
@@ -1028,9 +4138,10 @@
             "Secondary Entity": [
                 "knowledge",
                 "group",
-                "experienced researchers"
+                "more experienced researchers"
             ]
         },
+        "Benefit": "I can learn from more experienced researchers",
         "Triggers": [
             [
                 "JuniorResearcher",
@@ -1041,147 +4152,103 @@
             [
                 "have",
                 "ability"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.",
-        "Persona": [
-            "system administrator"
-        ],
-        "Action": {
-            "Primary Action": [
-                "run"
             ],
-            "Secondary Action": [
-                "installs"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "script"
-            ],
-            "Secondary Entity": [
-                "Neurohub node",
-                "virgin Ubuntu operating system"
-            ]
-        },
-        "Triggers": [
             [
-                "system administrator",
-                "run"
+                "harvest",
+                "knowledge"
             ]
         ],
-        "Targets": [
+        "Contains": [
             [
-                "run",
-                "script"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to make predicated links between files.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "make"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "predicated links"
-            ],
-            "Secondary Entity": [
-                "files"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "make"
+                "group",
+                "knowledge"
             ]
         ],
-        "Targets": [
-            [
-                "make",
-                "predicated links"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a user, I want to have the details of the workflow execution to be recorded in a neurohub log book while executing a workflow.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have"
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
             ],
-            "Secondary Action": [
-                "executing"
+            "Persona POS text": [
+                [
+                    "JuniorResearcher"
+                ]
             ]
         },
-        "Entity": {
-            "Primary Entity": [
-                "details"
-            ],
-            "Secondary Entity": [
-                "workflow execution",
-                "neurohub log book",
-                "workflow"
-            ]
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "harvest"
+                    ],
+                    [
+                        "learn"
+                    ]
+                ]
+            }
         },
-        "Triggers": [
-            [
-                "user",
-                "have"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "details"
-            ]
-        ]
-    },
-    {
-        "Text": "#G18# As a supervisor, I want to create feedback forms within Neurohub, that my students can fill in and submit, in order to provide me with feedback about the course that they attended.",
-        "Persona": [
-            "supervisor"
-        ],
-        "Action": {
-            "Primary Action": [
-                "create"
-            ],
-            "Secondary Action": [
-                "fill"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "feedback forms"
-            ],
-            "Secondary Entity": [
-                "Neurohub",
-                "students",
-                "feedback",
-                "course"
-            ]
-        },
-        "Triggers": [
-            [
-                "supervisor",
-                "create"
-            ]
-        ],
-        "Targets": [
-            [
-                "create",
-                "feedback forms"
-            ]
-        ]
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ability"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "knowledge"
+                    ],
+                    [
+                        "group"
+                    ],
+                    [
+                        "more",
+                        "experienced",
+                        "researchers"
+                    ]
+                ]
+            }
+        }
     }
 ]

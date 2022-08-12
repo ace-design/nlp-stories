@@ -1,572 +1,287 @@
 [
     {
-        "Text": "#G02# As a UI designer, I want to begin user testing, so that I can validate stakeholder UI improvement requests.",
+        "PID": "#G02#",
+        "Text": "#G02# As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.",
         "Persona": [
             "UI designer"
         ],
         "Action": {
             "Primary Action": [
-                "begin"
+                "move on"
             ],
             "Secondary Action": [
-                "validate"
+                "get"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "user testing"
+                "round 2"
             ],
             "Secondary Entity": [
-                "stakeholder UI improvement requests"
+                "FABS landing page edits",
+                "DABS",
+                "approvals",
+                "leadership"
             ]
         },
+        "Benefit": "I can get approvals from leadership",
         "Triggers": [
             [
                 "UI designer",
-                "begin"
+                "move on"
             ]
         ],
         "Targets": [
             [
-                "begin",
-                "user testing"
+                "move on",
+                "round 2"
+            ],
+            [
+                "get",
+                "approvals"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "DABS",
+                "round 2"
+            ],
+            [
+                "FABS landing page edits",
+                "round 2"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "move",
+                        "on"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADP",
+                        "NUM"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "round",
+                        "2"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "FABS",
+                        "landing",
+                        "page",
+                        "edits"
+                    ],
+                    [
+                        "DABS"
+                    ],
+                    [
+                        "approvals"
+                    ],
+                    [
+                        "leadership"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a Developer , I want to clarify to users what exactly is triggering the CFDA error code in each case.",
-        "Persona": [
-            "Developer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "clarify"
-            ],
-            "Secondary Action": [
-                "triggering"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "users"
-            ],
-            "Secondary Entity": [
-                "CFDA error code",
-                "case"
-            ]
-        },
-        "Triggers": [
-            [
-                "Developer",
-                "clarify"
-            ]
-        ],
-        "Targets": [
-            [
-                "clarify",
-                "users"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an owner, I want to be sure that USAspending only send grant records to my system.",
-        "Persona": [
-            "owner"
-        ],
-        "Action": {
-            "Primary Action": [],
-            "Secondary Action": [
-                "only send"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "USAspending",
-                "grant records",
-                "system"
-            ]
-        },
-        "Triggers": [],
-        "Targets": []
-    },
-    {
-        "Text": "#G02# As a Developer I want to quickly access Broker application data, so that I can investigate issues.",
-        "Persona": [
-            "Developer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "quickly access"
-            ],
-            "Secondary Action": [
-                "investigate"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Broker application data"
-            ],
-            "Secondary Entity": [
-                "issues"
-            ]
-        },
-        "Triggers": [
-            [
-                "Developer",
-                "quickly access"
-            ]
-        ],
-        "Targets": [
-            [
-                "quickly access",
-                "Broker application data"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a UI designer, I want to schedule user testing, so that I can give the testers advanced notice to ensure buy-in.",
-        "Persona": [
-            "UI designer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "schedule"
-            ],
-            "Secondary Action": [
-                "give",
-                "ensure"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "user testing"
-            ],
-            "Secondary Entity": [
-                "testers advanced notice",
-                "buy"
-            ]
-        },
-        "Triggers": [
-            [
-                "UI designer",
-                "schedule"
-            ]
-        ],
-        "Targets": [
-            [
-                "schedule",
-                "user testing"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As an Agency user, I want to be able to include a large number of flexfields without performance impact.",
-        "Persona": [
-            "Agency user"
-        ],
-        "Action": {
-            "Primary Action": [],
-            "Secondary Action": [
-                "include"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "large number of flexfields",
-                "performance impact"
-            ]
-        },
-        "Triggers": [],
-        "Targets": []
-    },
-    {
-        "Text": "#G02# As an agency user, I want to leave off the last 4 digits of the ZIP without an error, so that I can complete my submissions.",
-        "Persona": [
-            "agency user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "leave"
-            ],
-            "Secondary Action": [
-                "complete"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [],
-            "Secondary Entity": [
-                "last 4 digits",
-                "ZIP",
-                "error",
-                "submissions"
-            ]
-        },
-        "Triggers": [
-            [
-                "agency user",
-                "leave"
-            ]
-        ],
-        "Targets": []
-    },
-    {
+        "PID": "#G02#",
         "Text": "#G02# As a UI designer, I want to move on to round 3 of the Help page edits, so that I can get approvals from leadership.",
         "Persona": [
             "UI designer"
         ],
         "Action": {
             "Primary Action": [
-                "move"
+                "move on"
             ],
             "Secondary Action": [
-                "round 3",
                 "get"
             ]
         },
         "Entity": {
-            "Primary Entity": [],
+            "Primary Entity": [
+                "round 3"
+            ],
             "Secondary Entity": [
                 "Help page edits",
                 "approvals",
                 "leadership"
             ]
         },
+        "Benefit": "I can get approvals from leadership",
         "Triggers": [
             [
                 "UI designer",
-                "move"
-            ]
-        ],
-        "Targets": []
-    },
-    {
-        "Text": "#G02# As a UI designer, I want to track the issues that come up in Tech Thursday, so that I know what to test and what want s to be fixed.",
-        "Persona": [
-            "UI designer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "track"
-            ],
-            "Secondary Action": [
-                "come",
-                "know",
-                "fixed"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "issues"
-            ],
-            "Secondary Entity": [
-                "Tech Thursday"
-            ]
-        },
-        "Triggers": [
-            [
-                "UI designer",
-                "track"
+                "move on"
             ]
         ],
         "Targets": [
             [
-                "track",
-                "issues"
+                "move on",
+                "round 3"
+            ],
+            [
+                "get",
+                "approvals"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "Help page edits",
+                "round 3"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "move",
+                        "on"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADP",
+                        "NUM"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "round",
+                        "3"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Help",
+                        "page",
+                        "edits"
+                    ],
+                    [
+                        "approvals"
+                    ],
+                    [
+                        "leadership"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a broker team member, I want to ensure the Broker resources, validations, and P&P pages are updated appropriately for the launch of FABS and DAIMS v1.1.",
-        "Persona": [
-            "broker team member"
-        ],
-        "Action": {
-            "Primary Action": [
-                "ensure"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "Broker resources"
-            ],
-            "Secondary Entity": [
-                "validations",
-                "P&P pages",
-                "launch of FABS",
-                "DAIMS v1.1"
-            ]
-        },
-        "Triggers": [
-            [
-                "broker team member",
-                "ensure"
-            ]
-        ],
-        "Targets": [
-            [
-                "ensure",
-                "Broker resources"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a broker team member, I want to make some updates to the SQL codes for clarity.",
-        "Persona": [
-            "broker team member"
-        ],
-        "Action": {
-            "Primary Action": [
-                "make"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "updates"
-            ],
-            "Secondary Entity": [
-                "SQL codes",
-                "clarity"
-            ]
-        },
-        "Triggers": [
-            [
-                "broker team member",
-                "make"
-            ]
-        ],
-        "Targets": [
-            [
-                "make",
-                "updates"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a user, I want to access the raw agency published files from FABS via USAspending.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "access"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "raw agency published files"
-            ],
-            "Secondary Entity": [
-                "FABS",
-                "USAspending"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "access"
-            ]
-        ],
-        "Targets": [
-            [
-                "access",
-                "raw agency published files"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a Website user, I want to access published FABS files, so that I can see the new files as they come in.",
-        "Persona": [
-            "Website user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "access"
-            ],
-            "Secondary Action": [
-                "see",
-                "come"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "published FABS files"
-            ],
-            "Secondary Entity": [
-                "new files"
-            ]
-        },
-        "Triggers": [
-            [
-                "Website user",
-                "access"
-            ]
-        ],
-        "Targets": [
-            [
-                "access",
-                "published FABS files"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a data user, I want to see the office names derived from office codes, so that I can have appropriate context for understanding them.",
-        "Persona": [
-            "data user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "see"
-            ],
-            "Secondary Action": [
-                "derived",
-                "have",
-                "understanding"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "office names"
-            ],
-            "Secondary Entity": [
-                "office codes",
-                "appropriate context"
-            ]
-        },
-        "Triggers": [
-            [
-                "data user",
-                "see"
-            ]
-        ],
-        "Targets": [
-            [
-                "see",
-                "office names"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a Developer , I want to determine how agencies will generate and validate D Files from FABS and FPDS data.",
-        "Persona": [
-            "Developer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "determine"
-            ],
-            "Secondary Action": [
-                "generate"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "how agencies"
-            ],
-            "Secondary Entity": [
-                "validate D Files",
-                "FABS",
-                "FPDS data"
-            ]
-        },
-        "Triggers": [
-            [
-                "Developer",
-                "determine"
-            ]
-        ],
-        "Targets": [
-            [
-                "determine",
-                "how agencies"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want to download the uploaded FABS file, so that I can get the uploaded file.",
-        "Persona": [
-            "FABS user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "download"
-            ],
-            "Secondary Action": [
-                "get"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "uploaded FABS file"
-            ],
-            "Secondary Entity": [
-                "uploaded file"
-            ]
-        },
-        "Triggers": [
-            [
-                "FABS user",
-                "download"
-            ]
-        ],
-        "Targets": [
-            [
-                "download",
-                "uploaded FABS file"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want to have read-only access to DABS, so that I can view DABS pages without wanting two sets of permissions.",
-        "Persona": [
-            "FABS user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "have",
-                "read"
-            ],
-            "Secondary Action": [
-                "view",
-                "wanting"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "-only access"
-            ],
-            "Secondary Entity": [
-                "DABS",
-                "DABS pages",
-                "two sets of permissions"
-            ]
-        },
-        "Triggers": [
-            [
-                "FABS user",
-                "have"
-            ],
-            [
-                "FABS user",
-                "read"
-            ]
-        ],
-        "Targets": [
-            [
-                "have",
-                "-only access"
-            ],
-            [
-                "read",
-                "-only access"
-            ]
-        ]
-    },
-    {
+        "PID": "#G02#",
         "Text": "#G02# As a UI designer, I want to move on to round 2 of Homepage edits, so that I can get approvals from leadership.",
         "Persona": [
             "UI designer"
@@ -589,6 +304,7 @@
                 "leadership"
             ]
         },
+        "Benefit": "I can get approvals from leadership",
         "Triggers": [
             [
                 "UI designer",
@@ -597,198 +313,340 @@
         ],
         "Targets": [
             [
+                "get",
+                "approvals"
+            ],
+            [
                 "move",
                 "round 2"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "Homepage edits",
+                "round 2"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "move"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADP",
+                        "NUM"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "round",
+                        "2"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Homepage",
+                        "edits"
+                    ],
+                    [
+                        "approvals"
+                    ],
+                    [
+                        "leadership"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a Developer, I want to prevent users from double publishing FABS submissions after refreshing, so that there are no duplicates.",
+        "PID": "#G02#",
+        "Text": "#G02# As a Website user, I want to access published FABS files, so that I can see the new files as they come in.",
         "Persona": [
-            "Developer"
+            "Website user"
         ],
         "Action": {
             "Primary Action": [
-                "prevent"
+                "access"
             ],
             "Secondary Action": [
-                "refreshing",
-                "are"
+                "see"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "users"
+                "published FABS files"
             ],
             "Secondary Entity": [
-                "double publishing FABS submissions",
-                "duplicates"
+                "new files"
             ]
         },
+        "Benefit": "I can see the new files as they come in",
         "Triggers": [
             [
-                "Developer",
-                "prevent"
+                "Website user",
+                "access"
             ]
         ],
         "Targets": [
             [
-                "prevent",
-                "users"
+                "access",
+                "published FABS files"
+            ],
+            [
+                "see",
+                "new files"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Website",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "published",
+                        "FABS",
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "new",
+                        "files"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a Broker user, I want  to help create content mockups, so that I can submit my data efficiently.",
+        "PID": "#G02#",
+        "Text": "#G02# As an owner, I want to be sure that USAspending only send grant records to my system.",
         "Persona": [
-            "Broker user"
+            "owner"
         ],
         "Action": {
             "Primary Action": [
-                "help"
+                "be sure"
             ],
             "Secondary Action": [
-                "submit"
+                "only send"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "create content mockups"
+                ""
             ],
             "Secondary Entity": [
-                "data efficiently"
+                "USAspending",
+                "grant records",
+                "system"
             ]
         },
+        "Benefit": "",
         "Triggers": [
             [
-                "Broker user",
-                "help"
+                "owner",
+                "be sure"
             ]
         ],
         "Targets": [
             [
-                "help",
-                "create content mockups"
+                "only send",
+                "grant records"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "system",
+                "grant records"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "owner"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "sure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "only",
+                        "send"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "USAspending"
+                    ],
+                    [
+                        "grant",
+                        "records"
+                    ],
+                    [
+                        "system"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes.",
-        "Persona": [
-            "agency user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "submit"
-            ],
-            "Secondary Action": [
-                "surrounded",
-                "strip"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "data elements"
-            ],
-            "Secondary Entity": [
-                "quotation marks",
-                "leading and trailing zeroes"
-            ]
-        },
-        "Triggers": [
-            [
-                "agency user",
-                "submit"
-            ]
-        ],
-        "Targets": [
-            [
-                "submit",
-                "data elements"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a user, I want to generate and validate D Files from FABS and FPDS data.",
-        "Persona": [
-            "user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "generate"
-            ],
-            "Secondary Action": []
-        },
-        "Entity": {
-            "Primary Entity": [
-                "and validate D Files"
-            ],
-            "Secondary Entity": [
-                "FABS",
-                "FPDS data"
-            ]
-        },
-        "Triggers": [
-            [
-                "user",
-                "generate"
-            ]
-        ],
-        "Targets": [
-            [
-                "generate",
-                "and validate D Files"
-            ]
-        ]
-    },
-    {
-        "Text": "#G02# As a FABS user, I want to link the SAMPLE FILE on the \"What you want  to submit\" dialog to point to the correct file, so that I have an accurate reference for my agency submissions.",
-        "Persona": [
-            "FABS user"
-        ],
-        "Action": {
-            "Primary Action": [
-                "link",
-                "submit"
-            ],
-            "Secondary Action": [
-                "have"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "\" dialog"
-            ],
-            "Secondary Entity": [
-                "SAMPLE FILE",
-                "point",
-                "correct file",
-                "accurate reference",
-                "agency submissions"
-            ]
-        },
-        "Triggers": [
-            [
-                "FABS user",
-                "link"
-            ],
-            [
-                "FABS user",
-                "submit"
-            ]
-        ],
-        "Targets": [
-            [
-                "link",
-                "\" dialog"
-            ],
-            [
-                "submit",
-                "\" dialog"
-            ]
-        ]
-    },
-    {
+        "PID": "#G02#",
         "Text": "#G02# As a Developer, I want to update the Broker validation rule table to account for the rule updates in DB-2213.",
         "Persona": [
             "Developer"
@@ -807,9 +665,10 @@
             ],
             "Secondary Entity": [
                 "rule updates",
-                "DB"
+                "DB-2213"
             ]
         },
+        "Benefit": "account for the rule updates in DB-2213",
         "Triggers": [
             [
                 "Developer",
@@ -820,112 +679,706 @@
             [
                 "update",
                 "Broker validation rule table"
+            ],
+            [
+                "account",
+                "rule updates"
             ]
-        ]
+        ],
+        "Contains": [
+            [
+                "DB-2213",
+                "rule updates"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "update"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "account"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Broker",
+                        "validation",
+                        "rule",
+                        "table"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "NUM"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "rule",
+                        "updates"
+                    ],
+                    [
+                        "DB",
+                        "-2213"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.",
+        "PID": "#G02#",
+        "Text": "#G02# As an Agency user, I want to be able to include a large number of flexfields without performance impact.",
+        "Persona": [
+            "Agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "include"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "large number of flexfields"
+            ],
+            "Secondary Entity": [
+                "performance impact"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Agency user",
+                "include"
+            ]
+        ],
+        "Targets": [
+            [
+                "include",
+                "large number of flexfields"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "include"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "large",
+                        "number",
+                        "of",
+                        "flexfields"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "performance",
+                        "impact"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a Broker user, I want  to help create content mockups, so that I can submit my data efficiently.",
+        "Persona": [
+            "Broker user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "help create"
+            ],
+            "Secondary Action": [
+                "submit"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content mockups"
+            ],
+            "Secondary Entity": [
+                "data"
+            ]
+        },
+        "Benefit": "I can submit my data efficiently",
+        "Triggers": [
+            [
+                "Broker user",
+                "help create"
+            ]
+        ],
+        "Targets": [
+            [
+                "submit",
+                "data"
+            ],
+            [
+                "help create",
+                "content mockups"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Broker",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "help",
+                        "create"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "content",
+                        "mockups"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a UI designer, I want to track the issues that come up in Tech Thursday, so that I know what to test and what want s to be fixed.",
         "Persona": [
             "UI designer"
         ],
         "Action": {
             "Primary Action": [
-                "move"
+                "track"
             ],
             "Secondary Action": [
-                "get"
+                "know",
+                "test",
+                "fixed"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "round 2"
+                "issues"
             ],
             "Secondary Entity": [
-                "DABS",
-                "FABS landing page edits",
-                "approvals",
-                "leadership"
+                "Tech Thursday"
             ]
         },
+        "Benefit": "I know what to test and what want s to be fixed",
         "Triggers": [
             [
                 "UI designer",
-                "move"
+                "track"
             ]
         ],
         "Targets": [
             [
-                "move",
-                "round 2"
+                "fixed",
+                "issues"
+            ],
+            [
+                "track",
+                "issues"
+            ],
+            [
+                "know",
+                "issues"
+            ],
+            [
+                "test",
+                "issues"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "track"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "know"
+                    ],
+                    [
+                        "test"
+                    ],
+                    [
+                        "fixed"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "issues"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Tech",
+                        "Thursday"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a FABS user, I want to submission errors to accurately represent FABS errors, so that I know why my submission didn't work.",
+        "PID": "#G02#",
+        "Text": "#G02# As a UI designer, I want to begin user testing, so that I can validate stakeholder UI improvement requests.",
         "Persona": [
-            "FABS user"
+            "UI designer"
         ],
         "Action": {
             "Primary Action": [
-                "submission"
+                "begin"
             ],
             "Secondary Action": [
-                "accurately represent",
-                "know"
+                "validate"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "errors"
+                "user testing"
             ],
             "Secondary Entity": [
-                "FABS errors",
-                "submission"
+                "stakeholder UI improvement requests"
             ]
         },
+        "Benefit": "I can validate stakeholder UI improvement requests",
         "Triggers": [
             [
-                "FABS user",
-                "submission"
+                "UI designer",
+                "begin"
             ]
         ],
         "Targets": [
             [
-                "submission",
-                "errors"
+                "begin",
+                "user testing"
+            ],
+            [
+                "validate",
+                "stakeholder UI improvement requests"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "begin"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "validate"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "user",
+                        "testing"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "stakeholder",
+                        "UI",
+                        "improvement",
+                        "requests"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.",
+        "PID": "#G02#",
+        "Text": "#G02# As a UI designer, I want to schedule user testing, so that I can give the testers advanced notice to ensure buy-in.",
         "Persona": [
-            "FABS user"
+            "UI designer"
         ],
         "Action": {
             "Primary Action": [
-                "make"
+                "schedule"
             ],
-            "Secondary Action": []
+            "Secondary Action": [
+                "give",
+                "ensure"
+            ]
         },
         "Entity": {
-            "Primary Entity": [],
+            "Primary Entity": [
+                "user testing"
+            ],
             "Secondary Entity": [
-                "historical data",
-                "necessary columns",
-                "information",
-                "database"
+                "testers",
+                "advanced notice",
+                "buy-in"
             ]
         },
+        "Benefit": "I can give the testers advanced notice to ensure buy-in",
         "Triggers": [
             [
-                "FABS user",
-                "make"
+                "UI designer",
+                "schedule"
             ]
         ],
-        "Targets": []
+        "Targets": [
+            [
+                "schedule",
+                "user testing"
+            ],
+            [
+                "ensure",
+                "buy-in"
+            ],
+            [
+                "give",
+                "advanced notice"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "schedule"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "give"
+                    ],
+                    [
+                        "ensure"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "user",
+                        "testing"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "PUNCT",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "testers"
+                    ],
+                    [
+                        "advanced",
+                        "notice"
+                    ],
+                    [
+                        "buy",
+                        "-",
+                        "in"
+                    ]
+                ]
+            }
+        }
     },
     {
-        "Text": "#G02# As a Developer, I want to prevent duplicate transactions from being published and deal with the time gap between validation and the publishing decision.",
+        "PID": "#G02#",
+        "Text": "#G02# As a Developer, I want to prevent users from double publishing FABS submissions after refreshing, so that there are no duplicates.",
         "Persona": [
             "Developer"
         ],
@@ -934,20 +1387,19 @@
                 "prevent"
             ],
             "Secondary Action": [
-                "published",
-                "deal"
+                "refreshing"
             ]
         },
         "Entity": {
             "Primary Entity": [
-                "duplicate transactions"
+                "double publishing FABS submissions"
             ],
             "Secondary Entity": [
-                "time gap",
-                "validation",
-                "publishing decision"
+                "users",
+                "duplicates"
             ]
         },
+        "Benefit": "there are no duplicates",
         "Triggers": [
             [
                 "Developer",
@@ -957,8 +1409,2248 @@
         "Targets": [
             [
                 "prevent",
-                "duplicate transactions"
+                "double publishing FABS submissions"
             ]
-        ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "prevent"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "refreshing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "double",
+                        "publishing",
+                        "FABS",
+                        "submissions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "users"
+                    ],
+                    [
+                        "duplicates"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a Developer , I want to clarify to users what exactly is triggering the CFDA error code in each case.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "clarify"
+            ],
+            "Secondary Action": [
+                "triggering"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "users"
+            ],
+            "Secondary Entity": [
+                "CFDA error code",
+                "each case",
+                "what"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Developer",
+                "clarify"
+            ]
+        ],
+        "Targets": [
+            [
+                "clarify",
+                "users"
+            ],
+            [
+                "triggering",
+                "CFDA error code"
+            ],
+            [
+                "each case",
+                "CFDA error code"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "clarify"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "triggering"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "users"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "CFDA",
+                        "error",
+                        "code"
+                    ],
+                    [
+                        "each",
+                        "case"
+                    ],
+                    [
+                        "what"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a broker team member, I want to make some updates to the SQL codes for clarity.",
+        "Persona": [
+            "broker team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "some updates"
+            ],
+            "Secondary Entity": [
+                "SQL codes"
+            ]
+        },
+        "Benefit": "for clarity",
+        "Triggers": [
+            [
+                "broker team member",
+                "make"
+            ]
+        ],
+        "Targets": [
+            [
+                "make",
+                "some updates"
+            ]
+        ],
+        "Contains": [
+            [
+                "SQL codes",
+                "some updates"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "broker",
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "some",
+                        "updates"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "SQL",
+                        "codes"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a data user, I want to see the office names derived from office codes, so that I can have appropriate context for understanding them.",
+        "Persona": [
+            "data user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "have",
+                "understanding"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "office names"
+            ],
+            "Secondary Entity": [
+                "office codes",
+                "appropriate context"
+            ]
+        },
+        "Benefit": "I can have appropriate context for understanding them",
+        "Triggers": [
+            [
+                "data user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "office names"
+            ],
+            [
+                "have",
+                "appropriate context"
+            ],
+            [
+                "understanding",
+                "office codes"
+            ]
+        ],
+        "Contains": [
+            [
+                "office codes",
+                "office names"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "data",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "have"
+                    ],
+                    [
+                        "understanding"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "office",
+                        "names"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "office",
+                        "codes"
+                    ],
+                    [
+                        "appropriate",
+                        "context"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a broker team member, I want to ensure the Broker resources, validations, and P&P pages are updated appropriately for the launch of FABS and DAIMS v1.1.",
+        "Persona": [
+            "broker team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "updated appropriately"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "Broker resources",
+                "validations",
+                "P&P pages",
+                "launch",
+                "FABS",
+                "DAIMS v1.1"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "broker team member",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "updated appropriately",
+                "Broker resources"
+            ],
+            [
+                "updated appropriately",
+                "validations"
+            ],
+            [
+                "updated appropriately",
+                "P&P pages"
+            ]
+        ],
+        "Contains": [
+            [
+                "launch",
+                "FABS"
+            ],
+            [
+                "launch",
+                "DAIMS v1.1"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "broker",
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "updated",
+                        "appropriately"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN",
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Broker",
+                        "resources"
+                    ],
+                    [
+                        "validations"
+                    ],
+                    [
+                        "P&P",
+                        "pages"
+                    ],
+                    [
+                        "launch"
+                    ],
+                    [
+                        "FABS"
+                    ],
+                    [
+                        "DAIMS",
+                        "v1.1"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a FABS user, I want to link the SAMPLE FILE on the \"What you want  to submit\" dialog to point to the correct file, so that I have an accurate reference for my agency submissions.",
+        "Persona": [
+            "FABS user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "point",
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "SAMPLE FILE"
+            ],
+            "Secondary Entity": [
+                "\"What you want  to submit\" dialog",
+                "correct file",
+                "accurate reference",
+                "agency submissions"
+            ]
+        },
+        "Benefit": "I have an accurate reference for my agency submissions",
+        "Triggers": [
+            [
+                "FABS user",
+                "link"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "SAMPLE FILE"
+            ],
+            [
+                "point",
+                "correct file"
+            ],
+            [
+                "have",
+                "accurate reference"
+            ]
+        ],
+        "Contains": [
+            [
+                "\"What you want  to submit\" dialog",
+                "SAMPLE FILE"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "FABS",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "link"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "point"
+                    ],
+                    [
+                        "have"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "SAMPLE",
+                        "FILE"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PUNCT",
+                        "PRON",
+                        "PRON",
+                        "VERB",
+                        "PART",
+                        "VERB",
+                        "PUNCT",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "\"",
+                        "What",
+                        "you",
+                        "want",
+                        "to",
+                        "submit",
+                        "\"",
+                        "dialog"
+                    ],
+                    [
+                        "correct",
+                        "file"
+                    ],
+                    [
+                        "accurate",
+                        "reference"
+                    ],
+                    [
+                        "agency",
+                        "submissions"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a user, I want to access the raw agency published files from FABS via USAspending.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "raw agency published files"
+            ],
+            "Secondary Entity": [
+                "FABS",
+                "USAspending"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "access"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "raw agency published files"
+            ]
+        ],
+        "Contains": [
+            [
+                "USAspending",
+                "FABS"
+            ],
+            [
+                "FABS",
+                "raw agency published files"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "raw",
+                        "agency",
+                        "published",
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "FABS"
+                    ],
+                    [
+                        "USAspending"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a Developer , I want to determine how agencies will generate and validate D Files from FABS and FPDS data.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "determine"
+            ],
+            "Secondary Action": [
+                "validate",
+                "generate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how"
+            ],
+            "Secondary Entity": [
+                "D Files",
+                "FABS",
+                "agencies",
+                "FPDS data"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Developer",
+                "determine"
+            ]
+        ],
+        "Targets": [
+            [
+                "generate",
+                "D Files"
+            ],
+            [
+                "validate",
+                "D Files"
+            ],
+            [
+                "determine",
+                "how"
+            ]
+        ],
+        "Contains": [
+            [
+                "FABS",
+                "D Files"
+            ],
+            [
+                "FPDS data",
+                "D Files"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "determine"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "validate"
+                    ],
+                    [
+                        "generate"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "how"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "D",
+                        "Files"
+                    ],
+                    [
+                        "FABS"
+                    ],
+                    [
+                        "agencies"
+                    ],
+                    [
+                        "FPDS",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a user, I want to generate and validate D Files from FABS and FPDS data.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "generate",
+                "validate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "D Files"
+            ],
+            "Secondary Entity": [
+                "FABS",
+                "FPDS data"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "generate"
+            ],
+            [
+                "user",
+                "validate"
+            ]
+        ],
+        "Targets": [
+            [
+                "validate",
+                "D Files"
+            ],
+            [
+                "generate",
+                "D Files"
+            ]
+        ],
+        "Contains": [
+            [
+                "FABS",
+                "D Files"
+            ],
+            [
+                "FPDS data",
+                "D Files"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "generate"
+                    ],
+                    [
+                        "validate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "D",
+                        "Files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "FABS"
+                    ],
+                    [
+                        "FPDS",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a FABS user, I want to submission errors to accurately represent FABS errors, so that I know why my submission didn't work.",
+        "Persona": [
+            "FABS user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "accurately represent",
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "submission errors"
+            ],
+            "Secondary Entity": [
+                "FABS errors",
+                "submission",
+                "why"
+            ]
+        },
+        "Benefit": "I know why my submission didn't work",
+        "Triggers": [
+            [
+                "FABS user",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "want",
+                "submission errors"
+            ],
+            [
+                "accurately represent",
+                "FABS errors"
+            ],
+            [
+                "know",
+                "why"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "FABS",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "want"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "accurately",
+                        "represent"
+                    ],
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "submission",
+                        "errors"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "FABS",
+                        "errors"
+                    ],
+                    [
+                        "submission"
+                    ],
+                    [
+                        "why"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a Developer, I want to prevent duplicate transactions from being published and deal with the time gap between validation and the publishing decision.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "prevent",
+                "deal"
+            ],
+            "Secondary Action": [
+                "published"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "duplicate transactions",
+                "time gap"
+            ],
+            "Secondary Entity": [
+                "publishing decision",
+                "validation"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Developer",
+                "prevent"
+            ],
+            [
+                "Developer",
+                "deal"
+            ]
+        ],
+        "Targets": [
+            [
+                "prevent",
+                "duplicate transactions"
+            ],
+            [
+                "deal",
+                "time gap"
+            ]
+        ],
+        "Contains": [
+            [
+                "validation",
+                "time gap"
+            ],
+            [
+                "publishing decision",
+                "time gap"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "prevent"
+                    ],
+                    [
+                        "deal"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "published"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "duplicate",
+                        "transactions"
+                    ],
+                    [
+                        "time",
+                        "gap"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "publishing",
+                        "decision"
+                    ],
+                    [
+                        "validation"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As an agency user, I want to leave off the last 4 digits of the ZIP without an error, so that I can complete my submissions.",
+        "Persona": [
+            "agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "leave off"
+            ],
+            "Secondary Action": [
+                "complete"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "last 4 digits"
+            ],
+            "Secondary Entity": [
+                "ZIP",
+                "submissions",
+                "error"
+            ]
+        },
+        "Benefit": "I can complete my submissions",
+        "Triggers": [
+            [
+                "agency user",
+                "leave off"
+            ]
+        ],
+        "Targets": [
+            [
+                "leave off",
+                "last 4 digits"
+            ],
+            [
+                "complete",
+                "submissions"
+            ]
+        ],
+        "Contains": [
+            [
+                "ZIP",
+                "last 4 digits"
+            ],
+            [
+                "submissions",
+                "ZIP"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADP"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "leave",
+                        "off"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "complete"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NUM",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "last",
+                        "4",
+                        "digits"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "ZIP"
+                    ],
+                    [
+                        "submissions"
+                    ],
+                    [
+                        "error"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.",
+        "Persona": [
+            "FABS user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make sure"
+            ],
+            "Secondary Action": [
+                "includes"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "all necessary columns",
+                "information",
+                "database",
+                "historical data"
+            ]
+        },
+        "Benefit": "the information in the database is correct",
+        "Triggers": [
+            [
+                "FABS user",
+                "make sure"
+            ]
+        ],
+        "Targets": [
+            [
+                "includes",
+                "all necessary columns"
+            ]
+        ],
+        "Contains": [
+            [
+                "database",
+                "information"
+            ],
+            [
+                "historical data",
+                "all necessary columns"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "FABS",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make",
+                        "sure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "includes"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "DET",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "all",
+                        "necessary",
+                        "columns"
+                    ],
+                    [
+                        "information"
+                    ],
+                    [
+                        "database"
+                    ],
+                    [
+                        "historical",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a FABS user, I want to download the uploaded FABS file, so that I can get the uploaded file.",
+        "Persona": [
+            "FABS user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "download"
+            ],
+            "Secondary Action": [
+                "get"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "uploaded FABS file"
+            ],
+            "Secondary Entity": [
+                "uploaded file"
+            ]
+        },
+        "Benefit": "I can get the uploaded file",
+        "Triggers": [
+            [
+                "FABS user",
+                "download"
+            ]
+        ],
+        "Targets": [
+            [
+                "download",
+                "uploaded FABS file"
+            ],
+            [
+                "get",
+                "uploaded file"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "FABS",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "download"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "uploaded",
+                        "FABS",
+                        "file"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "uploaded",
+                        "file"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a Developer I want to quickly access Broker application data, so that I can investigate issues.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "quickly access"
+            ],
+            "Secondary Action": [
+                "investigate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Broker application data"
+            ],
+            "Secondary Entity": [
+                "issues"
+            ]
+        },
+        "Benefit": "I can investigate issues",
+        "Triggers": [
+            [
+                "Developer",
+                "quickly access"
+            ]
+        ],
+        "Targets": [
+            [
+                "quickly access",
+                "Broker application data"
+            ],
+            [
+                "investigate",
+                "issues"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "quickly",
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "investigate"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Broker",
+                        "application",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "issues"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a FABS user, I want to have read-only access to DABS, so that I can view DABS pages without wanting two sets of permissions.",
+        "Persona": [
+            "FABS user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "view",
+                "without wanting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "read-only access"
+            ],
+            "Secondary Entity": [
+                "DABS",
+                "two sets of permissions",
+                "DABS pages"
+            ]
+        },
+        "Benefit": "I can view DABS pages without wanting two sets of permissions",
+        "Triggers": [
+            [
+                "FABS user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "read-only access"
+            ],
+            [
+                "view",
+                "DABS pages"
+            ],
+            [
+                "without wanting",
+                "two sets of permissions"
+            ]
+        ],
+        "Contains": [
+            [
+                "DABS",
+                "read-only access"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "FABS",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "SCONJ",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "view"
+                    ],
+                    [
+                        "without",
+                        "wanting"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB",
+                        "PUNCT",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "read",
+                        "-",
+                        "only",
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NUM",
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "DABS"
+                    ],
+                    [
+                        "two",
+                        "sets",
+                        "of",
+                        "permissions"
+                    ],
+                    [
+                        "DABS",
+                        "pages"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes.",
+        "Persona": [
+            "agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "submit"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data elements surrounded by quotation marks"
+            ],
+            "Secondary Entity": [
+                "leading and trailing zeroes",
+                "Excel"
+            ]
+        },
+        "Benefit": "Excel won't strip off leading and trailing zeroes",
+        "Triggers": [
+            [
+                "agency user",
+                "submit"
+            ]
+        ],
+        "Targets": [
+            [
+                "submit",
+                "data elements surrounded by quotation marks"
+            ]
+        ],
+        "Contains": [
+            [
+                "Excel",
+                "data elements surrounded by quotation marks"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "submit"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "VERB",
+                        "ADP",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data",
+                        "elements",
+                        "surrounded",
+                        "by",
+                        "quotation",
+                        "marks"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "CCONJ",
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "leading",
+                        "and",
+                        "trailing",
+                        "zeroes"
+                    ],
+                    [
+                        "Excel"
+                    ]
+                ]
+            }
+        }
     }
 ]
