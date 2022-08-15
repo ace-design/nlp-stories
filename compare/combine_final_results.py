@@ -13,7 +13,6 @@ def main():
 
     file_list = identify_files(with_crf, primary)
 
-
     data = extract_data(file_list)
 
     formatted_data  = format_data(data, with_crf)

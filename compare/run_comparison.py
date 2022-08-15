@@ -1,5 +1,7 @@
 #runs the comparison files to get compare nlp final results with each other for a specific dataset grouping type 
 import argparse
+import csv
+import pandas as pd
 import subprocess
 
 def main():
@@ -8,13 +10,15 @@ def main():
     types = ["all", "primary"]
     comparison_mode = ["strict", "inclusion", "relaxed"]
 
-    for i in range(len(nlp)):
-        run_compare_nlp(nlp[i], nlp_code[i], datasets, grouping, grouping_code, crf_path, is_crf)
-        reset_nlp_dataset_names_list(data_group_names)
-        run_compare_individual_nlp_total_results(comparison_mode, nlp_code[i], grouping_code, is_crf)
+    # for i in range(len(nlp)):
+    #     run_compare_nlp(nlp[i], nlp_code[i], datasets, grouping, grouping_code, crf_path, is_crf)
+    #     reset_nlp_dataset_names_list(data_group_names)
+    #     run_compare_individual_nlp_total_results(comparison_mode, nlp_code[i], grouping_code, is_crf)
 
-    run_compare_nlps_total_results(types, comparison_mode, grouping, grouping_code, crf_string)
-    run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_code, crf_string)
+    # run_compare_nlps_total_results(types, comparison_mode, grouping, grouping_code, crf_string)
+    # run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_code, crf_string)
+    for nlp_tool in nlp:
+        combine_average_results_data(nlp_tool, types, grouping, crf_string)
     
 def command():
     '''
@@ -135,6 +139,28 @@ def run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_
             "--load_crf_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\crf\\" + comparison + "_crf\\" + type + "\\" + type + "_results.csv " +\
             type + " " + grouping_code
             subprocess.run(line)
+
+def combine_average_results_data(nlp, types, grouping, crf_path):
+    '''combine the average final results into csv files so that the final graphs can be made later'''
+
+    print("starting " + nlp + " combining final average results")
+    
+    for type in types:
+        strict_path = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + nlp + "\\strict_" + nlp + "\\" + type + "\\" + type + "_results.csv"
+        extract = pd.read_csv(strict_path) 
+
+        final_path = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + nlp + "\\dataset_csv_input_" + nlp + "\\" + type + "_csv_results\\" + nlp + "_" + grouping + "_average.csv"
+        file = open(final_path, "w")
+        file.close()
+        extract.to_csv(final_path, index = False)
+
+        line = "python .\setup_data\merge_data.py " + final_path + " final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + nlp + "\\inclusion_" + nlp + "\\" + type + "\\" + type + "_results.csv"
+        subprocess.run(line)
+
+        line = "python .\setup_data\merge_data.py " + final_path + " final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + nlp + "\\relaxed_" + nlp + "\\" + type + "\\" + type + "_results.csv"
+        subprocess.run(line)
+
+    print("Finished " + nlp + " combining final average results")
 
 if __name__ == "__main__":
     main()

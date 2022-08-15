@@ -35,32 +35,23 @@ def command():
     wrong file order: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will output a visulation of the results of differnt grouping of crf. NOTE: order within csv file must be strict, inclusion and then relaxed")
-    parser.add_argument("load_individual_backlog_path", type = str, help = "path of individual backlog crf csv file")
-    parser.add_argument("load_category_path", type = str, help = "path of category crf csv file")
-    parser.add_argument("load_global_path", type = str, help = "path of global crf csv file")
+    parser.add_argument('--primary', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("save_file_name", type = str, help = "name of file to save")
     parser.add_argument("title", type = str, help = "title of graph")
 
     args = parser.parse_args()
 
-    if not(args.load_individual_backlog_path.endswith(".csv")) or not(args.load_category_path.endswith(".csv")) or not(args.load_global_path.endswith(".csv")):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. Save file type is .csv")
-
-    try:
-        load_file = open(args.load_individual_backlog_path)
-        load_file.close()
-        load_file = open(args.load_category_path)
-        load_file.close()
-        load_file = open(args.load_global_path)
-        load_file.close()
-
-    except FileNotFoundError:
-        sys.tracebacklimit = 0
-        print("File or directory does not exist")
-        raise
+    if args.primary == True:
+        load_individual_backlog_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\primary_csv_results\\crf_individual_backlog_average.csv"
+        load_category_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\primary_csv_results\\crf_categories_average.csv"
+        load_global_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_crf\\primary_csv_results\\crf_global_average.csv"
     else:
-        return args.load_individual_backlog_path, args.load_category_path, args.load_global_path, args.save_file_name, args.title
+        load_individual_backlog_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\all_csv_results\\crf_individual_backlog_average.csv"
+        load_category_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\all_csv_results\\crf_categories_average.csv"
+        load_global_path = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_crf\\all_csv_results\\crf_global_average.csv"
+
+
+    return load_individual_backlog_path, load_category_path, load_global_path, args.save_file_name, args.title
 
 def extract_data(path):
     '''
