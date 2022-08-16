@@ -6,8 +6,6 @@ import numpy as np
 import pandas as pd
 import sys
 
-from sklearn.metrics import max_error
-
 def main():
     with_crf, primary, save_name, title= command()
 

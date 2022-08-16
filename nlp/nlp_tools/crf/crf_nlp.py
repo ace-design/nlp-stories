@@ -18,19 +18,19 @@ from sklearn.model_selection import RandomizedSearchCV
 import sys
 
 def main():
-    train_path, test_path, random_optimize, grid_optimize, model_name, saving_path, data_type_folder, c1, c2 = command()
+    train_path, test_path, random_optimize, grid_optimize, model_name, saving_path, data_type_folder, c1, c2, feature_type = command()
 
     stanza.download('en') 
     stanza_nlp = stanza.Pipeline('en')
     
     testing_set, testing_stories = extract_info(test_path)
 
-    X_test = [sent2features(s, data_type_folder) for s in testing_set]   # Features for the test set
+    X_test = [sent2features(s, feature_type) for s in testing_set]   # Features for the test set
     y_test = [sent2labels(s) for s in testing_set]     # expected labels
 
-    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, model_name, data_type_folder, c1, c2)
+    crf, X_train, y_train = get_model(train_path, testing_stories, testing_set, saving_path, model_name, feature_type, c1, c2)
     
-    y_pred, available_labels = get_results(crf, X_test, y_test)
+    y_pred, available_labels = get_results(crf, X_test, y_test, feature_type)
     
     output = []
     for i in range(len(y_pred)):
@@ -39,7 +39,7 @@ def main():
         output.append(formatted_data)
 
     save_results(model_name, output, data_type_folder)
-    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, data_type_folder)
+    optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, feature_type)
     
 def command():
     '''
@@ -59,6 +59,7 @@ def command():
     '''
     parser = argparse.ArgumentParser(description = "This program will create the input files for crf")
     parser.add_argument("load_testing_path", type = str, help = "path of json file with the testing set input")
+    parser.add_argument("feature_type", type = str, choices=["word_pos_feature", "pos_feature"], help = "word_pos_feature contains features containing words and POS tags; pos_feature contains features containing POS tags")
     parser.add_argument("--load_training_path", nargs="?", type = str, help = "path of json file with the training set input")
     parser.add_argument("--c1", nargs="?", type = float, help = "c1 model parameter")
     parser.add_argument("--c2", nargs="?", type = float, help = "c2 model parameter")
@@ -111,9 +112,9 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, saving_path, data_type_folder, c1, c2
+        return args.load_training_path, args.load_testing_path, args.random_optimize, args.grid_optimize, args.model_name, saving_path, data_type_folder, c1, c2, args.feature_type
 
-def get_model(train_path, testing_stories, testing_set, saving_path, save_name, data_type_folder, c1, c2):
+def get_model(train_path, testing_stories, testing_set, saving_path, save_name, feature_type, c1, c2):
     '''trains a model if it doesn't exist, if it exist, it will extract model from the file'''
     if  not(os.path.exists(saving_path)):
         training_set, training_stories = extract_info(train_path)
@@ -121,7 +122,7 @@ def get_model(train_path, testing_stories, testing_set, saving_path, save_name, 
         ensure_no_intersection(training_stories, testing_stories)
         ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
 
-        X_train = [sent2features(s, data_type_folder) for s in training_set] # Features for the training set
+        X_train = [sent2features(s, feature_type) for s in training_set] # Features for the training set
         y_train = [sent2labels(s) for s in training_set]   # expected labels
 
         config = CRF(algorithm = 'lbfgs', c1 = c1, c2 = c2, max_iterations = 100, all_possible_transitions = True)
@@ -223,7 +224,7 @@ def sent2pos(sentence):
 def sent2labels(sentence): 
     return [label for _, _, label in sentence]
 
-def word2features(sent, i):
+def word2features_word_pos(sent, i):
     """ transform the i-st word in a sentence into a usable feature vector (here a dict)"""
     word = sent[i][0]
     postag = sent[i][1]
@@ -300,7 +301,7 @@ def word2features(sent, i):
 
     return features # return the feature vector for this very sentence
 
-def word2features_big_set(sent, i):
+def word2features_pos(sent, i):
     """ transform the i-st word in a sentence into a usable feature vector (here a dict)"""
     word = sent[i][0]
     postag = sent[i][1]
@@ -377,15 +378,12 @@ def word2features_big_set(sent, i):
 
     return features # return the feature vector for this very sentence
 
-
-
-
-def sent2features(sent, data_type_folder):
+def sent2features(sent, feature_type):
     """Transform a sentences into features"""
-    if data_type_folder == "individual_backlog":
-        return [word2features(sent, i) for i in range(len(sent))]
+    if feature_type == "word_pos_feature":
+        return [word2features_word_pos(sent, i) for i in range(len(sent))]
     else:
-        return [word2features_big_set(sent, i) for i in range(len(sent))]
+        return [word2features_pos(sent, i) for i in range(len(sent))]
 
 def train_model(model, x_features, y_labels, file):
     """Train model so that X fits Y, used file to store the model and avoid unnecessary training"""
@@ -407,7 +405,7 @@ def train_model(model, x_features, y_labels, file):
     print('Execution time:', end-start, 'seconds')
     return model
 
-def get_results(crf, X_test, y_test):
+def get_results(crf, X_test, y_test, feature_type):
     '''runs crf to get the annotations in the stories based on the model'''
     y_pred = crf.predict(X_test)
 
@@ -423,6 +421,11 @@ def get_results(crf, X_test, y_test):
 
     report = metrics.flat_classification_report(y_test, y_pred, labels = sorted_labels, digits = 3)
     print(report)
+
+    if feature_type == "word_pos_feature":
+        print("\nFeatures with words and POS tags were used")
+    else:
+        print("\nFeatures with POS tags were used")
 
     return y_pred, available_labels
 
@@ -600,14 +603,14 @@ def save_results(save_name, output, data_type_folder):
 
     print("File is saved")
 
-def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, data_type_folder):
+def optimize_parameters(random_optimize, grid_optimize, X_train, y_train, available_labels, model_name, train_path, testing_stories, testing_set, feature_type):
     '''optimize the c1 and c2 parameters'''
     training_set, training_stories = extract_info(train_path)
 
     ensure_no_intersection(training_stories, testing_stories)
     ensure_no_intersection(list(map(frozenset, training_set)), list(map(frozenset, testing_set)))
 
-    X_train = [sent2features(s,data_type_folder) for s in training_set] # Features for the training set
+    X_train = [sent2features(s,feature_type) for s in training_set] # Features for the training set
     y_train = [sent2labels(s) for s in training_set]   # expected labels
 
 
