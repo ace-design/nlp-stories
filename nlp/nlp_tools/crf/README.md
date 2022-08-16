@@ -16,7 +16,7 @@ CRF needs a **training** and a **testing** set. The sets contains tuples of info
 
 *Note: If the model already exists, CRF will load the model. This means that CRF will not do any new learning and just use what it had learned from before.*
 
- ### Terms    
+ ### Abbreviations    
 - `BKLG`: Individual Backlog grouping
 - `CAT`: Categories grouping
 - `GLO`: Global grouping 
