@@ -58,8 +58,8 @@ def command():
         model does not exist and training set not given: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will create the input files for crf")
-    parser.add_argument("load_testing_path", type = str, help = "path of crf file with the testing set input")
-    parser.add_argument("--load_training_path", nargs="?", type = str, help = "path of crf file with the training set input")
+    parser.add_argument("load_testing_path", type = str, help = "path of json file with the testing set input")
+    parser.add_argument("--load_training_path", nargs="?", type = str, help = "path of json file with the training set input")
     parser.add_argument("--c1", nargs="?", type = float, help = "c1 model parameter")
     parser.add_argument("--c2", nargs="?", type = float, help = "c2 model parameter")
     parser.add_argument('--random_optimize', default = False, action=argparse.BooleanOptionalAction)

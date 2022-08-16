@@ -81,7 +81,7 @@ def command():
     parser.add_argument("load_all_path", type = str, help = "path of all csv file")
     parser.add_argument('nlp_type', type = str, choices=["VN", "ECMFA", "SIMPLE", "CRF"], help = "choose from VN - visual narrator, ECMFA - ecmfa_vn, SIMPLE - simple, CRF - crf nlp to identify which nlp was used for the current results being converted")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
-    parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--with_crf_intersection', default = False, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
 
@@ -131,7 +131,7 @@ def command():
         else:
             data_type_folder = "global"
         
-        if args.with_crf:
+        if args.with_crf_intersection:
             crf_path = "with_crf\\"
         else:
             crf_path= "without_crf\\"

@@ -59,7 +59,7 @@ def command():
     parser.add_argument("load_intersecting_path", type = str, help = "path of intersecting file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
     parser.add_argument("--append_testing_set", nargs="?", type = str, help = "testing set to append to")
-    parser.add_argument("--amount", nargs="?", type = float, help = "percent in decimal (/100) of amount of stories in testing set")
+    parser.add_argument("--amount", nargs="?", type = float, help = "percent in decimal (/100) of amount of stories to be in the testing set")
 
     
     args = parser.parse_args()
@@ -71,6 +71,10 @@ def command():
     if not(args.load_intersecting_path.endswith(".txt")):
         sys.tracebacklimit = 0
         raise Exception ("Incorrect input file type. Input file type is .txt")
+
+    if args.amount != None and args.amount >= 1.0:
+        sys.tracebacklimit = 0
+        raise Exception ("Amount can only be less than 1.0. Amount is the percent in decimal (/100) of amount of stories to be in the testing set")
 
     try:
         load_file = open(args.load_baseline_path)

@@ -39,7 +39,7 @@ def command():
     wrong file order: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will output a visulation of the results of differnt grouping of crf. NOTE: order within csv file must be strict, inclusion and then relaxed")
-    parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--with_crf_intersection', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument('--primary', default = False, action=argparse.BooleanOptionalAction)
     parser.add_argument("save_file_name", type = str, help = "name of file to save")
     parser.add_argument("title", type = str, help = "title of graph")
@@ -47,7 +47,7 @@ def command():
     args = parser.parse_args()
 
 
-    return args.with_crf, args.primary, args.save_file_name, args.title
+    return args.with_crf_intersection, args.primary, args.save_file_name, args.title
 
 def identify_files(with_crf, primary):
     '''

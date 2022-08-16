@@ -30,11 +30,11 @@ def command():
     '''
     parser = argparse.ArgumentParser(description = "This program is to run the comparison files to get compare nlp final results with each other for a specific dataset grouping type ")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
-    parser.add_argument('--with_crf', default = False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--with_crf_intersection', default = False, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
 
-    return args.data_type, args.with_crf
+    return args.data_type, args.with_crf_intersection
 
 def get_info(grouping_code, with_crf):
     '''

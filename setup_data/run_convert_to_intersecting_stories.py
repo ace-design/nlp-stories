@@ -1,3 +1,4 @@
+#Runs convert_to_intersecting_stories.py for the whole dataset for a specific type of data grouping
 import argparse
 import subprocess
 
