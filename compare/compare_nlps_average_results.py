@@ -165,10 +165,10 @@ def create_final_bargraph(data, title, saving_path, crf_path):
 
     if crf_path == None:
         yerr = fix_max_y_error(data[["Simple SD","ecmfa-vn SD","VN SD"]], data[["Simple nlp", "ECMFA-VN","Visual Narrator"]])
-        data[["Simple nlp", "ECMFA-VN","Visual Narrator"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+        data[["Simple nlp", "ECMFA-VN","Visual Narrator"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
     else:
         yerr = fix_max_y_error(data[["Simple SD","ecmfa-vn SD","VN SD", "CRF SD"]], data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]])
-        data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]].plot(kind='bar', alpha = 0.85, yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200","#4c0000"])
+        data[["Simple nlp", "ECMFA-VN","Visual Narrator", "CRF"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(17,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2), plt.cm.Pastel1(3)])
     
     plt.title(title,fontsize= 20)
     plt.ylabel("Average Score",fontsize=14)

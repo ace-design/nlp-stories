@@ -1009,15 +1009,15 @@ def create_bargraph(precision_data, recall_data, f_measure_data, x_label, title,
     '''
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(10, 5), sharex=True)
 
-    sns.barplot(x=x_label, y=precision_data, ax= precision_plot, color= "#f29e8e", alpha = 0.85)
+    sns.barplot(x=x_label, y=precision_data, ax= precision_plot, color= plt.cm.Pastel1(0))
     precision_plot.set_ylabel("Precision")
     precision_plot.bar_label(precision_plot.containers[0])
 
-    sns.barplot(x=x_label, y=recall_data, ax=recall_plot, color= "indianred", alpha = 0.85)
+    sns.barplot(x=x_label, y=recall_data, ax=recall_plot, color= plt.cm.Pastel1(1))
     recall_plot.set_ylabel("Recall")
     recall_plot.bar_label(recall_plot.containers[0])
 
-    sns.barplot(x=x_label, y=f_measure_data, ax=f_measure_plot , color= "maroon", alpha = 0.85)
+    sns.barplot(x=x_label, y=f_measure_data, ax=f_measure_plot , color= plt.cm.Pastel1(2))
     f_measure_plot.set_ylabel("F-Measure")
     f_measure_plot.set_xlabel("Number of Occurance")
     f_measure_plot.bar_label(f_measure_plot.containers[0])

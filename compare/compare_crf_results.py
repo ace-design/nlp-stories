@@ -116,7 +116,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     graph, (left, middle, right) = plt.subplots(1, 3, figsize=(10, 5))
 
     strict_yerr = fix_max_y_error(strict_data[["individual backlog SD","categories SD","global SD"]], strict_data[["Individual Backlog", "Categories","Global"]])
-    strict_data[["Individual Backlog", "Categories","Global"]].plot(ax = left, kind='bar', alpha = 0.85, yerr = strict_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    strict_data[["Individual Backlog", "Categories","Global"]].plot(ax = left, kind='bar', yerr = strict_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
     left.set_title("Strict Comparison", fontsize = 20)
     left.set_ylabel("F-Measure", fontsize = 25)
     left.set_xticklabels(["Persona", "Entity", "Action"], fontsize = 16)
@@ -125,7 +125,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     left.set_ylim([0, 1])
 
     inclusion_yerr = fix_max_y_error(inclusion_data[["individual backlog SD","categories SD","global SD"]], inclusion_data[["Individual Backlog", "Categories","Global"]])
-    inclusion_data[["Individual Backlog", "Categories","Global"]].plot(ax = middle, kind='bar', alpha = 0.85, yerr = inclusion_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    inclusion_data[["Individual Backlog", "Categories","Global"]].plot(ax = middle, kind='bar', yerr = inclusion_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
     middle.set_title("Inclusion Comparison", fontsize = 20)
     middle.tick_params(labelrotation = 0)
     middle.set_xticklabels(["Persona", "Entity", "Action"], fontsize = 16)
@@ -133,7 +133,7 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
     middle.set_ylim([0, 1])
 
     relaxed_yerr = fix_max_y_error(relaxed_data[["individual backlog SD","categories SD","global SD"]], relaxed_data[["Individual Backlog", "Categories","Global"]])
-    relaxed_data[["Individual Backlog", "Categories","Global"]].plot(ax = right, kind='bar', alpha = 0.85, yerr = relaxed_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = ["#f29e8e", "indianred", "#9a0200"])
+    relaxed_data[["Individual Backlog", "Categories","Global"]].plot(ax = right, kind='bar', yerr = relaxed_yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 5, ecolor='k'), figsize=(17,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
     right.set_title("Relaxed Comparison", fontsize = 20)
     right.tick_params(labelrotation = 0)
     right.set_xticklabels(["Persona", "Entity", "Action"], fontsize = 16)

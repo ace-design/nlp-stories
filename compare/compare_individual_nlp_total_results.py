@@ -22,12 +22,12 @@ def main():
     with open(dataset_name_path) as file:
         dataset_names = file.readlines()
 
-    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Primary Recall Vs. Precision Persona " + comparison_type, "maroon", primary_save_path + "\\primary_persona_scatter.png")
-    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Primary Recall Vs. Precision Entity " + comparison_type, "indianred", primary_save_path + "\\primary_entity_scatter.png")
-    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Primary Recall Vs. Precision Action " + comparison_type, "#f29e8e", primary_save_path + "\\primary_action_scatter.png")
-    create_final_scatterplot(all_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, "maroon", all_save_path + "\\all_persona_scatter.png")
-    create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, "indianred", all_save_path + "\\all_entity_scatter.png")
-    create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, "#f29e8e", all_save_path + "\\all_action_scatter.png")
+    create_final_scatterplot(primary_path, "Persona Precision", "Persona Recall", "Primary Recall Vs. Precision Persona " + comparison_type, plt.cm.Pastel1(2), primary_save_path + "\\primary_persona_scatter.png")
+    create_final_scatterplot(primary_path, "Entity Precision", "Entity Recall", "Primary Recall Vs. Precision Entity " + comparison_type, plt.cm.Pastel1(1), primary_save_path + "\\primary_entity_scatter.png")
+    create_final_scatterplot(primary_path, "Action Precision", "Action Recall", "Primary Recall Vs. Precision Action " + comparison_type, plt.cm.Pastel1(0), primary_save_path + "\\primary_action_scatter.png")
+    create_final_scatterplot(all_path, "Persona Precision", "Persona Recall", "Recall Vs. Precision Persona " + comparison_type, plt.cm.Pastel1(2), all_save_path + "\\all_persona_scatter.png")
+    create_final_scatterplot(all_path, "Entity Precision", "Entity Recall", "Recall Vs. Precision Entity " + comparison_type, plt.cm.Pastel1(1), all_save_path + "\\all_entity_scatter.png")
+    create_final_scatterplot(all_path, "Action Precision", "Action Recall", "Recall Vs. Precision Action " + comparison_type, plt.cm.Pastel1(0), all_save_path + "\\all_action_scatter.png")
 
     create_final_bargraph(primary_path,"Persona Precision", "Persona Recall", "Persona F-Measure", "Persona " + comparison_type, primary_save_path + "\\primary_persona_bargraph.png", dataset_names)
     create_final_bargraph(primary_path,"Entity Precision", "Entity Recall", "Entity F-Measure", "Primary Entity " + comparison_type, primary_save_path + "\\primary_entity_bargraph.png", dataset_names)
@@ -205,7 +205,7 @@ def create_final_scatterplot(read_file, x_data, y_data, title, graph_color, save
 
     csv_data = pd.read_csv(read_file)
 
-    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False, xlim=(0, 1.1),ylim=(0, 1.1), alpha = 0.85)
+    graph = sns.jointplot(x = x_data, y = y_data, data = csv_data, kind = "scatter", color= graph_color, clip_on = False, xlim=(0, 1.1),ylim=(0, 1.1))
     graph.fig.suptitle(title, fontsize = 16)
     graph.figure.tight_layout() 
     
@@ -230,15 +230,15 @@ def create_final_bargraph(read_file,precision_data, recall_data, f_measure_data,
     csv_data = pd.read_csv(read_file)
     x_label = dataset_names
 
-    sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= "#f29e8e", ci = None, alpha = 0.85)
+    sns.barplot(x=x_label, y=precision_data, data = csv_data, ax= precision_plot, color= plt.cm.Pastel1(0), ci = None)
     for p in precision_plot.patches:
         precision_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
 
-    sns.barplot(x=x_label, y=recall_data, data = csv_data, ax=recall_plot, color= "indianred",  ci = None, alpha = 0.85)
+    sns.barplot(x=x_label, y=recall_data, data = csv_data, ax=recall_plot, color= plt.cm.Pastel1(1),  ci = None)
     for p in recall_plot.patches:
         recall_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
 
-    sns.barplot(x=x_label, y=f_measure_data, data = csv_data, ax=f_measure_plot , color= "maroon", ci = None, alpha = 0.85)
+    sns.barplot(x=x_label, y=f_measure_data, data = csv_data, ax=f_measure_plot , color= plt.cm.Pastel1(2), ci = None)
     for p in f_measure_plot.patches:
         f_measure_plot.annotate(format(p.get_height(), '.3f'), (p.get_x() + p.get_width() / 2., p.get_height()), ha = 'center', va = 'center', size = 8, xytext = (0, 3), textcoords = 'offset points')
     

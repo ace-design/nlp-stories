@@ -232,25 +232,25 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
     if crf_path == None:
-        palette ={"Simple": "#f29e8e", "ECMFA-VN": "indianred", "Visual Narrator": "#9a0200"}
+        palette ={"Simple": plt.cm.Pastel1(0), "ECMFA-VN": plt.cm.Pastel1(1), "Visual Narrator": plt.cm.Pastel1(2)}
     else:
-        palette ={"Simple": "#f29e8e", "ECMFA-VN": "indianred", "Visual Narrator": "#9a0200", "CRF": "#4c0000"}
+        palette ={"Simple": plt.cm.Pastel1(0), "ECMFA-VN": plt.cm.Pastel1(1), "Visual Narrator": plt.cm.Pastel1(2), "CRF": plt.cm.Pastel1(3)}
 
-    precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None, alpha = 0.85)
+    precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None)
     precision.set(xlabel=None)
     precision.set_ylabel("Precision", fontsize = 14)
 
     # for i in precision.containers:
     #     precision.bar_label(i, fontsize = 6)
 
-    recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette, ci = None, alpha = 0.85)
+    recall = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = recall_results, ax = recall_plot, palette = palette, ci = None)
     recall.set(xlabel=None)
     recall.set_ylabel("Recall", fontsize = 14)
 
     # for i in recall.containers:
     #     recall.bar_label(i, fontsize = 6)
 
-    f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette, ci = None, alpha = 0.85)
+    f_measure = sns.barplot(x= "Dataset", y= "Data", hue = "nlp", data = f_measure_results, ax = f_measure_plot, palette = palette, ci = None)
     f_measure_plot.set_xlabel("Dataset Grouping", fontsize = 14)
     f_measure.set_ylabel("F-Measure", fontsize = 14)
 
