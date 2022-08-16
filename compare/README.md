@@ -65,7 +65,7 @@ We compare the NLP's annotation with the manual baseline annotations to evaluate
    > python compare\compare_nlps_average_results.py `path to Simple NLP's average result csv file` `path to ECMFA-VN average result csv file` `path to Visual Narrator average result csv file` `saving name` `{BKLG, CAT, GLO}` `--load_crf_path` 
      - outputs: `Graphs of all NLPs' average results` 
      
- #### Terms    
+ #### Abbreviations    
 - `BKLG`: Individual Backlog grouping
 - `CAT`: Categories grouping
 - `GLO`: Global grouping 
