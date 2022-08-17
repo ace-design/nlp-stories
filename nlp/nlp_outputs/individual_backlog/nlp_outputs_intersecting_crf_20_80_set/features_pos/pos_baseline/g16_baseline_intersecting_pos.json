@@ -1,0 +1,399 @@
+[
+    {
+        "PID": "#G16#",
+        "Text": "#G16# As a visitor, I want to see the embargo status and release date clearly displayed and perhaps highlighted in some way.",
+        "Persona": [
+            "visitor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "clearly displayed",
+                "highlighted"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "embargo status",
+                "release date"
+            ],
+            "Secondary Entity": [
+                "some way"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "visitor",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "embargo status"
+            ],
+            [
+                "see",
+                "release date"
+            ],
+            [
+                "clearly displayed",
+                "embargo status"
+            ],
+            [
+                "clearly displayed",
+                "release date"
+            ],
+            [
+                "highlighted",
+                "embargo status"
+            ],
+            [
+                "highlighted",
+                "release date"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "visitor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "clearly",
+                        "displayed"
+                    ],
+                    [
+                        "highlighted"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "embargo",
+                        "status"
+                    ],
+                    [
+                        "release",
+                        "date"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "some",
+                        "way"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G16#",
+        "Text": "#G16# As a collection curator, I want to see the referers for visitors who use resolver-abstracted links to reach my items.",
+        "Persona": [
+            "collection curator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "use",
+                "reach"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "referers"
+            ],
+            "Secondary Entity": [
+                "visitors",
+                "resolver-abstracted links",
+                "items"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "collection curator",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "referers"
+            ],
+            [
+                "use",
+                "resolver-abstracted links"
+            ],
+            [
+                "reach",
+                "items"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "collection",
+                    "curator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "use"
+                    ],
+                    [
+                        "reach"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "referers"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "PUNCT",
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "visitors"
+                    ],
+                    [
+                        "resolver",
+                        "-",
+                        "abstracted",
+                        "links"
+                    ],
+                    [
+                        "items"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G16#",
+        "Text": "#G16# As a collection curator, I want to restrict access to my collection or items to Duke IP addresses.",
+        "Persona": [
+            "collection curator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "restrict access"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection",
+                "items"
+            ],
+            "Secondary Entity": [
+                "Duke IP addresses"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "collection curator",
+                "restrict access"
+            ]
+        ],
+        "Targets": [
+            [
+                "restrict access",
+                "collection"
+            ],
+            [
+                "restrict access",
+                "items"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "collection",
+                    "curator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "restrict",
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "collection"
+                    ],
+                    [
+                        "items"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Duke",
+                        "IP",
+                        "addresses"
+                    ]
+                ]
+            }
+        }
+    }
+]

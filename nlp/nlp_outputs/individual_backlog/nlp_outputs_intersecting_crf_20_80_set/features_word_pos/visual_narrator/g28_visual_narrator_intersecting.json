@@ -1,0 +1,242 @@
+[
+    {
+        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "music"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "music"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to receive content recommendations from similar profiles.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "receive"
+        ],
+        "Entity": [
+            "recommendations"
+        ],
+        "Triggers": [
+            "user",
+            "receive"
+        ],
+        "Targets": [
+            "receive",
+            "recommendations"
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.\t",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "take"
+        ],
+        "Entity": [
+            "picture"
+        ],
+        "Triggers": [
+            "user",
+            "take"
+        ],
+        "Targets": [
+            "take",
+            "picture"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "filter"
+        ],
+        "Entity": [
+            "aspects"
+        ],
+        "Triggers": [
+            "admin",
+            "filter"
+        ],
+        "Targets": [
+            "filter",
+            "aspects"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "images"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "images"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "features"
+        ],
+        "Triggers": [
+            "admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "features"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "perform"
+        ],
+        "Entity": [
+            "prefiltering"
+        ],
+        "Triggers": [
+            "admin",
+            "perform"
+        ],
+        "Targets": [
+            "perform",
+            "prefiltering"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "identify"
+        ],
+        "Entity": [
+            "number"
+        ],
+        "Triggers": [
+            "admin",
+            "identify"
+        ],
+        "Targets": [
+            "identify",
+            "number"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "volunteer"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "volunteer"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "piece"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "piece"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "explanation"
+        ],
+        "Triggers": [
+            "admin",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "explanation"
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.\t",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "summary"
+        ],
+        "Triggers": [
+            "admin",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "summary"
+        ]
+    }
+]

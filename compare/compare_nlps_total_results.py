@@ -258,9 +258,9 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     #     f_measure.bar_label(i, fontsize = 6)
 
 
-    precision_plot.set(ylim=(0, 1.2))
-    recall_plot.set(ylim=(0, 1.2))
-    f_measure_plot.set(ylim=(0, 1.2)) 
+    precision_plot.set(ylim=(0, 1.05))
+    recall_plot.set(ylim=(0, 1.05))
+    f_measure_plot.set(ylim=(0, 1.05)) 
     
     graph.suptitle(title, fontsize = 20)
 

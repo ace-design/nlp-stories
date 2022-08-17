@@ -1,0 +1,242 @@
+[
+    {
+        "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "explore"
+        ],
+        "Entity": [
+            "instance"
+        ],
+        "Triggers": [
+            "developer",
+            "explore"
+        ],
+        "Targets": [
+            "explore",
+            "instance"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "version"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error. ",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "version"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "version"
+        ]
+    },
+    {
+        "Text": "#G17# As a dataset developer, I want to have an archetype that helps me package my dataset type properly.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "archetype"
+        ],
+        "Triggers": [
+            "developer",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "archetype"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "depend"
+        ],
+        "Entity": [
+            "implementation"
+        ],
+        "Triggers": [
+            "developer",
+            "depend"
+        ],
+        "Targets": [
+            "depend",
+            "implementation"
+        ]
+    },
+    {
+        "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "apps"
+        ],
+        "Triggers": [
+            "user",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "apps"
+        ]
+    },
+    {
+        "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "include"
+        ],
+        "Entity": [
+            "code"
+        ],
+        "Triggers": [
+            "developer",
+            "include"
+        ],
+        "Targets": [
+            "include",
+            "code"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to specify schema as a SQL schema string.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "specify"
+        ],
+        "Entity": [
+            "schema"
+        ],
+        "Triggers": [
+            "user",
+            "specify"
+        ],
+        "Targets": [
+            "specify",
+            "schema"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to configure time-to-live in a uniform way across all dataset types.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "configure"
+        ],
+        "Entity": [
+            "way"
+        ],
+        "Triggers": [
+            "user",
+            "configure"
+        ],
+        "Targets": [
+            "configure",
+            "way"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "update"
+        ],
+        "Entity": [
+            "properties"
+        ],
+        "Triggers": [
+            "user",
+            "update"
+        ],
+        "Targets": [
+            "update",
+            "properties"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to remove a single property of a dataset instance without knowing all other properties. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "remove"
+        ],
+        "Entity": [
+            "property"
+        ],
+        "Triggers": [
+            "user",
+            "remove"
+        ],
+        "Targets": [
+            "remove",
+            "property"
+        ]
+    },
+    {
+        "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "datasets"
+        ],
+        "Triggers": [
+            "developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "datasets"
+        ]
+    }
+]

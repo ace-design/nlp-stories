@@ -1,0 +1,222 @@
+[
+    {
+        "Text": "#G03# As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
+        "Persona": [
+            "Customer"
+        ],
+        "Action": [
+            "Create"
+        ],
+        "Entity": [
+            "Account"
+        ],
+        "Triggers": [
+            "Customer",
+            "Create"
+        ],
+        "Targets": [
+            "Create",
+            "Account"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Pay"
+        ],
+        "Entity": [
+            "Fee"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Pay"
+        ],
+        "Targets": [
+            "Pay",
+            "Fee"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Perform"
+        ],
+        "Entity": [
+            "Review"
+        ],
+        "Triggers": [
+            "member",
+            "Perform"
+        ],
+        "Targets": [
+            "Perform",
+            "Review"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Record"
+        ],
+        "Entity": [
+            "Note"
+        ],
+        "Triggers": [
+            "member",
+            "Record"
+        ],
+        "Targets": [
+            "Record",
+            "Note"
+        ]
+    },
+    {
+        "Text": "#G03# As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Evaluate"
+        ],
+        "Entity": [
+            "Consistency"
+        ],
+        "Triggers": [
+            "member",
+            "Evaluate"
+        ],
+        "Targets": [
+            "Evaluate",
+            "Consistency"
+        ]
+    },
+    {
+        "Text": "#G03# As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Process"
+        ],
+        "Entity": [
+            "Requests"
+        ],
+        "Triggers": [
+            "member",
+            "Process"
+        ],
+        "Targets": [
+            "Process",
+            "Requests"
+        ]
+    },
+    {
+        "Text": "#G03# As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Affidavits"
+        ],
+        "Triggers": [
+            "member",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Affidavits"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Assign"
+        ],
+        "Entity": [
+            "Plans"
+        ],
+        "Triggers": [
+            "member",
+            "Assign"
+        ],
+        "Targets": [
+            "Assign",
+            "Plans"
+        ]
+    },
+    {
+        "Text": "#G03# As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+        "Persona": [
+            "member"
+        ],
+        "Action": [
+            "Track"
+        ],
+        "Entity": [
+            "Completion"
+        ],
+        "Triggers": [
+            "member",
+            "Track"
+        ],
+        "Targets": [
+            "Track",
+            "Completion"
+        ]
+    },
+    {
+        "Text": "#G03# As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+        "Persona": [
+            "Applicant"
+        ],
+        "Action": [
+            "Complete"
+        ],
+        "Entity": [
+            "Project"
+        ],
+        "Triggers": [
+            "Applicant",
+            "Complete"
+        ],
+        "Targets": [
+            "Complete",
+            "Project"
+        ]
+    },
+    {
+        "Text": "#G03# As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
+        "Persona": [
+            "Supervisor"
+        ],
+        "Action": [
+            "Manage"
+        ],
+        "Entity": [
+            "Workload"
+        ],
+        "Triggers": [
+            "Supervisor",
+            "Manage"
+        ],
+        "Targets": [
+            "Manage",
+            "Workload"
+        ]
+    }
+]

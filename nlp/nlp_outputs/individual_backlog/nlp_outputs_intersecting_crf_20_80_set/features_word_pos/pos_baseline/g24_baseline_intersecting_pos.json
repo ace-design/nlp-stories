@@ -1,0 +1,1465 @@
+[
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Pure, so that I have a single onestop shop for managing my research outputs.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deposit",
+                "maintain"
+            ],
+            "Secondary Action": [
+                "have",
+                "managing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "Pure",
+                "single onestop shop",
+                "research outputs"
+            ]
+        },
+        "Benefit": "I have a single onestop shop for managing my research outputs",
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ],
+            [
+                "depositor",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "deposit",
+                "datasets"
+            ],
+            [
+                "maintain",
+                "datasets"
+            ],
+            [
+                "have",
+                "single onestop shop"
+            ],
+            [
+                "managing",
+                "research outputs"
+            ]
+        ],
+        "Contains": [
+            [
+                "Pure",
+                "datasets"
+            ],
+            [
+                "single onestop shop",
+                "research outputs"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "deposit"
+                    ],
+                    [
+                        "maintain"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "have"
+                    ],
+                    [
+                        "managing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "datasets"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Pure"
+                    ],
+                    [
+                        "single",
+                        "onestop",
+                        "shop"
+                    ],
+                    [
+                        "research",
+                        "outputs"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Virtual Research Environments and other workflow tools, so that I can continue to work with tools with which I'm familiar.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deposit",
+                "maintain"
+            ],
+            "Secondary Action": [
+                "work"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "Virtual Research Environments",
+                "other workflow tools",
+                "tools"
+            ]
+        },
+        "Benefit": "I can continue to work with tools with which I'm familiar",
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ],
+            [
+                "depositor",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "maintain",
+                "datasets"
+            ],
+            [
+                "deposit",
+                "datasets"
+            ],
+            [
+                "work",
+                "tools"
+            ]
+        ],
+        "Contains": [
+            [
+                "Virtual Research Environments",
+                "datasets"
+            ],
+            [
+                "other workflow tools",
+                "datasets"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "deposit"
+                    ],
+                    [
+                        "maintain"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "work"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "datasets"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "Virtual",
+                        "Research",
+                        "Environments"
+                    ],
+                    [
+                        "other",
+                        "workflow",
+                        "tools"
+                    ],
+                    [
+                        "tools"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to deposit the files that I have, so that I don't have to spend a lot of time finding the right version and converting to the right format.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "deposit"
+            ],
+            "Secondary Action": [
+                "finding",
+                "converting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "files"
+            ],
+            "Secondary Entity": [
+                "right version",
+                "right format"
+            ]
+        },
+        "Benefit": "I don't have to spend a lot of time finding the right version and converting to the right format",
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ]
+        ],
+        "Targets": [
+            [
+                "deposit",
+                "files"
+            ],
+            [
+                "finding",
+                "right version"
+            ],
+            [
+                "converting",
+                "right format"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "deposit"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "finding"
+                    ],
+                    [
+                        "converting"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "files"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "right",
+                        "version"
+                    ],
+                    [
+                        "right",
+                        "format"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to place data under an embargo, so that my right of first use is protected, and I can fulfil my confidentiality responsibilities.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "place"
+            ],
+            "Secondary Action": [
+                "fulfil",
+                "protected"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "embargo",
+                "right of first use",
+                "confidentiality responsibilities"
+            ]
+        },
+        "Benefit": "my right of first use is protected, and I can fulfil my confidentiality responsibilities",
+        "Triggers": [
+            [
+                "depositor",
+                "place"
+            ]
+        ],
+        "Targets": [
+            [
+                "place",
+                "data"
+            ],
+            [
+                "fulfil",
+                "confidentiality responsibilities"
+            ],
+            [
+                "protected",
+                "right of first use"
+            ]
+        ],
+        "Contains": [
+            [
+                "data",
+                "embargo"
+            ],
+            [
+                "data",
+                "right of first use"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "place"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fulfil"
+                    ],
+                    [
+                        "protected"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "ADP",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "embargo"
+                    ],
+                    [
+                        "right",
+                        "of",
+                        "first",
+                        "use"
+                    ],
+                    [
+                        "confidentiality",
+                        "responsibilities"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to allow my collaborators privileged access to datasets, so that we continue to have a productive relationship.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "allow"
+            ],
+            "Secondary Action": [
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "privileged access"
+            ],
+            "Secondary Entity": [
+                "collaborators",
+                "datasets",
+                "productive relationship"
+            ]
+        },
+        "Benefit": "we continue to have a productive relationship",
+        "Triggers": [
+            [
+                "depositor",
+                "allow"
+            ]
+        ],
+        "Targets": [
+            [
+                "allow",
+                "privileged access"
+            ],
+            [
+                "have",
+                "productive relationship"
+            ]
+        ],
+        "Contains": [
+            [
+                "datasets",
+                "privileged access"
+            ],
+            [
+                "collaborators",
+                "privileged access"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "allow"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "privileged",
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "collaborators"
+                    ],
+                    [
+                        "datasets"
+                    ],
+                    [
+                        "productive",
+                        "relationship"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to attach subject specific discoverability metadata to records, so that researchers in my discipline can find my data more easily.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "attach"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "subject specific discoverability metadata"
+            ],
+            "Secondary Entity": [
+                "records",
+                "researchers",
+                "discipline",
+                "data"
+            ]
+        },
+        "Benefit": "researchers in my discipline can find my data more easily",
+        "Triggers": [
+            [
+                "depositor",
+                "attach"
+            ]
+        ],
+        "Targets": [
+            [
+                "attach",
+                "subject specific discoverability metadata"
+            ],
+            [
+                "find",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "records",
+                "subject specific discoverability metadata"
+            ],
+            [
+                "discipline",
+                "researchers"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "attach"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "find"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "subject",
+                        "specific",
+                        "discoverability",
+                        "metadata"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "records"
+                    ],
+                    [
+                        "researchers"
+                    ],
+                    [
+                        "discipline"
+                    ],
+                    [
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to link datasets with the project DMP, so that compliance with DMP can be demonstrated and whole project workflow is linked together.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "demonstrated",
+                "linked together"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "project DMP",
+                "compliance",
+                "DMP",
+                "whole project workflow"
+            ]
+        },
+        "Benefit": "compliance with DMP can be demonstrated and whole project workflow is linked together",
+        "Triggers": [
+            [
+                "depositor",
+                "link"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "datasets"
+            ],
+            [
+                "demonstrated",
+                "compliance"
+            ],
+            [
+                "linked together",
+                "whole project workflow"
+            ]
+        ],
+        "Contains": [
+            [
+                "project DMP",
+                "datasets"
+            ],
+            [
+                "DMP",
+                "compliance"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "link"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "demonstrated"
+                    ],
+                    [
+                        "linked",
+                        "together"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "datasets"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "project",
+                        "DMP"
+                    ],
+                    [
+                        "compliance"
+                    ],
+                    [
+                        "DMP"
+                    ],
+                    [
+                        "whole",
+                        "project",
+                        "workflow"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "multiple versions"
+            ],
+            "Secondary Entity": [
+                "same dataset",
+                "changes",
+                "dataset",
+                "research integrity"
+            ]
+        },
+        "Benefit": "changes to the dataset are transparent and do not compromise research integrity",
+        "Triggers": [
+            [
+                "depositor",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "multiple versions"
+            ]
+        ],
+        "Contains": [
+            [
+                "same dataset",
+                "multiple versions"
+            ],
+            [
+                "dataset",
+                "changes"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "manage"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "multiple",
+                        "versions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "same",
+                        "dataset"
+                    ],
+                    [
+                        "changes"
+                    ],
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "research",
+                        "integrity"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a data reuser, I want to access the system in my native language, so that I am not put off reusing University of Bath data by language barriers.",
+        "Persona": [
+            "data reuser"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": [
+                "reusing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "system"
+            ],
+            "Secondary Entity": [
+                "native language",
+                "University of Bath data",
+                "language barriers"
+            ]
+        },
+        "Benefit": "I am not put off reusing University of Bath data by language barriers",
+        "Triggers": [
+            [
+                "data reuser",
+                "access"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "system"
+            ],
+            [
+                "reusing",
+                "University of Bath data"
+            ]
+        ],
+        "Contains": [
+            [
+                "system",
+                "native language"
+            ],
+            [
+                "University of Bath data",
+                "language barriers"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "data",
+                    "reuser"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "access"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "reusing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "system"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "ADP",
+                        "PROPN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "native",
+                        "language"
+                    ],
+                    [
+                        "University",
+                        "of",
+                        "Bath",
+                        "data"
+                    ],
+                    [
+                        "language",
+                        "barriers"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
+        "Text": "#G24# As a Research Information manager, I want to have datasets linked to metadata about projects, so that I can report on projects depositing datasets in relation to funder requirements.",
+        "Persona": [
+            "Research Information manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "linked",
+                "report",
+                "depositing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "metadata",
+                "projects",
+                "funder requirements",
+                "projects",
+                "datasets"
+            ]
+        },
+        "Benefit": "I can report on projects depositing datasets in relation to funder requirements",
+        "Triggers": [
+            [
+                "Research Information manager",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "datasets"
+            ],
+            [
+                "report",
+                "funder requirements"
+            ],
+            [
+                "linked",
+                "datasets"
+            ],
+            [
+                "report",
+                "projects"
+            ],
+            [
+                "depositing",
+                "datasets"
+            ]
+        ],
+        "Contains": [
+            [
+                "projects",
+                "metadata"
+            ],
+            [
+                "metadata",
+                "datasets"
+            ],
+            [
+                "projects",
+                "datasets"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Research",
+                    "Information",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "linked"
+                    ],
+                    [
+                        "report"
+                    ],
+                    [
+                        "depositing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "datasets"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "metadata"
+                    ],
+                    [
+                        "projects"
+                    ],
+                    [
+                        "funder",
+                        "requirements"
+                    ],
+                    [
+                        "projects"
+                    ],
+                    [
+                        "datasets"
+                    ]
+                ]
+            }
+        }
+    }
+]
