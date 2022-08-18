@@ -1,0 +1,588 @@
+[
+    {
+        "Text": "#G05# As a Data Consuming User, I want to be able to filter, sort and aggregate data by multiple dimensions and measures, So that I can get more granular views on the data.",
+        "Persona": [
+            "Data Consuming User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "filter"
+            ],
+            "Secondary Action": [
+                "get more"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "sort"
+            ],
+            "Secondary Entity": [
+                "aggregate data",
+                "multiple dimensions and measures",
+                "granular views",
+                "data"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "filter"
+            ]
+        ],
+        "Targets": [
+            [
+                "filter",
+                "sort"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Developer, I want to be able to customise the Brand Name and Icon, and Primary Color of all frontend Javascript apps, So that I can customise the branding for my own needs.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "customise"
+            ],
+            "Secondary Action": [
+                "Color",
+                "customise"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Brand Name"
+            ],
+            "Secondary Entity": [
+                "Icon,",
+                "frontend Javascript apps",
+                "branding",
+                "own needs"
+            ]
+        },
+        "Triggers": [
+            [
+                "Developer",
+                "customise"
+            ]
+        ],
+        "Targets": [
+            [
+                "customise",
+                "Brand Name"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As an API user, I want to be able to change the colors of the embedded visualisations in my own platform, So that I can customize the visualisations.",
+        "Persona": [
+            "API user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "change"
+            ],
+            "Secondary Action": [
+                "customize"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "colors"
+            ],
+            "Secondary Entity": [
+                "embedded visualisations",
+                "own platform",
+                "visualisations"
+            ]
+        },
+        "Triggers": [
+            [
+                "API user",
+                "change"
+            ]
+        ],
+        "Targets": [
+            [
+                "change",
+                "colors"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Consuming User, I want to be able to search any dataset published and publicly accessible by their title and metadata, So that I can find the datasets I'm interested in.",
+        "Persona": [
+            "Data Consuming User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                "published",
+                "publicly accessible",
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset"
+            ],
+            "Secondary Entity": [
+                "title",
+                "metadata",
+                "datasets I'm interested"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "dataset"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Consuming User, I want to be able to have stepped zoom on map visualisations, So that I can have better control over the navigation experience inside a map view.",
+        "Persona": [
+            "Data Consuming User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "stepped zoom"
+            ],
+            "Secondary Entity": [
+                "map visualisations",
+                "better control",
+                "navigation experience",
+                "map view"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "stepped zoom"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As an API User, I want to be able to normalise measures by population, So that I work with datasets in reference to their contextual constraints.",
+        "Persona": [
+            "API User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "normalise"
+            ],
+            "Secondary Action": [
+                "work"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "measures"
+            ],
+            "Secondary Entity": [
+                "population",
+                "datasets",
+                "reference",
+                "contextual constraints"
+            ]
+        },
+        "Triggers": [
+            [
+                "API User",
+                "normalise"
+            ]
+        ],
+        "Targets": [
+            [
+                "normalise",
+                "measures"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to be able to edit the data source of data I have already imported, So that I can fix bugs or make enhancements in the API built for my data.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "edit"
+            ],
+            "Secondary Action": [
+                "fix",
+                "make"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data source"
+            ],
+            "Secondary Entity": [
+                "data",
+                "bugs",
+                "enhancements",
+                "API built",
+                "my data"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "edit",
+                "data source"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to be able to import data in Excel, So that I do not have to convert data formats in order to use the data packager.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "import"
+            ],
+            "Secondary Action": [
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "Excel",
+                "data formats",
+                "data packager"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "import"
+            ]
+        ],
+        "Targets": [
+            [
+                "import",
+                "data"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Consuming User, I want to visualize by default in treemap, bubble tree, map and pivot table the most recent year when my dataset contain multiple years, So that I'm not confused with the amounts.",
+        "Persona": [
+            "Data Consuming User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "visualize"
+            ],
+            "Secondary Action": [
+                "contain"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "default"
+            ],
+            "Secondary Entity": [
+                "treemap, bubble tree, map and pivot table",
+                "recent year",
+                "dataset",
+                "multiple years",
+                "amounts"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "visualize"
+            ]
+        ],
+        "Targets": [
+            [
+                "visualize",
+                "default"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to know if my CSV file is valid, So that I can fix possible data issues before publishing it on Open Spending.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "fix",
+                "publishing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [],
+            "Secondary Entity": [
+                "CSV file",
+                "possible data issues",
+                "Open Spending"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "know"
+            ]
+        ],
+        "Targets": []
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to have a view on all the datasets I have published, So that I can perform management actions on my own datasets.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "perform"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "view"
+            ],
+            "Secondary Entity": [
+                "the datasets I have published",
+                "management actions",
+                "own datasets"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "view"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a User, I want to be able to set my own username, So that my data is more easily discoverable.",
+        "Persona": [
+            "User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "set"
+            ],
+            "Secondary Action": [
+                "more easily"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "my own username"
+            ],
+            "Secondary Entity": [
+                "data",
+                "discoverable"
+            ]
+        },
+        "Triggers": [
+            [
+                "User",
+                "set"
+            ]
+        ],
+        "Targets": [
+            [
+                "set",
+                "my own username"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to be able to edit a dataset I have published, So that I can correct or enhance existing data.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "edit"
+            ],
+            "Secondary Action": [
+                "correct",
+                "enhance",
+                "existing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset I have published"
+            ],
+            "Secondary Entity": [
+                "data"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "edit",
+                "dataset I have published"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As an API User, I want to be able to normalise measures by GINI and related socioeconomic indexes, So that I work with datasets in reference to their contextual constraints.",
+        "Persona": [
+            "API User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "normalise"
+            ],
+            "Secondary Action": [
+                "related"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "measures"
+            ],
+            "Secondary Entity": [
+                "GINI",
+                "socioeconomic indexes",
+                "datasets",
+                "reference",
+                "contextual constraints"
+            ]
+        },
+        "Triggers": [
+            [
+                "API User",
+                "normalise"
+            ]
+        ],
+        "Targets": [
+            [
+                "normalise",
+                "measures"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Publishing User, I want to be able to edit the model of data I have already imported, So that I can fix bugs or make enhancements in the API built for my data.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "edit"
+            ],
+            "Secondary Action": [
+                "fix",
+                "make"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "model of data"
+            ],
+            "Secondary Entity": [
+                "bugs",
+                "enhancements",
+                "API built",
+                "my data"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "edit",
+                "model of data"
+            ]
+        ]
+    },
+    {
+        "Text": "#G05# As a Data Consuming User, I want to have consistent use of colour on map visualisations, So that I can better understand the visual logic of the map view.",
+        "Persona": [
+            "Data Consuming User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "understand"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "consistent use"
+            ],
+            "Secondary Entity": [
+                "colour",
+                "map visualisations",
+                "visual logic",
+                "map view"
+            ]
+        },
+        "Triggers": [
+            [
+                "Data Consuming User",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "consistent use"
+            ]
+        ]
+    }
+]

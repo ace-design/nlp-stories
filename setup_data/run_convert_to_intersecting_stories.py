@@ -5,10 +5,6 @@ import subprocess
 def main():
     grouping_code, with_crf = command()
     datasets, grouping, crf_path, is_crf, nlp, nlp_code, nlp_file_name, file_type = get_info(grouping_code, with_crf)
-
-    # nlp = ["crf"]
-    # nlp_code = ["CRF"]
-    # nlp_file_name = [""]
     
     for i in range(len(nlp)):
         crf_intersecting_set(grouping, grouping_code, datasets, nlp[i], nlp_code[i], nlp_file_name[i], crf_path, is_crf, file_type)
