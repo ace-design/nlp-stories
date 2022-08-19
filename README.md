@@ -1,4 +1,6 @@
 # nlp-stories
+In Agile software development, there is a problem where the story backlog get piled with user stories [1]. In an attempt to effectively and efficiently go through all the stories in the backlog, a proposed method suggest using NLP tools to extract valuable information from these stories [1]. The extracted information will help summarize and categorize similar feedback to shorten the loop. Ultimately, this leads to efficient software development where more feedback is being considered at once [1]. However, accurate NLP tools are necessary before reaching that stage. This repository compares NLP tools' annotations to a benchmark. The benchmark is a set of manually annotated user stories shown in the next section. 
+
 ## Annotation Guidelines
 
 Each document is an isolated story.
@@ -34,9 +36,9 @@ You can use the followiong relations:
 
 
 ### Note:
-In the given data set, a few projects contained stories that did not have the expected story structure.
+In the given data set, a few projects contains stories that did not have the expected story structure.
 An example, shown below, is when the persona is not directly performing the action on an entity, but rather an entity performing the main action on another entity.
-**Annotation for these stories still followed the annotation guidelines**. Missing annotaions and relations will be considered when evaluating the results  
+**Annotation for these stories will still follow the annotation guidelines**. Missing annotaions and relations will be considered when evaluating the results  
 <img width="750" alt="passive" src="https://user-images.githubusercontent.com/71148152/174147148-d46c7b90-0b59-4303-95be-a34cbbcf5a4b.png">  
 The expected structure of the example text above will look something like:
 >#G02# As an agency user, I want to be able to submit zero and blank for loan records through the FABS validation rules.
@@ -46,3 +48,7 @@ The following projects did not follow expected sentence structure:
 * g13-planningpoker
 * g17-cask
 * g27-culrepo
+
+## References 
+![image](https://user-images.githubusercontent.com/71148152/185634777-6674829b-058b-4a3e-ae75-123751e8ba11.png)
+
