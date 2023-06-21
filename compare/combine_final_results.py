@@ -73,14 +73,17 @@ def identify_files(with_crf, primary):
     ecmfa_vn_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_individual_backlog_average.csv"
     simple_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_individual_backlog_average.csv"
     vn_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_individual_backlog_average.csv"
+    chatgpt_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\chatgpt\\dataset_csv_input_chatgpt\\" +data_type + "_csv_results\\chatgpt_individual_backlog_average.csv"
     ecmfa_vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_categories_average.csv"
     simple_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_categories_average.csv"
     vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
+    chatgpt_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\chatgpt\\dataset_csv_input_chatgpt\\" +data_type + "_csv_results\\chatgpt_categories_average.csv"
     ecmfa_vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + data_type + "_csv_results\\ecmfa_vn_global_average.csv"
     simple_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\simple\\dataset_csv_input_simple\\" + data_type + "_csv_results\\simple_global_average.csv"
     vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_global_average.csv"
+    chatgpt_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\chatgpt\\dataset_csv_input_chatgpt\\" +data_type + "_csv_results\\chatgpt_global_average.csv"
 
-    file_list = [ecmfa_vn_bklg, simple_bklg, vn_bklg, ecmfa_vn_cat, simple_cat, vn_cat, ecmfa_vn_glo, simple_glo, vn_glo]
+    file_list = [ecmfa_vn_bklg, simple_bklg, vn_bklg, chatgpt_bklg, ecmfa_vn_cat, simple_cat, vn_cat, chatgpt_cat, ecmfa_vn_glo, simple_glo, vn_glo, chatgpt_glo]
 
     if with_crf:
         crf_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_individual_backlog_average.csv"
@@ -128,64 +131,66 @@ def format_data(data, with_crf):
     formatted_data (list): contains the formatted data to graph
     '''
     if with_crf:
-        ecmfa_vn_bklg, simple_bklg, vn_bklg, ecmfa_vn_cat, simple_cat, vn_cat, ecmfa_vn_glo, simple_glo, vn_glo, crf_bklg, crf_cat, crf_glo = data
+        ecmfa_vn_bklg, simple_bklg, vn_bklg, chatgpt_bklg, ecmfa_vn_cat, simple_cat, vn_cat, chatgpt_cat, ecmfa_vn_glo, simple_glo, vn_glo, chatgpt_glo, crf_bklg, crf_cat, crf_glo = data
         
-        strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data = organize_data_with_crf(ecmfa_vn_bklg, simple_bklg, vn_bklg, crf_bklg)
-        strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data_with_crf(ecmfa_vn_cat, simple_cat, vn_cat, crf_cat)
-        strict_glo_data, inclusion_glo_data, relaxed_glo_data = organize_data_with_crf(ecmfa_vn_glo, simple_glo, vn_glo, crf_glo)
+        strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data = organize_data_with_crf(ecmfa_vn_bklg, simple_bklg, vn_bklg, chatgpt_bklg, crf_bklg)
+        strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data_with_crf(ecmfa_vn_cat, simple_cat, vn_cat, chatgpt_cat, crf_cat)
+        strict_glo_data, inclusion_glo_data, relaxed_glo_data = organize_data_with_crf(ecmfa_vn_glo, simple_glo, vn_glo, chatgpt_glo, crf_glo)
     else:
-        ecmfa_vn_bklg, simple_bklg, vn_bklg, ecmfa_vn_cat, simple_cat, vn_cat, ecmfa_vn_glo, simple_glo, vn_glo= data
+        ecmfa_vn_bklg, simple_bklg, vn_bklg, chatgpt_bklg, ecmfa_vn_cat, simple_cat, vn_cat, chatgpt_cat, ecmfa_vn_glo, simple_glo, vn_glo, chatgpt_glo = data
         
-        strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data = organize_data_without_crf(ecmfa_vn_bklg, simple_bklg, vn_bklg)
-        strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data_without_crf(ecmfa_vn_cat, simple_cat, vn_cat)
-        strict_glo_data, inclusion_glo_data, relaxed_glo_data = organize_data_without_crf(ecmfa_vn_glo, simple_glo, vn_glo)
+        strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data = organize_data_without_crf(ecmfa_vn_bklg, simple_bklg, vn_bklg, chatgpt_bklg)
+        strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data_without_crf(ecmfa_vn_cat, simple_cat, vn_cat, chatgpt_cat)
+        strict_glo_data, inclusion_glo_data, relaxed_glo_data = organize_data_without_crf(ecmfa_vn_glo, simple_glo, vn_glo, chatgpt_glo)
     
     formatted_data = [strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data]
 
     return formatted_data
 
-def organize_data_with_crf(ecmfa, simple, bklg, crf):
+def organize_data_with_crf(ecmfa, simple, bklg, chatgpt, crf):
     
     ecmfa_vn_average, ecmfa_vn_sd, ecmfa_vn_label = ecmfa
     simple_average, simple_sd, simple_label = simple
     vn_average, vn_sd, vn_label = bklg
+    chatgpt_average, chatgpt_sd, chatgpt_label = chatgpt
     crf_average, crf_sd, crf_label = crf
     
     row_data = []
 
     for i in range(27):
-        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], crf_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i], crf_sd[i]])
+        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], chatgpt_average[i], crf_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i], chatgpt_sd[i], crf_sd[i]])
 
     for i in range (0,27,9):
-        if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison" and crf_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
-        elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison"and crf_label[i] == "Inclusion Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
-        elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison"and crf_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+        if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison" and chatgpt_label[i] == "Strict Comparison" and crf_label[i] == "Strict Comparison":
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT" "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+        elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison"and chatgpt_label[i] == "Inclusion Comparison" and crf_label[i] == "Inclusion Comparison":
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+        elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison" and chatgpt_label[i] == "Relaxed Comparison" and crf_label[i] == "Relaxed Comparison":
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatpGPT", "CRF", "Simple SD","ECMFA-VN SD","Visual Narrator SD","ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
 
     return strict_data, inclusion_data, relaxed_data
-def organize_data_without_crf(ecmfa, simple, bklg):
+def organize_data_without_crf(ecmfa, simple, bklg, chatgpt):
     
     ecmfa_vn_average, ecmfa_vn_sd, ecmfa_vn_label = ecmfa
     simple_average, simple_sd, simple_label = simple
     vn_average, vn_sd, vn_label = bklg
+    chatgpt_average, chatgpt_sd, chatgpt_label = chatgpt
     
     row_data = []
 
     for i in range(27):
-        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i]])
+        row_data.append([simple_average[i], ecmfa_vn_average[i], vn_average[i], chatgpt_average[i], simple_sd[i], ecmfa_vn_sd[i], vn_sd[i], chatgpt_sd[i]])
 
     for i in range (0,27,9):
-        if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
-        elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
-        elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator","Simple SD","ECMFA-VN SD","Visual Narrator SD"], index= ["Persona", "Entity", "Action"])
+        if ecmfa_vn_label[i] == "Strict Comparison" and simple_label[i] == "Strict Comparison" and vn_label[i] == "Strict Comparison" and chatgpt_label[i] == "Strict Comparison":
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
+        elif ecmfa_vn_label[i] == "Inclusion Comparison" and simple_label[i] == "Inclusion Comparison" and vn_label[i] == "Inclusion Comparison" and chatgpt_label[i] == "Strict Comparison":
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
+        elif ecmfa_vn_label[i] == "Relaxed Comparison" and simple_label[i] == "Relaxed Comparison" and vn_label[i] == "Relaxed Comparison" and chatgpt_label[i] == "Relaxed Comparison":
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT", "Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -216,13 +221,13 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
 
     if with_crf:
-        standard_deviation = ["Simple SD","ECMFA-VN SD","Visual Narrator SD", "CRF SD"]
-        y_data = ["Simple","ECMFA-VN", "Visual Narrator", "CRF"]
-        palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2), plt.cm.Pastel1(3)]
+        standard_deviation = ["Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD" "CRF SD"]
+        y_data = ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT", "CRF"]
+        palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2), plt.cm.Pastel1(3), plt.cm.Pastel1(4)]
     else:
-        standard_deviation = ["Simple SD","ECMFA-VN SD","Visual Narrator SD"]
-        y_data = ["Simple","ECMFA-VN", "Visual Narrator"]
-        palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)]
+        standard_deviation = ["Simple SD","ECMFA-VN SD","Visual Narrator SD", "ChatGPT SD"]
+        y_data = ["Simple","ECMFA-VN", "Visual Narrator", "ChatGPT"]
+        palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2), plt.cm.Pastel1(3)]
 
     graph, position = plt.subplots(3, 3, figsize=(10, 5))
 
@@ -238,7 +243,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #Middle Left
     yerr = fix_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
-    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[1,0].set_ylabel("Categories", fontsize = 14)
     position[1,0].tick_params(labelrotation = 0)
     position[1,0].get_legend().remove()
@@ -247,7 +252,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #bottom Left
     yerr = fix_max_y_error(strict_glo_data[standard_deviation], strict_glo_data[y_data])
-    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[2,0].set_ylabel("Global", fontsize = 14)
     position[2,0].tick_params(labelrotation = 0)
     position[2,0].get_legend().remove()
@@ -255,7 +260,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #Top center
     yerr = fix_max_y_error(inclusion_bklg_data[standard_deviation], inclusion_bklg_data[y_data])
-    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_bklg_data[y_data].plot(ax = position[0,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[0,1].set_title("Inclusion Comparison", fontsize = 14)
     position[0,1].tick_params(labelrotation = 0)
     position[0,1].get_legend().remove()
@@ -264,7 +269,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #Center
     yerr = fix_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
-    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[1,1].tick_params(labelrotation = 0)
     position[1,1].get_legend().remove()
     position[1,1].set_ylim([0, 1])
@@ -272,14 +277,14 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #bottom center
     yerr = fix_max_y_error(inclusion_glo_data[standard_deviation], inclusion_glo_data[y_data])
-    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[2,1].tick_params(labelrotation = 0)
     position[2,1].get_legend().remove()
     position[2,1].set_ylim([0, 1])
 
     #Top right
     yerr = fix_max_y_error(relaxed_bklg_data[standard_deviation], relaxed_bklg_data[y_data])
-    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_bklg_data[y_data].plot(ax = position[0,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[0,2].set_title("Relaxed Comparison", fontsize = 14)
     position[0,2].tick_params(labelrotation = 0)
     position[0,2].get_legend().remove()
@@ -288,7 +293,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #middle right
     yerr = fix_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
-    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[1,2].tick_params(labelrotation = 0)
     position[1,2].get_legend().remove()
     position[1,2].set_ylim([0, 1])
@@ -297,7 +302,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
 
     #bottom right
     yerr = fix_max_y_error(relaxed_glo_data[standard_deviation], relaxed_glo_data[y_data])
-    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(20,7), color = palette)
     position[2,2].tick_params(labelrotation = 0)
     position[2,2].get_legend().remove()
     position[2,2].set_ylim([0, 1])

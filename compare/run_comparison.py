@@ -70,14 +70,14 @@ def get_info(grouping_code, with_crf):
         crf_path = "nlp_outputs_intersecting_crf"
         is_crf = "--with_crf"
         crf_string = "with_crf"
-        nlp = ["crf", "ecmfa_vn", "simple", "visual_narrator"]
-        nlp_code = ["CRF", "ECMFA", "SIMPLE", "VN"]
+        nlp = ["crf", "ecmfa_vn", "simple", "visual_narrator", "chatgpt"]
+        nlp_code = ["CRF", "ECMFA", "SIMPLE", "VN", "CHATGPT"]
     else:
         crf_path = "nlp_outputs_intersecting"
         is_crf = ""
         crf_string = "without_crf"
-        nlp = ["ecmfa_vn", "simple", "visual_narrator"]
-        nlp_code = ["ECMFA", "SIMPLE", "VN"]
+        nlp = ["ecmfa_vn", "simple", "visual_narrator", "chatgpt"]
+        nlp_code = ["ECMFA", "SIMPLE", "VN", "CHATGPT"]
 
     return data_group_names, datasets, grouping, crf_path, is_crf, crf_string, nlp, nlp_code
 
@@ -122,6 +122,7 @@ def run_compare_nlps_total_results(types, comparison_mode, grouping, grouping_co
             line = "python .\compare\compare_nlps_total_results.py final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\simple\\dataset_csv_input_simple\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
             "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\ecmfa_vn\\dataset_csv_input_ecmfa_vn\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv "+\
             "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\dataset_csv_input_visual_narrator\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
+            "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\dataset_csv_input_chatgpt\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
             "--load_crf_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\crf\\dataset_csv_input_crf\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
             type + " " + grouping_code
             subprocess.run(line)
@@ -136,6 +137,7 @@ def run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_
             line = "python .\compare\compare_nlps_average_results.py final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\simple\\" + comparison + "_simple\\" + type + "\\" + type + "_results.csv " +\
             "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\ecmfa_vn\\" + comparison + "_ecmfa_vn\\" + type + "\\" + type + "_results.csv " +\
             "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\" + comparison + "_visual_narrator\\" + type + "\\" + type + "_results.csv " +\
+            "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\" + comparison + "_chatgpt\\" + type + "\\" + type + "_results.csv " +\
             "--load_crf_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\crf\\" + comparison + "_crf\\" + type + "\\" + type + "_results.csv " +\
             type + " " + grouping_code
             subprocess.run(line)
