@@ -1,0 +1,1319 @@
+[
+    {
+        "Text": "#G26# As an administrator, I want to limit who can see certain metadata fields, so that I can show or hide things from display based on user groups.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "limit"
+            ],
+            "Secondary Action": [
+                "show",
+                "hide"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "metadata fields"
+            ],
+            "Secondary Entity": [
+                "user groups"
+            ]
+        },
+        "Benefit": "I can show or hide things from display based on user groups",
+        "Triggers": [
+            [
+                "administrator",
+                "limit"
+            ]
+        ],
+        "Targets": [
+            [
+                "limit",
+                "metadata fields"
+            ],
+            [
+                "limit",
+                "user groups"
+            ],
+            [
+                "show",
+                "metadata fields"
+            ],
+            [
+                "hide",
+                "metadata fields"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to select existing rights statuses and statements, so that I can easily create uniform rights statements.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "select",
+                "create"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "existing rights statuses",
+                "statements",
+                "uniform rights statements"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can easily create uniform rights statements",
+        "Triggers": [
+            [
+                "archivist",
+                "select"
+            ],
+            [
+                "archivist",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "select",
+                "existing rights statuses"
+            ],
+            [
+                "select",
+                "statements"
+            ],
+            [
+                "select",
+                "uniform rights statements"
+            ],
+            [
+                "create",
+                "uniform rights statements"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to redact information in digital files for a period of time, so that I can provide access to non-sensitive portions of a record.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "redact",
+                "provide access"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "digital files",
+                "record"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can provide access to non-sensitive portions of a record",
+        "Triggers": [
+            [
+                "archivist",
+                "redact"
+            ],
+            [
+                "archivist",
+                "provide access"
+            ]
+        ],
+        "Targets": [
+            [
+                "redact",
+                "digital files"
+            ],
+            [
+                "provide access",
+                "record"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to have an online form for licensing archival material, so that the process is more transparent and some of the back and forth can be eliminated.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "eliminate"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "online form"
+            ],
+            "Secondary Entity": [
+                "licensing archival material"
+            ]
+        },
+        "Benefit": "the process is more transparent and some of the back and forth can be eliminated",
+        "Triggers": [
+            [
+                "archivist",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "online form"
+            ],
+            [
+                "have",
+                "licensing archival material"
+            ],
+            [
+                "eliminate",
+                "back and forth"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to automatically generate technical metadata, so that I know the file size.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "automatically generate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "technical metadata"
+            ],
+            "Secondary Entity": [
+                "file size"
+            ]
+        },
+        "Benefit": "I know the file size",
+        "Triggers": [
+            [
+                "archivist",
+                "automatically generate"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically generate",
+                "technical metadata"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to link electronic versions of researchers' publications to citations, so that I can share them with other researchers.",
+        "Persona": [
+            "archivist",
+            "researchers"
+        ],
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "electronic versions",
+                "citations"
+            ],
+            "Secondary Entity": [
+                "other researchers"
+            ]
+        },
+        "Benefit": "I can share electronic versions of researchers' publications with other researchers",
+        "Triggers": [
+            [
+                "archivist",
+                "link"
+            ],
+            [
+                "archivist",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "electronic versions"
+            ],
+            [
+                "link",
+                "citations"
+            ],
+            [
+                "link",
+                "other researchers"
+            ],
+            [
+                "share",
+                "electronic versions"
+            ],
+            [
+                "share",
+                "citations"
+            ],
+            [
+                "share",
+                "other researchers"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to automatically create access derivatives of digital objects, so that I don't have to do this manually.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "automatically create"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "access derivatives",
+                "digital objects"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "don't have to do this manually",
+        "Triggers": [
+            [
+                "archivist",
+                "automatically create"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically create",
+                "access derivatives"
+            ],
+            [
+                "automatically create",
+                "digital objects"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to automatically assign unique identifiers to material I scan, so that I avoid potential errors.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "assign unique identifiers",
+                "scan"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "material"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "avoid potential errors",
+        "Triggers": [
+            [
+                "archivist",
+                "assign unique identifiers"
+            ],
+            [
+                "archivist",
+                "scan"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign unique identifiers",
+                "material"
+            ],
+            [
+                "scan",
+                "material"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a donor representative, I want to supply incremental accruals to new and existing collections, so that material can be transferred on an ongoing basis.",
+        "Persona": [
+            "donor representative"
+        ],
+        "Action": {
+            "Primary Action": [
+                "supply",
+                "transfer"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "incremental accruals",
+                "material"
+            ],
+            "Secondary Entity": [
+                "new collections",
+                "existing collections"
+            ]
+        },
+        "Benefit": "material can be transferred on an ongoing basis",
+        "Triggers": [
+            [
+                "donor representative",
+                "supply"
+            ],
+            [
+                "donor representative",
+                "supply"
+            ],
+            [
+                "donor representative",
+                "supply"
+            ]
+        ],
+        "Targets": [
+            [
+                "supply",
+                "incremental accruals"
+            ],
+            [
+                "supply",
+                "new collections"
+            ],
+            [
+                "supply",
+                "existing collections"
+            ],
+            [
+                "supply",
+                "material"
+            ],
+            [
+                "transfer",
+                "material"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to manage loan documentation, including preservation photos, forms and correspondence, so that I can find it easily later.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "loan documentation"
+            ],
+            "Secondary Entity": [
+                "preservation photos",
+                "forms",
+                "correspondence"
+            ]
+        },
+        "Benefit": "I can find it easily later",
+        "Triggers": [
+            [
+                "archivist",
+                "manage"
+            ],
+            [
+                "archivist",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "loan documentation"
+            ],
+            [
+                "find",
+                "loan documentation"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to generate structured citation data, so that so I can cite a file in a publication.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "generate",
+                "cite"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "structured citation data",
+                "file",
+                "publication"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can cite a file in a publication",
+        "Triggers": [
+            [
+                "researcher",
+                "generate"
+            ]
+        ],
+        "Targets": [
+            [
+                "generate",
+                "structured citation data"
+            ],
+            [
+                "generate",
+                "file"
+            ],
+            [
+                "generate",
+                "publication"
+            ],
+            [
+                "cite",
+                "file"
+            ],
+            [
+                "cite",
+                "publication"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to share a link to a file on social media, so that so I can show other people an interesting thing I found.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "link"
+            ],
+            "Secondary Entity": [
+                "file",
+                "social media"
+            ]
+        },
+        "Benefit": "show other people an interesting thing I found",
+        "Triggers": [
+            [
+                "researcher",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "link"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to locate photographs and documents that I can share on social media.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "locate"
+            ],
+            "Secondary Action": [
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "photographs"
+            ],
+            "Secondary Entity": [
+                "documents"
+            ]
+        },
+        "Benefit": "I can share on social media",
+        "Triggers": [
+            [
+                "researcher",
+                "locate"
+            ]
+        ],
+        "Targets": [
+            [
+                "locate",
+                "photographs"
+            ],
+            [
+                "locate",
+                "documents"
+            ],
+            [
+                "locate",
+                "share"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to stream audio and video files in my web browser.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "stream"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "audio files",
+                "video files",
+                "web browser"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can stream audio and video files in my web browser",
+        "Triggers": [
+            [
+                "researcher",
+                "stream"
+            ]
+        ],
+        "Targets": [
+            [
+                "stream",
+                "audio files"
+            ],
+            [
+                "stream",
+                "video files"
+            ],
+            [
+                "stream",
+                "web browser"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to restrict a group of files from view.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "restrict"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "group of files"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "restrict a group of files from view",
+        "Triggers": [
+            [
+                "archivist",
+                "restrict"
+            ]
+        ],
+        "Targets": [
+            [
+                "restrict",
+                "group of files"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to see what a particular user has downloaded, so that I can track use of assets.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see",
+                "downloaded",
+                "track"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user",
+                "assets"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can track use of assets",
+        "Triggers": [
+            [
+                "archivist",
+                "see"
+            ],
+            [
+                "archivist",
+                "downloaded"
+            ],
+            [
+                "archivist",
+                "track"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "user"
+            ],
+            [
+                "downloaded",
+                "assets"
+            ],
+            [
+                "track",
+                "assets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to make as much archival material as possible available for use, so that I can fulfill the RAC's mission.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make available"
+            ],
+            "Secondary Action": [
+                "fulfill"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "archival material"
+            ],
+            "Secondary Entity": [
+                "RAC's mission"
+            ]
+        },
+        "Benefit": "I can fulfill the RAC's mission",
+        "Triggers": [
+            [
+                "archivist",
+                "make available"
+            ],
+            [
+                "archivist",
+                "fulfill"
+            ]
+        ],
+        "Targets": [
+            [
+                "make available",
+                "archival material"
+            ],
+            [
+                "fulfill",
+                "RAC's mission"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to see common material across collections, so that so I can prepare a comprehensive analysis.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "prepare"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "common material"
+            ],
+            "Secondary Entity": [
+                "collections"
+            ]
+        },
+        "Benefit": "prepare a comprehensive analysis",
+        "Triggers": [
+            [
+                "researcher",
+                "see"
+            ],
+            [
+                "researcher",
+                "prepare"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "common material"
+            ],
+            [
+                "prepare",
+                "comprehensive analysis"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to set a date on which restrictions will be removed from a file, so that that I don't have to update this by hand.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "set",
+                "remove"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "file"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I don't have to update this by hand",
+        "Triggers": [
+            [
+                "archivist",
+                "set"
+            ],
+            [
+                "archivist",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "set",
+                "file"
+            ],
+            [
+                "remove",
+                "file"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to search all files by keyword.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "files"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "to search all files by keyword",
+        "Triggers": [
+            [
+                "archivist",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "files"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to upload inventories, so that our donor representatives have an easier time requesting their material.",
+        "Persona": [
+            "archivist",
+            "donor representatives"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload"
+            ],
+            "Secondary Action": [
+                "requesting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "inventories"
+            ],
+            "Secondary Entity": [
+                "material"
+            ]
+        },
+        "Benefit": "our donor representatives have an easier time requesting their material",
+        "Triggers": [
+            [
+                "archivist",
+                "upload"
+            ],
+            [
+                "donor representatives",
+                "requesting"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "inventories"
+            ],
+            [
+                "requesting",
+                "material"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to access the digital files on the X-drive, so that I can use them.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": [
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "digital files"
+            ],
+            "Secondary Entity": [
+                "X-drive"
+            ]
+        },
+        "Benefit": "I can use the digital files on the X-drive",
+        "Triggers": [
+            [
+                "archivist",
+                "access"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "digital files"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to have electronic versions of the collection files available for staff use, so that I increase accessibility and I do not lose the original files.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have available",
+                "increase accessibility",
+                "do not lose"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "electronic versions",
+                "collection files",
+                "staff"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "increase accessibility and preserve original files",
+        "Triggers": [
+            [
+                "archivist",
+                "have available"
+            ]
+        ],
+        "Targets": [
+            [
+                "have available",
+                "electronic versions"
+            ],
+            [
+                "have available",
+                "collection files"
+            ],
+            [
+                "have available",
+                "staff"
+            ],
+            [
+                "increase accessibility",
+                "electronic versions"
+            ],
+            [
+                "increase accessibility",
+                "collection files"
+            ],
+            [
+                "do not lose",
+                "collection files"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to have accurate cross-collection citation information, so that I can find materials again.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "cross-collection citation information"
+            ],
+            "Secondary Entity": [
+                "materials"
+            ]
+        },
+        "Benefit": "I can find materials again",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ],
+            [
+                "researcher",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "cross-collection citation information"
+            ],
+            [
+                "find",
+                "materials"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to search OCRed text in all available digitized textual documents, so that I can more efficiently locate digitized documents relevant to my research.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "OCRed text",
+                "digitized textual documents"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "more efficiently locate digitized documents relevant to my research",
+        "Triggers": [
+            [
+                "researcher",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "OCRed text"
+            ],
+            [
+                "search",
+                "digitized textual documents"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As a researcher, I want to know the date on which something was digitized, so that I know if it's been digitized since I last looked.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "something"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I know if it's been digitized since I last looked",
+        "Triggers": [
+            [
+                "researcher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "something"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to search index cards and other non-public finding aids, so that I can provide better research assistance.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "index cards"
+            ],
+            "Secondary Entity": [
+                "non-public finding aids"
+            ]
+        },
+        "Benefit": "provide better research assistance",
+        "Triggers": [
+            [
+                "archivist",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "index cards"
+            ],
+            [
+                "search",
+                "non-public finding aids"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an archivist, I want to access metadata and visual representations of index cards, so that I can use that information to assist researchers.",
+        "Persona": [
+            "archivist"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": [
+                "use",
+                "assist"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "metadata",
+                "visual representations",
+                "index cards"
+            ],
+            "Secondary Entity": [
+                "researchers"
+            ]
+        },
+        "Benefit": "I can use that information to assist researchers",
+        "Triggers": [
+            [
+                "archivist",
+                "access"
+            ],
+            [
+                "access",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "metadata"
+            ],
+            [
+                "access",
+                "visual representations"
+            ],
+            [
+                "access",
+                "index cards"
+            ],
+            [
+                "access",
+                "researchers"
+            ],
+            [
+                "use",
+                "metadata"
+            ],
+            [
+                "use",
+                "visual representations"
+            ],
+            [
+                "use",
+                "index cards"
+            ],
+            [
+                "use",
+                "researchers"
+            ],
+            [
+                "assist",
+                "metadata"
+            ],
+            [
+                "assist",
+                "visual representations"
+            ],
+            [
+                "assist",
+                "index cards"
+            ],
+            [
+                "assist",
+                "researchers"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an administrator, I want to assign rights to user groups or roles, so that I can control what users can and can't do.",
+        "Persona": [
+            "administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "assign rights"
+            ],
+            "Secondary Action": [
+                "control"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user groups"
+            ],
+            "Secondary Entity": [
+                "roles"
+            ]
+        },
+        "Benefit": "I can control what users can and can't do",
+        "Triggers": [
+            [
+                "administrator",
+                "assign rights"
+            ],
+            [
+                "administrator",
+                "control"
+            ]
+        ],
+        "Targets": [
+            [
+                "assign rights",
+                "user groups"
+            ],
+            [
+                "assign rights",
+                "roles"
+            ],
+            [
+                "control",
+                "user groups"
+            ],
+            [
+                "control",
+                "roles"
+            ]
+        ]
+    },
+    {
+        "Text": "#G26# As an administrator, I want to have researchers reset their own passwords, so that I don't have to send passwords in cleartext.",
+        "Persona": [
+            "administrator",
+            "researchers"
+        ],
+        "Action": {
+            "Primary Action": [
+                "reset"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "passwords"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I don't have to send passwords in cleartext",
+        "Triggers": [
+            [
+                "administrator",
+                "reset"
+            ],
+            [
+                "researchers",
+                "reset"
+            ]
+        ],
+        "Targets": [
+            [
+                "reset",
+                "passwords"
+            ]
+        ]
+    }
+]

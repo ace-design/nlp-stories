@@ -1,0 +1,1668 @@
+[
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that the redundant copies are continuously monitored for unwanted changes, and that if/when changes do occur, there is a mechanism by which I can determine the original object and restore it to all copies.",
+        "Persona": [
+            "asset manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "continuously monitored",
+                "determine",
+                "restore"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "redundant copies",
+                "unwanted changes",
+                "original object"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "be assured that the redundant copies are continuously monitored for unwanted changes, and that if/when changes do occur, there is a mechanism by which I can determine the original object and restore it to all copies",
+        "Triggers": [
+            [
+                "asset manager",
+                "continuously monitored"
+            ]
+        ],
+        "Targets": [
+            [
+                "continuously monitored",
+                "redundant copies"
+            ],
+            [
+                "determine",
+                "original object"
+            ],
+            [
+                "restore",
+                "redundant copies"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to preserve both the content and the metadata within the repository in a robust manner, so that I can provide stable, long-term access to this material.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "preserve",
+                "provide"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content",
+                "metadata",
+                "repository"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "provide stable, long-term access to this material",
+        "Triggers": [
+            [
+                "library staff member",
+                "preserve"
+            ],
+            [
+                "library staff member",
+                "provide"
+            ]
+        ],
+        "Targets": [
+            [
+                "preserve",
+                "content"
+            ],
+            [
+                "preserve",
+                "metadata"
+            ],
+            [
+                "preserve",
+                "repository"
+            ],
+            [
+                "provide",
+                "content"
+            ],
+            [
+                "provide",
+                "metadata"
+            ],
+            [
+                "provide",
+                "repository"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to be assured that there is a formal plan for the disposition of assets if the IR should cease.",
+        "Persona": [
+            "asset manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "assured",
+                "cease"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "formal plan",
+                "assets",
+                "IR"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "be assured that there is a formal plan for the disposition of assets if the IR should cease",
+        "Triggers": [
+            [
+                "asset manager",
+                "assured"
+            ],
+            [
+                "IR",
+                "cease"
+            ],
+            [
+                "IR",
+                "cease"
+            ]
+        ],
+        "Targets": [
+            [
+                "assured",
+                "formal plan"
+            ],
+            [
+                "cease",
+                "formal plan"
+            ],
+            [
+                "cease",
+                "assets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As an asset manager, I want to have mechanism to pass ownership/management of the assets to a successor.",
+        "Persona": [
+            "asset manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "pass ownership"
+            ],
+            "Secondary Action": [
+                "pass management"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "assets"
+            ],
+            "Secondary Entity": [
+                "successor"
+            ]
+        },
+        "Benefit": "have a mechanism to transfer ownership/management of assets to a successor",
+        "Triggers": [
+            [
+                "asset manager",
+                "pass ownership"
+            ],
+            [
+                "asset manager",
+                "pass management"
+            ]
+        ],
+        "Targets": [
+            [
+                "pass ownership",
+                "assets"
+            ],
+            [
+                "pass management",
+                "assets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to email system provider to report issues and ask questions.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": {
+            "Primary Action": [
+                "report issues",
+                "ask questions"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "email system provider"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can communicate with the system provider to address any issues or questions",
+        "Triggers": [
+            [
+                "patron",
+                "report issues"
+            ],
+            [
+                "patron",
+                "ask questions"
+            ]
+        ],
+        "Targets": [
+            [
+                "report issues",
+                "email system provider"
+            ],
+            [
+                "ask questions",
+                "email system provider"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a crossdeptprojteammember, I want to have a better place to collect and share project materials, with a range of organization/tagging and access options, including private (internal group use only), University and public.",
+        "Persona": [
+            "crossdeptprojteammember"
+        ],
+        "Action": {
+            "Primary Action": [
+                "collect",
+                "share"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "project materials"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "have a better place to collect and share project materials with organization/tagging and access options",
+        "Triggers": [
+            [
+                "crossdeptprojteammember",
+                "collect"
+            ],
+            [
+                "crossdeptprojteammember",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "collect",
+                "project materials"
+            ],
+            [
+                "share",
+                "project materials"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to view/upload content in multiple formats, including old formats such as Lotus Works.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view",
+                "upload"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content"
+            ],
+            "Secondary Entity": [
+                "multiple formats",
+                "Lotus Works"
+            ]
+        },
+        "Benefit": "I can view/upload content in multiple formats, including old formats such as Lotus Works",
+        "Triggers": [
+            [
+                "patron",
+                "view"
+            ],
+            [
+                "patron",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "content"
+            ],
+            [
+                "upload",
+                "content"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to login remotely to the repository using Shibboleth, so that I can get remote access to Cornell campus-only content.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "login remotely",
+                "get remote access"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "repository",
+                "Shibboleth",
+                "Cornell campus-only content"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can get remote access to Cornell campus-only content",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "login remotely"
+            ]
+        ],
+        "Targets": [
+            [
+                "login remotely",
+                "repository"
+            ],
+            [
+                "login remotely",
+                "Shibboleth"
+            ],
+            [
+                "get remote access",
+                "Cornell campus-only content"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to be able to tell the researchers I'm helping with DMPs that Cornell has a repository system I can use for archiving and sharing results of their research, so that I can easily meet the needs of funder DMP requirements.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "tell",
+                "helping",
+                "use",
+                "meet"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "researchers",
+                "DMPs",
+                "Cornell",
+                "repository system",
+                "archiving",
+                "sharing results",
+                "research",
+                "funder DMP requirements"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "easily meet the needs of funder DMP requirements",
+        "Triggers": [
+            [
+                "library staff member",
+                "tell"
+            ],
+            [
+                "library staff member",
+                "helping"
+            ],
+            [
+                "library staff member",
+                "use"
+            ],
+            [
+                "library staff member",
+                "use"
+            ],
+            [
+                "library staff member",
+                "use"
+            ],
+            [
+                "library staff member",
+                "use"
+            ],
+            [
+                "library staff member",
+                "meet"
+            ]
+        ],
+        "Targets": [
+            [
+                "tell",
+                "researchers"
+            ],
+            [
+                "helping",
+                "DMPs"
+            ],
+            [
+                "use",
+                "Cornell"
+            ],
+            [
+                "use",
+                "repository system"
+            ],
+            [
+                "use",
+                "archiving"
+            ],
+            [
+                "use",
+                "sharing results"
+            ],
+            [
+                "meet",
+                "funder DMP requirements"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to upload data to the repository and associate it with a publication, so that I receive attribution for my data as well as my publications.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload",
+                "associate",
+                "receive attribution"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data",
+                "repository",
+                "publication"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "receive attribution for my data as well as my publications",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "data"
+            ],
+            [
+                "upload",
+                "repository"
+            ],
+            [
+                "upload",
+                "publication"
+            ],
+            [
+                "associate",
+                "data"
+            ],
+            [
+                "associate",
+                "publication"
+            ],
+            [
+                "receive attribution",
+                "data"
+            ],
+            [
+                "receive attribution",
+                "publication"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to create a collection for my documents, or my organization's documents, and apply some distinctive branding to that collection, so that I can promote my work, or that of my organization.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create",
+                "apply"
+            ],
+            "Secondary Action": [
+                "promote"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection",
+                "documents"
+            ],
+            "Secondary Entity": [
+                "organization's documents"
+            ]
+        },
+        "Benefit": "I can promote my work, or that of my organization",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "create"
+            ],
+            [
+                "Cornell faculty member",
+                "apply"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "collection"
+            ],
+            [
+                "apply",
+                "collection"
+            ],
+            [
+                "apply",
+                "documents"
+            ],
+            [
+                "promote",
+                "documents"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to easily find all the items in the repository that I have authored, by searching on my name (author name authority and/or identification issue), because I keeps my publications in the repository up-to-date and points people tithe repository.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "find",
+                "search"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "repository",
+                "publications"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "easily find all the items in the repository that I have authored",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "find",
+                "repository"
+            ],
+            [
+                "find",
+                "publications"
+            ],
+            [
+                "search",
+                "repository"
+            ],
+            [
+                "search",
+                "publications"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to discover items in the repository through the library's discovery system and Google, so that I can facilitate my easy use of the content.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "discover"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "repository"
+            ],
+            "Secondary Entity": [
+                "library's discovery system",
+                "Google"
+            ]
+        },
+        "Benefit": "facilitate easy use of the content",
+        "Triggers": [
+            [
+                "researcher",
+                "discover"
+            ]
+        ],
+        "Targets": [
+            [
+                "discover",
+                "repository"
+            ],
+            [
+                "discover",
+                "library's discovery system"
+            ],
+            [
+                "discover",
+                "Google"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to receive updates when new works are published in a given collection or by a given author, so that I can discover more of their work.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive",
+                "discover"
+            ],
+            "Secondary Action": [
+                "published"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "updates",
+                "works"
+            ],
+            "Secondary Entity": [
+                "collection",
+                "author"
+            ]
+        },
+        "Benefit": "I can discover more of their work",
+        "Triggers": [
+            [
+                "researcher",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "updates"
+            ],
+            [
+                "receive",
+                "works"
+            ],
+            [
+                "discover",
+                "collection"
+            ],
+            [
+                "discover",
+                "author"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As an academicresearcher, I want to find the works of a particular author in one easily sortable spot, so that I can see the evolution of their scholarship over time.",
+        "Persona": [
+            "academic researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "find",
+                "sort"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "works",
+                "author"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "see the evolution of their scholarship over time",
+        "Triggers": [
+            [
+                "academic researcher",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "find",
+                "works"
+            ],
+            [
+                "sort",
+                "works"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to know which reports/datasets are coming out when, so that I can access latest report/dataset.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know",
+                "access"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reports",
+                "datasets"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can access the latest report/dataset",
+        "Triggers": [
+            [
+                "patron",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "reports"
+            ],
+            [
+                "know",
+                "datasets"
+            ],
+            [
+                "access",
+                "reports"
+            ],
+            [
+                "access",
+                "datasets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage customizable relationship groups in support of patron see also option.",
+        "Persona": [
+            "DB/IR administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "customizable relationship groups"
+            ],
+            "Secondary Entity": [
+                "patron see also option"
+            ]
+        },
+        "Benefit": "support of patron see also option",
+        "Triggers": [
+            [
+                "DB/IR administrator",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "customizable relationship groups"
+            ],
+            [
+                "manage",
+                "patron see also option"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to make digital items held in trusted external system searchable within our system, so that I can provide seamless access to disparate collections.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make searchable",
+                "provide access"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "digital items",
+                "our system",
+                "disparate collections"
+            ],
+            "Secondary Entity": [
+                "trusted external system"
+            ]
+        },
+        "Benefit": "seamless access to disparate collections",
+        "Triggers": [
+            [
+                "library staff member",
+                "make searchable"
+            ]
+        ],
+        "Targets": [
+            [
+                "make searchable",
+                "digital items"
+            ],
+            [
+                "make searchable",
+                "trusted external system"
+            ],
+            [
+                "make searchable",
+                "our system"
+            ],
+            [
+                "provide access",
+                "disparate collections"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a student, I want to learn who at Cornell has or is engaged in research related to a particular topic, so that I can find an appropriate advisor, choose which courses to enroll in, and identify work/internship opportunities.",
+        "Persona": [
+            "student"
+        ],
+        "Action": {
+            "Primary Action": [
+                "learn",
+                "find",
+                "choose",
+                "identify"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Cornell"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can find an appropriate advisor, choose which courses to enroll in, and identify work/internship opportunities",
+        "Triggers": [
+            [
+                "student",
+                "learn"
+            ],
+            [
+                "student",
+                "find"
+            ],
+            [
+                "student",
+                "choose"
+            ],
+            [
+                "student",
+                "identify"
+            ]
+        ],
+        "Targets": [
+            [
+                "learn",
+                "Cornell"
+            ],
+            [
+                "find",
+                "Cornell"
+            ],
+            [
+                "choose",
+                "Cornell"
+            ],
+            [
+                "identify",
+                "Cornell"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to upload material to the repository on the author's behalf, so that I can fulfill a service obligation.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "material",
+                "repository"
+            ],
+            "Secondary Entity": [
+                "author"
+            ]
+        },
+        "Benefit": "fulfill a service obligation",
+        "Triggers": [
+            [
+                "library staff member",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "material"
+            ],
+            [
+                "upload",
+                "repository"
+            ],
+            [
+                "upload",
+                "author"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to upload new version of report/dataset while retaining previous versions for patron use.",
+        "Persona": [
+            "DB/IR administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload"
+            ],
+            "Secondary Action": [
+                "retain"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "report",
+                "dataset"
+            ],
+            "Secondary Entity": [
+                "previous versions",
+                "patron"
+            ]
+        },
+        "Benefit": "retain previous versions for patron use",
+        "Triggers": [
+            [
+                "DB/IR administrator",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "report"
+            ],
+            [
+                "upload",
+                "dataset"
+            ],
+            [
+                "upload",
+                "previous versions"
+            ],
+            [
+                "upload",
+                "patron"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to export a set of records and associated files, manipulate this data set, and reload into the system, because I am aware of a uniform error in a collection.",
+        "Persona": [
+            "repository support team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "export",
+                "manipulate",
+                "reload"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "set of records",
+                "data set",
+                "system",
+                "uniform error",
+                "collection"
+            ],
+            "Secondary Entity": [
+                "associated files"
+            ]
+        },
+        "Benefit": "to fix a uniform error in a collection",
+        "Triggers": [
+            [
+                "repository support team member",
+                "export"
+            ],
+            [
+                "repository support team member",
+                "manipulate"
+            ],
+            [
+                "repository support team member",
+                "reload"
+            ]
+        ],
+        "Targets": [
+            [
+                "export",
+                "set of records"
+            ],
+            [
+                "export",
+                "associated files"
+            ],
+            [
+                "manipulate",
+                "data set"
+            ],
+            [
+                "reload",
+                "system"
+            ],
+            [
+                "reload",
+                "uniform error"
+            ],
+            [
+                "reload",
+                "collection"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to associate a researcherID or ORCID with a submission, so that there is no ambiguity between my work and someone else with the same name.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "associate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "researcherID",
+                "ORCID",
+                "submission"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "avoid ambiguity between my work and someone else with the same name",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "associate"
+            ]
+        ],
+        "Targets": [
+            [
+                "associate",
+                "researcherID"
+            ],
+            [
+                "associate",
+                "ORCID"
+            ],
+            [
+                "associate",
+                "submission"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to manage report/dataset name changes so patrons are able to find historic reports that have a different name from current report.",
+        "Persona": [
+            "DB/IR administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": [
+                "name changes",
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "report/dataset"
+            ],
+            "Secondary Entity": [
+                "patrons",
+                "historic reports"
+            ]
+        },
+        "Benefit": "patrons are able to find historic reports that have a different name from current report",
+        "Triggers": [
+            [
+                "DB/IR administrator",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "report/dataset"
+            ],
+            [
+                "manage",
+                "name changes"
+            ],
+            [
+                "manage",
+                "find"
+            ],
+            [
+                "report/dataset",
+                "patrons"
+            ],
+            [
+                "report/dataset",
+                "historic reports"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to have customizable metadata fields, so that each project is described in the most accurate way possible.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "customizable metadata fields",
+                "project"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "each project is described in the most accurate way possible",
+        "Triggers": [
+            [
+                "library staff member",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "customizable metadata fields"
+            ],
+            [
+                "have",
+                "project"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a researcher, I want to promote/share my work through interactive maps, so that I can display the range and extent of my work graphically.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "promote",
+                "share",
+                "display"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "interactive maps",
+                "range and extent of my work"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can display the range and extent of my work graphically",
+        "Triggers": [
+            [
+                "researcher",
+                "promote"
+            ],
+            [
+                "researcher",
+                "share"
+            ],
+            [
+                "researcher",
+                "display"
+            ]
+        ],
+        "Targets": [
+            [
+                "promote",
+                "interactive maps"
+            ],
+            [
+                "share",
+                "interactive maps"
+            ],
+            [
+                "display",
+                "range and extent of my work"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As an Extension Educator, I want to have a place to store a variety of documents, presentations and data sets I've created, that doesn't require an extra step in making available on my own County/Region/Project site (i.e. a list or directory of materials there is automatically updated when placed in a central archive/repository).",
+        "Persona": [
+            "Extension Educator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "store"
+            ],
+            "Secondary Action": [
+                "make available",
+                "update"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "documents",
+                "presentations",
+                "data sets"
+            ],
+            "Secondary Entity": [
+                "County/Region/Project site",
+                "list or directory of materials",
+                "central archive/repository"
+            ]
+        },
+        "Benefit": "have a place to store a variety of documents, presentations and data sets that doesn't require an extra step in making available on my own County/Region/Project site",
+        "Triggers": [
+            [
+                "Extension Educator",
+                "store"
+            ]
+        ],
+        "Targets": [
+            [
+                "store",
+                "documents"
+            ],
+            [
+                "store",
+                "presentations"
+            ],
+            [
+                "store",
+                "data sets"
+            ],
+            [
+                "store",
+                "County/Region/Project site"
+            ],
+            [
+                "store",
+                "list or directory of materials"
+            ],
+            [
+                "store",
+                "central archive/repository"
+            ],
+            [
+                "make available",
+                "County/Region/Project site"
+            ],
+            [
+                "update",
+                "County/Region/Project site"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a patron, I want to know other reports/datasets that are related (e.g. see also) to report/dataset being viewed for the purpose finding other related information.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know",
+                "finding"
+            ],
+            "Secondary Action": [
+                "see also"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reports",
+                "datasets",
+                "report/dataset being viewed"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "finding other related information",
+        "Triggers": [
+            [
+                "patron",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "reports"
+            ],
+            [
+                "know",
+                "datasets"
+            ],
+            [
+                "know",
+                "report/dataset being viewed"
+            ],
+            [
+                "know",
+                "finding"
+            ],
+            [
+                "see also",
+                "reports"
+            ],
+            [
+                "see also",
+                "datasets"
+            ],
+            [
+                "see also",
+                "report/dataset being viewed"
+            ],
+            [
+                "see also",
+                "finding"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a librarydiscoveryoperator, I want to harvest useful metadata from the repository via OAI, and continue to do so incrementally, so that I can make Cornell publications discoverable in my repository.",
+        "Persona": [
+            "librarydiscoveryoperator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "harvest",
+                "make discoverable"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "repository",
+                "Cornell publications"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can make Cornell publications discoverable in my repository",
+        "Triggers": [
+            [
+                "librarydiscoveryoperator",
+                "harvest"
+            ]
+        ],
+        "Targets": [
+            [
+                "harvest",
+                "repository"
+            ],
+            [
+                "harvest",
+                "Cornell publications"
+            ],
+            [
+                "make discoverable",
+                "repository"
+            ],
+            [
+                "make discoverable",
+                "Cornell publications"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to quickly correct errors in uploaded metadata, and even uploaded documents, while leaving a record of my revisions (and possibly the reasons behind them), so that I can present correct versions of content and to locate points of error.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "correct errors"
+            ],
+            "Secondary Action": [
+                "present correct versions",
+                "locate points of error"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "uploaded metadata",
+                "uploaded documents"
+            ],
+            "Secondary Entity": [
+                "record of revisions"
+            ]
+        },
+        "Benefit": "quickly correct errors in uploaded metadata and documents, present correct versions of content, and locate points of error",
+        "Triggers": [
+            [
+                "library staff member",
+                "correct errors"
+            ]
+        ],
+        "Targets": [
+            [
+                "correct errors",
+                "uploaded metadata"
+            ],
+            [
+                "correct errors",
+                "uploaded documents"
+            ],
+            [
+                "correct errors",
+                "record of revisions"
+            ],
+            [
+                "present correct versions",
+                "uploaded metadata"
+            ],
+            [
+                "present correct versions",
+                "uploaded documents"
+            ],
+            [
+                "locate points of error",
+                "uploaded metadata"
+            ],
+            [
+                "locate points of error",
+                "uploaded documents"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a library staff member, I want to receive a quick response and a reasonable resolution to tech support issues, so that service can proceed with minimal interruption.",
+        "Persona": [
+            "library staff member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive",
+                "resolve"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tech support issues",
+                "service"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "service can proceed with minimal interruption",
+        "Triggers": [
+            [
+                "library staff member",
+                "receive"
+            ],
+            [
+                "library staff member",
+                "resolve"
+            ],
+            [
+                "service",
+                "resolve"
+            ],
+            [
+                "service",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "tech support issues"
+            ],
+            [
+                "resolve",
+                "tech support issues"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a Cornell faculty member, I want to share on the repository files that are larger than 1GB in a way that still allows users to download them if I want to use them, so that I can meet funder requirements.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": [
+                "download"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "repository"
+            ],
+            "Secondary Entity": [
+                "files"
+            ]
+        },
+        "Benefit": "meet funder requirements",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "repository"
+            ],
+            [
+                "share",
+                "files"
+            ],
+            [
+                "download",
+                "files"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to have a personal account with the ability to change passwords to make them more secure or to retrieve forgotten ones.",
+        "Persona": [
+            "DB/IR administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "change passwords",
+                "retrieve forgotten ones"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "personal account"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "make passwords more secure or retrieve forgotten ones",
+        "Triggers": [
+            [
+                "DB/IR administrator",
+                "change passwords"
+            ],
+            [
+                "DB/IR administrator",
+                "retrieve forgotten ones"
+            ]
+        ],
+        "Targets": [
+            [
+                "change passwords",
+                "personal account"
+            ],
+            [
+                "retrieve forgotten ones",
+                "personal account"
+            ]
+        ]
+    },
+    {
+        "Text": "#G27# As a repository support team member, I want to move a collection, so that I can fulfill the collection owner's request.",
+        "Persona": [
+            "repository support team member",
+            "collection owner"
+        ],
+        "Action": {
+            "Primary Action": [
+                "move"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "fulfill the collection owner's request",
+        "Triggers": [
+            [
+                "repository support team member",
+                "move"
+            ],
+            [
+                "collection owner",
+                "move"
+            ]
+        ],
+        "Targets": [
+            [
+                "move",
+                "collection"
+            ]
+        ]
+    }
+]

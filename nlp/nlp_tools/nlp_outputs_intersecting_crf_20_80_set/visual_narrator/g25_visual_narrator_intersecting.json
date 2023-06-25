@@ -1,0 +1,402 @@
+[
+    {
+        "Text": "#G25# As a repository manager, I want to know all the collections and objects in the DAMS for which I have custodial responsibility. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "collections"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "collections"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to say one collection is related to another collection.  ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "say"
+        ],
+        "Entity": [
+            "collection"
+        ],
+        "Triggers": [
+            "manager",
+            "say"
+        ],
+        "Targets": [
+            "say",
+            "collection"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe a collection, including its title, it's inclusive / bulk dates, its language(s), and many other aspects.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "describe"
+        ],
+        "Entity": [
+            "collection"
+        ],
+        "Triggers": [
+            "manager",
+            "describe"
+        ],
+        "Targets": [
+            "describe",
+            "collection"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate other descriptions of the collection that are outside the DAMS and of probable importance to users. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "descriptions"
+        ],
+        "Triggers": [
+            "manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "descriptions"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate subjects that are related to an object. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "subjects"
+        ],
+        "Triggers": [
+            "manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "subjects"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to know about other versions of the object or its metadata that might be of use to me. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "versions"
+        ],
+        "Triggers": [
+            "user",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "versions"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to list all the components, in their appropriate order, for an object. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "list"
+        ],
+        "Entity": [
+            "components"
+        ],
+        "Triggers": [
+            "manager",
+            "list"
+        ],
+        "Targets": [
+            "list",
+            "components"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe each component as necessary, including title, date(s), language(s), and other facets. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "describe"
+        ],
+        "Entity": [
+            "component"
+        ],
+        "Triggers": [
+            "manager",
+            "describe"
+        ],
+        "Targets": [
+            "describe",
+            "component"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all events occurring to a component over its life cycle. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to be able to see and navigate the component hierarchy of an object. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "hierarchy"
+        ],
+        "Triggers": [
+            "user",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "hierarchy"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to indicate to preservation managers the checksum and checksum method for each master file for a given object. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "method"
+        ],
+        "Triggers": [
+            "manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "method"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to provide a title, in all useful forms, for my repository's collections, objects, and object components. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "provide"
+        ],
+        "Entity": [
+            "title"
+        ],
+        "Triggers": [
+            "manager",
+            "provide"
+        ],
+        "Targets": [
+            "provide",
+            "title"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to present collections, objects, and object components by title. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "present"
+        ],
+        "Entity": [
+            "objects"
+        ],
+        "Triggers": [
+            "manager",
+            "present"
+        ],
+        "Targets": [
+            "present",
+            "objects"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to scope my searches for collections, objects, or object components to a specific language. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "scope"
+        ],
+        "Entity": [
+            "searches"
+        ],
+        "Triggers": [
+            "user",
+            "scope"
+        ],
+        "Targets": [
+            "scope",
+            "searches"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "context"
+        ],
+        "Triggers": [
+            "user",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "context"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know all the statutes pertinent to an object or object component. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "statutes"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "statutes"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know when the application of a statute to an object or object component has been modified, either manually or automatically. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "component"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "component"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if an object or object component is subject to a library policy that restricts access in any way. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "component"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "component"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if application of a library policy to an object or object component has been modified, either manually or automatically.",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "policy"
+        ],
+        "Triggers": [
+            "manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "policy"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to track all events scheduled for recording in the DAMS. ",
+        "Persona": [
+            "manager"
+        ],
+        "Action": [
+            "track"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "manager",
+            "track"
+        ],
+        "Targets": [
+            "track",
+            "events"
+        ]
+    }
+]

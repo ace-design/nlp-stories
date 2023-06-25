@@ -1,0 +1,262 @@
+[
+    {
+        "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "delete"
+        ],
+        "Entity": [
+            "package"
+        ],
+        "Triggers": [
+            "Publisher",
+            "delete"
+        ],
+        "Targets": [
+            "delete",
+            "package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "validate"
+        ],
+        "Entity": [
+            "data"
+        ],
+        "Triggers": [
+            "Publisher",
+            "validate"
+        ],
+        "Targets": [
+            "validate",
+            "data"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "publish"
+        ],
+        "Entity": [
+            "package"
+        ],
+        "Triggers": [
+            "Publisher",
+            "publish"
+        ],
+        "Targets": [
+            "publish",
+            "package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "package"
+        ],
+        "Triggers": [
+            "Publisher",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "package"
+        ]
+    },
+    {
+        "Text": "#G14# As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.",
+        "Persona": [
+            "consumer"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "package"
+        ],
+        "Triggers": [
+            "consumer",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "preview"
+        ],
+        "Entity": [
+            "datapackage"
+        ],
+        "Triggers": [
+            "Publisher",
+            "preview"
+        ],
+        "Targets": [
+            "preview",
+            "datapackage"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": [
+            "see"
+        ],
+        "Entity": [
+            "packages"
+        ],
+        "Triggers": [
+            "Consumer",
+            "see"
+        ],
+        "Targets": [
+            "see",
+            "packages"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "description"
+        ],
+        "Triggers": [
+            "Consumer",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "description"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": [
+            "download"
+        ],
+        "Entity": [
+            "package"
+        ],
+        "Triggers": [
+            "Consumer",
+            "download"
+        ],
+        "Targets": [
+            "download",
+            "package"
+        ]
+    },
+    {
+        "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": [
+            "install"
+        ],
+        "Entity": [
+            "versions"
+        ],
+        "Triggers": [
+            "Developer",
+            "install"
+        ],
+        "Targets": [
+            "install",
+            "versions"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": [
+            "get"
+        ],
+        "Entity": [
+            "sense"
+        ],
+        "Triggers": [
+            "Consumer",
+            "get"
+        ],
+        "Targets": [
+            "get",
+            "sense"
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "Datapackage"
+        ],
+        "Triggers": [
+            "Consumer",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "Datapackage"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to have private data packages, so that I can share just with my team.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "packages"
+        ],
+        "Triggers": [
+            "Publisher",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "packages"
+        ]
+    }
+]

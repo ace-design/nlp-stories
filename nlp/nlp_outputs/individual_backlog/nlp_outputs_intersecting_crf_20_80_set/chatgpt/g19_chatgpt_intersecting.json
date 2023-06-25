@@ -1,0 +1,978 @@
+[
+    {
+        "Text": "#G19# As an OlderPerson, I want to have ALFRED on a bracelet or a necklace, so that I can always wear him with me.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "wear"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": [
+                "bracelet",
+                "necklace"
+            ]
+        },
+        "Benefit": "I can always have ALFRED with me",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED"
+            ],
+            [
+                "have",
+                "bracelet"
+            ],
+            [
+                "have",
+                "necklace"
+            ],
+            [
+                "wear",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to do guided exercises with ALFRED and ALFRED should also use sensors to capture health data while I am doing exercises.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "do guided exercises"
+            ],
+            "Secondary Action": [
+                "capture health data"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": [
+                "sensors"
+            ]
+        },
+        "Benefit": "I can do guided exercises with ALFRED and capture health data",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "do guided exercises"
+            ],
+            [
+                "ALFRED",
+                "capture health data"
+            ]
+        ],
+        "Targets": [
+            [
+                "do guided exercises",
+                "ALFRED"
+            ],
+            [
+                "capture health data",
+                "sensors"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to receive suggestions about local sport Classes.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive suggestions"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "local sport Classes"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can find suitable sport classes in my local area",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "receive suggestions"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive suggestions",
+                "local sport Classes"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to have ALFRED to remind me to keep a good body posture.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remind"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "to keep a good body posture",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "remind"
+            ]
+        ],
+        "Targets": [
+            [
+                "remind",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to have ALFRED to remind people to exercise regularly.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remind"
+            ],
+            "Secondary Action": [
+                "exercise regularly"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED",
+                "people"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "people can exercise regularly",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "remind"
+            ]
+        ],
+        "Targets": [
+            [
+                "remind",
+                "ALFRED"
+            ],
+            [
+                "remind",
+                "people"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to games that require the combination of mental and physical exercise, such as opposing motion exercises of the arms and legs.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "require",
+                "combination of mental and physical exercise"
+            ],
+            "Secondary Action": [
+                "opposing motion exercises of the arms and legs"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "games"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can engage in activities that promote both mental and physical health",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "require"
+            ],
+            [
+                "OlderPerson",
+                "combination of mental and physical exercise"
+            ],
+            [
+                "OlderPerson",
+                "opposing motion exercises of the arms and legs"
+            ]
+        ],
+        "Targets": [
+            [
+                "require",
+                "games"
+            ],
+            [
+                "combination of mental and physical exercise",
+                "games"
+            ],
+            [
+                "opposing motion exercises of the arms and legs",
+                "games"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to have a regular summary on how much exercise is performed by the user.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "perform"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user",
+                "exercise"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "have a regular summary on how much exercise is performed by the user",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "user"
+            ],
+            [
+                "have",
+                "exercise"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an InformalCaregiver, I want to have a game that the carer could play together with the user, so that it would enable to monitor the users’ state of health but also have some fun time.",
+        "Persona": [
+            "InformalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "play"
+            ],
+            "Secondary Action": [
+                "monitor"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "game",
+                "user"
+            ],
+            "Secondary Entity": [
+                "carer"
+            ]
+        },
+        "Benefit": "enable to monitor the users’ state of health but also have some fun time",
+        "Triggers": [
+            [
+                "InformalCaregiver",
+                "play"
+            ]
+        ],
+        "Targets": [
+            [
+                "play",
+                "game"
+            ],
+            [
+                "play",
+                "user"
+            ],
+            [
+                "monitor",
+                "user"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to have ALFRED to propose training that promotes complex thinking.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "propose"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "promotes complex thinking",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "propose"
+            ]
+        ],
+        "Targets": [
+            [
+                "propose",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a developer, I want to present my app to as many people as Possible.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "present"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "app"
+            ],
+            "Secondary Entity": [
+                "people"
+            ]
+        },
+        "Benefit": "present my app to as many people as possible",
+        "Triggers": [
+            [
+                "developer",
+                "present"
+            ]
+        ],
+        "Targets": [
+            [
+                "present",
+                "app"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a developer, I want to have detailed information of what happened when my App crashes on the user’s device.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have detailed information"
+            ],
+            "Secondary Action": [
+                "crashes"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "App"
+            ],
+            "Secondary Entity": [
+                "user's device"
+            ]
+        },
+        "Benefit": "I can understand what happened when my App crashes on the user's device",
+        "Triggers": [
+            [
+                "developer",
+                "have detailed information"
+            ]
+        ],
+        "Targets": [
+            [
+                "have detailed information",
+                "App"
+            ],
+            [
+                "have detailed information",
+                "user's device"
+            ],
+            [
+                "crashes",
+                "App"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a developer, I want to present my App in several ways.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "present"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "App"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can present my App in several ways",
+        "Triggers": [
+            [
+                "developer",
+                "present"
+            ]
+        ],
+        "Targets": [
+            [
+                "present",
+                "App"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to be able to zoom into visual content.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "zoom into"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "visual content"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "be able to zoom into visual content",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "zoom into"
+            ]
+        ],
+        "Targets": [
+            [
+                "zoom into",
+                "visual content"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to have video conversation with others.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "video conversation"
+            ],
+            "Secondary Entity": [
+                "others"
+            ]
+        },
+        "Benefit": "I can have video conversation with others",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "video conversation"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to receive support to use the public transport.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive support"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "public transport"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can use the public transport",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "receive support"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive support",
+                "public transport"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to use ALFRED for navigation.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "use"
+            ],
+            "Secondary Action": [
+                "navigation"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can use ALFRED for navigation",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to use ALFRED to control the TV and radio.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "control"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": [
+                "TV",
+                "radio"
+            ]
+        },
+        "Benefit": "I can use ALFRED to control the TV and radio",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "control"
+            ]
+        ],
+        "Targets": [
+            [
+                "control",
+                "ALFRED"
+            ],
+            [
+                "control",
+                "TV"
+            ],
+            [
+                "control",
+                "radio"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to use video calls in case of emergency.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "use"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "video calls"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "in case of emergency",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "video calls"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to have ALFRED contact the nearest caregiver when I ask ALFRED for urgent help.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "contact"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": [
+                "caregiver"
+            ]
+        },
+        "Benefit": "I can ask ALFRED for urgent help and have it contact the nearest caregiver",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "contact"
+            ]
+        ],
+        "Targets": [
+            [
+                "contact",
+                "ALFRED"
+            ],
+            [
+                "contact",
+                "caregiver"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to be able to see whether I already have taken my pills, so that I can avoid an overdose.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "taken"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "pills"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "avoid an overdose",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "pills"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to be able to see if the patient has taken her medicine.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "patient"
+            ],
+            "Secondary Entity": [
+                "medicine"
+            ]
+        },
+        "Benefit": "I can see if the patient has taken her medicine",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "patient"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to use ALFRED to maintain my contact list in my phone.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "maintain"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED",
+                "contact list",
+                "phone"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can easily manage and update my contact list",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "maintain",
+                "ALFRED"
+            ],
+            [
+                "maintain",
+                "contact list"
+            ],
+            [
+                "maintain",
+                "phone"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to insert my meetings into ALFRED using speech.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "insert"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "meetings"
+            ],
+            "Secondary Entity": [
+                "ALFRED"
+            ]
+        },
+        "Benefit": "I can insert my meetings into ALFRED using speech",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "insert"
+            ]
+        ],
+        "Targets": [
+            [
+                "insert",
+                "meetings"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to receive a reminder from ALFRED on all the things I need to bring with me when I leave the house.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive"
+            ],
+            "Secondary Action": [
+                "bring"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can be reminded of all the things I need to bring with me when I leave the house",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "ALFRED"
+            ],
+            [
+                "bring",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As an OlderPerson, I want to use ALFRED to help me navigate despite my mild cognitive impairments.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "navigate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "help me navigate despite my mild cognitive impairments",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "navigate"
+            ]
+        ],
+        "Targets": [
+            [
+                "navigate",
+                "ALFRED"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to have ALFRED to be able to determine the user's breathing frequency.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "determine"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED",
+                "user's breathing frequency"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I want to have ALFRED to be able to determine the user's breathing frequency",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "determine"
+            ]
+        ],
+        "Targets": [
+            [
+                "determine",
+                "ALFRED"
+            ],
+            [
+                "determine",
+                "user's breathing frequency"
+            ]
+        ]
+    },
+    {
+        "Text": "#G19# As a MedicalCaregiver, I want to have feedback on the activity level of the user.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have feedback"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "activity level"
+            ],
+            "Secondary Entity": [
+                "user"
+            ]
+        },
+        "Benefit": "to monitor the user's activity level",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "have feedback"
+            ]
+        ],
+        "Targets": [
+            [
+                "have feedback",
+                "activity level"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,202 @@
+[
+    {
+        "Text": "#G04# As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "click"
+        ],
+        "Entity": [
+            "address"
+        ],
+        "Triggers": [
+            "user",
+            "click"
+        ],
+        "Targets": [
+            "click",
+            "address"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "centers"
+        ],
+        "Triggers": [
+            "user",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "centers"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "give"
+        ],
+        "Entity": [
+            "ID"
+        ],
+        "Triggers": [
+            "user",
+            "give"
+        ],
+        "Targets": [
+            "give",
+            "ID"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "display"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "display"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "user",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "events"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "add"
+        ],
+        "Entity": [
+            "information"
+        ],
+        "Triggers": [
+            "admin",
+            "add"
+        ],
+        "Targets": [
+            "add",
+            "information"
+        ]
+    },
+    {
+        "Text": "#G04# As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+        "Persona": [
+            "company"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "website"
+        ],
+        "Triggers": [
+            "company",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "website"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "link"
+        ],
+        "Entity": [
+            "account"
+        ],
+        "Triggers": [
+            "user",
+            "link"
+        ],
+        "Targets": [
+            "link",
+            "account"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "contact"
+        ],
+        "Entity": [
+            "administrators"
+        ],
+        "Triggers": [
+            "user",
+            "contact"
+        ],
+        "Targets": [
+            "contact",
+            "administrators"
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": [
+            "view"
+        ],
+        "Entity": [
+            "logs"
+        ],
+        "Triggers": [
+            "admin",
+            "view"
+        ],
+        "Targets": [
+            "view",
+            "logs"
+        ]
+    }
+]

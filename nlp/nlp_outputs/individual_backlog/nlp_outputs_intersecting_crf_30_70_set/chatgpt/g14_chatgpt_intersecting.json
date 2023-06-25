@@ -1,0 +1,824 @@
+[
+    {
+        "Text": "#G14# As a Publisher, I want to permanently delete a data package, so that that it no longer takes up storage space.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "permanently delete"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "it no longer takes up storage space",
+        "Triggers": [
+            [
+                "Publisher",
+                "permanently delete"
+            ]
+        ],
+        "Targets": [
+            [
+                "permanently delete",
+                "data package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to validate the data I am about to publish to the registry, so that that I publish good data and know that I am doing.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "validate"
+            ],
+            "Secondary Action": [
+                "publish"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "registry"
+            ]
+        },
+        "Benefit": "I publish good data and know that I am doing",
+        "Triggers": [
+            [
+                "Publisher",
+                "validate"
+            ],
+            [
+                "Publisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "validate",
+                "data"
+            ],
+            [
+                "publish",
+                "registry"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to know that the data I am downloading is good and can be relied on, so that that I don't have to check it myself or run into annoying bugs later on.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "downloading",
+                "relied on"
+            ],
+            "Secondary Action": [
+                "check",
+                "run into",
+                "bugs"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I don't have to check it myself or run into annoying bugs later on.",
+        "Triggers": [
+            [
+                "Consumer",
+                "downloading"
+            ],
+            [
+                "Consumer",
+                "relied on"
+            ],
+            [
+                "Consumer",
+                "check"
+            ],
+            [
+                "Consumer",
+                "run into"
+            ]
+        ],
+        "Targets": [
+            [
+                "downloading",
+                "data"
+            ],
+            [
+                "relied on",
+                "data"
+            ],
+            [
+                "check",
+                "data"
+            ],
+            [
+                "run into",
+                "bugs"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to publish a data package where its resource data is stored on my servers but the registry caches a copy of that data, so that that if my data is lost or gets broken I still have a copy people can use.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish",
+                "store"
+            ],
+            "Secondary Action": [
+                "cache",
+                "use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package",
+                "servers"
+            ],
+            "Secondary Entity": [
+                "resource data",
+                "registry"
+            ]
+        },
+        "Benefit": "have a copy people can use",
+        "Triggers": [
+            [
+                "Publisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "data package"
+            ],
+            [
+                "publish",
+                "servers"
+            ],
+            [
+                "publish",
+                "cache"
+            ],
+            [
+                "cache",
+                "registry"
+            ],
+            [
+                "use",
+                "people"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to publish a data package in the UI, so that that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "UI"
+            ]
+        },
+        "Benefit": "it is available and published",
+        "Triggers": [
+            [
+                "Publisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "data package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to create a data package in the UI so that it is available and published.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "available",
+                "published"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "UI"
+            ]
+        },
+        "Benefit": "data package is available and published",
+        "Triggers": [
+            [
+                "Publisher",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "data package"
+            ],
+            [
+                "create",
+                "UI"
+            ],
+            [
+                "create",
+                "available"
+            ],
+            [
+                "create",
+                "published"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a consumer, I want to view the data package, so that that I can get a sense of whether I want this dataset or not.",
+        "Persona": [
+            "consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "dataset"
+            ]
+        },
+        "Benefit": "I can get a sense of whether I want this dataset or not",
+        "Triggers": [
+            [
+                "consumer",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "data package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to preview a datapackage I have prepared, so that that I can check it works and share the results.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "preview"
+            ],
+            "Secondary Action": [
+                "check",
+                "share"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datapackage"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can check it works and share the results",
+        "Triggers": [
+            [
+                "Publisher",
+                "preview"
+            ]
+        ],
+        "Targets": [
+            [
+                "preview",
+                "datapackage"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to see some example data packages quickly, so that I get a sense of what is on this site and if it is useful to look further.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "example data packages",
+                "site"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "get a sense of what is on this site and if it is useful to look further",
+        "Triggers": [
+            [
+                "Consumer",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "example data packages"
+            ],
+            [
+                "see",
+                "site"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to search based on description of data package, so that that I can find package which related to some key words.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can find package which related to some key words",
+        "Triggers": [
+            [
+                "Consumer",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "data package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to download the data package in one file, so that that I don't have to download descriptor and each resource by hand.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "download"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data package"
+            ],
+            "Secondary Entity": [
+                "descriptor",
+                "resource"
+            ]
+        },
+        "Benefit": "I don't have to download descriptor and each resource by hand",
+        "Triggers": [
+            [
+                "Consumer",
+                "download"
+            ]
+        ],
+        "Targets": [
+            [
+                "download",
+                "data package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
+        "Persona": [
+            "Web Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "install",
+                "develop",
+                "deploy"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "multiple versions of the same datapackage",
+                "projects"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "all my projects could be developed independently and deployed locally",
+        "Triggers": [
+            [
+                "Web Developer",
+                "install"
+            ],
+            [
+                "Web Developer",
+                "develop"
+            ],
+            [
+                "Web Developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "install",
+                "multiple versions of the same datapackage"
+            ],
+            [
+                "develop",
+                "projects"
+            ],
+            [
+                "deploy",
+                "projects"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Visitor, I want to sign up via github or google, so that that I don't have to enter lots of information and remember my password for yet another website.",
+        "Persona": [
+            "Visitor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "sign up"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "github",
+                "google"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I don't have to enter lots of information and remember my password for yet another website.",
+        "Triggers": [
+            [
+                "Visitor",
+                "sign up"
+            ]
+        ],
+        "Targets": [
+            [
+                "sign up",
+                "github"
+            ],
+            [
+                "sign up",
+                "google"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to version my Data Package and keep multiple versions around including older versions, so that that I do not break consumer systems when I change my datapackage.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "version"
+            ],
+            "Secondary Action": [
+                "keep"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Package"
+            ],
+            "Secondary Entity": [
+                "consumer systems"
+            ]
+        },
+        "Benefit": "I do not break consumer systems when I change my datapackage.",
+        "Triggers": [
+            [
+                "Publisher",
+                "version"
+            ],
+            [
+                "Publisher",
+                "keep"
+            ]
+        ],
+        "Targets": [
+            [
+                "version",
+                "Data Package"
+            ],
+            [
+                "keep",
+                "Data Package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to get a sense of the age of the datapackage that I have downloaded before, so that that I can decide if I should update or not.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get a sense",
+                "downloaded",
+                "update"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datapackage"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "decide if I should update or not",
+        "Triggers": [
+            [
+                "Consumer",
+                "get a sense"
+            ],
+            [
+                "Consumer",
+                "downloaded"
+            ],
+            [
+                "Consumer",
+                "update"
+            ]
+        ],
+        "Targets": [
+            [
+                "get a sense",
+                "datapackage"
+            ],
+            [
+                "downloaded",
+                "datapackage"
+            ],
+            [
+                "update",
+                "datapackage"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to view a Datapackage at a particular version online, so that that I can present/discuss the particular data timeslice of interest with other people.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Datapackage"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can present/discuss the particular data timeslice of interest with other people.",
+        "Triggers": [
+            [
+                "Consumer",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "Datapackage"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to be notified of changes to a package I care about, so that that I can check out what has changed and take action.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be notified",
+                "check out",
+                "take action"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "package"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can check out what has changed and take action",
+        "Triggers": [
+            [
+                "Consumer",
+                "be notified"
+            ],
+            [
+                "Consumer",
+                "check out"
+            ],
+            [
+                "Consumer",
+                "take action"
+            ]
+        ],
+        "Targets": [
+            [
+                "be notified",
+                "package"
+            ],
+            [
+                "check out",
+                "package"
+            ],
+            [
+                "take action",
+                "package"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Consumer, I want to see a publisher's profile, so that that I can discover their packages and get a sense of how active and good they are.",
+        "Persona": [
+            "Consumer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "discover",
+                "get a sense of"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "publisher's profile"
+            ],
+            "Secondary Entity": [
+                "packages"
+            ]
+        },
+        "Benefit": "I can discover their packages and get a sense of how active and good they are.",
+        "Triggers": [
+            [
+                "Consumer",
+                "see"
+            ],
+            [
+                "Consumer",
+                "discover"
+            ],
+            [
+                "Consumer",
+                "get a sense of"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "publisher's profile"
+            ],
+            [
+                "discover",
+                "packages"
+            ],
+            [
+                "get a sense of",
+                "packages"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As an owner, I want to remove someone from membership in my publisher, so that they no longer have ability to publish or modify my data packages.",
+        "Persona": [
+            "owner"
+        ],
+        "Action": {
+            "Primary Action": [
+                "remove"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "membership",
+                "publisher",
+                "data packages"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "they no longer have ability to publish or modify my data packages",
+        "Triggers": [
+            [
+                "owner",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "remove",
+                "membership"
+            ],
+            [
+                "remove",
+                "publisher"
+            ],
+            [
+                "remove",
+                "data packages"
+            ]
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to have private data packages, so that I can share just with my team.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "share"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "private data packages"
+            ],
+            "Secondary Entity": [
+                "team"
+            ]
+        },
+        "Benefit": "I can share just with my team",
+        "Triggers": [
+            [
+                "Publisher",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "share",
+                "private data packages"
+            ]
+        ]
+    }
+]

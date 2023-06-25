@@ -1,0 +1,483 @@
+[
+    {
+        "Text": "#G28# As a user, I want to receive content recommendations from similar profiles.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "receive"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content recommendations"
+            ],
+            "Secondary Entity": [
+                "similar profiles"
+            ]
+        },
+        "Benefit": "I can receive content recommendations from similar profiles",
+        "Triggers": [
+            [
+                "user",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "content recommendations"
+            ],
+            [
+                "receive",
+                "similar profiles"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to take a picture or upload an image, so that I am recommended with videos related to that picture or image.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "take",
+                "upload",
+                "recommended"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "picture",
+                "image",
+                "videos"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I am recommended with videos related to that picture or image",
+        "Triggers": [
+            [
+                "user",
+                "take"
+            ],
+            [
+                "user",
+                "upload"
+            ]
+        ],
+        "Targets": [
+            [
+                "take",
+                "picture"
+            ],
+            [
+                "upload",
+                "image"
+            ],
+            [
+                "recommended",
+                "videos"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to filter and rank videos based on A/V quality aspects.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "filter",
+                "rank"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "videos"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "based on A/V quality aspects",
+        "Triggers": [
+            [
+                "admin",
+                "filter"
+            ],
+            [
+                "admin",
+                "rank"
+            ]
+        ],
+        "Targets": [
+            [
+                "filter",
+                "videos"
+            ],
+            [
+                "rank",
+                "videos"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a user, I want to search and discover music based on other users similar to myself.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search",
+                "discover"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "music",
+                "user"
+            ],
+            "Secondary Entity": [
+                "other users"
+            ]
+        },
+        "Benefit": "I can find music based on other users similar to myself",
+        "Triggers": [
+            [
+                "user",
+                "search"
+            ],
+            [
+                "user",
+                "discover"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "music"
+            ],
+            [
+                "discover",
+                "other users"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to automatically detect Snapshot Serengeti images with no classifiable animals in them.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "automatically detect"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Snapshot Serengeti images"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "identify images with no classifiable animals",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "automatically detect"
+            ]
+        ],
+        "Targets": [
+            [
+                "automatically detect",
+                "Snapshot Serengeti images"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to detect important features such as areas of flooding, damage, temporary shelters, blocked roads etc in the satellite images.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "detect"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "areas of flooding"
+            ],
+            "Secondary Entity": [
+                "damage",
+                "temporary shelters",
+                "blocked roads"
+            ]
+        },
+        "Benefit": "I can identify important features in the satellite images",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "detect"
+            ]
+        ],
+        "Targets": [
+            [
+                "detect",
+                "areas of flooding"
+            ],
+            [
+                "detect",
+                "damage"
+            ],
+            [
+                "detect",
+                "temporary shelters"
+            ],
+            [
+                "detect",
+                "blocked roads"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to perform prefiltering of the images to remove artefacts such as bright stars and camera read errors.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "perform prefiltering"
+            ],
+            "Secondary Action": [
+                "remove"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "images"
+            ],
+            "Secondary Entity": [
+                "artefacts",
+                "bright stars",
+                "camera read errors"
+            ]
+        },
+        "Benefit": "to remove artefacts such as bright stars and camera read errors",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "perform prefiltering"
+            ]
+        ],
+        "Targets": [
+            [
+                "perform prefiltering",
+                "images"
+            ],
+            [
+                "perform prefiltering",
+                "artefacts"
+            ],
+            [
+                "perform prefiltering",
+                "bright stars"
+            ],
+            [
+                "perform prefiltering",
+                "camera read errors"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to identify the number of whales heard in a single audio file.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "identify"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "whales"
+            ],
+            "Secondary Entity": [
+                "audio file"
+            ]
+        },
+        "Benefit": "to determine the number of whales heard in a single audio file",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "identify"
+            ]
+        ],
+        "Targets": [
+            [
+                "identify",
+                "whales"
+            ],
+            [
+                "identify",
+                "audio file"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when I should interrupt a volunteer.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "interrupt"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [],
+            "Secondary Entity": []
+        },
+        "Benefit": "I should know when to interrupt a volunteer",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "interrupt"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know which piece of education I should give to a volunteer.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "give"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "piece of education"
+            ],
+            "Secondary Entity": [
+                "volunteer"
+            ]
+        },
+        "Benefit": "I can provide the appropriate education to a volunteer",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "know"
+            ],
+            [
+                "Zooniverse admin",
+                "give"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "piece of education"
+            ],
+            [
+                "give",
+                "volunteer"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to know when Zoonibot should give an explanation.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "give an explanation"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Zoonibot"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "know when Zoonibot should give an explanation",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "Zoonibot"
+            ]
+        ]
+    },
+    {
+        "Text": "#G28# As an admin, I want to see a summary of articles, so that I reuse them.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": [
+                "reuse"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "summary"
+            ],
+            "Secondary Entity": [
+                "articles"
+            ]
+        },
+        "Benefit": "I can reuse articles",
+        "Triggers": [
+            [
+                "admin",
+                "see"
+            ],
+            [
+                "admin",
+                "reuse"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "summary"
+            ],
+            [
+                "reuse",
+                "articles"
+            ]
+        ]
+    }
+]
