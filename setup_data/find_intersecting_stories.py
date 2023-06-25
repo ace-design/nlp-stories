@@ -6,20 +6,22 @@ import sys
 
 
 def main():
-    raw_data_path, ecmfa_vn_path, visual_narrator_path, save_name = command()
+    raw_data_path, ecmfa_vn_path, visual_narrator_path, chatgpt_path, save_name = command()
 
     raw_data_stories = extract_text_file(raw_data_path)
     ecmfa_vn_stories = extract_ecmfa_vn(ecmfa_vn_path)
     visual_narrator_stories = extract_text_file(visual_narrator_path)
+    chatgpt_stories = extract_text_file(chatgpt_path)
     
     raw_data_stories, duplicates = remove_duplicates(raw_data_stories)
-    intersect_stories = find_intersection(raw_data_stories, ecmfa_vn_stories, visual_narrator_stories)
+    intersect_stories = find_intersection(raw_data_stories, ecmfa_vn_stories, visual_narrator_stories, chatgpt_stories)
 
     left_out_raw_data = left_out_stories(intersect_stories, raw_data_stories)
     left_out_ecmfa_vn = left_out_stories(intersect_stories, ecmfa_vn_stories)
     left_out_visual_narrator = left_out_stories(intersect_stories, visual_narrator_stories)
+    left_out_chatgpt= left_out_stories(intersect_stories, chatgpt_stories)
 
-    save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmfa_vn, left_out_visual_narrator, save_name)
+    save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmfa_vn, left_out_visual_narrator, left_out_chatgpt, save_name)
 
     print("Completed")
 
@@ -28,9 +30,10 @@ def command():
     Runs the command line inputs
 
     Returns:
-        args.load_raw_data_path (str): path of raw data text file
-        args.load_ecmfa_vn_path (str): path of ecmfa_vn results file
-        args.load_visual_narrator_path (str): path of visual narrator valid text file
+        args.load_raw_data_path (str): path of raw data text file (from inputs\individual_backlog\dataset)
+        args.load_ecmfa_vn_path (str): path of ecmfa_vn results file (inputs\individual_backlog\ecmfa_vn)
+        args.load_visual_narrator_path (str): path of visual narrator valid text file (from inputs\individual_backlog\valid_visual_naraator_stories)
+        args.load_chatgpt_path (str): path of chatGPT results file (from inputs\individual_backlog\chatgpt_stories)
         args.save_name (str): name to the saving file
 
     Raises:
@@ -41,13 +44,14 @@ def command():
     parser.add_argument("load_raw_data_path", type = str, help = "path of raw data text file")
     parser.add_argument("load_ecmfa_vn_path", type = str, help = "path of ecmfa_vn results file")
     parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator valid text file")
+    parser.add_argument("load_chatgpt_path", type = str, help = "path of chatGPT results file")
     parser.add_argument("save_name", type = str, help = "name of the file save the results")
     
     args = parser.parse_args()
 
-    if not(args.load_raw_data_path.endswith(".txt")) or not(args.load_ecmfa_vn_path.endswith(".json")) or not(args.load_visual_narrator_path.endswith(".txt")):
+    if not(args.load_raw_data_path.endswith(".txt")) or not(args.load_ecmfa_vn_path.endswith(".json")) or not(args.load_visual_narrator_path.endswith(".txt"))or not(args.load_chatgpt_path.endswith(".txt")):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. input file type is .txt for raw data and visual narrator and .json for ecmfa_vn")
+        raise Exception ("Incorrect input file type. input file type is .txt for raw data and visual narrator and .json for ecmfa_vn and ChatGPT")
 
     try:
         load_file = open(args.load_raw_data_path)
@@ -56,6 +60,8 @@ def command():
         load_file.close()
         load_file = open(args.load_visual_narrator_path)
         load_file.close()
+        load_file = open(args.load_chatgpt_path)
+        load_file.close()
 
     except FileNotFoundError:
         sys.tracebacklimit = 0
@@ -63,7 +69,7 @@ def command():
         raise
 
     else:
-        return args.load_raw_data_path, args.load_ecmfa_vn_path, args.load_visual_narrator_path, args.save_name
+        return args.load_raw_data_path, args.load_ecmfa_vn_path, args.load_visual_narrator_path, args.load_chatgpt_path, args.save_name
 
 def extract_text_file(path):
     '''
@@ -82,7 +88,7 @@ def extract_text_file(path):
     stories = []
 
     for story in data:
-        stories.append(story.strip(" \n"))
+        stories.append(story.strip(" \t\n"))
 
     return stories
 
@@ -106,7 +112,7 @@ def extract_ecmfa_vn (path):
     identifier = "#" + pid + "# "
 
     for story in stories:
-        text.append(identifier + story["text"].strip())
+        text.append(identifier + story["text"].strip(" \t\n"))
 
     file.close()
 
@@ -139,7 +145,7 @@ def remove_duplicates(data):
 
     return non_duplicates, duplicates
 
-def find_intersection(raw_data, ecmfa_vn, visual_narrator):
+def find_intersection(raw_data, ecmfa_vn, visual_narrator, chatgpt):
     '''
     find the same valid stories of raw dataset, ecmfa_vn, and visual_narrator
     
@@ -147,13 +153,15 @@ def find_intersection(raw_data, ecmfa_vn, visual_narrator):
     raw_data (list): unique stories in dataset
     ecmfa_vn (list): stories from ecmfa_vn results
     visual_narrator (list): valid stories for visual narrator
+    chatgpt (list): stories from chatgpt
 
     Returns:
     intersect_stories (list): stories that exist in all sets
     '''
 
     first_intersection = set(raw_data).intersection(set(ecmfa_vn))
-    intersect_stories = list(first_intersection.intersection(visual_narrator))
+    second_intersection = first_intersection.intersection(set(chatgpt))
+    intersect_stories = list(second_intersection.intersection(visual_narrator))
 
     return intersect_stories
 
@@ -173,7 +181,7 @@ def left_out_stories(intersect_stories, dataset):
 
     return left_out_stories
 
-def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmfa_vn, left_out_visual_narrator, save_name):
+def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmfa_vn, left_out_visual_narrator, left_out_chatgpt, save_name):
     '''
     save results to file
 
@@ -183,6 +191,7 @@ def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmf
     left_out_raw_data (list): left out stories from the raw data that are not in intersect_stories
     left_out_ecmfa_vn (list): left out stories from ecmfa_vn resutlts that are not in intersect_stories
     left_out_visual_narrator (list): left out stories from valid visual narrator stories that are not in intersect_stories
+    left_out_chatgpt (list"): left out stories from chatgpt annotation results that are not in intersect_stories
     save_name (str): name of the saving file
     '''
 
@@ -215,8 +224,10 @@ def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_ecmf
         file.write("\nLeft Over Stories Valid Visual Narrator:\n")
         for i in range(len(left_out_visual_narrator)):
             file.write(left_out_visual_narrator[i] + "\n")
+
+        file.write("\nLeft Over Stories ChatGPT:\n")
+        for i in range(len(left_out_chatgpt)):
+            file.write(left_out_chatgpt[i] + "\n")
     
-
-
 if __name__ == "__main__":
     main()

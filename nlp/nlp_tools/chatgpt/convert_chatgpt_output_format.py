@@ -10,8 +10,8 @@ import json
 
 def main():
     folderPath, savingName = command()
-    dataset = extractData(folderPath)
-    saveResults(dataset, savingName)
+    dataset, stories = extractData(folderPath)
+    saveResults(dataset, stories, savingName)
 def command():
     '''
     gets info from the commandline input
@@ -47,6 +47,7 @@ def extractData(folderPath):
     '''
     folder = os.listdir(folderPath)
     dataset = []
+    stories = []
 
     for fileName in folder:
         file = open(folderPath + "\\" + fileName)
@@ -55,6 +56,7 @@ def extractData(folderPath):
         #Collect the data
         extractedData = {}
         extractedData["Text"] = data["story"].strip(" \t\n")
+        stories.append(extractedData["Text"])
         extractedData["Persona"] = data["extraction"]["personas"]
         extractedData["Action"] = {} 
         extractedData["Action"]["Primary Action"] = data["categories"]["primary_actions"]
@@ -66,33 +68,41 @@ def extractData(folderPath):
         extractedData["Triggers"] = []
         extractedData["Targets"] = []
         for relationInfo in data["relations"]["relations"]:
-            relationType = relationInfo["kind"]
-            relationStart = relationInfo["from"]
-            relationEnd = relationInfo["to"]
-            relation = [relationStart, relationEnd]
-            if relationType == "triggers":
-                extractedData["Triggers"].append(relation)
-            elif relationType == "targets":
-                extractedData["Targets"].append(relation)
+            if "kind" in relationInfo:
+                relationType = relationInfo["kind"]
+                relationStart = relationInfo["from"]
+                relationEnd = relationInfo["to"]
+                relation = [relationStart, relationEnd]
+                if relationType == "triggers":
+                    extractedData["Triggers"].append(relation)
+                elif relationType == "targets":
+                    extractedData["Targets"].append(relation)
 
         dataset.append(extractedData)
 
-    return dataset
+    return dataset, stories
 
-def saveResults(dataset, savingName):
+def saveResults(dataset, stories, savingName):
     '''
     Saves the data extractions into a file 
 
     Parameters: 
     dataset (dict): annotations of each story by ChatGPT
+    stories (list): all the stories that ChatGPT annotated
     savingName (str): the name of the file to save the dataset
     '''
     
     json.dumps(dataset)
-    savingPath = "nlp\\nlp_outputs\\individual_backlog\\nlp_outputs_original\\chatgpt\\" + savingName + ".json"
-    with open(savingPath,"w", encoding="utf-8") as file:
+    resultsSavingPath = "nlp\\nlp_outputs\\individual_backlog\\nlp_outputs_original\\chatgpt\\" + savingName + ".json"
+    with open(resultsSavingPath,"w", encoding="utf-8") as file:
         json.dump(dataset, file, ensure_ascii=False, indent = 4) 
 
+    storiesSavingPath = "inputs\individual_backlog\chatgpt_stories\\" + savingName + ".txt"
+    file = open(storiesSavingPath, "w", encoding="utf-8")
+    for story in stories:
+        s = story.replace('\\\'', "\'")
+        s = s.replace('\\\"', "\"")
+        file.writelines(s + "\n")
 
 if __name__ == "__main__":
     main()  

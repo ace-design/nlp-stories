@@ -12,14 +12,13 @@ def main():
     if ".json" in all_path and ".json" in merge_path:
         all_data = extract_data_json(all_path)
         merge_data = extract_data_json(merge_path)
-
         all_data = all_data + merge_data
 
         save_file_json(all_path, all_data)
     elif ".txt" in all_path and ".txt" in merge_path:
         all_data = extract_data_txt(all_path)
         merge_data = extract_data_txt(merge_path)
-
+        all_data.append(merge_data)
 
         save_file_txt(all_path, all_data)
     elif ".csv" in all_path and ".csv" in merge_path:
@@ -44,7 +43,7 @@ def command():
         wrong file type: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will merge files into one file")
-    parser.add_argument("load_all_path", type = str, help = "file path to the file with all the data")
+    parser.add_argument("load_all_path", type = str, help = "file path to the file with all the data(THIS IS THE FILE SAVING TO)")
     parser.add_argument("load_merge_path", type = str, help = "file path to the data to merge")
     
     args = parser.parse_args()
@@ -102,7 +101,6 @@ def extract_data_txt(path):
 
     file = open(path, encoding= "utf-8")
     data = file.readlines()
-
     return data
 
 def extract_data_csv(path):
@@ -136,7 +134,8 @@ def save_file_txt(path, data):
         data (list): info to be saved onto file
     '''
     with open(path,"w", encoding="utf-8") as file:
-        file.writelines(data)
+        for story in data:
+            file.writelines(story)
     print("File is saved")
 
 def save_file_csv(path, all_data, merge_data):
