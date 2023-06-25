@@ -58,16 +58,16 @@ def get_info(grouping_code, with_crf):
     if with_crf:
         crf_path = "\\crf_input\\testing_input\\"
         is_crf = " --crf_intersecting_set "
-        nlp = ["crf", "ecmfa_vn", "simple_nlp", "visual_narrator", "pos_baseline"]
-        nlp_code = ["CRF", "ECMFA", "SIMPLE", "VN", "BASE"]
-        nlp_file_name = ["", "_ecmfa_vn", "_simple_nlp", "_visual_narrator", "_baseline_pos"]
+        nlp = ["crf", "ecmfa_vn", "simple_nlp", "visual_narrator", "pos_baseline", "chatgpt"]
+        nlp_code = ["CRF", "ECMFA", "SIMPLE", "VN", "BASE", "CHATGPT"]
+        nlp_file_name = ["", "_ecmfa_vn", "_simple_nlp", "_visual_narrator", "_baseline_pos", "_chatgpt"]
         file_type = ".json "
     else:
         crf_path = "\\intersecting_stories\\"
         is_crf = " "
-        nlp = ["ecmfa_vn", "simple_nlp", "visual_narrator", "pos_baseline"]
-        nlp_code = ["ECMFA", "SIMPLE", "VN", "BASE"]
-        nlp_file_name = ["_ecmfa_vn", "_simple_nlp", "_visual_narrator", "_baseline_pos"]
+        nlp = ["ecmfa_vn", "simple_nlp", "visual_narrator", "pos_baseline", "chatgpt"]
+        nlp_code = ["ECMFA", "SIMPLE", "VN", "BASE", "CHATGPT"]
+        nlp_file_name = ["_ecmfa_vn", "_simple_nlp", "_visual_narrator", "_baseline_pos", "_chatgpt"]
         file_type = ".txt "
 
     return datasets, grouping, crf_path, is_crf, nlp, nlp_code, nlp_file_name, file_type

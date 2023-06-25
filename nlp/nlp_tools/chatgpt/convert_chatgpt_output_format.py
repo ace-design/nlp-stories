@@ -55,8 +55,11 @@ def extractData(folderPath):
 
         #Collect the data
         extractedData = {}
-        extractedData["Text"] = data["story"].strip(" \t\n")
-        stories.append(extractedData["Text"])
+        story = data["story"].strip(" \t\n")
+        story = story.replace('\\\'', "\'")
+        story = story.replace('\\\"', "\"")
+        extractedData["Text"] = story
+        stories.append(story)
         extractedData["Persona"] = data["extraction"]["personas"]
         extractedData["Action"] = {} 
         extractedData["Action"]["Primary Action"] = data["categories"]["primary_actions"]
@@ -100,9 +103,7 @@ def saveResults(dataset, stories, savingName):
     storiesSavingPath = "inputs\individual_backlog\chatgpt_stories\\" + savingName + ".txt"
     file = open(storiesSavingPath, "w", encoding="utf-8")
     for story in stories:
-        s = story.replace('\\\'', "\'")
-        s = s.replace('\\\"', "\"")
-        file.writelines(s + "\n")
+        file.writelines(story + "\n")
 
 if __name__ == "__main__":
     main()  
