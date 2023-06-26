@@ -49,6 +49,18 @@ The following projects did not follow expected sentence structure:
 * g17-cask
 * g27-culrepo
 
+## NLP Annotaion JSON format
+{ \
+"Text": "...",\
+"Persona": [ "..." ],\
+"Action": {"Primary Action": [ "...", ... ], "Secondary Action": ["..."], ... },\
+"Entity": { "Primary Entity": [ "...", ... ], "Secondary Entity": [ "...", ...] },\
+"Benefit": "...",\
+"Triggers": [ [ "...", "..." ] ],\
+"Targets": [ [ "...", "..." ], ... ],\
+"Contains": [ [ "...", "..." ], ... ]\
+}
+
 ## References 
 ![image](https://user-images.githubusercontent.com/71148152/185634777-6674829b-058b-4a3e-ae75-123751e8ba11.png)
 
