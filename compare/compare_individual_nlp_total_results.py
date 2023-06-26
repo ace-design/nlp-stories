@@ -16,8 +16,10 @@ def main():
 
     primary_save_path = graphs_save_folder_path + "\\primary"
     all_save_path = graphs_save_folder_path + "\\all"
-    os.mkdir(primary_save_path)
-    os.mkdir(all_save_path)
+    if (not os.path.exists(primary_save_path)):
+            os.mkdir(primary_save_path)
+    if (not os.path.exists(all_save_path)):
+            os.mkdir(all_save_path)
 
     with open(dataset_name_path) as file:
         dataset_names = file.readlines()
@@ -142,7 +144,15 @@ def command():
         graphs_save_folder_path = main_saving_folder_path + saving_name
         csv_save_folder_path = main_saving_folder_path + "\\dataset_csv_input_" + nlp_type
 
-        os.mkdir(graphs_save_folder_path)
+        if (not os.path.exists(graphs_save_folder_path)):
+            os.mkdir(graphs_save_folder_path)
+        if (not os.path.exists(csv_save_folder_path)):
+            os.mkdir(csv_save_folder_path)
+        if (not os.path.exists(csv_save_folder_path+"\\primary_csv_results")):
+            os.mkdir(csv_save_folder_path+"\\primary_csv_results")
+        if (not os.path.exists(csv_save_folder_path+"\\all_csv_results")):
+            os.mkdir(csv_save_folder_path+"\\all_csv_results")
+
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")

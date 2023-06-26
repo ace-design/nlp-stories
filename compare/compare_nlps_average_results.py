@@ -66,9 +66,9 @@ def command():
         sys.tracebacklimit = 0 
         raise Exception("Incompatible combination. All files must be evaluated by same comparison mode")
 
-    if not("simple" in args.load_simple_path) or not("ecmfa_vn" in args.load_ecmfa_vn_path) or not("visual_narrator" in args.load_visual_narrator_path) or not("chatgpt" in args.load_visual_narrator_path):
+    if not("simple" in args.load_simple_path) or not("ecmfa_vn" in args.load_ecmfa_vn_path) or not("visual_narrator" in args.load_visual_narrator_path) or not("chatgpt" in args.load_chatgpt_path):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect order of input file. First file is simple, then ecmfa_vn, and then visual narrator")
+        raise Exception ("Incorrect order of input file. First file is simple, then ecmfa_vn, then visual narrator, and then chatgpt")
 
     try:
         load_file = open(args.load_simple_path)

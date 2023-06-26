@@ -199,7 +199,7 @@ def format_data(datasets_label, number_dataset, simple_data, ecmfa_vn_data, visu
             rounded_visual_narrator = round_data(visual_narrator_data[i].values.tolist())
             rounded_chatgpt = round_data(chatgpt_data[i].values.tolist())
 
-            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 3,
+            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 4,
                                 "Data": rounded_simple + rounded_ecmfa_vn + rounded_visual_narrator + rounded_chatgpt,
                                 "nlp": ["Simple"]*number_dataset + ["ECMFA-VN"]*number_dataset + ["Visual Narrator"]*number_dataset + ["ChatGPT"]*number_dataset}))
     else:
@@ -212,7 +212,7 @@ def format_data(datasets_label, number_dataset, simple_data, ecmfa_vn_data, visu
             rounded_chatgpt = round_data(chatgpt_data[i].values.tolist())
             rounded_crf = round_data(crf_data[i].values.tolist())
 
-            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 4,
+            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 5,
                                 "Data": rounded_simple + rounded_ecmfa_vn + rounded_visual_narrator + rounded_chatgpt + rounded_crf,
                                 "nlp": ["Simple"]*number_dataset + ["ECMFA-VN"]*number_dataset + ["Visual Narrator"]*number_dataset + ["ChatGPT"]*number_dataset + ["CRF"] * number_dataset}))
 

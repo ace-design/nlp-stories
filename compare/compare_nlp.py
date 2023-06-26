@@ -21,7 +21,7 @@ def main():
     primary_baseline_data, primary_pos_data = extract_primary_baseline_info(base_path)
     all_baseline_data, all_pos_data = extract_all_baseline_info(base_path)
 
-    if nlp_type == "CRF":
+    if nlp_type == "CRF" or nlp_type == "CHATGPT":
         primary_nlp_tool_data = extract_primary_crf_info(nlp_tool_path)
         nlp_tool_data = extract_crf_info(nlp_tool_path)
     else:
