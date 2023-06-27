@@ -153,11 +153,11 @@ def organize_data_with_crf(vn_bklg, chatgpt, crf):
 
     for i in range (0,27,9):
         if  vn_label[i] == "Strict Comparison" and chatgpt_label[i] == "Strict Comparison" and crf_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT" "CRF", "Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif vn_label[i] == "Inclusion Comparison"and chatgpt_label[i] == "Inclusion Comparison" and crf_label[i] == "Inclusion Comparison":
             inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= [ "Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif vn_label[i] == "Relaxed Comparison" and chatgpt_label[i] == "Relaxed Comparison" and crf_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatpGPT", "CRF", "Visual Narrator SD","ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD","ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -209,7 +209,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
 
     if with_crf:
-        standard_deviation = ["Visual Narrator SD", "ChatGPT SD" "CRF SD"]
+        standard_deviation = ["Visual Narrator SD", "ChatGPT SD", "CRF SD"]
         y_data = ["Visual Narrator", "ChatGPT", "CRF"]
         palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)]
     else:
