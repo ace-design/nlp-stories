@@ -183,7 +183,7 @@ def fix_max_y_error(standard_deviation, y_data):
     standard_deviation_list = standard_deviation.to_numpy().T
     y_data_list = y_data.to_numpy().T
 
-    for i in range(3):
+    for i in range(len(y_data_list)):
         for j in range(len(y_data_list[i])):
             if standard_deviation_list[i][j] + y_data_list[i][j] > 1:
                 standard_deviation_list[i][j] = 1 - y_data_list[i][j]
