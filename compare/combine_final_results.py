@@ -153,11 +153,11 @@ def organize_data_with_crf(vn_bklg, chatgpt, crf):
 
     for i in range (0,27,9):
         if  vn_label[i] == "Strict Comparison" and chatgpt_label[i] == "Strict Comparison" and crf_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF", "Visual Narrator SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif vn_label[i] == "Inclusion Comparison"and chatgpt_label[i] == "Inclusion Comparison" and crf_label[i] == "Inclusion Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= [ "Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD", "ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= [ "Visual Narrator", "GPT3.5-Turbo", "CRF", "Visual Narrator SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         elif vn_label[i] == "Relaxed Comparison" and chatgpt_label[i] == "Relaxed Comparison" and crf_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT", "CRF", "Visual Narrator SD","ChatGPT SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF", "Visual Narrator SD","GPT3.5-Turbo SD", "CRF SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -174,11 +174,11 @@ def organize_data_without_crf(vn_bklg, chatgpt):
 
     for i in range (0,27,9):
         if vn_label[i] == "Strict Comparison" and chatgpt_label[i] == "Strict Comparison":
-            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= [ "Visual Narrator", "ChatGPT", "Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
-        elif vn_label[i] == "Inclusion Comparison" and chatgpt_label[i] == "Strict Comparison":
-            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT","Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
+            strict_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= [ "Visual Narrator", "GPT3.5-Turbo", "Visual Narrator SD", "GPT3.5-Turbo SD"], index= ["Persona", "Entity", "Action"])
+        elif vn_label[i] == "Inclusion Comparison" and chatgpt_label[i] == "Inclusion Comparison":
+            inclusion_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "GPT3.5-Turbo","Visual Narrator SD", "GPT3.5-Turbo SD"], index= ["Persona", "Entity", "Action"])
         elif vn_label[i] == "Relaxed Comparison" and chatgpt_label[i] == "Relaxed Comparison":
-            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "ChatGPT", "Visual Narrator SD", "ChatGPT SD"], index= ["Persona", "Entity", "Action"])
+            relaxed_data = pd.DataFrame([row_data[i+2],row_data[i+5],row_data[i+8]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "Visual Narrator SD", "GPT3.5-Turbo SD"], index= ["Persona", "Entity", "Action"])
         else:
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
@@ -209,12 +209,12 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
 
     if with_crf:
-        standard_deviation = ["Visual Narrator SD", "ChatGPT SD", "CRF SD"]
-        y_data = ["Visual Narrator", "ChatGPT", "CRF"]
+        standard_deviation = ["Visual Narrator SD", "GPT3.5-Turbo SD", "CRF SD"]
+        y_data = ["Visual Narrator", "GPT3.5-Turbo", "CRF"]
         palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)]
     else:
-        standard_deviation = ["Visual Narrator SD", "ChatGPT SD"]
-        y_data = ["Visual Narrator", "ChatGPT"]
+        standard_deviation = ["Visual Narrator SD", "GPT3.5-Turbo SD"]
+        y_data = ["Visual Narrator", "GPT3.5-Turbo"]
         palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1)]
 
     graph, position = plt.subplots(3, 3, figsize=(10, 5))
@@ -301,9 +301,11 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     
     plt.tight_layout()
 
-    saving_path = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".png"
+    saving_path_png = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".png"
+    saving_path_pdf = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".pdf"
 
-    plt.savefig(saving_path)
+    plt.savefig(saving_path_png)
+    plt.savefig(saving_path_pdf)
 
 def fix_max_y_error(standard_deviation, y_data):
     '''
@@ -317,7 +319,7 @@ def fix_max_y_error(standard_deviation, y_data):
     standard_deviation_list = standard_deviation.to_numpy().T
     y_data_list = y_data.to_numpy().T
 
-    for i in range(y_data_list):
+    for i in range(len(y_data_list)):
         for j in range(len(y_data_list[i])):
             if standard_deviation_list[i][j] + y_data_list[i][j] > 1:
                 standard_deviation_list[i][j] = 1 - y_data_list[i][j]

@@ -147,9 +147,11 @@ def create_final_bargraph(strict_data, inclusion_data, relaxed_data, title, save
 
     plt.tight_layout()
 
-    saving_path = "final_results\\comparing_nlps_results\\average_results\\comparing_crf\\" + save_name + ".png"
+    saving_path_png = "final_results\\comparing_nlps_results\\average_results\\comparing_crf\\" + save_name + ".png"
+    saving_path_pdf = "final_results\\comparing_nlps_results\\average_results\\comparing_crf\\" + save_name + ".pdf"
 
-    plt.savefig(saving_path)
+    plt.savefig(saving_path_png)
+    plt.savefig(saving_path_pdf)
 
 def fix_max_y_error(standard_deviation, y_data):
     '''
