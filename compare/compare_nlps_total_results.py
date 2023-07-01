@@ -187,7 +187,7 @@ def format_data(datasets_label, number_dataset, visual_narrator_data, chatgpt_da
 
             formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 2,
                                 "Data":  rounded_visual_narrator + rounded_chatgpt,
-                                "nlp":  ["Visual Narrator"]*number_dataset + ["ChatGPT"]*number_dataset}))
+                                "nlp":  ["Visual Narrator"]*number_dataset + ["GPT3.5-Turbo"]*number_dataset}))
     else:
         crf_data = extract_data(crf_path, number_dataset)
 
@@ -198,7 +198,7 @@ def format_data(datasets_label, number_dataset, visual_narrator_data, chatgpt_da
 
             formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 3,
                                 "Data": rounded_visual_narrator + rounded_chatgpt + rounded_crf,
-                                "nlp": ["Visual Narrator"]*number_dataset + ["ChatGPT"]*number_dataset + ["CRF"] * number_dataset}))
+                                "nlp": ["Visual Narrator"]*number_dataset + ["GPT3.5-Turbo"]*number_dataset + ["CRF"] * number_dataset}))
 
     return formatted_data
 
@@ -224,9 +224,9 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
     if crf_path == None:
-        palette ={"Visual Narrator": plt.cm.Pastel1(0), "ChatGPT": plt.cm.Pastel1(1)}
+        palette ={"Visual Narrator": plt.cm.Pastel1(0), "GPT3.5-Turbo": plt.cm.Pastel1(1)}
     else:
-        palette ={"Visual Narrator": plt.cm.Pastel1(0), "ChatGPT": plt.cm.Pastel1(1), "CRF": plt.cm.Pastel1(2)}
+        palette ={"Visual Narrator": plt.cm.Pastel1(0), "GPT3.5-Turbo": plt.cm.Pastel1(1), "CRF": plt.cm.Pastel1(2)}
 
     precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None)
     precision.set(xlabel=None)
@@ -264,6 +264,7 @@ def create_final_bargraph(precision_results,recall_results, f_measure_results, t
     graph.legend(handles=handles[:], labels=labels[:], title = "LEGEND", loc = "center right", bbox_to_anchor=(0.99, 0.5))
 
     graph.savefig(save_path)
+    graph.savefig(save_path.replace(".png", ".pdf"))
 
 if __name__ == "__main__":
     main()

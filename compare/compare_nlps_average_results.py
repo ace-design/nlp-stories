@@ -137,9 +137,9 @@ def format_data(visual_narrator_data, chatgpt_data, crf_path):
         for i in range(9):
             row_data.append([visual_narrator_average[i], chatgpt_average[i], visual_narrator_sd[i], chatgpt_sd[i]])
 
-        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "ChatGPT", "VN SD", "ChatGPT SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "ChatGPT", "VN SD", "ChatGPT SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Visual Narrator", "ChatGPT", "VN SD", "ChatGPT SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
     else:
         crf_data = extract_data(crf_path)
         crf_average, crf_sd = crf_data
@@ -147,20 +147,20 @@ def format_data(visual_narrator_data, chatgpt_data, crf_path):
         for i in range(9):
             row_data.append([visual_narrator_average[i], chatgpt_average[i], crf_average[i], visual_narrator_sd[i], chatgpt_sd[i], crf_sd[i]])
 
-        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "ChatGPT", "CRF", "VN SD", "ChatGPT SD", "CRF SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "ChatGPT", "CRF","VN SD", "ChatGPT SD", "CRF SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= [ "Visual Narrator", "ChatGPT", "CRF", "VN SD", "ChatGPT SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF", "VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
+        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF","VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
+        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= [ "Visual Narrator", "GPT3.5-Turbo", "CRF", "VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
 
     return precision_data, recall_data, f_measure_data
 
 def create_final_bargraph(data, title, saving_path, crf_path):
 
     if crf_path == None:
-        yerr = fix_max_y_error(data[["VN SD", "ChatGPT SD"]], data[["Visual Narrator", "ChatGPT"]])
-        data[["Visual Narrator", "ChatGPT"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1)])
+        yerr = fix_max_y_error(data[["VN SD", "GPT3.5-Turbo SD"]], data[["Visual Narrator", "GPT3.5-Turbo"]])
+        data[["Visual Narrator", "GPT3.5-Turbo"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1)])
     else:
-        yerr = fix_max_y_error(data[["VN SD", "ChatGPT SD", "CRF SD"]], data[["Visual Narrator", "ChatGPT", "CRF"]])
-        data[["Visual Narrator", "ChatGPT", "CRF"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
+        yerr = fix_max_y_error(data[["VN SD", "GPT3.5-Turbo SD", "CRF SD"]], data[["Visual Narrator", "GPT3.5-Turbo", "CRF"]])
+        data[["Visual Narrator", "GPT3.5-Turbo", "CRF"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
     
     plt.title(title,fontsize= 20)
     plt.ylabel("Average Score",fontsize=14)
@@ -170,6 +170,7 @@ def create_final_bargraph(data, title, saving_path, crf_path):
     plt.xticks(rotation = 0)
     plt.tight_layout()
     plt.savefig(saving_path)
+    plt.savefig(saving_path.replace(".png", ".pdf"))
 
 def fix_max_y_error(standard_deviation, y_data):
     '''
