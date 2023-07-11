@@ -622,7 +622,7 @@
     {
         "Text": "#G14# As a Data Analyst I want to download a data package, so that that I can study it and wrangle with it to infer new data or generate new insights.",
         "Persona": [
-            "Analyst"
+            "Data Analyst"
         ],
         "Action": [
             "download"
@@ -631,7 +631,7 @@
             "package"
         ],
         "Triggers": [
-            "Analyst",
+            "Data Analyst",
             "download"
         ],
         "Targets": [
@@ -642,7 +642,7 @@
     {
         "Text": "#G14# As a Data Analyst, I want to update previously downloaded data package, so that that I can work with the most recent data.",
         "Persona": [
-            "Analyst"
+            "Data Analyst"
         ],
         "Action": [
             "update"
@@ -651,7 +651,7 @@
             "package"
         ],
         "Triggers": [
-            "Analyst",
+            "Data Analyst",
             "update"
         ],
         "Targets": [
@@ -682,7 +682,7 @@
     {
         "Text": "#G14# As a Data Analyst, I want to compare different versions of some datapackage locally, so that that I can see schema changes clearly and adjust my analytics code to the desired schema version.",
         "Persona": [
-            "Analyst"
+            "Data Analyst"
         ],
         "Action": [
             "compare"
@@ -691,7 +691,7 @@
             "versions"
         ],
         "Triggers": [
-            "Analyst",
+            "Data Analyst",
             "compare"
         ],
         "Targets": [
@@ -702,7 +702,7 @@
     {
         "Text": "#G14# As a Web Developer, I want to be able to install multiple versions of the same datapackage separately, so that that all my projects could be developed independently and deployed locally.",
         "Persona": [
-            "Developer"
+            "Web Developer"
         ],
         "Action": [
             "install"
@@ -711,7 +711,7 @@
             "versions"
         ],
         "Triggers": [
-            "Developer",
+            "Web Developer",
             "install"
         ],
         "Targets": [
