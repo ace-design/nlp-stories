@@ -42,7 +42,7 @@
     {
         "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
         "Persona": [
-            "engineer"
+            "release engineer"
         ],
         "Action": [
             "configure"
@@ -51,7 +51,7 @@
             "builds"
         ],
         "Triggers": [
-            "engineer",
+            "release engineer",
             "configure"
         ],
         "Targets": [
@@ -162,7 +162,7 @@
     {
         "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
         "Persona": [
-            "administrator"
+            "system administrator"
         ],
         "Action": [
             "migrate"
@@ -171,7 +171,7 @@
             "data"
         ],
         "Triggers": [
-            "administrator",
+            "system administrator",
             "migrate"
         ],
         "Targets": [
