@@ -22,7 +22,7 @@
     {
         "Text": "#G23# As an Application Administrator, I want to be able to reset a User's password for them.",
         "Persona": [
-            "Administrator"
+            "Application Administrator"
         ],
         "Action": [
             "reset"
@@ -31,7 +31,7 @@
             "password"
         ],
         "Triggers": [
-            "Administrator",
+            "Application Administrator",
             "reset"
         ],
         "Targets": [
@@ -102,7 +102,7 @@
     {
         "Text": "#G23# As a migration specialist, I want to store the AT or Archon source record ids in each ASpace record",
         "Persona": [
-            "specialist"
+            "migration specialist"
         ],
         "Action": [
             "store"
@@ -111,7 +111,7 @@
             "ids"
         ],
         "Triggers": [
-            "specialist",
+            "migration specialist",
             "store"
         ],
         "Targets": [
@@ -302,7 +302,7 @@
     {
         "Text": "#G23# As an Application Administrator, I want to assign Users to an Advanced Data Entry and ensure that the appropriate permissions are enforced.",
         "Persona": [
-            "Administrator"
+            "Application Administrator"
         ],
         "Action": [
             "assign"
@@ -311,7 +311,7 @@
             "Users"
         ],
         "Triggers": [
-            "Administrator",
+            "Application Administrator",
             "assign"
         ],
         "Targets": [
@@ -322,7 +322,7 @@
     {
         "Text": "#G23# As an Application Administrator , I want to be able to configure the help center URL and topic mappings.",
         "Persona": [
-            "Administrator"
+            "Application Administrator"
         ],
         "Action": [
             "configure"
@@ -331,7 +331,7 @@
             "URL"
         ],
         "Triggers": [
-            "Administrator",
+            "Application Administrator",
             "configure"
         ],
         "Targets": [
@@ -482,7 +482,7 @@
     {
         "Text": "#G23# As a systems administrator, I want to be able to control the location of the demo database and I want it to be backed up.",
         "Persona": [
-            "administrator"
+            "systems administrator"
         ],
         "Action": [
             "control"
@@ -491,7 +491,7 @@
             "location"
         ],
         "Triggers": [
-            "administrator",
+            "systems administrator",
             "control"
         ],
         "Targets": [
@@ -742,7 +742,7 @@
     {
         "Text": "#G23# As a Repository Manager , I want to create, update and delete archival descriptions in my repository.",
         "Persona": [
-            "Manager"
+            "Repository Manager"
         ],
         "Action": [
             "create"
@@ -751,7 +751,7 @@
             "update"
         ],
         "Triggers": [
-            "Manager",
+            "Repository Manager",
             "create"
         ],
         "Targets": [
@@ -782,7 +782,7 @@
     {
         "Text": "#G23# As a Basic Data Entry user , I want to create and update basic archival description information.",
         "Persona": [
-            "user"
+            "Entry user"
         ],
         "Action": [
             "create"
@@ -791,7 +791,7 @@
             "information"
         ],
         "Triggers": [
-            "user",
+            "Entry user",
             "create"
         ],
         "Targets": [
@@ -802,7 +802,7 @@
     {
         "Text": "#G23# As a Repository Manager , I want to create, update and delete any records in my repository.",
         "Persona": [
-            "Manager"
+            "Repository Manager"
         ],
         "Action": [
             "create"
@@ -811,7 +811,7 @@
             "update"
         ],
         "Triggers": [
-            "Manager",
+            "Repository Manager",
             "create"
         ],
         "Targets": [
@@ -842,7 +842,7 @@
     {
         "Text": "#G23# As an System Administrator, I want to declare that a user is has the Repository Manager role for a given Repository.",
         "Persona": [
-            "Administrator"
+            "System Administrator"
         ],
         "Action": [
             "declare"
@@ -851,7 +851,7 @@
             "role"
         ],
         "Triggers": [
-            "Administrator",
+            "System Administrator",
             "declare"
         ],
         "Targets": [

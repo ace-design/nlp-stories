@@ -2,7 +2,7 @@
     {
         "Text": "#G17# As an app developer, I want to include the code of a dataset type in my app artifact and create a dataset of that type when deploying the app.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "include"
@@ -11,7 +11,7 @@
             "code"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "include"
         ],
         "Targets": [
@@ -22,7 +22,7 @@
     {
         "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "deploy"
@@ -31,7 +31,7 @@
             "version"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "deploy"
         ],
         "Targets": [
@@ -42,7 +42,7 @@
     {
         "Text": "#G17# As an app developer, I want to deploy a new version of a dataset type as part of an app artifact, without affecting other datasets of this type.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "deploy"
@@ -51,7 +51,7 @@
             "version"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "deploy"
         ],
         "Targets": [
@@ -62,7 +62,7 @@
     {
         "Text": "#G17# As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "explore"
@@ -71,7 +71,7 @@
             "instance"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "explore"
         ],
         "Targets": [
@@ -82,7 +82,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that when I deploy an artifact without creating an app this will not create any dataset types or instances.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -91,7 +91,7 @@
             "that"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -102,7 +102,7 @@
     {
         "Text": "#G17# As an app developer, I want to share a dataset type across multiple applications that include the dataset type's code in their artifacts.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "share"
@@ -111,7 +111,7 @@
             "type"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "share"
         ],
         "Targets": [
@@ -122,7 +122,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a shared dataset type that all dataset instances created by this app start using the new code but all dataset instances created by other apps remain unchanged.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -131,7 +131,7 @@
             "version"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -142,7 +142,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -151,7 +151,7 @@
             "version"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -162,7 +162,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error. ",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -171,7 +171,7 @@
             "version"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -182,7 +182,7 @@
     {
         "Text": "#G17# As an app developer, I want to share a dataset type that I had previously deployed as part of an app.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "share"
@@ -191,7 +191,7 @@
             "type"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "share"
         ],
         "Targets": [
@@ -282,7 +282,7 @@
     {
         "Text": "#G17# As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "depend"
@@ -291,7 +291,7 @@
             "implementation"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "depend"
         ],
         "Targets": [
@@ -302,7 +302,7 @@
     {
         "Text": "#G17# As an app developer, I want to write unit tests for an app that depends on the interface of a dataset type.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "write"
@@ -311,7 +311,7 @@
             "tests"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "write"
         ],
         "Targets": [
@@ -362,7 +362,7 @@
     {
         "Text": "#G17# As an app developer, I want to create a dataset instance with a specific version of a dataset type.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "create"
@@ -371,7 +371,7 @@
             "instance"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "create"
         ],
         "Targets": [
@@ -442,7 +442,7 @@
     {
         "Text": "#G17# As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.",
         "Persona": [
-            "scientist"
+            "data scientist"
         ],
         "Action": [
             "create"
@@ -451,7 +451,7 @@
             "instance"
         ],
         "Triggers": [
-            "scientist",
+            "data scientist",
             "create"
         ],
         "Targets": [
@@ -462,7 +462,7 @@
     {
         "Text": "#G17# As a data scientist, I want to be able to upgrade a dataset instance to a new version of its code.",
         "Persona": [
-            "scientist"
+            "data scientist"
         ],
         "Action": [
             "upgrade"
@@ -471,7 +471,7 @@
             "instance"
         ],
         "Triggers": [
-            "scientist",
+            "data scientist",
             "upgrade"
         ],
         "Targets": [
@@ -482,7 +482,7 @@
     {
         "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes an existing dataset instance.",
         "Persona": [
-            "user"
+            "hydrator user"
         ],
         "Action": [
             "create"
@@ -491,7 +491,7 @@
             "pipeline"
         ],
         "Triggers": [
-            "user",
+            "hydrator user",
             "create"
         ],
         "Targets": [
@@ -502,7 +502,7 @@
     {
         "Text": "#G17# As a hydrator user, I want to create a pipeline that reads or writes a new dataset instance and I want to create that dataset instance as part of pipeline creation.",
         "Persona": [
-            "user"
+            "hydrator user"
         ],
         "Action": [
             "create"
@@ -511,7 +511,7 @@
             "pipeline"
         ],
         "Triggers": [
-            "user",
+            "hydrator user",
             "create"
         ],
         "Targets": [
@@ -522,7 +522,7 @@
     {
         "Text": "#G17# As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.",
         "Persona": [
-            "user"
+            "hydrator user"
         ],
         "Action": [
             "specify"
@@ -531,7 +531,7 @@
             "version"
         ],
         "Triggers": [
-            "user",
+            "hydrator user",
             "specify"
         ],
         "Targets": [
@@ -542,7 +542,7 @@
     {
         "Text": "#G17# As a hydrator user, I want to explore the datasets created by my pipeline.",
         "Persona": [
-            "user"
+            "hydrator user"
         ],
         "Action": [
             "explore"
@@ -551,7 +551,7 @@
             "datasets"
         ],
         "Triggers": [
-            "user",
+            "hydrator user",
             "explore"
         ],
         "Targets": [
@@ -562,7 +562,7 @@
     {
         "Text": "#G17# As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.",
         "Persona": [
-            "user"
+            "hydrator user"
         ],
         "Action": [
             "ensure"
@@ -571,7 +571,7 @@
             "apps"
         ],
         "Triggers": [
-            "user",
+            "hydrator user",
             "ensure"
         ],
         "Targets": [
@@ -582,7 +582,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that all dataset instances created by Hydrator pipelines are accessible to the app.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -591,7 +591,7 @@
             "pipelines"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -602,7 +602,7 @@
     {
         "Text": "#G17# As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.",
         "Persona": [
-            "developer"
+            "plugin developer"
         ],
         "Action": [
             "include"
@@ -611,7 +611,7 @@
             "code"
         ],
         "Triggers": [
-            "developer",
+            "plugin developer",
             "include"
         ],
         "Targets": [
@@ -622,7 +622,7 @@
     {
         "Text": "#G17# As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin. ",
         "Persona": [
-            "developer"
+            "plugin developer"
         ],
         "Action": [
             "use"
@@ -631,7 +631,7 @@
             "type"
         ],
         "Triggers": [
-            "developer",
+            "plugin developer",
             "use"
         ],
         "Targets": [
@@ -642,7 +642,7 @@
     {
         "Text": "#G17# As a plugin developer, I want to upgrade the code of a dataset type used by a dataset instance created by that plugin when I deploy a new version of the plugin and update the pipeline to use that version.",
         "Persona": [
-            "developer"
+            "plugin developer"
         ],
         "Action": [
             "upgrade"
@@ -651,7 +651,7 @@
             "code"
         ],
         "Triggers": [
-            "developer",
+            "plugin developer",
             "upgrade"
         ],
         "Targets": [
@@ -662,7 +662,7 @@
     {
         "Text": "#G17# As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.",
         "Persona": [
-            "developer"
+            "pipeline developer"
         ],
         "Action": [
             "upgrade"
@@ -671,7 +671,7 @@
             "instance"
         ],
         "Triggers": [
-            "developer",
+            "pipeline developer",
             "upgrade"
         ],
         "Targets": [
@@ -782,7 +782,7 @@
     {
         "Text": "#G17# As an app developer, I want to perform custom administrative operations on dataset instances from my app and the CLI and REST or the UI.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "perform"
@@ -791,7 +791,7 @@
             "operations"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "perform"
         ],
         "Targets": [
@@ -1042,7 +1042,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that application creation fails if any of its datasets cannot be created.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -1051,7 +1051,7 @@
             "datasets"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -1062,7 +1062,7 @@
     {
         "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "ensure"
@@ -1071,7 +1071,7 @@
             "datasets"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "ensure"
         ],
         "Targets": [
@@ -1082,7 +1082,7 @@
     {
         "Text": "#G17# As an app developer, I want to tolerate existing datasets if their properties are different but compatible when creating a dataset as part of app deployment. ",
         "Persona": [
-            "developer"
+            "app developer"
         ],
         "Action": [
             "tolerate"
@@ -1091,7 +1091,7 @@
             "datasets"
         ],
         "Triggers": [
-            "developer",
+            "app developer",
             "tolerate"
         ],
         "Targets": [
@@ -1102,7 +1102,7 @@
     {
         "Text": "#G17# As a pipeline designer, I want to get a meaningful error message when pipeline creation fails when I use an existing dataset as a sink or source, so that I know that the schema or any other property of the dataset is incompatible with what the pipeline requires. ",
         "Persona": [
-            "designer"
+            "pipeline designer"
         ],
         "Action": [
             "get"
@@ -1111,7 +1111,7 @@
             "message"
         ],
         "Triggers": [
-            "designer",
+            "pipeline designer",
             "get"
         ],
         "Targets": [
