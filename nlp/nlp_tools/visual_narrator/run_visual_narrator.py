@@ -115,6 +115,21 @@ def extract_label_info(story, index):
 
     '''
     label_string = story[index]
+    
+    if index == 7 and "[" in label_string and "]" in label_string:
+        #persona special check for compound
+        start = label_string.index("[") + 1
+        end = label_string.index("]")
+        if (start != end):
+            subString = label_string[start:end]
+            subStringList = subString.split(",")
+            label = ""
+            for word in subStringList:
+                label += word.strip(" \'") + " "
+            label = label.strip(" \r")
+            return label
+
+    # action and entity extraction
     start_index = label_string.find(":") + 1
     end_index = label_string.find("(")
     if end_index == -1:

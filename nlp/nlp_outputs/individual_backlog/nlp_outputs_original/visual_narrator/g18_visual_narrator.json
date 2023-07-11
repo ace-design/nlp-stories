@@ -2,7 +2,7 @@
     {
         "Text": "#G18# As a system administrator, I want to run a script that installs the Neurohub node onto a virgin Ubuntu operating system.",
         "Persona": [
-            "administrator"
+            "system administrator"
         ],
         "Action": [
             "run"
@@ -11,7 +11,7 @@
             "script"
         ],
         "Triggers": [
-            "administrator",
+            "system administrator",
             "run"
         ],
         "Targets": [
@@ -22,7 +22,7 @@
     {
         "Text": "#G18# As a system administrator, I want to run a script that tests to see if a Neurohub installation is functioning correctly.",
         "Persona": [
-            "administrator"
+            "system administrator"
         ],
         "Action": [
             "run"
@@ -31,7 +31,7 @@
             "script"
         ],
         "Triggers": [
-            "administrator",
+            "system administrator",
             "run"
         ],
         "Targets": [
@@ -42,7 +42,7 @@
     {
         "Text": "#G18# As a release engineer, I want to call a script to execute acceptance tests against a Neurohub installation and report back the results.",
         "Persona": [
-            "engineer"
+            "release engineer"
         ],
         "Action": [
             "call"
@@ -51,7 +51,7 @@
             "script"
         ],
         "Triggers": [
-            "engineer",
+            "release engineer",
             "call"
         ],
         "Targets": [
@@ -82,7 +82,7 @@
     {
         "Text": "#G18# As an MRI operator, I want to digitally record the responses that subjects make when completing paper-based forms.",
         "Persona": [
-            "operator"
+            "MRI operator"
         ],
         "Action": [
             "record"
@@ -91,7 +91,7 @@
             "responses"
         ],
         "Triggers": [
-            "operator",
+            "MRI operator",
             "record"
         ],
         "Targets": [
@@ -122,7 +122,7 @@
     {
         "Text": "#G18# As a lab administrator, I want to theme the Web interface graphics/colours.",
         "Persona": [
-            "administrator"
+            "lab administrator"
         ],
         "Action": [
             "theme"
@@ -131,7 +131,7 @@
             "colours"
         ],
         "Triggers": [
-            "administrator",
+            "lab administrator",
             "theme"
         ],
         "Targets": [
@@ -142,7 +142,7 @@
     {
         "Text": "#G18# As a systems administrator, I want  to install Neurohub dependencies into an Ubuntu 10.04 LTS machine using the normal Ubuntu package management tools.",
         "Persona": [
-            "administrator"
+            "systems administrator"
         ],
         "Action": [
             "install"
@@ -151,7 +151,7 @@
             "dependencies"
         ],
         "Triggers": [
-            "administrator",
+            "systems administrator",
             "install"
         ],
         "Targets": [
@@ -362,7 +362,7 @@
     {
         "Text": "#G18# As a release engineer, I want to configure nightly builds that automatically perform a Neurohub installation on a virgin operating system, execute tests and report back results, without requiring any manual input/interaction.",
         "Persona": [
-            "engineer"
+            "release engineer"
         ],
         "Action": [
             "configure"
@@ -371,7 +371,7 @@
             "builds"
         ],
         "Triggers": [
-            "engineer",
+            "release engineer",
             "configure"
         ],
         "Targets": [
@@ -642,7 +642,7 @@
     {
         "Text": "#G18# As a system administrator, I want to have a managed backup protocol for the system.",
         "Persona": [
-            "administrator"
+            "system administrator"
         ],
         "Action": [
             "have"
@@ -651,7 +651,7 @@
             "protocol"
         ],
         "Triggers": [
-            "administrator",
+            "system administrator",
             "have"
         ],
         "Targets": [
@@ -682,7 +682,7 @@
     {
         "Text": "#G18# As lab administrator, I want to have increased access to the system to support regular users. ",
         "Persona": [
-            "administrator"
+            "lab administrator"
         ],
         "Action": [
             "increased"
@@ -691,7 +691,7 @@
             "access"
         ],
         "Triggers": [
-            "administrator",
+            "lab administrator",
             "increased"
         ],
         "Targets": [
@@ -722,7 +722,7 @@
     {
         "Text": "#G18# As a lab administrator, I want to create page templates with bespoke metadata fields.",
         "Persona": [
-            "administrator"
+            "lab administrator"
         ],
         "Action": [
             "create"
@@ -731,7 +731,7 @@
             "templates"
         ],
         "Triggers": [
-            "administrator",
+            "lab administrator",
             "create"
         ],
         "Targets": [
@@ -1042,7 +1042,7 @@
     {
         "Text": "#G18# As a lab member, I want to view events and equipment bookings within the group.",
         "Persona": [
-            "member"
+            "lab member"
         ],
         "Action": [
             "view"
@@ -1051,7 +1051,7 @@
             "events"
         ],
         "Triggers": [
-            "member",
+            "lab member",
             "view"
         ],
         "Targets": [
@@ -1082,7 +1082,7 @@
     {
         "Text": "#G18# As a system administrator, I want to migrate data from an older version of NeuroHub to the current version.",
         "Persona": [
-            "administrator"
+            "system administrator"
         ],
         "Action": [
             "migrate"
@@ -1091,7 +1091,7 @@
             "data"
         ],
         "Triggers": [
-            "administrator",
+            "system administrator",
             "migrate"
         ],
         "Targets": [

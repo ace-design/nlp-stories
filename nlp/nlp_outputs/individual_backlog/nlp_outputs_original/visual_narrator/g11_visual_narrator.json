@@ -2,1421 +2,1081 @@
     {
         "Text": "#G11# As a team member, I want to see the first iteration of beta up on cloud.gov.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "see"
+            "add"
         ],
         "Entity": [
-            "iteration"
+            "campers"
         ],
         "Triggers": [
-            "member",
-            "see"
+            "camp administrator",
+            "add"
         ],
         "Targets": [
-            "see",
-            "iteration"
+            "add",
+            "campers"
         ]
     },
     {
         "Text": "#G11# As a developer, I want to have the subdomain beta.nsf.gov be set up, so that I can deploy a beta site to it.",
         "Persona": [
-            "developer"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "remove"
         ],
         "Entity": [
-            "System"
+            "campers"
         ],
         "Triggers": [
-            "developer",
-            "have"
+            "camp administrator",
+            "remove"
         ],
         "Targets": [
-            "have",
-            "System"
+            "remove",
+            "campers"
         ]
     },
     {
         "Text": "#G11# As a stakeholder, I want to have a decision on whether or not the blog aggregator may work for beta, and if not what will.",
         "Persona": [
-            "stakeholder"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "keep"
         ],
         "Entity": [
-            "decision"
+            "records"
         ],
         "Triggers": [
-            "stakeholder",
-            "have"
+            "camp administrator",
+            "keep"
         ],
         "Targets": [
-            "have",
-            "decision"
+            "keep",
+            "records"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to understand the process of switching the cloud.gov hosting plan over from prototype to FISMA low.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "understand"
+            "upload"
         ],
         "Entity": [
-            "process"
+            "forms"
         ],
         "Triggers": [
-            "employee",
-            "understand"
+            "camp administrator",
+            "upload"
         ],
         "Targets": [
-            "understand",
-            "process"
+            "upload",
+            "forms"
         ]
     },
     {
         "Text": "#G11# As a stakeholder, I want to see the results of user research, so that I can determine if the CMS is right for me.",
         "Persona": [
-            "stakeholder"
+            "camp administrator"
         ],
         "Action": [
-            "see"
+            "keep"
         ],
         "Entity": [
-            "results"
+            "track"
         ],
         "Triggers": [
-            "stakeholder",
-            "see"
+            "camp administrator",
+            "keep"
         ],
         "Targets": [
-            "see",
-            "results"
+            "keep",
+            "track"
         ]
     },
     {
         "Text": "#G11# As a designer, I want to have a new social media wireframe, so that I can begin implementing design.",
         "Persona": [
-            "designer"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "schedule"
         ],
         "Entity": [
-            "wireframe"
+            "activities"
         ],
         "Triggers": [
-            "designer",
-            "have"
+            "camp administrator",
+            "schedule"
         ],
         "Targets": [
-            "have",
-            "wireframe"
+            "schedule",
+            "activities"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to have a prioritized list of features and elements of a future social element page, so that I can work with the engineers to determine feasibility.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "create"
         ],
         "Entity": [
-            "list"
+            "nametags"
         ],
         "Triggers": [
-            "member",
-            "have"
+            "camp administrator",
+            "create"
         ],
         "Targets": [
-            "have",
-            "list"
+            "create",
+            "nametags"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to determine a design direction for the beta social page, so that we can implement a beta site quickly without established brand guidelines.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "determine"
+            "suspend"
         ],
         "Entity": [
-            "direction"
+            "camper"
         ],
         "Triggers": [
-            "member",
-            "determine"
+            "camp administrator",
+            "suspend"
         ],
         "Targets": [
-            "determine",
-            "direction"
+            "suspend",
+            "camper"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to test the user research plan, so that I make sure the in-person interviews are effective and capturing the right information.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "test"
+            "set"
         ],
         "Entity": [
-            "plan"
+            "reminders"
         ],
         "Triggers": [
-            "researcher",
-            "test"
+            "camp administrator",
+            "set"
         ],
         "Targets": [
-            "test",
-            "plan"
+            "set",
+            "reminders"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to have the finalized OLPA task script, so that I can begin testing with internal users.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "assign"
         ],
         "Entity": [
-            "script"
+            "positions"
         ],
         "Triggers": [
-            "researcher",
-            "have"
+            "camp administrator",
+            "assign"
         ],
         "Targets": [
-            "have",
-            "script"
+            "assign",
+            "positions"
         ]
     },
     {
         "Text": "#G11# As a content editor, I want to be able to easily find content, so that I can edit it.",
         "Persona": [
-            "editor"
+            "camp administrator"
         ],
         "Action": [
-            "find"
+            "warn"
         ],
         "Entity": [
-            "content"
+            "worker"
         ],
         "Triggers": [
-            "editor",
-            "find"
+            "camp administrator",
+            "warn"
         ],
         "Targets": [
-            "find",
-            "content"
+            "warn",
+            "worker"
         ]
     },
     {
         "Text": "#G11# As a research participant, I want to make sure that the appearance of the prototype does not distract from the workflow, so that I can complete the user interview.",
         "Persona": [
-            "participant"
+            "camp administrator"
         ],
         "Action": [
-            "make"
+            "create"
         ],
         "Entity": [
-            "prototype"
+            "rules"
         ],
         "Triggers": [
-            "participant",
-            "make"
+            "camp administrator",
+            "create"
         ],
         "Targets": [
-            "make",
-            "prototype"
+            "create",
+            "rules"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to have the WIG prototype, so that I can finalize the second task script.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "keep"
         ],
         "Entity": [
-            "prototype"
+            "track"
         ],
         "Triggers": [
-            "researcher",
-            "have"
+            "camp administrator",
+            "keep"
         ],
         "Targets": [
-            "have",
-            "prototype"
+            "keep",
+            "track"
         ]
     },
     {
         "Text": "#G11# As a user, I want to add a video to my article.",
         "Persona": [
-            "user"
+            "camp administrator"
         ],
         "Action": [
-            "add"
+            "create"
         ],
         "Entity": [
-            "video"
+            "avenue"
         ],
         "Triggers": [
-            "user",
-            "add"
+            "camp administrator",
+            "create"
         ],
         "Targets": [
-            "add",
-            "video"
+            "create",
+            "avenue"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to meet with DIS / cloud.gov, so that I can determine the requirements for the beta.nsf.gov ATO.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "meet"
+            "store"
         ],
         "Entity": [
-            "cloudgov"
+            "information"
         ],
         "Triggers": [
-            "member",
-            "meet"
+            "camp administrator",
+            "store"
         ],
         "Targets": [
-            "meet",
-            "cloudgov"
+            "store",
+            "information"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to have a list of priority workflow candidates that we might test, so that I can make sure we're capturing the priority areas.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "store"
         ],
         "Entity": [
-            "list"
+            "information"
         ],
         "Triggers": [
-            "researcher",
-            "have"
+            "camp administrator",
+            "store"
         ],
         "Targets": [
-            "have",
-            "list"
+            "store",
+            "information"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to understand what the MVP should look like, so that I can begin understanding workflow needs as they pertain to any CMS decision.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "understand"
+            "provide"
         ],
         "Entity": [
-            "what"
+            "feedback"
         ],
         "Triggers": [
-            "member",
-            "understand"
+            "camp administrator",
+            "provide"
         ],
         "Targets": [
-            "understand",
-            "what"
+            "provide",
+            "feedback"
         ]
     },
     {
         "Text": "#G11# As an NSF administrator, I want to shadow the CMS implementation, so that I can learn as the prototype is developed further.",
         "Persona": [
-            "administrator"
+            "camp administrator"
         ],
         "Action": [
-            "shadow"
+            "make"
         ],
         "Entity": [
-            "implementation"
+            "nametags"
         ],
         "Triggers": [
-            "administrator",
-            "shadow"
+            "camp administrator",
+            "make"
         ],
         "Targets": [
-            "shadow",
-            "implementation"
+            "make",
+            "nametags"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to have an updated acquisitions roadmap, so that I can plan accordingly.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "create"
         ],
         "Entity": [
-            "roadmap"
+            "form"
         ],
         "Triggers": [
-            "member",
-            "have"
+            "camp administrator",
+            "create"
         ],
         "Targets": [
-            "have",
-            "roadmap"
+            "create",
+            "form"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have an updated roadmap document, so that I can see prioritized areas to focus on for the next few months and beyond.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "keep"
         ],
         "Entity": [
-            "document"
+            "information"
         ],
         "Triggers": [
-            "employee",
-            "have"
+            "camp administrator",
+            "keep"
         ],
         "Targets": [
-            "have",
-            "document"
+            "keep",
+            "information"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to understand how time off overlaps with plans around the user research.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "understand"
+            "see"
         ],
         "Entity": [
-            "plans"
+            "forms"
         ],
         "Triggers": [
-            "member",
-            "understand"
+            "camp administrator",
+            "see"
         ],
         "Targets": [
-            "understand",
-            "plans"
+            "see",
+            "forms"
         ]
     },
     {
         "Text": "#G11# As a researcher, I want to develop the user research protocol for internal workflows, so that we can begin testing against a CMS prototype.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "develop"
+            "notify"
         ],
         "Entity": [
-            "protocol"
+            "parents"
         ],
         "Triggers": [
-            "researcher",
-            "develop"
+            "camp administrator",
+            "notify"
         ],
         "Targets": [
-            "develop",
-            "protocol"
+            "notify",
+            "parents"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to narrow down the universe of CMS options and identify/prioritize key considerations for getting to the next step.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "narrow"
+            "log"
         ],
         "Entity": [
-            "universe"
+            "attendance"
         ],
         "Triggers": [
-            "employee",
-            "narrow"
+            "camp administrator",
+            "log"
         ],
         "Targets": [
-            "narrow",
-            "universe"
+            "log",
+            "attendance"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have a final workshop to identify key lessons and features for the content management system decision.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "add"
         ],
         "Entity": [
-            "workshop"
+            "parents"
         ],
         "Triggers": [
-            "employee",
-            "have"
+            "camp administrator",
+            "add"
         ],
         "Targets": [
-            "have",
-            "workshop"
+            "add",
+            "parents"
         ]
     },
     {
         "Text": "#G11# As a CMS SME, I want to see the webmaster workflow report, so that I can understand how this might impact current direction.",
         "Persona": [
-            "SME"
+            "camp administrator"
         ],
         "Action": [
-            "see"
+            "create"
         ],
         "Entity": [
-            "report"
+            "groups"
         ],
         "Triggers": [
-            "SME",
-            "see"
+            "camp administrator",
+            "create"
         ],
         "Targets": [
-            "see",
-            "report"
+            "create",
+            "groups"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to understand work performed, so that I can understand when and what I can use later.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "understand"
+            "see"
         ],
         "Entity": [
-            "work"
+            "groups"
         ],
         "Triggers": [
-            "employee",
-            "understand"
+            "camp administrator",
+            "see"
         ],
         "Targets": [
-            "understand",
-            "work"
+            "see",
+            "groups"
         ]
     },
     {
         "Text": "#G11# As a researcher, I want to recruit for the last round of user research, so that we can summarize our findings and synthesize results.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "recruit"
+            "schedule"
         ],
         "Entity": [
-            "round"
+            "activities"
         ],
         "Triggers": [
-            "researcher",
-            "recruit"
+            "camp administrator",
+            "schedule"
         ],
         "Targets": [
-            "recruit",
-            "round"
+            "schedule",
+            "activities"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to continue scheduling interviews for hypothesis #1, so that I can be prepared to test our first prototype.",
         "Persona": [
-            "researcher"
+            "camp administrator"
         ],
         "Action": [
-            "continue"
+            "delete"
         ],
         "Entity": [
-            "interviews"
+            "activities"
         ],
         "Triggers": [
-            "researcher",
-            "continue"
+            "camp administrator",
+            "delete"
         ],
         "Targets": [
-            "continue",
-            "interviews"
+            "delete",
+            "activities"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have high-level strategy recommendations to implement in conjunction with the new CMS.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "modify"
         ],
         "Entity": [
-            "recommendations"
+            "events"
         ],
         "Triggers": [
-            "employee",
-            "have"
+            "camp administrator",
+            "modify"
         ],
         "Targets": [
-            "have",
-            "recommendations"
+            "modify",
+            "events"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to have editorial-planning recommendations, so that I can understand how they might impact an eventual CMS / future web presence.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "have"
+            "modify"
         ],
         "Entity": [
-            "recommendations"
+            "information"
         ],
         "Triggers": [
-            "employee",
-            "have"
+            "camp administrator",
+            "modify"
         ],
         "Targets": [
-            "have",
-            "recommendations"
+            "modify",
+            "information"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to know how brand guidelines are developed and maintained, so that I can incorporate them throughout the project.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "know"
+            "delete"
         ],
         "Entity": [
-            "System"
+            "campers"
         ],
         "Triggers": [
-            "employee",
-            "know"
+            "camp administrator",
+            "delete"
         ],
         "Targets": [
-            "know",
-            "System"
+            "delete",
+            "campers"
         ]
     },
     {
         "Text": "#G11# As a web recruiter manager, I want to confirm the recruiter is set up and working properly on Science360.gov.",
         "Persona": [
-            "manager"
+            "camp administrator"
         ],
         "Action": [
-            "confirm"
+            "modify"
         ],
         "Entity": [
-            "Science360gov"
+            "information"
         ],
         "Triggers": [
-            "manager",
-            "confirm"
+            "camp administrator",
+            "modify"
         ],
         "Targets": [
-            "confirm",
-            "Science360gov"
+            "modify",
+            "information"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to know how visual design directions were developed, so that I can make better design decisions in the future.",
         "Persona": [
-            "employee"
+            "camp administrator"
         ],
         "Action": [
-            "know"
+            "delete"
         ],
         "Entity": [
-            "System"
+            "parents"
         ],
         "Triggers": [
-            "employee",
-            "know"
+            "camp administrator",
+            "delete"
         ],
         "Targets": [
-            "know",
-            "System"
+            "delete",
+            "parents"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to know what the first hypothesis is, so that I can start developing a prototype to test.",
         "Persona": [
-            "member"
+            "camp administrator"
         ],
         "Action": [
-            "know"
+            "modify"
         ],
         "Entity": [
-            "System"
+            "information"
         ],
         "Triggers": [
-            "member",
-            "know"
+            "camp administrator",
+            "modify"
         ],
         "Targets": [
-            "know",
-            "System"
+            "modify",
+            "information"
         ]
     },
     {
         "Text": "#G11# As a content designer, I want to develop a better understanding of NSF's content types and editorial plan, so that I can make more informed recommendations going forward.",
         "Persona": [
-            "designer"
+            "camp administrator"
         ],
         "Action": [
-            "develop"
+            "see"
         ],
         "Entity": [
-            "understanding"
+            "events"
         ],
         "Triggers": [
-            "designer",
-            "develop"
+            "camp administrator",
+            "see"
         ],
         "Targets": [
-            "develop",
-            "understanding"
+            "see",
+            "events"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to have a prototype strategy, so that I understand how we will gain understandings from tests that will drive recommendations.",
         "Persona": [
-            "member"
+            "parent"
         ],
         "Action": [
-            "have"
+            "see"
         ],
         "Entity": [
-            "strategy"
+            "System"
         ],
         "Triggers": [
-            "member",
-            "have"
+            "parent",
+            "see"
         ],
         "Targets": [
-            "have",
-            "strategy"
+            "see",
+            "System"
         ]
     },
     {
         "Text": "#G11# As a content designer, I want to demonstrate the value of user-centered content design to ensure it's an integral part of our recommendations.",
         "Persona": [
-            "designer"
+            "parent"
         ],
         "Action": [
-            "demonstrate"
+            "track"
         ],
         "Entity": [
-            "value"
+            "activity"
         ],
         "Triggers": [
-            "designer",
-            "demonstrate"
+            "parent",
+            "track"
         ],
         "Targets": [
-            "demonstrate",
-            "value"
+            "track",
+            "activity"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to know when outreach to lists is successful, so that I can plan on a new release to the next listserv on the priority list.",
         "Persona": [
-            "researcher"
+            "parent"
         ],
         "Action": [
-            "know"
+            "submit"
         ],
         "Entity": [
-            "lists"
+            "type"
         ],
         "Triggers": [
-            "researcher",
-            "know"
+            "parent",
+            "submit"
         ],
         "Targets": [
-            "know",
-            "lists"
+            "submit",
+            "type"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to schedule regular in-person check-ins, so that we can continue to communicate the goals of the project with our stakeholders.",
         "Persona": [
-            "employee"
+            "parent"
         ],
         "Action": [
-            "schedule"
+            "create"
         ],
         "Entity": [
-            "person"
+            "account"
         ],
         "Triggers": [
-            "employee",
-            "schedule"
+            "parent",
+            "create"
         ],
         "Targets": [
-            "schedule",
-            "person"
+            "create",
+            "account"
         ]
     },
     {
         "Text": "#G11# As a developer, I want to know what the three initial hypotheses are, so that I can plan work around development of prototypes.",
         "Persona": [
-            "developer"
+            "parent"
         ],
         "Action": [
-            "know"
+            "see"
         ],
         "Entity": [
-            "System"
+            "which"
         ],
         "Triggers": [
-            "developer",
-            "know"
+            "parent",
+            "see"
         ],
         "Targets": [
-            "know",
-            "System"
+            "see",
+            "which"
         ]
     },
     {
         "Text": "#G11# As a workshop attendee, I want to have a summary of what we learned, so that I can understand our next steps and how they apply to me.",
         "Persona": [
-            "attendee"
+            "parent"
         ],
         "Action": [
-            "have"
+            "message"
         ],
         "Entity": [
-            "summary"
+            "counselors"
         ],
         "Triggers": [
-            "attendee",
-            "have"
+            "parent",
+            "message"
         ],
         "Targets": [
-            "have",
-            "summary"
+            "message",
+            "counselors"
         ]
     },
     {
         "Text": "#G11# As a designer, I want to know what early indications of hypotheses might be, so that I can start planning for the first prototype.",
         "Persona": [
-            "designer"
+            "parent"
         ],
         "Action": [
-            "know"
+            "sign"
         ],
         "Entity": [
-            "hypotheses"
+            "forms"
         ],
         "Triggers": [
-            "designer",
-            "know"
+            "parent",
+            "sign"
         ],
         "Targets": [
-            "know",
-            "hypotheses"
+            "sign",
+            "forms"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to have a schedule of more coworking slots, so that I can work in tandem with the rest of the team on a more regular basis.",
         "Persona": [
-            "member"
+            "parent"
         ],
         "Action": [
-            "have"
+            "see"
         ],
         "Entity": [
-            "schedule"
+            "payments"
         ],
         "Triggers": [
-            "member",
-            "have"
+            "parent",
+            "see"
         ],
         "Targets": [
-            "have",
-            "schedule"
+            "see",
+            "payments"
         ]
     },
     {
         "Text": "#G11# As an NSF person interested in attending user interviews, I want to know when they are scheduled and the type of user that will be interviewed.",
         "Persona": [
-            "interviews"
+            "parent"
         ],
         "Action": [
-            "know"
+            "share"
         ],
         "Entity": [
-            "user"
+            "photos"
         ],
         "Triggers": [
-            "interviews",
-            "know"
+            "parent",
+            "share"
         ],
         "Targets": [
-            "know",
-            "user"
+            "share",
+            "photos"
         ]
     },
     {
         "Text": "#G11# As an NSF member of the team, I want to have a place where I can access all the related reports and documentation, so that I can refer to it easily now and in the future.",
         "Persona": [
-            "member"
+            "parent"
         ],
         "Action": [
-            "have"
+            "connect"
         ],
         "Entity": [
-            "place"
+            "staff"
         ],
         "Triggers": [
-            "member",
-            "have"
+            "parent",
+            "connect"
         ],
         "Targets": [
-            "have",
-            "place"
+            "connect",
+            "staff"
         ]
     },
     {
         "Text": "#G11# As a team member, I want to know when the mid-point checkin is and what will be covered, so that I can plan accordingly.",
         "Persona": [
-            "member"
+            "parent"
         ],
         "Action": [
-            "know"
+            "enroll"
         ],
         "Entity": [
-            "System"
+            "children"
         ],
         "Triggers": [
-            "member",
-            "know"
+            "parent",
+            "enroll"
         ],
         "Targets": [
-            "know",
-            "System"
+            "enroll",
+            "children"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to join Github, so that I can participate in the issues as assigned.",
         "Persona": [
-            "employee"
+            "parent"
         ],
         "Action": [
-            "join"
+            "see"
         ],
         "Entity": [
-            "Github"
+            "children"
         ],
         "Triggers": [
-            "employee",
-            "join"
+            "parent",
+            "see"
         ],
         "Targets": [
-            "join",
-            "Github"
+            "see",
+            "children"
         ]
     },
     {
         "Text": "#G11# As an NSF employee, I want to learn about how Github is used, so that I can participate in the issues as assigned.",
         "Persona": [
-            "employee"
+            "parent"
         ],
         "Action": [
-            "learn"
+            "see"
         ],
         "Entity": [
-            "System"
+            "schedule"
         ],
         "Triggers": [
-            "employee",
-            "learn"
+            "parent",
+            "see"
         ],
         "Targets": [
-            "learn",
-            "System"
+            "see",
+            "schedule"
         ]
     },
     {
         "Text": "#G11# As a VisualDesigner, I want to concept different styles for the nsf.gov website, so that we can discuss different design concepts with stakeholders.",
         "Persona": [
-            "VisualDesigner"
+            "camp worker"
         ],
         "Action": [
-            "concept"
+            "see"
         ],
         "Entity": [
-            "styles"
+            "campers"
         ],
         "Triggers": [
-            "VisualDesigner",
-            "concept"
+            "camp worker",
+            "see"
         ],
         "Targets": [
-            "concept",
-            "styles"
+            "see",
+            "campers"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to set up a website recruitment test, so that I can see if we can recruit users in real time from the website.",
         "Persona": [
-            "researcher"
+            "camp worker"
         ],
         "Action": [
-            "set"
+            "report"
         ],
         "Entity": [
-            "test"
+            "camper"
         ],
         "Triggers": [
-            "researcher",
-            "set"
+            "camp worker",
+            "report"
         ],
         "Targets": [
-            "set",
-            "test"
+            "report",
+            "camper"
         ]
     },
     {
         "Text": "#G11# As a web recruiter manager, I want to confirm the recruiter is set up and working properly, so that I can deploy it on more pages.",
         "Persona": [
-            "manager"
+            "camp worker"
         ],
         "Action": [
-            "confirm"
+            "report"
         ],
         "Entity": [
-            "System"
+            "list"
         ],
         "Triggers": [
-            "manager",
-            "confirm"
+            "camp worker",
+            "report"
         ],
         "Targets": [
-            "confirm",
-            "System"
+            "report",
+            "list"
         ]
     },
     {
         "Text": "#G11# As a VisualDesigner, I want to create a moodboard to aid with visual design concepts for the nsf.gov website, so that we can discuss different design concepts with stakeholders.",
         "Persona": [
-            "VisualDesigner"
+            "camp worker"
         ],
         "Action": [
-            "create"
+            "report"
         ],
         "Entity": [
-            "moodboard"
+            "repairs"
         ],
         "Triggers": [
-            "VisualDesigner",
-            "create"
+            "camp worker",
+            "report"
         ],
         "Targets": [
-            "create",
-            "moodboard"
+            "report",
+            "repairs"
         ]
     },
     {
         "Text": "#G11# As a workshop attendee, I want to see a summary on major findings from the event.",
         "Persona": [
-            "attendee"
+            "camp worker"
         ],
         "Action": [
             "see"
         ],
         "Entity": [
-            "summary"
+            "campers"
         ],
         "Triggers": [
-            "attendee",
+            "camp worker",
             "see"
         ],
         "Targets": [
             "see",
-            "summary"
+            "campers"
         ]
     },
     {
         "Text": "#G11# As a user researcher, I want to make sure the correct NSF people are invited to user interviews, so that they can observe the interviews and make recommendations accordingly.",
         "Persona": [
-            "researcher"
+            "camp counselor"
         ],
         "Action": [
-            "make"
+            "take"
         ],
         "Entity": [
-            "interviews"
+            "attendance"
         ],
         "Triggers": [
-            "researcher",
-            "make"
+            "camp counselor",
+            "take"
         ],
         "Targets": [
-            "make",
-            "interviews"
-        ]
-    },
-    {
-        "Text": "#G11# As a user researcher, I want to begin drafting a research plan, so that I can begin recruiting participants.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": [
-            "begin"
-        ],
-        "Entity": [
-            "plan"
-        ],
-        "Triggers": [
-            "researcher",
-            "begin"
-        ],
-        "Targets": [
-            "begin",
-            "plan"
-        ]
-    },
-    {
-        "Text": "#G11# As a content editor, I want to be able to add videos from Brightcove.",
-        "Persona": [
-            "editor"
-        ],
-        "Action": [
-            "add"
-        ],
-        "Entity": [
-            "videos"
-        ],
-        "Triggers": [
-            "editor",
-            "add"
-        ],
-        "Targets": [
-            "add",
-            "videos"
-        ]
-    },
-    {
-        "Text": "#G11# As an author, I want to be able to indent / outdent content.",
-        "Persona": [
-            "author"
-        ],
-        "Action": [
-            "indent"
-        ],
-        "Entity": [
-            "content"
-        ],
-        "Triggers": [
-            "author",
-            "indent"
-        ],
-        "Targets": [
-            "indent",
-            "content"
-        ]
-    },
-    {
-        "Text": "#G11# As a VisualDesigner, I want to demonstrate the value of visual design to the NSF project team, so that visual design is an integral part of a redesign.",
-        "Persona": [
-            "VisualDesigner"
-        ],
-        "Action": [
-            "demonstrate"
-        ],
-        "Entity": [
-            "value"
-        ],
-        "Triggers": [
-            "VisualDesigner",
-            "demonstrate"
-        ],
-        "Targets": [
-            "demonstrate",
-            "value"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to know what visual design related tasks we might need to plan for this sprint, so that I can assign tasks as necessary.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "know"
-        ],
-        "Entity": [
-            "sprint"
-        ],
-        "Triggers": [
-            "member",
-            "know"
-        ],
-        "Targets": [
-            "know",
-            "sprint"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to have recruiting-email templates ready to go, so that I can start recruiting interviewees ASAP!.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "have"
-        ],
-        "Entity": [
-            "System"
-        ],
-        "Triggers": [
-            "member",
-            "have"
-        ],
-        "Targets": [
-            "have",
-            "System"
-        ]
-    },
-    {
-        "Text": "#G11# As an NSF employee, I want to see how the user recruitment form looks and behaves on a sample page, so that I can understand the impact the recruitment will have on the NSF page.",
-        "Persona": [
-            "employee"
-        ],
-        "Action": [
-            "see"
-        ],
-        "Entity": [
-            "page"
-        ],
-        "Triggers": [
-            "employee",
-            "see"
-        ],
-        "Targets": [
-            "see",
-            "page"
-        ]
-    },
-    {
-        "Text": "#G11# As a potential research participant, I want to learn about the research and leave my contact information.",
-        "Persona": [
-            "participant"
-        ],
-        "Action": [
-            "learn"
-        ],
-        "Entity": [
-            "information"
-        ],
-        "Triggers": [
-            "participant",
-            "learn"
-        ],
-        "Targets": [
-            "learn",
-            "information"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to have a high-level sense of the project timeline, so that I can plan my work.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "have"
-        ],
-        "Entity": [
-            "sense"
-        ],
-        "Triggers": [
-            "member",
-            "have"
-        ],
-        "Targets": [
-            "have",
-            "sense"
-        ]
-    },
-    {
-        "Text": "#G11# As a site administrator, I want to understand how other similar organizations are handling visual design, so that I can make informed decisions about what appears to work well and what doesn't.",
-        "Persona": [
-            "administrator"
-        ],
-        "Action": [
-            "understand"
-        ],
-        "Entity": [
-            "design"
-        ],
-        "Triggers": [
-            "administrator",
-            "understand"
-        ],
-        "Targets": [
-            "understand",
-            "design"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to have a platform that allows me to rapidly prototype HTML ideas.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "have"
-        ],
-        "Entity": [
-            "platform"
-        ],
-        "Triggers": [
-            "member",
-            "have"
-        ],
-        "Targets": [
-            "have",
-            "platform"
-        ]
-    },
-    {
-        "Text": "#G11# As a site administrator, I want to understand how other similar organizations are handling content, so that I can make informed decisions about what appears to work well and what doesn't.",
-        "Persona": [
-            "administrator"
-        ],
-        "Action": [
-            "understand"
-        ],
-        "Entity": [
-            "content"
-        ],
-        "Triggers": [
-            "administrator",
-            "understand"
-        ],
-        "Targets": [
-            "understand",
-            "content"
-        ]
-    },
-    {
-        "Text": "#G11# As a user researcher, I want to conduct a user definition workshop with NSF, so that I can better prepare them and the team for future research work.",
-        "Persona": [
-            "researcher"
-        ],
-        "Action": [
-            "conduct"
-        ],
-        "Entity": [
-            "workshop"
-        ],
-        "Triggers": [
-            "researcher",
-            "conduct"
-        ],
-        "Targets": [
-            "conduct",
-            "workshop"
-        ]
-    },
-    {
-        "Text": "#G11# As an NSF employee, I want to know where the initial in-person meeting will be, so that I can plan on attending.",
-        "Persona": [
-            "employee"
-        ],
-        "Action": [
-            "know"
-        ],
-        "Entity": [
-            "person"
-        ],
-        "Triggers": [
-            "employee",
-            "know"
-        ],
-        "Targets": [
-            "know",
-            "person"
-        ]
-    },
-    {
-        "Text": "#G11# As a designer, I want to have a style guide / design guide / content guide, so that we have a uniform way of delivering product.",
-        "Persona": [
-            "designer"
-        ],
-        "Action": [
-            "have"
-        ],
-        "Entity": [
-            "guide"
-        ],
-        "Triggers": [
-            "designer",
-            "have"
-        ],
-        "Targets": [
-            "have",
-            "guide"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to know when meetings are, so that I can plan accordingly.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "know"
-        ],
-        "Entity": [
-            "System"
-        ],
-        "Triggers": [
-            "member",
-            "know"
-        ],
-        "Targets": [
-            "know",
-            "System"
-        ]
-    },
-    {
-        "Text": "#G11# As a team member, I want to understand how work moves between UX/content > visual design > front end dev for a sprint cycle.",
-        "Persona": [
-            "member"
-        ],
-        "Action": [
-            "understand"
-        ],
-        "Entity": [
-            "dev"
-        ],
-        "Triggers": [
-            "member",
-            "understand"
-        ],
-        "Targets": [
-            "understand",
-            "dev"
+            "take",
+            "attendance"
         ]
     }
 ]
