@@ -217,7 +217,7 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
         y_data = ["Visual Narrator", "GPT3.5-Turbo"]
         palette = [plt.cm.Pastel1(0), plt.cm.Pastel1(1)]
 
-    graph, position = plt.subplots(3, 3, figsize=(10, 5))
+    graph, position = plt.subplots(2, 3, figsize=(10, 5))
 
     #Top Left
     yerr = fix_max_y_error(strict_bklg_data[standard_deviation], strict_bklg_data[y_data])
@@ -230,21 +230,21 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,0].set_xticks([])
 
     #Middle Left
-    yerr = fix_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
-    strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[1,0].set_ylabel("Categories", fontsize = 14)
-    position[1,0].tick_params(labelrotation = 0)
-    position[1,0].get_legend().remove()
-    position[1,0].set_ylim([0, 1])
-    position[1,0].set_xticks([])
+    # yerr = fix_max_y_error(strict_cat_data[standard_deviation], strict_cat_data[y_data])
+    # strict_cat_data[y_data].plot(ax = position[1,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    # position[1,0].set_ylabel("Categories", fontsize = 14)
+    # position[1,0].tick_params(labelrotation = 0)
+    # position[1,0].get_legend().remove()
+    # position[1,0].set_ylim([0, 1])
+    # position[1,0].set_xticks([])
 
     #bottom Left
     yerr = fix_max_y_error(strict_glo_data[standard_deviation], strict_glo_data[y_data])
-    strict_glo_data[y_data].plot(ax = position[2,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[2,0].set_ylabel("Global", fontsize = 14)
-    position[2,0].tick_params(labelrotation = 0)
-    position[2,0].get_legend().remove()
-    position[2,0].set_ylim([0, 1])
+    strict_glo_data[y_data].plot(ax = position[1,0], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    position[1,0].set_ylabel("Global", fontsize = 14)
+    position[1,0].tick_params(labelrotation = 0)
+    position[1,0].get_legend().remove()
+    position[1,0].set_ylim([0, 1])
 
     #Top center
     yerr = fix_max_y_error(inclusion_bklg_data[standard_deviation], inclusion_bklg_data[y_data])
@@ -256,19 +256,19 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,1].set_xticks([])
 
     #Center
-    yerr = fix_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
-    inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[1,1].tick_params(labelrotation = 0)
-    position[1,1].get_legend().remove()
-    position[1,1].set_ylim([0, 1])
-    position[1,1].set_xticks([])
+    # yerr = fix_max_y_error(inclusion_cat_data[standard_deviation], inclusion_cat_data[y_data])
+    # inclusion_cat_data[y_data].plot(ax = position[1,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    # position[1,1].tick_params(labelrotation = 0)
+    # position[1,1].get_legend().remove()
+    # position[1,1].set_ylim([0, 1])
+    # position[1,1].set_xticks([])
 
     #bottom center
     yerr = fix_max_y_error(inclusion_glo_data[standard_deviation], inclusion_glo_data[y_data])
-    inclusion_glo_data[y_data].plot(ax = position[2,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[2,1].tick_params(labelrotation = 0)
-    position[2,1].get_legend().remove()
-    position[2,1].set_ylim([0, 1])
+    inclusion_glo_data[y_data].plot(ax = position[1,1], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    position[1,1].tick_params(labelrotation = 0)
+    position[1,1].get_legend().remove()
+    position[1,1].set_ylim([0, 1])
 
     #Top right
     yerr = fix_max_y_error(relaxed_bklg_data[standard_deviation], relaxed_bklg_data[y_data])
@@ -280,20 +280,20 @@ def create_final_bargraph(formatted_data, title, save_name, with_crf):
     position[0,2].set_xticks([])
 
     #middle right
-    yerr = fix_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
-    relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[1,2].tick_params(labelrotation = 0)
-    position[1,2].get_legend().remove()
-    position[1,2].set_ylim([0, 1])
-    position[1,2].set_xticks([])
-    position[1,2].legend(loc=(1.025,0.25))
+    # yerr = fix_max_y_error(relaxed_cat_data[standard_deviation], relaxed_cat_data[y_data])
+    # relaxed_cat_data[y_data].plot(ax = position[1,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    # position[1,2].tick_params(labelrotation = 0)
+    # position[1,2].get_legend().remove()
+    # position[1,2].set_ylim([0, 1])
+    # position[1,2].set_xticks([])
+    # position[1,2].legend(loc=(1.025,0.25))
 
     #bottom right
     yerr = fix_max_y_error(relaxed_glo_data[standard_deviation], relaxed_glo_data[y_data])
-    relaxed_glo_data[y_data].plot(ax = position[2,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
-    position[2,2].tick_params(labelrotation = 0)
-    position[2,2].get_legend().remove()
-    position[2,2].set_ylim([0, 1])
+    relaxed_glo_data[y_data].plot(ax = position[1,2], kind='bar', yerr = yerr, error_kw=dict(lw = 1.5, capthick = 2, capsize = 4, ecolor='k'), figsize=(17,7), color = palette)
+    position[1,2].tick_params(labelrotation = 0)
+    position[1,2].get_legend().remove()
+    position[1,2].set_ylim([0, 1])
 
     graph.suptitle(title, fontsize = 20)
     graph.supxlabel("Label Type", fontsize=14)
