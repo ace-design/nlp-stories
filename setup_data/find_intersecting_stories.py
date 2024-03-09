@@ -44,11 +44,11 @@ def command():
         args.load_raw_data_path (str): path of raw data text file (from inputs\individual_backlog\dataset)
         args.load_ecmfa_vn_path (str): path of ecmfa_vn results file (inputs\individual_backlog\ecmfa_vn)
         args.load_visual_narrator_path (str): path of visual narrator valid text file (from inputs\individual_backlog\valid_visual_naraator_stories)
-        args.load_gpt_3_5_v0125_path (str): path of chatGPT results file (from inputs\individual_backlog\gpt_3_5_v0125_stories)
-        args.load_gpt_3_5_v0613_2023_path (str): path of chatGPT results file (from inputs\individual_backlog\gpt_3_5_v0613_2023_stories)
-        args.load_gpt_3_5_v0613_2024_path (str): path of chatGPT results file (from inputs\individual_backlog\gpt_3_5_v0613_2024_stories)
-        args.load_gpt_4_turbo_v0125_path (str): path of chatGPT results file (from inputs\individual_backlog\gpt_4_turbo_v0125_stories)
-        args.load_gpt_4_v0613_path (str): path of chatGPT results file (from inputs\individual_backlog\gpt_4_v0613_stories)
+        args.load_gpt_3_5_v0125_path (str): path of GPT 3.5 v0125 results file (from inputs\individual_backlog\gpt_3_5_v0125_stories)
+        args.load_gpt_3_5_v0613_2023_path (str): path of GPT 3.5 v0613 2023 results file (from inputs\individual_backlog\gpt_3_5_v0613_2023_stories)
+        args.load_gpt_3_5_v0613_2024_path (str): path of GPT 3.5 v0613 2024 results file (from inputs\individual_backlog\gpt_3_5_v0613_2024_stories)
+        args.load_gpt_4_turbo_v0125_path (str): path of GPT 4 turbo v0125 results file (from inputs\individual_backlog\gpt_4_turbo_v0125_stories)
+        args.load_gpt_4_v0613_path (str): path of GPT 4 v0613 results file (from inputs\individual_backlog\gpt_4_v0613_stories)
         args.save_name (str): name to the saving file
 
     Raises:
