@@ -90,28 +90,28 @@ def identify_files(with_crf, primary):
         crf_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_global_average.csv"
 
         bklg_file_list = [vn_bklg, gpt_bklg, crf_bklg]
-        cat_file_list = [vn_cat, gpt_cat, crf_cat]
+        # cat_file_list = [vn_cat, gpt_cat, crf_cat]
         glo_file_list = [vn_glo, gpt_glo, crf_glo]
 
         nlps = ["Visual Narrator", "GPT-3.5 Turbo v0125", "CRF"]
     else:
-        gpt_3_5_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_individual_backlog_average.csv"
-        gpt_3_5_v0613_2023_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_individual_backlog_average.csv"
-        gpt_3_5_v0613_2024_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_individual_backlog_average.csv"
-        gpt_4_turbo_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_individual_backlog_average.csv"
-        gpt_4_v0613_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_individual_backlog_average.csv"
+        gpt_3_5_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_3_5_v0125\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_individual_backlog_average.csv"
+        gpt_3_5_v0613_2023_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_3_5_v0613_2023\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_individual_backlog_average.csv"
+        gpt_3_5_v0613_2024_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_3_5_v0613_2024\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_individual_backlog_average.csv"
+        gpt_4_turbo_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_4_turbo_v0125\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_individual_backlog_average.csv"
+        gpt_4_v0613_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_individual_backlog_average.csv"
         
-        # gpt_3_5_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
-        # gpt_3_5_v0613_2023_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_categories_average.csv"
-        # gpt_3_5_v0613_2024_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_categories_average.csv"
-        # gpt_4_turbo_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_categories_average.csv"
-        # gpt_4_v0613_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_categories_average.csv"
+        # gpt_3_5_v0125_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_3_5_v0125\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
+        # gpt_3_5_v0613_2023_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_3_5_v0613_2023\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_categories_average.csv"
+        # gpt_3_5_v0613_2024_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_3_5_v0613_2024\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_categories_average.csv"
+        # gpt_4_turbo_v0125_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_4_turbo_v0125\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_categories_average.csv"
+        # gpt_4_v0613_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_categories_average.csv"
        
-        gpt_3_5_v0125_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_global_average.csv"
-        gpt_3_5_v0613_2023_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_global_average.csv"
-        gpt_3_5_v0613_2024_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_global_average.csv"
-        gpt_4_turbo_v0125_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_global_average.csv"
-        gpt_4_v0613_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_global_average.csv"
+        gpt_3_5_v0125_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_3_5_v0125\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_global_average.csv"
+        gpt_3_5_v0613_2023_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_3_5_v0613_2023\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_global_average.csv"
+        gpt_3_5_v0613_2024_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_3_5_v0613_2024\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_global_average.csv"
+        gpt_4_turbo_v0125_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_4_turbo_v0125\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_global_average.csv"
+        gpt_4_v0613_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_global_average.csv"
 
         bklg_file_list = [gpt_3_5_v0125_bklg, gpt_3_5_v0613_2023_bklg, gpt_3_5_v0613_2024_bklg, gpt_4_turbo_v0125_bklg, gpt_4_v0613_bklg]
         # cat_file_list = [gpt_3_5_v0125_cat, gpt_3_5_v0613_2023_cat, gpt_3_5_v0613_2024_cat, gpt_4_turbo_v0125_cat, gpt_4_v0613_cat]
@@ -177,24 +177,25 @@ def organize_data(data, nlps):
     for i in range(27):
         nlps_average = []
         nlps_sd = []
+        labels = []
 
         for j in range(len(nlps)):
             nlp_data = data[j]
 
             average, sd, label = nlp_data
 
-            nlps_average.append(average[i])
-            nlps_sd.append(sd[i])
+            nlps_average.append(float(average[i]))
+            nlps_sd.append(float(sd[i]))
+            labels.append(label[i])
         
         row = nlps_average + nlps_sd
+        nlp_labels.append(labels)
         table.append(row)
 
-    nlp_labels =[]
+    
     average_label = []
     sd_label = []
-
     for nlp in nlps:
-        nlp_labels.append(nlp[2])
         average_label.append(nlp)
         sd_label.append(nlp + " SD")
 
@@ -208,16 +209,19 @@ def organize_data(data, nlps):
 
         formattedData = pd.DataFrame([table[i+2],table[i+5],table[i+8]] , columns= column_label, index= ["Persona", "Entity", "Action"])
 
-        for label in nlp_labels:
-            if label[i] != "Strict Comparison":
-                isStrict = False
-            if label[i] != "Inclusion Comparison":
-                isInclusion = False
-            if label[i] != "Relaxed Comparison":
-                isRelaxed = False
+        interestedLabels = [nlp_labels[i+2], nlp_labels[i+5], nlp_labels[i+8]]
+
+        for labelRow in interestedLabels:
+            for label in labelRow:
+                if label != "Strict Comparison":
+                    isStrict = False
+                if label != "Inclusion Comparison":
+                    isInclusion = False
+                if label != "Relaxed Comparison":
+                    isRelaxed = False
 
         # Only one can be true
-        if (isStrict and isInclusion) or (isStrict and isRelaxed) or (isInclusion or isRelaxed):
+        if (isStrict and isInclusion) or (isStrict and isRelaxed) or (isInclusion and isRelaxed):
             sys.tracebacklimit = 0
             raise Exception ("Invalid data matching across files. Ensure that the comparison mode matches across each file")
 
