@@ -255,23 +255,23 @@ def save_results(intersect_stories, duplicates, left_out_raw_data, left_out_visu
         for left_out_story in left_out_visual_narrator:
             file.write(left_out_story + "\n")
 
-        file.write("\nLeft Over Stories ChatGPT:\n")
+        file.write("\nLeft Over Stories GPT 3.5 v0125:\n")
         for left_out_story in left_out_gpt_3_5_v0125:
             file.write(left_out_story + "\n")
 
-        file.write("\nLeft Over Stories ChatGPT:\n")
+        file.write("\nLeft Over Stories GPT 3.5 v0613 2023:\n")
         for left_out_story in left_out_gpt_3_5_v0613_2023:
             file.write(left_out_story + "\n")
 
-        file.write("\nLeft Over Stories ChatGPT:\n")
+        file.write("\nLeft Over Stories GPT 3.5 v0613 2024:\n")
         for left_out_story in left_out_gpt_3_5_v0613_2024:
             file.write(left_out_story + "\n")
 
-        file.write("\nLeft Over Stories ChatGPT:\n")
+        file.write("\nLeft Over Stories GPT 4 turbo v0125:\n")
         for left_out_story in left_out_gpt_4_turbo_v0125:
             file.write(left_out_story + "\n")
 
-        file.write("\nLeft Over Stories ChatGPT:\n")
+        file.write("\nLeft Over Stories GPT 4 v0613:\n")
         for left_out_story in left_out_gpt_4_v0613:
             file.write(left_out_story + "\n")
     
