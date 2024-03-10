@@ -7,7 +7,7 @@ import subprocess
 
 def main():
     backlogFolder, savingPath, nlp = command()
-    createGlobalFile(backlogFolder, savingPath, nlp)
+    createGlobalFileJSON(backlogFolder, savingPath, nlp)
 
 
 def command():
@@ -20,12 +20,11 @@ def command():
     
     return args.load_individal_backlog_folder, args.saving_path, args.nlp
 
-def createGlobalFile(backlogFolder, savingPath, nlp):
+def createGlobalFileJSON(backlogFolder, savingPath, nlp):
     # Merge all the files in the backlog folder into one
 
     folder = os.listdir(backlogFolder)
     savingName = savingPath + "/" + "global_" + nlp + ".json"
-
 
     # Copy over the first file contents to the global file
     file = open(backlogFolder + "/" + folder[0])
@@ -34,8 +33,6 @@ def createGlobalFile(backlogFolder, savingPath, nlp):
     with open(savingName,"w", encoding="utf-8") as file:
         json.dump(initialData, file, indent = 4)
     
-
-
     # Iterative merge the rest of the file contents the global file
     if len(folder) >= 2:
         for fileName in folder[1:]:

@@ -64,9 +64,11 @@ def command():
     
     args = parser.parse_args()
 
-    if not(args.load_raw_data_path.endswith(".txt")) or not(args.load_ecmfa_vn_path.endswith(".json")) or not(args.load_visual_narrator_path.endswith(".txt"))or not(args.load_chatgpt_path.endswith(".txt")):
+    if not(args.load_raw_data_path.endswith(".txt")) or not(args.load_visual_narrator_path.endswith(".txt")) or not(args.load_gpt_3_5_v0125_path.endswith(".txt")
+        or not(args.load_gpt_3_5_v0613_2023_path.endswith(".txt")) or not(args.load_gpt_3_5_v0613_2024_path.endswith(".txt")) or not(args.load_gpt_4_turbo_v0125_path.endswith(".txt"))
+        or not(args.load_gpt_4_v0613_path.endswith(".txt"))):
         sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. input file type is .txt for raw data and visual narrator and .json for ecmfa_vn and ChatGPT")
+        raise Exception ("Incorrect input file type.")
 
     try:
         load_file = open(args.load_raw_data_path)
@@ -191,7 +193,7 @@ def find_intersection(raw_data, visual_narrator, gpt_3_5_v0125, gpt_3_5_v0613_20
     fifth_intersection = forth_intersection.intersection(set(gpt_4_turbo_v0125))
     intersect_stories = fifth_intersection.intersection(set(gpt_4_v0613))
 
-    return intersect_stories
+    return list(intersect_stories)
 
 def left_out_stories(intersect_stories, dataset):
     '''
