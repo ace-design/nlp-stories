@@ -6,15 +6,18 @@ import pandas as pd
 import sys
 
 def main():
-    visual_narrator_path, chatgpt_path, crf_path, saving_path, comparison_type, title_name = command()
-    visual_narrator_data= extract_data(visual_narrator_path)
-    chatgpt_data= extract_data(chatgpt_path)
+    nlp_paths, nlps, saving_path, comparison_type, title_name = command()
 
-    precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data( visual_narrator_data, chatgpt_data, crf_path)
+    nlp_data = []
+    for nlp_path in nlp_paths:
+        data = extract_data(nlp_path)
+        nlp_data.append(data)
 
-    create_final_bargraph(precision_formatted_data, "Precision Average" + title_name + " " + comparison_type, saving_path + "_precison_compare_average.png", crf_path)
-    create_final_bargraph(recall_formatted_data, "Recall Average" + title_name + " " + comparison_type, saving_path + "_recall_compare_average.png", crf_path)
-    create_final_bargraph(f_measure_formatted_data, "F-Measure Average" + title_name + " " + comparison_type, saving_path + "_f_measure_compare_average.png", crf_path)
+    precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(data, nlps)
+
+    create_final_bargraph(nlps, precision_formatted_data, "Precision Average" + title_name + " " + comparison_type, saving_path + "_precison_compare_average.png")
+    create_final_bargraph(nlps, recall_formatted_data, "Recall Average" + title_name + " " + comparison_type, saving_path + "_recall_compare_average.png")
+    create_final_bargraph(nlps, f_measure_formatted_data, "F-Measure Average" + title_name + " " + comparison_type, saving_path + "_f_measure_compare_average.png")
 
     print("Graphs are saved")
 
@@ -26,7 +29,7 @@ def command():
     args.load_visual_narrator_path (str): Path to the visual narrator data csv file to be loaded
     args.load_chatgpt_path (str): Path to the ChatGPT data csv file to be loaded
     args.load_crf_path (str): Path to the crf data csv file to be loaded, it is NONE if it is not given
-    args.save_file_name (str): name of the file to be saved
+    args.evalationType (str): Type of data scope used 
 
     Raises:
     FileNotFoundError: raises excpetion
@@ -35,43 +38,62 @@ def command():
     wrong file order: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will output a visulation of the average final results")
-    parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
-    parser.add_argument("load_chatgpt_path", type = str, help = "path of ChatGPT csv file")
+    parser.add_argument("--load_gpt_3_5_v0125_path", type = str, help = "path of GPT-3.5 V0125 csv file")
+    parser.add_argument("--load_gpt_3_5_v0613_2023_path", type = str, help = "path of GPT-3.5 V0613 2023 csv file")
+    parser.add_argument("--load_gpt_3_5_v0613_2024_path", type = str, help = "path of GPT-3.5 V0613 2024 csv file")
+    parser.add_argument("--load_gpt_4_turbo_v0125_path", type = str, help = "path of GPT-4 Turbo V0125 csv file") 
+    parser.add_argument("--load_gpt_4_v0613_path", type = str, help = "path of GPT-4 Turbo V0613 csv file") 
+    parser.add_argument("--load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
     parser.add_argument("--load_crf_path", nargs="?", type = str, help = "path of crf csv file")
-    parser.add_argument("save_file_name", type = str, help = "name of file to save")
+    parser.add_argument("evalationType", type = str, choices=["all", "primary"], help = "type of data scope used [all, primary]")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
 
     args = parser.parse_args()
 
-    if  not(args.load_visual_narrator_path.endswith(".csv")) or not(args.load_chatgpt_path.endswith(".csv")) or (args.load_crf_path != None and not(args.load_crf_path.endswith(".csv"))):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. Save file type is .csv")
+    paths = [args.load_gpt_3_5_v0125_path, args.load_gpt_3_5_v0613_2023_path, args.load_gpt_3_5_v0613_2024_path, args.load_gpt_4_turbo_v0125_path, 
+            args.load_gpt_4_v0613_path, args.load_visual_narrator_path, args.load_crf_path]
+    nlpList = ["GPT-3.5 Turbo v0125", "GPT-3.5 v0613 2023", "GPT-3.5 v0613 2024", "GPT-4 Turbo v0125", "GPT-4 Turbo v0613", "Visual Narrator", "CRF"]
+    
+    # Remove nlp paths that are not specfied
+    nlp_paths = []
+    nlps = []
+    for i in range(len(paths)):
+        path = paths[i]
+        nlp = nlpList[i]
 
-    if "strict" in args.load_visual_narrator_path and "strict" in args.load_chatgpt_path:
-        comparison_type = "Strict Comparison"
-        saving_name = "strict_" + args.save_file_name
-    elif"inclusion" in args.load_visual_narrator_path and "inclusion" in args.load_chatgpt_path:
-        comparison_type = 'Inclusion Comparison'
-        saving_name = "inclusion_" + args.save_file_name
-    elif "relaxed" in args.load_visual_narrator_path and "relaxed" in args.load_chatgpt_path:
-        comparison_type = "Relaxed Comparison"
-        saving_name = "relaxed_" + args.save_file_name
-    else:
+        if path != None:
+            if not(args.path.endswith(".csv")):
+                sys.tracebacklimit = 0
+                raise Exception ("Incorrect input file type. File type is .csv")
+            nlp_paths.append(path)
+            nlps.append(nlp)
+
+    # Find the comparison type
+    comparisons = ["strict", "inclusion", "relaxed"]
+    comparison_type = ""
+
+    for comparison in comparisons:
+        validComparison = True
+        for path in nlp_paths:
+            if not(comparison in path):
+                validComparison = False
+                break
+        
+        if validComparison:
+            comparison_type = title(comparisons) + " Comparison"
+            saving_name = comparison + "_" + args.evalationType
+            break
+
+    if comparison_type == "":
         sys.tracebacklimit = 0 
         raise Exception("Incompatible combination. All files must be evaluated by same comparison mode")
 
-    if not("visual_narrator" in args.load_visual_narrator_path) or not("chatgpt" in args.load_chatgpt_path):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect order of input file. First file is visual narrator, and then chatgpt")
-
     try:
-        load_file = open(args.load_visual_narrator_path)
-        load_file.close()
-        load_file = open(args.load_chatgpt_path)
-        load_file.close()
-        if args.load_crf_path != None:
-            load_file = open(args.load_crf_path)
+        for path in nlp_paths:
+            load_file = open(path)
             load_file.close()
+
+        if args.load_crf_path != None:
             crf_path = "benchmark_with_crf\\"
         else:
             crf_path = "benchmark_without_crf\\"
@@ -85,7 +107,7 @@ def command():
 
         save_file_path = "final_results\\comparing_nlps_results\\average_results\\" + crf_path + data_type_folder + "\\" + comparison_type.lower().replace(" ", "_") + "\\" + saving_name
 
-        if args.save_file_name != "primary":
+        if args.evalationType != "primary":
             title = ""
         else:
             title = " Primary Results"
@@ -95,7 +117,7 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        return  args.load_visual_narrator_path, args.load_chatgpt_path, args.load_crf_path, save_file_path, comparison_type, title
+        return  nlp_paths, nlps, save_file_path, comparison_type, title
 
 def extract_data(path):
     '''
@@ -117,50 +139,60 @@ def extract_data(path):
 
     return data
 
-def format_data(visual_narrator_data, chatgpt_data, crf_path):
+def format_data(data, nlps):
     '''
     formats the data so that it can be easily plotted onto the graphs
 
     Parameters:
-    visual_narrator_data(2D list): the final data results from visual narrator nlp
-    crf_path (str): path to csv file, it is NONE if it was not given at the command line
+    data(3D list): the final data results for each nlp
 
     Returns:
     formatted_data (list): contains the formatted data to plot for persona, entity, action's precision, recall, f_measure
     '''
-    visual_narrator_average, visual_narrator_sd = visual_narrator_data
-    chatgpt_average, chatgpt_sd = chatgpt_data
 
-    row_data = []
+    table = []
+    for i in range(9):
+        nlps_average = []
+        nlps_sd = []
 
-    if crf_path == None:
-        for i in range(9):
-            row_data.append([visual_narrator_average[i], chatgpt_average[i], visual_narrator_sd[i], chatgpt_sd[i]])
+        for nlp_data in data:
+            average, sd = nlp_data[i]
 
-        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "VN SD", "GPT3.5-Turbo SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
-    else:
-        crf_data = extract_data(crf_path)
-        crf_average, crf_sd = crf_data
+            nlps_average.append(average)
+            nlps_sd.append(sd)
 
-        for i in range(9):
-            row_data.append([visual_narrator_average[i], chatgpt_average[i], crf_average[i], visual_narrator_sd[i], chatgpt_sd[i], crf_sd[i]])
+        row = nlps_average + nlps_sd
+        table.append(row)
 
-        precision_data = pd.DataFrame([row_data[0],row_data[3],row_data[6]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF", "VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona Precision", "Entity Precision", "Action Precision"])
-        recall_data = pd.DataFrame([row_data[1],row_data[4],row_data[7]] , columns= ["Visual Narrator", "GPT3.5-Turbo", "CRF","VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona Recall", "Entity Recall", "Action Recall"])
-        f_measure_data = pd.DataFrame([row_data[2],row_data[5],row_data[8]] , columns= [ "Visual Narrator", "GPT3.5-Turbo", "CRF", "VN SD", "GPT3.5-Turbo SD", "CRF SD"], index= ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"])
+    
+    precision_label = ["Persona Precision", "Entity Precision", "Action Precision"]
+    recall_label = ["Persona Recall", "Entity Recall", "Action Recall"]
+    f_measure_label = ["Persona F-Measure", "Entity F-Measure", "Action F-Measure"]
+
+    averageLabel = []
+    sdLabel = []
+    for nlp in nlps:
+        averageLabel.append(nlp)
+        sdLabel.append(nlp + " SD")
+
+    columnLabel = averageLabel + sdLabel
+
+    precision_data = pd.DataFrame([table[0],table[3],table[6]] , columns= columnLabel, index= precision_label)
+    recall_data = pd.DataFrame([table[1],table[4],table[7]] , columns= columnLabel, index= recall_label)
+    f_measure_data = pd.DataFrame([table[2],table[5],table[8]] , columns= columnLabel, index= f_measure_label)
 
     return precision_data, recall_data, f_measure_data
 
-def create_final_bargraph(data, title, saving_path, crf_path):
+def create_final_bargraph(nlps, data, title, saving_path):
 
-    if crf_path == None:
-        yerr = fix_max_y_error(data[["VN SD", "GPT3.5-Turbo SD"]], data[["Visual Narrator", "GPT3.5-Turbo"]])
-        data[["Visual Narrator", "GPT3.5-Turbo"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1)])
-    else:
-        yerr = fix_max_y_error(data[["VN SD", "GPT3.5-Turbo SD", "CRF SD"]], data[["Visual Narrator", "GPT3.5-Turbo", "CRF"]])
-        data[["Visual Narrator", "GPT3.5-Turbo", "CRF"]].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = [plt.cm.Pastel1(0), plt.cm.Pastel1(1), plt.cm.Pastel1(2)])
+    sd_label = []
+    colors = []
+    for i in range(len(nlps)):
+        sd_label.append(nlps[i] + " SD")
+        colors.append(plt.cm.Pastel1(i))
+
+    yerr = fix_max_y_error(data[sd_label], data[nlps])
+    data[nlps].plot(kind='bar', yerr=yerr, error_kw=dict(lw = 3, capthick = 2, capsize = 7, ecolor='k'), figsize=(15,7), color = colors)
     
     plt.title(title,fontsize= 20)
     plt.ylabel("Average Score",fontsize=14)

@@ -6,19 +6,21 @@ import seaborn as sns
 import sys
 
 def main():
-    visual_narrator_path, chatgpt_path, crf_path, saving_path, comparison_type, number_dataset, title_name = command()
+    nlp_paths, nlps, saving_path, comparison_type, number_dataset, title_name = command()
     datasets_label = get_datasets_labels(comparison_type)
 
-    visual_narrator_data = extract_data(visual_narrator_path, number_dataset)
-    chatgpt_data = extract_data(chatgpt_path, number_dataset)
+    nlp_data = []
+    for nlp_path in nlp_paths:
+        data = extract_data(nlp_path, number_dataset)
+        nlp_data.append(data)
 
-    formatted_data = format_data(datasets_label, number_dataset, visual_narrator_data, chatgpt_data, crf_path)
+    formatted_data = format_data(datasets_label, number_dataset, nlp_data, nlps)
 
     persona_precision, persona_recall, persona_f_measure,entity_precision, entity_recall, entity_f_measure, action_precision, action_recall, action_f_measure = formatted_data
 
-    create_final_bargraph(persona_precision,persona_recall, persona_f_measure, "Persona" + title_name + " " + comparison_type, saving_path + "_persona_nlp_compare.png", crf_path)
-    create_final_bargraph(entity_precision,entity_recall, entity_f_measure, "Entity" + title_name + " " + comparison_type, saving_path + "_entity_nlp_compare.png", crf_path)
-    create_final_bargraph(action_precision,action_recall, action_f_measure, "Action" + title_name + " " +  comparison_type, saving_path + "_action_nlp_compare.png", crf_path)
+    create_final_bargraph(nlps, persona_precision,persona_recall, persona_f_measure, "Persona" + title_name + " " + comparison_type, saving_path + "_persona_nlp_compare.png")
+    create_final_bargraph(nlps, entity_precision,entity_recall, entity_f_measure, "Entity" + title_name + " " + comparison_type, saving_path + "_entity_nlp_compare.png")
+    create_final_bargraph(nlps, action_precision,action_recall, action_f_measure, "Action" + title_name + " " +  comparison_type, saving_path + "_action_nlp_compare.png")
 
     print("Graphs are saved")
 
@@ -27,10 +29,7 @@ def command():
     Runs the command line inputs
 
     Returns:
-    args.load_visual_narrator_path (str): Path to the visual narrator data csv file to be loaded
-    args.load_chatgpt_path (str): Path to the chatgpt data csv file to be loaded 
-    args.load_crf_path (str): Path to the crf data csv file to be loaded, it is NONE if it is not given
-    args.save_file_name (str): name of the file to be saved
+    args.evalationType (str): type of data scope used
 
     Raises:
     FileNotFoundError: raises excpetion
@@ -39,44 +38,63 @@ def command():
     wrong file order: raises exception
     '''
     parser = argparse.ArgumentParser(description = "This program will compare all the nlp results and output visulations of the results")
-    parser.add_argument("load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
-    parser.add_argument("load_chatgpt_path", type = str, help = "path of ChatGPT csv file")
+    parser.add_argument("--load_gpt_3_5_v0125_path", type = str, help = "path of GPT-3.5 V0125 csv file")
+    parser.add_argument("--load_gpt_3_5_v0613_2023_path", type = str, help = "path of GPT-3.5 V0613 2023 csv file")
+    parser.add_argument("--load_gpt_3_5_v0613_2024_path", type = str, help = "path of GPT-3.5 V0613 2024 csv file")
+    parser.add_argument("--load_gpt_4_turbo_v0125_path", type = str, help = "path of GPT-4 Turbo V0125 csv file") 
+    parser.add_argument("--load_gpt_4_v0613_path", type = str, help = "path of GPT-4 Turbo V0613 csv file") 
+    parser.add_argument("--load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
     parser.add_argument("--load_crf_path", nargs="?", type = str, help = "path of crf csv file")
-    parser.add_argument("save_file_name", type = str, help = "name of file to save")
+    parser.add_argument("evalationType", type = str, choices=["all", "primary"] help = "Type of data scope used [all, primary]")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
 
     
     args = parser.parse_args()
 
-    if not(args.load_visual_narrator_path.endswith(".csv")) or not(args.load_chatgpt_path.endswith(".csv")) or (args.load_crf_path != None and not(args.load_crf_path.endswith(".csv"))):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect input file type. File type is .csv")
+    paths = [args.load_gpt_3_5_v0125_path, args.load_gpt_3_5_v0613_2023_path, args.load_gpt_3_5_v0613_2024_path, args.load_gpt_4_turbo_v0125_path, 
+            args.load_gpt_4_v0613_path, args.load_visual_narrator_path, args.load_crf_path]
+    nlpList = ["GPT-3.5 Turbo v0125", "GPT-3.5 v0613 2023", "GPT-3.5 v0613 2024", "GPT-4 Turbo v0125", "GPT-4 Turbo v0613", "Visual Narrator", "CRF"]
+    
+    # Remove nlp paths that are not specfied
+    nlp_paths = []
+    nlps = []
+    for i in range(len(paths)):
+        path = paths[i]
+        nlp = nlpList[i]
 
-    if  "strict" in args.load_visual_narrator_path and "strict" in args.load_chatgpt_path:
-        comparison_type = "Strict Comparison"
-        saving_name = "strict_" + args.save_file_name
-    elif "inclusion" in args.load_visual_narrator_path and "inclusion" in args.load_chatgpt_path:
-        comparison_type = 'Inclusion Comparison'
-        saving_name = "inclusion_" + args.save_file_name
-    elif "relaxed" in args.load_visual_narrator_path and "relaxed" in args.load_chatgpt_path:
-        comparison_type = "Relaxed Comparison"
-        saving_name = "relaxed_" + args.save_file_name
-    else:
+        if path != None:
+            if not(args.path.endswith(".csv")):
+                sys.tracebacklimit = 0
+                raise Exception ("Incorrect input file type. File type is .csv")
+            nlp_paths.append(path)
+            nlps.append(nlp)
+
+    # Find the comparison type
+    comparisons = ["strict", "inclusion", "relaxed"]
+    comparison_type = ""
+
+    for comparison in comparisons:
+        validComparison = True
+        for path in nlp_paths:
+            if not(comparison in path):
+                validComparison = False
+                break
+        
+        if validComparison:
+            comparison_type = title(comparisons) + " Comparison"
+            saving_name = comparison + "_" + args.evalationType
+            break
+
+    if comparison_type == "":
         sys.tracebacklimit = 0 
         raise Exception("Incompatible combination. All files must be evaluated by same comparison mode")
 
-    if not("visual_narrator" in args.load_visual_narrator_path) or not("chatgpt" in args.load_chatgpt_path):
-        sys.tracebacklimit = 0
-        raise Exception ("Incorrect order of input file. First file is visual narrator, then chatgpt")
-
     try:
-        load_file = open(args.load_visual_narrator_path)
-        load_file.close()
-        load_file = open(args.load_chatgpt_path)
-        load_file.close()
-        if args.load_crf_path != None:
-            load_file = open(args.load_crf_path)
+        for path in nlp_paths:
+            load_file = open(path)
             load_file.close()
+
+        if args.load_crf_path != None:
             crf_path = "benchmark_with_crf\\"
         else:
             crf_path = "benchmark_without_crf\\"
@@ -91,7 +109,7 @@ def command():
         
         save_file_path = "final_results\\comparing_nlps_results\\total_results\\" + crf_path + data_type_folder + "\\" + comparison_type.lower().replace(" ", "_") + "\\" + saving_name
 
-        if args.save_file_name != "primary":
+        if args.evalationType != "primary":
             title = ""
         else:
             title = " Primary Results"
@@ -101,10 +119,10 @@ def command():
         print("File or directory does not exist")
         raise
     else:
-        data = pd.read_csv(args.load_visual_narrator_path)
+        data = pd.read_csv(nlp_paths[0])
         number_dataset = len(data)
 
-        return  args.load_visual_narrator_path, args.load_chatgpt_path ,args.load_crf_path, save_file_path, comparison_type, number_dataset, title
+        return  nlp_paths, nlps, save_file_path, comparison_type, number_dataset, title
 
 def extract_data (path, number_dataset):
     '''
@@ -164,41 +182,37 @@ def get_datasets_labels(comparison_type):
 
     return datasets_label
 
-def format_data(datasets_label, number_dataset, visual_narrator_data, chatgpt_data, crf_path):
+def format_data(datasets_label, number_dataset, nlp_data, nlps):
     '''
     formats the data so that it can be easily plotted onto the graphs
 
     Parameters:
     datasets_label (list): all the datsets that are in the csv files
     number_dataset (int): the number of datsets in the csv files
-    visual_narrator_data(2D list): the final data results from visual narrator nlp
-    chatgpt_data(2D list): the final data results from ChatGPT nlp
-    crf_path (str): path to crf csv files or is NONE if not given 
+    nlp_data(3D list): the final data results from each nlp
+    nlps (1D list): string list of nlp names corresponding to nlp_data
 
     Returns:
     formatted_data (list): contains the formatted data to plot for persona, entity, action's precision, recall, f_measure
     '''
     formatted_data = []
 
-    if crf_path == None:
-        for i in range(9):
-            rounded_visual_narrator = round_data(visual_narrator_data[i].values.tolist())
-            rounded_chatgpt = round_data(chatgpt_data[i].values.tolist())
+    for i in range(9):
+        rounded_data_list = []
+        nlp_list = []
 
-            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 2,
-                                "Data":  rounded_visual_narrator + rounded_chatgpt,
-                                "nlp":  ["Visual Narrator"]*number_dataset + ["GPT3.5-Turbo"]*number_dataset}))
-    else:
-        crf_data = extract_data(crf_path, number_dataset)
+        for j in range(len(nlp_data)):
+            data = nlp_data[j]
+            nlp = nlps[j]
 
-        for i in range(9):
-            rounded_visual_narrator = round_data(visual_narrator_data[i].values.tolist())
-            rounded_chatgpt = round_data(chatgpt_data[i].values.tolist())
-            rounded_crf = round_data(crf_data[i].values.tolist())
+            rounded_data = round_data(data[i].values.tolist())
 
-            formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 3,
-                                "Data": rounded_visual_narrator + rounded_chatgpt + rounded_crf,
-                                "nlp": ["Visual Narrator"]*number_dataset + ["GPT3.5-Turbo"]*number_dataset + ["CRF"] * number_dataset}))
+            rounded_data_list.append(rounded_data)
+            nlp_list = nlp_list + [nlp]*number_dataset
+
+        formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 2,
+                            "Data":  rounded_data_list,
+                            "nlp":  nlp_list}))
 
     return formatted_data
 
@@ -219,14 +233,14 @@ def round_data(data):
 
     return rounded
 
-def create_final_bargraph(precision_results,recall_results, f_measure_results, title, save_path, crf_path):
+def create_final_bargraph(nlps, precision_results,recall_results, f_measure_results, title, save_path):
     
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
-    if crf_path == None:
-        palette ={"Visual Narrator": plt.cm.Pastel1(0), "GPT3.5-Turbo": plt.cm.Pastel1(1)}
-    else:
-        palette ={"Visual Narrator": plt.cm.Pastel1(0), "GPT3.5-Turbo": plt.cm.Pastel1(1), "CRF": plt.cm.Pastel1(2)}
+    palette = {}
+    for i in range(len(nlps)):
+        nlp = nlps[i]
+        palette[nlp] = plt.cm.Pastel1(i)
 
     precision = sns.barplot(x= "Dataset", y= "Data", hue = "nlp",data = precision_results, ax = precision_plot, palette = palette, ci = None)
     precision.set(xlabel=None)

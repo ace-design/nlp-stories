@@ -6,18 +6,18 @@ import subprocess
 
 def main():
     grouping_code, with_crf = command()
-    data_group_names, datasets, grouping, crf_path, is_crf, crf_string, nlp, nlp_code = get_info(grouping_code, with_crf)
+    data_group_names, datasets, grouping, crf_path, is_crf, crf_string, nlps, nlp_code = get_info(grouping_code, with_crf)
     types = ["all", "primary"]
     comparison_mode = ["strict", "inclusion", "relaxed"]
 
-    for i in range(len(nlp)):
-        run_compare_nlp(nlp[i], nlp_code[i], datasets, grouping, grouping_code, crf_path, is_crf)
+    for i in range(len(nlps)):
+        run_compare_nlp(nlps[i], nlp_code[i], datasets, grouping, grouping_code, crf_path, is_crf)
         reset_nlp_dataset_names_list(data_group_names)
         run_compare_individual_nlp_total_results(comparison_mode, nlp_code[i], grouping_code, is_crf)
 
-    run_compare_nlps_total_results(types, comparison_mode, grouping, grouping_code, crf_string)
-    run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_code, crf_string)
-    for nlp_tool in nlp:
+    run_compare_nlps_total_results(nlps, types, comparison_mode, grouping, grouping_code, crf_string)
+    run_compare_nlps_average_results(nlps, types, comparison_mode, grouping, grouping_code, crf_string)
+    for nlp_tool in nlps:
         combine_average_results_data(nlp_tool, types, grouping, crf_string)
     
 def command():
@@ -70,14 +70,14 @@ def get_info(grouping_code, with_crf):
         crf_path = "nlp_outputs_intersecting_crf"
         is_crf = "--with_crf"
         crf_string = "with_crf"
-        nlp = ["crf", "visual_narrator", "chatgpt"]
-        nlp_code = ["CRF", "VN", "CHATGPT"]
+        nlp = ["crf", "visual_narrator", "gpt_3_5_v0125", "gpt_3_5_v0613_2023", "gpt_3_5_v0613_2024", "gpt_4_turbo_v0125", "gpt_4_v0613"]
+        nlp_code = ["CRF", "VN", "GPT_3_5_V0125", "GPT_3_5_V0613_2023", "GPT_3_5_V0613_2024", "GPT_4_TURBO_V0125", "GPT_4_V0613"]
     else:
         crf_path = "nlp_outputs_intersecting"
         is_crf = ""
         crf_string = "without_crf"
-        nlp = [ "visual_narrator", "chatgpt"]
-        nlp_code = [ "VN", "CHATGPT"]
+        nlp = ["gpt_3_5_v0125", "gpt_3_5_v0613_2023", "gpt_3_5_v0613_2024", "gpt_4_turbo_v0125", "gpt_4_v0613"]
+        nlp_code = [ "GPT_3_5_V0125", "GPT_3_5_V0613_2023", "GPT_3_5_V0613_2024", "GPT_4_TURBO_V0125", "GPT_4_V0613"]
 
     return data_group_names, datasets, grouping, crf_path, is_crf, crf_string, nlp, nlp_code
 
@@ -112,45 +112,37 @@ def run_compare_individual_nlp_total_results(comparison_mode, nlp_code, grouping
             "compare\\nlp_dataset_csv_results\\all_csv_results\\" + comparison + "_dataset_results.csv  " + nlp_code + " " + grouping_code + " " + is_crf 
         subprocess.run(line)
 
-def run_compare_nlps_total_results(types, comparison_mode, grouping, grouping_code, crf_path):
+def run_compare_nlps_total_results(nlps, types, comparison_mode, grouping, grouping_code, crf_path):
     '''Runs the compare_nlps_total_results.py script '''
 
     print("Starting nlps' total results comparison")
 
     for type in types:
         for comparison in comparison_mode:
-            if crf_path == "with_crf":
-                line = "python .\compare\compare_nlps_total_results.py " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\dataset_csv_input_visual_narrator\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\dataset_csv_input_chatgpt\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
-                "--load_crf_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\crf\\dataset_csv_input_crf\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
-                type + " " + grouping_code
-            else:
-                line = "python .\compare\compare_nlps_total_results.py "+\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\dataset_csv_input_visual_narrator\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\dataset_csv_input_chatgpt\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv " +\
-                 type + " " + grouping_code
-            subprocess.run(line)
+            pathing = ""
+            for nlp in nlps:
+                pathing += "--load_" + nlp +  "_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + \
+                            nlp + "\\dataset_csv_input_" + nlp + "\\" + type + "_csv_results\\" + comparison + "_comparison_dataset_results.csv "
 
-def run_compare_nlps_average_results(types, comparison_mode, grouping, grouping_code, crf_path):
+            commandLine = "python .\compare\compare_nlps_total_results.py " + pathing + type + " " + grouping_code
+                
+            subprocess.run(commandLine)
+
+def run_compare_nlps_average_results(nlps, types, comparison_mode, grouping, grouping_code, crf_path):
     '''Runs the compare_nlps_average_results.py script'''
 
     print("Starting nlps' average results comparison")
 
     for type in types:
         for comparison in comparison_mode:
-            if crf_path == "with_crf":
-                line = "python .\compare\compare_nlps_average_results.py "+\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\" + comparison + "_visual_narrator\\" + type + "\\" + type + "_results.csv " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\" + comparison + "_chatgpt\\" + type + "\\" + type + "_results.csv " +\
-                "--load_crf_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\crf\\" + comparison + "_crf\\" + type + "\\" + type + "_results.csv " +\
-                type + " " + grouping_code
-            else:
-                line = "python .\compare\compare_nlps_average_results.py " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\visual_narrator\\" + comparison + "_visual_narrator\\" + type + "\\" + type + "_results.csv " +\
-                "final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\chatgpt\\" + comparison + "_chatgpt\\" + type + "\\" + type + "_results.csv " +\
-                type + " " + grouping_code
-            subprocess.run(line)
+            pathing = ""
+            for nlp in nlps:
+                pathing += "--load_" + nlp +  "_path final_results\\individual_nlp_results\\total_results\\" + crf_path + "\\" + grouping + "\\" + \
+                            nlp + "\\" + comparison + "_" + nlp + "\\" + type + "\\" + type + "_results.csv "
+                    
+            commandLine = "python .\compare\compare_nlps_average_results.py " + pathing + type + " " + grouping_code
+         
+            subprocess.run(commandLine)
 
 def combine_average_results_data(nlp, types, grouping, crf_path):
     '''combine the average final results into csv files so that the final graphs can be made later'''
