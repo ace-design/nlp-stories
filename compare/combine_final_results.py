@@ -9,13 +9,15 @@ import sys
 def main():
     with_crf, primary, save_name, title= command()
 
-    bklg_file_list, cat_file_list, glo_file_list, nlps = identify_files(with_crf, primary)
+    # bklg_file_list, cat_file_list, glo_file_list, nlps = identify_files(with_crf, primary)
+    bklg_file_list, glo_file_list, nlps = identify_files(with_crf, primary)
 
     bklg_data = extract_data(bklg_file_list)
-    cat_data = extract_data(cat_file_list)
+    # cat_data = extract_data(cat_file_list)
     glo_data = extract_data(glo_file_list)
 
-    formatted_data = format_data(bklg_data, cat_data, glo_data, nlps)
+    # formatted_data = format_data(bklg_data, cat_data, glo_data, nlps)
+    formatted_data = format_data(bklg_data, glo_data, nlps)
 
     save_csv_file(formatted_data, save_name)
     create_final_bargraph(formatted_data, nlps, title, save_name)
@@ -79,9 +81,9 @@ def identify_files(with_crf, primary):
         gpt_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_individual_backlog_average.csv"
         crf_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_individual_backlog_average.csv"
         
-        vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
-        gpt_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
-        crf_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_categories_average.csv"
+        # vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
+        # gpt_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
+        # crf_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_categories_average.csv"
         
         vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_global_average.csv"
         gpt_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_global_average.csv"        
@@ -99,11 +101,11 @@ def identify_files(with_crf, primary):
         gpt_4_turbo_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_individual_backlog_average.csv"
         gpt_4_v0613_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_individual_backlog_average.csv"
         
-        gpt_3_5_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
-        gpt_3_5_v0613_2023_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_categories_average.csv"
-        gpt_3_5_v0613_2024_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_categories_average.csv"
-        gpt_4_turbo_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_categories_average.csv"
-        gpt_4_v0613_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_categories_average.csv"
+        # gpt_3_5_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
+        # gpt_3_5_v0613_2023_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_categories_average.csv"
+        # gpt_3_5_v0613_2024_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_3_5_v0613_2024\\" + data_type + "_csv_results\\gpt_3_5_v0613_2024_categories_average.csv"
+        # gpt_4_turbo_v0125_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_turbo_v0125\\" + data_type + "_csv_results\\gpt_4_turbo_v0125_categories_average.csv"
+        # gpt_4_v0613_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_categories_average.csv"
        
         gpt_3_5_v0125_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_global_average.csv"
         gpt_3_5_v0613_2023_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_global_average.csv"
@@ -112,13 +114,14 @@ def identify_files(with_crf, primary):
         gpt_4_v0613_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_global_average.csv"
 
         bklg_file_list = [gpt_3_5_v0125_bklg, gpt_3_5_v0613_2023_bklg, gpt_3_5_v0613_2024_bklg, gpt_4_turbo_v0125_bklg, gpt_4_v0613_bklg]
-        cat_file_list = [gpt_3_5_v0125_cat, gpt_3_5_v0613_2023_cat, gpt_3_5_v0613_2024_cat, gpt_4_turbo_v0125_cat, gpt_4_v0613_cat]
+        # cat_file_list = [gpt_3_5_v0125_cat, gpt_3_5_v0613_2023_cat, gpt_3_5_v0613_2024_cat, gpt_4_turbo_v0125_cat, gpt_4_v0613_cat]
         glo_file_list = [gpt_3_5_v0125_glo, gpt_3_5_v0613_2023_glo, gpt_3_5_v0613_2024_glo, gpt_4_turbo_v0125_glo, gpt_4_v0613_glo]
 
         nlps = ["GPT-3.5 Turbo v0125", "GPT-3.5 v0613 2023", "GPT-3.5 v0613 2024", "GPT-4 Turbo v0125", "GPT-4 Turbo v0613"]
         
 
-    return bklg_file_list, cat_file_list, glo_file_list, nlps
+    # return bklg_file_list, cat_file_list, glo_file_list, nlps
+    return bklg_file_list, glo_file_list, nlps
 
 def extract_data(file_list):
     '''
@@ -144,7 +147,8 @@ def extract_data(file_list):
 
     return data
 
-def format_data(bklg_data, cat_data, glo_data, nlps):
+# def format_data(bklg_data, cat_data, glo_data, nlps):
+def format_data(bklg_data, glo_data, nlps):
     '''
     formats the data so that it can be easily plotted onto the graphs
 
@@ -157,10 +161,11 @@ def format_data(bklg_data, cat_data, glo_data, nlps):
     '''
 
     strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data = organize_data(bklg_data, nlps)
-    strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data(cat_data, nlps)
+    # strict_cat_data, inclusion_cat_data, relaxed_cat_data = organize_data(cat_data, nlps)
     strict_glo_data, inclusion_glo_data, relaxed_glo_data = organize_data(glo_data, nlps)
     
-    formatted_data = [strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data]
+    # formatted_data = [strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data]
+    formatted_data = [strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_glo_data, inclusion_glo_data, relaxed_glo_data]
 
     return formatted_data
 
@@ -236,8 +241,11 @@ def save_csv_file(formatted_data, save_name):
     save_name (str): name of the saving file
     ''' 
     final_data = pd.concat(formatted_data)
-    comparison_mode = (["Strict"] * 3 + ["Inclusion"] * 3 + ["Relaxed"] * 3) * 3
-    data_groupings = ["Individual Backlog"] * 9 + ["Categories"] * 9 + ["Global"] * 9
+    # comparison_mode = (["Strict"] * 3 + ["Inclusion"] * 3 + ["Relaxed"] * 3) * 3
+    # data_groupings = ["Individual Backlog"] * 9 + ["Categories"] * 9 + ["Global"] * 9
+    comparison_mode = (["Strict"] * 3 + ["Inclusion"] * 3 + ["Relaxed"] * 3) * 2
+    data_groupings = ["Individual Backlog"] * 9  + ["Global"] * 9
+
 
     final_data["Comparison Mode"] = comparison_mode
     final_data["Data Groupings"] = data_groupings
@@ -248,7 +256,8 @@ def save_csv_file(formatted_data, save_name):
 
 def create_final_bargraph(formatted_data, nlps, title, save_name):
     
-    strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
+    # strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_cat_data, inclusion_cat_data, relaxed_cat_data,strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
+    strict_bklg_data, inclusion_bklg_data, relaxed_bklg_data, strict_glo_data, inclusion_glo_data, relaxed_glo_data = formatted_data
 
     standard_deviation = []
     palette = []
@@ -257,6 +266,7 @@ def create_final_bargraph(formatted_data, nlps, title, save_name):
         standard_deviation.append(nlp + " SD")
         palette.append(plt.cm.Pastel1(i))
 
+    # graph, position = plt.subplots(3, 3, figsize=(10, 5))
     graph, position = plt.subplots(2, 3, figsize=(10, 5))
 
     #Top Left
