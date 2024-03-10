@@ -7104,6 +7104,114 @@
     },
     {
         "PID": "#G17#",
+        "Text": "#G17# As an app developer, I want to ensure that application creation fails if any of its datasets cannot be created.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "application creation",
+                "datasets"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "app developer",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "application creation",
+                "datasets"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "app",
+                    "developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fails"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "application",
+                        "creation"
+                    ],
+                    [
+                        "datasets"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
         "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
         "Persona": [
             "app developer"
@@ -7745,6 +7853,364 @@
     },
     {
         "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that dataset creation fails if the dataset cannot be enabled for explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset creation",
+                "dataset",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fails"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "creation"
+                    ],
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "explore"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that dataset reconfiguration fails if the corresponding update of the explore table fails.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails",
+                "fails"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset reconfiguration",
+                "corresponding update",
+                "explore table"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [
+            [
+                "explore table",
+                "corresponding update"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fails"
+                    ],
+                    [
+                        "fails"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "reconfiguration"
+                    ],
+                    [
+                        "corresponding",
+                        "update"
+                    ],
+                    [
+                        "explore",
+                        "table"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to ensure that a dataset operation fails if it fails to make its required changes to explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "ensure"
+            ],
+            "Secondary Action": [
+                "fails",
+                "fails to make"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "dataset operation",
+                "required changes",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "fails to make",
+                "required changes"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "ensure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "PART",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fails"
+                    ],
+                    [
+                        "fails",
+                        "to",
+                        "make"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset",
+                        "operation"
+                    ],
+                    [
+                        "required",
+                        "changes"
+                    ],
+                    [
+                        "explore"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
         "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore.",
         "Persona": [
             "user"
@@ -7946,6 +8412,110 @@
                 "Primary Action POS text": [
                     [
                         "enable"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "explore"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "explore"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G17#",
+        "Text": "#G17# As a user, I want to disable explore for a dataset that was configured for explore initially.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "disable"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "explore"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "explore"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "disable"
+            ]
+        ],
+        "Targets": [
+            [
+                "disable",
+                "explore"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "disable"
                     ]
                 ]
             },

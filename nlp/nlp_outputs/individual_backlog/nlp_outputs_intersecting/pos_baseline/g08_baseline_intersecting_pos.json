@@ -3564,6 +3564,285 @@
     },
     {
         "PID": "#G08#",
+        "Text": "#G08# As a Researcher, I want to be able to reference a remote-controlled vocabulary for my dataset, so that I can be sure that column of my dataset are valid against a single shard list of terms.",
+        "Persona": [
+            "Researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "reference"
+            ],
+            "Secondary Action": [
+                "be sure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "remote-controlled vocabulary"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "single shard list of terms",
+                "column",
+                "dataset"
+            ]
+        },
+        "Benefit": "I can be sure that column of my dataset are valid against a single shard list of terms",
+        "Triggers": [
+            [
+                "Researcher",
+                "reference"
+            ]
+        ],
+        "Targets": [
+            [
+                "reference",
+                "remote-controlled vocabulary"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "remote-controlled vocabulary"
+            ],
+            [
+                "dataset",
+                "column"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "reference"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "AUX",
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "be",
+                        "sure"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "PUNCT",
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "remote",
+                        "-",
+                        "controlled",
+                        "vocabulary"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "single",
+                        "shard",
+                        "list",
+                        "of",
+                        "terms"
+                    ],
+                    [
+                        "column"
+                    ],
+                    [
+                        "dataset"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to publish Data Packages to CKAN, so that my data is findable, and I can have a data API.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "publish"
+            ],
+            "Secondary Action": [
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Data Packages"
+            ],
+            "Secondary Entity": [
+                "data",
+                "data API",
+                "CKAN"
+            ]
+        },
+        "Benefit": "my data is findable, and I can have a data API",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "publish"
+            ]
+        ],
+        "Targets": [
+            [
+                "publish",
+                "Data Packages"
+            ],
+            [
+                "have",
+                "data API"
+            ]
+        ],
+        "Contains": [
+            [
+                "CKAN",
+                "Data Packages"
+            ],
+            [
+                "Data Packages",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "ResearcherPublisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "publish"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Data",
+                        "Packages"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "PROPN"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ],
+                    [
+                        "data",
+                        "API"
+                    ],
+                    [
+                        "CKAN"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
         "Text": "#G08# As a Publisher, I want to store my data quickly and easily online.",
         "Persona": [
             "Publisher"
@@ -3651,6 +3930,323 @@
                 ],
                 "Secondary Entity POS text": [
                     []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a publisher, I want to be able to check that every time I update my data it is still good, so that I can catch errors early and store reliable data.",
+        "Persona": [
+            "publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "check"
+            ],
+            "Secondary Action": [
+                "update",
+                "catch",
+                "store"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "errors",
+                "reliable data"
+            ]
+        },
+        "Benefit": "I can catch errors early and store reliable data",
+        "Triggers": [
+            [
+                "publisher",
+                "check"
+            ]
+        ],
+        "Targets": [
+            [
+                "check",
+                "data"
+            ],
+            [
+                "update",
+                "data"
+            ],
+            [
+                "catch",
+                "errors"
+            ],
+            [
+                "store",
+                "reliable data"
+            ]
+        ],
+        "Contains": [
+            [
+                "data",
+                "errors"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "check"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "update"
+                    ],
+                    [
+                        "catch"
+                    ],
+                    [
+                        "store"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "errors"
+                    ],
+                    [
+                        "reliable",
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a DeveloperWrangler, I want to use a command line tool that allows met to validate data, so that I can feel trust in the validity and usefulness of the data quickly and in the context of my command line workflow.",
+        "Persona": [
+            "DeveloperWrangler"
+        ],
+        "Action": {
+            "Primary Action": [
+                "use"
+            ],
+            "Secondary Action": [
+                "validate",
+                "feel"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "command line tool"
+            ],
+            "Secondary Entity": [
+                "data",
+                "trust",
+                "validity",
+                "usefulness",
+                "data",
+                "command line workflow"
+            ]
+        },
+        "Benefit": "I can feel trust in the validity and usefulness of the data quickly and in the context of my command line workflow",
+        "Triggers": [
+            [
+                "DeveloperWrangler",
+                "use"
+            ]
+        ],
+        "Targets": [
+            [
+                "validate",
+                "data"
+            ],
+            [
+                "use",
+                "command line tool"
+            ],
+            [
+                "feel",
+                "trust"
+            ],
+            [
+                "feel",
+                "usefulness"
+            ]
+        ],
+        "Contains": [
+            [
+                "validity",
+                "trust"
+            ],
+            [
+                "command line workflow",
+                "usefulness"
+            ],
+            [
+                "data",
+                "usefulness"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "DeveloperWrangler"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "use"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "validate"
+                    ],
+                    [
+                        "feel"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "command",
+                        "line",
+                        "tool"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ],
+                    [
+                        "trust"
+                    ],
+                    [
+                        "validity"
+                    ],
+                    [
+                        "usefulness"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "command",
+                        "line",
+                        "workflow"
+                    ]
                 ]
             }
         }
@@ -5155,6 +5751,296 @@
                         "data",
                         "analysis",
                         "tools"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to specify the funding that contributed to the creation of a given dataset, so that funding agencies can identify the funding, source for a given dataset.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "specify"
+            ],
+            "Secondary Action": [
+                "identify"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "funding"
+            ],
+            "Secondary Entity": [
+                "creation of a given dataset",
+                "funding agencies",
+                "funding",
+                "given dataset",
+                "source"
+            ]
+        },
+        "Benefit": "funding agencies can identify the funding, source for a given dataset",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "specify"
+            ]
+        ],
+        "Targets": [
+            [
+                "identify",
+                "funding"
+            ],
+            [
+                "identify",
+                "source"
+            ],
+            [
+                "specify",
+                "funding"
+            ]
+        ],
+        "Contains": [
+            [
+                "given dataset",
+                "source"
+            ],
+            [
+                "creation of a given dataset",
+                "funding"
+            ],
+            [
+                "given dataset",
+                "funding"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "ResearcherPublisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "specify"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "identify"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "funding"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "ADP",
+                        "DET",
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "creation",
+                        "of",
+                        "a",
+                        "given",
+                        "dataset"
+                    ],
+                    [
+                        "funding",
+                        "agencies"
+                    ],
+                    [
+                        "funding"
+                    ],
+                    [
+                        "given",
+                        "dataset"
+                    ],
+                    [
+                        "source"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G08#",
+        "Text": "#G08# As a ResearcherPublisher, I want to add a DOI to a dataset, so that I can cite it in papers stored  with the data.",
+        "Persona": [
+            "ResearcherPublisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                "cite"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "DOI"
+            ],
+            "Secondary Entity": [
+                "dataset",
+                "papers",
+                "data"
+            ]
+        },
+        "Benefit": "I can cite it in papers stored  with the data",
+        "Triggers": [
+            [
+                "ResearcherPublisher",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "DOI"
+            ],
+            [
+                "cite",
+                "dataset"
+            ]
+        ],
+        "Contains": [
+            [
+                "dataset",
+                "DOI"
+            ],
+            [
+                "data",
+                "papers"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "ResearcherPublisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "add"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "cite"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "DOI"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "dataset"
+                    ],
+                    [
+                        "papers"
+                    ],
+                    [
+                        "data"
                     ]
                 ]
             }

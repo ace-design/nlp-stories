@@ -900,7 +900,7 @@
         ]
     },
     {
-        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders’ rules, so that I can ensure all costs will be accepted.",
+        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders' rules, so that I can ensure all costs will be accepted.",
         "Persona": [
             "support officer"
         ],
@@ -937,6 +937,26 @@
         "Targets": [
             "check",
             "repositories"
+        ]
+    },
+    {
+        "Text": "#G22# As a PI, I want to plan what kind of data I want to store, so that I can ensure it will be possible to store it.",
+        "Persona": [
+            "PI"
+        ],
+        "Action": [
+            "plan"
+        ],
+        "Entity": [
+            "kind"
+        ],
+        "Triggers": [
+            "PI",
+            "plan"
+        ],
+        "Targets": [
+            "plan",
+            "kind"
         ]
     },
     {
@@ -997,6 +1017,26 @@
         "Targets": [
             "get",
             "information"
+        ]
+    },
+    {
+        "Text": "#G22# As a researcher, I want to know how long it will take to archive, so that I can plan further steps.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "archive"
+        ],
+        "Triggers": [
+            "researcher",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "archive"
         ]
     },
     {

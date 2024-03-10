@@ -1640,6 +1640,26 @@
         ]
     },
     {
+        "Text": "#G18# As a researcher, I want to have the ability to select a partially pre-populated template that already contains commonly entered meta data while adding new data to the system, so that I do not waste time repeatedly inserting the same meta data over and over again for each individual file or log book entry.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "ability"
+        ],
+        "Triggers": [
+            "researcher",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "ability"
+        ]
+    },
+    {
         "Text": "#G18# As a user, I want to be sure that existing metadata corresponding to the file is not lost when moving a file to a new location.",
         "Persona": [
             "user"
@@ -1957,6 +1977,26 @@
         "Targets": [
             "have",
             "repository"
+        ]
+    },
+    {
+        "Text": "#G18# As a researcher, I want to have the details of the workflow plan as well as the execution history and results recorded in Neurohub while executing a workflow",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "details"
+        ],
+        "Triggers": [
+            "researcher",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "details"
         ]
     }
 ]

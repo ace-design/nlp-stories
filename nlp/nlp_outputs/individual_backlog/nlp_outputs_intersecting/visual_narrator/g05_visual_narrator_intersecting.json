@@ -860,6 +860,26 @@
         ]
     },
     {
+        "Text": "#G05# As a Data Publishing User, I want to be able to Hide a dataset that I have already added as Public, So that I can fix my mistakes or have a dataset primarily for my own use.",
+        "Persona": [
+            "Publishing User"
+        ],
+        "Action": [
+            "Hide"
+        ],
+        "Entity": [
+            "dataset"
+        ],
+        "Triggers": [
+            "Publishing User",
+            "Hide"
+        ],
+        "Targets": [
+            "Hide",
+            "dataset"
+        ]
+    },
+    {
         "Text": "#G05# As a Data Publishing User, I want to have a view on all the datasets I have published, So that I can perform management actions on my own datasets.",
         "Persona": [
             "Publishing User"

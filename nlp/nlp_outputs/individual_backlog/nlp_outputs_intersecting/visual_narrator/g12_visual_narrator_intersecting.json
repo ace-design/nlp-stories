@@ -340,6 +340,26 @@
         ]
     },
     {
+        "Text": "#G12# As a camp administrator, I want to be able to make nametags faster, so that I don't have to spend two hours making 200+ nametags",
+        "Persona": [
+            "camp administrator"
+        ],
+        "Action": [
+            "make"
+        ],
+        "Entity": [
+            "nametags"
+        ],
+        "Triggers": [
+            "camp administrator",
+            "make"
+        ],
+        "Targets": [
+            "make",
+            "nametags"
+        ]
+    },
+    {
         "Text": "#G12# As a camp administrator, I want to be able to create a registration form for both staff and kids, so that I can keep organized.",
         "Persona": [
             "camp administrator"
@@ -417,6 +437,26 @@
         "Targets": [
             "notify",
             "parents"
+        ]
+    },
+    {
+        "Text": "#G12# As a camp administrator, I want to be quickly log attendance everyday, so that I can track which kids are coming in.",
+        "Persona": [
+            "camp administrator"
+        ],
+        "Action": [
+            "log"
+        ],
+        "Entity": [
+            "attendance"
+        ],
+        "Triggers": [
+            "camp administrator",
+            "log"
+        ],
+        "Targets": [
+            "log",
+            "attendance"
         ]
     },
     {
@@ -677,26 +717,6 @@
         "Targets": [
             "see",
             "System"
-        ]
-    },
-    {
-        "Text": "#G12# As a parent, I want to be able to track my child's activity and schedule at camp, so that I can have peace of mind.",
-        "Persona": [
-            "parent"
-        ],
-        "Action": [
-            "track"
-        ],
-        "Entity": [
-            "activity"
-        ],
-        "Triggers": [
-            "parent",
-            "track"
-        ],
-        "Targets": [
-            "track",
-            "activity"
         ]
     },
     {

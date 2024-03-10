@@ -2637,6 +2637,140 @@
     },
     {
         "PID": "#G24#",
+        "Text": "#G24# As a depositor, I want to manage and share 'live' research data, so that whole project workflow is linked together.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage",
+                "share"
+            ],
+            "Secondary Action": [
+                "linked together"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "'live' research data"
+            ],
+            "Secondary Entity": [
+                "whole project workflow"
+            ]
+        },
+        "Benefit": "whole project workflow is linked together",
+        "Triggers": [
+            [
+                "depositor",
+                "manage"
+            ],
+            [
+                "depositor",
+                "share"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "'live' research data"
+            ],
+            [
+                "share",
+                "'live' research data"
+            ],
+            [
+                "linked together",
+                "whole project workflow"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "depositor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "manage"
+                    ],
+                    [
+                        "share"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "linked",
+                        "together"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PUNCT",
+                        "VERB",
+                        "PUNCT",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "'",
+                        "live",
+                        "'",
+                        "research",
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "whole",
+                        "project",
+                        "workflow"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G24#",
         "Text": "#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
         "Persona": [
             "depositor"

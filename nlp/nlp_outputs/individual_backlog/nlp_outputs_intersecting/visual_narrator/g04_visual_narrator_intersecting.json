@@ -80,6 +80,26 @@
         ]
     },
     {
+        "Text": "#G04# As a user, I want to have a flexible pick up time, so that I can more conveniently use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "have"
+        ],
+        "Entity": [
+            "pick"
+        ],
+        "Triggers": [
+            "user",
+            "have"
+        ],
+        "Targets": [
+            "have",
+            "pick"
+        ]
+    },
+    {
         "Text": "#G04# As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
         "Persona": [
             "user"
@@ -260,6 +280,26 @@
         ]
     },
     {
+        "Text": "#G04# As a user, I want to be able to create an acocunt, so that I can create my own profile.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "create"
+        ],
+        "Entity": [
+            "acocunt"
+        ],
+        "Triggers": [
+            "user",
+            "create"
+        ],
+        "Targets": [
+            "create",
+            "acocunt"
+        ]
+    },
+    {
         "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
         "Persona": [
             "admin"
@@ -277,26 +317,6 @@
         "Targets": [
             "add",
             "information"
-        ]
-    },
-    {
-        "Text": "#G04# As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": [
-            "read"
-        ],
-        "Entity": [
-            "feedback"
-        ],
-        "Triggers": [
-            "admin",
-            "read"
-        ],
-        "Targets": [
-            "read",
-            "feedback"
         ]
     },
     {
@@ -897,6 +917,26 @@
         "Targets": [
             "communicate",
             "facilities"
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to browse through the list of facolities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "browse"
+        ],
+        "Entity": [
+            "list"
+        ],
+        "Triggers": [
+            "user",
+            "browse"
+        ],
+        "Targets": [
+            "browse",
+            "list"
         ]
     },
     {

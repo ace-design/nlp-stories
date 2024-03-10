@@ -380,6 +380,26 @@
         ]
     },
     {
+        "Text": "#G24# As a depositor, I want to manage and share 'live' research data, so that whole project workflow is linked together.",
+        "Persona": [
+            "depositor"
+        ],
+        "Action": [
+            "manage"
+        ],
+        "Entity": [
+            "data"
+        ],
+        "Triggers": [
+            "depositor",
+            "manage"
+        ],
+        "Targets": [
+            "manage",
+            "data"
+        ]
+    },
+    {
         "Text": "#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
         "Persona": [
             "depositor"

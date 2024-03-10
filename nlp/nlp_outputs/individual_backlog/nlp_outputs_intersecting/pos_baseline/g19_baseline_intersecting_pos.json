@@ -666,6 +666,116 @@
     },
     {
         "PID": "#G19#",
+        "Text": "#G19# As an OlderPerson, I want to have everything preinstalled, so that I do not have to set up ALFRED by myself.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "preinstalled"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "everything"
+            ],
+            "Secondary Entity": [
+                "ALFRED"
+            ]
+        },
+        "Benefit": "I do not have to set up ALFRED by myself",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "preinstalled",
+                "everything"
+            ],
+            [
+                "have",
+                "everything"
+            ]
+        ],
+        "Contains": [
+            [
+                "ALFRED",
+                "everything"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "OlderPerson"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "preinstalled"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "everything"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "ALFRED"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
         "Text": "#G19# As an OlderPerson, I want to have a small ALFRED device that is wearable and easy to carry with me.",
         "Persona": [
             "OlderPerson"
@@ -2329,6 +2439,232 @@
                         "or",
                         "hearing",
                         "troubles"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
+        "Text": "#G19# As an OlderPerson, I want to have an ALFRED device that can be easily adapted for user that have visual troubles.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED device"
+            ],
+            "Secondary Entity": [
+                "user",
+                "visual troubles"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED device"
+            ]
+        ],
+        "Contains": [
+            [
+                "user",
+                "visual troubles"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "OlderPerson"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ALFRED",
+                        "device"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "user"
+                    ],
+                    [
+                        "visual",
+                        "troubles"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
+        "Text": "#G19# As an OlderPerson, I want to have an ALFRED device that can be easily adapted for user that have hearing trouble.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED device"
+            ],
+            "Secondary Entity": [
+                "user",
+                "hearing trouble"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED device"
+            ]
+        ],
+        "Contains": [
+            [
+                "user",
+                "hearing trouble"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "OlderPerson"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ALFRED",
+                        "device"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "user"
+                    ],
+                    [
+                        "hearing",
+                        "trouble"
                     ]
                 ]
             }
@@ -8305,6 +8641,101 @@
     },
     {
         "PID": "#G19#",
+        "Text": "#G19# As an OlderPerson, I want to be able to pay for small amounts.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "pay"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "small amounts"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "pay"
+            ]
+        ],
+        "Targets": [
+            [
+                "pay",
+                "small amounts"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "OlderPerson"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "pay"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "small",
+                        "amounts"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
         "Text": "#G19# As an OlderPerson, I want to use ALFRED to organize a meeting with a group of friends at a certain place.",
         "Persona": [
             "OlderPerson"
@@ -9120,6 +9551,139 @@
     },
     {
         "PID": "#G19#",
+        "Text": "#G19# As a MedicalCaregiver, I want to be sure that the user can decide who has access to her data.",
+        "Persona": [
+            "MedicalCaregiver"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be sure"
+            ],
+            "Secondary Action": [
+                "decide"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "user",
+                "who",
+                "access",
+                "data"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "MedicalCaregiver",
+                "be sure"
+            ]
+        ],
+        "Targets": [
+            [
+                "decide",
+                "who"
+            ]
+        ],
+        "Contains": [
+            [
+                "who",
+                "access"
+            ],
+            [
+                "data",
+                "access"
+            ],
+            [
+                "user",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "MedicalCaregiver"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "sure"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "decide"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "user"
+                    ],
+                    [
+                        "who"
+                    ],
+                    [
+                        "access"
+                    ],
+                    [
+                        "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
         "Text": "#G19# As an OlderPerson, I want to have the wearables with integrated sensors to look good and not to be stigmatizing.",
         "Persona": [
             "OlderPerson"
@@ -9329,6 +9893,101 @@
     {
         "PID": "#G19#",
         "Text": "#G19# As an OlderPerson, I want to have the ALFRED shirt to look good.",
+        "Persona": [
+            "OlderPerson"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ALFRED shirt"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "OlderPerson",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ALFRED shirt"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "OlderPerson"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ALFRED",
+                        "shirt"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G19#",
+        "Text": "#G19# As an OlderPerson, I want to have the ALFRED shirt has to be non stigmatizing.",
         "Persona": [
             "OlderPerson"
         ],
@@ -12589,7 +13248,7 @@
     },
     {
         "PID": "#G19#",
-        "Text": "#G19# As an InformalCaregiver, I want to have a game that the carer could play together with the user, so that it would enable to monitor the users’ state of health but also have some fun time.",
+        "Text": "#G19# As an InformalCaregiver, I want to have a game that the carer could play together with the user, so that it would enable to monitor the users' state of health but also have some fun time.",
         "Persona": [
             "InformalCaregiver"
         ],
@@ -12609,10 +13268,10 @@
             "Secondary Entity": [
                 "carer",
                 "user",
-                "users’ state of health"
+                "users' state of health"
             ]
         },
-        "Benefit": "it would enable to monitor the users’ state of health but also have some fun time",
+        "Benefit": "it would enable to monitor the users' state of health but also have some fun time",
         "Triggers": [
             [
                 "InformalCaregiver",
@@ -12630,7 +13289,7 @@
             ],
             [
                 "monitor",
-                "users’ state of health"
+                "users' state of health"
             ]
         ],
         "Contains": [
@@ -12725,7 +13384,7 @@
                         "user"
                     ],
                     [
-                        "users’",
+                        "users'",
                         "state",
                         "of",
                         "health"
@@ -14018,7 +14677,7 @@
     },
     {
         "PID": "#G19#",
-        "Text": "#G19# As a developer, I want to have detailed information of what happened when my App crashes on the user’s device.",
+        "Text": "#G19# As a developer, I want to have detailed information of what happened when my App crashes on the user's device.",
         "Persona": [
             "developer"
         ],
@@ -14037,7 +14696,7 @@
             "Secondary Entity": [
                 "what happened",
                 "App",
-                "user’s device"
+                "user's device"
             ]
         },
         "Benefit": "",
@@ -14059,7 +14718,7 @@
                 "detailed information"
             ],
             [
-                "user’s device",
+                "user's device",
                 "App"
             ]
         ],
@@ -14139,7 +14798,7 @@
                         "App"
                     ],
                     [
-                        "user’s",
+                        "user's",
                         "device"
                     ]
                 ]
@@ -14616,7 +15275,7 @@
     },
     {
         "PID": "#G19#",
-        "Text": "#G19# As a developer, I want to have the API components to be on a high level so that I don’t have to deal with their details.",
+        "Text": "#G19# As a developer, I want to have the API components to be on a high level so that I don't have to deal with their details.",
         "Persona": [
             "developer"
         ],
@@ -14637,7 +15296,7 @@
                 "details"
             ]
         },
-        "Benefit": "I don’t have to deal with their details",
+        "Benefit": "I don't have to deal with their details",
         "Triggers": [
             [
                 "developer",

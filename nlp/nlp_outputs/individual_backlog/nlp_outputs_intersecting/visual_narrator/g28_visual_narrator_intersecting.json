@@ -540,6 +540,26 @@
         ]
     },
     {
+        "Text": "#G28# As a Zooniverse admin, I want to detect when a scientist should be prompted to look at a subject, based on annotations and information from Talk comments.\t",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": [
+            "detect"
+        ],
+        "Entity": [
+            "subject"
+        ],
+        "Triggers": [
+            "Zooniverse admin",
+            "detect"
+        ],
+        "Targets": [
+            "detect",
+            "subject"
+        ]
+    },
+    {
         "Text": "#G28# As a Zooniverse admin, I want to identify volunteer types.",
         "Persona": [
             "Zooniverse admin"
@@ -897,6 +917,26 @@
         "Targets": [
             "remove",
             "noise"
+        ]
+    },
+    {
+        "Text": "#G28# As a Zooniverse admin, I want to group whale calls that are similar.\t",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": [
+            "group"
+        ],
+        "Entity": [
+            "calls"
+        ],
+        "Triggers": [
+            "Zooniverse admin",
+            "group"
+        ],
+        "Targets": [
+            "group",
+            "calls"
         ]
     },
     {

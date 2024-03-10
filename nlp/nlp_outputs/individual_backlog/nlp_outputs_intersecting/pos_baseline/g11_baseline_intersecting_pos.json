@@ -3885,6 +3885,149 @@
     },
     {
         "PID": "#G11#",
+        "Text": "#G11# As an NSF employee, I want to know how brand guidelines are developed and maintained, so that I can incorporate them throughout the project.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "maintained",
+                "incorporate",
+                "developed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how"
+            ],
+            "Secondary Entity": [
+                "brand guidelines",
+                "project"
+            ]
+        },
+        "Benefit": "I can incorporate them throughout the project",
+        "Triggers": [
+            [
+                "NSF employee",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "maintained",
+                "brand guidelines"
+            ],
+            [
+                "incorporate",
+                "brand guidelines"
+            ],
+            [
+                "know",
+                "how"
+            ],
+            [
+                "developed",
+                "brand guidelines"
+            ]
+        ],
+        "Contains": [
+            [
+                "project",
+                "brand guidelines"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "NSF",
+                    "employee"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "maintained"
+                    ],
+                    [
+                        "incorporate"
+                    ],
+                    [
+                        "developed"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "how"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "brand",
+                        "guidelines"
+                    ],
+                    [
+                        "project"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
         "Text": "#G11# As a web recruiter manager, I want to confirm the recruiter is set up and working properly on Science360.gov.",
         "Persona": [
             "web recruiter manager"
@@ -4256,141 +4399,6 @@
                 "Secondary Entity POS text": [
                     [
                         "prototype"
-                    ]
-                ]
-            }
-        }
-    },
-    {
-        "PID": "#G11#",
-        "Text": "#G11# As a content designer, I want to develop a better understanding of NSF's content types and editorial plan, so that I can make more informed recommendations going forward.",
-        "Persona": [
-            "content designer"
-        ],
-        "Action": {
-            "Primary Action": [
-                "develop"
-            ],
-            "Secondary Action": [
-                "make"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "better understanding"
-            ],
-            "Secondary Entity": [
-                "NSF's content types",
-                "editorial plan",
-                "more informed recommendations"
-            ]
-        },
-        "Benefit": "I can make more informed recommendations going forward",
-        "Triggers": [
-            [
-                "content designer",
-                "develop"
-            ]
-        ],
-        "Targets": [
-            [
-                "develop",
-                "better understanding"
-            ],
-            [
-                "make",
-                "more informed recommendations"
-            ]
-        ],
-        "Contains": [],
-        "Persona POS": {
-            "Persona POS tag": [
-                [
-                    "NOUN",
-                    "NOUN"
-                ]
-            ],
-            "Persona POS text": [
-                [
-                    "content",
-                    "designer"
-                ]
-            ]
-        },
-        "Action POS": {
-            "Primary Action POS": {
-                "Primary Action POS tag": [
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Primary Action POS text": [
-                    [
-                        "develop"
-                    ]
-                ]
-            },
-            "Secondary Action POS": {
-                "Secondary Action POS tag": [
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Secondary Action POS text": [
-                    [
-                        "make"
-                    ]
-                ]
-            }
-        },
-        "Entity POS": {
-            "Primary Entity POS": {
-                "Primary Entity POS tag": [
-                    [
-                        "ADJ",
-                        "NOUN"
-                    ]
-                ],
-                "Primary Entity POS text": [
-                    [
-                        "better",
-                        "understanding"
-                    ]
-                ]
-            },
-            "Secondary Entity POS": {
-                "Secondary Entity POS tag": [
-                    [
-                        "PROPN",
-                        "PART",
-                        "NOUN",
-                        "NOUN"
-                    ],
-                    [
-                        "ADJ",
-                        "NOUN"
-                    ],
-                    [
-                        "ADV",
-                        "VERB",
-                        "NOUN"
-                    ]
-                ],
-                "Secondary Entity POS text": [
-                    [
-                        "NSF",
-                        "'s",
-                        "content",
-                        "types"
-                    ],
-                    [
-                        "editorial",
-                        "plan"
-                    ],
-                    [
-                        "more",
-                        "informed",
-                        "recommendations"
                     ]
                 ]
             }
@@ -7175,6 +7183,114 @@
     },
     {
         "PID": "#G11#",
+        "Text": "#G11# As an author, I want to be able to indent / outdent content.",
+        "Persona": [
+            "author"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indent",
+                "outdent"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "author",
+                "indent"
+            ],
+            [
+                "author",
+                "outdent"
+            ]
+        ],
+        "Targets": [
+            [
+                "indent",
+                "content"
+            ],
+            [
+                "outdent",
+                "content"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "author"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indent"
+                    ],
+                    [
+                        "outdent"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "content"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
         "Text": "#G11# As a VisualDesigner, I want to demonstrate the value of visual design to the NSF project team, so that visual design is an integral part of a redesign.",
         "Persona": [
             "VisualDesigner"
@@ -8224,6 +8340,163 @@
                     [
                         "HTML",
                         "ideas"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G11#",
+        "Text": "#G11# As a site administrator, I want to understand how other similar organizations are handling content, so that I can make informed decisions about what appears to work well and what doesn't.",
+        "Persona": [
+            "site administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "understand"
+            ],
+            "Secondary Action": [
+                "handling",
+                "make"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how"
+            ],
+            "Secondary Entity": [
+                "other similar organizations",
+                "content",
+                "informed decisions",
+                "what",
+                "what"
+            ]
+        },
+        "Benefit": "I can make informed decisions about what appears to work well and what doesn't",
+        "Triggers": [
+            [
+                "site administrator",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "handling",
+                "content"
+            ],
+            [
+                "make",
+                "informed decisions"
+            ],
+            [
+                "understand",
+                "how"
+            ]
+        ],
+        "Contains": [
+            [
+                "other similar organizations",
+                "content"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "site",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "understand"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "handling"
+                    ],
+                    [
+                        "make"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "how"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ],
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "other",
+                        "similar",
+                        "organizations"
+                    ],
+                    [
+                        "content"
+                    ],
+                    [
+                        "informed",
+                        "decisions"
+                    ],
+                    [
+                        "what"
+                    ],
+                    [
+                        "what"
                     ]
                 ]
             }

@@ -10297,6 +10297,218 @@
     },
     {
         "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have the ability to select a partially pre-populated template that already contains commonly entered meta data while adding new data to the system, so that I do not waste time repeatedly inserting the same meta data over and over again for each individual file or log book entry.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "select",
+                "adding",
+                "repeatedly inserting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "ability"
+            ],
+            "Secondary Entity": [
+                "partially pre-populated template",
+                "commonly entered meta data",
+                "new data",
+                "system",
+                "same meta data",
+                "log book entry",
+                "each individual file"
+            ]
+        },
+        "Benefit": "I do not waste time repeatedly inserting the same meta data over and over again for each individual file or log book entry",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "ability"
+            ],
+            [
+                "select",
+                "partially pre-populated template"
+            ],
+            [
+                "adding",
+                "new data"
+            ],
+            [
+                "repeatedly inserting",
+                "same meta data"
+            ]
+        ],
+        "Contains": [
+            [
+                "partially pre-populated template",
+                "commonly entered meta data"
+            ],
+            [
+                "system",
+                "new data"
+            ],
+            [
+                "each individual file",
+                "same meta data"
+            ],
+            [
+                "log book entry",
+                "same meta data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "select"
+                    ],
+                    [
+                        "adding"
+                    ],
+                    [
+                        "repeatedly",
+                        "inserting"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "ability"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADV",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "DET",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "partially",
+                        "pre-populated",
+                        "template"
+                    ],
+                    [
+                        "commonly",
+                        "entered",
+                        "meta",
+                        "data"
+                    ],
+                    [
+                        "new",
+                        "data"
+                    ],
+                    [
+                        "system"
+                    ],
+                    [
+                        "same",
+                        "meta",
+                        "data"
+                    ],
+                    [
+                        "log",
+                        "book",
+                        "entry"
+                    ],
+                    [
+                        "each",
+                        "individual",
+                        "file"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
         "Text": "#G18# As a user, I want to be sure that existing metadata corresponding to the file is not lost when moving a file to a new location.",
         "Persona": [
             "user"
@@ -12566,6 +12778,160 @@
                     [
                         "other",
                         "researchers"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G18#",
+        "Text": "#G18# As a researcher, I want to have the details of the workflow plan as well as the execution history and results recorded in Neurohub while executing a workflow",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "executing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "details",
+                "execution history",
+                "results"
+            ],
+            "Secondary Entity": [
+                "workflow plan",
+                "Neurohub",
+                "workflow"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "researcher",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "details"
+            ],
+            [
+                "have",
+                "execution history"
+            ],
+            [
+                "have",
+                "results"
+            ],
+            [
+                "executing",
+                "workflow"
+            ]
+        ],
+        "Contains": [
+            [
+                "workflow plan",
+                "details"
+            ],
+            [
+                "Neurohub",
+                "results"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "executing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "details"
+                    ],
+                    [
+                        "execution",
+                        "history"
+                    ],
+                    [
+                        "results"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "workflow",
+                        "plan"
+                    ],
+                    [
+                        "Neurohub"
+                    ],
+                    [
+                        "workflow"
                     ]
                 ]
             }

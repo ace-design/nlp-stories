@@ -400,6 +400,26 @@
         ]
     },
     {
+        "Text": "#G27# As a Cornell faculty member, I want to be notified if someone downloads any of my items or files, so that I can follow usage and see what others are most interested in reading.",
+        "Persona": [
+            "faculty member"
+        ],
+        "Action": [
+            "notified"
+        ],
+        "Entity": [
+            "any"
+        ],
+        "Triggers": [
+            "faculty member",
+            "notified"
+        ],
+        "Targets": [
+            "notified",
+            "any"
+        ]
+    },
+    {
         "Text": "#G27# As a DB/IR administrator, I want to see list of subscribers for specified report in order research missing report complaints.",
         "Persona": [
             "IR administrator"
@@ -1120,7 +1140,7 @@
         ]
     },
     {
-        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. – with DOIs for each, as needed – when uploading a given work, so that I can provide a robust image of the work in question.",
+        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. - with DOIs for each, as needed - when uploading a given work, so that I can provide a robust image of the work in question.",
         "Persona": [
             "staff member"
         ],
@@ -1520,6 +1540,26 @@
         ]
     },
     {
+        "Text": "#G27# As a patron, I want to know previous name(s) and publication date range (first version-last version) of reports/datasets, so that I can know what historical versions are available and how current more recent version is.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "name"
+        ],
+        "Triggers": [
+            "patron",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "name"
+        ]
+    },
+    {
         "Text": "#G27# As a patron, I want to create a personal account to request email notification when new version of report/dataset is available.",
         "Persona": [
             "patron"
@@ -1797,6 +1837,26 @@
         "Targets": [
             "recommend",
             "collection"
+        ]
+    },
+    {
+        "Text": "#G27# As a DB/IR administrator, I want to search for administrator accounts using full/partial email or name.",
+        "Persona": [
+            "IR administrator"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "email"
+        ],
+        "Triggers": [
+            "IR administrator",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "email"
         ]
     },
     {

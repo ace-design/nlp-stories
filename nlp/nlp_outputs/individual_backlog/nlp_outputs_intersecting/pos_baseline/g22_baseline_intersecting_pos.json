@@ -6188,7 +6188,7 @@
     },
     {
         "PID": "#G22#",
-        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders’ rules, so that I can ensure all costs will be accepted.",
+        "Text": "#G22# As a research support officer, I want to ensure compliance to the funders' rules, so that I can ensure all costs will be accepted.",
         "Persona": [
             "research support officer"
         ],
@@ -6452,6 +6452,126 @@
                         "funding",
                         "rules"
                     ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G22#",
+        "Text": "#G22# As a PI, I want to plan what kind of data I want to store, so that I can ensure it will be possible to store it.",
+        "Persona": [
+            "PI"
+        ],
+        "Action": {
+            "Primary Action": [
+                "plan"
+            ],
+            "Secondary Action": [
+                "ensure",
+                "store"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "kind of data I want to store"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I can ensure it will be possible to store it",
+        "Triggers": [
+            [
+                "PI",
+                "plan"
+            ]
+        ],
+        "Targets": [
+            [
+                "plan",
+                "kind of data I want to store"
+            ],
+            [
+                "store",
+                "kind of data I want to store"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "PI"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "plan"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "ensure"
+                    ],
+                    [
+                        "store"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "ADP",
+                        "NOUN",
+                        "PRON",
+                        "VERB",
+                        "PART",
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "kind",
+                        "of",
+                        "data",
+                        "I",
+                        "want",
+                        "to",
+                        "store"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
                 ]
             }
         }
@@ -6890,6 +7010,122 @@
                         "data",
                         "to",
                         "preserve"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G22#",
+        "Text": "#G22# As a researcher, I want to know how long it will take to archive, so that I can plan further steps.",
+        "Persona": [
+            "researcher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "archive",
+                "plan"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how long"
+            ],
+            "Secondary Entity": [
+                "further steps"
+            ]
+        },
+        "Benefit": "I can plan further steps",
+        "Triggers": [
+            [
+                "researcher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "how long"
+            ],
+            [
+                "plan",
+                "further steps"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "researcher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "archive"
+                    ],
+                    [
+                        "plan"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADV",
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "how",
+                        "long"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "further",
+                        "steps"
                     ]
                 ]
             }

@@ -6248,6 +6248,133 @@
     },
     {
         "PID": "#G05#",
+        "Text": "#G05# As a Data Publishing User, I want to be able to Hide a dataset that I have already added as Public, So that I can fix my mistakes or have a dataset primarily for my own use.",
+        "Persona": [
+            "Data Publishing User"
+        ],
+        "Action": {
+            "Primary Action": [
+                "Hide"
+            ],
+            "Secondary Action": [
+                "fix",
+                "have"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "dataset"
+            ],
+            "Secondary Entity": [
+                "mistakes",
+                "dataset"
+            ]
+        },
+        "Benefit": "I can fix my mistakes or have a dataset primarily for my own use",
+        "Triggers": [
+            [
+                "Data Publishing User",
+                "Hide"
+            ]
+        ],
+        "Targets": [
+            [
+                "Hide",
+                "dataset"
+            ],
+            [
+                "fix",
+                "mistakes"
+            ],
+            [
+                "have",
+                "dataset"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Data",
+                    "Publishing",
+                    "User"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "Hide"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "fix"
+                    ],
+                    [
+                        "have"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "dataset"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "mistakes"
+                    ],
+                    [
+                        "dataset"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G05#",
         "Text": "#G05# As a Data Publishing User, I want to have a view on all the datasets I have published, So that I can perform management actions on my own datasets.",
         "Persona": [
             "Data Publishing User"

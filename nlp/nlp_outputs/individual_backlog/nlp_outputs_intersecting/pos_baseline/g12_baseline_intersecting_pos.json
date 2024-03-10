@@ -2150,6 +2150,126 @@
     },
     {
         "PID": "#G12#",
+        "Text": "#G12# As a camp administrator, I want to be able to make nametags faster, so that I don't have to spend two hours making 200+ nametags",
+        "Persona": [
+            "camp administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "make"
+            ],
+            "Secondary Action": [
+                "making"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "nametags"
+            ],
+            "Secondary Entity": [
+                "two hours",
+                "200+ nametags"
+            ]
+        },
+        "Benefit": "I don't have to spend two hours making 200+ nametags",
+        "Triggers": [
+            [
+                "camp administrator",
+                "make"
+            ]
+        ],
+        "Targets": [
+            [
+                "make",
+                "nametags"
+            ],
+            [
+                "making",
+                "200+ nametags"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "camp",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "make"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "making"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "nametags"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NUM",
+                        "NOUN"
+                    ],
+                    [
+                        "NUM",
+                        "SYM",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "two",
+                        "hours"
+                    ],
+                    [
+                        "200",
+                        "+",
+                        "nametags"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G12#",
         "Text": "#G12# As a camp administrator, I want to be able to create a registration form for both staff and kids, so that I can keep organized.",
         "Persona": [
             "camp administrator"
@@ -2624,6 +2744,115 @@
                 ],
                 "Secondary Entity POS text": [
                     []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G12#",
+        "Text": "#G12# As a camp administrator, I want to be quickly log attendance everyday, so that I can track which kids are coming in.",
+        "Persona": [
+            "camp administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "quickly log"
+            ],
+            "Secondary Action": [
+                "track"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "attendance"
+            ],
+            "Secondary Entity": [
+                "kids"
+            ]
+        },
+        "Benefit": "I can track which kids are coming in",
+        "Triggers": [
+            [
+                "camp administrator",
+                "quickly log"
+            ]
+        ],
+        "Targets": [
+            [
+                "quickly log",
+                "attendance"
+            ],
+            [
+                "track",
+                "kids"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "camp",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "quickly",
+                        "log"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "track"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "attendance"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "kids"
+                    ]
                 ]
             }
         }
@@ -4393,137 +4622,6 @@
                 "Secondary Entity POS text": [
                     [
                         "what"
-                    ]
-                ]
-            }
-        }
-    },
-    {
-        "PID": "#G12#",
-        "Text": "#G12# As a parent, I want to be able to track my child's activity and schedule at camp, so that I can have peace of mind.",
-        "Persona": [
-            "parent"
-        ],
-        "Action": {
-            "Primary Action": [
-                "track"
-            ],
-            "Secondary Action": [
-                "have"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "child's activity",
-                "schedule"
-            ],
-            "Secondary Entity": [
-                "camp",
-                "peace of mind"
-            ]
-        },
-        "Benefit": "I can have peace of mind",
-        "Triggers": [
-            [
-                "parent",
-                "track"
-            ]
-        ],
-        "Targets": [
-            [
-                "track",
-                "child's activity"
-            ],
-            [
-                "track",
-                "schedule"
-            ],
-            [
-                "have",
-                "peace of mind"
-            ]
-        ],
-        "Contains": [],
-        "Persona POS": {
-            "Persona POS tag": [
-                [
-                    "NOUN"
-                ]
-            ],
-            "Persona POS text": [
-                [
-                    "parent"
-                ]
-            ]
-        },
-        "Action POS": {
-            "Primary Action POS": {
-                "Primary Action POS tag": [
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Primary Action POS text": [
-                    [
-                        "track"
-                    ]
-                ]
-            },
-            "Secondary Action POS": {
-                "Secondary Action POS tag": [
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Secondary Action POS text": [
-                    [
-                        "have"
-                    ]
-                ]
-            }
-        },
-        "Entity POS": {
-            "Primary Entity POS": {
-                "Primary Entity POS tag": [
-                    [
-                        "NOUN",
-                        "PART",
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN"
-                    ]
-                ],
-                "Primary Entity POS text": [
-                    [
-                        "child",
-                        "'s",
-                        "activity"
-                    ],
-                    [
-                        "schedule"
-                    ]
-                ]
-            },
-            "Secondary Entity POS": {
-                "Secondary Entity POS tag": [
-                    [
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN",
-                        "ADP",
-                        "NOUN"
-                    ]
-                ],
-                "Secondary Entity POS text": [
-                    [
-                        "camp"
-                    ],
-                    [
-                        "peace",
-                        "of",
-                        "mind"
                     ]
                 ]
             }

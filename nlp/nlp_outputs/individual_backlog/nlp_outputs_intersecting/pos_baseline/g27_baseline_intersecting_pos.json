@@ -3189,6 +3189,190 @@
     },
     {
         "PID": "#G27#",
+        "Text": "#G27# As a Cornell faculty member, I want to be notified if someone downloads any of my items or files, so that I can follow usage and see what others are most interested in reading.",
+        "Persona": [
+            "Cornell faculty member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be notified"
+            ],
+            "Secondary Action": [
+                "downloads",
+                "follow",
+                "see",
+                "reading"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "someone",
+                "items",
+                "files",
+                "usage",
+                "what",
+                "others"
+            ]
+        },
+        "Benefit": "I can follow usage and see what others are most interested in reading",
+        "Triggers": [
+            [
+                "Cornell faculty member",
+                "be notified"
+            ]
+        ],
+        "Targets": [
+            [
+                "downloads",
+                "items"
+            ],
+            [
+                "downloads",
+                "files"
+            ],
+            [
+                "follow",
+                "usage"
+            ],
+            [
+                "see",
+                "what"
+            ],
+            [
+                "reading",
+                "what"
+            ]
+        ],
+        "Contains": [
+            [
+                "someone",
+                "items"
+            ],
+            [
+                "someone",
+                "files"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Cornell",
+                    "faculty",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "notified"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "downloads"
+                    ],
+                    [
+                        "follow"
+                    ],
+                    [
+                        "see"
+                    ],
+                    [
+                        "reading"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PRON"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "PRON"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "someone"
+                    ],
+                    [
+                        "items"
+                    ],
+                    [
+                        "files"
+                    ],
+                    [
+                        "usage"
+                    ],
+                    [
+                        "what"
+                    ],
+                    [
+                        "others"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G27#",
         "Text": "#G27# As a DB/IR administrator, I want to see list of subscribers for specified report in order research missing report complaints.",
         "Persona": [
             "DB/IR administrator"
@@ -9053,7 +9237,7 @@
     },
     {
         "PID": "#G27#",
-        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. – with DOIs for each, as needed – when uploading a given work, so that I can provide a robust image of the work in question.",
+        "Text": "#G27# As a library staff member, I want to include supplementary files such as datasets, slideshows, etc. - with DOIs for each, as needed - when uploading a given work, so that I can provide a robust image of the work in question.",
         "Persona": [
             "library staff member"
         ],
@@ -12500,6 +12684,214 @@
     },
     {
         "PID": "#G27#",
+        "Text": "#G27# As a patron, I want to know previous name(s) and publication date range (first version-last version) of reports/datasets, so that I can know what historical versions are available and how current more recent version is.",
+        "Persona": [
+            "patron"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "previous name(s)",
+                "publication date range"
+            ],
+            "Secondary Entity": [
+                "first version-last version",
+                "reports",
+                "datasets",
+                "historical versions",
+                "how current",
+                "more recent version"
+            ]
+        },
+        "Benefit": "I can know what historical versions are available and how current more recent version is",
+        "Triggers": [
+            [
+                "patron",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "previous name(s)"
+            ],
+            [
+                "know",
+                "publication date range"
+            ],
+            [
+                "know",
+                "historical versions"
+            ],
+            [
+                "know",
+                "how current"
+            ]
+        ],
+        "Contains": [
+            [
+                "reports",
+                "previous name(s)"
+            ],
+            [
+                "reports",
+                "publication date range"
+            ],
+            [
+                "datasets",
+                "previous name(s)"
+            ],
+            [
+                "datasets",
+                "publication date range"
+            ],
+            [
+                "publication date range",
+                "first version-last version"
+            ],
+            [
+                "reports",
+                "more recent version"
+            ],
+            [
+                "datasets",
+                "more recent version"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "patron"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "PUNCT"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "previous",
+                        "name(s",
+                        ")"
+                    ],
+                    [
+                        "publication",
+                        "date",
+                        "range"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "PUNCT",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADV",
+                        "ADJ"
+                    ],
+                    [
+                        "ADV",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "first",
+                        "version",
+                        "-",
+                        "last",
+                        "version"
+                    ],
+                    [
+                        "reports"
+                    ],
+                    [
+                        "datasets"
+                    ],
+                    [
+                        "historical",
+                        "versions"
+                    ],
+                    [
+                        "how",
+                        "current"
+                    ],
+                    [
+                        "more",
+                        "recent",
+                        "version"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G27#",
         "Text": "#G27# As a patron, I want to create a personal account to request email notification when new version of report/dataset is available.",
         "Persona": [
             "patron"
@@ -14509,6 +14901,136 @@
                     ],
                     [
                         "research"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G27#",
+        "Text": "#G27# As a DB/IR administrator, I want to search for administrator accounts using full/partial email or name.",
+        "Persona": [
+            "DB/IR administrator"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                "using"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "administrator accounts"
+            ],
+            "Secondary Entity": [
+                "full/partial email",
+                "name"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "DB/IR administrator",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "administrator accounts"
+            ],
+            [
+                "using",
+                "full/partial email"
+            ],
+            [
+                "using",
+                "name"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "PUNCT",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "DB",
+                    "/",
+                    "IR",
+                    "administrator"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "using"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "administrator",
+                        "accounts"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "SYM",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "full",
+                        "/",
+                        "partial",
+                        "email"
+                    ],
+                    [
+                        "name"
                     ]
                 ]
             }

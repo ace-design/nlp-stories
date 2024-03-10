@@ -1040,6 +1040,26 @@
         ]
     },
     {
+        "Text": "#G17# As an app developer, I want to ensure that application creation fails if any of its datasets cannot be created.",
+        "Persona": [
+            "app developer"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "datasets"
+        ],
+        "Triggers": [
+            "app developer",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "datasets"
+        ]
+    },
+    {
         "Text": "#G17# As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.",
         "Persona": [
             "app developer"
@@ -1140,6 +1160,66 @@
         ]
     },
     {
+        "Text": "#G17# As a user, I want to ensure that dataset creation fails if the dataset cannot be enabled for explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "explore"
+        ],
+        "Triggers": [
+            "user",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "explore"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to ensure that dataset reconfiguration fails if the corresponding update of the explore table fails.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "table"
+        ],
+        "Triggers": [
+            "user",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "table"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to ensure that a dataset operation fails if it fails to make its required changes to explore.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "ensure"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "user",
+            "ensure"
+        ],
+        "Targets": [
+            "ensure",
+            "System"
+        ]
+    },
+    {
         "Text": "#G17# As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore. ",
         "Persona": [
             "user"
@@ -1177,6 +1257,26 @@
         "Targets": [
             "enable",
             "dataset"
+        ]
+    },
+    {
+        "Text": "#G17# As a user, I want to disable explore for a dataset that was configured for explore initially.",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "disable"
+        ],
+        "Entity": [
+            "explore"
+        ],
+        "Triggers": [
+            "user",
+            "disable"
+        ],
+        "Targets": [
+            "disable",
+            "explore"
         ]
     }
 ]

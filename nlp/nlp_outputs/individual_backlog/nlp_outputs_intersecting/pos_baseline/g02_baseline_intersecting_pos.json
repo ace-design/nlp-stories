@@ -1,6 +1,111 @@
 [
     {
         "PID": "#G02#",
+        "Text": "#G02# As a Data user, I want to have the 12-19-2017 deletions processed.",
+        "Persona": [
+            "Data user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "processed"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "12-19-2017 deletions"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Data user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "processed",
+                "12-19-2017 deletions"
+            ],
+            [
+                "have",
+                "12-19-2017 deletions"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Data",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "processed"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NUM",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "12-19-2017",
+                        "deletions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
         "Text": "#G02# As a UI designer, I want to redesign the Resources page, so that it matches the new Broker design styles.",
         "Persona": [
             "UI designer"
@@ -545,6 +650,130 @@
     },
     {
         "PID": "#G02#",
+        "Text": "#G02# As a Developer , I want to be able to log better, so that I can troubleshoot issues with particular submissions and functions.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "log better"
+            ],
+            "Secondary Action": [
+                "troubleshoot"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "particular submissions",
+                "issues",
+                "functions"
+            ]
+        },
+        "Benefit": "I can troubleshoot issues with particular submissions and functions",
+        "Triggers": [
+            [
+                "Developer",
+                "log better"
+            ]
+        ],
+        "Targets": [
+            [
+                "troubleshoot",
+                "issues"
+            ]
+        ],
+        "Contains": [
+            [
+                "functions",
+                "issues"
+            ],
+            [
+                "particular submissions",
+                "issues"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "log",
+                        "better"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "troubleshoot"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "particular",
+                        "submissions"
+                    ],
+                    [
+                        "issues"
+                    ],
+                    [
+                        "functions"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
         "Text": "#G02# As a Developer, I want to add the updates on a FABS submission to be modified when the publishStatus changes, so that I know when the status of the submission has changed.",
         "Persona": [
             "Developer"
@@ -695,6 +924,140 @@
                     ],
                     [
                         "submission"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a UI designer,  I want to move on to round 2 of the Help page edits, so that I can get approvals from leadership.",
+        "Persona": [
+            "UI designer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "move on"
+            ],
+            "Secondary Action": [
+                "get"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "round 2"
+            ],
+            "Secondary Entity": [
+                "approvals",
+                "Help page edits",
+                "leadership"
+            ]
+        },
+        "Benefit": "I can get approvals from leadership",
+        "Triggers": [
+            [
+                "UI designer",
+                "move on"
+            ]
+        ],
+        "Targets": [
+            [
+                "move on",
+                "round 2"
+            ],
+            [
+                "get",
+                "approvals"
+            ]
+        ],
+        "Contains": [
+            [
+                "Help page edits",
+                "round 2"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "UI",
+                    "designer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "move",
+                        "on"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADP",
+                        "NUM"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "round",
+                        "2"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "approvals"
+                    ],
+                    [
+                        "Help",
+                        "page",
+                        "edits"
+                    ],
+                    [
+                        "leadership"
                     ]
                 ]
             }
@@ -3556,6 +3919,112 @@
     },
     {
         "PID": "#G02#",
+        "Text": "#G02# As an agency user, I want to be confident that the data coming from SAM is complete.",
+        "Persona": [
+            "agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be confident"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data"
+            ],
+            "Secondary Entity": [
+                "SAM"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "agency user",
+                "be confident"
+            ]
+        ],
+        "Targets": [
+            [
+                "be confident",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "SAM",
+                "data"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "ADJ"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "confident"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "data"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "SAM"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
         "Text": "#G02# As a broker team member, I want to make some updates to the SQL codes for clarity.",
         "Persona": [
             "broker team member"
@@ -3769,6 +4238,133 @@
                 ],
                 "Secondary Entity POS text": [
                     []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As a broker team member, I want to add the 00***** and 00FORGN PPoPCode cases to the derivation logic.",
+        "Persona": [
+            "broker team member"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "00*****",
+                "00FORGN PPoPCode cases"
+            ],
+            "Secondary Entity": [
+                "derivation logic"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "broker team member",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "00*****"
+            ],
+            [
+                "add",
+                "00FORGN PPoPCode cases"
+            ]
+        ],
+        "Contains": [
+            [
+                "derivation logic",
+                "00FORGN PPoPCode cases"
+            ],
+            [
+                "derivation logic",
+                "00*****"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "broker",
+                    "team",
+                    "member"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "add"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "SYM"
+                    ],
+                    [
+                        "NUM",
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "00*****"
+                    ],
+                    [
+                        "00FORGN",
+                        "PPoPCode",
+                        "cases"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "derivation",
+                        "logic"
+                    ]
                 ]
             }
         }
@@ -5664,6 +6260,114 @@
     },
     {
         "PID": "#G02#",
+        "Text": "#G02# As an agency user, I want to get File F in the correct format.",
+        "Persona": [
+            "agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "File F"
+            ],
+            "Secondary Entity": [
+                "correct format"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "agency user",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "File F"
+            ]
+        ],
+        "Contains": [
+            [
+                "File F",
+                "correct format"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "get"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "File",
+                        "F"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "correct",
+                        "format"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
         "Text": "#G02# As an Agency user, I want to better understand my file-level errors.",
         "Persona": [
             "Agency user"
@@ -7146,6 +7850,146 @@
     },
     {
         "PID": "#G02#",
+        "Text": "#G02# As a Developer , I want to determine the best way to load historical FPDS data, so that I can load all FPDS data since 2007.",
+        "Persona": [
+            "Developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "determine"
+            ],
+            "Secondary Action": [
+                "load",
+                "load"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "best way"
+            ],
+            "Secondary Entity": [
+                "historical FPDS data",
+                "FPDS data since 2007"
+            ]
+        },
+        "Benefit": "I can load all FPDS data since 2007",
+        "Triggers": [
+            [
+                "Developer",
+                "determine"
+            ]
+        ],
+        "Targets": [
+            [
+                "determine",
+                "best way"
+            ],
+            [
+                "load",
+                "historical FPDS data"
+            ],
+            [
+                "load",
+                "FPDS data since 2007"
+            ]
+        ],
+        "Contains": [
+            [
+                "historical FPDS data",
+                "FPDS data since 2007"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Developer"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "determine"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "load"
+                    ],
+                    [
+                        "load"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "best",
+                        "way"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "ADP",
+                        "NUM"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "historical",
+                        "FPDS",
+                        "data"
+                    ],
+                    [
+                        "FPDS",
+                        "data",
+                        "since",
+                        "2007"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
         "Text": "#G02# As a FABS user, I want to have read-only access to DABS, so that I can view DABS pages without wanting two sets of permissions.",
         "Persona": [
             "FABS user"
@@ -7534,6 +8378,127 @@
                     [
                         "submission",
                         "history"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G02#",
+        "Text": "#G02# As an agency user, I want to know when the submission periods start and end, so that I know when the submission starts and ends.",
+        "Persona": [
+            "agency user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "submission periods start and end"
+            ],
+            "Secondary Entity": [
+                "submission starts and ends"
+            ]
+        },
+        "Benefit": "I know when the submission starts and ends",
+        "Triggers": [
+            [
+                "agency user",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "submission periods start and end"
+            ],
+            [
+                "know",
+                "submission starts and ends"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "agency",
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN",
+                        "NOUN",
+                        "CCONJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "submission",
+                        "periods",
+                        "start",
+                        "and",
+                        "end"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "VERB",
+                        "CCONJ",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "submission",
+                        "starts",
+                        "and",
+                        "ends"
                     ]
                 ]
             }

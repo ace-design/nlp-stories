@@ -5998,6 +5998,133 @@
     },
     {
         "PID": "#G10#",
+        "Text": "#G10# As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it.",
+        "Persona": [
+            "site admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be emailed"
+            ],
+            "Secondary Action": [
+                "aware",
+                "decide",
+                "post"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "job is submitted"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I am aware of it and can decide if I want to post it",
+        "Triggers": [
+            [
+                "site admin",
+                "be emailed"
+            ]
+        ],
+        "Targets": [
+            [
+                "be emailed",
+                "job is submitted"
+            ],
+            [
+                "aware",
+                "job is submitted"
+            ],
+            [
+                "post",
+                "job is submitted"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "site",
+                    "admin"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "emailed"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADJ"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "aware"
+                    ],
+                    [
+                        "decide"
+                    ],
+                    [
+                        "post"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "job",
+                        "is",
+                        "submitted"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G10#",
         "Text": "#G10# As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site.",
         "Persona": [
             "site member"
@@ -6597,6 +6724,141 @@
                     ],
                     [
                         "site"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G10#",
+        "Text": "#G10# As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad.",
+        "Persona": [
+            "advertiser"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be emailed"
+            ],
+            "Secondary Action": [
+                "expire",
+                "extend"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "reminder"
+            ],
+            "Secondary Entity": [
+                "ad",
+                "ad",
+                "seven day"
+            ]
+        },
+        "Benefit": "I can go extend the ad",
+        "Triggers": [
+            [
+                "advertiser",
+                "be emailed"
+            ]
+        ],
+        "Targets": [
+            [
+                "be emailed",
+                "reminder"
+            ],
+            [
+                "extend",
+                "ad"
+            ]
+        ],
+        "Contains": [
+            [
+                "ad",
+                "reminder"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "advertiser"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "AUX",
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "be",
+                        "emailed"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "expire"
+                    ],
+                    [
+                        "extend"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "reminder"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NUM",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "ad"
+                    ],
+                    [
+                        "ad"
+                    ],
+                    [
+                        "seven",
+                        "day"
                     ]
                 ]
             }
@@ -7312,6 +7574,107 @@
                     [
                         "appropriate",
                         "periods"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G10#",
+        "Text": "#G10# As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently.",
+        "Persona": [
+            "site editor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "designate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "home page",
+                "best content"
+            ]
+        },
+        "Benefit": "the best content is featured most prominently",
+        "Triggers": [
+            [
+                "site editor",
+                "designate"
+            ]
+        ],
+        "Targets": [],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "site",
+                    "editor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "designate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "home",
+                        "page"
+                    ],
+                    [
+                        "best",
+                        "content"
                     ]
                 ]
             }
@@ -9056,6 +9419,272 @@
                     ],
                     [
                         "learning"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G10#",
+        "Text": "#G10# As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately off the page.",
+        "Persona": [
+            "site visitor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "visit"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "Scrum",
+                "why"
+            ],
+            "Secondary Entity": [
+                "alliance",
+                "page"
+            ]
+        },
+        "Benefit": "I don't bounce immediately oï¬€ the page",
+        "Triggers": [
+            [
+                "site visitor",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "Scrum"
+            ],
+            [
+                "visit",
+                "page"
+            ],
+            [
+                "know",
+                "why"
+            ]
+        ],
+        "Contains": [
+            [
+                "Scrum",
+                "alliance"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "site",
+                    "visitor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "visit"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "Scrum"
+                    ],
+                    [
+                        "why"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "alliance"
+                    ],
+                    [
+                        "page"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G10#",
+        "Text": "#G10# As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more.",
+        "Persona": [
+            "site visitor"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "glance around",
+                "read more"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "CSM",
+                "why"
+            ],
+            "Secondary Entity": [
+                "home page"
+            ]
+        },
+        "Benefit": "I read more",
+        "Triggers": [
+            [
+                "site visitor",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "CSM"
+            ],
+            [
+                "glance around",
+                "home page"
+            ],
+            [
+                "know",
+                "why"
+            ]
+        ],
+        "Contains": [
+            [
+                "home page",
+                "CSM"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "site",
+                    "visitor"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "ADV"
+                    ],
+                    [
+                        "VERB",
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "glance",
+                        "around"
+                    ],
+                    [
+                        "read",
+                        "more"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ],
+                    [
+                        "ADV"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "CSM"
+                    ],
+                    [
+                        "why"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "home",
+                        "page"
                     ]
                 ]
             }

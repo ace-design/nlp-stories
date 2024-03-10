@@ -5793,6 +5793,118 @@
     },
     {
         "PID": "#G13#",
+        "Text": "#G13# As a participant, I want to change my estimate as long as the draw has not been completed, so that I can change my mind.",
+        "Persona": [
+            "participant"
+        ],
+        "Action": {
+            "Primary Action": [
+                "change"
+            ],
+            "Secondary Action": [
+                "change"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "estimate"
+            ],
+            "Secondary Entity": [
+                "draw",
+                "mind"
+            ]
+        },
+        "Benefit": "that I can change my mind",
+        "Triggers": [
+            [
+                "participant",
+                "change"
+            ]
+        ],
+        "Targets": [
+            [
+                "change",
+                "estimate"
+            ],
+            [
+                "change",
+                "mind"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "participant"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "change"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "change"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "estimate"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "draw"
+                    ],
+                    [
+                        "mind"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G13#",
         "Text": "#G13# As a participant, I want to have a small thumbnail photo displayed near where my cards are played, so that the game is more personal because I see who I'm estimating with.",
         "Persona": [
             "participant"

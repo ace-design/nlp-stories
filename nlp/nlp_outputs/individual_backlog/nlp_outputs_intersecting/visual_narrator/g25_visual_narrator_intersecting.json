@@ -100,6 +100,26 @@
         ]
     },
     {
+        "Text": "#G25# As the DAMS manager, I want to be able to list for browsing all formal collections represented in the DAMS along with the appropriate relationships. ",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": [
+            "list"
+        ],
+        "Entity": [
+            "collections"
+        ],
+        "Triggers": [
+            "DAMS manager",
+            "list"
+        ],
+        "Targets": [
+            "list",
+            "collections"
+        ]
+    },
+    {
         "Text": "#G25# As a repository manager, I want to know all the collections for which I have curatorial responsibility.",
         "Persona": [
             "repository manager"
@@ -180,6 +200,26 @@
         ]
     },
     {
+        "Text": "#G25# As a repository manager, I want to indicate names related to the collection either as creator, source, or subject. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "names"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "names"
+        ]
+    },
+    {
         "Text": "#G25# As a repository manager, I want to indicate subjects related to the collection. ",
         "Persona": [
             "repository manager"
@@ -217,6 +257,26 @@
         "Targets": [
             "indicate",
             "descriptions"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all events occurring to a collection. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "events"
+        ],
+        "Triggers": [
+            "repository manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "events"
         ]
     },
     {
@@ -297,6 +357,26 @@
         "Targets": [
             "describe",
             "object"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate names related to an object. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "names"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "names"
         ]
     },
     {
@@ -460,6 +540,26 @@
         ]
     },
     {
+        "Text": "#G25# As a DAMS manager I want to know what collection(s) an object belongs to. ",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "collection"
+        ],
+        "Triggers": [
+            "DAMS manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "collection"
+        ]
+    },
+    {
         "Text": "#G25# As a user, I want to know what repository an object belongs to. ",
         "Persona": [
             "user"
@@ -477,6 +577,26 @@
         "Targets": [
             "know",
             "System"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to know what collection(s) an object belongs to. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "collection"
+        ],
+        "Triggers": [
+            "user",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "collection"
         ]
     },
     {
@@ -517,6 +637,26 @@
         "Targets": [
             "have",
             "access"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to know the rights status of an object. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "status"
+        ],
+        "Triggers": [
+            "user",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "status"
         ]
     },
     {
@@ -617,6 +757,26 @@
         "Targets": [
             "describe",
             "component"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate any name that is pertinent to the component. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "name"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "name"
         ]
     },
     {
@@ -1200,6 +1360,26 @@
         ]
     },
     {
+        "Text": "#G25# As a user, I want to search by for collections and objects by name. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "collections"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "collections"
+        ]
+    },
+    {
         "Text": "#G25# As a repository manager, I want to indicate that a name pertinent to a collection, object, or object component has a specific role, such as illustrator, photographer, etc. ",
         "Persona": [
             "repository manager"
@@ -1240,6 +1420,66 @@
         ]
     },
     {
+        "Text": "#G25# As a repository manager, I want to indicate all subjects that are pertinent to a collection, object, or object component. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "subjects"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "subjects"
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to search for collections, objects, and object components by pertinent such headings, including title, topic, genre/form, geographical name, function, occupation, name, cartographics, etc. ",
+        "Persona": [
+            "user"
+        ],
+        "Action": [
+            "search"
+        ],
+        "Entity": [
+            "components"
+        ],
+        "Triggers": [
+            "user",
+            "search"
+        ],
+        "Targets": [
+            "search",
+            "components"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate the geo-coordinates for any resource that believe useful to an end user. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "coordinates"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "coordinates"
+        ]
+    },
+    {
         "Text": "#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent. ",
         "Persona": [
             "user"
@@ -1257,6 +1497,26 @@
         "Targets": [
             "see",
             "context"
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate all other pertinent versions or descriptions of a resource that are external to the DAMS. ",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": [
+            "indicate"
+        ],
+        "Entity": [
+            "versions"
+        ],
+        "Triggers": [
+            "repository manager",
+            "indicate"
+        ],
+        "Targets": [
+            "indicate",
+            "versions"
         ]
     },
     {
@@ -1577,6 +1837,26 @@
         "Targets": [
             "know",
             "uses"
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know when permitted and restricted acts and/or their active dates are modified. ",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "acts"
+        ],
+        "Triggers": [
+            "DAMS manager",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "acts"
         ]
     },
     {

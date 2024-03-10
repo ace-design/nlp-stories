@@ -800,6 +800,26 @@
         ]
     },
     {
+        "Text": "#G13# As a participant, I want to change my estimate as long as the draw has not been completed, so that I can change my mind.",
+        "Persona": [
+            "participant"
+        ],
+        "Action": [
+            "change"
+        ],
+        "Entity": [
+            "estimate"
+        ],
+        "Triggers": [
+            "participant",
+            "change"
+        ],
+        "Targets": [
+            "change",
+            "estimate"
+        ]
+    },
+    {
         "Text": "#G13# As a participant, I want to have a small thumbnail photo displayed near where my cards are played, so that the game is more personal because I see who I'm estimating with.",
         "Persona": [
             "participant"

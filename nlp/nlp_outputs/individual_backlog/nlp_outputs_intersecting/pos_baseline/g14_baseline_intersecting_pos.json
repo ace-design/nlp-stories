@@ -530,6 +530,129 @@
     },
     {
         "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to know what do next after signing up, so that that I can get going quickly.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "get going quickly",
+                "do next",
+                "signing up"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "what"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "I can get going quickly",
+        "Triggers": [
+            [
+                "Publisher",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "what"
+            ],
+            [
+                "do next",
+                "what"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB",
+                        "VERB",
+                        "ADV"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ],
+                    [
+                        "VERB",
+                        "ADP"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "get",
+                        "going",
+                        "quickly"
+                    ],
+                    [
+                        "do",
+                        "next"
+                    ],
+                    [
+                        "signing",
+                        "up"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PRON"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "what"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
         "Text": "#G14# As an Admin, I want to invite someone to join the platform, so that that they can start contributing or using data.",
         "Persona": [
             "Admin"
@@ -1373,6 +1496,181 @@
                     [
                         "good",
                         "data"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G14#",
+        "Text": "#G14# As a Publisher, I want to data to be validated when I publish it, so that that I know immediately if I have accidentally broken my data or have bugs and can take action to correct.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": {
+            "Primary Action": [
+                "want"
+            ],
+            "Secondary Action": [
+                "validated",
+                "publish",
+                "know immediately",
+                "accidentally broken",
+                "have",
+                "correct"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                ""
+            ],
+            "Secondary Entity": [
+                "data",
+                "data",
+                "bugs"
+            ]
+        },
+        "Benefit": "I know immediately if I have accidentally broken my data or have bugs and can take action to correct",
+        "Triggers": [
+            [
+                "Publisher",
+                "want"
+            ]
+        ],
+        "Targets": [
+            [
+                "validated",
+                "data"
+            ],
+            [
+                "publish",
+                "data"
+            ],
+            [
+                "accidentally broken",
+                "data"
+            ],
+            [
+                "have",
+                "bugs"
+            ],
+            [
+                "correct",
+                "bugs"
+            ],
+            [
+                "correct",
+                "data"
+            ]
+        ],
+        "Contains": [
+            [
+                "data",
+                "bugs"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Publisher"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "want"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB",
+                        "ADV"
+                    ],
+                    [
+                        "ADV",
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "ADJ"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "validated"
+                    ],
+                    [
+                        "publish"
+                    ],
+                    [
+                        "know",
+                        "immediately"
+                    ],
+                    [
+                        "accidentally",
+                        "broken"
+                    ],
+                    [
+                        "have"
+                    ],
+                    [
+                        "correct"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    []
+                ],
+                "Primary Entity POS text": [
+                    []
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "data"
+                    ],
+                    [
+                        "data"
+                    ],
+                    [
+                        "bugs"
                     ]
                 ]
             }
@@ -4967,154 +5265,6 @@
                     ],
                     [
                         "DataPackage"
-                    ]
-                ]
-            }
-        }
-    },
-    {
-        "PID": "#G14#",
-        "Text": "#G14# As a Publisher, I want to tag datapackage to create a snapshot of data on the registry server, so that that consumers can refer to it.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": {
-            "Primary Action": [
-                "tag"
-            ],
-            "Secondary Action": [
-                "create",
-                "refer"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "datapackage"
-            ],
-            "Secondary Entity": [
-                "snapshot",
-                "data",
-                "registry server",
-                "consumers"
-            ]
-        },
-        "Benefit": "consumers can refer to it",
-        "Triggers": [
-            [
-                "Publisher",
-                "tag"
-            ]
-        ],
-        "Targets": [
-            [
-                "tag",
-                "datapackage"
-            ],
-            [
-                "create",
-                "snapshot"
-            ],
-            [
-                "refer",
-                "datapackage"
-            ]
-        ],
-        "Contains": [
-            [
-                "data",
-                "snapshot"
-            ],
-            [
-                "registry server",
-                "data"
-            ]
-        ],
-        "Persona POS": {
-            "Persona POS tag": [
-                [
-                    "PROPN"
-                ]
-            ],
-            "Persona POS text": [
-                [
-                    "Publisher"
-                ]
-            ]
-        },
-        "Action POS": {
-            "Primary Action POS": {
-                "Primary Action POS tag": [
-                    [
-                        "NOUN"
-                    ]
-                ],
-                "Primary Action POS text": [
-                    [
-                        "tag"
-                    ]
-                ]
-            },
-            "Secondary Action POS": {
-                "Secondary Action POS tag": [
-                    [
-                        "VERB"
-                    ],
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Secondary Action POS text": [
-                    [
-                        "create"
-                    ],
-                    [
-                        "refer"
-                    ]
-                ]
-            }
-        },
-        "Entity POS": {
-            "Primary Entity POS": {
-                "Primary Entity POS tag": [
-                    [
-                        "PROPN"
-                    ]
-                ],
-                "Primary Entity POS text": [
-                    [
-                        "datapackage"
-                    ]
-                ]
-            },
-            "Secondary Entity POS": {
-                "Secondary Entity POS tag": [
-                    [
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN",
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN"
-                    ]
-                ],
-                "Secondary Entity POS text": [
-                    [
-                        "snapshot"
-                    ],
-                    [
-                        "data"
-                    ],
-                    [
-                        "registry",
-                        "server"
-                    ],
-                    [
-                        "consumers"
                     ]
                 ]
             }

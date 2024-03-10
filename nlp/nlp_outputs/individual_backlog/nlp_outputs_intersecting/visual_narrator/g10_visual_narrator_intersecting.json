@@ -880,6 +880,26 @@
         ]
     },
     {
+        "Text": "#G10# As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it.",
+        "Persona": [
+            "site admin"
+        ],
+        "Action": [
+            "emailed"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "site admin",
+            "emailed"
+        ],
+        "Targets": [
+            "emailed",
+            "System"
+        ]
+    },
+    {
         "Text": "#G10# As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site.",
         "Persona": [
             "site member"
@@ -957,6 +977,26 @@
         "Targets": [
             "extend",
             "ad"
+        ]
+    },
+    {
+        "Text": "#G10# As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad.",
+        "Persona": [
+            "advertiser"
+        ],
+        "Action": [
+            "emailed"
+        ],
+        "Entity": [
+            "reminder"
+        ],
+        "Triggers": [
+            "advertiser",
+            "emailed"
+        ],
+        "Targets": [
+            "emailed",
+            "reminder"
         ]
     },
     {
@@ -1057,6 +1097,26 @@
         "Targets": [
             "set",
             "start"
+        ]
+    },
+    {
+        "Text": "#G10# As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently.",
+        "Persona": [
+            "site editor"
+        ],
+        "Action": [
+            "designate"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "site editor",
+            "designate"
+        ],
+        "Targets": [
+            "designate",
+            "page"
         ]
     },
     {
@@ -1317,6 +1377,46 @@
         "Targets": [
             "have",
             "articles"
+        ]
+    },
+    {
+        "Text": "#G10# As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately off the page.",
+        "Persona": [
+            "site visitor"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "alliance"
+        ],
+        "Triggers": [
+            "site visitor",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "alliance"
+        ]
+    },
+    {
+        "Text": "#G10# As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more.",
+        "Persona": [
+            "site visitor"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "page"
+        ],
+        "Triggers": [
+            "site visitor",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "page"
         ]
     },
     {

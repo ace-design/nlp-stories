@@ -673,6 +673,135 @@
     },
     {
         "PID": "#G25#",
+        "Text": "#G25# As the DAMS manager, I want to be able to list for browsing all formal collections represented in the DAMS along with the appropriate relationships.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "list"
+            ],
+            "Secondary Action": [
+                "browsing"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all formal collections",
+                "appropriate relationships"
+            ],
+            "Secondary Entity": [
+                "DAMS"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "DAMS manager",
+                "list"
+            ]
+        ],
+        "Targets": [
+            [
+                "browsing",
+                "all formal collections"
+            ],
+            [
+                "list",
+                "all formal collections"
+            ],
+            [
+                "list",
+                "appropriate relationships"
+            ]
+        ],
+        "Contains": [
+            [
+                "DAMS",
+                "all formal collections"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "DAMS",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "list"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "browsing"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "all",
+                        "formal",
+                        "collections"
+                    ],
+                    [
+                        "appropriate",
+                        "relationships"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "DAMS"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
         "Text": "#G25# As a repository manager, I want to know all the collections for which I have curatorial responsibility.",
         "Persona": [
             "repository manager"
@@ -1255,6 +1384,143 @@
     },
     {
         "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate names related to the collection either as creator, source, or subject.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "names"
+            ],
+            "Secondary Entity": [
+                "collection",
+                "creator",
+                "source",
+                "subject"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "names"
+            ]
+        ],
+        "Contains": [
+            [
+                "collection",
+                "names"
+            ],
+            [
+                "names",
+                "creator"
+            ],
+            [
+                "names",
+                "source"
+            ],
+            [
+                "names",
+                "subject"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "names"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "collection"
+                    ],
+                    [
+                        "creator"
+                    ],
+                    [
+                        "source"
+                    ],
+                    [
+                        "subject"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
         "Text": "#G25# As a repository manager, I want to indicate subjects related to the collection.",
         "Persona": [
             "repository manager"
@@ -1485,6 +1751,116 @@
                     [
                         "probable",
                         "importance"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to know all events occurring to a collection.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "occurring"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all events"
+            ],
+            "Secondary Entity": [
+                "collection"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "all events"
+            ]
+        ],
+        "Contains": [
+            [
+                "collection",
+                "all events"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "occurring"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "all",
+                        "events"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "collection"
                     ]
                 ]
             }
@@ -1940,6 +2316,110 @@
                     [
                         "other",
                         "aspects"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate names related to an object.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "names"
+            ],
+            "Secondary Entity": [
+                "object"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "names"
+            ]
+        ],
+        "Contains": [
+            [
+                "object",
+                "names"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "names"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "object"
                     ]
                 ]
             }
@@ -2843,6 +3323,112 @@
     },
     {
         "PID": "#G25#",
+        "Text": "#G25# As a DAMS manager I want to know what collection(s) an object belongs to.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection(s)"
+            ],
+            "Secondary Entity": [
+                "object"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "collection(s)"
+            ]
+        ],
+        "Contains": [
+            [
+                "collection(s)",
+                "object"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "DAMS",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PUNCT"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "collection(s",
+                        ")"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "object"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
         "Text": "#G25# As a user, I want to know what repository an object belongs to.",
         "Persona": [
             "user"
@@ -2926,6 +3512,110 @@
                 "Primary Entity POS text": [
                     [
                         "repository"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "object"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a user, I want to know what collection(s) an object belongs to.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection(s)"
+            ],
+            "Secondary Entity": [
+                "object"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "collection(s)"
+            ]
+        ],
+        "Contains": [
+            [
+                "collection(s)",
+                "object"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "PUNCT"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "collection(s",
+                        ")"
                     ]
                 ]
             },
@@ -3157,6 +3847,110 @@
                         "content",
                         "files"
                     ],
+                    [
+                        "object"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a user, I want to know the rights status of an object.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "rights status"
+            ],
+            "Secondary Entity": [
+                "object"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "rights status"
+            ]
+        ],
+        "Contains": [
+            [
+                "object",
+                "rights status"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "rights",
+                        "status"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
                     [
                         "object"
                     ]
@@ -3771,6 +4565,112 @@
                     [
                         "other",
                         "facets"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate any name that is pertinent to the component.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "any name"
+            ],
+            "Secondary Entity": [
+                "component"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "any name"
+            ]
+        ],
+        "Contains": [
+            [
+                "component",
+                "any name"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "any",
+                        "name"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "component"
                     ]
                 ]
             }
@@ -7758,6 +8658,123 @@
     },
     {
         "PID": "#G25#",
+        "Text": "#G25# As a user, I want to search by for collections and objects by name.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collections",
+                "objects"
+            ],
+            "Secondary Entity": [
+                "name"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "collections"
+            ],
+            [
+                "search",
+                "objects"
+            ]
+        ],
+        "Contains": [
+            [
+                "objects",
+                "name"
+            ],
+            [
+                "collections",
+                "name"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "collections"
+                    ],
+                    [
+                        "objects"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "name"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
         "Text": "#G25# As a repository manager, I want to indicate that a name pertinent to a collection, object, or object component has a specific role, such as illustrator, photographer, etc.",
         "Persona": [
             "repository manager"
@@ -8058,6 +9075,560 @@
     },
     {
         "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate all subjects that are pertinent to a collection, object, or object component.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all subjects"
+            ],
+            "Secondary Entity": [
+                "collection",
+                "object",
+                "object component"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "all subjects"
+            ]
+        ],
+        "Contains": [
+            [
+                "collection",
+                "all subjects"
+            ],
+            [
+                "object",
+                "all subjects"
+            ],
+            [
+                "object component",
+                "all subjects"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "all",
+                        "subjects"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "collection"
+                    ],
+                    [
+                        "object"
+                    ],
+                    [
+                        "object",
+                        "component"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a user, I want to search for collections, objects, and object components by pertinent such headings, including title, topic, genre/form, geographical name, function, occupation, name, cartographics, etc.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "search"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collections",
+                "objects",
+                "object components"
+            ],
+            "Secondary Entity": [
+                "headings",
+                "title",
+                "topic",
+                "genre",
+                "form",
+                "geographical name",
+                "function",
+                "occupation",
+                "name",
+                "cartographics"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "search"
+            ]
+        ],
+        "Targets": [
+            [
+                "search",
+                "collections"
+            ],
+            [
+                "search",
+                "objects"
+            ],
+            [
+                "search",
+                "object components"
+            ]
+        ],
+        "Contains": [
+            [
+                "collections",
+                "headings"
+            ],
+            [
+                "collections",
+                "title"
+            ],
+            [
+                "collections",
+                "topic"
+            ],
+            [
+                "collections",
+                "genre"
+            ],
+            [
+                "collections",
+                "form"
+            ],
+            [
+                "collections",
+                "geographical name"
+            ],
+            [
+                "collections",
+                "function"
+            ],
+            [
+                "collections",
+                "occupation"
+            ],
+            [
+                "collections",
+                "name"
+            ],
+            [
+                "collections",
+                "cartographics"
+            ],
+            [
+                "objects",
+                "headings"
+            ],
+            [
+                "objects",
+                "title"
+            ],
+            [
+                "objects",
+                "topic"
+            ],
+            [
+                "objects",
+                "genre"
+            ],
+            [
+                "objects",
+                "form"
+            ],
+            [
+                "objects",
+                "geographical name"
+            ],
+            [
+                "objects",
+                "function"
+            ],
+            [
+                "objects",
+                "occupation"
+            ],
+            [
+                "objects",
+                "name"
+            ],
+            [
+                "objects",
+                "cartographics"
+            ],
+            [
+                "object components",
+                "headings"
+            ],
+            [
+                "object components",
+                "title"
+            ],
+            [
+                "object components",
+                "topic"
+            ],
+            [
+                "object components",
+                "genre"
+            ],
+            [
+                "object components",
+                "form"
+            ],
+            [
+                "object components",
+                "geographical name"
+            ],
+            [
+                "object components",
+                "function"
+            ],
+            [
+                "object components",
+                "occupation"
+            ],
+            [
+                "object components",
+                "name"
+            ],
+            [
+                "object components",
+                "cartographics"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "search"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "collections"
+                    ],
+                    [
+                        "objects"
+                    ],
+                    [
+                        "object",
+                        "components"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "headings"
+                    ],
+                    [
+                        "title"
+                    ],
+                    [
+                        "topic"
+                    ],
+                    [
+                        "genre"
+                    ],
+                    [
+                        "form"
+                    ],
+                    [
+                        "geographical",
+                        "name"
+                    ],
+                    [
+                        "function"
+                    ],
+                    [
+                        "occupation"
+                    ],
+                    [
+                        "name"
+                    ],
+                    [
+                        "cartographics"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate the geo-coordinates for any resource that believe useful to an end user.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "geo-coordinates"
+            ],
+            "Secondary Entity": [
+                "any resource",
+                "end user"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "geo-coordinates"
+            ]
+        ],
+        "Contains": [
+            [
+                "any resource",
+                "geo-coordinates"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "geo",
+                        "-coordinates"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "DET",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "any",
+                        "resource"
+                    ],
+                    [
+                        "end",
+                        "user"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
         "Text": "#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent.",
         "Persona": [
             "user"
@@ -8179,6 +9750,138 @@
                     [
                         "object",
                         "component"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a repository manager, I want to indicate all other pertinent versions or descriptions of a resource that are external to the DAMS.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all other pertinent versions",
+                "descriptions"
+            ],
+            "Secondary Entity": [
+                "resource",
+                "DAMS"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "all other pertinent versions"
+            ],
+            [
+                "indicate",
+                "descriptions"
+            ]
+        ],
+        "Contains": [
+            [
+                "resource",
+                "all other pertinent versions"
+            ],
+            [
+                "resource",
+                "descriptions"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "repository",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "indicate"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "DET",
+                        "ADJ",
+                        "ADJ",
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "all",
+                        "other",
+                        "pertinent",
+                        "versions"
+                    ],
+                    [
+                        "descriptions"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "resource"
+                    ],
+                    [
+                        "DAMS"
                     ]
                 ]
             }
@@ -10325,6 +12028,137 @@
                     [
                         "object",
                         "component"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G25#",
+        "Text": "#G25# As a DAMS manager, I want to know when permitted and restricted acts and/or their active dates are modified.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "modified"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "when"
+            ],
+            "Secondary Entity": [
+                "permitted and restricted acts",
+                "active dates"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "when"
+            ],
+            [
+                "modified",
+                "active dates"
+            ],
+            [
+                "modified",
+                "permitted and restricted acts"
+            ]
+        ],
+        "Contains": [
+            [
+                "permitted and restricted acts",
+                "active dates"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "DAMS",
+                    "manager"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "modified"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "SCONJ"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "when"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "VERB",
+                        "CCONJ",
+                        "VERB",
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "permitted",
+                        "and",
+                        "restricted",
+                        "acts"
+                    ],
+                    [
+                        "active",
+                        "dates"
                     ]
                 ]
             }

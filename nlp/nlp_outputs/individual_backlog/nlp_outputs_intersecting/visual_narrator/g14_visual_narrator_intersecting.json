@@ -80,6 +80,26 @@
         ]
     },
     {
+        "Text": "#G14# As a Publisher, I want to know what do next after signing up, so that that I can get going quickly.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "know"
+        ],
+        "Entity": [
+            "System"
+        ],
+        "Triggers": [
+            "Publisher",
+            "know"
+        ],
+        "Targets": [
+            "know",
+            "System"
+        ]
+    },
+    {
         "Text": "#G14# As an Admin, I want to invite someone to join the platform, so that that they can start contributing or using data.",
         "Persona": [
             "Admin"
@@ -217,6 +237,26 @@
         "Targets": [
             "validate",
             "data"
+        ]
+    },
+    {
+        "Text": "#G14# As a Publisher, I want to data to be validated when I publish it, so that that I know immediately if I have accidentally broken my data or have bugs and can take action to correct.",
+        "Persona": [
+            "Publisher"
+        ],
+        "Action": [
+            "publish"
+        ],
+        "Entity": [
+            "it"
+        ],
+        "Triggers": [
+            "Publisher",
+            "publish"
+        ],
+        "Targets": [
+            "publish",
+            "it"
         ]
     },
     {
@@ -737,26 +777,6 @@
         "Targets": [
             "list",
             "requirements"
-        ]
-    },
-    {
-        "Text": "#G14# As a Publisher, I want to tag datapackage to create a snapshot of data on the registry server, so that that consumers can refer to it.",
-        "Persona": [
-            "Publisher"
-        ],
-        "Action": [
-            "tag"
-        ],
-        "Entity": [
-            "datapackage"
-        ],
-        "Triggers": [
-            "Publisher",
-            "tag"
-        ],
-        "Targets": [
-            "tag",
-            "datapackage"
         ]
     },
     {

@@ -3546,6 +3546,163 @@
     },
     {
         "PID": "#G28#",
+        "Text": "#G28# As a Zooniverse admin, I want to detect when a scientist should be prompted to look at a subject, based on annotations and information from Talk comments.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "detect"
+            ],
+            "Secondary Action": [
+                "look",
+                "prompted"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "when"
+            ],
+            "Secondary Entity": [
+                "scientist",
+                "subject",
+                "annotations",
+                "information",
+                "Talk comments"
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "detect"
+            ]
+        ],
+        "Targets": [
+            [
+                "detect",
+                "when"
+            ],
+            [
+                "prompted",
+                "scientist"
+            ],
+            [
+                "look",
+                "subject"
+            ]
+        ],
+        "Contains": [
+            [
+                "Talk comments",
+                "information"
+            ],
+            [
+                "Talk comments",
+                "annotations"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Zooniverse",
+                    "admin"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "detect"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "look"
+                    ],
+                    [
+                        "prompted"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "SCONJ"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "when"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "VERB",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "scientist"
+                    ],
+                    [
+                        "subject"
+                    ],
+                    [
+                        "annotations"
+                    ],
+                    [
+                        "information"
+                    ],
+                    [
+                        "Talk",
+                        "comments"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G28#",
         "Text": "#G28# As a Zooniverse admin, I want to identify volunteer types.",
         "Persona": [
             "Zooniverse admin"
@@ -5811,6 +5968,103 @@
                         "audio",
                         "files"
                     ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G28#",
+        "Text": "#G28# As a Zooniverse admin, I want to group whale calls that are similar.",
+        "Persona": [
+            "Zooniverse admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "group"
+            ],
+            "Secondary Action": [
+                ""
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "whale calls"
+            ],
+            "Secondary Entity": [
+                ""
+            ]
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "Zooniverse admin",
+                "group"
+            ]
+        ],
+        "Targets": [
+            [
+                "group",
+                "whale calls"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "PROPN",
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "Zooniverse",
+                    "admin"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "group"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    []
+                ],
+                "Secondary Action POS text": [
+                    []
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "whale",
+                        "calls"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    []
+                ],
+                "Secondary Entity POS text": [
+                    []
                 ]
             }
         }

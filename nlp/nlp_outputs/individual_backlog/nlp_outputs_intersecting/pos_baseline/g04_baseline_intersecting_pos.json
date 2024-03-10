@@ -544,6 +544,119 @@
     },
     {
         "PID": "#G04#",
+        "Text": "#G04# As a user, I want to have a flexible pick up time, so that I can more conveniently use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "conveniently use"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "flexible pick up time"
+            ],
+            "Secondary Entity": [
+                "website"
+            ]
+        },
+        "Benefit": "I can more conveniently use the website",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "flexible pick up time"
+            ],
+            [
+                "conveniently use",
+                "website"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "have"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "ADV",
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "conveniently",
+                        "use"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "VERB",
+                        "ADP",
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "flexible",
+                        "pick",
+                        "up",
+                        "time"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "website"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G04#",
         "Text": "#G04# As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
         "Persona": [
             "user"
@@ -1700,6 +1813,113 @@
     },
     {
         "PID": "#G04#",
+        "Text": "#G04# As a user, I want to be able to create an acocunt, so that I can create my own profile.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "create"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "acocunt"
+            ],
+            "Secondary Entity": [
+                "own profile"
+            ]
+        },
+        "Benefit": "I can create my own profile",
+        "Triggers": [
+            [
+                "user",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "acocunt"
+            ],
+            [
+                "create",
+                "own profile"
+            ]
+        ],
+        "Contains": [],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "create"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "create"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "PROPN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "acocunt"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "own",
+                        "profile"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G04#",
         "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
         "Persona": [
             "admin"
@@ -1833,160 +2053,6 @@
                     [
                         "recent",
                         "information"
-                    ]
-                ]
-            }
-        }
-    },
-    {
-        "PID": "#G04#",
-        "Text": "#G04# As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
-        "Persona": [
-            "admin"
-        ],
-        "Action": {
-            "Primary Action": [
-                "read"
-            ],
-            "Secondary Action": [
-                "add",
-                "provide",
-                "improving"
-            ]
-        },
-        "Entity": {
-            "Primary Entity": [
-                "complaints",
-                "users' feedback"
-            ],
-            "Secondary Entity": [
-                "features",
-                "service"
-            ]
-        },
-        "Benefit": "we can add more features and keep improving the service we provide to them",
-        "Triggers": [
-            [
-                "admin",
-                "read"
-            ]
-        ],
-        "Targets": [
-            [
-                "read",
-                "complaints"
-            ],
-            [
-                "add",
-                "features"
-            ],
-            [
-                "improving",
-                "service"
-            ],
-            [
-                "provide",
-                "service"
-            ],
-            [
-                "read",
-                "users' feedback"
-            ]
-        ],
-        "Contains": [
-            [
-                "users' feedback",
-                "features"
-            ]
-        ],
-        "Persona POS": {
-            "Persona POS tag": [
-                [
-                    "PROPN"
-                ]
-            ],
-            "Persona POS text": [
-                [
-                    "admin"
-                ]
-            ]
-        },
-        "Action POS": {
-            "Primary Action POS": {
-                "Primary Action POS tag": [
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Primary Action POS text": [
-                    [
-                        "read"
-                    ]
-                ]
-            },
-            "Secondary Action POS": {
-                "Secondary Action POS tag": [
-                    [
-                        "VERB"
-                    ],
-                    [
-                        "VERB"
-                    ],
-                    [
-                        "VERB"
-                    ]
-                ],
-                "Secondary Action POS text": [
-                    [
-                        "add"
-                    ],
-                    [
-                        "provide"
-                    ],
-                    [
-                        "improving"
-                    ]
-                ]
-            }
-        },
-        "Entity POS": {
-            "Primary Entity POS": {
-                "Primary Entity POS tag": [
-                    [
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN",
-                        "PART",
-                        "NOUN"
-                    ]
-                ],
-                "Primary Entity POS text": [
-                    [
-                        "complaints"
-                    ],
-                    [
-                        "users",
-                        "'",
-                        "feedback"
-                    ]
-                ]
-            },
-            "Secondary Entity POS": {
-                "Secondary Entity POS tag": [
-                    [
-                        "NOUN"
-                    ],
-                    [
-                        "NOUN"
-                    ]
-                ],
-                "Secondary Entity POS text": [
-                    [
-                        "features"
-                    ],
-                    [
-                        "service"
                     ]
                 ]
             }
@@ -5907,6 +5973,145 @@
                     ],
                     [
                         "website"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "PID": "#G04#",
+        "Text": "#G04# As a user, I want to be able to browse through the list of facolities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "browse",
+                "see"
+            ],
+            "Secondary Action": [
+                "know"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "list",
+                "facolities"
+            ],
+            "Secondary Entity": [
+                "waste",
+                "negative ecological footprint"
+            ]
+        },
+        "Benefit": "I can know for sure my waste is not going to leave a negative ecological footprint",
+        "Triggers": [
+            [
+                "user",
+                "browse"
+            ],
+            [
+                "user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "browse",
+                "list"
+            ],
+            [
+                "see",
+                "facolities"
+            ]
+        ],
+        "Contains": [
+            [
+                "list",
+                "facolities"
+            ]
+        ],
+        "Persona POS": {
+            "Persona POS tag": [
+                [
+                    "NOUN"
+                ]
+            ],
+            "Persona POS text": [
+                [
+                    "user"
+                ]
+            ]
+        },
+        "Action POS": {
+            "Primary Action POS": {
+                "Primary Action POS tag": [
+                    [
+                        "VERB"
+                    ],
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Primary Action POS text": [
+                    [
+                        "browse"
+                    ],
+                    [
+                        "see"
+                    ]
+                ]
+            },
+            "Secondary Action POS": {
+                "Secondary Action POS tag": [
+                    [
+                        "VERB"
+                    ]
+                ],
+                "Secondary Action POS text": [
+                    [
+                        "know"
+                    ]
+                ]
+            }
+        },
+        "Entity POS": {
+            "Primary Entity POS": {
+                "Primary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "NOUN"
+                    ]
+                ],
+                "Primary Entity POS text": [
+                    [
+                        "list"
+                    ],
+                    [
+                        "facolities"
+                    ]
+                ]
+            },
+            "Secondary Entity POS": {
+                "Secondary Entity POS tag": [
+                    [
+                        "NOUN"
+                    ],
+                    [
+                        "ADJ",
+                        "ADJ",
+                        "NOUN"
+                    ]
+                ],
+                "Secondary Entity POS text": [
+                    [
+                        "waste"
+                    ],
+                    [
+                        "negative",
+                        "ecological",
+                        "footprint"
                     ]
                 ]
             }
