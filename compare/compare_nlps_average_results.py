@@ -13,7 +13,7 @@ def main():
         data = extract_data(nlp_path)
         nlp_data.append(data)
 
-    precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(data, nlps)
+    precision_formatted_data, recall_formatted_data, f_measure_formatted_data  = format_data(nlp_data, nlps)
 
     create_final_bargraph(nlps, precision_formatted_data, "Precision Average" + title_name + " " + comparison_type, saving_path + "_precison_compare_average.png")
     create_final_bargraph(nlps, recall_formatted_data, "Recall Average" + title_name + " " + comparison_type, saving_path + "_recall_compare_average.png")
@@ -62,7 +62,7 @@ def command():
         nlp = nlpList[i]
 
         if path != None:
-            if not(args.path.endswith(".csv")):
+            if not(path.endswith(".csv")):
                 sys.tracebacklimit = 0
                 raise Exception ("Incorrect input file type. File type is .csv")
             nlp_paths.append(path)
@@ -80,7 +80,7 @@ def command():
                 break
         
         if validComparison:
-            comparison_type = title(comparisons) + " Comparison"
+            comparison_type = comparison.title() + " Comparison"
             saving_name = comparison + "_" + args.evalationType
             break
 
@@ -139,7 +139,7 @@ def extract_data(path):
 
     return data
 
-def format_data(data, nlps):
+def format_data(nlp_data, nlps):
     '''
     formats the data so that it can be easily plotted onto the graphs
 
@@ -155,11 +155,11 @@ def format_data(data, nlps):
         nlps_average = []
         nlps_sd = []
 
-        for nlp_data in data:
-            average, sd = nlp_data[i]
+        for data in nlp_data:
+            average, sd = data
 
-            nlps_average.append(average)
-            nlps_sd.append(sd)
+            nlps_average.append(float(average[i]))
+            nlps_sd.append(float(sd[i]))
 
         row = nlps_average + nlps_sd
         table.append(row)

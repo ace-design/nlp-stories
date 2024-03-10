@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import seaborn as sns
+import shutil
 import stanza
 import subprocess
 import sys
@@ -322,7 +323,12 @@ def command():
             save_folder_path = "final_results\\individual_nlp_results\\individual_results\\" + crf_path + data_type_folder + "\\" + nlp_type + "\\" + args.save_folder_name + "_relaxed_comparison"
             comparison_mode = 3
         
-        os.mkdir(save_folder_path)
+        if not os.path.exists(save_folder_path):
+            os.makedirs(save_folder_path)
+        else:
+            shutil.rmtree(save_folder_path)
+            os.makedirs(save_folder_path)
+
     except FileNotFoundError:
         sys.tracebacklimit = 0
         print("File or directory does not exist")
@@ -560,9 +566,57 @@ def extract_nlp_tool_info(path):
 
     for story in data:
         text.append(story["Text"])
-        persona.append(story["Persona"])
-        entity.append(story["Entity"])
-        action.append(story["Action"])
+        if "Persona" in story:
+            persona.append(story["Persona"])
+        else:
+            persona.append([])
+
+        if "Entity" in story:
+            if type(story["Entity"]) is dict:
+                primary_entity = []
+                story_entity = []
+
+                if "Primary Entity" in story["Entity"]:
+                    primary_entity = story["Entity"]["Primary Entity"]
+
+                if "Secondary Entity" in story["Entity"]:
+                    secondary_entity = story["Entity"]["Secondary Entity"]
+                
+                story_entity = primary_entity + secondary_entity
+
+                while "" in story_entity:
+                    story_entity.remove("")
+        
+                entity.append(story_entity)
+        
+            else:
+                entity.append(story["Entity"])
+        else:
+            entity.append([])
+
+        if "Action" in story:
+            if type(story["Action"]) is dict:
+                primary_action = []
+                secondary_action = []
+
+                if "Primary Action" in story["Action"]:
+                    primary_action = story["Action"]["Primary Action"]
+
+                if "Secondary Action" in story["Action"]:
+                    secondary_action = story["Action"]["Secondary Action"]
+                
+                story_action = primary_action + secondary_action
+
+                while "" in story_action:
+                    story_action.remove("")
+        
+                action.append(story_action)
+        
+            else:
+                action.append(story["Action"])
+        else:
+            action.append([])
+
     file.close()
 
     nlp_tool_data = [text, persona, entity, action]
@@ -640,7 +694,7 @@ def sort(baseline_data, nlp_tool_data, pos_data):
 
     return sorted_baseline_data, sorted_nlp_tool_data, sorted_pos, missing_stories
 
-def strict_compare (baseline, nlp):
+def strict_compare (baseline, nlpData):
     '''
     calculate the number of true/false positives and false negatives using STRICT comparison
 
@@ -655,8 +709,8 @@ def strict_compare (baseline, nlp):
     true_positive = []
     false_positive = []
 
-    for i in range(len(nlp)):
-        nlp_element = nlp[i].lower().strip()
+    for data in nlpData:
+        nlp_element = data.lower().strip()
         not_true_positive = True
 
         for j in range (len(baseline)):
@@ -677,7 +731,7 @@ def strict_compare (baseline, nlp):
 
     return comparison_results
 
-def inclusion_compare (baseline, nlp):
+def inclusion_compare (baseline, nlpData):
     '''
     calculate the number of true/false positives and false negatives for inclusion comparison mode
 
@@ -691,8 +745,8 @@ def inclusion_compare (baseline, nlp):
     true_positive = []
     false_positive = []
 
-    for i in range(len(nlp)):
-        nlp_element = nlp[i].lower().strip()
+    for data in nlpData:
+        nlp_element = data.lower().strip()
         not_true_positive = True
 
         #first checks if there are any exact cases
@@ -755,7 +809,7 @@ def check_inclusion_elements(nlp_element, baseline_element):
                         return True
     return False
         
-def relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp):
+def relaxed_compare(baseline, nlpData, pos_data, stanza_pos_nlp):
     '''
     calculate the number of true/false positives and false negatives for relaxed comparison mode
 
@@ -776,8 +830,8 @@ def relaxed_compare(baseline, nlp, pos_data, stanza_pos_nlp):
 
     baseline_pos_tag, baseline_pos_text = pos_data
 
-    for i in range(len(nlp)):
-        nlp_element = nlp[i].lower().strip()
+    for data in nlpData:
+        nlp_element = data.lower().strip()
         not_true_positive = True
 
         #first checks if there are any exact cases

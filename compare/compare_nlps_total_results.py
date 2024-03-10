@@ -63,7 +63,7 @@ def command():
         nlp = nlpList[i]
 
         if path != None:
-            if not(args.path.endswith(".csv")):
+            if not(path.endswith(".csv")):
                 sys.tracebacklimit = 0
                 raise Exception ("Incorrect input file type. File type is .csv")
             nlp_paths.append(path)
@@ -81,7 +81,7 @@ def command():
                 break
         
         if validComparison:
-            comparison_type = title(comparisons) + " Comparison"
+            comparison_type = comparison.title() + " Comparison"
             saving_name = comparison + "_" + args.evalationType
             break
 
@@ -207,10 +207,10 @@ def format_data(datasets_label, number_dataset, nlp_data, nlps):
 
             rounded_data = round_data(data[i].values.tolist())
 
-            rounded_data_list.append(rounded_data)
+            rounded_data_list += rounded_data
             nlp_list = nlp_list + [nlp]*number_dataset
 
-        formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * 2,
+        formatted_data.append(pd.DataFrame({ "Dataset": datasets_label * len(nlps),
                             "Data":  rounded_data_list,
                             "nlp":  nlp_list}))
 
@@ -233,7 +233,7 @@ def round_data(data):
 
     return rounded
 
-def create_final_bargraph(nlps, precision_results,recall_results, f_measure_results, title, save_path):
+def create_final_bargraph(nlps, precision_results, recall_results, f_measure_results, title, save_path):
     
     graph, (precision_plot, recall_plot, f_measure_plot) = plt.subplots(3, 1, figsize=(20, 6), sharex=True)
 
