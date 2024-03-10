@@ -45,7 +45,7 @@ def command():
     parser.add_argument("--load_gpt_4_v0613_path", type = str, help = "path of GPT-4 Turbo V0613 csv file") 
     parser.add_argument("--load_visual_narrator_path", type = str, help = "path of visual narrator csv file")
     parser.add_argument("--load_crf_path", nargs="?", type = str, help = "path of crf csv file")
-    parser.add_argument("evalationType", type = str, choices=["all", "primary"] help = "Type of data scope used [all, primary]")
+    parser.add_argument("evalationType", type = str, choices=["all", "primary"], help = "Type of data scope used [all, primary]")
     parser.add_argument("data_type", type = str, choices=["BKLG", "CAT", "GLO"], help = "evaluation by individual backlogs - BKLG, categorized backlogs - CAT, or global - GLO")
 
     
