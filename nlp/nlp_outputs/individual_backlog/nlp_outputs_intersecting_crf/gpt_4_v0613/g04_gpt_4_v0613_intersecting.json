@@ -1,0 +1,436 @@
+[
+    {
+        "Text": "#G04# As a user, I want to be able to view a map display of the public recycling bins around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I want to be able to view a map display of the public recycling bins around my area",
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "map display",
+                "public recycling bins"
+            ],
+            "Secondary Entity": [
+                "my area"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "map display"
+            ],
+            [
+                "view",
+                "public recycling bins"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I can give feedback or ask for help",
+        "Action": {
+            "Primary Action": [
+                "contact"
+            ],
+            "Secondary Action": [
+                "give",
+                "ask"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "administrators"
+            ],
+            "Secondary Entity": [
+                "feedback",
+                "help"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "contact"
+            ]
+        ],
+        "Targets": [
+            [
+                "contact",
+                "administrators"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I can get a temporary password in case I forget my own one",
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "get"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "email account",
+                "profile"
+            ],
+            "Secondary Entity": [
+                "temporary password"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "link"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "email account"
+            ],
+            [
+                "link",
+                "profile"
+            ],
+            [
+                "get",
+                "temporary password"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I can receive notifications for new events as they are posted",
+        "Action": {
+            "Primary Action": [
+                "give",
+                "receive"
+            ],
+            "Secondary Action": [
+                "posted"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "email ID",
+                "notifications"
+            ],
+            "Secondary Entity": [
+                "new events"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "give"
+            ],
+            [
+                "user",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "give",
+                "email ID"
+            ],
+            [
+                "receive",
+                "notifications"
+            ],
+            [
+                "posted",
+                "new events"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I can view them later",
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": [
+                "view"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "donation centers",
+                "profile"
+            ],
+            "Secondary Entity": [
+                "favorites"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "donation centers"
+            ],
+            [
+                "add",
+                "profile"
+            ],
+            [
+                "view",
+                "favorites"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+        "Persona": [
+            "admin"
+        ],
+        "Benefit": "I can fix or review any issues that are being faced by users of the system",
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": [
+                "fix",
+                "review"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user error logs"
+            ],
+            "Secondary Entity": [
+                "issues",
+                "users of the system"
+            ]
+        },
+        "Triggers": [
+            [
+                "admin",
+                "view"
+            ],
+            [
+                "view",
+                "fix"
+            ],
+            [
+                "view",
+                "review"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "user error logs"
+            ],
+            [
+                "fix",
+                "issues"
+            ],
+            [
+                "review",
+                "users of the system"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+        "Persona": [
+            "admin"
+        ],
+        "Benefit": "users get the most recent information",
+        "Action": {
+            "Primary Action": [
+                "add",
+                "remove"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "recycling facilities' information"
+            ],
+            "Secondary Entity": [
+                "users",
+                "most recent information"
+            ]
+        },
+        "Triggers": [
+            [
+                "admin",
+                "add"
+            ],
+            [
+                "admin",
+                "remove"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "recycling facilities' information"
+            ],
+            [
+                "remove",
+                "recycling facilities' information"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I want to be able to view the safe disposal events currently being organised around my area",
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": [
+                "being organised"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "safe disposal events"
+            ],
+            "Secondary Entity": [
+                "my area"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "safe disposal events"
+            ],
+            [
+                "being organised",
+                "my area"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+        "Persona": [
+            "company"
+        ],
+        "Benefit": "I can upload or delete stuff step by step",
+        "Action": {
+            "Primary Action": [
+                "have",
+                "upload",
+                "delete"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "website"
+            ],
+            "Secondary Entity": [
+                "stuff"
+            ]
+        },
+        "Triggers": [
+            [
+                "company",
+                "have"
+            ],
+            [
+                "company",
+                "upload"
+            ],
+            [
+                "company",
+                "delete"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "website"
+            ],
+            [
+                "upload",
+                "stuff"
+            ],
+            [
+                "delete",
+                "stuff"
+            ]
+        ]
+    },
+    {
+        "Text": "#G04# As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "it takes me to a new tab with Google Maps",
+        "Action": {
+            "Primary Action": [
+                "click"
+            ],
+            "Secondary Action": [
+                "takes"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "address"
+            ],
+            "Secondary Entity": [
+                "new tab",
+                "Google Maps"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "click"
+            ]
+        ],
+        "Targets": [
+            [
+                "click",
+                "address"
+            ]
+        ]
+    }
+]

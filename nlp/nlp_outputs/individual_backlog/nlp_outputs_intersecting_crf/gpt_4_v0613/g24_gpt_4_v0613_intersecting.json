@@ -1,0 +1,469 @@
+[
+    {
+        "Text": "#G24# As a Research Information manager, I want to have datasets linked to metadata about projects, so that I can report on projects depositing datasets in relation to funder requirements.",
+        "Persona": [
+            "Research Information manager"
+        ],
+        "Benefit": "I can report on projects depositing datasets in relation to funder requirements",
+        "Action": {
+            "Primary Action": [
+                "have",
+                "linked"
+            ],
+            "Secondary Action": [
+                "report"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets",
+                "metadata about projects"
+            ],
+            "Secondary Entity": [
+                "projects depositing datasets",
+                "funder requirements"
+            ]
+        },
+        "Triggers": [
+            [
+                "Research Information manager",
+                "have"
+            ],
+            [
+                "Research Information manager",
+                "linked"
+            ],
+            [
+                "Research Information manager",
+                "report"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "datasets"
+            ],
+            [
+                "have",
+                "metadata about projects"
+            ],
+            [
+                "linked",
+                "datasets"
+            ],
+            [
+                "linked",
+                "metadata about projects"
+            ],
+            [
+                "report",
+                "projects depositing datasets"
+            ],
+            [
+                "report",
+                "funder requirements"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a data reuser, I want to access the system in my native language, so that I am not put off reusing University of Bath data by language barriers.",
+        "Persona": [
+            "data reuser"
+        ],
+        "Benefit": "I am not put off reusing University of Bath data by language barriers",
+        "Action": {
+            "Primary Action": [
+                "access"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "system",
+                "native language"
+            ],
+            "Secondary Entity": [
+                "University of Bath data",
+                "language barriers"
+            ]
+        },
+        "Triggers": [
+            [
+                "data reuser",
+                "access"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "system"
+            ],
+            [
+                "access",
+                "native language"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to link datasets with the project DMP, so that compliance with DMP can be demonstrated and whole project workflow is linked together.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "compliance with DMP can be demonstrated and whole project workflow is linked together",
+        "Action": {
+            "Primary Action": [
+                "link"
+            ],
+            "Secondary Action": [
+                "be demonstrated",
+                "is linked together"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets",
+                "project DMP"
+            ],
+            "Secondary Entity": [
+                "compliance with DMP",
+                "whole project workflow"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "link"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "datasets"
+            ],
+            [
+                "link",
+                "project DMP"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to place data under an embargo, so that my right of first use is protected, and I can fulfil my confidentiality responsibilities.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "my right of first use is protected, and I can fulfil my confidentiality responsibilities",
+        "Action": {
+            "Primary Action": [
+                "place"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data",
+                "embargo"
+            ],
+            "Secondary Entity": [
+                "right of first use",
+                "confidentiality responsibilities"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "place"
+            ]
+        ],
+        "Targets": [
+            [
+                "place",
+                "data"
+            ],
+            [
+                "place",
+                "embargo"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to attach subject specific discoverability metadata to records, so that researchers in my discipline can find my data more easily.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "researchers in my discipline can find my data more easily",
+        "Action": {
+            "Primary Action": [
+                "attach"
+            ],
+            "Secondary Action": [
+                "find"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "subject specific discoverability metadata",
+                "records",
+                "my data"
+            ],
+            "Secondary Entity": [
+                "researchers",
+                "my discipline"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "attach"
+            ],
+            [
+                "depositor",
+                "find"
+            ]
+        ],
+        "Targets": [
+            [
+                "attach",
+                "subject specific discoverability metadata"
+            ],
+            [
+                "attach",
+                "records"
+            ],
+            [
+                "attach",
+                "my data"
+            ],
+            [
+                "find",
+                "researchers"
+            ],
+            [
+                "find",
+                "my discipline"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit the files that I have, so that I don't have to spend a lot of time finding the right version and converting to the right format.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "I don't have to spend a lot of time finding the right version and converting to the right format",
+        "Action": {
+            "Primary Action": [
+                "deposit"
+            ],
+            "Secondary Action": [
+                "spend",
+                "finding",
+                "converting"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "files"
+            ],
+            "Secondary Entity": [
+                "right version",
+                "right format"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ]
+        ],
+        "Targets": [
+            [
+                "deposit",
+                "files"
+            ],
+            [
+                "deposit",
+                "right version"
+            ],
+            [
+                "deposit",
+                "right format"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to manage multiple versions of the same dataset, so that changes to the dataset are transparent and do not compromise research integrity.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "changes to the dataset are transparent and do not compromise research integrity",
+        "Action": {
+            "Primary Action": [
+                "manage"
+            ],
+            "Secondary Action": [
+                "compromise"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "multiple versions",
+                "same dataset"
+            ],
+            "Secondary Entity": [
+                "changes",
+                "dataset",
+                "research integrity"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "manage",
+                "multiple versions"
+            ],
+            [
+                "manage",
+                "same dataset"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Virtual Research Environments and other workflow tools, so that I can continue to work with tools with which I'm familiar.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "I can continue to work with tools with which I'm familiar",
+        "Action": {
+            "Primary Action": [
+                "deposit",
+                "maintain"
+            ],
+            "Secondary Action": [
+                "continue to work"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "Virtual Research Environments",
+                "workflow tools"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ],
+            [
+                "depositor",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "deposit",
+                "datasets"
+            ],
+            [
+                "maintain",
+                "datasets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to allow my collaborators privileged access to datasets, so that we continue to have a productive relationship.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "we continue to have a productive relationship",
+        "Action": {
+            "Primary Action": [
+                "allow"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collaborators",
+                "datasets"
+            ],
+            "Secondary Entity": [
+                "privileged access",
+                "productive relationship"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "allow"
+            ]
+        ],
+        "Targets": [
+            [
+                "allow",
+                "collaborators"
+            ],
+            [
+                "allow",
+                "datasets"
+            ]
+        ]
+    },
+    {
+        "Text": "#G24# As a depositor, I want to deposit and maintain datasets through Pure, so that I have a single onestop shop for managing my research outputs.",
+        "Persona": [
+            "depositor"
+        ],
+        "Benefit": "I have a single onestop shop for managing my research outputs",
+        "Action": {
+            "Primary Action": [
+                "deposit",
+                "maintain"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "datasets",
+                "Pure"
+            ],
+            "Secondary Entity": [
+                "research outputs"
+            ]
+        },
+        "Triggers": [
+            [
+                "depositor",
+                "deposit"
+            ],
+            [
+                "depositor",
+                "maintain"
+            ]
+        ],
+        "Targets": [
+            [
+                "deposit",
+                "datasets"
+            ],
+            [
+                "deposit",
+                "Pure"
+            ],
+            [
+                "maintain",
+                "datasets"
+            ],
+            [
+                "maintain",
+                "Pure"
+            ]
+        ]
+    }
+]

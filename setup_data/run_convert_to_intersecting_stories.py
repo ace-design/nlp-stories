@@ -58,11 +58,9 @@ def get_info(grouping_code, with_crf):
     if with_crf:
         crf_path = "\\crf_input\\testing_input\\"
         is_crf = " --crf_intersecting_set "
-        nlp = ["crf", "visual_narrator", "pos_baseline", "gpt_3_5_v0125", "gpt_3_5_v0613_2023", "gpt_3_5_v0613_2024", 
-                "gpt_4_turbo_v0125", "gpt_4_v0613"]
-        nlp_code = ["CRF", "VN", "BASE", "GPT_3_5_V0125", "GPT_3_5_V0613_2023", "GPT_3_5_V0613_2024", "GPT_4_TURBO_V0125", "GPT_4_V0613"]
-        nlp_file_name = ["_crf", "_visual_narrator", "_baseline_pos", "_gpt_3_5_v0125", "_gpt_3_5_v0613_2023", 
-                         "_gpt_3_5_v0613_2024", "_gpt_4_turbo_v0125", "_gpt_4_v0613"]
+        nlp = ["crf", "visual_narrator", "pos_baseline", "gpt_4_v0613"]
+        nlp_code = ["CRF", "VN", "BASE", "GPT_4_V0613"]
+        nlp_file_name = ["_crf", "_visual_narrator", "_baseline_pos", "_gpt_4_v0613"]
         file_type = ".json "
     else:
         crf_path = "\\intersecting_stories\\"

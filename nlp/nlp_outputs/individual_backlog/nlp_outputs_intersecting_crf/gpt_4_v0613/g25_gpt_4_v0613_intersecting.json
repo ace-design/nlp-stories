@@ -1,0 +1,819 @@
+[
+    {
+        "Text": "#G25# As a user, I want to be able to see and navigate the component hierarchy of an object.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I want to be able to see and navigate the component hierarchy of an object",
+        "Action": {
+            "Primary Action": [
+                "see",
+                "navigate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "component hierarchy"
+            ],
+            "Secondary Entity": [
+                "object"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "see"
+            ],
+            [
+                "user",
+                "navigate"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "component hierarchy"
+            ],
+            [
+                "navigate",
+                "component hierarchy"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate other descriptions of the collection that are outside the DAMS and of probable importance to users.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "of probable importance to users",
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "other descriptions",
+                "collection"
+            ],
+            "Secondary Entity": [
+                "DAMS",
+                "probable importance",
+                "users"
+            ]
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "other descriptions"
+            ],
+            [
+                "indicate",
+                "collection"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know all the statutes pertinent to an object or object component.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to know all the statutes pertinent to an object or object component",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "statutes"
+            ],
+            "Secondary Entity": [
+                "object",
+                "object component"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "statutes"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if an object or object component is subject to a library policy that restricts access in any way.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to know if an object or object component is subject to a library policy that restricts access in any way",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "restricts"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "object",
+                "object component"
+            ],
+            "Secondary Entity": [
+                "library policy"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "object"
+            ],
+            [
+                "know",
+                "object component"
+            ],
+            [
+                "restricts",
+                "library policy"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to scope my searches for collections, objects, or object components to a specific language.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "to scope my searches for collections, objects, or object components to a specific language",
+        "Action": {
+            "Primary Action": [
+                "scope"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "searches",
+                "specific language"
+            ],
+            "Secondary Entity": [
+                "collections",
+                "objects",
+                "object components"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "scope"
+            ]
+        ],
+        "Targets": [
+            [
+                "scope",
+                "searches"
+            ],
+            [
+                "scope",
+                "specific language"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to indicate to preservation managers the checksum and checksum method for each master file for a given object.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I can indicate to preservation managers the checksum and checksum method for each master file for a given object",
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "DAMS manager",
+                "checksum",
+                "checksum method",
+                "master file",
+                "given object"
+            ],
+            "Secondary Entity": [
+                "preservation managers"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "checksum"
+            ],
+            [
+                "indicate",
+                "checksum method"
+            ],
+            [
+                "indicate",
+                "master file"
+            ],
+            [
+                "indicate",
+                "given object"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe each component as necessary, including title, date(s), language(s), and other facets.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I can describe each component as necessary, including title, date(s), language(s), and other facets",
+        "Action": {
+            "Primary Action": [
+                "describe"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "component"
+            ],
+            "Secondary Entity": [
+                "title",
+                "date(s)",
+                "language(s)",
+                "other facets"
+            ]
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "describe"
+            ]
+        ],
+        "Targets": [
+            [
+                "describe",
+                "component"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to track all events scheduled for recording in the DAMS.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to track all events scheduled for recording in the DAMS",
+        "Action": {
+            "Primary Action": [
+                "track"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "events",
+                "DAMS"
+            ],
+            "Secondary Entity": [
+                "recording"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "track"
+            ]
+        ],
+        "Targets": [
+            [
+                "track",
+                "events"
+            ],
+            [
+                "track",
+                "DAMS"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to know about other versions of the object or its metadata that might be of use to me.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "that might be of use to me",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "other versions of the object"
+            ],
+            "Secondary Entity": [
+                "metadata"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "other versions of the object"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to present collections, objects, and object components by title.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to present collections, objects, and object components by title",
+        "Action": {
+            "Primary Action": [
+                "present"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collections",
+                "objects",
+                "object components"
+            ],
+            "Secondary Entity": [
+                "title"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "present"
+            ]
+        ],
+        "Targets": [
+            [
+                "present",
+                "collections"
+            ],
+            [
+                "present",
+                "objects"
+            ],
+            [
+                "present",
+                "object components"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to say one collection is related to another collection.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I want to say one collection is related to another collection",
+        "Action": {
+            "Primary Action": [
+                "say"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "one collection",
+                "another collection"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "say"
+            ]
+        ],
+        "Targets": [
+            [
+                "say",
+                "one collection"
+            ],
+            [
+                "say",
+                "another collection"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to indicate subjects that are related to an object.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I can indicate subjects that are related to an object",
+        "Action": {
+            "Primary Action": [
+                "indicate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "subjects",
+                "object"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "indicate"
+            ]
+        ],
+        "Targets": [
+            [
+                "indicate",
+                "subjects"
+            ],
+            [
+                "indicate",
+                "object"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to list all the components, in their appropriate order, for an object.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "for an object",
+        "Action": {
+            "Primary Action": [
+                "list"
+            ],
+            "Secondary Action": [
+                "order"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "components",
+                "object"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "list"
+            ],
+            [
+                "repository manager",
+                "order"
+            ]
+        ],
+        "Targets": [
+            [
+                "list",
+                "components"
+            ],
+            [
+                "list",
+                "object"
+            ],
+            [
+                "order",
+                "components"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a user, I want to see the geographical context of a collection, object, or object component, where pertinent.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "where pertinent",
+        "Action": {
+            "Primary Action": [
+                "see"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "geographical context"
+            ],
+            "Secondary Entity": [
+                "collection",
+                "object",
+                "object component"
+            ]
+        },
+        "Triggers": [
+            [
+                "user",
+                "see"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "geographical context"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to provide a title, in all useful forms, for my repository's collections, objects, and object components.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I can provide a title, in all useful forms, for my repository's collections, objects, and object components",
+        "Action": {
+            "Primary Action": [
+                "provide"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "title",
+                "repository's collections",
+                "objects",
+                "object components"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "provide"
+            ]
+        ],
+        "Targets": [
+            [
+                "provide",
+                "title"
+            ],
+            [
+                "provide",
+                "repository's collections"
+            ],
+            [
+                "provide",
+                "objects"
+            ],
+            [
+                "provide",
+                "object components"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know when the application of a statute to an object or object component has been modified, either manually or automatically.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to know when the application of a statute to an object or object component has been modified, either manually or automatically",
+        "Action": {
+            "Primary Action": [
+                "know",
+                "modified"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "application of a statute",
+                "object",
+                "object component"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ],
+            [
+                "DAMS manager",
+                "modified"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "application of a statute"
+            ],
+            [
+                "know",
+                "object"
+            ],
+            [
+                "know",
+                "object component"
+            ],
+            [
+                "modified",
+                "application of a statute"
+            ],
+            [
+                "modified",
+                "object"
+            ],
+            [
+                "modified",
+                "object component"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a DAMS manager, I want to know if application of a library policy to an object or object component has been modified, either manually or automatically.",
+        "Persona": [
+            "DAMS manager"
+        ],
+        "Benefit": "I want to know if application of a library policy to an object or object component has been modified, either manually or automatically",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "modified"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "application of a library policy"
+            ],
+            "Secondary Entity": [
+                "object",
+                "object component"
+            ]
+        },
+        "Triggers": [
+            [
+                "DAMS manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "application of a library policy"
+            ],
+            [
+                "know",
+                "object"
+            ],
+            [
+                "know",
+                "object component"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all events occurring to a component over its life cycle.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I want to know all events occurring to a component over its life cycle",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "events",
+                "component"
+            ],
+            "Secondary Entity": [
+                "life cycle"
+            ]
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "events"
+            ],
+            [
+                "know",
+                "component"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to describe a collection, including its title, it's inclusive / bulk dates, its language(s), and many other aspects.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I can describe a collection, including its title, it's inclusive / bulk dates, its language(s), and many other aspects",
+        "Action": {
+            "Primary Action": [
+                "describe"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collection"
+            ],
+            "Secondary Entity": [
+                "title",
+                "inclusive / bulk dates",
+                "language(s)",
+                "other aspects"
+            ]
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "describe"
+            ]
+        ],
+        "Targets": [
+            [
+                "describe",
+                "collection"
+            ]
+        ]
+    },
+    {
+        "Text": "#G25# As a repository manager, I want to know all the collections and objects in the DAMS for which I have custodial responsibility.",
+        "Persona": [
+            "repository manager"
+        ],
+        "Benefit": "I have custodial responsibility",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "collections",
+                "objects",
+                "DAMS"
+            ],
+            "Secondary Entity": [
+                "custodial responsibility"
+            ]
+        },
+        "Triggers": [
+            [
+                "repository manager",
+                "know"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "collections"
+            ],
+            [
+                "know",
+                "objects"
+            ],
+            [
+                "know",
+                "DAMS"
+            ]
+        ]
+    }
+]

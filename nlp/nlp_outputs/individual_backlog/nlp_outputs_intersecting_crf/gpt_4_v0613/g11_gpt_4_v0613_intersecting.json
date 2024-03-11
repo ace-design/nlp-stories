@@ -1,0 +1,654 @@
+[
+    {
+        "Text": "#G11# As a team member, I want to know when meetings are, so that I can plan accordingly.",
+        "Persona": [
+            "team member"
+        ],
+        "Benefit": "I can plan accordingly",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "plan"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "meetings"
+            ],
+            "Secondary Entity": [
+                "plan"
+            ]
+        },
+        "Triggers": [
+            [
+                "team member",
+                "know"
+            ],
+            [
+                "know",
+                "plan"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "meetings"
+            ],
+            [
+                "plan",
+                "plan"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a team member, I want to determine a design direction for the beta social page, so that we can implement a beta site quickly without established brand guidelines.",
+        "Persona": [
+            "team member"
+        ],
+        "Benefit": "we can implement a beta site quickly without established brand guidelines",
+        "Action": {
+            "Primary Action": [
+                "determine"
+            ],
+            "Secondary Action": [
+                "implement"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "design direction",
+                "beta social page"
+            ],
+            "Secondary Entity": [
+                "beta site",
+                "brand guidelines"
+            ]
+        },
+        "Triggers": [
+            [
+                "team member",
+                "determine"
+            ],
+            [
+                "team member",
+                "implement"
+            ]
+        ],
+        "Targets": [
+            [
+                "determine",
+                "design direction"
+            ],
+            [
+                "determine",
+                "beta social page"
+            ],
+            [
+                "implement",
+                "beta site"
+            ],
+            [
+                "implement",
+                "brand guidelines"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a VisualDesigner, I want to create a moodboard to aid with visual design concepts for the nsf.gov website, so that we can discuss different design concepts with stakeholders.",
+        "Persona": [
+            "VisualDesigner"
+        ],
+        "Benefit": "we can discuss different design concepts with stakeholders",
+        "Action": {
+            "Primary Action": [
+                "create"
+            ],
+            "Secondary Action": [
+                "aid",
+                "discuss"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "moodboard",
+                "nsf.gov website"
+            ],
+            "Secondary Entity": [
+                "visual design concepts",
+                "stakeholders"
+            ]
+        },
+        "Triggers": [
+            [
+                "VisualDesigner",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "create",
+                "moodboard"
+            ],
+            [
+                "create",
+                "nsf.gov website"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a developer, I want to have the subdomain beta.nsf.gov be set up, so that I can deploy a beta site to it.",
+        "Persona": [
+            "developer"
+        ],
+        "Benefit": "I can deploy a beta site to it",
+        "Action": {
+            "Primary Action": [
+                "have",
+                "set up",
+                "deploy"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "subdomain beta.nsf.gov",
+                "beta site"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "developer",
+                "have"
+            ],
+            [
+                "developer",
+                "set up"
+            ],
+            [
+                "developer",
+                "deploy"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "subdomain beta.nsf.gov"
+            ],
+            [
+                "set up",
+                "subdomain beta.nsf.gov"
+            ],
+            [
+                "deploy",
+                "beta site"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a researcher, I want to develop the user research protocol for internal workflows, so that we can begin testing against a CMS prototype.",
+        "Persona": [
+            "researcher"
+        ],
+        "Benefit": "we can begin testing against a CMS prototype",
+        "Action": {
+            "Primary Action": [
+                "develop",
+                "begin testing"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user research protocol",
+                "CMS prototype"
+            ],
+            "Secondary Entity": [
+                "internal workflows"
+            ]
+        },
+        "Triggers": [
+            [
+                "researcher",
+                "develop"
+            ],
+            [
+                "researcher",
+                "begin testing"
+            ]
+        ],
+        "Targets": [
+            [
+                "develop",
+                "user research protocol"
+            ],
+            [
+                "begin testing",
+                "CMS prototype"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As an NSF employee, I want to see how the user recruitment form looks and behaves on a sample page, so that I can understand the impact the recruitment will have on the NSF page.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Benefit": "I can understand the impact the recruitment will have on the NSF page",
+        "Action": {
+            "Primary Action": [
+                "see",
+                "understand"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "user recruitment form",
+                "NSF page"
+            ],
+            "Secondary Entity": [
+                "sample page"
+            ]
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "see"
+            ],
+            [
+                "NSF employee",
+                "understand"
+            ]
+        ],
+        "Targets": [
+            [
+                "see",
+                "user recruitment form"
+            ],
+            [
+                "see",
+                "NSF page"
+            ],
+            [
+                "understand",
+                "NSF page"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a user, I want to add a video to my article.",
+        "Persona": [
+            "user"
+        ],
+        "Benefit": "I can add a video to my article",
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "video",
+                "article"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "video"
+            ],
+            [
+                "add",
+                "article"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a content designer, I want to demonstrate the value of user-centered content design to ensure it's an integral part of our recommendations.",
+        "Persona": [
+            "content designer"
+        ],
+        "Benefit": "to ensure it's an integral part of our recommendations",
+        "Action": {
+            "Primary Action": [
+                "demonstrate"
+            ],
+            "Secondary Action": [
+                "ensure"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "value of user-centered content design"
+            ],
+            "Secondary Entity": [
+                "integral part of our recommendations"
+            ]
+        },
+        "Triggers": [
+            [
+                "content designer",
+                "demonstrate"
+            ],
+            [
+                "content designer",
+                "ensure"
+            ]
+        ],
+        "Targets": [
+            [
+                "demonstrate",
+                "value of user-centered content design"
+            ],
+            [
+                "ensure",
+                "integral part of our recommendations"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a team member, I want to know what visual design related tasks we might need to plan for this sprint, so that I can assign tasks as necessary.",
+        "Persona": [
+            "team member"
+        ],
+        "Benefit": "I can assign tasks as necessary",
+        "Action": {
+            "Primary Action": [
+                "know",
+                "assign"
+            ],
+            "Secondary Action": [
+                "plan"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "visual design related tasks",
+                "tasks"
+            ],
+            "Secondary Entity": [
+                "sprint"
+            ]
+        },
+        "Triggers": [
+            [
+                "team member",
+                "know"
+            ],
+            [
+                "team member",
+                "assign"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "visual design related tasks"
+            ],
+            [
+                "assign",
+                "tasks"
+            ],
+            [
+                "plan",
+                "sprint"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As an NSF employee, I want to have an updated roadmap document, so that I can see prioritized areas to focus on for the next few months and beyond.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Benefit": "I can see prioritized areas to focus on for the next few months and beyond",
+        "Action": {
+            "Primary Action": [
+                "have",
+                "see"
+            ],
+            "Secondary Action": [
+                "focus"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "updated roadmap document"
+            ],
+            "Secondary Entity": [
+                "prioritized areas",
+                "next few months and beyond"
+            ]
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ],
+            [
+                "NSF employee",
+                "see"
+            ],
+            [
+                "NSF employee",
+                "focus"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "updated roadmap document"
+            ],
+            [
+                "see",
+                "prioritized areas"
+            ],
+            [
+                "see",
+                "next few months and beyond"
+            ],
+            [
+                "focus",
+                "prioritized areas"
+            ],
+            [
+                "focus",
+                "next few months and beyond"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As an NSF employee, I want to know where the initial in-person meeting will be, so that I can plan on attending.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Benefit": "I can plan on attending",
+        "Action": {
+            "Primary Action": [
+                "know"
+            ],
+            "Secondary Action": [
+                "plan"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "initial in-person meeting"
+            ],
+            "Secondary Entity": [
+                "attending"
+            ]
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "know"
+            ],
+            [
+                "NSF employee",
+                "plan"
+            ]
+        ],
+        "Targets": [
+            [
+                "know",
+                "initial in-person meeting"
+            ],
+            [
+                "plan",
+                "attending"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a content editor, I want to be able to easily find content, so that I can edit it.",
+        "Persona": [
+            "content editor"
+        ],
+        "Benefit": "I can edit it",
+        "Action": {
+            "Primary Action": [
+                "find",
+                "edit"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "content"
+            ],
+            "Secondary Entity": []
+        },
+        "Triggers": [
+            [
+                "content editor",
+                "find"
+            ],
+            [
+                "content editor",
+                "edit"
+            ]
+        ],
+        "Targets": [
+            [
+                "find",
+                "content"
+            ],
+            [
+                "edit",
+                "content"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As a team member, I want to have a prioritized list of features and elements of a future social element page, so that I can work with the engineers to determine feasibility.",
+        "Persona": [
+            "team member"
+        ],
+        "Benefit": "I can work with the engineers to determine feasibility",
+        "Action": {
+            "Primary Action": [
+                "have",
+                "work"
+            ],
+            "Secondary Action": [
+                "determine"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "prioritized list of features",
+                "future social element page"
+            ],
+            "Secondary Entity": [
+                "elements",
+                "engineers",
+                "feasibility"
+            ]
+        },
+        "Triggers": [
+            [
+                "team member",
+                "have"
+            ],
+            [
+                "team member",
+                "work"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "prioritized list of features"
+            ],
+            [
+                "have",
+                "future social element page"
+            ],
+            [
+                "work",
+                "engineers"
+            ],
+            [
+                "work",
+                "feasibility"
+            ],
+            [
+                "determine",
+                "feasibility"
+            ]
+        ]
+    },
+    {
+        "Text": "#G11# As an NSF employee, I want to have high-level strategy recommendations to implement in conjunction with the new CMS.",
+        "Persona": [
+            "NSF employee"
+        ],
+        "Benefit": "to implement in conjunction with the new CMS",
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": [
+                "implement"
+            ]
+        },
+        "Entity": {
+            "Primary Entity": [
+                "high-level strategy recommendations"
+            ],
+            "Secondary Entity": [
+                "new CMS"
+            ]
+        },
+        "Triggers": [
+            [
+                "NSF employee",
+                "have"
+            ],
+            [
+                "have",
+                "implement"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "high-level strategy recommendations"
+            ],
+            [
+                "implement",
+                "new CMS"
+            ]
+        ]
+    }
+]
