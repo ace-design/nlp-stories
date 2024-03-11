@@ -70,8 +70,8 @@ def get_info(grouping_code, with_crf):
         crf_path = "nlp_outputs_intersecting_crf"
         is_crf = "--with_crf"
         crf_string = "with_crf"
-        nlp = ["crf", "visual_narrator", "gpt_3_5_v0125", "gpt_3_5_v0613_2023", "gpt_3_5_v0613_2024", "gpt_4_turbo_v0125", "gpt_4_v0613"]
-        nlp_code = ["CRF", "VN", "GPT_3_5_V0125", "GPT_3_5_V0613_2023", "GPT_3_5_V0613_2024", "GPT_4_TURBO_V0125", "GPT_4_V0613"]
+        nlp = ["crf", "visual_narrator","gpt_4_v0613"]
+        nlp_code = ["CRF", "VN", "GPT_4_V0613"]
     else:
         crf_path = "nlp_outputs_intersecting"
         is_crf = ""
