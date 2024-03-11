@@ -78,22 +78,22 @@ def identify_files(with_crf, primary):
 
     if with_crf:
         vn_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_individual_backlog_average.csv"
-        gpt_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_individual_backlog_average.csv"
+        gpt_4_v0613_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_individual_backlog_average.csv"
         crf_bklg = "final_results\\individual_nlp_results\\total_results\\with_crf\\individual_backlog\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_individual_backlog_average.csv"
         
         # vn_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_categories_average.csv"
-        # gpt_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_categories_average.csv"
+        # gpt_4_v0613_cat = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "categories\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_categories_average.csv"
         # crf_cat = "final_results\\individual_nlp_results\\total_results\\with_crf\\categories\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_categories_average.csv"
         
         vn_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\visual_narrator\\dataset_csv_input_visual_narrator\\" +data_type + "_csv_results\\visual_narrator_global_average.csv"
-        gpt_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\chatgpt\\dataset_csv_input_gpt_3_5_v0125\\" +data_type + "_csv_results\\gpt_3_5_v0125_global_average.csv"        
+        gpt_4_v0613_glo = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "global\\gpt_4_v0613\\dataset_csv_input_gpt_4_v0613\\" + data_type + "_csv_results\\gpt_4_v0613_global_average.csv"        
         crf_glo = "final_results\\individual_nlp_results\\total_results\\with_crf\\global\\crf\\dataset_csv_input_crf\\" + data_type + "_csv_results\\crf_global_average.csv"
 
-        bklg_file_list = [vn_bklg, gpt_bklg, crf_bklg]
-        # cat_file_list = [vn_cat, gpt_cat, crf_cat]
-        glo_file_list = [vn_glo, gpt_glo, crf_glo]
+        bklg_file_list = [vn_bklg, gpt_4_v0613_bklg, crf_bklg]
+        # cat_file_list = [vn_cat, gpt_4_v0613_cat, crf_cat]
+        glo_file_list = [vn_glo, gpt_4_v0613_glo, crf_glo]
 
-        nlps = ["Visual Narrator", "GPT-3.5 Turbo v0125", "CRF"]
+        nlps = ["Visual Narrator", "GPT-4 v0613", "CRF"]
     else:
         gpt_3_5_v0125_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_3_5_v0125\\dataset_csv_input_gpt_3_5_v0125\\" + data_type + "_csv_results\\gpt_3_5_v0125_individual_backlog_average.csv"
         gpt_3_5_v0613_2023_bklg = "final_results\\individual_nlp_results\\total_results\\" + crf_path + "individual_backlog\\gpt_3_5_v0613_2023\\dataset_csv_input_gpt_3_5_v0613_2023\\" + data_type + "_csv_results\\gpt_3_5_v0613_2023_individual_backlog_average.csv"
@@ -117,7 +117,7 @@ def identify_files(with_crf, primary):
         # cat_file_list = [gpt_3_5_v0125_cat, gpt_3_5_v0613_2023_cat, gpt_3_5_v0613_2024_cat, gpt_4_turbo_v0125_cat, gpt_4_v0613_cat]
         glo_file_list = [gpt_3_5_v0125_glo, gpt_3_5_v0613_2023_glo, gpt_3_5_v0613_2024_glo, gpt_4_turbo_v0125_glo, gpt_4_v0613_glo]
 
-        nlps = ["GPT-3.5 Turbo v0125", "GPT-3.5 v0613 2023", "GPT-3.5 v0613 2024", "GPT-4 Turbo v0125", "GPT-4 Turbo v0613"]
+        nlps = ["GPT-3.5 Turbo v0125", "GPT-3.5 v0613 2023", "GPT-3.5 v0613 2024", "GPT-4 Turbo v0125", "GPT-4 v0613"]
         
 
     # return bklg_file_list, cat_file_list, glo_file_list, nlps
@@ -352,14 +352,15 @@ def create_final_bargraph(formatted_data, nlps, title, save_name):
     graph.suptitle(title, fontsize = 20)
     graph.supxlabel("Label Type", fontsize=14)
     graph.supylabel("F-Measure", x = 0.01, y = 0.5, fontsize = 14)
+    graph.legend(labels=nlps, title = "LEGEND", loc = "center right", bbox_to_anchor=(1.12, 0.5))
     
     plt.tight_layout()
 
     saving_path_png = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".png"
     saving_path_pdf = "final_results\\comparing_nlps_results\\average_results\\combined_results\\graphs\\" + save_name + ".pdf"
-
-    plt.savefig(saving_path_png)
-    plt.savefig(saving_path_pdf)
+    
+    plt.savefig(saving_path_png, bbox_inches='tight')
+    plt.savefig(saving_path_pdf, bbox_inches='tight')
 
 def fix_max_y_error(standard_deviation, y_data):
     '''
