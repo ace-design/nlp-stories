@@ -3,6 +3,8 @@ import argparse
 import csv
 import pandas as pd
 import subprocess
+import os
+import shutil
 
 def main():
     grouping_code, with_crf = command()
@@ -10,6 +12,7 @@ def main():
     types = ["all", "primary"]
     comparison_mode = ["strict", "inclusion", "relaxed"]
 
+    reset_folder(crf_string, grouping, nlps)
     for i in range(len(nlps)):
         run_compare_nlp(nlps[i], nlp_code[i], datasets, grouping, grouping_code, crf_path, is_crf)
         reset_nlp_dataset_names_list(data_group_names)
@@ -80,6 +83,21 @@ def get_info(grouping_code, with_crf):
         nlp_code = [ "GPT_3_5_V0125", "GPT_3_5_V0613_2023", "GPT_3_5_V0613_2024", "GPT_4_TURBO_V0125", "GPT_4_V0613"]
 
     return data_group_names, datasets, grouping, crf_path, is_crf, crf_string, nlp, nlp_code
+
+def reset_folder(crf_string, grouping, nlps):
+    # Deletes the content of some folders before re-running for the script to run correctly.
+
+    
+    for nlp in nlps:
+        folderPath = "final_results\\individual_nlp_results\\total_results\\" + crf_string + "\\" + grouping + "\\" + nlp
+
+        for filename in os.listdir(folderPath):
+            file_path = folderPath + "\\" + filename
+
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
 
 def run_compare_nlp(nlp, nlp_code, datasets, grouping, grouping_code, crf_path, is_crf):
     '''Runs compare_nlp.py '''
